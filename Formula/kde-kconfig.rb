@@ -18,7 +18,6 @@ class KdeKconfig < Formula
   depends_on "doxygen" => :build
   depends_on "graphviz" => :build
   depends_on "kde-extra-cmake-modules" => [:build, :test]
-  depends_on "ninja" => :build
 
   depends_on "qt@5"
 
@@ -26,22 +25,23 @@ class KdeKconfig < Formula
     args = std_cmake_args
     args << "-D BUILD_QCH=ON"
     args << "-D BUILD_TESTING=OFF"
-    args << "-D BUILD_TESTS=OFF"
-    args << "-D BUILD_UNITTESTS=OFF"
-    args << "-D CMAKE_INSTALL_BUNDLEDIR=#{bin}"
-    args << "-D KDE_INSTALL_LIBDIR=lib"
-    args << "-D KDE_INSTALL_PLUGINDIR=lib/qt5/plugins"
-    args << "-D KDE_INSTALL_QMLDIR=lib/qt5/qml"
-    args << "-D KDE_INSTALL_QTPLUGINDIR=lib/qt5/plugins"
 
     mkdir "build" do
-      system "cmake", "..", "-G", "Ninja", *args
-      system "ninja"
-      system "ninja", "install"
+      system "cmake", "..", *args
+      system "make", "install"
       prefix.install "install_manifest.txt"
     end
 
     pkgshare.install "autotests"
+
+    (pkgshare/"src/kconf_update").mkpath
+    (pkgshare/"src/core").mkpath
+
+    (pkgshare/"src/kconf_update").install "src/kconf_update/kconfigutils.h"
+    (pkgshare/"src/kconf_update").install "src/kconf_update/kconfigutils.cpp"
+
+    (pkgshare/"src/core").install "src/core/kconfigdata.h"
+    (pkgshare/"src/core").install "src/core/kconfigdata.cpp"
   end
 
   test do
@@ -54,11 +54,13 @@ class KdeKconfig < Formula
     EOS
 
     cp_r (pkgshare/"autotests"), testpath
+    cp_r (pkgshare/"src"), testpath
 
     args = std_cmake_args
-    args << "-DQt5_DIR=#{Formula["qt@5"].opt_lib/"cmake/Qt5"}"
+    args << "-DQt5Test_DIR=#{Formula["qt@5"].opt_lib/"cmake/Qt5Test"}"
+    args << "-DQt5Concurrent_DIR=#{Formula["qt@5"].opt_lib/"cmake/Qt5Concurrent"}"
 
     system "cmake", testpath.to_s, *args
-    system "cmake"
+    system "make", "buildtests"
   end
 end
