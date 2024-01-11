@@ -1,28 +1,10 @@
 class Mesa < Formula
   desc "Graphics Library"
   homepage "https://www.mesa3d.org/"
+  url "https://mesa.freedesktop.org/archive/mesa-24.0.0.tar.xz"
+  sha256 "dc7e8c077bc5884df95478263b34bdebb7e88e600689cb56fb07be2b8c304c36"
   license "MIT"
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
-
-  stable do
-    url "https://mesa.freedesktop.org/archive/mesa-23.3.4.tar.xz"
-    sha256 "df12d765be4650fe532860b18aa18e6da1d0b07d1a21dfdfe04660e6b7bac39a"
-
-    # Backport macOS build fixes from HEAD.
-    # Ref: https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/25992
-    on_macos do
-      patch :DATA # https://gitlab.freedesktop.org/mesa/mesa/-/commit/96d55d784cb4f047a4b58cd08330f42208641ea7
-      patch do
-        url "https://gitlab.freedesktop.org/mesa/mesa/-/commit/c8b64452c076c1768beb23280de25faf2bcbe2c8.diff"
-        sha256 "0404bf72f10c991444b22721c5a7801aa6f788d2e6efdd9884a074834e0e0b31"
-      end
-      patch do
-        url "https://gitlab.freedesktop.org/mesa/mesa/-/commit/4ef573735efc7f15d8b8700622a5865d33c34bf1.diff"
-        sha256 "df09ac99747aa0a79c4342b8233739c4b5e4eeee7bcba4473783cff299aae5e3"
-      end
-    end
-  end
-
   bottle do
     sha256 arm64_sonoma:   "d0b6404228b99cc7efc679423852356da1ab39d9da3191592141f352a6d21b7a"
     sha256 arm64_ventura:  "f3d8317d0e6b5af50b59d34d1567df207356d1f74dd938918d6c35328a113432"
@@ -78,8 +60,8 @@ class Mesa < Formula
   fails_with gcc: "5"
 
   resource "glxgears.c" do
-    url "https://gitlab.freedesktop.org/mesa/demos/-/raw/caac7be425a185e191224833375413772c4aff8d/src/xdemos/glxgears.c"
-    sha256 "344a03aff01708350d90603fd6b841bccd295157670f519b459bbf3874acf847"
+    url "https://gitlab.freedesktop.org/mesa/demos/-/raw/391cafee6d43a28afaf87a269475e0ede7d97469/src/xdemos/glxgears.c"
+    sha256 "294d7b9984eb1194a110a5a5500878df8b8d7b7922ec56257e9d8d8ae5e578e6"
   end
 
   resource "gl_wrap.h" do
@@ -106,13 +88,10 @@ class Mesa < Formula
         -Dvalgrind=disabled
         -Dtools=drm-shim,etnaviv,freedreno,glsl,nir,nouveau,lima
       ]
-      # Work around fatal error: vtn_generator_ids.h: No such file or directory
-      # Issue ref: https://gitlab.freedesktop.org/mesa/mesa/-/issues/10277
-      compile_args << "--jobs=1"
     end
 
     system "meson", "setup", "build", *args, *std_meson_args
-    system "meson", "compile", "-C", "build", "--verbose", *compile_args
+    system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
     inreplace lib/"pkgconfig/dri.pc" do |s|
       s.change_make_var! "dridriverdir", HOMEBREW_PREFIX/"lib/dri"
@@ -142,97 +121,3 @@ class Mesa < Formula
     system ENV.cc, "glxgears.c", "-o", "gears", *flags
   end
 end
-
-__END__
-diff --git a/src/util/libdrm.h b/src/util/libdrm.h
-index cc153cf..045d724 100644
---- a/src/util/libdrm.h
-+++ b/src/util/libdrm.h
-@@ -33,6 +33,7 @@
-
- #include <errno.h>
- #include <stdint.h>
-+#include <sys/types.h>
-
- #define DRM_NODE_PRIMARY 0
- #define DRM_NODE_CONTROL 1
-@@ -44,22 +45,79 @@
- #define DRM_BUS_PLATFORM  2
- #define DRM_BUS_HOST1X    3
-
-+typedef struct _drmPciDeviceInfo {
-+    uint16_t vendor_id;
-+    uint16_t device_id;
-+    uint16_t subvendor_id;
-+    uint16_t subdevice_id;
-+    uint8_t revision_id;
-+} drmPciDeviceInfo, *drmPciDeviceInfoPtr;
-+
-+#define DRM_PLATFORM_DEVICE_NAME_LEN 512
-+
-+typedef struct _drmPlatformBusInfo {
-+    char fullname[DRM_PLATFORM_DEVICE_NAME_LEN];
-+} drmPlatformBusInfo, *drmPlatformBusInfoPtr;
-+
-+typedef struct _drmPlatformDeviceInfo {
-+    char **compatible; /* NULL terminated list of compatible strings */
-+} drmPlatformDeviceInfo, *drmPlatformDeviceInfoPtr;
-+
-+#define DRM_HOST1X_DEVICE_NAME_LEN 512
-+
-+typedef struct _drmHost1xBusInfo {
-+    char fullname[DRM_HOST1X_DEVICE_NAME_LEN];
-+} drmHost1xBusInfo, *drmHost1xBusInfoPtr;
-+
-+typedef struct _drmPciBusInfo {
-+   uint16_t domain;
-+   uint8_t bus;
-+   uint8_t dev;
-+   uint8_t func;
-+} drmPciBusInfo, *drmPciBusInfoPtr;
-+
- typedef struct _drmDevice {
-     char **nodes; /* DRM_NODE_MAX sized array */
-     int available_nodes; /* DRM_NODE_* bitmask */
-     int bustype;
-+    union {
-+       drmPciBusInfoPtr pci;
-+       drmPlatformBusInfoPtr platform;
-+       drmHost1xBusInfoPtr host1x;
-+    } businfo;
-+    union {
-+        drmPciDeviceInfoPtr pci;
-+    } deviceinfo;
-     /* ... */
- } drmDevice, *drmDevicePtr;
-
-+static inline int
-+drmGetDevice2(int fd, uint32_t flags, drmDevicePtr *device)
-+{
-+   return -ENOENT;
-+}
-+
- static inline int
- drmGetDevices2(uint32_t flags, drmDevicePtr devices[], int max_devices)
- {
-    return -ENOENT;
- }
-
-+static inline int
-+drmGetDeviceFromDevId(dev_t dev_id, uint32_t flags, drmDevicePtr *device)
-+{
-+   return -ENOENT;
-+}
-+
-+static inline void
-+drmFreeDevice(drmDevicePtr *device) {}
-+
- static inline void
- drmFreeDevices(drmDevicePtr devices[], int count) {}
-
-+static inline char*
-+drmGetDeviceNameFromFd2(int fd) { return NULL;}
-+
- typedef struct _drmVersion {
-     int     version_major;        /**< Major version */
-     int     version_minor;        /**< Minor version */
