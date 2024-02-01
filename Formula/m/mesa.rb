@@ -53,6 +53,7 @@ class Mesa < Formula
     depends_on "libxv"
     depends_on "libxxf86vm"
     depends_on "lm-sensors"
+    depends_on "valgrind"
     depends_on "wayland"
     depends_on "wayland-protocols"
   end
@@ -70,23 +71,43 @@ class Mesa < Formula
   end
 
   def install
-    args = ["-D b_ndebug=true"]
-    compile_args = []
+    args = %w[
+      -D b_ndebug=true
+      -D osmesa=true
+    ]
+
+    if OS.mac?
+      args += %w[
+        -D gallium-drivers=swrast
+      ]
+    end
 
     if OS.linux?
       args += %w[
         -D dri3=enabled
         -D egl=enabled
-        -D gallium-drivers=auto
+        -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,i915,iris,crocus,zink
+        -D gallium-extra-hud=true
+        -D gallium-nine=true
         -D gallium-omx=disabled
+        -D gallium-va=enabled
+        -D gallium-vdpau=enabled
+        -D gallium-xa=enabled
         -D gbm=enabled
         -D gles1=enabled
         -D gles2=enabled
-        -D glx=auto
+        -D glx=dri
+        -D lmsensors=enabled
+        -D llvm=enabled
+        -D microsoft-clc=disabled
         -D opengl=true
         -D platforms=x11,wayland
+        -D shared-glapi=enabled
         -D tools=drm-shim,etnaviv,freedreno,glsl,nir,nouveau,lima
-        -D valgrind=disabled
+        -D valgrind=enabled
+        -D video-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
+        -D vulkan-drivers=amd,intel,intel_hasvk,swrast,virtio
+        -D vulkan-layers=device-select,intel-nullhw,overlay
       ]
     end
 
