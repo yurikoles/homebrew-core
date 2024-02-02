@@ -44,6 +44,7 @@ class Mesa < Formula
     depends_on "elfutils"
     depends_on "glslang"
     depends_on "gzip"
+    depends_on "libclc"
     depends_on "libdrm"
     depends_on "libva"
     depends_on "libvdpau"
@@ -53,6 +54,8 @@ class Mesa < Formula
     depends_on "libxv"
     depends_on "libxxf86vm"
     depends_on "lm-sensors"
+    depends_on "python-ply"
+    depends_on "spirv-llvm-translator"
     depends_on "valgrind"
     depends_on "wayland"
     depends_on "wayland-protocols"
@@ -90,6 +93,7 @@ class Mesa < Formula
         -D gallium-extra-hud=true
         -D gallium-nine=true
         -D gallium-omx=disabled
+        -D gallium-opencl=icd
         -D gallium-va=enabled
         -D gallium-vdpau=enabled
         -D gallium-xa=enabled
@@ -97,6 +101,7 @@ class Mesa < Formula
         -D gles1=enabled
         -D gles2=enabled
         -D glx=dri
+        -D intel-clc=enabled
         -D lmsensors=enabled
         -D llvm=enabled
         -D microsoft-clc=disabled
