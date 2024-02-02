@@ -70,23 +70,23 @@ class Mesa < Formula
   end
 
   def install
-    args = ["-Db_ndebug=true"]
+    args = ["-D b_ndebug=true"]
     compile_args = []
 
     if OS.linux?
       args += %w[
-        -Dplatforms=x11,wayland
-        -Dglx=auto
-        -Ddri3=enabled
-        -Dgallium-drivers=auto
-        -Dgallium-omx=disabled
-        -Degl=enabled
-        -Dgbm=enabled
-        -Dopengl=true
-        -Dgles1=enabled
-        -Dgles2=enabled
-        -Dvalgrind=disabled
-        -Dtools=drm-shim,etnaviv,freedreno,glsl,nir,nouveau,lima
+        -D dri3=enabled
+        -D egl=enabled
+        -D gallium-drivers=auto
+        -D gallium-omx=disabled
+        -D gbm=enabled
+        -D gles1=enabled
+        -D gles2=enabled
+        -D glx=auto
+        -D opengl=true
+        -D platforms=x11,wayland
+        -D tools=drm-shim,etnaviv,freedreno,glsl,nir,nouveau,lima
+        -D valgrind=disabled
       ]
     end
 
