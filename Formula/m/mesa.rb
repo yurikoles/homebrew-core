@@ -77,11 +77,13 @@ class Mesa < Formula
     args = %w[
       -D b_ndebug=true
       -D osmesa=true
+      -D gallium-drivers=auto
+      -D platforms=auto
     ]
 
     if OS.mac?
       args += %w[
-        -D gallium-drivers=swrast
+        -D video-codecs=[]
       ]
     end
 
@@ -89,7 +91,6 @@ class Mesa < Formula
       args += %w[
         -D dri3=enabled
         -D egl=enabled
-        -D gallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,i915,iris,crocus,zink
         -D gallium-extra-hud=true
         -D gallium-nine=true
         -D gallium-omx=disabled
@@ -106,12 +107,11 @@ class Mesa < Formula
         -D llvm=enabled
         -D microsoft-clc=disabled
         -D opengl=true
-        -D platforms=x11,wayland
         -D shared-glapi=enabled
-        -D tools=drm-shim,etnaviv,freedreno,glsl,nir,nouveau,lima
+        -D tools=all
         -D valgrind=enabled
-        -D video-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
-        -D vulkan-drivers=amd,intel,intel_hasvk,swrast,virtio
+        -D video-codecs=all
+        -D vulkan-drivers=auto
         -D vulkan-layers=device-select,intel-nullhw,overlay
       ]
     end
