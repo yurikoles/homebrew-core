@@ -3,8 +3,8 @@ class Mesa < Formula
 
   desc "Graphics Library"
   homepage "https://www.mesa3d.org/"
-  url "https://mesa.freedesktop.org/archive/mesa-24.1.4.tar.xz"
-  sha256 "7cf7c6f665263ad0122889c1d4b076654c1eedea7a2f38c69c8c51579937ade1"
+  url "https://mesa.freedesktop.org/archive/mesa-24.2.0-rc2.tar.xz"
+  sha256 "3b2207cb4aadf2c2f08be0e62a10b17f7638786268e74e9cd8a92f176630b9d0"
   license "MIT"
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
@@ -99,6 +99,11 @@ class Mesa < Formula
     end
   end
 
+  resource "pyyaml" do
+    url "https://files.pythonhosted.org/packages/cd/e5/af35f7ea75cf72f2cd079c95ee16797de7cd71f29ea7c68ae5ce7be1eda0/PyYAML-6.0.1.tar.gz"
+    sha256 "bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"
+  end
+
   def python3
     "python3.12"
   end
@@ -121,7 +126,7 @@ class Mesa < Formula
 
     if OS.mac?
       args += %w[
-        -Dgallium-drivers=swrast
+        -Dgallium-drivers=softpipe
       ]
     end
 
@@ -129,7 +134,7 @@ class Mesa < Formula
       args += %w[
         -Ddri3=enabled
         -Degl=enabled
-        -Dgallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,i915,iris,crocus,zink
+        -Dgallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,softpipe,llvmpipe,i915,iris,crocus,zink
         -Dgallium-extra-hud=true
         -Dgallium-nine=true
         -Dgallium-omx=disabled
