@@ -110,6 +110,7 @@ class Mesa < Formula
     args = %w[
       -Db_ndebug=true
       -Dosmesa=true
+      -Dstrip=true
     ]
     if OS.mac?
       args << "-Dgallium-drivers=softpipe"
@@ -144,8 +145,6 @@ class Mesa < Formula
       if Hardware::CPU.intel?
         args << "-Dgallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,softpipe,llvmpipe,i915,iris,crocus,zink"
       end
-      # Strip executables/libraries/object files to reduce their size
-      args << "-Dstrip=true"
     end
 
     system "meson", "setup", "build", *args, *std_meson_args
