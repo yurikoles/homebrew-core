@@ -203,7 +203,12 @@ class Mesa < Formula
     ENV.prepend_path "PYTHONPATH", venv.site_packages
     ENV.prepend_path "PATH", venv.root/"bin"
 
-    ENV["MESON_PACKAGE_CACHE_DIR"] = buildpath
+    if OS.linux?
+      crate_resources = resources.select { |r| r.name =~ /^crate/ }
+      crate_resources.each.stage
+
+      ENV["MESON_PACKAGE_CACHE_DIR"] = buildpath
+    end
 
     args = %w[
       -Db_ndebug=true
