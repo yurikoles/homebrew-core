@@ -76,6 +76,81 @@ class Mesa < Formula
     depends_on "lm-sensors"
     depends_on "wayland"
     depends_on "zstd"
+
+    resource "equivalent" do
+      url "https://crates.io/api/v1/crates/equivalent/1.0.1/download"
+      sha256 "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
+    end
+
+    resource "hashbrown" do
+      url "https://crates.io/api/v1/crates/hashbrown/0.14.1/download"
+      sha256 "7dfda62a12f55daeae5015f81b0baea145391cb4520f86c248fc615d72640d12"
+    end
+
+    resource "indexmap" do
+      url "https://crates.io/api/v1/crates/indexmap/2.2.6/download"
+      sha256 "168fb715dda47215e360912c096649d23d58bf392ac62f73919e831745e40f26"
+    end
+
+    resource "once_cell" do
+      url "https://crates.io/api/v1/crates/once_cell/1.8.0/download"
+      sha256 "692fcb63b64b1758029e0a96ee63e049ce8c5948587f2f7208df04625e5f6b56"
+    end
+
+    resource "paste" do
+      url "https://crates.io/api/v1/crates/paste/1.0.14/download"
+      sha256 "de3145af08024dea9fa9914f381a17b8fc6034dfb00f3a84013f7ff43f29ed4c"
+    end
+
+    resource "pest" do
+      url "https://crates.io/api/v1/crates/pest/2.7.11/download"
+      sha256 "cd53dff83f26735fdc1ca837098ccf133605d794cdae66acfc2bfac3ec809d95"
+    end
+
+    resource "pest_derive" do
+      url "https://crates.io/api/v1/crates/pest_derive/2.7.11/download"
+      sha256 "2a548d2beca6773b1c244554d36fcf8548a8a58e74156968211567250e48e49a"
+    end
+
+    resource "pest_generator" do
+      url "https://crates.io/api/v1/crates/pest_generator/2.7.11/download"
+      sha256 "3c93a82e8d145725dcbaf44e5ea887c8a869efdcc28706df2d08c69e17077183"
+    end
+
+    resource "pest_meta" do
+      url "https://crates.io/api/v1/crates/pest_meta/2.7.11/download"
+      sha256 "a941429fea7e08bedec25e4f6785b6ffaacc6b755da98df5ef3e7dcf4a124c4f"
+    end
+
+    resource "proc-macro2" do
+      url "https://crates.io/api/v1/crates/proc-macro2/1.0.86/download"
+      sha256 "5e719e8df665df0d1c8fbfd238015744736151d4445ec0836b8e628aae103b77"
+    end
+
+    resource "quote" do
+      url "https://crates.io/api/v1/crates/quote/1.0.33/download"
+      sha256 "5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae"
+    end
+
+    resource "roxmltree" do
+      url "https://crates.io/api/v1/crates/roxmltree/0.20.0/download"
+      sha256 "6c20b6793b5c2fa6553b250154b78d6d0db37e72700ae35fad9387a46f487c97"
+    end
+
+    resource "syn" do
+      url "https://crates.io/api/v1/crates/syn/2.0.68/download"
+      sha256 "901fa70d88b9d6c98022e23b4136f9f3e54e4662c3bc1bd1d84a42a9a0f0c1e9"
+    end
+
+    resource "ucd-trie" do
+      url "https://crates.io/api/v1/crates/ucd-trie/0.1.6/download"
+      sha256 "ed646292ffc8188ef8ea4d1e0e0150fb15a5c2e12ad9b8fc191ae7a8a7f3c4b9"
+    end
+
+    resource "unicode-ident" do
+      url "https://crates.io/api/v1/crates/unicode-ident/1.0.12/download"
+      sha256 "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
+    end
   end
 
   resource "mako" do
