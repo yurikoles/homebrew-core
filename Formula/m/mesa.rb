@@ -204,8 +204,8 @@ class Mesa < Formula
     ENV.prepend_path "PATH", venv.root/"bin"
 
     if OS.linux?
-      resources.select { |r| r.name =~ /^crate/ }.each { |r| r.stage(buildpath) }
-      ENV["MESON_PACKAGE_CACHE_DIR"] = buildpath
+      resources.select { |r| r.name =~ /^crate/ }.each { |r| r.stage(buildpath/"crates") }
+      ENV["MESON_PACKAGE_CACHE_DIR"] = buildpath/"crates"
     end
 
     args = %w[
