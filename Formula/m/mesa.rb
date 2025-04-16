@@ -3,8 +3,6 @@ class Mesa < Formula
 
   desc "Graphics Library"
   homepage "https://www.mesa3d.org/"
-  url "https://archive.mesa3d.org/mesa-25.0.4.tar.xz"
-  sha256 "76293cf4372ca4e4e73fd6c36c567b917b608a4db9d11bd2e33068199a7df04d"
   license all_of: [
     "MIT",
     "Apache-2.0", # include/{EGL,GLES*,vk_video,vulkan}, src/egl/generate/egl.xml, src/mapi/glapi/registry/gl.xml
@@ -21,6 +19,16 @@ class Mesa < Formula
     { "GPL-2.0-only" => { with: "Linux-syscall-note" } }, # include/drm-uapi/{d3dkmthk.h,dma-buf.h,etnaviv_drm.h}
   ]
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
+
+  stable do
+    url "https://archive.mesa3d.org/mesa-25.1.0-rc2.tar.xz"
+    sha256 "e6a7d1e198df97f36b0a2e029b1f9fef37e9feb86cdb7984de55c7052f23ec93"
+
+    patch do
+      url "https://gitlab.freedesktop.org/mesa/mesa/-/commit/12be669b54f061d993dd7f42e2e1b2f9a30ec2cd.diff"
+      sha256 "d8e8d2d2189911368230fffc5db4f2bae2b8bca6a423242a170462c5a69ab7d7"
+    end
+  end
 
   bottle do
     sha256 arm64_sequoia: "5406d012ed2cb39b785b5c0ca80b3d28371697902fc113df049a4a61011d171d"
@@ -61,6 +69,10 @@ class Mesa < Formula
   uses_from_macos "expat"
   uses_from_macos "zlib"
 
+  on_macos do
+    depends_on "molten-vk"
+  end
+
   on_linux do
     depends_on "directx-headers" => :build
     depends_on "gzip" => :build
@@ -97,8 +109,8 @@ class Mesa < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/d0/63/68dbb6eb2de9cb10ee4c9c14a0148804425e13c4fb20d61cce69f53106da/packaging-24.2.tar.gz"
-    sha256 "c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
+    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
+    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
   end
 
   resource "ply" do
@@ -134,23 +146,24 @@ class Mesa < Formula
     args = %w[
       -Db_ndebug=true
       -Dopengl=true
-      -Dosmesa=true
       -Dstrip=true
       -Dllvm=enabled
-      -Dgallium-drivers=auto
+
       -Dvideo-codecs=all
-      -Dgallium-opencl=icd
       -Dgallium-rusticl=true
     ]
     args += if OS.mac?
-      %w[
+      %W[
+        -Dgallium-drivers=llvmpipe,zink
         -Dvulkan-drivers=swrast
         -Dvulkan-layers=intel-nullhw,overlay,screenshot
-        -Dtools=etnaviv,glsl,nir,nouveau,asahi,imagination,dlclose-skip
+        -Dtools=etnaviv,glsl,nir,nouveau,imagination,dlclose-skip
+        -Dmoltenvk-dir=#{Formula["molten-vk"].prefix}
       ]
     else
       %w[
         -Degl=enabled
+        -Dgallium-drivers=auto
         -Dgallium-extra-hud=true
         -Dgallium-nine=true
         -Dgallium-va=enabled
@@ -185,8 +198,8 @@ class Mesa < Formula
 
   test do
     resource "glxgears.c" do
-      url "https://gitlab.freedesktop.org/mesa/demos/-/raw/878cd7fb84b7712d29e5d1b38355ed9c5899a403/src/xdemos/glxgears.c"
-      sha256 "af7927d14bd9cc989347ad0c874b35c4bfbbe9f408956868b1c5564391e21eed"
+      url "https://gitlab.freedesktop.org/mesa/demos/-/raw/8ecad14b04ccb3d4f7084122ff278b5032afd59a/src/xdemos/glxgears.c"
+      sha256 "cbb5a797cf3d2d8b3fce01cfaf01643d6162ca2b0e97d760cc2e5aec8d707601"
     end
 
     resource "gl_wrap.h" do
