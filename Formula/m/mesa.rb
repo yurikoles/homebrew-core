@@ -171,7 +171,7 @@ class Mesa < Formula
         -Dvalgrind=enabled
         -Dvulkan-drivers=auto
         -Dvulkan-layers=device-select,intel-nullhw,overlay,screenshot
-        --force-fallback-for=indexmap,paste,pest_generator,roxmltree,syn
+        --force-fallback-for=indexmap,paste,pest_generator,roxmltree,rustc-hash,syn
       ]
     end
 
