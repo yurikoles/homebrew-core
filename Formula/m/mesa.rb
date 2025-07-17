@@ -157,10 +157,8 @@ class Mesa < Formula
         -Degl=enabled
         -Dgallium-drivers=auto
         -Dgallium-extra-hud=true
-        -Dgallium-nine=true
         -Dgallium-va=enabled
         -Dgallium-vdpau=enabled
-        -Dgallium-xa=enabled
         -Dgbm=enabled
         -Dgles1=enabled
         -Dgles2=enabled
@@ -169,7 +167,6 @@ class Mesa < Formula
         -Dlmsensors=enabled
         -Dmicrosoft-clc=disabled
         -Dplatforms=x11,wayland
-        -Dshared-glapi=enabled
         -Dtools=drm-shim,dlclose-skip,etnaviv,freedreno,glsl,intel,lima,nir,nouveau,asahi,imagination
         -Dvalgrind=enabled
         -Dvulkan-drivers=auto
