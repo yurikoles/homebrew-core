@@ -2,13 +2,15 @@ class CeresSolver < Formula
   desc "C++ library for large-scale optimization"
   homepage "http://ceres-solver.org/"
   license "BSD-3-Clause"
-  revision 5
-  head "https://ceres-solver.googlesource.com/ceres-solver.git", branch: "master"
+  revision 6
 
   stable do
     url "https://distfiles.macports.org/ceres-solver/ceres-solver-2.2.0.tar.gz"
     mirror "http://ceres-solver.org/ceres-solver-2.2.0.tar.gz"
     sha256 "48b2302a7986ece172898477c3bcd6deb8fb5cf19b3327bc49969aad4cede82d"
+
+    depends_on "gflags"
+    depends_on "glog"
 
     # Backport support for eigen 5.0.0
     patch :DATA # https://github.com/ceres-solver/ceres-solver/commit/f0720aeb84ec7bb479fe3618b30fa54981baf8fd
@@ -34,16 +36,22 @@ class CeresSolver < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "66a1a131463a22f2ed31bbb5b4d698a73c23719ba5c07c9ebb69efb1863e779b"
   end
 
+  head do
+    url "https://ceres-solver.googlesource.com/ceres-solver.git", branch: "master"
+
+    depends_on "abseil"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "eigen"
-  depends_on "gflags"
-  depends_on "glog"
   depends_on "metis"
   depends_on "openblas"
   depends_on "suite-sparse"
   depends_on "tbb"
 
   def install
+    rm_r "third_party" if build.head?
+
     system "cmake", "-S", ".", "-B", "homebrew-build",
                     "-DBUILD_SHARED_LIBS=ON",
                     "-DBUILD_EXAMPLES=OFF",
