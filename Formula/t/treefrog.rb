@@ -4,6 +4,7 @@ class Treefrog < Formula
   url "https://github.com/treefrogframework/treefrog-framework/archive/refs/tags/v2.11.2.tar.gz"
   sha256 "2c878603e8dd609ddabb02ee0e3a74fe306ccdf93ea65f9999f9a60ad68249be"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/treefrogframework/treefrog-framework.git", branch: "master"
 
   livecheck do
