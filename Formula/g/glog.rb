@@ -1,10 +1,9 @@
 class Glog < Formula
   desc "Application-level logging library"
   homepage "https://google.github.io/glog/stable/"
-  url "https://github.com/google/glog/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "8a83bf982f37bb70825df71a9709fa90ea9f4447fb3c099e1d720a439d88bad6"
+  url "https://github.com/google/glog/archive/refs/tags/v0.7.1.tar.gz"
+  sha256 "00e4a87e87b7e7612f519a41e491f16623b12423620006f59f5688bfd8d13b08"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/google/glog.git", branch: "master"
 
   no_autobump! because: :requires_manual_review
@@ -20,35 +19,43 @@ class Glog < Formula
 
   # deprecate! date: "2025-12-10", because: :repo_archived, replacement_formula: "abseil"
 
-  depends_on "cmake" => :build
+  depends_on "cmake" => [:build, :test]
   depends_on "gflags"
 
   def install
     args = %w[
       -DBUILD_SHARED_LIBS=ON
+      -DWITH_PKGCONFIG=ON
     ]
-    # Workaround to build with CMake 4
-    args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
-    system "cmake", "--build", "build", "--target", "install"
+    system "cmake", "--install", "build"
   end
 
   test do
     (testpath/"test.cpp").write <<~CPP
       #include <glog/logging.h>
-      #include <iostream>
-      #include <memory>
-      int main(int argc, char* argv[])
-      {
+
+      int main(int argc, char* argv[]) {
         google::InitGoogleLogging(argv[0]);
         LOG(INFO) << "test";
       }
     CPP
-    system ENV.cxx, "-std=c++11", "test.cpp", "-I#{include}", "-L#{lib}",
-                    "-lglog", "-I#{Formula["gflags"].opt_lib}",
-                    "-L#{Formula["gflags"].opt_lib}", "-lgflags",
-                    "-o", "test"
-    system "./test"
+
+    (testpath/"CMakeLists.txt").write <<~CMAKE
+      cmake_minimum_required(VERSION 4.0)
+      project(test VERSION 1.0)
+      find_package(glog CONFIG REQUIRED)
+      add_executable(test test.cpp)
+      target_link_libraries(test glog::glog)
+    CMAKE
+
+    ENV["TMPDIR"] = testpath
+    system "cmake", "-S", ".", "-B", "build"
+    system "cmake", "--build", "build"
+    system "./build/test"
+
+    assert_path_exists testpath/"test.INFO"
+    assert_match "test.cpp:5] test", File.read("test.INFO")
   end
 end
