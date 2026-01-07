@@ -1,8 +1,8 @@
 class MinimalRacket < Formula
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
-  url "https://mirror.racket-lang.org/installers/8.17/racket-minimal-8.17-src.tgz"
-  sha256 "4acb365869290881fa07c69588cfa8b2dc1000bdc69955d70964b0b1e76b71ba"
+  url "https://mirror.racket-lang.org/installers/9.0/racket-minimal-9.0-src.tgz"
+  sha256 "2c9dc012acbd980e10c60db5071e1e4597e6d12469832a80a44beab2b62ec3fe"
   license any_of: ["MIT", "Apache-2.0"]
 
   # File links on the download page are created using JavaScript, so we parse
@@ -64,6 +64,20 @@ class MinimalRacket < Formula
       system "./configure", *args
       system "make"
       system "make", "install"
+
+      # Link to the Homebrew ssl libraries, overwriting the bundled libraries
+      if OS.mac?
+        openssl = Formula["openssl@3"]
+        racket_libdir = lib/"racket"
+
+        %w[libssl.3.dylib libcrypto.3.dylib].each do |dylib|
+          path = racket_libdir/dylib
+          path.unlink if path.exist?
+        end
+
+        ln_s openssl.opt_lib/"libssl.3.dylib",    racket_libdir/"libssl.3.dylib"
+        ln_s openssl.opt_lib/"libcrypto.3.dylib", racket_libdir/"libcrypto.3.dylib"
+      end
     end
 
     inreplace racket_config, prefix, opt_prefix
