@@ -1,8 +1,8 @@
 class Buffrs < Formula
   desc "Modern protobuf package management"
   homepage "https://github.com/helsing-ai/buffrs"
-  url "https://github.com/helsing-ai/buffrs/archive/refs/tags/v0.12.1.tar.gz"
-  sha256 "c4cae9fb4ed14fb2825f353e33147fa8ff2139f8d8fff1564a477057c2e8badb"
+  url "https://github.com/helsing-ai/buffrs/archive/refs/tags/v0.12.2.tar.gz"
+  sha256 "656e47a82a467e43ff3b3e3420be1b0ddb6365283ec554c0f70e0926d634eb57"
   license "Apache-2.0"
   head "https://github.com/helsing-ai/buffrs.git", branch: "main"
 
