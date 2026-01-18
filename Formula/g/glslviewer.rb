@@ -1,12 +1,27 @@
 class Glslviewer < Formula
   desc "Live-coding console tool that renders GLSL Shaders"
   homepage "https://patriciogonzalezvivo.com/2015/glslViewer/"
-  url "https://github.com/patriciogonzalezvivo/glslViewer.git",
-      tag:      "v3.10.1",
-      revision: "2671e0f0b362bfd94ea5160f2ecb7f7363d4991d"
   license "BSD-3-Clause"
-  revision 3
+  version_scheme 1
   head "https://github.com/patriciogonzalezvivo/glslViewer.git", branch: "main"
+
+  stable do
+    url "https://github.com/patriciogonzalezvivo/glslViewer.git",
+        tag:      "3.2.4",
+        revision: "7eb6254cb4cedf03f1c78653f90905fe0c3b48fb"
+
+    # Backport support for FFmpeg 8
+    patch do
+      url "https://github.com/patriciogonzalezvivo/vera/commit/74b6ff1eccb7baccdb3f7506377846ef20051de1.patch?full_index=1"
+      sha256 "9fe1f83af45a8740bb7bd3322e9b71bd5c3582b7397d68864d4f75e0c83541d4"
+      directory "deps/vera"
+    end
+  end
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
 
   no_autobump! because: :requires_manual_review
 
@@ -24,7 +39,7 @@ class Glslviewer < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "ffmpeg@7"
+  depends_on "ffmpeg"
   depends_on "glfw"
 
   uses_from_macos "ncurses"
