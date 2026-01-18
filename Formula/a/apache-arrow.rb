@@ -1,21 +1,11 @@
 class ApacheArrow < Formula
   desc "Columnar in-memory analytics layer designed to accelerate big data"
   homepage "https://arrow.apache.org/"
+  url "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-23.0.0/apache-arrow-23.0.0.tar.gz"
+  mirror "https://archive.apache.org/dist/arrow/arrow-23.0.0/apache-arrow-23.0.0.tar.gz"
+  sha256 "12f6844a0ba3b99645cd2bc6cc4f44f6a174ab90da37e474f08b7d073433cb60"
   license "Apache-2.0"
-  revision 3
   head "https://github.com/apache/arrow.git", branch: "main"
-
-  stable do
-    url "https://www.apache.org/dyn/closer.lua?path=arrow/arrow-22.0.0/apache-arrow-22.0.0.tar.gz"
-    mirror "https://archive.apache.org/dist/arrow/arrow-22.0.0/apache-arrow-22.0.0.tar.gz"
-    sha256 "131250cd24dec0cddde04e2ad8c9e2bc43edc5e84203a81cf71cf1a33a6e7e0f"
-
-    # Backport fix for `ARROW_SIMD_LEVEL=NONE`
-    patch do
-      url "https://github.com/apache/arrow/commit/00245cc802bc3be9a9cd169017f285586483fbb5.patch?full_index=1"
-      sha256 "fb692196f928401bb8aca93f9a7af7e028f65705c170f31a300728b041a07a71"
-    end
-  end
 
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "84e8c1dbed3883391c81b7927e7d4a766ac55895ca17d4590b7888f2a948644e"
