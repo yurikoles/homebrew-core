@@ -1,14 +1,10 @@
 class SwiProlog < Formula
   desc "ISO/Edinburgh-style Prolog interpreter"
   homepage "https://www.swi-prolog.org/"
+  url "https://www.swi-prolog.org/download/stable/src/swipl-10.0.0.tar.gz"
+  sha256 "98c552c48fc8b44dcd4440abbfed632cceb75055fde267be12f340bea8106590"
   license "BSD-2-Clause"
   head "https://github.com/SWI-Prolog/swipl-devel.git", branch: "master"
-
-  stable do
-    url "https://www.swi-prolog.org/download/stable/src/swipl-9.2.9.tar.gz"
-    sha256 "53f428e2d9bbdf30e53b06c9c42def9a13ff82fc36a111d410fc8b0bc889ee2d"
-    depends_on maximum_macos: [:sequoia, :build] # Remove in 9.4.0
-  end
 
   livecheck do
     url "https://www.swi-prolog.org/download/stable/src/"
@@ -26,7 +22,6 @@ class SwiProlog < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "berkeley-db@5" # keep berkeley-db < 6 to avoid AGPL incompatibility
   depends_on "gmp"
@@ -34,32 +29,28 @@ class SwiProlog < Formula
   depends_on "libyaml"
   depends_on "openssl@3"
   depends_on "pcre2"
-  depends_on "readline"
   depends_on "unixodbc"
 
+  uses_from_macos "libedit"
   uses_from_macos "libxcrypt"
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
 
   def install
+    # Remove bundled libraries
+    rm_r("packages/libedit/libedit")
+
     args = %W[
+      -DSWIPL_PACKAGES_GUI=OFF
       -DSWIPL_PACKAGES_JAVA=OFF
-      -DSWIPL_PACKAGES_X=OFF
       -DCMAKE_INSTALL_RPATH=#{loader_path}
       -DSWIPL_CC=#{ENV.cc}
       -DSWIPL_CXX=#{ENV.cxx}
+      -DSYSTEM_LIBEDIT=ON
     ]
-    if OS.mac?
-      macosx_dependencies_from = case HOMEBREW_PREFIX.to_s
-      when "/usr/local"
-        "HomebrewLocal"
-      when "/opt/homebrew"
-        "HomebrewOpt"
-      else
-        HOMEBREW_PREFIX
-      end
-      args << "-DMACOSX_DEPENDENCIES_FROM=#{macosx_dependencies_from}"
-    end
+    # Let Homebrew's build environment handle dependencies
+    args << "-DMACOSX_DEPENDENCIES_FROM=None" if OS.mac?
+
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
