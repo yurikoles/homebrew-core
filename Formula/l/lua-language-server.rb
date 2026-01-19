@@ -3,12 +3,10 @@ class LuaLanguageServer < Formula
   homepage "https://github.com/LuaLS/lua-language-server"
   # pull from git tag to get submodules
   url "https://github.com/LuaLS/lua-language-server.git",
-      tag:      "3.16.4",
-      revision: "af7bea0b05b1c11d2579db02de3ccd32224b5ccb"
+      tag:      "3.17.0",
+      revision: "dada769755a5d657ffd8ed584951bba18f5e3322"
   license "MIT"
   head "https://github.com/LuaLS/lua-language-server.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1
