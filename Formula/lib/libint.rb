@@ -23,9 +23,16 @@ class Libint < Formula
   depends_on "mpfr"
 
   def install
+    args = %w[
+      --enable-shared
+      --disable-static
+      --enable-eri=1
+      --enable-eri2=1
+      --enable-eri3=1
+    ]
     system "glibtoolize", "--install", "--force"
     system "./autogen.sh"
-    system "./configure", "--enable-shared", "--disable-static", *std_configure_args
+    system "./configure", *args, *std_configure_args
     system "make"
     system "make", "install"
     pkgshare.install "tests/hartree-fock/hartree-fock.cc"
