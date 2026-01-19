@@ -3,8 +3,8 @@ class Hk < Formula
   homepage "https://hk.jdx.dev"
   # pull from git tag to get submodules
   url "https://github.com/jdx/hk.git",
-      tag:      "v1.29.0",
-      revision: "b397b72f3791a4edb8d6dff25fcbb4f00a7510db"
+      tag:      "v1.32.0",
+      revision: "22cdebf1c3d3ad1fa868ec4cd6f863982368bef0"
   license "MIT"
   head "https://github.com/jdx/hk.git", branch: "main"
 
@@ -22,6 +22,7 @@ class Hk < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "783478f5fe3b8ccd74cbaf8e8f67eeeb0b9a807070b6eed1fa911e1da5524eaf"
   end
 
+  depends_on "mise" => :build
   depends_on "rust" => [:build, :test]
 
   depends_on "openssl@3"
@@ -39,6 +40,8 @@ class Hk < Formula
 
     generate_completions_from_executable(bin/"hk", "completion")
 
+    system "mise", "trust"
+    system "mise", "run", "pkl:gen"
     pkgshare.install "pkl"
   end
 
