@@ -1,30 +1,10 @@
 class W3m < Formula
   desc "Pager/text based browser"
   homepage "https://w3m.sourceforge.net/"
+  url "https://git.sr.ht/~rkta/w3m/archive/v0.5.5.tar.gz"
+  sha256 "b271c86b13be2207700230cb3f9061271ea37fd1ace199f48b72ea542a529a0f"
   license "w3m"
-  head "https://github.com/tats/w3m.git", branch: "master"
-
-  stable do
-    url "https://deb.debian.org/debian/pool/main/w/w3m/w3m_0.5.3+git20230121.orig.tar.xz"
-    sha256 "974d1095a47f1976150a792fe9c5a44cc821c02b6bdd714a37a098386250e03a"
-    version "0.5.3-git20230121"
-
-    # Fix for CVE-2023-4255
-    patch do
-      url "https://sources.debian.org/data/main/w/w3m/0.5.3%2Bgit20230121-2.1/debian/patches/0002-CVE-2023-4255.patch"
-      sha256 "7a84744bae63f3e470b877038da5a221ed8289395d300a904ac5a8626b0a9cea"
-    end
-  end
-
-  livecheck do
-    url "https://deb.debian.org/debian/pool/main/w/w3m/"
-    regex(/href=.*?w3m[._-]v?(\d+(?:\.\d+)+(?:\+git\d+)?)\.orig\.t/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match.first.tr("+", "-") }
-    end
-  end
-
-  no_autobump! because: :requires_manual_review
+  head "https://git.sr.ht/~rkta/w3m", branch: "master"
 
   bottle do
     sha256 arm64_tahoe:   "66b442a770ff9d6b7abb96a5994925af7a6ae07c68c4362d801e3d9b69f1fc6f"
