@@ -4,7 +4,7 @@ class LibgrapeLite < Formula
   url "https://github.com/alibaba/libgrape-lite/archive/refs/tags/v0.3.5.tar.gz"
   sha256 "77b7f08ad10b26ec7e6f60bf90ab8281208758702a9e8d9dd00b1cd6f5560f39"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   no_autobump! because: :requires_manual_review
 
@@ -17,10 +17,17 @@ class LibgrapeLite < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8fe5448439c287b66ca142385aa71dc91bbc24f6efdde70be5c2b8e3084178c0"
   end
 
-  depends_on "cmake" => :build
+  depends_on "cmake" => [:build, :test]
   depends_on "gflags"
   depends_on "glog"
   depends_on "open-mpi"
+
+  # Apply open PR to build with glog >= 0.7.
+  # PR ref: https://github.com/alibaba/libgrape-lite/pull/181
+  patch do
+    url "https://github.com/alibaba/libgrape-lite/commit/8093d80574c30c041ecd867ab4a8d74328905b8b.patch?full_index=1"
+    sha256 "f31b1c59a2b20f83d254f454d565b6a8c8ea27a024f78efff169563af5c40938"
+  end
 
   def install
     system "cmake", "-S", ".", "-B", "build", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", *std_cmake_args
@@ -29,6 +36,14 @@ class LibgrapeLite < Formula
   end
 
   test do
+    (testpath/"CMakeLists.txt").write <<~CMAKE
+      cmake_minimum_required(VERSION 4.0)
+      project(test LANGUAGES CXX)
+      find_package(libgrapelite REQUIRED)
+      add_executable(test test.cc)
+      target_link_libraries(test grape-lite)
+    CMAKE
+
     (testpath/"test.cc").write <<~CPP
       #include <iostream>
       #include <grape/grape.h>
@@ -48,18 +63,8 @@ class LibgrapeLite < Formula
       }
     CPP
 
-    system ENV.cxx, "test.cc", "-std=c++11",
-                    "-I#{Formula["glog"].include}",
-                    "-I#{Formula["open-mpi"].include}",
-                    "-I#{include}",
-                    "-L#{Formula["glog"].lib}",
-                    "-L#{Formula["open-mpi"].lib}",
-                    "-L#{lib}",
-                    "-lgrape-lite",
-                    "-lglog",
-                    "-lmpi",
-                    "-o", "test_libgrape_lite"
-
-    assert_equal("current worker id: 0\n", shell_output("./test_libgrape_lite"))
+    system "cmake", "-S", ".", "-B", "."
+    system "cmake", "--build", "."
+    assert_equal("current worker id: 0\n", shell_output("./test"))
   end
 end
