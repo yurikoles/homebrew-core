@@ -1,8 +1,8 @@
 class SignalwireClientC < Formula
   desc "SignalWire C Client SDK"
   homepage "https://github.com/signalwire/signalwire-c"
-  url "https://github.com/signalwire/signalwire-c/archive/refs/tags/v2.0.3.tar.gz"
-  sha256 "4ce196a4bb886854dfcb9018c05b466484a19f71a50c3d5a990a88429e74163a"
+  url "https://github.com/signalwire/signalwire-c/archive/refs/tags/v2.0.4.tar.gz"
+  sha256 "17fa86ba45b4c6363321eac73305153f322342d3f3a101a456f72abeac2ebd89"
   license "MIT"
 
   bottle do
