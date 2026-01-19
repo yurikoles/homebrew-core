@@ -4,7 +4,7 @@ class Vineyard < Formula
   url "https://github.com/v6d-io/v6d/releases/download/v0.24.4/v6d-0.24.4.tar.gz"
   sha256 "055bab09ca67542ccb13229de8c176b7875b4ba8c8a818e942218dccc32a6bae"
   license "Apache-2.0"
-  revision 6
+  revision 7
 
   bottle do
     sha256                               arm64_tahoe:   "bfbacaa6393ca506532de08d2c19a3ac7639ff0290135397921de09bdec5569a"
@@ -48,6 +48,13 @@ class Vineyard < Formula
   patch do
     url "https://github.com/v6d-io/v6d/commit/cab3ed986e15464d6b544a98bac4db38d0e89e3a.patch?full_index=1"
     sha256 "ce1325c893f210a3eae9ff29a8ab6cfa377d6672ab260db58de8522857856206"
+  end
+
+  # Apply open PR to build with glog >= 0.7
+  # PR ref: https://github.com/v6d-io/v6d/pull/2066
+  patch do
+    url "https://github.com/v6d-io/v6d/commit/45e06b0309397f713437ad64b545dc26fb18863d.patch?full_index=1"
+    sha256 "bb5745c04b86b9a31847b24b00973bf87891a3bb7896cf9f204592032a419af1"
   end
 
   def install
