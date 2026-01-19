@@ -6,12 +6,12 @@ class HelixDb < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0f5959304ca7ef89cae7501f85c386bd3a8e8d3a010954297cb8ec2f93910e2a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e95b09b497ec8191e88f575c32fbacdb9055148ed6dcf1b122033ce3406d4e09"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5ee04d806a07d09b4363779c51b67d208404530ea3215f9926a0f3472d07a2ce"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cd94db8f06d6a8632f53190301e8cfa301c91c4adae28bc0abd64d9f79da98a6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d485a740b571567deaae5e426e6b84580c23d9fb14b1c4b5d98c2290cb3e419c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aafd86590cf436b6f238a7e2500227b321f1cd130c0b2a7b251ccdc4b6c58d12"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c83d377a3ce381c7457285fa651eab0574c92db1b5534ef155cc0b6546247bfa"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d2df4082ae092ac8996788efb024bb66a91f7008a8790a8912490e9ce79a7f98"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4a6bbdbfc5b2c0d1ed25cda0534d8e62fa0dfcac795caedae770d3f7b43374d8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6da27eed0df5b1e3897a1ff605681226b397c415b6b0800d084dec5e29b51342"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9634098b3755de695751662a6244d1fb0b27bb079e343e6ca4a3666eb7cf7fcc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4eae03ae5e447c0aee69df18accac4ed156d624907018fc5b77a6fb0b10f5326"
   end
 
   depends_on "rust"
