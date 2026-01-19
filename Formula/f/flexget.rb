@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/c4/78/25c46fec65d3dc17b4b3157427f16d2350616e897147979e45d53105398e/flexget-3.18.38.tar.gz"
-  sha256 "c3eac48a0df5937560786ebf220ff14995f0a8d41ee69e2154d4efab4868d746"
+  url "https://files.pythonhosted.org/packages/6f/a6/060647d5f7b5ef6d7e8db517b761a66c7e7756e8167338c99c697a8217d6/flexget-3.18.39.tar.gz"
+  sha256 "cbe2064b08bffd721f3c6e6109805b398c7f81c21afa101c337224e87dd0374f"
   license "MIT"
 
   bottle do
@@ -315,8 +315,8 @@ class Flexget < Formula
   end
 
   resource "soupsieve" do
-    url "https://files.pythonhosted.org/packages/89/23/adf3796d740536d63a6fbda113d07e60c734b6ed5d3058d1e47fc0495e47/soupsieve-2.8.1.tar.gz"
-    sha256 "4cf733bc50fa805f5df4b8ef4740fc0e0fa6218cf3006269afd3f9d6d80fd350"
+    url "https://files.pythonhosted.org/packages/93/f2/21d6ca70c3cf35d01ae9e01be534bf6b6b103c157a728082a5028350c310/soupsieve-2.8.2.tar.gz"
+    sha256 "78a66b0fdee2ab40b7199dc3e747ee6c6e231899feeaae0b9b98a353afd48fd8"
   end
 
   resource "sqlalchemy" do
