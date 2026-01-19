@@ -1,8 +1,8 @@
 class Wavpack < Formula
   desc "Hybrid lossless audio compression"
   homepage "https://www.wavpack.com/"
-  url "https://www.wavpack.com/wavpack-5.8.1.tar.bz2"
-  sha256 "7bd540ed92d2d1bf412213858a9e4f1dfaf6d9a614f189b0622060a432e77bbf"
+  url "https://www.wavpack.com/wavpack-5.9.0.tar.bz2"
+  sha256 "b0038f515d322042aaa6bd352d437729c6f5f904363cc85bbc9b0d8bd4a81927"
   license "BSD-3-Clause"
 
   # The first-party download page also links to `xmms-wavpack` releases, so
