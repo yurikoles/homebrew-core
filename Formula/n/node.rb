@@ -1,8 +1,8 @@
 class Node < Formula
   desc "Open-source, cross-platform JavaScript runtime environment"
   homepage "https://nodejs.org/"
-  url "https://nodejs.org/dist/v25.3.0/node-v25.3.0.tar.xz"
-  sha256 "97939099edd035a0c1a2d1fc849cac018ec2a38c0c28dd8e8246fd883cdb9e9e"
+  url "https://nodejs.org/dist/v25.4.0/node-v25.4.0.tar.xz"
+  sha256 "04e365aadcd7bf4cf1a6001723ea41035bfb118d78f8a8ee2054b37fc5cb67d6"
   license "MIT"
   head "https://github.com/nodejs/node.git", branch: "main"
 
@@ -120,12 +120,18 @@ class Node < Formula
 
     # TODO: Try to devendor these libraries.
     # - `--shared-ada` needs the `ada-url` formula, but requires C++20
+    # - `--shared-gtest` is only used for building the test suite, which we don't run here.
+    # - `--shared-hdr-histogram` is not currently a dependency we track.
     # - `--shared-simdutf` seems to result in build failures.
     # - `--shared-http-parser` and `--shared-uvwasi` are not available as dependencies in Homebrew.
+    # - `--shared-temporal_capi` is not packaged as an external dependency in Homebrew, so we keep it vendored.
     ignored_shared_flags = %w[
       ada
+      gtest
+      hdr-histogram
       http-parser
       simdutf
+      temporal_capi
     ].map { |library| "--shared-#{library}" }
 
     configure_help = Utils.safe_popen_read("./configure", "--help")
