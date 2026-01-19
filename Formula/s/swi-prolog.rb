@@ -12,13 +12,12 @@ class SwiProlog < Formula
   end
 
   bottle do
-    sha256 arm64_sequoia: "40236da144dd4723d91872920d988b7f52e29688745a6be1872cfc5177c965f2"
-    sha256 arm64_sonoma:  "318ffb0fb2d334b6f49ce3293aea1c2a6d93e9bf8cf0d103c1e401b55148f84f"
-    sha256 arm64_ventura: "924cd93f4e48a4026c5bc64b579e2628147aaadea3bae259d721cb8af203273b"
-    sha256 sonoma:        "e80c89d844a75e37d381df5eddbcc6c3080d1f0f8923a6e3a1697443d8354aaf"
-    sha256 ventura:       "002b9b8eb714101e13ebeaa3daee81536dd3ae299f8b5ad021abcbcdf3f3c12b"
-    sha256 arm64_linux:   "cc5f0996cad11a2893cd832b5496c30ca3162e0ded4cf6423afddce74c26599c"
-    sha256 x86_64_linux:  "f2afbf413d542dcaeaf05cec448d97385f4de763f56a3747250ce7908a43b36e"
+    sha256 arm64_tahoe:   "3eb2ed1fa8a93f498210382896da6ca918c489cace86665db420f07b7ea0316d"
+    sha256 arm64_sequoia: "066cc4c305cd8820c725b68e084d8eec5d56f556c6b3304ab3632e717af1997f"
+    sha256 arm64_sonoma:  "517dcd86d7a0aa124e79a20970db315d5c11d2acae59235b8a606312ea563d24"
+    sha256 sonoma:        "f77b39ec026c93f25242d419eafcedff13fed918391b8898b4fdb7c6e21b570b"
+    sha256 arm64_linux:   "ced37bbbbdb1d01221253f4b644b4c8edaf2d3ceff1b2da5139cef9986bbec00"
+    sha256 x86_64_linux:  "b533ea5641a7bb74e8734ba66a48036edc1fb28adaf2643d0ae993822e422eb3"
   end
 
   depends_on "cmake" => :build
