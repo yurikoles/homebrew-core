@@ -1,12 +1,10 @@
 class Ali < Formula
   desc "Generate HTTP load and plot the results in real-time"
   homepage "https://github.com/nakabonne/ali"
-  url "https://github.com/nakabonne/ali/archive/refs/tags/v0.7.5.tar.gz"
-  sha256 "3eed2d7cbdf8365cad78833362e99138e7c0945d6dbc19e1253f8e0438a72f81"
+  url "https://github.com/nakabonne/ali/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "faf94ef7e0daa6d51b7064dd9757d4216168b19ed03c145ebf30e18f99fc81ad"
   license "MIT"
   head "https://github.com/nakabonne/ali.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "6c75f79f91b80211c17b21b777050f1df8a6081ac567ffb5556d9609148b4d1d"
