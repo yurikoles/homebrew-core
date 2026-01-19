@@ -1,8 +1,8 @@
 class Xmount < Formula
   desc "Convert between multiple input & output disk image types"
   homepage "https://www.sits.lu/xmount"
-  url "https://code.sits.lu/foss/xmount/-/archive/1.3.0/xmount-1.3.0.tar.bz2"
-  sha256 "cc5bc2ac00c734f5a9f7fadce48c9a22d9923d363d782374a9b747f52f271555"
+  url "https://code.sits.lu/foss/xmount/-/archive/1.3.1/xmount-1.3.1.tar.bz2"
+  sha256 "422185f1b99ec9e1077201a3a8587fa850068138d1ce685f636305bd19b7a71a"
   license "GPL-3.0-or-later"
 
   bottle do
