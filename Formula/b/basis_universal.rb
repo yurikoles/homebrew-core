@@ -1,9 +1,10 @@
 class BasisUniversal < Formula
   desc "Basis Universal GPU texture codec command-line compression tool"
   homepage "https://github.com/BinomialLLC/basis_universal"
-  url "https://github.com/BinomialLLC/basis_universal/archive/refs/tags/v1_60.tar.gz"
-  sha256 "64ac9363656dc3eb41c59ee52af7e939abe574a92c85fd0ba27008c4a7ec9f40"
+  url "https://github.com/BinomialLLC/basis_universal/archive/refs/tags/v2_0.tar.gz"
+  sha256 "9ce167fcd6d4c45acf0cbb7fb9cf9ed5655330acbf12104558bcdd683c60ad14"
   license "Apache-2.0"
+  head "https://github.com/BinomialLLC/basis_universal.git", branch: "master"
 
   livecheck do
     url :stable
@@ -12,8 +13,6 @@ class BasisUniversal < Formula
       tags.filter_map { |tag| tag[regex, 1]&.tr("_", ".") }
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "528256b199323aa91aeeea65287838c0f416c350866aae486092e4399edcfe69"
@@ -32,7 +31,6 @@ class BasisUniversal < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     bin.install "bin/basisu"
-    bin.install "bin/examples" => "basisu_examples"
   end
 
   test do
