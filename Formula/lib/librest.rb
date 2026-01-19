@@ -1,19 +1,16 @@
 class Librest < Formula
   desc "Library to access RESTful web services"
-  homepage "https://wiki.gnome.org/Projects/Librest"
-  url "https://download.gnome.org/sources/rest/0.9/rest-0.9.1.tar.xz"
-  sha256 "9266a5c10ece383e193dfb7ffb07b509cc1f51521ab8dad76af96ed14212c2e3"
+  homepage "https://gitlab.gnome.org/GNOME/librest"
+  url "https://download.gnome.org/sources/librest/0.10/librest-0.10.2.tar.xz"
+  sha256 "7b6cb912bb3a22cfa7dcf005925dcb62883024db0c09099486e7d6851185c9b8"
   license all_of: ["LGPL-2.1-or-later", "LGPL-3.0-or-later"]
-  revision 1
 
   # librest doesn't seem to follow the typical GNOME version scheme, so we
   # provide a regex to disable the `Gnome` strategy's version filtering.
   livecheck do
     url :stable
-    regex(/rest[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/librest[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "e76bb42c804ee253aae0f581c72d121155c22180f6ce3917b1a94e4276086a46"
@@ -34,12 +31,6 @@ class Librest < Formula
   depends_on "libsoup"
 
   uses_from_macos "libxml2"
-
-  # Backport fix to avoid gnome-online-accounts crash
-  patch do
-    url "https://gitlab.gnome.org/GNOME/librest/-/commit/dc860c817c311f07b489cd00c6c8dea4ad1999ca.diff"
-    sha256 "af856766a93efa65e8ac619ab2be1f974a6fdd522dc38296aaa76b0359dbad65"
-  end
 
   def install
     system "meson", "setup", "build", "-Dexamples=false", "-Dgtk_doc=false", "-Dtests=false", *std_meson_args
