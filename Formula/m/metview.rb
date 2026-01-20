@@ -11,12 +11,13 @@ class Metview < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "97972f980eda2a1a3ed9c38faa18a4a3c13a350ae3e8c6404e32ed8d2cf049b1"
-    sha256 arm64_sequoia: "5415a49fe7e1d8a17e0b0359ee34fc8cac1ec72ea442cf58f28dca234504ed0a"
-    sha256 arm64_sonoma:  "df1ad37284c828312c9d8aef790a7ed2ca61ea9f2d137a4ca6042601694d4e5e"
-    sha256 sonoma:        "0b85a8444c3b7f3efbd3db4c367abfc44f9cb86073040bff8c4f1cd640ba1513"
-    sha256 arm64_linux:   "c6a9ddea39dee0dffc6c1df4febe181acb0c1e2899519bac0dcc00e684e0e995"
-    sha256 x86_64_linux:  "533048cc0caf2525e564cc1193a416cdc205fcf47e0b172084aec740071883c8"
+    rebuild 1
+    sha256                               arm64_tahoe:   "8ea0aac6d5efa12195864cd47b2a6c3f2947fb67c08dcd20484776aabc6ee1c8"
+    sha256                               arm64_sequoia: "8d3b1a19af31c9bd7e1c2bc0e9ee7d973531072b8a21809bf33c3f1fc1af19f2"
+    sha256                               arm64_sonoma:  "3c7f68f83c3a04ccf87213a3c2e658c5c1d8d3042e0bc938a6fc79c4822bceb5"
+    sha256 cellar: :any,                 sonoma:        "9967ae04346f24e99ef21b3f8cb173b2bd60adc0282f0f148bff79b7917d6923"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7924342f589a4aa78003c16731d9a13dfdf2ce19cc2c666f214083a263c667fe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "81dbd92e9ed28d630b33df5e19c966dde006ce193601edb94713d1a8c7d4636c"
   end
 
   depends_on "cmake" => :build
