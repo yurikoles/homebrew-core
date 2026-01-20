@@ -1,8 +1,8 @@
 class Electric < Formula
   desc "Real-time sync for Postgres"
   homepage "https://electric-sql.com"
-  url "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.3.0.tar.gz"
-  sha256 "e51539895868819b5ee98e0b12ec3ed1c04bbaf72efa0b8b8bed4220e4f18cdc"
+  url "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.3.1.tar.gz"
+  sha256 "a7875781b94195dcfb0ad917727d72bb57124f2e9461b48e651eb7116dff77b9"
   license "Apache-2.0"
 
   livecheck do
@@ -64,6 +64,7 @@ class Electric < Formula
       mkdir_p testpath/"persistent/shapes/single_stack/.meta/backups/shape_status_backups"
 
       spawn bin/"electric", "start"
+      sleep 5 if OS.mac? && Hardware::CPU.intel?
 
       output = shell_output("curl -s --retry 5 --retry-connrefused localhost:#{ENV["ELECTRIC_PORT"]}/v1/health")
       assert_match "active", output
