@@ -1,25 +1,16 @@
 class Re2 < Formula
   desc "Alternative to backtracking PCRE-style regular expression engines"
   homepage "https://github.com/google/re2"
-  url "https://github.com/google/re2/archive/refs/tags/2025-11-05.tar.gz"
-  version "20251105"
+  url "https://github.com/google/re2/releases/download/2025-11-05/re2-2025-11-05.tar.gz"
   sha256 "87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67"
   license "BSD-3-Clause"
-  revision 1
+  version_scheme 1
   head "https://github.com/google/re2.git", branch: "main"
 
-  # The `strategy` block below is used to massage upstream tags into the
-  # YYYYMMDD format used in the `version`. This is necessary for livecheck
-  # to be able to do proper `Version` comparison.
   livecheck do
     url :stable
-    regex(/^(\d{2,4}-\d{2}-\d{2})$/i)
-    strategy :git do |tags, regex|
-      tags.filter_map { |tag| tag[regex, 1]&.gsub(/\D/, "") }
-    end
+    regex(/^(\d{4}-\d{2}-\d{2})$/i)
   end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "fcfe114f9aee2fa6475c6f33cfdcf28cdcaa3541a52c5920bbbc70aeda67988d"
