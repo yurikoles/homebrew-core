@@ -1,8 +1,8 @@
 class Sift < Formula
   desc "Fast and powerful open source alternative to grep"
   homepage "https://sift-tool.org/"
-  url "https://github.com/svent/sift/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "bbbd5c472c36b78896cd7ae673749d3943621a6d5523d47973ed2fc6800ae4c8"
+  url "https://github.com/svent/sift/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "8830db8aa7d34445eee66a5817127919040531c5ade186b909655ef274c3e4ce"
   license "GPL-3.0-only"
 
   bottle do
@@ -17,38 +17,11 @@ class Sift < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a5dc83483b444b3850237050f761c8967ce36008114dad661a1424aa6068da3"
   end
 
-  # https://github.com/svent/sift/issues/120
-  deprecate! date: "2024-03-26", because: :unmaintained
-  disable! date: "2025-03-26", because: :unmaintained
-
   depends_on "go" => :build
 
-  resource "github.com/svent/go-flags" do
-    url "https://github.com/svent/go-flags.git",
-        revision: "4bcbad344f0318adaf7aabc16929701459009aa3"
-  end
-
-  resource "github.com/svent/go-nbreader" do
-    url "https://github.com/svent/go-nbreader.git",
-        revision: "7cef48da76dca6a496faa7fe63e39ed665cbd219"
-  end
-
-  resource "golang.org/x/crypto" do
-    url "https://go.googlesource.com/crypto.git",
-        revision: "3c0d69f1777220f1a1d2ec373cb94a282f03eb42"
-  end
-
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GO111MODULE"] = "auto"
-
-    (buildpath/"src/github.com/svent/sift").install buildpath.children
-    resources.each { |r| (buildpath/"src"/r.name).install r }
-    cd "src/github.com/svent/sift" do
-      system "go", "build", "-o", bin/"sift"
-
-      bash_completion.install "sift-completion.bash" => "sift"
-    end
+    ldflags = "-s -w -X main.buildVersion=#{version}"
+    system "go", "build", *std_go_args(ldflags:)
   end
 
   test do
