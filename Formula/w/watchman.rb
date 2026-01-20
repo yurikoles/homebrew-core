@@ -6,6 +6,7 @@ class Watchman < Formula
   url "https://github.com/facebook/watchman/archive/refs/tags/v2026.01.12.00.tar.gz"
   sha256 "5b6be267c159356a77511545b0608b0dcbd1dfa4c6277b0a5385fc221e85392a"
   license "MIT"
+  revision 1
   head "https://github.com/facebook/watchman.git", branch: "main"
 
   bottle do
@@ -42,6 +43,9 @@ class Watchman < Formula
   end
 
   def install
+    # Workaround to build with glog >= 0.7 until fixed upstream
+    inreplace "CMakeLists.txt", "find_package(Glog REQUIRED)", "find_package(glog CONFIG REQUIRED)"
+
     # NOTE: Setting `BUILD_SHARED_LIBS=ON` will generate DSOs for Eden libraries.
     #       These libraries are not part of any install targets and have the wrong
     #       RPATHs configured, so will need to be installed and relocated manually
