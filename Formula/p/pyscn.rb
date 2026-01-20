@@ -7,12 +7,12 @@ class Pyscn < Formula
   head "https://github.com/ludo-technologies/pyscn.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f6c6352c339325b232b398c7eceed7330a978be31f6440f4b981d8a5068af1ef"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cd09beb9fc71b89aee3854d758db62906d53b186560468bd3e8a346375ed5ad7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0c997e9216dccdcdbeac3adc3eaaeb0f84ad738ddc0d714e4be3f427d4377ffe"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ade13e6df90eaef572be9fbd9f343e3c0b1013618933abe48814dccf3c4f89b8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d7f2450699412347dca17778986d7f5577e3b97d6b1d58eb8af0e474edf1bd14"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "815a48c055c7369f11d6348160ecd64f6f6886e4c2958a6dc33414695c071e7f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a581dda3fc4166c5b10b42b014e30bfe5295202b68a0245d69d1e0db07cc3ee5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "52fc0ecd31140ccbbd0416766c70979a5bd59225f486ddf6f6b968ce97e36e24"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d8a41133807f7326e0b5bc8c97f1ddf44750c093ff81ef772a1693772c5d0c24"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1a0f25e2d7e6da9594233248c446820a06d635a2a0c705029d46868df030bc1b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f57a48e10fb3a39aabdb46a9ca551727b8c8b007aea5404b2593c20a410024a0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d037b3a0ab3946a9d9d76f3e12aae7934dc3f82a3774190e868a4ab6a500cc6c"
   end
 
   depends_on "go" => :build
