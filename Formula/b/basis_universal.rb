@@ -1,8 +1,8 @@
 class BasisUniversal < Formula
   desc "Basis Universal GPU texture codec command-line compression tool"
   homepage "https://github.com/BinomialLLC/basis_universal"
-  url "https://github.com/BinomialLLC/basis_universal/archive/refs/tags/v2_0.tar.gz"
-  sha256 "9ce167fcd6d4c45acf0cbb7fb9cf9ed5655330acbf12104558bcdd683c60ad14"
+  url "https://github.com/BinomialLLC/basis_universal/archive/refs/tags/v2_0_1.tar.gz"
+  sha256 "ba83a292dc92f0ea5344208fb0befb41a4646075097e20055b002541de142091"
   license "Apache-2.0"
   head "https://github.com/BinomialLLC/basis_universal.git", branch: "master"
 
@@ -13,6 +13,8 @@ class BasisUniversal < Formula
       tags.filter_map { |tag| tag[regex, 1]&.tr("_", ".") }
     end
   end
+
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5e3b3a0ad370f117b59bc5b26bd06475a7339146ec7d6aedb313d8170aa37598"
