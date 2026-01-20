@@ -4,6 +4,7 @@ class Edencommon < Formula
   url "https://github.com/facebookexperimental/edencommon/archive/refs/tags/v2026.01.12.00.tar.gz"
   sha256 "3b60d7dd939c5844b1758a843a37f42cfafda37536a4396eb3876cee70a844bd"
   license "MIT"
+  revision 1
   head "https://github.com/facebookexperimental/edencommon.git", branch: "main"
 
   bottle do
@@ -29,6 +30,9 @@ class Edencommon < Formula
   depends_on "openssl@3"
 
   def install
+    # Workaround to build with glog >= 0.7 until fixed upstream
+    inreplace "CMakeLists.txt", /^find_package\(Glog MODULE /, "# \\0"
+
     # Fix "Process terminated due to timeout" by allowing a longer timeout.
     inreplace buildpath.glob("eden/common/{os,utils}/test/CMakeLists.txt"),
               /gtest_discover_tests\((.*)\)/,
