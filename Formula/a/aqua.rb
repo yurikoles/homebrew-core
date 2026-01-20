@@ -1,14 +1,17 @@
 class Aqua < Formula
   desc "Declarative CLI Version manager"
   homepage "https://aquaproj.github.io/"
-  url "https://github.com/aquaproj/aqua/archive/refs/tags/v2.56.4.tar.gz"
-  sha256 "3cfca5822a7bf1bf06069f863df8d19cc52c362aabd05f6cc971210eb7a53b88"
+  url "https://github.com/aquaproj/aqua/archive/refs/tags/v2.56.5.tar.gz"
+  sha256 "e166ee90e7db5cf1a6bd056b95e57f39f1fa6c04dd84ecba8f544661d84fba18"
   license "MIT"
   head "https://github.com/aquaproj/aqua.git", branch: "main"
 
+  # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
+  # labeled as "pre-release" on GitHub before the version is released, so it's
+  # necessary to use the `GithubLatest` strategy.
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   bottle do
