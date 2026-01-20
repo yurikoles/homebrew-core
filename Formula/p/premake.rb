@@ -1,8 +1,8 @@
 class Premake < Formula
   desc "Write once, build anywhere Lua-based build system"
   homepage "https://premake.github.io/"
-  url "https://github.com/premake/premake-core/releases/download/v5.0.0-beta6/premake-5.0.0-beta6-src.zip"
-  sha256 "8832890451889c7ca9ab62c507d86fc9bfde45094274e5e4f46f82a258b5789b"
+  url "https://github.com/premake/premake-core/archive/refs/tags/v5.0.0-beta7.tar.gz"
+  sha256 "51c01a1bb48de2bc98c025afd4eeade0059376785337725da7ee323a79e862f0"
   license "BSD-3-Clause"
   version_scheme 1
   head "https://github.com/premake/premake-core.git", branch: "master"
@@ -28,20 +28,9 @@ class Premake < Formula
   end
 
   def install
-    # Fix compile with newer Clang
-    # upstream issue, https://github.com/premake/premake-core/issues/2092
-    ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1403
-
-    # Fix to avoid fdopen() redefinition for vendored `zlib`
-    if OS.mac? && DevelopmentTools.clang_build_version >= 1700
-      inreplace "contrib/zlib/zutil.h",
-                "#        define fdopen(fd,mode) NULL /* No fdopen() */",
-                "#if !defined(__APPLE__)\n#  define fdopen(fd,mode) NULL /* No fdopen() */\n#endif"
-    end
-
     platform = OS.mac? ? "osx" : "linux"
     system "make", "-f", "Bootstrap.mak", platform
-    system "./bin/release/premake5", "gmake2"
+    system "./bin/release/premake5", "gmake"
     system "./bin/release/premake5", "embed"
     system "make"
     bin.install "bin/release/premake5"
