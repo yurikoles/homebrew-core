@@ -1,8 +1,8 @@
 class E1s < Formula
   desc "TUI for managing AWS ECS, inspired by k9s"
   homepage "https://github.com/keidarcy/e1s"
-  url "https://github.com/keidarcy/e1s/archive/refs/tags/v1.0.52.tar.gz"
-  sha256 "49180b19f27b2280e2064de7168136e47e2b2d8347534cc67d9a270462aa910c"
+  url "https://github.com/keidarcy/e1s/archive/refs/tags/v1.0.53.tar.gz"
+  sha256 "1f99a3fb44fb784eea7a77aceba7730efa8b0cdac4f1095eebd7be8e355afbda"
   license "MIT"
   head "https://github.com/keidarcy/e1s.git", branch: "master"
 
