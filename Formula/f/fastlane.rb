@@ -1,8 +1,8 @@
 class Fastlane < Formula
   desc "Easiest way to build and release mobile apps"
   homepage "https://fastlane.tools"
-  url "https://github.com/fastlane/fastlane/archive/refs/tags/2.231.0.tar.gz"
-  sha256 "1357db856bd1791a2b3463f1fd251fe2c41f20b6aca38e9510e615880679b5c0"
+  url "https://github.com/fastlane/fastlane/archive/refs/tags/2.231.1.tar.gz"
+  sha256 "4a1d78218c26b0bd53db2c3ee039ca57e488d059a4939b1c07c3458b7ed2742e"
   license "MIT"
   head "https://github.com/fastlane/fastlane.git", branch: "master"
 
@@ -24,12 +24,6 @@ class Fastlane < Formula
 
   on_macos do
     depends_on "terminal-notifier"
-  end
-
-  # ruby 4 build patch, upstream pr ref, https://github.com/fastlane/fastlane/pull/29869
-  patch do
-    url "https://github.com/fastlane/fastlane/commit/68926304c713d5f3073c2ec696638045c13060ff.patch?full_index=1"
-    sha256 "266f64c493adec094af87dc8a3dc8ff3166f6f0f7bf1a5db471ea987ee10c96c"
   end
 
   def fastlane_gem_home
