@@ -1,8 +1,8 @@
 class Assimp < Formula
   desc "Portable library for importing many well-known 3D model formats"
   homepage "https://www.assimp.org/"
-  url "https://github.com/assimp/assimp/archive/refs/tags/v6.0.2.tar.gz"
-  sha256 "d1822d9a19c9205d6e8bc533bf897174ddb360ce504680f294170cc1d6319751"
+  url "https://github.com/assimp/assimp/archive/refs/tags/v6.0.3.tar.gz"
+  sha256 "9be912589023c7d5a6f2b1db8858b689ce815d5eacf0fea82f869708479b1e51"
   # NOTE: BSD-2-Clause is omitted as contrib/Open3DGC/o3dgcArithmeticCodec.c is not used
   license all_of: [
     "BSD-3-Clause",
@@ -31,6 +31,11 @@ class Assimp < Formula
   uses_from_macos "zlib"
 
   def install
+    # Ignore error on older GCC
+    if ENV.compiler.to_s.start_with?("gcc") && DevelopmentTools.gcc_version(ENV.compiler) < 15
+      ENV.append_to_cflags "-Wno-maybe-uninitialized"
+    end
+
     args = %W[
       -DASSIMP_BUILD_TESTS=OFF
       -DASSIMP_BUILD_ASSIMP_TOOLS=ON
