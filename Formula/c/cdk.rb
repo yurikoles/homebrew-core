@@ -11,12 +11,12 @@ class Cdk < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "587f92b6b6ccac672d9779aa539cf6407f5c6663981a65526048728d590e94fa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d5d30b788e217dea97bcfbe00f8870aada4f82830a049b1c4438332d4defe9c3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "23214535daa04a6a731dde13d8b663639ccd32484a906a0fcfe90ab4a4935c05"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1061220f7666a70e7cd12c14259d5f682566f4639a9cb058e90fbc9ee03700e2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "86b9027c86caf2acea7f70048b810073b50f0160cac2d7205925d57bfd1a0376"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "53cf8a5b7aeae3d90f495dfc46900335106846aee7543d41fdc23476b1ff35e3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1385097ea494ad07851d2830e58c15c855f9094dcbc157b9fa2e9eb2ca271158"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "10688c9b60cd822682777a74a62e3c93b6a143e8fbe1bf82217d343b7c2c586d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "93a18729ac014cac89aeb755cf9a67574070da419a2db7811608a223018f5540"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ede3ad78d7a04193d0635ce068803cbdbc10f851229d6d17a44767f96f972923"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "feb3f98579f8ed1542c61e78a0c9edab8c50f3f0ce2947ca58b075ba5653f928"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b03b43b5924c1c6400f9e61b688e259acc265c6c1e76c16d6c327fb14497dfb9"
   end
 
   uses_from_macos "ncurses"
