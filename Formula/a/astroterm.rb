@@ -4,6 +4,7 @@ class Astroterm < Formula
   url "https://github.com/da-luce/astroterm/archive/refs/tags/v1.0.10.tar.gz"
   sha256 "6d9d61b818b01bd951d5340f09486bdc66aa107259acf78dfa8c3f875a36ea1f"
   license "MIT"
+  revision 1
   head "https://github.com/da-luce/astroterm.git", branch: "main"
 
   bottle do
