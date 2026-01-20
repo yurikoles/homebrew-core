@@ -3,9 +3,9 @@ class MysqlClient < Formula
   # FIXME: Actual homepage fails audit due to Homebrew's user-agent
   # homepage "https://dev.mysql.com/doc/refman/9.3/en/"
   homepage "https://github.com/mysql/mysql-server"
-  url "https://cdn.mysql.com/Downloads/MySQL-9.5/mysql-9.5.0.tar.gz"
-  mirror "https://repo.mysql.com/apt/ubuntu/pool/mysql-innovation/m/mysql-community/mysql-community_9.5.0.orig.tar.gz"
-  sha256 "ef3343981375865a2519f72b600e55f9c646e60e204a2964d3b7e8e748a110a5"
+  url "https://cdn.mysql.com/Downloads/MySQL-9.6/mysql-9.6.0.tar.gz"
+  mirror "https://repo.mysql.com/apt/ubuntu/pool/mysql-innovation/m/mysql-community/mysql-community_9.6.0.orig.tar.gz"
+  sha256 "240061d869d5ae188c9a333845928899e9d963ccbd67865a8a2e4b6fcb67178c"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
 
   livecheck do
