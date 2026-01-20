@@ -3,8 +3,8 @@ class Grayskull < Formula
 
   desc "Recipe generator for Conda"
   homepage "https://github.com/conda/grayskull"
-  url "https://files.pythonhosted.org/packages/a4/93/c24d673b719a346dfc7e905811737fb39d3cab82d22030f3a432c68899e8/grayskull-3.0.1.tar.gz"
-  sha256 "cc7b1e93ea423e005c47b6d8fd525989a255f9c8d180b6ec90e11df86068af5f"
+  url "https://files.pythonhosted.org/packages/be/da/0149f14fac6e6785c00293706691aba3fa9e6e43b41b7dddb63cf651cb3c/grayskull-3.0.2.tar.gz"
+  sha256 "8d0f5c6ab1266d42ce8b8ada06d56c290791b2c19d2285067e314af86687a6ad"
   license "Apache-2.0"
   head "https://github.com/conda/grayskull.git", branch: "main"
 
@@ -95,8 +95,8 @@ class Grayskull < Formula
   end
 
   resource "soupsieve" do
-    url "https://files.pythonhosted.org/packages/93/f2/21d6ca70c3cf35d01ae9e01be534bf6b6b103c157a728082a5028350c310/soupsieve-2.8.2.tar.gz"
-    sha256 "78a66b0fdee2ab40b7199dc3e747ee6c6e231899feeaae0b9b98a353afd48fd8"
+    url "https://files.pythonhosted.org/packages/7b/ae/2d9c981590ed9999a0d91755b47fc74f74de286b0f5cee14c9269041e6c4/soupsieve-2.8.3.tar.gz"
+    sha256 "3267f1eeea4251fb42728b6dfb746edc9acaffc4a45b27e19450b676586e8349"
   end
 
   resource "stdlib-list" do
