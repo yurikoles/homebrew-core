@@ -3,17 +3,14 @@ class MysqlAT80 < Formula
   # FIXME: Actual homepage fails audit due to Homebrew's user-agent
   # homepage "https://dev.mysql.com/doc/refman/8.0/en/"
   homepage "https://github.com/mysql/mysql-server"
-  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.44.tar.gz"
-  sha256 "a8cc09a35af63668c5235cf282aef789428c6f30c1d9a581b337c816ce8ce8bb"
+  url "https://cdn.mysql.com/Downloads/MySQL-8.0/mysql-boost-8.0.45.tar.gz"
+  sha256 "f679707d05f0c2b61e9b14961302e7f540c23e9e5e2bffd8ad9193599e295cee"
   license "GPL-2.0-only" => { with: "Universal-FOSS-exception-1.0" }
-  revision 5
 
   livecheck do
     url "https://dev.mysql.com/downloads/mysql/8.0.html?tpl=files&os=src&version=8.0"
     regex(/href=.*?mysql[._-](?:boost[._-])?v?(8\.0(?:\.\d+)*)\.t/i)
   end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 arm64_tahoe:   "ce4d16c587270d38f00220670514b1b3f214c7f3b35ab386248d9087420daf34"
