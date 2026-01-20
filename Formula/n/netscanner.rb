@@ -1,8 +1,8 @@
 class Netscanner < Formula
   desc "Network scanner with features like WiFi scanning, packetdump and more"
   homepage "https://github.com/Chleba/netscanner"
-  url "https://github.com/Chleba/netscanner/archive/refs/tags/v0.6.3.tar.gz"
-  sha256 "ad2df332bb347eac96c0a5d22e9477f9a7fe4b05d565b90009cc1c3fb598b29f"
+  url "https://github.com/Chleba/netscanner/archive/refs/tags/v0.6.41.tar.gz"
+  sha256 "1e913b7d9cde8953d2ea77307d91c55240bc94308ac9e321a8a843f930350e04"
   license "MIT"
   head "https://github.com/Chleba/netscanner.git", branch: "main"
 
