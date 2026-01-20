@@ -1,8 +1,8 @@
 class Ntfy < Formula
   desc "Send push notifications to your phone or desktop via PUT/POST"
   homepage "https://ntfy.sh/"
-  url "https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.15.0.tar.gz"
-  sha256 "7c0a5d641de4f7833dfa65d1f59753faa9af991f109db28d6c0ea8b24f36f954"
+  url "https://github.com/binwiederhier/ntfy/archive/refs/tags/v2.16.0.tar.gz"
+  sha256 "b564e16166711a319a21cb5711e2d000ba0332454c2af8aaa168b2b5e77ea8de"
   license any_of: ["Apache-2.0", "GPL-2.0-only"]
   head "https://github.com/binwiederhier/ntfy.git", branch: "main"
 
@@ -18,9 +18,20 @@ class Ntfy < Formula
   depends_on "go" => :build
 
   def install
+    tags = %w[noserver]
+    if OS.linux?
+      tags = %w[sqlite_omit_load_extension osusergo netgo]
+      ENV["CGO_ENABLED"] = "1"
+      # Workaround to avoid patchelf corruption when cgo is required
+      if Hardware::CPU.arm64?
+        ENV["GO_EXTLINK_ENABLED"] = "1"
+        ENV.append "GOFLAGS", "-buildmode=pie"
+      end
+    end
+
     system "make", "cli-deps-static-sites"
     ldflags = "-s -w -X main.version=#{version} -X main.date=#{time.iso8601} -X main.commit=#{tap.user}"
-    system "go", "build", *std_go_args(ldflags:, tags: "noserver")
+    system "go", "build", *std_go_args(ldflags:, tags:)
   end
 
   test do
