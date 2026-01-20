@@ -1,9 +1,9 @@
 class Solr < Formula
   desc "Enterprise search platform from the Apache Lucene project"
   homepage "https://solr.apache.org/"
-  url "https://dlcdn.apache.org/solr/solr/9.10.0/solr-9.10.0.tgz"
-  mirror "https://archive.apache.org/dist/solr/solr/9.10.0/solr-9.10.0.tgz"
-  sha256 "e33507231e7192753b13b8d11a5b7a6e0b7a0a6d2e1f53df4c8d4e20f0fb7da4"
+  url "https://dlcdn.apache.org/solr/solr/9.10.1/solr-9.10.1.tgz"
+  mirror "https://archive.apache.org/dist/solr/solr/9.10.1/solr-9.10.1.tgz"
+  sha256 "31dd91aeade540f4d7005cc1a1f7cc583ad77a78d800c9065cac06af1b097454"
   license "Apache-2.0"
 
   bottle do
