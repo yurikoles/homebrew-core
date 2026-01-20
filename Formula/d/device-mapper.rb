@@ -13,8 +13,9 @@ class DeviceMapper < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "c45e5431a10e40be3f485b58b39253f002b5f6e9585d5bdbf83a98a92e437981"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "521f27696d917df2d0f19399092b2536cba464aa783e9a4c14631a848d9bebc9"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "d2aee4bf5e1d751dc34b70f7f66c1e099d7c0de5aa7b11c4c61839d128ba17b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "386ed70dd25c7a97c1a66f46fc9c328c5292988542da6330f3e56aee2771a389"
   end
 
   depends_on "pkgconf" => :build
