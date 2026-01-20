@@ -1,17 +1,14 @@
 class Metview < Formula
   desc "Meteorological workstation software"
   homepage "https://metview.readthedocs.io/en/latest/"
-  url "https://confluence.ecmwf.int/download/attachments/51731119/MetviewBundle-2026.1.0-Source.tar.gz"
-  version "5.26.2"
-  sha256 "2bf48203c63c09303938323ac99b3a40d78d51d258b44e7d0d42ab2935d791a2"
+  url "https://confluence.ecmwf.int/download/attachments/3964985/Metview-5.26.2-Source.tar.gz"
+  sha256 "6245b34909ac697f941f92ee1293f14f96c31c3919f41db5dba706de6c9d43e3"
   license "Apache-2.0"
 
   livecheck do
-    url "https://confluence.ecmwf.int/display/METV/The+Metview+Source+Bundle"
-    regex(%r{>\s*Metview\s*<.+?<td[^>]*?>\s*v?(\d+(?:\.\d+)+)\s*</td}im)
+    url "https://confluence.ecmwf.int/display/METV/Releases"
+    regex(/href=.*?Metview[._-]v?(\d+(?:\.\d+)+)-Source\.t/i)
   end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 arm64_tahoe:   "97972f980eda2a1a3ed9c38faa18a4a3c13a350ae3e8c6404e32ed8d2cf049b1"
@@ -26,27 +23,25 @@ class Metview < Formula
   depends_on "pkgconf" => :build
   depends_on "cairo"
   depends_on "eccodes"
-  depends_on "eigen"
+  depends_on "eigen" => :no_linkage
   depends_on "fftw"
   depends_on "gdbm"
   depends_on "glib"
   depends_on "libaec"
-  depends_on "libpng"
   depends_on "lz4"
+  depends_on "magics"
   depends_on "netcdf"
   depends_on "netcdf-cxx"
-  depends_on "openssl@3"
   depends_on "pango"
-  depends_on "proj"
   depends_on "qt5compat"
   depends_on "qtbase"
   depends_on "qtsvg"
+  depends_on "snappy"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex"  => :build
   uses_from_macos "bzip2"
   uses_from_macos "curl"
-  uses_from_macos "expat"
 
   on_macos do
     depends_on "gcc"
@@ -57,15 +52,14 @@ class Metview < Formula
   on_linux do
     depends_on "libtirpc"
     depends_on "openblas"
-    depends_on "snappy"
   end
 
   def install
     args = %W[
-      -DBUNDLE_SKIP_ECCODES=1
       -DENABLE_MIR_DOWNLOAD_MASKS=OFF
       -DENABLE_BUILD_TOOLS=OFF
       -DENABLE_ECKIT_CMD=OFF
+      -DENABLE_TESTS=OFF
       -DFFTW_PATH=#{Formula["fftw"].opt_prefix}
     ]
 
