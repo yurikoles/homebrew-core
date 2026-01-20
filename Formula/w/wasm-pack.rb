@@ -1,10 +1,10 @@
 class WasmPack < Formula
   desc "Your favorite rust -> wasm workflow tool!"
-  homepage "https://rustwasm.github.io/wasm-pack/"
-  url "https://github.com/rustwasm/wasm-pack/archive/refs/tags/v0.13.1.tar.gz"
-  sha256 "3c28be53174fd12a6f3c3a018f14c8383b2eec6c6699c74751c1f3c51a2346c0"
+  homepage "https://drager.github.io/wasm-pack/"
+  url "https://github.com/drager/wasm-pack/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "60e866ce851219b18b7e16b2dbcd8323d5af0eac7d3a8a616bec3bd62fc051c4"
   license any_of: ["Apache-2.0", "MIT"]
-  head "https://github.com/rustwasm/wasm-pack.git", branch: "master"
+  head "https://github.com/drager/wasm-pack.git", branch: "master"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "015d79bf605e1c7210d9662f663bd625d5ffb198b4b05f057ff96aeda01c4157"
@@ -22,15 +22,6 @@ class WasmPack < Formula
   depends_on "rustup"
 
   def install
-    # We hit a segfault in test using pre-built cargo-generate < 0.21.2 on arm64 linux.
-    # The logic to use a global copy from PATH is broken[^1] and a PR[^2] to fix stalled.
-    # There is another PR[^3] to provide an environment variable to bypass version check.
-    #
-    # [^1]: https://github.com/rustwasm/wasm-pack/issues/1457
-    # [^2]: https://github.com/rustwasm/wasm-pack/pull/1330
-    # [^3]: https://github.com/rustwasm/wasm-pack/pull/1482
-    inreplace "src/install/mod.rs", '"0.18.2"', '"0.21.3"' if OS.linux? && Hardware::CPU.arm?
-
     system "cargo", "install", *std_cargo_args
   end
 
@@ -40,6 +31,13 @@ class WasmPack < Formula
     ENV.prepend_path "PATH", Formula["rustup"].bin
     system "rustup", "set", "profile", "minimal"
     system "rustup", "default", "stable"
+
+    # Prevent Homebrew/CI AArch64 CPU features from bleeding into wasm32 builds
+    ENV.delete "RUSTFLAGS"
+    ENV.delete "CARGO_ENCODED_RUSTFLAGS"
+
+    # Explicitly enable reference-types to resolve "failed to find intrinsics" error
+    ENV["RUSTFLAGS"] = "-C target-feature=+reference-types"
 
     system bin/"wasm-pack", "new", "hello-wasm"
     system bin/"wasm-pack", "build", "hello-wasm"
