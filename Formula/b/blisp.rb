@@ -4,6 +4,7 @@ class Blisp < Formula
   url "https://github.com/pine64/blisp/archive/refs/tags/v0.0.5.tar.gz"
   sha256 "79f87fbbb66f1d9ddf250cdc15dc16638d95e0905665003b08920a4b1fda9f96"
   license "MIT"
+  revision 1
   head "https://github.com/pine64/blisp.git", branch: "master"
 
   bottle do
