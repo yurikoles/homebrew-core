@@ -4,6 +4,7 @@ class Fb303 < Formula
   url "https://github.com/facebook/fb303/archive/refs/tags/v2026.01.12.00.tar.gz"
   sha256 "e455652551702d040b9ba7c9e3991f556c851fc513fd28b039a56127a1190dd5"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/facebook/fb303.git", branch: "main"
 
   bottle do
@@ -15,8 +16,8 @@ class Fb303 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "a7242cbadf175d2c9961144eda50f3adcafdbbb73f75b28e86b80f036b5b7948"
   end
 
-  depends_on "cmake" => :build
-  depends_on "mvfst" => :build
+  depends_on "cmake" => [:build, :test]
+  depends_on "mvfst" => [:build, :test]
   depends_on "fbthrift"
   depends_on "fizz"
   depends_on "fmt"
@@ -26,6 +27,9 @@ class Fb303 < Formula
   depends_on "openssl@3"
 
   def install
+    # Workaround to build with glog >= 0.7 until fixed upstream
+    inreplace "CMakeLists.txt", /^find_package\(Glog MODULE /, "# \\0"
+
     shared_args = ["-DBUILD_SHARED_LIBS=ON", "-DCMAKE_INSTALL_RPATH=#{rpath}"]
     shared_args << "-DCMAKE_SHARED_LINKER_FLAGS=-Wl,-dead_strip_dylibs" if OS.mac?
 
@@ -45,19 +49,30 @@ class Fb303 < Formula
       }
     CPP
 
+    (testpath/"CMakeLists.txt").write <<~CMAKE
+      cmake_minimum_required(VERSION 4.0)
+      project(test LANGUAGES CXX)
+      set(CMAKE_CXX_STANDARD 20)
+
+      list(APPEND CMAKE_MODULE_PATH "#{Formula["fizz"].opt_libexec}/cmake")
+      list(APPEND CMAKE_MODULE_PATH "#{Formula["fbthrift"].opt_libexec}/cmake")
+      find_package(FBThrift CONFIG REQUIRED)
+      find_package(wangle CONFIG REQUIRED)
+      find_package(fb303 CONFIG REQUIRED)
+
+      add_executable(test test.cpp)
+      target_link_libraries(test fb303::fb303_thrift_cpp)
+    CMAKE
+
+    ENV.delete "CPATH" if OS.mac?
     if Tab.for_formula(Formula["folly"]).built_as_bottle
       ENV.remove_from_cflags "-march=native"
       ENV.append_to_cflags "-march=#{Hardware.oldest_cpu}" if Hardware::CPU.intel?
     end
 
-    ENV.append "CXXFLAGS", "-std=c++20"
-    system ENV.cxx, *ENV.cxxflags.split, "test.cpp", "-o", "test",
-                    "-I#{include}", "-I#{Formula["openssl@3"].opt_include}",
-                    "-L#{lib}", "-lfb303_thrift_cpp",
-                    "-L#{Formula["folly"].opt_lib}", "-lfolly",
-                    "-L#{Formula["glog"].opt_lib}", "-lglog",
-                    "-L#{Formula["fbthrift"].opt_lib}", "-lthriftprotocol", "-lthriftcpp2",
-                    "-lthriftmetadata", "-lthrifttyperep", "-ldl"
+    args = OS.mac? ? [] : ["-DCMAKE_BUILD_RPATH=#{lib};#{HOMEBREW_PREFIX}/lib"]
+    system "cmake", "-S", ".", "-B", ".", *args, *std_cmake_args
+    system "cmake", "--build", "."
     assert_equal "BaseService", shell_output("./test").strip
   end
 end
