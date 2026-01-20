@@ -1,16 +1,14 @@
 class Fastk < Formula
   desc "K-mer counter for high-fidelity shotgun datasets"
   homepage "https://github.com/thegenemyers/FASTK"
-  url "https://github.com/thegenemyers/FASTK/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "28a2de98ede77d4b4476596851f92413a9d99a1d3341afc6682d5333ac797f07"
+  url "https://github.com/thegenemyers/FASTK/archive/refs/tags/v1.2.tar.gz"
+  sha256 "2e347fd698ea109685868149dd2d9c43aefc373f70ad7df8e303e0724f75c850"
   license all_of: [
     "BSD-3-Clause",
     { all_of: ["MIT", "BSD-3-Clause"] }, # HTSLIB
     "MIT", # LIBDEFLATE
   ]
   head "https://github.com/thegenemyers/FASTK.git", branch: "master"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "bc231c5bdda83a2f6d4b0b055dbb01b0c04538ac8d7cc205c71c28d40cba6215"
@@ -32,7 +30,7 @@ class Fastk < Formula
   def install
     ENV.deparallelize
 
-    mkdir bin
+    bin.mkpath
     system "make"
     system "make", "install", "DEST_DIR=#{bin}"
   end
