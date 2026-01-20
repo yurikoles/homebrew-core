@@ -1,20 +1,16 @@
 class Argtable3 < Formula
   desc "ANSI C library for parsing GNU-style command-line options"
   homepage "https://www.argtable.org"
-  url "https://github.com/argtable/argtable3/archive/refs/tags/v3.3.1.tar.gz"
-  sha256 "8b28a4fb2cd621d8d16f34e30e1956aa488077f6a6b902e7fc9f07883e1519c1"
+  url "https://github.com/argtable/argtable3/releases/download/v3.3.1/argtable-v3.3.1.tar.gz"
+  sha256 "c08bca4b88ddb9234726b75455b3b1670d7c864d8daf198eaa7a3b4d41addf2c"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/argtable/argtable3.git", branch: "master"
 
-  # Upstream uses a tag format including a version and hash (e.g.
-  # `v3.2.2.f25c624`) and we only use the version part in the formula, so this
-  # omits the hash part to match.
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)(?:\.\h+)?$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "02841c4514ec0b016351a3f513bcb7b529f78e0fbe3e4dbab89b9734d084244e"
