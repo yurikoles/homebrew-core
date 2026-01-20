@@ -7,14 +7,12 @@ class W3m < Formula
   head "https://git.sr.ht/~rkta/w3m", branch: "master"
 
   bottle do
-    sha256 arm64_tahoe:   "66b442a770ff9d6b7abb96a5994925af7a6ae07c68c4362d801e3d9b69f1fc6f"
-    sha256 arm64_sequoia: "d43c6ea193e92ae3a7ff8c68d77dfa6b69b28695bf0ef4009c07a8b55049bbb0"
-    sha256 arm64_sonoma:  "7ebcfdfd3b2424232e38d4bb2df40b78aa189a5f9f59d7d95479a5c9b5504962"
-    sha256 arm64_ventura: "76450cc0ba39c902c03f3262950fc6fbd71ab37487d8b739d3c39294e08f269f"
-    sha256 sonoma:        "b832f5eced22941c1c3f44520dd6bc6f656d861c27eb52a942b93723df23d0da"
-    sha256 ventura:       "b0a1d6e3855af50f3d32878d2889fa99f281985bec224b18ce42e48d55df89a1"
-    sha256 arm64_linux:   "bf66af8f63d1faba8adeccf8539174f8cf1e40834068a57745ef7f8916694079"
-    sha256 x86_64_linux:  "08f462b37359e85d7d9628d5bfce123da1f7e28c1811157b3d485cb6424fff39"
+    sha256 arm64_tahoe:   "54a28ede9af7af24957e089d7e635cbddc3d647bb858663647cd8cdbe9ac3346"
+    sha256 arm64_sequoia: "6efda232c86351e6e4908c38199188d885c50b8854541bb5a1647685e7b67bb6"
+    sha256 arm64_sonoma:  "256a0502e045c00f6ff2854f75c651e935eda90b58c737e79df1b4690be41406"
+    sha256 sonoma:        "807cd2e2aec4f81dcd11a4e7fab76fb5fae0633960a5df3e1e36eed4f5cd3d7d"
+    sha256 arm64_linux:   "82b720acc082358777064a290d20be4f70cd9a63a4e326d6e4f5d3143848f829"
+    sha256 x86_64_linux:  "e5baafabcaf71e279b405695d142b3c54eafe192b266132adef55b67fbc42284"
   end
 
   depends_on "pkgconf" => :build
