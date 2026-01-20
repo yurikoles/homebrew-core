@@ -1,8 +1,8 @@
 class Fastrace < Formula
   desc "Dependency-free traceroute implementation in pure C"
-  homepage "https://davidesantangelo.github.io/fastrace/"
-  url "https://github.com/davidesantangelo/fastrace/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "fdc178b1061573030a35ee3658fdb2bb21429e2cdab61e7bf64de827706bfeee"
+  homepage "https://github.com/davidesantangelo/fastrace"
+  url "https://github.com/davidesantangelo/fastrace/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "2306b081389a98486167707733ace0e5811bd154eaf0beffd9f144e081c94ad9"
   license "BSD-2-Clause"
 
   bottle do
@@ -21,6 +21,6 @@ class Fastrace < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/fastrace -V")
 
-    assert_match "Error creating ICMP socket", shell_output("#{bin}/fastrace brew.sh 2>&1", 1)
+    assert_match "Error creating ICMP receive socket", shell_output("#{bin}/fastrace brew.sh 2>&1", 1)
   end
 end
