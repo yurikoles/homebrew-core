@@ -1,11 +1,9 @@
 class Vpcs < Formula
   desc "Virtual PC simulator for testing IP routing"
   homepage "https://vpcs.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/vpcs/0.8/vpcs-0.8-src.tbz"
-  sha256 "dca602d0571ba852c916632c4c0060aa9557dd744059c0f7368860cfa8b3c993"
+  url "https://github.com/GNS3/vpcs/archive/refs/tags/v0.8.3.tar.gz"
+  sha256 "73018c923fdb8bbd7d76ddf4877bb7b3babbabed014f409f6b78a2e2b0a33da7"
   license "BSD-2-Clause"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "158636f42e7e2b5c9bb55093d13dcedeb7513c17a003a3432741acde18e4402f"
@@ -24,17 +22,9 @@ class Vpcs < Formula
   end
 
   def install
-    cd "src" do
-      if OS.mac?
-        system "make", "-f", "Makefile.osx"
-      else
-        # Avoid conflicting getopt
-        rm "getopt.h"
-        # Use -fcommon to work around multiple definition of `vpc'
-        system "make", "-f", "Makefile.linux", "CCOPT=-fcommon"
-      end
-      bin.install "vpcs"
-    end
+    os = OS.mac? ? "osx" : OS.kernel_name.downcase
+    system "make", "-C", "src", "-f", "Makefile.#{os}"
+    bin.install "src/vpcs"
   end
 
   test do
