@@ -1,8 +1,8 @@
 class CBlosc2 < Formula
   desc "Fast, compressed, persistent binary data store library for C"
   homepage "https://www.blosc.org"
-  url "https://github.com/Blosc/c-blosc2/archive/refs/tags/v2.21.3.tar.gz"
-  sha256 "4ac2e8b7413624662767b4348626f54ad621d6fbd315d0ba8be32a6ebaa21d41"
+  url "https://github.com/Blosc/c-blosc2/archive/refs/tags/v2.22.0.tar.gz"
+  sha256 "6c6fe90babfa09bd3c544643d3fc3ea9516f9cbc74e8b3342f0d50416862b76f"
   license "BSD-3-Clause"
   head "https://github.com/Blosc/c-blosc2.git", branch: "main"
 
@@ -28,9 +28,7 @@ class CBlosc2 < Formula
   def install
     ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1400
 
-    internal_complibs = buildpath.glob("internal-complibs/{lz4,zlib,zstd}-*")
-    odie "Failed to find vendored sources for removal!" if internal_complibs.count != 3
-    rm_r internal_complibs
+    rm_r("internal-complibs")
 
     args = %w[
       -DBUILD_TESTS=OFF
