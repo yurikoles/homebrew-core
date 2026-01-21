@@ -1,8 +1,8 @@
 class FleetCli < Formula
   desc "Manage large fleets of Kubernetes clusters"
   homepage "https://github.com/rancher/fleet"
-  url "https://github.com/rancher/fleet/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "63408c6c225d43fea36410defe3b7d56f17e5c84b857eaa2fae97fdaeb80d20d"
+  url "https://github.com/rancher/fleet/archive/refs/tags/v0.14.2.tar.gz"
+  sha256 "cd2019c5db15f0b37c9f97113869c0b08368af4fecf8ad69a1862cbf6ea41368"
   license "Apache-2.0"
   head "https://github.com/rancher/fleet.git", branch: "main"
 
