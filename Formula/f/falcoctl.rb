@@ -1,8 +1,8 @@
 class Falcoctl < Formula
   desc "CLI tool for working with Falco and its ecosystem components"
   homepage "https://github.com/falcosecurity/falcoctl"
-  url "https://github.com/falcosecurity/falcoctl/archive/refs/tags/v0.11.4.tar.gz"
-  sha256 "387588e6eb8927920e45acd4121c90756ad69c6d16f5b7f94f2ceaaac45d3a73"
+  url "https://github.com/falcosecurity/falcoctl/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "d190b5449a2b14108db1409a09dd78b6ae3adc1647632584a9f5ff2aae24ff66"
   license "Apache-2.0"
   head "https://github.com/falcosecurity/falcoctl.git", branch: "main"
 
