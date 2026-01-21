@@ -1,8 +1,8 @@
 class AttemptCli < Formula
   desc "CLI for retrying fallible commands"
   homepage "https://github.com/MaxBondABE/attempt"
-  url "https://github.com/MaxBondABE/attempt/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "59a5a250de15ec14802eec19b6c63de975ccb72d2f205f1402bef94cf30b2f10"
+  url "https://github.com/MaxBondABE/attempt/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "95c0d7873db135361f5de50e1add0aa472f543dd499aec3cd1fda678672c850a"
   license "Unlicense"
   head "https://github.com/MaxBondABE/attempt.git", branch: "main"
 
