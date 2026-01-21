@@ -9,12 +9,12 @@ class Glog < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "db7706b1f7d29240796ce138101d3d18f02d9d2e2be542f38c5ca157e91dd84c"
-    sha256 cellar: :any,                 arm64_sequoia: "0815d02daeafc23dbe271d1094bd07ab4c736f09d6f2f4db49246d1f2473955c"
-    sha256 cellar: :any,                 arm64_sonoma:  "98570364c65f024c6c288284a250f9a93420b6acb45d9ed0abc5790e17d8bb85"
-    sha256 cellar: :any,                 sonoma:        "1b3afc19df4514dd0bbd4368940e25df58802dde175d5b07552b8ff66d3927f5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "148610f0d05d41387d7dd402fec0b7cafbe2603a7a5745734ecd6db50f279425"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0624b3d83129dd0efe76d79ae8c8f5a406e98b0b6a49b7ad5d6915ed669f4e4c"
+    sha256 cellar: :any,                 arm64_tahoe:   "15bf109a841f9381cd9086d7aecefc7d782670c90a5142bbf9f281604deff968"
+    sha256 cellar: :any,                 arm64_sequoia: "c42e96a87cd7e7342ac3bf3e9c219945f116ae344b0602e9ae3274d566aa08b2"
+    sha256 cellar: :any,                 arm64_sonoma:  "c4881acd951f5282803c8674b756391cac911262d4ea247daeb448457281f5a5"
+    sha256 cellar: :any,                 sonoma:        "9e1493169d73ac812775f431b0f227f45d21504d0eeed8f296f7f2fcb071b919"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "55330f966af37454c000fe47f329a6eba4504393bf0752d35f0c3690bd2155fc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2c624a10ebd6da940a6f6d1c3ddb4cfe5a025bc588ece4de923aeeebadfeb8a2"
   end
 
   # deprecate! date: "2025-12-10", because: :repo_archived, replacement_formula: "abseil"
