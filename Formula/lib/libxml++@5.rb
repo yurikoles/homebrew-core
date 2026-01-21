@@ -1,17 +1,14 @@
 class LibxmlxxAT5 < Formula
   desc "C++ wrapper for libxml"
   homepage "https://libxmlplusplus.github.io/libxmlplusplus/"
-  url "https://download.gnome.org/sources/libxml++/5.4/libxml++-5.4.0.tar.xz"
-  sha256 "e9a23c436686a94698d2138e6bcbaf849121d63bfa0f50dc34fefbfd79566848"
+  url "https://github.com/libxmlplusplus/libxmlplusplus/releases/download/5.6.0/libxml++-5.6.0.tar.xz"
+  sha256 "cd01ad15a5e44d5392c179ddf992891fb1ba94d33188d9198f9daf99e1bc4fec"
   license "LGPL-2.1-or-later"
-  revision 1
 
   livecheck do
     url :stable
-    regex(/libxml\+\+[._-]v?(5\.([0-8]\d*?)?[02468](?:\.\d+)*?)\.t/i)
+    regex(/^v?(5\.([0-8]\d*?)?[02468](?:\.\d+)*?)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "f700d5c85e52fa89adbd2fab8f8b73e071e52ab9aaef45121968209ce90a4f59"
@@ -27,12 +24,6 @@ class LibxmlxxAT5 < Formula
   depends_on "pkgconf" => [:build, :test]
 
   uses_from_macos "libxml2"
-
-  # Fix naming clash with libxml macro
-  patch do
-    url "https://github.com/libxmlplusplus/libxmlplusplus/commit/662ee970644b381720d8750b07844745b78782e2.patch?full_index=1"
-    sha256 "459dfc7a45e19d8b2ca49d4a8db982ba46cbad9384a82218f43e61fb1bfc5182"
-  end
 
   def install
     system "meson", "setup", "build", *std_meson_args
