@@ -1,8 +1,8 @@
 class Resterm < Formula
   desc "Terminal client for .http/.rest files with HTTP, GraphQL, and gRPC support"
   homepage "https://github.com/unkn0wn-root/resterm"
-  url "https://github.com/unkn0wn-root/resterm/archive/refs/tags/v0.18.6.tar.gz"
-  sha256 "026f20f9ed0530922efa648db2583118bc49b2df4fcd2458b8d214bf8d1ea584"
+  url "https://github.com/unkn0wn-root/resterm/archive/refs/tags/v0.19.1.tar.gz"
+  sha256 "ea6f1fb9418730bf3e3838eb5eac8585028ebc525226c655118871bb69104451"
   license "Apache-2.0"
   head "https://github.com/unkn0wn-root/resterm.git", branch: "main"
 
