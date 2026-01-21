@@ -17,6 +17,15 @@ class Gcc < Formula
         sha256 "360fba75cd3ab840c2cd3b04207f745c418df44502298ab156db81d41edf3594"
       end
     end
+
+    # Fix pthread_incomplete_struct_argument incorrectly applied on modern glibc
+    # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=118009
+    patch do
+      on_linux do
+        url "https://gcc.gnu.org/cgit/gcc/patch/?id=ea2798892de373b14f9fc7ae8a0d820eaddca98c"
+        sha256 "9c0d8abe93398320b9c69a21d3925c131d45d850fc1c1620df7919464db04af8"
+      end
+    end
   end
 
   livecheck do
