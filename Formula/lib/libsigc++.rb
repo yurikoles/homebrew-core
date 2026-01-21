@@ -1,11 +1,14 @@
 class Libsigcxx < Formula
   desc "Callback framework for C++"
   homepage "https://libsigcplusplus.github.io/libsigcplusplus/"
-  url "https://download.gnome.org/sources/libsigc++/3.6/libsigc++-3.6.0.tar.xz"
-  sha256 "c3d23b37dfd6e39f2e09f091b77b1541fbfa17c4f0b6bf5c89baef7229080e17"
+  url "https://github.com/libsigcplusplus/libsigcplusplus/releases/download/3.8.0/libsigc++-3.8.0.tar.xz"
+  sha256 "502a743bb07ed7627dd41bd85ec4b93b4954f06b531adc45818d24a959f54e36"
   license "LGPL-3.0-or-later"
 
-  no_autobump! because: :requires_manual_review
+  livecheck do
+    url :stable
+    regex(/^v?(\d+\.([0-8]\d*?)?[02468](?:\.\d+)*?)$/i)
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "7584f429685f4303440447588525e5259681cc7c08b2e53d80757c4c9aadd1c3"
