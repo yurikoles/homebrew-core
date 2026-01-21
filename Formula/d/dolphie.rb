@@ -3,17 +3,17 @@ class Dolphie < Formula
 
   desc "Feature-rich top tool for monitoring MySQL"
   homepage "https://github.com/charles-001/dolphie"
-  url "https://files.pythonhosted.org/packages/60/2e/a2c66625009871547f11b0dbe1c3bc622bc7c92c4332aa7b31d67e4d6f92/dolphie-6.11.3.tar.gz"
-  sha256 "646ac1a924a8ce20db5edd3c1723197d654deaafcb9816c23e884250e18c1b69"
+  url "https://files.pythonhosted.org/packages/fb/39/a44bd83ed3d5fc561415fd05d2b5d07f35f766e6b6cc40201f18c36132cf/dolphie-6.11.4.tar.gz"
+  sha256 "9385534c2a5fe5b65ed5cb8b153abd751c366d04d31c728b580b7a4374b2d110"
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "1a26e528d27f86065293155e688f87c77e2cfe76a7c30ff790e7c88e5cb726ef"
-    sha256 cellar: :any,                 arm64_sequoia: "eef48654eb02746a2635b1c62db5159cddcc49d9d9cd0ebe08d6881dd66b4dea"
-    sha256 cellar: :any,                 arm64_sonoma:  "3ca914b72f6506750b99c58592ef496c8b5b099befd3b61ca034c914d03f2dfd"
-    sha256 cellar: :any,                 sonoma:        "f88f2f69e50e509de5158808e282e3cf91daadfd8d4d147b0b39249b907e5073"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "01af47d139409aa78a55aa18a3fce619e6a6867829e163a5c7ae51998955d65e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8253c8325d0dca388a4bcd77303662e2cf2d976f5909699f0e871c8070ebeac"
+    sha256 cellar: :any,                 arm64_tahoe:   "73978ef13c70c5071e093208e4ea69c9391b3c28a8cf40afe650fe114ddc336a"
+    sha256 cellar: :any,                 arm64_sequoia: "81c97577f43f4311d05c52834a0e176ae34b2699c99c6859e50802c9c1d673fd"
+    sha256 cellar: :any,                 arm64_sonoma:  "d2b5432b43a222b325bbfcbea5f84d8a1736c521fea55f29df8f2a0c833047f0"
+    sha256 cellar: :any,                 sonoma:        "9f5c7e29fe3a4691807485655182f6a8b194f60edf6e3f25dc3bf2a11eea15b6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d69a0874cf52561bd1ef91efc2765c4afd2c02e2120c260183bd331a805f8689"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "68c3f39493ba521d2ae07a5020a7421d5b5e2616d0d122e9fa3ef6677602c153"
   end
 
   depends_on "rust" => :build # for orjson
