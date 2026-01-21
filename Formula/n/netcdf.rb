@@ -1,11 +1,21 @@
 class Netcdf < Formula
   desc "Libraries and data formats for array-oriented scientific data"
   homepage "https://www.unidata.ucar.edu/software/netcdf/"
-  url "https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.9.3.tar.gz"
-  sha256 "990f46d49525d6ab5dc4249f8684c6deeaf54de6fec63a187e9fb382cc0ffdff"
   license "BSD-3-Clause"
   revision 1
   head "https://github.com/Unidata/netcdf-c.git", branch: "main"
+
+  stable do
+    url "https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.9.3.tar.gz"
+    sha256 "990f46d49525d6ab5dc4249f8684c6deeaf54de6fec63a187e9fb382cc0ffdff"
+
+    # Backport support for HDF5 2.0.0
+    # https://github.com/Unidata/netcdf-c/commit/62e5b44a50872a60dd597600ee87b584a0692180
+    patch do
+      url "https://raw.githubusercontent.com/Homebrew/homebrew-core/f0a9243159dadf13a5c58097cf73fccc32dec332/Patches/netcdf/4.9.3.patch"
+      sha256 "73e1591e833a66945391f7e1323d1c077cecdebfb2c918825e9c6f01f912ad60"
+    end
+  end
 
   livecheck do
     url :stable
