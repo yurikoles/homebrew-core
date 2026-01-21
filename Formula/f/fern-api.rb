@@ -5,6 +5,10 @@ class FernApi < Formula
   sha256 "db9b40ee307467b876b3c22c495cedd1e2156fc95d3c43c2d53dcdf0e65f2207"
   license "Apache-2.0"
 
+  livecheck do
+    throttle 5
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "d356807240bdc5b06405a3f66156b41fa433556995b9e015cbd1d075e5200947"
     sha256 cellar: :any,                 arm64_sequoia: "1b394fb1e479d6f6e19b1300d1b38c3f502b97dd0ff07272aa83ba200f852c74"
