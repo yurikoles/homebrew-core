@@ -2,7 +2,7 @@ class Csound < Formula
   desc "Sound and music computing system"
   homepage "https://csound.com"
   license "LGPL-2.1-or-later"
-  revision 13
+  revision 14
   head "https://github.com/csound/csound.git", branch: "develop"
 
   # Remove `stable` block when patches are no longer needed
@@ -97,6 +97,12 @@ class Csound < Formula
     patch do
       url "https://github.com/csound/plugins/commit/13800c4dd58e3c214e5d7207180ad7115b4e2f27.patch?full_index=1"
       sha256 "e088cc300845408f3956f070fa34a900b700c7860678bc6d37f7506d615787a6"
+    end
+
+    # Apply Arch Linux patch to fix build with HDF5 2.0.0
+    patch do
+      url "https://gitlab.archlinux.org/archlinux/packaging/packages/csound-plugins/-/raw/e0a3b3162a4f61445ea993e7e8abba091458a0ba/hdf5-2.0.patch"
+      sha256 "ea1bddc8fe921a7deed49756d91b8e0e7b4dd822617877520a36d0c42730ef27"
     end
 
     # Fix Eigen detection to work with Homebrew's Eigen formula
