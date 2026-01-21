@@ -1,10 +1,9 @@
 class Inchi < Formula
   desc "IUPAC International Chemical Identifier"
   homepage "https://www.inchi-trust.org/"
-  url "https://github.com/IUPAC-InChI/InChI/releases/download/v1.07.3/INCHI-1-SRC.zip"
-  sha256 "b42d828b5d645bd60bc43df7e0516215808d92e5a46c28e12b1f4f75dfaae333"
+  url "https://github.com/IUPAC-InChI/InChI/releases/download/v1.07.4/INCHI-1-SRC.zip"
+  sha256 "9228a214a2817aa6508c81803b656333531bb86d2c37c8a4916c2883cb88b2ad"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "c2ab3b6c1fc1a9753168ee404157c0773dc268416f8ef52f90ff19a799edb168"
@@ -27,12 +26,6 @@ class Inchi < Formula
     args = ["C_COMPILER=#{ENV.cc}", "BIN_DIR=#{bin}", "LIB_DIR=#{lib}"]
     system "make", "-C", "INCHI_API/libinchi/gcc", *args
     system "make", "-C", "INCHI_EXE/inchi-1/gcc", *args
-
-    # Add major versioned and unversioned symlinks
-    libinchi = shared_library("libinchi", version.to_s[/^(\d+\.\d+)/, 1])
-    odie "Unable to find #{libinchi}" unless (lib/libinchi).exist?
-    lib.install_symlink libinchi => shared_library("libinchi", version.major.to_s)
-    lib.install_symlink shared_library("libinchi", version.major.to_s) => shared_library("libinchi")
 
     # Install the same headers as Debian[^1] and Fedora[^2]. Some are needed by `open-babel`[^3]
     # and `rdkit`[^4].
