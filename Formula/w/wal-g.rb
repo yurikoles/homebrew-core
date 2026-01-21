@@ -1,8 +1,8 @@
 class WalG < Formula
   desc "Archival restoration tool for databases"
   homepage "https://github.com/wal-g/wal-g"
-  url "https://github.com/wal-g/wal-g/archive/refs/tags/v3.0.7.tar.gz"
-  sha256 "69368316b90fae7c040e489ad540f6018d0f00963c5bc94d262d530e83bdd4ce"
+  url "https://github.com/wal-g/wal-g/archive/refs/tags/v3.0.8.tar.gz"
+  sha256 "336c829714023d2f3fcfe9b3cab50bb76bc829229e33e87c859f43a21883e271"
   license "Apache-2.0"
 
   bottle do
@@ -15,11 +15,15 @@ class WalG < Formula
   end
 
   depends_on "go" => :build
+  depends_on "pkgconf" => :build
   depends_on "brotli"
   depends_on "libsodium"
   depends_on "lzo"
 
   def install
+    ENV["GOEXPERIMENT"] = "jsonv2"
+    ENV["CGO_ENABLED"] = "1"
+
     %w[etcd fdb gp mongo mysql pg redis sqlserver].each do |db|
       ldflags = %W[
         -s -w
