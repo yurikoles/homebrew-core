@@ -1,8 +1,8 @@
 class Ddcutil < Formula
   desc "Control monitor settings using DDC/CI and USB"
   homepage "https://www.ddcutil.com"
-  url "https://www.ddcutil.com/tarballs/ddcutil-2.2.3.tar.gz"
-  sha256 "e17bc052a62f9ea852d9e38ba4f1ed7e7366567a0e19dbe1a439ee71adbe06a0"
+  url "https://www.ddcutil.com/tarballs/ddcutil-2.2.4.tar.gz"
+  sha256 "08ae3c81aeaaa33cf4ebc32a8049428e76ce557874546e381fd65a82560dd195"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -27,6 +27,12 @@ class Ddcutil < Formula
   depends_on "libxrandr"
   depends_on :linux
   depends_on "systemd"
+
+  # fix segfault in xvrpt_vstring() when building on aarch64, see issue, https://github.com/rockowitz/ddcutil/issues/574
+  patch do
+    url "https://github.com/rockowitz/ddcutil/commit/40518b12c5d7136fc0bbd30aac96b7e79dff5caa.patch?full_index=1"
+    sha256 "1e19d3fbab7f55509beb76863daa143c69feda34a38e65780fc5dec6beefdb09"
+  end
 
   def install
     system "./configure", "--disable-silent-rules", *std_configure_args
