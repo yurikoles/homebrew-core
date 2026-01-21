@@ -1,8 +1,8 @@
 class Kuzu < Formula
   desc "Embeddable graph database management system built for query speed & scalability"
-  homepage "https://kuzudb.com/"
-  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.11.2.tar.gz"
-  sha256 "9340f1151ea6c9f35c007f122d6e08ec119b5c1db743f0303d40ac8a8e2a5d55"
+  homepage "https://github.com/kuzudb/kuzu"
+  url "https://github.com/kuzudb/kuzu/archive/refs/tags/v0.11.3.tar.gz"
+  sha256 "f6456fa290879e4c13db49b8918258c4422d78a57fdc6d8925d4aef23e7a0b3c"
   license "MIT"
   head "https://github.com/kuzudb/kuzu.git", branch: "master"
 
@@ -16,6 +16,9 @@ class Kuzu < Formula
     sha256 cellar: :any_skip_relocation, arm64_linux:   "39ed6f96904850e2a5d059ef6c60a56b350674382adbd8f391e4d8c19bf6d85b"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "781859e1e45d567ed5cb6f880362b3f0ef12a1250367a7709afa589ef4f38921"
   end
+
+  deprecate! date: "2026-01-20", because: :repo_archived
+  disable! date: "2027-01-20", because: :repo_archived
 
   depends_on "cmake" => :build
 
