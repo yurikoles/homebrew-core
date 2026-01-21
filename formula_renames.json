@@ -81,6 +81,7 @@
   "iccmax": "iccdev",
   "iceberg": "iceberg-cli",
   "interactive-rebase-tool": "git-interactive-rebase-tool",
+  "ipfs": "kubo",
   "jfrog-cli-go": "jfrog-cli",
   "juju2": "juju",
   "juju@2.0": "juju",
