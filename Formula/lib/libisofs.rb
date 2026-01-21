@@ -1,17 +1,24 @@
 class Libisofs < Formula
   desc "Library to create an ISO-9660 filesystem with various extensions"
   homepage "https://dev.lovelyhq.com/libburnia/libisofs"
-  url "https://files.libburnia-project.org/releases/libisofs-1.5.6.pl01.tar.gz"
-  version "1.5.6"
-  sha256 "ac1fd338d641744ca1fb1567917188b79bc8c2506832dd56885fec98656b9f25"
   license "GPL-2.0-or-later"
+
+  stable do
+    url "https://files.libburnia-project.org/releases/libisofs-1.5.6.pl01.tar.gz"
+    version "1.5.6.pl01"
+    sha256 "ac1fd338d641744ca1fb1567917188b79bc8c2506832dd56885fec98656b9f25"
+
+    # Fix -flat_namespace being used on Big Sur and later.
+    patch do
+      url "https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/libtool/configure-pre-0.4.2.418-big_sur.diff"
+      sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
+    end
+  end
 
   livecheck do
     url "https://files.libburnia-project.org/releases/"
-    regex(/href=.*?libisofs[._-]v?(\d+(?:\.\d+)+)(?:[._-]pl\d+)?\.t/i)
+    regex(/href=.*?libisofs[._-]v?(\d+(?:\.\d+)+(?:[._-]pl\d+)?)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "1e22e5ca79d8f4b991400c72d5300d9fcd5020ed43f54749ddb357d9ddd406cd"
@@ -28,17 +35,26 @@ class Libisofs < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3d23202a09bdce26182a94e00cc3c412373f30a7396dbe73d6abf2dcd21d5ec"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool"  => :build
+  head do
+    url "https://dev.lovelyhq.com/libburnia/libisofs.git", branch: "master"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "libtool"  => :build
+  end
+
   depends_on "libzip"
 
+  uses_from_macos "zlib"
+
   def install
-    # use gnu libtool instead of apple libtool
-    inreplace "bootstrap", "libtool", "glibtool"
-    # regenerate configure as release uses old version of libtool
-    # which causes flat_namespace
-    system "./bootstrap"
+    if build.head?
+      # use gnu libtool instead of apple libtool
+      inreplace "bootstrap", "libtool", "glibtool"
+      # regenerate configure as release uses old version of libtool
+      # which causes flat_namespace
+      system "./bootstrap"
+    end
 
     system "./configure", *std_configure_args
     system "make"
