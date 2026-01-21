@@ -1,10 +1,20 @@
 class Libaec < Formula
   desc "Adaptive Entropy Coding implementing Golomb-Rice algorithm"
   homepage "https://gitlab.dkrz.de/k202009/libaec"
-  url "https://gitlab.dkrz.de/k202009/libaec/-/archive/v1.1.4/libaec-v1.1.4.tar.bz2"
-  sha256 "cf869c166656a83857adf62a092311a0069855c6ced3446e3f090a6d52279f65"
   license "BSD-2-Clause"
+  revision 1
   head "https://gitlab.dkrz.de/k202009/libaec.git", branch: "master"
+
+  stable do
+    url "https://gitlab.dkrz.de/k202009/libaec/-/archive/v1.1.4/libaec-v1.1.4.tar.bz2"
+    sha256 "cf869c166656a83857adf62a092311a0069855c6ced3446e3f090a6d52279f65"
+
+    # Backport commit needed to build gdal with HDF5 2.0.0
+    patch do
+      url "https://github.com/MathisRosenhauer/libaec/commit/2c6619c1313826df864065427055ed14c83d1998.patch?full_index=1"
+      sha256 "513af4b0e24f23e84e4416fa52ad87e4058be364fab627a3b728bdd25074f17b"
+    end
+  end
 
   bottle do
     rebuild 1
