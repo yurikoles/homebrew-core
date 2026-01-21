@@ -3,8 +3,8 @@ class Tach < Formula
 
   desc "Tool to enforce dependencies using modular architecture"
   homepage "https://docs.gauge.sh/getting-started/introduction"
-  url "https://files.pythonhosted.org/packages/f9/c6/cee16d9b0e22bb184740f4c5485d5ab7616708f6eba0725af0dd4736e712/tach-0.33.0.tar.gz"
-  sha256 "92ffe91070636eee6b45a8512bdc594fd15c0f5be9300dbbe85d0b36d00f00d1"
+  url "https://files.pythonhosted.org/packages/68/98/60d92800401f8f5bb77873ce6a0797b379fee3c984a0d3682ccb1241c638/tach-0.33.1.tar.gz"
+  sha256 "dc1d214acb66e28613eccbd68b9fa9ed762c8607dc50a88f87c26a47137765f5"
   license "MIT"
   head "https://github.com/gauge-sh/tach.git", branch: "main"
 
@@ -62,8 +62,8 @@ class Tach < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/33/c1/1d9de9aeaa1b89b0186e5fe23294ff6517fce1bc69149185577cd31016b2/pyparsing-3.3.1.tar.gz"
-    sha256 "47fad0f17ac1e2cad3de3b458570fbc9b03560aa029ed5e16ee5554da9a2251c"
+    url "https://files.pythonhosted.org/packages/f3/91/9c6ee907786a473bf81c5f53cf703ba0957b23ab84c264080fb5a450416f/pyparsing-3.3.2.tar.gz"
+    sha256 "c777f4d763f140633dcb6d8a3eda953bf7a214dc4eff598413c070bcdc117cbc"
   end
 
   resource "pyyaml" do
@@ -82,8 +82,8 @@ class Tach < Formula
   end
 
   resource "tomli" do
-    url "https://files.pythonhosted.org/packages/52/ed/3f73f72945444548f33eba9a87fc7a6e969915e7b1acc8260b30e1f76a2f/tomli-2.3.0.tar.gz"
-    sha256 "64be704a875d2a59753d80ee8a533c3fe183e3f06807ff7dc2232938ccb01549"
+    url "https://files.pythonhosted.org/packages/82/30/31573e9457673ab10aa432461bee537ce6cef177667deca369efb79df071/tomli-2.4.0.tar.gz"
+    sha256 "aa89c3f6c277dd275d8e243ad24f3b5e701491a860d5121f2cdd399fbb31fc9c"
   end
 
   resource "tomli-w" do
@@ -92,8 +92,8 @@ class Tach < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/24/30/6b0809f4510673dc723187aeaf24c7f5459922d01e2f794277a3dfb90345/wcwidth-0.2.14.tar.gz"
-    sha256 "4d478375d31bc5395a3c55c40ccdf3354688364cd61c4f6adacaa9215d0b3605"
+    url "https://files.pythonhosted.org/packages/38/75/2144b65e4fba12a2d9868e9a3f99db7fa0760670d064603634bef9ff1709/wcwidth-0.3.0.tar.gz"
+    sha256 "af1a2fb0b83ef4a7fc0682a4c95ca2576e14d0280bca2a9e67b7dc9f2733e123"
   end
 
   def install
