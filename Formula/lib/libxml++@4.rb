@@ -1,14 +1,13 @@
 class LibxmlxxAT4 < Formula
   desc "C++ wrapper for libxml"
   homepage "https://libxmlplusplus.github.io/libxmlplusplus/"
-  url "https://download.gnome.org/sources/libxml++/4.2/libxml++-4.2.0.tar.xz"
-  sha256 "898accd9c6fa369da36bfebb5fee199d971b86d26187418796ba9238a6bd4842"
+  url "https://github.com/libxmlplusplus/libxmlplusplus/releases/download/4.4.0/libxml++-4.4.0.tar.xz"
+  sha256 "02365465f62c7c8fe38618da8805fd8d8fd18544cd88b18c39098995513787bb"
   license "LGPL-2.1-or-later"
-  revision 1
 
   livecheck do
     url :stable
-    regex(/libxml\+\+[._-]v?(4\.([0-8]\d*?)?[02468](?:\.\d+)*?)\.t/i)
+    regex(/^v?(4\.([0-8]\d*?)?[02468](?:\.\d+)*?)$/i)
   end
 
   bottle do
@@ -26,10 +25,6 @@ class LibxmlxxAT4 < Formula
   depends_on "glibmm"
 
   uses_from_macos "libxml2"
-
-  # Fix naming clash with libxml macro.
-  # Backport of: https://github.com/libxmlplusplus/libxmlplusplus/pull/74
-  patch :DATA
 
   def install
     system "meson", "setup", "build", *std_meson_args
@@ -55,36 +50,3 @@ class LibxmlxxAT4 < Formula
     system "./test"
   end
 end
-
-__END__
-diff --git a/libxml++/parsers/textreader.cc b/libxml++/parsers/textreader.cc
-index 75a2c68..65dec5f 100644
---- a/libxml++/parsers/textreader.cc
-+++ b/libxml++/parsers/textreader.cc
-@@ -19,7 +19,7 @@ public:
-   int Int(int value);
-   bool Bool(int value);
-   char Char(int value);
--  Glib::ustring String(xmlChar* value, bool free = false);
-+  Glib::ustring String(xmlChar* value, bool should_free = false);
-   Glib::ustring String(xmlChar const* value);
- 
-   TextReader & owner_;
-@@ -403,7 +403,7 @@ char TextReader::PropertyReader::Char(int value)
-   return value;
- }
- 
--Glib::ustring TextReader::PropertyReader::String(xmlChar* value, bool free)
-+Glib::ustring TextReader::PropertyReader::String(xmlChar* value, bool should_free)
- {
-   owner_.check_for_exceptions();
- 
-@@ -412,7 +412,7 @@ Glib::ustring TextReader::PropertyReader::String(xmlChar* value, bool free)
- 
-   const Glib::ustring result = (char *)value;
- 
--  if(free)
-+  if(should_free)
-     xmlFree(value);
- 
-   return result;
