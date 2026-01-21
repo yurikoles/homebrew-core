@@ -3,18 +3,18 @@ class KimiCli < Formula
 
   desc "CLI agent for MoonshotAI Kimi platform"
   homepage "https://github.com/MoonshotAI/kimi-cli"
-  url "https://files.pythonhosted.org/packages/65/27/ec653f9c091488ebbd7f155e84afa4344bf28514c29c0431127a76f1fc8a/kimi_cli-0.81.tar.gz"
-  sha256 "74db52ba9605b1b031c09e76e298b2a3dd44524761905bb59dc98f7ce00be235"
+  url "https://files.pythonhosted.org/packages/0a/19/db9748889b8596ce868d5e3cf566070dd61c18bfb6735948631cb3374f5e/kimi_cli-0.82.tar.gz"
+  sha256 "68ec788a14651598fbd27fc4350835e3446a6c21527bccb5d0848a878f39a874"
   license "Apache-2.0"
   head "https://github.com/MoonshotAI/kimi-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "f35c0bc81d707232dc2e28e086de0f2f003acef6eca21a8d132ce1ac58a442d4"
-    sha256 cellar: :any,                 arm64_sequoia: "750bc69c448994e77b88a3c880b7e79c3186a0fcc9f3e70d512157d92fc27834"
-    sha256 cellar: :any,                 arm64_sonoma:  "ea27876200ac24d2825e000a380db62e6aed35592efd8cc51405ef70cf037717"
-    sha256 cellar: :any,                 sonoma:        "1a06f0c327c07587d55f2b3f7af37ff91885eab85665d4dfa7c66f1cc95e7945"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "da4a1e600a9da8963ae60b603eb1d38db333fe4fd8449543dbd05e67544af904"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "714bb4e098b1c82090b88a40474cc04463fa1dfac421d9f844ea3d58d9ee17dd"
+    sha256 cellar: :any,                 arm64_tahoe:   "3bc04812b20c2cc9b17727fe252a79afc4fef14fa1a4e032275423b7362ec9ee"
+    sha256 cellar: :any,                 arm64_sequoia: "a7a6842806aaea8fc20d4e5763f5c59b93c8894cd8dd3cdbb329ef46b3e55c47"
+    sha256 cellar: :any,                 arm64_sonoma:  "4c9cb078a3afbc61ce478435f5316e65f3da64e2d1de98fe0385a4e3cfca9b99"
+    sha256 cellar: :any,                 sonoma:        "f72997402ab66324b8038ec02711f2cdfb9f123f9850f0529354e70fed5c4db0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4dbe5ce52e22ba56571ba04798af03977a8b048ff85f1887a2a8f6acfb750169"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f27fe74b741ba63dd8de951a736eac239ca1938bbe22b3654800f0a3d9de177"
   end
 
   depends_on "pkgconf" => :build
@@ -229,8 +229,8 @@ class KimiCli < Formula
   end
 
   resource "kosong" do
-    url "https://files.pythonhosted.org/packages/12/ab/e0c5432a83ec0e15588954b804e1f9c261f7bdba69a9b9773fa188a7e7c0/kosong-0.38.0.tar.gz"
-    sha256 "9033df1d4afd409f56e6cda9540d326b51498a67c3763a95cf2a3a7a2d6400ca"
+    url "https://files.pythonhosted.org/packages/c4/1e/37e5d1fb4a04ca8086a9dbf05d57b01d0e15a2744d4a6321af46029e2264/kosong-0.39.0.tar.gz"
+    sha256 "fc033933a45037f8dd070f40153bcdebe1b1081d30bba51b382ddb68a8d5cc66"
   end
 
   resource "lazy-object-proxy" do
