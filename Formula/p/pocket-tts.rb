@@ -8,6 +8,15 @@ class PocketTts < Formula
   license "MIT"
   head "https://github.com/kyutai-labs/pocket-tts.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "5e88f18f63cb98c122f563023da5b8878cdf194166329728783b84e089e64815"
+    sha256 cellar: :any,                 arm64_sequoia: "bd83d8727a89493e749e959eff76c38022bf11a8ca5eb7d828ad5bb9eef9d30b"
+    sha256 cellar: :any,                 arm64_sonoma:  "55bfed15a3c324204471b57a893d74756be703258ffa6cf394411bc78654eb71"
+    sha256 cellar: :any,                 sonoma:        "f412156390de30cb5e53b8306f8924ed460d1b88a6d257a0f55717b8c408d7b9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9698023f2e27a9930c4e5c30cb1daf50cb55f496b9e717ba7ccf7b79f8901daa"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5214f370cfb10e13ca03a0b7969f9d780e605a1cb91d9951be85bc3c5febb5a3"
+  end
+
   depends_on "cmake" => :build
   depends_on "rust" => :build
   depends_on "certifi" => :no_linkage
