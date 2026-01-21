@@ -1,12 +1,13 @@
 class Rure < Formula
   desc "C API for RUst's REgex engine"
   homepage "https://github.com/rust-lang/regex/tree/HEAD/regex-capi"
-  url "https://github.com/rust-lang/regex/archive/refs/tags/1.12.2.tar.gz"
-  sha256 "36b5e4c56045a83ad34557a93c2a158efc302101741479e5568403b21b74cf2f"
+  url "https://static.crates.io/crates/rure/rure-0.2.4.crate"
+  sha256 "e76c0d9cbe885d29bf9a65974d9230e4d67c066ccfa07ab791926e73a181bcfc"
   license all_of: [
     "Unicode-TOU",
     any_of: ["Apache-2.0", "MIT"],
   ]
+  version_scheme 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "2b547a58eeaee0300651c51732926185ac7980a3db0f96f8bb9293c9b4814ab9"
@@ -20,11 +21,10 @@ class Rure < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "build", "--jobs", ENV.make_jobs, "--lib", "--manifest-path", "regex-capi/Cargo.toml", "--release"
-    include.install "regex-capi/include/rure.h"
+    system "cargo", "build", "--jobs", ENV.make_jobs, "--lib", "--release"
+    include.install "include/rure.h"
     lib.install "target/release/#{shared_library("librure")}"
     lib.install "target/release/librure.a"
-    prefix.install "regex-capi/README.md" => "README-capi.md"
   end
 
   test do
