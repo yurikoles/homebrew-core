@@ -1,10 +1,9 @@
 class RubyLsp < Formula
   desc "Opinionated language server for Ruby"
   homepage "https://shopify.github.io/ruby-lsp"
-  url "https://github.com/Shopify/ruby-lsp/archive/refs/tags/v0.26.4.tar.gz"
-  sha256 "ee9765866d2c4e843acf3b434a332142513bba4ada54d30fd68888a1a60672c1"
+  url "https://github.com/Shopify/ruby-lsp/archive/refs/tags/v0.26.5.tar.gz"
+  sha256 "1acdd825114795b5852a0c2b6ab8b2558fb7d23e085af3a8fc86398011a9efa9"
   license "MIT"
-  revision 1
   head "https://github.com/Shopify/ruby-lsp.git", branch: "main"
 
   bottle do
@@ -19,10 +18,6 @@ class RubyLsp < Formula
   depends_on "ruby"
 
   def install
-    # Support Bundler 4.x.x
-    # Upsgtream PR ref: https://github.com/Shopify/ruby-lsp/pull/3823
-    inreplace "Gemfile", "\"bundler\", \"~> 2.5\"", "\"bundler\", \"~> 4.0.0\""
-
     ENV["BUNDLE_VERSION"] = "system" # Avoid installing Bundler into the keg
     ENV["BUNDLE_WITHOUT"] = "development test"
     ENV["GEM_HOME"] = libexec
