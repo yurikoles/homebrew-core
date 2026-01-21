@@ -1,12 +1,11 @@
 class Libiptcdata < Formula
   desc "Virtual package provided by libiptcdata0"
   homepage "https://libiptcdata.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/libiptcdata/libiptcdata/1.0.4/libiptcdata-1.0.4.tar.gz"
-  sha256 "79f63b8ce71ee45cefd34efbb66e39a22101443f4060809b8fc29c5eebdcee0e"
+  url "https://github.com/ianw/libiptcdata/releases/download/release_1_0_5/libiptcdata-1.0.5.tar.gz"
+  sha256 "c094d0df4595520f194f6f47b13c7652b7ecd67284ac27ab5f219bc3985ea29e"
   license "LGPL-2.0-only"
-  revision 1
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 arm64_tahoe:    "1c4ed377f24990f0602ed171149c4da26c7986f746c7aa5c5486fc753dfc49e9"
@@ -28,15 +27,14 @@ class Libiptcdata < Formula
     depends_on "gettext"
   end
 
+  # Fix -flat_namespace being used on Big Sur and later.
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/libtool/configure-big_sur.diff"
+    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
+  end
+
   def install
-    # Fix flat namespace usage
-    inreplace "configure", "${wl}-flat_namespace ${wl}-undefined ${wl}suppress", "${wl}-undefined ${wl}dynamic_lookup"
-
-    args = []
-    # Help old config scripts identify arm64 linux
-    args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-
-    system "./configure", *args, *std_configure_args
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 
