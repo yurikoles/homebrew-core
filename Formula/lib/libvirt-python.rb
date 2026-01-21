@@ -1,14 +1,13 @@
 class LibvirtPython < Formula
   desc "Libvirt virtualization API python binding"
   homepage "https://www.libvirt.org/"
-  url "https://download.libvirt.org/python/libvirt-python-11.7.0.tar.gz"
-  sha256 "f65f80fe7dabb47c2ea887bec5f62509b756282acac4fa958ab74706c0b76c11"
+  url "https://download.libvirt.org/python/libvirt_python-12.0.0.tar.gz"
+  sha256 "7b4de7d2dde2bc380cf4e108d1eeb8aad50beb3ae351ab9265a7fedc587742bc"
   license "LGPL-2.1-or-later"
-  revision 1
 
   livecheck do
     url "https://download.libvirt.org/python/"
-    regex(/href=.*?libvirt-python[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/href=.*?libvirt[_-]python[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   bottle do
