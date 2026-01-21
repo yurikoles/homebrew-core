@@ -1,8 +1,8 @@
 class Connect < Formula
   desc "Provides SOCKS and HTTPS proxy support to SSH"
   homepage "https://github.com/gotoh/ssh-connect"
-  url "https://github.com/gotoh/ssh-connect/archive/refs/tags/1.105.tar.gz"
-  sha256 "96c50fefe7ecf015cf64ba6cec9e421ffd3b18fef809f59961ef9229df528f3e"
+  url "https://github.com/gotoh/ssh-connect/archive/refs/tags/1.106.tar.gz"
+  sha256 "4f07eec36e6da2c4641a9ea9a2fd0617d6fc6aff5b65b6433f8a6447bea8a002"
   license "GPL-2.0-or-later"
   head "https://github.com/gotoh/ssh-connect.git", branch: "master"
 
@@ -10,8 +10,6 @@ class Connect < Formula
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 1
