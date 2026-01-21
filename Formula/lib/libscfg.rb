@@ -1,10 +1,10 @@
 class Libscfg < Formula
   desc "C library for scfg"
-  homepage "https://git.sr.ht/~emersion/libscfg"
-  url "https://git.sr.ht/~emersion/libscfg/archive/v0.1.1.tar.gz"
-  sha256 "621a91bf233176e0052e9444f0a42696ad1bfda24b25c027c99cb6e693f273d7"
+  homepage "https://codeberg.org/emersion/libscfg"
+  url "https://codeberg.org/emersion/libscfg/archive/v0.2.0.tar.gz"
+  sha256 "cf37ef00ac8efb28821dac1ad49e2c6b23b242d9d961fab6fcda72fc73a7291b"
   license "MIT"
-  head "https://git.sr.ht/~emersion/libscfg", branch: "master"
+  head "https://codeberg.org/emersion/libscfg.git", branch: "master"
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "1dac3227bc441e8972cebc203cb937d98052015d98ee04aa86955b3eeee6f519"
