@@ -4,7 +4,7 @@ class Alpscore < Formula
   url "https://github.com/ALPSCore/ALPSCore/archive/refs/tags/v2.3.2.tar.gz"
   sha256 "bd9b5af0a33acc825ffedfaa0bf794a420ab2b9b50f6a4e634ecbde43ae9cc24"
   license "GPL-2.0-only"
-  revision 1
+  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "c126dec161f1b5f224e3811bfa7725cffc28c07a7353117e732e73a5e98c545c"
@@ -16,8 +16,8 @@ class Alpscore < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "boost"
-  depends_on "eigen"
+  depends_on "boost" => :no_linkage
+  depends_on "eigen" => :no_linkage
   depends_on "hdf5"
   depends_on "open-mpi"
 
@@ -40,12 +40,6 @@ class Alpscore < Formula
   end
 
   def install
-    # Work around different behavior in CMake-built HDF5
-    inreplace "common/cmake/ALPSCommonModuleDefinitions.cmake" do |s|
-      s.sub! "set(HDF5_NO_FIND_PACKAGE_CONFIG_FILE TRUE)", ""
-      s.sub! "find_package (HDF5 1.10.2 ", "find_package (HDF5 "
-    end
-
     args = %W[
       -DALPS_BUILD_SHARED=ON
       -DALPS_CXX_STD=c++14
