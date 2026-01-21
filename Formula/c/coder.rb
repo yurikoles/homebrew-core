@@ -1,19 +1,10 @@
 class Coder < Formula
   desc "Tool for provisioning self-hosted development environments with Terraform"
   homepage "https://coder.com"
+  url "https://github.com/coder/coder/archive/refs/tags/v2.28.7.tar.gz"
+  sha256 "d19147bc5c633515a858e7336a8f05b9fa5e2c96067cc3084dc948a32c89cbc0"
   license "AGPL-3.0-only"
   head "https://github.com/coder/coder.git", branch: "main"
-
-  stable do
-    url "https://github.com/coder/coder/archive/refs/tags/v2.28.6.tar.gz"
-    sha256 "294e8f3d0b8bfa2ada25ddbc7cb5cdb479d0293459bbc2b60b28fb76795108b8"
-
-    # fix invalid pseudo-version issue for `coder/boundary`, upstream pr ref, https://github.com/coder/coder/pull/21290
-    patch do
-      url "https://github.com/coder/coder/commit/b690c3e90b42b1c6c81899a603789d309e64aafb.patch?full_index=1"
-      sha256 "09734d19299872eac2fa10bb45eca619a66455817e9ebf45f09a484f3218b864"
-    end
-  end
 
   # There can be a notable gap between when a version is tagged and a
   # corresponding release is created, so we check the "latest" release instead
