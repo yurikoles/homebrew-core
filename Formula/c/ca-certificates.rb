@@ -46,8 +46,8 @@ class CaCertificates < Formula
       certificates.select! do |certificate|
         begin
           Utils.safe_popen_write("/usr/bin/openssl", "x509", "-inform", "pem",
-                                                            "-checkend", "0",
-                                                            "-noout") do |openssl_io|
+                                                             "-checkend", "0",
+                                                             "-noout") do |openssl_io|
             openssl_io.write(certificate)
           end
         rescue ErrorDuringExecution
@@ -56,12 +56,12 @@ class CaCertificates < Formula
         end
 
         # Only include certificates that are designed to act as a SSL root.
-        purpose = Utils.safe_popen_write("/usr/bin/openssl", "x509", "-inform", "pem",
-                                                                    "-purpose",
-                                                                    "-noout") do |openssl_io|
+        openssl_purpose = Utils.safe_popen_write("/usr/bin/openssl", "x509", "-inform", "pem",
+                                                                     "-purpose",
+                                                                     "-noout") do |openssl_io|
           openssl_io.write(certificate)
         end
-        purpose.include?("SSL server CA : Yes")
+        openssl_purpose.include?("SSL server CA : Yes")
       end
 
       # Check that the certificate is trusted in keychain
