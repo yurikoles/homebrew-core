@@ -1,8 +1,8 @@
 class Cagent < Formula
   desc "Agent Builder and Runtime by Docker Engineering"
   homepage "https://github.com/docker/cagent"
-  url "https://github.com/docker/cagent/archive/refs/tags/v1.19.3.tar.gz"
-  sha256 "cd25d346ba414446b5866dc836aaa01c3a4384fe6450f04c8ed886add5ef199f"
+  url "https://github.com/docker/cagent/archive/refs/tags/v1.19.4.tar.gz"
+  sha256 "9ca30fdbaaa8cd6d62df3b0d07c60c7dc69e3a7dda937bbeacc64566f0746327"
   license "Apache-2.0"
   head "https://github.com/docker/cagent.git", branch: "main"
 
