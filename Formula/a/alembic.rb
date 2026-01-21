@@ -4,6 +4,7 @@ class Alembic < Formula
   url "https://github.com/alembic/alembic/archive/refs/tags/1.8.10.tar.gz"
   sha256 "06c9172faf29e9fdebb7be99621ca18b32b474f8e481238a159c87d16b298553"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/alembic/alembic.git", branch: "master"
 
   bottle do
@@ -18,19 +19,18 @@ class Alembic < Formula
   depends_on "cmake" => :build
   depends_on "hdf5"
   depends_on "imath"
-  depends_on "libaec"
 
   uses_from_macos "zlib"
 
   def install
-    cmake_args = std_cmake_args + %w[
+    args = %w[
       -DUSE_PRMAN=OFF
       -DUSE_ARNOLD=OFF
       -DUSE_MAYA=OFF
       -DUSE_PYALEMBIC=OFF
       -DUSE_HDF5=ON
     ]
-    system "cmake", "-S", ".", "-B", "build", *cmake_args
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
 
