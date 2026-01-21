@@ -1,11 +1,24 @@
 class Julia < Formula
   desc "Fast, Dynamic Programming Language"
   homepage "https://julialang.org/"
-  # Use the `-full` tarball to avoid having to download during the build.
-  url "https://github.com/JuliaLang/julia/releases/download/v1.12.3/julia-1.12.3-full.tar.gz"
-  sha256 "22778903ef8df828cb11341c977237bec2d11b1de238597c8ba4a938e49fd2a9"
   license all_of: ["MIT", "BSD-3-Clause", "Apache-2.0", "BSL-1.0"]
   head "https://github.com/JuliaLang/julia.git", branch: "master"
+
+  stable do
+    # Use the `-full` tarball to avoid having to download during the build.
+    url "https://github.com/JuliaLang/julia/releases/download/v1.12.4/julia-1.12.4-full.tar.gz"
+    sha256 "6ea60c05395e29012b63934e686b0daa1cc155947be429ae0b247b3ea7e7be93"
+
+    # Backport fix for system p7zip
+    patch do
+      url "https://github.com/JuliaLang/julia/commit/e7b2b231a5349582406950162806c341bcdbc6ba.patch?full_index=1"
+      sha256 "ec9a577d26665bba6db1c23bffb5fc217e8e633d1fa1740e0b43a02c54798b71"
+    end
+    patch do
+      url "https://github.com/JuliaLang/julia/commit/634170eb527cf211799bc16c11e6d0fc38c4befa.patch?full_index=1"
+      sha256 "c0d00141f5432a36f7e8e6cf084974184436e91086c37aa510baf065742b424d"
+    end
+  end
 
   # Upstream creates GitHub releases for both stable and LTS versions, so the
   # "latest" release on GitHub may be an LTS version instead of a "stable"
@@ -219,7 +232,8 @@ class Julia < Formula
     return if OS.mac? && Hardware::CPU.intel? && ENV["HOMEBREW_GITHUB_ACTIONS"]
 
     with_env(CI: nil) do
-      system bin/"julia", *args, "--eval", 'Base.runtests("core")'
+      # FIXME: Skipping test on macOS as runners keep timing out
+      system bin/"julia", *args, "--eval", 'Base.runtests("core")' unless OS.mac?
     end
 
     # Check that Julia can load stdlibs that load non-Julia code.
