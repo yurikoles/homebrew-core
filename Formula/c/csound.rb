@@ -39,12 +39,12 @@ class Csound < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 arm64_tahoe:   "1358e7d52d01425eb57d9315f6660ce5c753c4bd6406f1a82fe8b7f3c0645618"
-    sha256 arm64_sequoia: "cd3cceb2b0a1d0556f29d7d71e1aee94a289f61ba25790f9d3f50420502332e1"
-    sha256 arm64_sonoma:  "1c33262915a2133bd0f08611de8aa60326142b12ca81834bd926fa9af2820a77"
-    sha256 sonoma:        "52d703b25a4e5ccd9e83cbd68ee8ba290c7da2d4ba41371c07c287dcb2abdcf3"
-    sha256 arm64_linux:   "38cc39a0d24c0d44b6f0393b29a49409c728a3c3ecfcce8a7f0e2ec3640a06d8"
-    sha256 x86_64_linux:  "edd32b95ddd140f4395155849cd24344489991ee377526b80f8e7a9a3b117204"
+    sha256 arm64_tahoe:   "2ef1ffa712525becf000f54cbf08bb1f9782a77a8f55e9f63321150f513f9324"
+    sha256 arm64_sequoia: "4a6cbada524610b7fdf87a49a748ac378fa267d60a92dd70de83b34203d0bffd"
+    sha256 arm64_sonoma:  "6128921345de82eb485d31ddaf23fe06240b578ed11feef52a3f266c80ac4981"
+    sha256 sonoma:        "1dd368f23f9dd0e85a9f41fde12775b2e1f002017c2e62d109ecdccbab4d258a"
+    sha256 arm64_linux:   "34d2ed060ba6cbcd7badf896c3e3039a8d50a396bbb446c3c85c56b8bc75c2cf"
+    sha256 x86_64_linux:  "6e82155a509d446a6ef67b92a3a6657989b3a195de2862ab35fccd7321d0ca9c"
   end
 
   depends_on "asio" => :build
