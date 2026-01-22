@@ -1,8 +1,8 @@
 class Zola < Formula
   desc "Fast static site generator in a single binary with everything built-in"
   homepage "https://www.getzola.org/"
-  url "https://github.com/getzola/zola/archive/refs/tags/v0.22.0.tar.gz"
-  sha256 "75274ca54c97da2f24645568e2c7024f6661ce002e8f7e09d6cd30bae7b73b0a"
+  url "https://github.com/getzola/zola/archive/refs/tags/v0.22.1.tar.gz"
+  sha256 "0f59479e05bce79e8d5860dc7e807ea818986094469ed8bf0bb46588ade95982"
   license "EUPL-1.2"
 
   bottle do
