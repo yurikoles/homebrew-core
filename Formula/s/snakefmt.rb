@@ -9,8 +9,7 @@ class Snakefmt < Formula
   head "https://github.com/snakemake/snakefmt.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "a466b06eda132b18216f3f7daf9e390dac8488fb293d304691c1a0eac099989a"
+    sha256 cellar: :any_skip_relocation, all: "1bb951cd913160a8af9ad32b0a30b6e87f492a7eb0ecd389a52be09553a8b9ee"
   end
 
   depends_on "python@3.14"
