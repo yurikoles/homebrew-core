@@ -1,8 +1,8 @@
 class AwsLc < Formula
   desc "General-purpose cryptographic library"
   homepage "https://github.com/aws/aws-lc"
-  url "https://github.com/aws/aws-lc/archive/refs/tags/v1.66.2.tar.gz"
-  sha256 "d64a46b4f75fa5362da412f1e96ff5b77eed76b3a95685651f81a558c5c9e126"
+  url "https://github.com/aws/aws-lc/archive/refs/tags/v1.67.0.tar.gz"
+  sha256 "e592fc107d2376cc820b01b394f718cc1ef2ab92f12a4960a2294c621bc5df66"
   license all_of: ["Apache-2.0", "ISC", "OpenSSL", "MIT", "BSD-3-Clause"]
 
   livecheck do
