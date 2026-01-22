@@ -4,6 +4,7 @@ class Cgns < Formula
   url "https://github.com/CGNS/CGNS/archive/refs/tags/v4.5.1.tar.gz"
   sha256 "ae63b0098764803dd42b7b2a6487cbfb3c0ae7b22eb01a2570dbce49316ad279"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/CGNS/CGNS.git", branch: "develop"
 
   livecheck do
