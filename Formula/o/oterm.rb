@@ -9,12 +9,12 @@ class Oterm < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "dde03de8d956d854a2c7082a224a24a50d4275bb5885a58d15ece9eadf44abc3"
-    sha256 cellar: :any,                 arm64_sequoia: "f77c8fe712b295258897a6497ea26fc675482e5ce3b83dc2d4f40b58f0f7f6d0"
-    sha256 cellar: :any,                 arm64_sonoma:  "397eab85cecb4ab6aea419c59bb0b831f3a91e88eea492adaddf66e1053c85aa"
-    sha256 cellar: :any,                 sonoma:        "7a9956d49dcf6bcac02840724b06e3fa8d59d18357c35da087ab73706d57b44d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "85286ddf1573cf3a8b92644425caca3dc3655a33a28b9f32b54df9c73e00133b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dfa2bd90eaf8e320ec7c1ac7f1946df8ffd143b4b2d9ea1720c438bfbefcfb7c"
+    sha256 cellar: :any,                 arm64_tahoe:   "9891065d64eff9314f5db56b3d756907a5271aa576133fc5f9f9bad5547540e5"
+    sha256 cellar: :any,                 arm64_sequoia: "423fe994e3620b7927a1bac94a29242ed1fdfed438fedaf021002bb48b21a028"
+    sha256 cellar: :any,                 arm64_sonoma:  "4a020028d1ad6669f73b1200d3abda56a672b8c131acf3e14358f0967fe29606"
+    sha256 cellar: :any,                 sonoma:        "95f5cb1b71d8f401c57be9a9590c2cb417adeb3c4ffbde7f0f4e83d43f5c8838"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2323dabb34540eb2c3deca534be510307c6e1920658e5b822c1067f2a9dfbda7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef53ce01b30582157b0c2a9f3f11485d5f854ba703a266ccb479f93de495cc5f"
   end
 
   depends_on "pkgconf" => :build
