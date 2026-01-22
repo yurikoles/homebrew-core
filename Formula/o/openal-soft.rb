@@ -1,14 +1,23 @@
 class OpenalSoft < Formula
   desc "Implementation of the OpenAL 3D audio API"
-  # cert expired report https://github.com/kcat/openal-soft/issues/1149
-  homepage "https://github.com/kcat/openal-soft"
-  # TODO: Remove distfiles.gentoo.org URL when openal-soft.org SSL is fixed.
-  # https://github.com/kcat/openal-soft/issues/1176
-  url "https://distfiles.gentoo.org/distfiles/08/openal-soft-1.24.3.tar.bz2"
-  mirror "https://openal-soft.org/openal-releases/openal-soft-1.24.3.tar.bz2"
-  sha256 "cb5e6197a1c0da0edcf2a81024953cc8fa8545c3b9474e48c852af709d587892"
+  homepage "https://openal-soft.org/"
   license "LGPL-2.0-or-later"
   head "https://github.com/kcat/openal-soft.git", branch: "master"
+
+  stable do
+    url "https://openal-soft.org/openal-releases/openal-soft-1.25.1.tar.bz2"
+    sha256 "4c2aff6f81975f46ecc5148d092c4948c71dbfb76e4b9ba4bf1fce287f47d4b5"
+
+    # Backport support for GCC <= 12
+    patch do
+      url "https://github.com/kcat/openal-soft/commit/abd510d0aa7a27afc48af25c24ee6d6b544053cb.patch?full_index=1"
+      sha256 "4b172d4e0765978562e16ab9cc8226f45b33521f6e4935ff3cc8ef570e57c268"
+    end
+    patch do
+      url "https://github.com/kcat/openal-soft/commit/b8c3593740630cdb3577fcb381e092898759064a.patch?full_index=1"
+      sha256 "77d73ff7cf500a46940e2392e2348ca3357f491628abe06a0f36ad4391630ccb"
+    end
+  end
 
   livecheck do
     url :homepage
@@ -31,6 +40,19 @@ class OpenalSoft < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
 
+  on_macos do
+    depends_on "llvm" => :build if DevelopmentTools.clang_build_version <= 1699
+  end
+
+  on_linux do
+    depends_on "binutils" => :build # Ubuntu 22.04 ld has relocation errors
+  end
+
+  fails_with :clang do
+    build 1699
+    cause "error: no member named 'join' in namespace 'std::ranges::views'"
+  end
+
   def install
     # Please don't re-enable example building. See:
     # https://github.com/Homebrew/homebrew/issues/38274
@@ -38,7 +60,6 @@ class OpenalSoft < Formula
       -DALSOFT_BACKEND_PORTAUDIO=OFF
       -DALSOFT_BACKEND_PULSEAUDIO=OFF
       -DALSOFT_EXAMPLES=OFF
-      -DALSOFT_MIDI_FLUIDSYNTH=OFF
       -DCMAKE_INSTALL_RPATH=#{rpath}
     ]
 
@@ -58,6 +79,7 @@ class OpenalSoft < Formula
         return 0;
       }
     C
-    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lopenal"
+    system ENV.cc, "test.c", "-o", "test", "-I#{include}", "-L#{lib}", "-lopenal"
+    system "./test"
   end
 end
