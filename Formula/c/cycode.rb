@@ -3,8 +3,8 @@ class Cycode < Formula
 
   desc "Boost security in your dev lifecycle via SAST, SCA, Secrets & IaC scanning"
   homepage "https://github.com/cycodehq/cycode-cli"
-  url "https://files.pythonhosted.org/packages/31/a4/54acca8f0c9a0dd39765414aac088ffa3ac12d273b04008d4a032eac9c88/cycode-3.8.8.tar.gz"
-  sha256 "4b85c3a2b2047914aa5d85ac1d20730e87f9ef850a3bb1caa648fd67c618da17"
+  url "https://files.pythonhosted.org/packages/3d/5f/589b70ae38b0513e258133e57a8da65b2e8eda99e2fc15286aa115183f0d/cycode-3.8.9.tar.gz"
+  sha256 "0fd585b82917aa057727b5561651130d8f1f4c9c21b8de1dbcdc201ebb8ef1b4"
   license "MIT"
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
@@ -132,8 +132,8 @@ class Cycode < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
-    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   resource "patch-ng" do
