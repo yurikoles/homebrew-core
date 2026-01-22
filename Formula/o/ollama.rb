@@ -27,6 +27,12 @@ class Ollama < Formula
   depends_on "cmake" => :build
   depends_on "go" => :build
 
+  on_macos do
+    on_arm do
+      depends_on "mlx-c" => :no_linkage
+    end
+  end
+
   conflicts_with cask: "ollama-app"
 
   def install
@@ -44,8 +50,17 @@ class Ollama < Formula
       -X github.com/ollama/ollama/server.mode=release
     ]
 
+    mlx_args = []
+
+    # Flags for MLX (Apple silicon only)
+    if OS.mac? && Hardware::CPU.arm?
+      mlx_rpath = rpath(target: Formula["mlx-c"].opt_lib)
+      ldflags << "-extldflags '-Wl,-rpath,#{mlx_rpath}'"
+      mlx_args << "-tags=mlx"
+    end
+
     system "go", "generate", "./..."
-    system "go", "build", *std_go_args(ldflags:)
+    system "go", "build", *mlx_args, *std_go_args(ldflags:)
   end
 
   service do
