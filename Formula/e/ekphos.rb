@@ -1,8 +1,8 @@
 class Ekphos < Formula
   desc "Terminal-based markdown research tool inspired by Obsidian"
   homepage "https://ekphos.xyz"
-  url "https://github.com/hanebox/ekphos/archive/refs/tags/v0.15.0.tar.gz"
-  sha256 "b7ac48edd5b106e58048b1170192430942b23520e62720d20d0b729952f7c7fe"
+  url "https://github.com/hanebox/ekphos/archive/refs/tags/v0.20.0.tar.gz"
+  sha256 "b0d7a902902d08e1dfc75325241f3dfa8f82700870dec8c9b3cdf011814adce2"
   license "MIT"
   head "https://github.com/hanebox/ekphos.git", branch: "release"
 
