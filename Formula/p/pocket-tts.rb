@@ -3,8 +3,8 @@ class PocketTts < Formula
 
   desc "Text-to-speech application designed to run efficiently on CPUs"
   homepage "https://github.com/kyutai-labs/pocket-tts"
-  url "https://files.pythonhosted.org/packages/8d/41/777d34b5867d3b653a222c8039f110df4d06dfc224dcf018d9100c7a0937/pocket_tts-1.0.2.tar.gz"
-  sha256 "81239a598cad56a24f117b5c800df2d6a94f573f9a9fe49faf2ca05b258886d4"
+  url "https://files.pythonhosted.org/packages/27/e0/29673b627639e5112d840fc9a4fcca2c0dc43491c57d2f3d757b169bf254/pocket_tts-1.0.3.tar.gz"
+  sha256 "9f63ba293666dc338ab4e99a7bfee6f079ee78cd4c64c532a6706925aa702921"
   license "MIT"
   head "https://github.com/kyutai-labs/pocket-tts.git", branch: "main"
 
@@ -104,8 +104,8 @@ class PocketTts < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
-    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   resource "pygments" do
