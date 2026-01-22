@@ -4,7 +4,7 @@ class Votca < Formula
   url "https://github.com/votca/votca/archive/refs/tags/v2025.1.tar.gz"
   sha256 "85b487d2b2a31f26869be422c98f816b95c88a4ab112ea4650cccd4c2706bdbf"
   license "Apache-2.0"
-  revision 2
+  revision 3
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "9083467e1a30e21f131314a426f6654540d04db6687629018552ebcf1de529b2"
@@ -19,7 +19,7 @@ class Votca < Formula
   depends_on "pkgconf" => :build
   depends_on "python@3.14" => :build
   depends_on "boost"
-  depends_on "eigen"
+  depends_on "eigen" => :no_linkage
   depends_on "fftw"
   # add gromacs dep back once it was built with clang
   depends_on "hdf5"
