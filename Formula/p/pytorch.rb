@@ -15,12 +15,12 @@ class Pytorch < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "b7fb4b3a10390af168b1272c51245df679dc6bf59846e6719996da9a13871ac0"
-    sha256 cellar: :any, arm64_sequoia: "8213af1e9f09232d06778589afd2b5d7ac56b8de120ec3bb78963f69555e80fe"
-    sha256 cellar: :any, arm64_sonoma:  "f5730df509d424bbce1927dd8bc6b4a59f6c10ef3994aa6cb9e8937e0362b626"
-    sha256 cellar: :any, sonoma:        "f50474020f2f8a5eb99ef5e85156995fd87e378626d644f6235328de98ccc567"
-    sha256               arm64_linux:   "b8c591098e616bada220f5623ab8a81fd124ddf380e8aeec802be064a3139909"
-    sha256               x86_64_linux:  "0434b78cba9d0032ba3485f1ce7a142ea1e390dcff798abefaaf88efc4f68835"
+    sha256 cellar: :any, arm64_tahoe:   "1fdb982bd44569c59eee93c00b077f176faf85fc34c5d6ff139a3619c843fce9"
+    sha256 cellar: :any, arm64_sequoia: "e35118ea4fd3d74157f5aa9572809e3129c79cec5f3220294893891a9612189c"
+    sha256 cellar: :any, arm64_sonoma:  "7ae1f37acbb2c43e1b8f21eb8325f4bd68bbdca58ce5d9a51bbe5372138ef8c2"
+    sha256 cellar: :any, sonoma:        "619c5aabd0994910640f9657de0c3be693af529081db9fcb578e157b8654ce8a"
+    sha256               arm64_linux:   "b2d6d3495d201287fa31984f4b2c5b0f7413b9edbcc26f860051216707be41f8"
+    sha256               x86_64_linux:  "b14466e5f1aa3de2b11cc726556472d49edb3085a8dd8b6158f95881b36abc95"
   end
 
   depends_on "cmake" => :build
