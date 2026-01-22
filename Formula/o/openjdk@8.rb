@@ -1,10 +1,10 @@
 class OpenjdkAT8 < Formula
   desc "Development kit for the Java programming language"
   homepage "https://openjdk.org/"
-  url "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u472-ga.tar.gz"
-  version "1.8.0-472"
-  BUILD_NUMBER = "b08".freeze # Please update when a new GA release is available: https://wiki.openjdk.org/display/jdk8u.
-  sha256 "5456de1d58bd95ecd0df04f5bddb29fd4405e50b2e48efb3bf0494e9d76e1cf0"
+  url "https://github.com/openjdk/jdk8u/archive/refs/tags/jdk8u482-ga.tar.gz"
+  version "1.8.0-482"
+  BUILD_NUMBER = "b08".freeze # Please update when a new GA release is available: https://wiki.openjdk.org/spaces/jdk8u/overview.
+  sha256 "5f39085895a59d77dbe256427289558ae100013a547bcc7417492eea8b22b224"
   license "GPL-2.0-only"
 
   livecheck do
@@ -110,7 +110,7 @@ class OpenjdkAT8 < Formula
       # but this Makefile was written in the era of 4 digit numbers.
       inreplace "hotspot/make/bsd/makefiles/gcc.make" do |s|
         s.gsub! "$(subst .,,$(MACOSX_VERSION_MIN))", ENV["HOMEBREW_MACOS_VERSION_NUMERIC"]
-        s.gsub! "MACOSX_VERSION_MIN=10.7.0", "MACOSX_VERSION_MIN=#{MacOS.version}"
+        s.gsub! "MACOSX_VERSION_MIN=11.00.00", "MACOSX_VERSION_MIN=#{MacOS.version}"
       end
     else
       # Fix linker errors on brewed GCC.
