@@ -9,12 +9,12 @@ class McpAtlassian < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "e4a9525b38d4bd3918281d4e47f846afedbd4bda94a774de7a5df4df48d961bc"
-    sha256 cellar: :any,                 arm64_sequoia: "2527e90a6b9be0edfa4eecd2748e982025490b59fc476768bb5747f26e6fd288"
-    sha256 cellar: :any,                 arm64_sonoma:  "6d28187171caf60247766637b1046cf4bb2ba993e26950fccad1ee243a5b9eb8"
-    sha256 cellar: :any,                 sonoma:        "a4af5099b1875c4fff3764bbf55046dff0dec9b1068ddcd3b41a976d7c449f74"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "91f375c536f98cbc47759f67b21463093950fa0124e1e807ec8b1dd702a5aa82"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "09cd90c2f24bbe102e41f4bb5c7eec5379250f58571ae08efd17114a7fa4fc60"
+    sha256 cellar: :any,                 arm64_tahoe:   "ef95cd71fc249c404e25fc408f063c3f9338cdc678c9dddc77a17245f113171f"
+    sha256 cellar: :any,                 arm64_sequoia: "109f2d692a96d7e8a0962ad6ea4a720d519560c729ca97e9a930b406874be5cc"
+    sha256 cellar: :any,                 arm64_sonoma:  "d1b941b14b8e9ed3d58d0863ca6fd0c1f713f69c13c9a568a4d5817231a90b89"
+    sha256 cellar: :any,                 sonoma:        "27cb947b559134a628d10630a2a700c347dd3753b80ceb326d67792b21be02fd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "01ee04f5627310f4fe9e04d192925b164ae2d4858087f04f9a762aa0545fa599"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2e3de4f38bb5255d2d0f58775f1fa75bf882c4765bd3c368cd6a7bf331ca2ca2"
   end
 
   depends_on "rust" => :build # for py_key_value_aio > uv_build > maturin
