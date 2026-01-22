@@ -7,13 +7,12 @@ class Doctl < Formula
   head "https://github.com/digitalocean/doctl.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a5a70e6d034e967e6350b4d24d9e6790c9958036b0edc7065e2a444dd0bda86d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a5a70e6d034e967e6350b4d24d9e6790c9958036b0edc7065e2a444dd0bda86d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a5a70e6d034e967e6350b4d24d9e6790c9958036b0edc7065e2a444dd0bda86d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "01541e2955c37d7a5138aa01517bf8ab11693564ed1b917167103e2c9ae942b1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "64c062bbbd379ad820c0d7ad500cd15b11fa63158928f491d28007c97878911b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "18eaa4dc522769603eb2132e19c604793db34e403702f611577ae3541669b3c8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "065d5e754adab3dd0d583199272ad3cf9f512998852669344476fdc27d10be7d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "065d5e754adab3dd0d583199272ad3cf9f512998852669344476fdc27d10be7d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "065d5e754adab3dd0d583199272ad3cf9f512998852669344476fdc27d10be7d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "dcb679cbdd58429cde737e6104be12f29d25feb46ef18da6fc4505d015e55ef4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b339fd5dc3abf40a48999df9732866e8c1d1803d87592e14673dfb73e5955053"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6df20ab13c80ca8e232a1994ddb2b268acf52841652a46bc2cb6ac7b14a563fc"
   end
 
   depends_on "go" => :build
