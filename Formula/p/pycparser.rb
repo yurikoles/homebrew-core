@@ -6,7 +6,7 @@ class Pycparser < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9e1c78dae771f3b5f7e085ec7600b1317c259e5b493d81cb66334a919b1a81c6"
+    sha256 cellar: :any_skip_relocation, all: "2c10120dc7d0f6e19f7ceaa82bf41195df1541f3971a69367611f04121babec8"
   end
 
   depends_on "python@3.13" => [:build, :test]
