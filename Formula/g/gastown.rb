@@ -7,12 +7,12 @@ class Gastown < Formula
   head "https://github.com/steveyegge/gastown.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9e2c85b3f06606af99cb3e0edbb0af9c5d47b4171b2f598f7492c1312f1c397e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9e2c85b3f06606af99cb3e0edbb0af9c5d47b4171b2f598f7492c1312f1c397e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9e2c85b3f06606af99cb3e0edbb0af9c5d47b4171b2f598f7492c1312f1c397e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "791b494a4bf2c97e17a2bf7d10700bb5f00f5b0d562c02dde0ada7f97149852a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4a6cf2dfee1d84d32deb187bc57cc40d1395dad553c0b60f1833e17c39fa4e68"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a4c00b5859a877e11cda0c9089473751f95600485ab26d6b1dc2bfdc3c23930f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "00873c54bd673a99bc65064e55e09a09200eb05fa24ea3a2a63ba7f21dc59772"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "00873c54bd673a99bc65064e55e09a09200eb05fa24ea3a2a63ba7f21dc59772"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "00873c54bd673a99bc65064e55e09a09200eb05fa24ea3a2a63ba7f21dc59772"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6545be60ea220a2db527480ce747a89f9645c2d079bfaac2c0a054ce9d31dce8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "16cd1dba3ede6dc0d2474ea2245b0fd8cddb15982c51895bb9af92895a64a818"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0d0c4e0f15b84d5d8cd64fa4f5c83930dfefd881b3d9c695b88f1ee3e526d69c"
   end
 
   depends_on "go" => :build
