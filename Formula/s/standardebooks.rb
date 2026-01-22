@@ -3,10 +3,9 @@ class Standardebooks < Formula
 
   desc "Tools for producing ebook files"
   homepage "https://github.com/standardebooks/tools"
-  url "https://github.com/standardebooks/tools/archive/refs/tags/2.10.2.tar.gz"
-  sha256 "2dae00b4e872d99fddd00460c0da02d94f982f51348477b60a1a6077c4e69a54"
+  url "https://github.com/standardebooks/tools/archive/refs/tags/2.11.0.tar.gz"
+  sha256 "14730c6eb0e4eeec04838bdd0d0bec9eb8b7d228ef98324cc642505676f201cb"
   license "GPL-3.0-or-later"
-  revision 1
   head "https://github.com/standardebooks/tools.git", branch: "master"
 
   bottle do
@@ -249,8 +248,8 @@ class Standardebooks < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/24/30/6b0809f4510673dc723187aeaf24c7f5459922d01e2f794277a3dfb90345/wcwidth-0.2.14.tar.gz"
-    sha256 "4d478375d31bc5395a3c55c40ccdf3354688364cd61c4f6adacaa9215d0b3605"
+    url "https://files.pythonhosted.org/packages/38/75/2144b65e4fba12a2d9868e9a3f99db7fa0760670d064603634bef9ff1709/wcwidth-0.3.0.tar.gz"
+    sha256 "af1a2fb0b83ef4a7fc0682a4c95ca2576e14d0280bca2a9e67b7dc9f2733e123"
   end
 
   resource "webencodings" do
