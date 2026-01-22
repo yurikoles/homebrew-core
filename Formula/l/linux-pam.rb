@@ -1,8 +1,8 @@
 class LinuxPam < Formula
   desc "Pluggable Authentication Modules for Linux"
   homepage "https://github.com/linux-pam/linux-pam"
-  url "https://github.com/linux-pam/linux-pam/releases/download/v1.7.1/Linux-PAM-1.7.1.tar.xz"
-  sha256 "21dbcec6e01dd578f14789eac9024a18941e6f2702a05cf91b28c232eeb26ab0"
+  url "https://github.com/linux-pam/linux-pam/releases/download/v1.7.2/Linux-PAM-1.7.2.tar.xz"
+  sha256 "3d86b6383fb5fd9eb9578d2cd47d92801191f4bf3f9bc61419bfefc8aa1e531a"
   license any_of: ["BSD-3-Clause", "GPL-1.0-only"]
   head "https://github.com/linux-pam/linux-pam.git", branch: "master"
 
@@ -20,7 +20,8 @@ class LinuxPam < Formula
   depends_on :linux
 
   def install
-    system "meson", "setup", "build", "--sysconfdir=#{etc}", "-Dsecuredir=#{lib}/security", *std_meson_args
+    system "meson", "setup", "build", "--sysconfdir=#{etc}", "-Dvendordir=#{pkgshare}/security",
+"-Dsecuredir=#{lib}/security", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
   end
