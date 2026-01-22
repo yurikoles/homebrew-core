@@ -1,8 +1,8 @@
 class Komac < Formula
   desc "Community Manifest Creator for Windows Package Manager (WinGet)"
   homepage "https://github.com/russellbanks/Komac"
-  url "https://github.com/russellbanks/Komac/archive/refs/tags/v2.14.0.tar.gz"
-  sha256 "00e2dbc44bbc25bdfa9c8b425b641736b6677bc8b388d288e2c9bc37531d4ddd"
+  url "https://github.com/russellbanks/Komac/archive/refs/tags/v2.15.0.tar.gz"
+  sha256 "c22ef89c9018a35b10de14c953616721864a86f2a6c4c83f4ceb95785cb8635d"
   license "GPL-3.0-or-later"
   head "https://github.com/russellbanks/Komac.git", branch: "main"
 
@@ -17,6 +17,8 @@ class Komac < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
+
+  uses_from_macos "zlib"
 
   on_linux do
     depends_on "openssl@3"
