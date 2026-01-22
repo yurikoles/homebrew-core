@@ -1,8 +1,8 @@
 class Permify < Formula
   desc "Open-source authorization service & policy engine based on Google Zanzibar"
   homepage "https://github.com/Permify/permify"
-  url "https://github.com/Permify/permify/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "db6135bac0fd38a4193bf62e7618b2f8c520bbfd09fb5f2b138d3e0df84c857c"
+  url "https://github.com/Permify/permify/archive/refs/tags/v1.6.1.tar.gz"
+  sha256 "f48f27842638bda50e066ad970f6ef50ada6593189b41089c5584609f34d6c1f"
   license "AGPL-3.0-only"
   head "https://github.com/Permify/permify.git", branch: "master"
 
