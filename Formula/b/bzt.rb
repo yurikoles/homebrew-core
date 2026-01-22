@@ -6,6 +6,7 @@ class Bzt < Formula
   url "https://files.pythonhosted.org/packages/7c/09/6939b744b2d1ac11d1f5bf8270308480fb389fa92035e959925e0f1cae58/bzt-1.16.47.tar.gz"
   sha256 "8f58479b64f48aef9ef5a486d38a5fc4b29bc385cf73c21762c90ae890a68b97"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/Blazemeter/taurus.git", branch: "master"
 
   bottle do
@@ -149,6 +150,11 @@ class Bzt < Formula
     sha256 "952021e0e6c55a4a9fe4cd787895b86e239a40e76802a789d6305398d3975897"
   end
 
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
+  end
+
   resource "progressbar33" do
     url "https://files.pythonhosted.org/packages/71/fc/7c8e01f41a6e671d7b11be470eeb3d15339c75ce5559935f3f55890eec6b/progressbar33-2.4.tar.gz"
     sha256 "51fe0d9b3b4023db2f983eeccdfc8c9846b84db8443b9bee002c7f58f4376eff"
@@ -240,8 +246,8 @@ class Bzt < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/24/30/6b0809f4510673dc723187aeaf24c7f5459922d01e2f794277a3dfb90345/wcwidth-0.2.14.tar.gz"
-    sha256 "4d478375d31bc5395a3c55c40ccdf3354688364cd61c4f6adacaa9215d0b3605"
+    url "https://files.pythonhosted.org/packages/25/6f/e1ea6dcb21da43d581284d8d5a715c2affb906aa3ed301f77f7f5ae0e7d5/wcwidth-0.3.1.tar.gz"
+    sha256 "5aedb626a9c0d941b990cfebda848d538d45c9493a3384d080aff809143bd3be"
   end
 
   resource "websocket-client" do
@@ -250,8 +256,8 @@ class Bzt < Formula
   end
 
   resource "wheel" do
-    url "https://files.pythonhosted.org/packages/8a/98/2d9906746cdc6a6ef809ae6338005b3f21bb568bea3165cfc6a243fdc25c/wheel-0.45.1.tar.gz"
-    sha256 "661e1abd9198507b1409a20c02106d9670b2576e916d58f520316666abca6729"
+    url "https://files.pythonhosted.org/packages/89/24/a2eb353a6edac9a0303977c4cb048134959dd2a51b48a269dfc9dde00c8a/wheel-0.46.3.tar.gz"
+    sha256 "e3e79874b07d776c40bd6033f8ddf76a7dad46a7b8aa1b2787a83083519a1803"
   end
 
   resource "wsproto" do
