@@ -7,12 +7,13 @@ class Gastown < Formula
   head "https://github.com/steveyegge/gastown.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "00873c54bd673a99bc65064e55e09a09200eb05fa24ea3a2a63ba7f21dc59772"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "00873c54bd673a99bc65064e55e09a09200eb05fa24ea3a2a63ba7f21dc59772"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "00873c54bd673a99bc65064e55e09a09200eb05fa24ea3a2a63ba7f21dc59772"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6545be60ea220a2db527480ce747a89f9645c2d079bfaac2c0a054ce9d31dce8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "16cd1dba3ede6dc0d2474ea2245b0fd8cddb15982c51895bb9af92895a64a818"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0d0c4e0f15b84d5d8cd64fa4f5c83930dfefd881b3d9c695b88f1ee3e526d69c"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9471063074eaf3fbc95b717fe0252245fca7babe652726243537c46e874a39ca"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9471063074eaf3fbc95b717fe0252245fca7babe652726243537c46e874a39ca"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9471063074eaf3fbc95b717fe0252245fca7babe652726243537c46e874a39ca"
+    sha256 cellar: :any_skip_relocation, sonoma:        "881283dec1104b6d7b3d034e2daae80000339a1b69d8009721d7d245dc2048c1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "613a2fd807746254105132365ab26500a80b577ee98f9b20cd83bae6d9a37559"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2afd85f9871bd6b36ded9fd994f25adfa651fded46fbff851446d852529b2d6"
   end
 
   depends_on "go" => :build
@@ -34,6 +35,8 @@ class Gastown < Formula
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/gt"
     bin.install_symlink "gastown" => "gt"
+
+    generate_completions_from_executable(bin/"gt", shell_parameter_format: :cobra)
   end
 
   test do
