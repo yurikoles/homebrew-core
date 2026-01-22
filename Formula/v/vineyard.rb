@@ -4,7 +4,7 @@ class Vineyard < Formula
   url "https://github.com/v6d-io/v6d/releases/download/v0.24.4/v6d-0.24.4.tar.gz"
   sha256 "055bab09ca67542ccb13229de8c176b7875b4ba8c8a818e942218dccc32a6bae"
   license "Apache-2.0"
-  revision 7
+  revision 8
 
   bottle do
     sha256                               arm64_tahoe:   "c7c5af5c1592667ddcb33fed4a6a2632a6db2180913092dc635631fae5c7e7ad"
@@ -58,8 +58,8 @@ class Vineyard < Formula
   end
 
   def install
-    # TODO: Remove after https://github.com/Homebrew/brew/pull/20696
-    ENV.llvm_clang if OS.mac? && MacOS.version == :tahoe && DevelopmentTools.clang_build_version == 1700
+    # Workaround for older libstdc++
+    ENV.append "CXXFLAGS", "-include memory_resource" if OS.linux?
 
     # Workaround to support Boost 1.87.0+ until upstream fix for https://github.com/v6d-io/v6d/issues/2041
     boost_asio_post_files = %w[
