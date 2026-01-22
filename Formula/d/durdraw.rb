@@ -8,6 +8,10 @@ class Durdraw < Formula
   license "BSD-3-Clause"
   head "https://github.com/cmang/durdraw.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f0c308ff22b2a8446c4d611bb3566c612762264b9b9ba19ef2bf333d539b159f"
+  end
+
   depends_on "ansilove" => :no_linkage
   depends_on "pillow" => :no_linkage
   depends_on "python@3.14"
