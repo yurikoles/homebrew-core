@@ -7,12 +7,12 @@ class Alpscore < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c126dec161f1b5f224e3811bfa7725cffc28c07a7353117e732e73a5e98c545c"
-    sha256 cellar: :any,                 arm64_sequoia: "0f73bb0b70e164a8a4ea330153fb90a55704627dbce801fb2256dca62d068352"
-    sha256 cellar: :any,                 arm64_sonoma:  "d400c7a4d8877d42213b712c7ca565dd90810368bfe5f86b70557a8f8d0e2dd3"
-    sha256 cellar: :any,                 sonoma:        "4b977847e01b872501059cd69d19fd82a371b8a89c219967898a6ca48a39332d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0ac7f13cd5680672509610183e0d0b9cfce2a443011b1b8eb7d597170eb26496"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "39f48a1bbd7bb2136497962321d05351de1414aed5c6f37e178331cf5aa4d81e"
+    sha256 cellar: :any,                 arm64_tahoe:   "40dc2149a084c00f49ffb90537d54bb25928f9ec40de4a742ede77e7c59e1874"
+    sha256 cellar: :any,                 arm64_sequoia: "602d64d3104a5e5127b1f488a0619c5210d0a71aaba6083222db9d0436b36731"
+    sha256 cellar: :any,                 arm64_sonoma:  "f2116085eb34048843f3c6aca11951cb4c7cade9b257f6c22e400f5aa67ec363"
+    sha256 cellar: :any,                 sonoma:        "df4cfbe5b40dfde376fba083e33bc1323b73914c8c2b0455471851b37e0ff42c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b376b567d1dc67245a03884a984d8a6ed3fa483f27cc954ab625d0d220aa2b39"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e07129f9f6f769198cac871aae40e7e57356c10a98b0bcc50abc476b70448998"
   end
 
   depends_on "cmake" => [:build, :test]
