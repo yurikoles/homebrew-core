@@ -1,8 +1,8 @@
 class RalphOrchestrator < Formula
   desc "Multi-agent orchestration framework for autonomous AI task completion"
   homepage "https://github.com/mikeyobrien/ralph-orchestrator"
-  url "https://github.com/mikeyobrien/ralph-orchestrator/archive/refs/tags/v2.1.3.tar.gz"
-  sha256 "2bb33fe834ad2da7fed2e1fd1f17a92f0c48df7bf238c56ba9306de5cd20e086"
+  url "https://github.com/mikeyobrien/ralph-orchestrator/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "576af276009cd02143a49799434fa32659494867f3222618a980b5b292c79976"
   license "MIT"
   head "https://github.com/mikeyobrien/ralph-orchestrator.git", branch: "main"
 
