@@ -1,8 +1,11 @@
 class Kubescape < Formula
   desc "Kubernetes testing according to Hardening Guidance by NSA and CISA"
   homepage "https://kubescape.io"
-  url "https://github.com/kubescape/kubescape/archive/refs/tags/v3.0.47.tar.gz"
-  sha256 "1d8c4820f341823dc1fc50d575044099dbf5cbfe2a05fc9e12976715efb41ae9"
+  # Use GitHub repo URL because the version for the build will be automatically fetched from git.
+  url "https://github.com/kubescape/kubescape.git",
+      tag:      "v3.0.48",
+      revision: "6ce0121a03697a6976656fe1f13dbb171a1610a9"
+
   license "Apache-2.0"
   head "https://github.com/kubescape/kubescape.git", branch: "master"
 
@@ -24,14 +27,10 @@ class Kubescape < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = %W[
-      -s -w
-      -X github.com/kubescape/kubescape/v#{version.major}/core/cautils.BuildNumber=v#{version}
-    ]
+    system "go", "build", *std_go_args(ldflags: "-s -w")
 
-    system "go", "build", *std_go_args(ldflags:)
-
-    generate_completions_from_executable(bin/"kubescape", "completion", shells: [:bash, :zsh, :fish])
+    generate_completions_from_executable(bin/"kubescape", shell_parameter_format: :cobra,
+                                                          shells:                 [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
