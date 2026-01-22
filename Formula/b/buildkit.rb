@@ -2,8 +2,8 @@ class Buildkit < Formula
   desc "Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit"
   homepage "https://github.com/moby/buildkit"
   url "https://github.com/moby/buildkit.git",
-      tag:      "v0.26.3",
-      revision: "c70e8e666f8f6ee3c0d83b20c338be5aedeaa97a"
+      tag:      "v0.27.0",
+      revision: "2bcd66daa720bd45da2a43db59cd3e8ddf3f39ae"
   license "Apache-2.0"
   head "https://github.com/moby/buildkit.git", branch: "master"
 
