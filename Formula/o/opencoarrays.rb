@@ -1,10 +1,9 @@
 class Opencoarrays < Formula
   desc "Open-source coarray Fortran ABI, API, and compiler wrapper"
   homepage "http://www.opencoarrays.org"
-  url "https://github.com/sourceryinstitute/OpenCoarrays/releases/download/2.10.2/OpenCoarrays-2.10.2.tar.gz"
-  sha256 "e13f0dc54b966b0113deed7f407514d131990982ad0fe4dea6b986911d26890c"
+  url "https://github.com/sourceryinstitute/OpenCoarrays/archive/refs/tags/2.10.3.tar.gz"
+  sha256 "f9f2fb6ac1fe92c1ea66976894b5cebe53812827b7d1238fed933e2845e8a022"
   license "BSD-3-Clause"
-  revision 5
   head "https://github.com/sourceryinstitute/opencoarrays.git", branch: "main"
 
   no_autobump! because: :requires_manual_review
@@ -20,17 +19,17 @@ class Opencoarrays < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "gcc@14"
+  depends_on "gcc@13"
   depends_on "open-mpi"
 
   def install
     # Version 2.10.2 and older are incompatible with GFortran 15.
-    # Version 2.10.3 is incompatible with Open MPI when using GFortran 15.
+    # Version 2.10.3 blocks building with Open MPI and GFortran 14+.
     # We don't support MPICH dependency as a single MPI is needed across formulae
     #
     # Ref: https://github.com/sourceryinstitute/OpenCoarrays/issues/793
     # Ref: https://github.com/open-mpi/ompi/issues/13385
-    ENV["FC"] = which("gfortran-14")
+    ENV["FC"] = which("gfortran-13")
 
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
