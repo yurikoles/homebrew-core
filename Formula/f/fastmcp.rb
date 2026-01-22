@@ -3,19 +3,18 @@ class Fastmcp < Formula
 
   desc "Fast, Pythonic way to build MCP servers and clients"
   homepage "https://gofastmcp.com/getting-started/welcome"
-  url "https://files.pythonhosted.org/packages/72/b5/7c4744dc41390ed2c17fd462ef2d42f4448a1ec53dda8fe3a01ff2872313/fastmcp-2.14.3.tar.gz"
-  sha256 "abc9113d5fcf79dfb4c060a1e1c55fccb0d4bce4a2e3eab15ca352341eec8dd6"
+  url "https://files.pythonhosted.org/packages/fd/a9/a57d5e5629ebd4ef82b495a7f8e346ce29ef80cc86b15c8c40570701b94d/fastmcp-2.14.4.tar.gz"
+  sha256 "c01f19845c2adda0a70d59525c9193be64a6383014c8d40ce63345ac664053ff"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/jlowin/fastmcp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3426351372b8ca2eb2b478b7ac948b37ccda9fd3bd9457e3f1509dc890507ed3"
-    sha256 cellar: :any,                 arm64_sequoia: "096267a80515c11e1691856e2899da0e8eef28eff4780701e883463add2e80a4"
-    sha256 cellar: :any,                 arm64_sonoma:  "85806b7a954b610347237f6890fa434e909fd59725140cd00f681cd4dd7dec5c"
-    sha256 cellar: :any,                 sonoma:        "db126498fb1b0a84508aaf8d039ceb9ec73ea64224a883a533a55d82a5144624"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "18e6b4f009752bc8a6b76fbfda225989143680f9eb6f2869d02ab715d85fd437"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef639bd3d5c9a5359b533ea99121236d62b555d63c132c5f621447b8719e4b75"
+    sha256 cellar: :any,                 arm64_tahoe:   "42589149e6cfab6750cb0d2abeb41e7e8cba2d4db62c4d57ab7a9025833e396c"
+    sha256 cellar: :any,                 arm64_sequoia: "70c35d063dacee1c5e426daec376c9f5348970b25cf6f19241776b5f32a5b3a9"
+    sha256 cellar: :any,                 arm64_sonoma:  "cfb88abec4cbba473cb0df32be905215c025e93c86c5bae2af06a82af442645e"
+    sha256 cellar: :any,                 sonoma:        "a3a44b51f1cf9c68654efc51fa370a1305d60a65aa356fb1bc3e0030ce0b0904"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "35e1c58a9d5d2ad241b67e70b25dd346c02241af4e0fe4a5f8b70a61f664262b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dc9c801902e81d16a90e41f5e1b9b979353d0662e4fc3487b2cf3550d011d148"
   end
 
   depends_on "rust" => :build # for py_key_value_aio
@@ -158,6 +157,11 @@ class Fastmcp < Formula
   resource "jeepney" do
     url "https://files.pythonhosted.org/packages/7b/6f/357efd7602486741aa73ffc0617fb310a29b588ed0fd69c2399acbb85b0c/jeepney-0.9.0.tar.gz"
     sha256 "cf0e9e845622b81e4a28df94c40345400256ec608d0e55bb8a3feaa9163f5732"
+  end
+
+  resource "jsonref" do
+    url "https://files.pythonhosted.org/packages/aa/0d/c1f3277e90ccdb50d33ed5ba1ec5b3f0a242ed8c1b1a85d3afeb68464dca/jsonref-1.1.0.tar.gz"
+    sha256 "32fe8e1d85af0fdefbebce950af85590b22b60f9e95443176adbde4e1ecea552"
   end
 
   resource "jsonschema" do
