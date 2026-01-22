@@ -6,8 +6,7 @@ class Jsonlint < Formula
   license "MIT"
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any_skip_relocation, all: "97762cc27f840903d10f585400d3a9019ff18813ce89ffc25cf4d13390479a13"
+    sha256 cellar: :any_skip_relocation, all: "f385934d75bcc430e766ac449f35048cb99579b9179f8d7e38bf38459047bac1"
   end
 
   depends_on "node"
