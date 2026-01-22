@@ -1,8 +1,8 @@
 class Crd2pulumi < Formula
   desc "Generate typed CustomResources from a Kubernetes CustomResourceDefinition"
   homepage "https://github.com/pulumi/crd2pulumi"
-  url "https://github.com/pulumi/crd2pulumi/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "65ba960325bfbd288b1cbe4675e1c24fd2fe6422b2cffc46a74fa801063beba6"
+  url "https://github.com/pulumi/crd2pulumi/archive/refs/tags/v1.6.1.tar.gz"
+  sha256 "14dff554dc6b26b43d80c36f85bd8768f9361e234aa5dcb48d8579df59c58c80"
   license "Apache-2.0"
   head "https://github.com/pulumi/crd2pulumi.git", branch: "master"
 
