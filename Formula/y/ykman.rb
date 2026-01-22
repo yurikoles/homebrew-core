@@ -3,10 +3,9 @@ class Ykman < Formula
 
   desc "Tool for managing your YubiKey configuration"
   homepage "https://developers.yubico.com/yubikey-manager/"
-  url "https://files.pythonhosted.org/packages/b3/09/ba3ca95ed3c8adfb7f8288a33048a963dcc5741eb3e819a8451b65e36a59/yubikey_manager-5.8.0.tar.gz"
-  sha256 "3af0da65e1fdd46763c94ee74e2da55a4b6e7771da776c197f5f4b4581738560"
+  url "https://files.pythonhosted.org/packages/2c/c8/ad0d6752d71d547fd72cbcdd62b33f20dcbfc867dc95128d8c95133b4d86/yubikey_manager-5.9.0.tar.gz"
+  sha256 "fb97e8013d426d5107602152b151e32a099204617b34e8673497346c902e96f7"
   license "BSD-2-Clause"
-  revision 1
   head "https://github.com/Yubico/yubikey-manager.git", branch: "main"
 
   bottle do
@@ -73,9 +72,24 @@ class Ykman < Formula
     sha256 "a24356f57a0a950740b6e54f51f819edd5296ee8892a6625b0da04724e9e6c13"
   end
 
+  resource "python-dateutil" do
+    url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
+    sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
+  end
+
+  resource "python-pskc" do
+    url "https://files.pythonhosted.org/packages/bb/96/877a597fc0bd9a3ed33ada8b30a93f9705805dc43a330e048a8bb1078365/python_pskc-1.4.tar.gz"
+    sha256 "4a36381446ca067be728b30e01b4d18dbd9d1ad553bf07c3710abcd87653eefe"
+  end
+
   resource "secretstorage" do
     url "https://files.pythonhosted.org/packages/1c/03/e834bcd866f2f8a49a85eaff47340affa3bfa391ee9912a952a1faa68c7b/secretstorage-3.5.0.tar.gz"
     sha256 "f04b8e4689cbce351744d5537bf6b1329c6fc68f91fa666f60a380edddcd11be"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
+    sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
   end
 
   def install
