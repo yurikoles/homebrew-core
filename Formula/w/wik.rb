@@ -8,6 +8,10 @@ class Wik < Formula
   license "MIT"
   head "https://github.com/yashsinghcodes/wik.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "53a1c915027c512348b3e72530e6e96dba092deb7bc36dbea420437e9659e2d0"
+  end
+
   depends_on "certifi" => :no_linkage
   depends_on "python@3.14"
 
