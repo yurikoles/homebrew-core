@@ -1,8 +1,8 @@
 class DockerBuildx < Formula
   desc "Docker CLI plugin for extended build capabilities with BuildKit"
   homepage "https://docs.docker.com/buildx/working-with-buildx/"
-  url "https://github.com/docker/buildx/archive/refs/tags/v0.30.1.tar.gz"
-  sha256 "d16adbb11be83edfff646d8a980e7bef1768b57120e5af35f37f70f97d0cbaa3"
+  url "https://github.com/docker/buildx/archive/refs/tags/v0.31.0.tar.gz"
+  sha256 "4e6d04dff8bfb21529db57341ca213b3e94132275d5e1c6782e02b27a1b8ff27"
   license "Apache-2.0"
   head "https://github.com/docker/buildx.git", branch: "master"
 
@@ -46,6 +46,6 @@ class DockerBuildx < Formula
   test do
     assert_match "github.com/docker/buildx v#{version}", shell_output("#{bin}/docker-buildx version")
     output = shell_output("#{bin}/docker-buildx build . 2>&1", 1)
-    assert_match(/(denied while trying to|Cannot) connect to the Docker daemon/, output)
+    assert_match(/(denied while trying|failed) to connect to the docker API/, output)
   end
 end
