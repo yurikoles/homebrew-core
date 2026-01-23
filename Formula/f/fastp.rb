@@ -1,8 +1,8 @@
 class Fastp < Formula
   desc "Ultra-fast all-in-one FASTQ preprocessor"
   homepage "https://github.com/OpenGene/fastp"
-  url "https://github.com/OpenGene/fastp/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "80464cca840f7ecaeec63528cc5c4b138af83da909f91291115e1811e5f8cec6"
+  url "https://github.com/OpenGene/fastp/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "d3e909466fc893a92434fd68ddc3efd9d732447a0a55b7c77b8d0b55b0681f69"
   license "MIT"
 
   bottle do
