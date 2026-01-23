@@ -3,8 +3,8 @@ class Copier < Formula
 
   desc "Utility for rendering projects templates"
   homepage "https://copier.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/cb/ab/dc4349bdde6850cf81e28e72d921b542346d0c96af835493a21ef0c6d512/copier-9.11.2.tar.gz"
-  sha256 "0e27c45db99f68e0e761e4a088d09cc1de78a67be5d32fb8041d466a54cce364"
+  url "https://files.pythonhosted.org/packages/40/be/35bb44c0c7c278bd9144f5934aa10a2d532cedea4e16494c6552aa7132e1/copier-9.11.3.tar.gz"
+  sha256 "f4da98c7f3dd2243480433541b3b4d9daa788bce13b7b6d43c0c6d84bd50e889"
   license "MIT"
 
   bottle do
@@ -53,8 +53,8 @@ class Copier < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
-    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   resource "pathspec" do
@@ -93,8 +93,8 @@ class Copier < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/24/30/6b0809f4510673dc723187aeaf24c7f5459922d01e2f794277a3dfb90345/wcwidth-0.2.14.tar.gz"
-    sha256 "4d478375d31bc5395a3c55c40ccdf3354688364cd61c4f6adacaa9215d0b3605"
+    url "https://files.pythonhosted.org/packages/25/6f/e1ea6dcb21da43d581284d8d5a715c2affb906aa3ed301f77f7f5ae0e7d5/wcwidth-0.3.1.tar.gz"
+    sha256 "5aedb626a9c0d941b990cfebda848d538d45c9493a3384d080aff809143bd3be"
   end
 
   def install
