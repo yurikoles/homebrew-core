@@ -1,15 +1,13 @@
 class Homebank < Formula
   desc "Manage your personal accounts at home"
-  homepage "http://homebank.free.fr"
-  # A mirror is used as primary URL because the official one is unstable.
-  url "https://deb.debian.org/debian/pool/main/h/homebank/homebank_5.9.5.orig.tar.gz"
-  mirror "http://homebank.free.fr/public/sources/homebank-5.9.5.tar.gz"
-  sha256 "ff6c8b0f6da411133e29b848e91f48fdb88de40ad02cba20a8840930a3e7ed43"
+  homepage "https://www.gethomebank.org/en/index.php"
+  url "https://www.gethomebank.org/public/sources/homebank-5.9.7.tar.gz"
+  sha256 "2b8fdf512429a30ed7a457cf5af476756c0cfddc9fce7600dab95c7f03be26e4"
   license "GPL-2.0-or-later"
 
   livecheck do
-    url "https://deb.debian.org/debian/pool/main/h/homebank/"
-    regex(/href=.*?homebank[._-]v?(\d+(?:\.\d+)+)\.orig\.t/i)
+    url "https://www.gethomebank.org/public/sources/"
+    regex(/href=.*?homebank[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   bottle do
@@ -50,7 +48,6 @@ class Homebank < Formula
 
   def install
     system "./configure", "--with-ofx", *std_configure_args
-    chmod 0755, "./install-sh"
     system "make", "install"
   end
 
