@@ -1,8 +1,8 @@
 class Repeater < Formula
   desc "Flashcard program that uses spaced repetition"
   homepage "https://shaankhosla.github.io/repeater/"
-  url "https://github.com/shaankhosla/repeater/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "908300013e7e2722b044aa598d0c9ffb799cebf9214fefe1be3e67958dcfbe23"
+  url "https://github.com/shaankhosla/repeater/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "22c487432743fcf6b5684daf23619fe7fe3427b1e54fb86b09dfe53dae8d9e95"
   license "Apache-2.0"
   head "https://github.com/shaankhosla/repeater.git", branch: "main"
 
@@ -15,6 +15,7 @@ class Repeater < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "6f3d2a23925c219e7f660637fdb4481e56126c385f9f3b38fdebbd055820cde3"
   end
 
+  depends_on "cmake" => :build
   depends_on "rust" => :build
 
   def install
