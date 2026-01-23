@@ -1,8 +1,8 @@
 class Faketty < Formula
   desc "Wrapper to exec a command in a pty, even if redirecting the output"
   homepage "https://github.com/dtolnay/faketty"
-  url "https://github.com/dtolnay/faketty/archive/refs/tags/1.0.19.tar.gz"
-  sha256 "9813623a26996153d586fc110752226a7d619242660a61f01b45f964597f5efe"
+  url "https://github.com/dtolnay/faketty/archive/refs/tags/1.0.20.tar.gz"
+  sha256 "40a4d1cfa3f265f94895cb1430e9100df43ba0b04c551349cac2973e033a7775"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/dtolnay/faketty.git", branch: "master"
 
