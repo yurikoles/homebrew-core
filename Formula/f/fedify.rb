@@ -1,19 +1,18 @@
 class Fedify < Formula
   desc "CLI toolchain for Fedify"
   homepage "https://fedify.dev/cli"
-  url "https://github.com/fedify-dev/fedify/archive/refs/tags/1.10.0.tar.gz"
-  sha256 "2a567341bebf90a27ad9e2e15774538da0bb2734444c05545e4ae62f009093d8"
+  url "https://github.com/fedify-dev/fedify/archive/refs/tags/1.10.2.tar.gz"
+  sha256 "832fa8a81ece6027b8828bd1ca3ffb9091bfb3231bea98de71a3af518443cb46"
   license "MIT"
   head "https://github.com/fedify-dev/fedify.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8b7179e7af4e4a58b670810c178dc3411c482185f64f48debeb53945aad54ebb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ebf72d9cbfd76b2ed7e117a72af7b05a710f9f890c8b60f99a2d0008d6fb2b39"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1cd59514c90521138b6e99d9ba15c9ddfefcc4a3ce4ce1c4ad40276e9fc5bbf5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2a998198482565a62908cde5e5b4653fc77e975a0528709ece66c4f66a5629bb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e3fcb69cdcbc7b093ab73925b4dd2cc0abbaa32b89be722f044bb2893c692362"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a8df44de056aacd5393f27325fa2361e058348d8e37e0f511c438775288ee965"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "88c4f5067ac97a671ff6b19ce3cd02c896d36d2cee34fa6cb4aaae33e1f280c8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "279c83bb7399fa17f8e42d7f34652f1731fad9d60bdc6f01305c5717f7794c5d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "038fbeb286f6c6a29462808561a8b64a97afa8b8963627176f6f1209b83844b2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1f2154175054b884b36ae4d6052e1bff8f981f1799f61bb801a8132e79f1f2c9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "197396971acb53963873056532df99d49759102b35125ee2ab0a443e6850cdcb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "59b8f4fafc80a2f589543a9525f758cf96765b611a98eecbd6663b02b96ae3e7"
   end
 
   depends_on "deno" => :build

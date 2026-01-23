@@ -1,17 +1,17 @@
 class BacklogMd < Formula
   desc "Markdown‑native Task Manager & Kanban visualizer for any Git repository"
   homepage "https://github.com/MrLesk/Backlog.md"
-  url "https://registry.npmjs.org/backlog.md/-/backlog.md-1.34.0.tgz"
-  sha256 "6fab15316f96e09e341fd40446d4000f927c4f36dbb53c1d07d849f9fa816bc4"
+  url "https://registry.npmjs.org/backlog.md/-/backlog.md-1.35.3.tgz"
+  sha256 "823dd51bf80d09236a326975469e6c77fcae50cc59b693757e47e6b89d931494"
   license "MIT"
 
   bottle do
-    sha256                               arm64_tahoe:   "300c814af72e94ea888d4c4709b68bd9d31a0cba8f25dbab67dfa11e34fd095c"
-    sha256                               arm64_sequoia: "300c814af72e94ea888d4c4709b68bd9d31a0cba8f25dbab67dfa11e34fd095c"
-    sha256                               arm64_sonoma:  "300c814af72e94ea888d4c4709b68bd9d31a0cba8f25dbab67dfa11e34fd095c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "94833489dcd33de6e08f986f13131832f8f0f6e59bfa6dc5431d83a0ecfde7b5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3a9eac432c223ead41f038c35a35f960e83f0966fd8d8b4a63a8076d49fa4c15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db0e3d07b7a1505c0d8f8610c39587dedc9a609271c69aa4c24a149d76e89b14"
+    sha256                               arm64_tahoe:   "b3723d909aed83958078325f777a2a7d4f84101bd7c072cb109a6e2e1786ead8"
+    sha256                               arm64_sequoia: "b3723d909aed83958078325f777a2a7d4f84101bd7c072cb109a6e2e1786ead8"
+    sha256                               arm64_sonoma:  "b3723d909aed83958078325f777a2a7d4f84101bd7c072cb109a6e2e1786ead8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "15770c2f41503e33a42cef0b692b8128a805dc1c26521fb85dc04a9d569e1014"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5d9898f60e4d8753024c0a42225bfc86b8e42206ef0956fff120536e3eacb93a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "523b6a4ac5fe798fc48e22a89eb98905925a64ae3c1c75d167cdef2df810dd69"
   end
 
   depends_on "node"

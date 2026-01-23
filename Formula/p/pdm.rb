@@ -3,19 +3,18 @@ class Pdm < Formula
 
   desc "Modern Python package and dependency manager supporting the latest PEP standards"
   homepage "https://pdm-project.org"
-  url "https://files.pythonhosted.org/packages/6f/6a/a45447a32bb744e59561abfcac02a3d5ab2dd062e89c6e0d62a420f98b0b/pdm-2.26.4.tar.gz"
-  sha256 "d1030f6bd8e9449b5791e7768f1a856cc54617ee7b00f56fa1a843a84ad77f6e"
+  url "https://files.pythonhosted.org/packages/6e/47/4da1270646d95411aecae80aff32493d7da456c7b11fbb21b4a17e68ddba/pdm-2.26.6.tar.gz"
+  sha256 "771f95b9a484f9eb34dcf8d851be6ff95333e4f3c46189f9004cfd5cc2e925f9"
   license "MIT"
-  revision 1
   head "https://github.com/pdm-project/pdm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8a99359d20332a534aca0d23f4b22e93c6b6c7ae82d454429331e6165e163288"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2c1b5cf0528018cc6f46e13f987fc584fdd717ba93f42f7515a340ecfdeda0bd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "327127ab74873c003ecc2b903292f475860f5792cb989437d8962c69c7d84e65"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8592fba03c40a9f3ea0e5cbc1aff2cc6317be78824a4e5fc006a103158678937"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f5ce01d668242e7e4526c87f35a03e99f57654685ffc304f33dbf00ec129969b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8cb339bb41182dd8144bf6a78f7402a100aab60ca98e1120b0a7968faecfa20c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "401e3231737685d6c0300e17aa4a0c9e5dce98a76a23612457be78077b17113e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6d9c002309ca50933635281ed1e0947649bc0b489ec7ae2dcf3682345f62c7b5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "55bca403b7722d4da0829a45dffd75a02e5b85396ab5633f422f4a44abb7bbf2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6cd1f6c3877f9895bc40611b79b5f376d98a4fa082b502f351c629b1ae1c8b34"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dfbf514f0bb3dee483ce23dce534dbc2b8b70056833adab1255b86cb580e0881"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f75c0002f6f6088c5254bf7d00f750a8675fb077ed9c4f8b94131efc7a7bd4a"
   end
 
   depends_on "certifi" => :no_linkage
@@ -114,13 +113,13 @@ class Pdm < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
-    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   resource "pbs-installer" do
-    url "https://files.pythonhosted.org/packages/49/2f/18eebe074f27afb5d247af6837052b7f8a10849b0cd3cca8900ce8018185/pbs_installer-2026.1.13.tar.gz"
-    sha256 "e44d3814fdd515c15f5b87cfc7f58dd472e1e25e79100d80c0736579b3edd7a4"
+    url "https://files.pythonhosted.org/packages/07/69/9928b675e8f898e62e08c83f7de6351955bdc1d12bb86012c3bbb156a450/pbs_installer-2026.1.14.tar.gz"
+    sha256 "a668548459ce4a2d05ccd45cac10cb93e1ba10709ecfa7ff3d3b9c129bd243f5"
   end
 
   resource "platformdirs" do

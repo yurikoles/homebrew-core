@@ -1,9 +1,10 @@
 class BasisUniversal < Formula
   desc "Basis Universal GPU texture codec command-line compression tool"
   homepage "https://github.com/BinomialLLC/basis_universal"
-  url "https://github.com/BinomialLLC/basis_universal/archive/refs/tags/v1_60.tar.gz"
-  sha256 "64ac9363656dc3eb41c59ee52af7e939abe574a92c85fd0ba27008c4a7ec9f40"
+  url "https://github.com/BinomialLLC/basis_universal/archive/refs/tags/v2_0_1.tar.gz"
+  sha256 "ba83a292dc92f0ea5344208fb0befb41a4646075097e20055b002541de142091"
   license "Apache-2.0"
+  head "https://github.com/BinomialLLC/basis_universal.git", branch: "master"
 
   livecheck do
     url :stable
@@ -13,17 +14,15 @@ class BasisUniversal < Formula
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :incompatible_version_format
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "528256b199323aa91aeeea65287838c0f416c350866aae486092e4399edcfe69"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "96434e6249de92e5397c362a061db58527d27934d0c6eb0c8dfca00a0e713a79"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d0e189d41590b8af1cbf3dc09edad394432df308cfff3fd3ec2b7f59364229f7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "11ad095bcfaed712c6bb0cad156195f547b62b25099017e42281081dd0625722"
-    sha256 cellar: :any_skip_relocation, sonoma:        "255ab827520159d10a65c679cba019b737567ab0f6fbeeedf72328668b266ded"
-    sha256 cellar: :any_skip_relocation, ventura:       "7968489b3cb67938213dc0ebabf094ac85d56cb6f7cec5f9815e7359f3efd074"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6cf5cb5d24db7ee3f074944845ba412eedf16b5aad753b6d01698bd2a886e706"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ae7370a2812a7acea4e1b85530eea51b4c2d9c98db98e5cefee7e25e81abf710"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a0ceac130f66b043bd80f6438f049e3d5db720d6631c80667b66cd2d04c0cee2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4deabeea0e1bb3f99c4e1ad044eb42155a41cf7fa0e36a6fb7514b0f01fc1e82"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2fc92c1cca424f0e93115021cf4c1becc022101f9c50b4094f1a783439d7a9f8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "08d6fdff6ca2e1a529a7556186e27bcea4d5c6a2c55a598e6a709c54698481ed"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4cfbad1d8dc00ca6460c992b0840c77c5f98a44a9fbf362f172b42dc40000532"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "11b7544b7f83eb4a9e9eb3bff33b5229efb9fd0c9dc09a877390496b2c71b42f"
   end
 
   depends_on "cmake" => :build
@@ -32,7 +31,6 @@ class BasisUniversal < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     bin.install "bin/basisu"
-    bin.install "bin/examples" => "basisu_examples"
   end
 
   test do

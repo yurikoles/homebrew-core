@@ -1,8 +1,8 @@
 class SoxNg < Formula
   desc "Sound eXchange NG"
   homepage "https://codeberg.org/sox_ng/sox_ng"
-  url "https://codeberg.org/sox_ng/sox_ng/releases/download/sox_ng-14.7.0.4/sox_ng-14.7.0.4.tar.gz"
-  sha256 "399740e1a16b9eea1285c80c3dbd0c5e2abcf3953327447cc90baa1abea8bbe2"
+  url "https://codeberg.org/sox_ng/sox_ng/releases/download/sox_ng-14.7.0.5/sox_ng-14.7.0.5.tar.gz"
+  sha256 "f78450f0c3704840f796627ef63020b6b0ffd45d108ef0ab0bee7b9daa0b0315"
   license "GPL-2.0-only"
   revision 1
   head "https://codeberg.org/sox_ng/sox_ng.git", branch: "main"
@@ -32,6 +32,10 @@ class SoxNg < Formula
   depends_on "wavpack"
 
   uses_from_macos "zlib"
+
+  on_macos do
+    depends_on "opus"
+  end
 
   on_linux do
     depends_on "alsa-lib"

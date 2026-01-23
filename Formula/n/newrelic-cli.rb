@@ -1,8 +1,8 @@
 class NewrelicCli < Formula
   desc "Command-line interface for New Relic"
   homepage "https://github.com/newrelic/newrelic-cli"
-  url "https://github.com/newrelic/newrelic-cli/archive/refs/tags/v0.106.13.tar.gz"
-  sha256 "79421a0a9629167556a0e28c332ff54f11a7fc54849f859b3dc0cc3f08d99459"
+  url "https://github.com/newrelic/newrelic-cli/archive/refs/tags/v0.106.16.tar.gz"
+  sha256 "4d92b22f8640fec5c07c514e8a1ca13c183cef8345458b9f8e1c471fb6635b76"
   license "Apache-2.0"
   head "https://github.com/newrelic/newrelic-cli.git", branch: "main"
 
@@ -12,12 +12,12 @@ class NewrelicCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "584a3cb3202ce6d5f49fbf484da230b6ab19f7d57c46a13502fcea9cf0a47ebd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "601d7dc6dbe3691d5d4464276512cf2d36e9f1815a07fc67be94c59af980e88a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "608d1f916ae667f346264eed4ab8f9fd0355d851555d2181698689c24724e0de"
-    sha256 cellar: :any_skip_relocation, sonoma:        "666a0a711363bf75417ec8d7b04eb4ad4464e275c1accdf6721e6f71e678d01e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f8547c39cc867b8a78cbdeb89542056ed3572c38d6da9be9036e6b6fc4a18f9a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cdc479c5675584d74f5887b1e07178e7b97143141c8a166d997a2a2993f7f984"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "06f35707c0492045eb417cb2ea226eb39aa785cd0175cebf7631c621da6789e6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bb93da1713838bbc20f9c0d7a29b6cff22ddd50ff5ba8100d009f094012abb46"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fe199f806e16a1c2c806c84d99f76ee8c3e7cb17594a9611d22968f2f2083270"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b14a82bffbb916793bc2964d9faeb987da9c6317cfdc1188acab5709e9d2fc40"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "30b7a7830861ff6c2c9aa58539dec3b25e5cfede99fdce7a1af621534bfb6694"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4ab8aa4626790209f663b285d6edf9b242a32d0f4b5533938de193a10f6c3786"
   end
 
   depends_on "go" => :build
