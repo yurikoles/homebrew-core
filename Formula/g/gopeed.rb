@@ -7,12 +7,12 @@ class Gopeed < Formula
   head "https://github.com/GopeedLab/gopeed.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "52d7ae6c778c6b4da79bf6575976dbb09fe10b58865516e87a6bf9b19761a013"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "03211790225d95d5767f4a7a2ce06193a6382b2c686cc0e34d04a080dde1754e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "69e669d597f6ed85aee86cf11f93d482136e23282abfaebb468f94e96e328b59"
-    sha256 cellar: :any_skip_relocation, sonoma:        "dd7290a5623e5a6b6af0866df2f0c702947d3b802343254e1d43e2bd282d0a53"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c1f444eb2c41b319892d4a4a243243b8f9ff731d265cc2f943606b231441de05"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9cf0d9c0d2ebfa1037bb126cdc40aec9eca407b2ecce636cfc0430eab62d8791"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7faf00b1e70ffa23dcb7d61d33c18568aa73f1230d9275382a6ece610f024501"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "087ed4941de0968e8f5582c64569ecfca4df1185f64696551376582e652d4e6d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5c025be4dcf4912dea3ea711082508549d431a7c4082189f571542462620d9fa"
+    sha256 cellar: :any_skip_relocation, sonoma:        "664a67391f4125dc962cc9d07984b2acb622bc8e62bd09f182ae2964e45e8880"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dcf0798783a2a8e127913a7839b203bfc8c7a9a5b9625aeac1eb9992b0a55836"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ad2a2b9f75ffb6c78723fcb0331d5ce36ed1441efc54e7b35dbf686fd6eadbd7"
   end
 
   depends_on "go" => :build
