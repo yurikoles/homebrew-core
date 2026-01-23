@@ -1,8 +1,8 @@
 class Pax < Formula
   desc "Portable Archive Interchange archive tool"
   homepage "https://mbsd.evolvis.org/pax.htm"
-  url "https://mbsd.evolvis.org/MirOS/dist/mir/cpio/paxmirabilis-20201030.tgz"
-  sha256 "1cc892c9c8ce265d28457bab4225eda71490d93def0a1d2271430c2863b728dc"
+  url "https://mbsd.evolvis.org/MirOS/dist/mir/cpio/paxmirabilis-20240817.tgz"
+  sha256 "e955d5d3af97aede0a3f463a9a59b83e8d1083aaf142eb6f388c549a7d182e6b"
   license "MirOS"
 
   livecheck do
