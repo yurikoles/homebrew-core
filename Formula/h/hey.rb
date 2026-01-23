@@ -1,8 +1,8 @@
 class Hey < Formula
   desc "HTTP load generator, ApacheBench (ab) replacement"
   homepage "https://github.com/rakyll/hey"
-  url "https://github.com/rakyll/hey/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "944097e62dd0bd5012d3b355d9fe2e7b7afcf13cc0b2c06151e0f4c2babfc279"
+  url "https://github.com/rakyll/hey/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "f678bc0f07c62a6513726298873940b70099aa85244efa813f6a0d925092ffe9"
   license "Apache-2.0"
 
   bottle do
@@ -20,12 +20,6 @@ class Hey < Formula
     sha256 cellar: :any_skip_relocation, arm64_linux:    "a0b6c6fd1de183a79e5f525ddda5723398a215b2658ea3be0c45d51101b8e1f3"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e5454552b0eb8d412645a0a5211b0566a41d13fc238149177bfddea36ace56e4"
   end
-
-  # no commits over the past four years
-  # community discussion thread, https://github.com/rakyll/hey/issues/269
-  # `oha` is a good alternative
-  deprecate! date: "2025-01-12", because: :unmaintained
-  disable! date: "2026-01-12", because: :unmaintained
 
   depends_on "go" => :build
 
