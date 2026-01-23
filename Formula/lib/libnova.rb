@@ -1,8 +1,9 @@
 class Libnova < Formula
   desc "Celestial mechanics, astrometry and astrodynamics library"
   homepage "https://libnova.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/libnova/libnova/v%200.15.0/libnova-0.15.0.tar.gz"
-  sha256 "7c5aa33e45a3e7118d77df05af7341e61784284f1e8d0d965307f1663f415bb1"
+  url "https://git.code.sf.net/p/libnova/libnova.git",
+      tag:      "v0.16",
+      revision: "edbf65abe27ef1a2520eb9e839daaf58f15a6941"
   # libnova is LGPL but the libnovaconfig binary is GPL
   license all_of: ["LGPL-2.0-or-later", "GPL-2.0-or-later"]
 
