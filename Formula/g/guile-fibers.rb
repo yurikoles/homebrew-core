@@ -1,8 +1,8 @@
 class GuileFibers < Formula
   desc "Concurrent ML-like concurrency for Guile"
-  homepage "https://github.com/wingo/fibers"
-  url "https://github.com/wingo/fibers/releases/download/v1.3.1/fibers-1.3.1.tar.gz"
-  sha256 "a5e1a9c49c0efe7ac6f355662041430d4b64e59baa538d2b8fb5ef7528d81dbf"
+  homepage "https://codeberg.org/guile/fibers"
+  url "https://codeberg.org/guile/fibers/archive/v1.4.2.tar.gz"
+  sha256 "bf61f58fdea48b4b28a9683d4493fcbced2ce2d7d98a7c1b1234353161de1ece"
   license "LGPL-3.0-or-later"
 
   bottle do
@@ -16,6 +16,8 @@ class GuileFibers < Formula
     sha256 x86_64_linux:  "d94c75d9e2acfbf27ba8387935d757398f54287c38654ae9a51169934f54c096"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
   depends_on "guile"
   depends_on "libevent"
 
@@ -28,6 +30,7 @@ class GuileFibers < Formula
   end
 
   def install
+    system "./autogen.sh"
     system "./configure", *std_configure_args
     system "make", "install"
   end
