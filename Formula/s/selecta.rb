@@ -8,8 +8,7 @@ class Selecta < Formula
   no_autobump! because: :requires_manual_review
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "ec55655e3c404bba347f242a7b24e7504b181fd2f364a85dad9e4c770231a79d"
+    sha256 cellar: :any_skip_relocation, all: "9fb1dc1bfe59101569e6aea3522d36cf406a2c9b2b86464fce089cc36356b75f"
   end
 
   uses_from_macos "ruby"
