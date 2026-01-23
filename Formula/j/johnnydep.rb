@@ -9,13 +9,12 @@ class Johnnydep < Formula
   revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_tahoe:   "6c203112106922fb1e46d8002128cd66734fb5adfa3d0d0a72e7f1186a6b7198"
-    sha256 cellar: :any,                 arm64_sequoia: "8bec8ae2d8725c123a9cf211047d10efbf47a3e454a9d31cff1f862e8d06d995"
-    sha256 cellar: :any,                 arm64_sonoma:  "f514171f90b831271b976c76a33a9ef71cfeeca5a6a761b053ec333bde0e5925"
-    sha256 cellar: :any,                 sonoma:        "70a32a8773be96c92c27c938b6eba4fc20e8bef8799c34ec330ff635b407a692"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "13e6ad48bf9f17579c0c21d2c397581bdd8e5669bab2b7795e39be831e80422d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5c1f6f72a599fa4b9edb63a6b36c62213ba36780489cc602d638d37c94f1edca"
+    sha256 cellar: :any,                 arm64_tahoe:   "6d274fefc18f8db028fc25d289899f829a33376168b2023b18af93a10abee047"
+    sha256 cellar: :any,                 arm64_sequoia: "7b11e53dc3f24c64cad644ff97c27f1624dbf0d7dc699c1eb99a2c804acd0cb3"
+    sha256 cellar: :any,                 arm64_sonoma:  "edf220b46ccb2cd34bdf7a82b95bba9716bed695955e08f7d9fde0d864083be2"
+    sha256 cellar: :any,                 sonoma:        "1813f3a60ab612a55e7daa361a555f2479bf8a1bc9cf8a10b08490563ef50610"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7d02f4e58aba435472744748c0c451a0d7e8b11312146463aca0b13882b87a0c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "698750390e7ca34c71365475933951db23d906ad69adc825c5f1d46cf6d2d10f"
   end
 
   depends_on "libyaml"
