@@ -1,11 +1,10 @@
 class Kondo < Formula
   desc "Save disk space by cleaning non-essential files from software projects"
   homepage "https://github.com/tbillington/kondo"
-  url "https://github.com/tbillington/kondo/archive/refs/tags/v0.8.tar.gz"
-  sha256 "4054c90e679a379a735b3166df4633fb86a33725175ebe23d7b659dcb7155b26"
+  url "https://github.com/tbillington/kondo/archive/refs/tags/v0.9.tar.gz"
+  sha256 "188c577f1d21d783cd2b4b43a5cbae5ffe8b085e5773e10846af55968ddd50c4"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
+  head "https://github.com/tbillington/kondo.git", branch: "master"
 
   bottle do
     rebuild 1
