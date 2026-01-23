@@ -1,15 +1,9 @@
 class Patchutils < Formula
   desc "Small collection of programs that operate on patch files"
   homepage "https://cyberelk.net/tim/software/patchutils/"
-  url "https://cyberelk.net/tim/data/patchutils/stable/patchutils-0.4.3.tar.xz"
-  mirror "https://deb.debian.org/debian/pool/main/p/patchutils/patchutils_0.4.3.orig.tar.xz"
-  sha256 "0efc96a9565fd156fc1064fdcc54c82b6229db0d402827c4c48b02f6ef956445"
+  url "https://github.com/twaugh/patchutils/releases/download/0.4.4/patchutils-0.4.4.tar.xz"
+  sha256 "2008241ee5d4f87ada3f743c719cc010b0ba929126e255f23c3fb48f614c7e32"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-
-  livecheck do
-    url "https://cyberelk.net/tim/data/patchutils/stable/"
-    regex(/href=.*?patchutils[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0bf4589febeda90518d2d4d875a96f4c4a25316a80c7c1d1718e05c96d5eb101"
