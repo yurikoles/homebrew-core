@@ -1,8 +1,8 @@
 class Artillery < Formula
   desc "Cloud-native performance & reliability testing for developers and SREs"
   homepage "https://www.artillery.io/"
-  url "https://registry.npmjs.org/artillery/-/artillery-2.0.27.tgz"
-  sha256 "f71f5222435159073ea016fa8a6fb72d85ffa119f0d71058db641e2613aa976f"
+  url "https://registry.npmjs.org/artillery/-/artillery-2.0.28.tgz"
+  sha256 "e6c076be5d049caaa5071575e93bf2870df5dd58228c14a621d1e5913983d445"
   license "MPL-2.0"
 
   livecheck do
@@ -22,7 +22,7 @@ class Artillery < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", *std_npm_args
+    system "npm", "install", *std_npm_args(ignore_scripts: false)
     bin.install_symlink libexec.glob("bin/*")
   end
 
