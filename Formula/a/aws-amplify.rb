@@ -1,8 +1,8 @@
 class AwsAmplify < Formula
   desc "Build full-stack web and mobile apps in hours. Easy to start, easy to scale"
   homepage "https://aws.amazon.com/amplify/"
-  url "https://registry.npmjs.org/@aws-amplify/cli-internal/-/cli-internal-14.2.3.tgz"
-  sha256 "51a53940fad63433999530f57300d0149e2755d33aa2823e290e66e9fa438f87"
+  url "https://registry.npmjs.org/@aws-amplify/cli-internal/-/cli-internal-14.2.4.tgz"
+  sha256 "2fd867f654d78518c9a312e473961abd8c6535d3d7d853a7f132d81243f6f220"
   license "Apache-2.0"
 
   bottle do
@@ -40,6 +40,7 @@ class AwsAmplify < Formula
     (node_modules/"amplify-dynamodb-simulator/emulator/DynamoDBLocal_lib").glob("libsqlite4java-*").each do |f|
       rm f if f.basename.to_s != "libsqlite4java-#{os}-#{arch}"
     end
+    deuniversalize_machos node_modules/"fsevents/fsevents.node" if OS.mac?
   end
 
   test do
