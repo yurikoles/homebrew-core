@@ -8,12 +8,12 @@ class ApacheArrow < Formula
   head "https://github.com/apache/arrow.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "84e8c1dbed3883391c81b7927e7d4a766ac55895ca17d4590b7888f2a948644e"
-    sha256 cellar: :any, arm64_sequoia: "21b852298aaba1167dc218fbb4763a2ea15b4cf2fdc5667c5a5160dfd141e803"
-    sha256 cellar: :any, arm64_sonoma:  "56f354b074e3c5cfdccd01d4693f2fac518ca754b01014391481671e9135627a"
-    sha256 cellar: :any, sonoma:        "34caa776277158bbf4f8b9971a4be44490542640c5740bf46c0b063d37b1a84d"
-    sha256               arm64_linux:   "87ba76661969d13cc8a68303fb8d77ec02e16580d270a9f6bf9be3f0f0141dc3"
-    sha256               x86_64_linux:  "0d6259cd5c38993b6d1cbb56d400b48c30e846be091b2a2680f8284f532dc65e"
+    sha256 cellar: :any, arm64_tahoe:   "1a47bb64ebccfea93fccd03d06fd9b6527e5427b7471f2e7fa049a7c0f8fd42c"
+    sha256 cellar: :any, arm64_sequoia: "ee4766f62f17b476ad554a87156596d38cdd4603ed28571814898c55fed857e1"
+    sha256 cellar: :any, arm64_sonoma:  "dfaf7e60bd96f2c9ae060780e6f8e2a0dabdf33f26cdb8d4104654c5f8996cf7"
+    sha256 cellar: :any, sonoma:        "cae263f8c27ae6b5ff54a72077601ece6b1192f2998e8e3c1c6f2fbd49bae848"
+    sha256               arm64_linux:   "04279188c5d0237b3dfe4748d497417f6626868b4a6a95388c1032121e1a16f9"
+    sha256               x86_64_linux:  "414609632852db06a6e40a1f4b747d5d2f4adcaad12b95e33106f00b69f610a7"
   end
 
   depends_on "boost" => :build
