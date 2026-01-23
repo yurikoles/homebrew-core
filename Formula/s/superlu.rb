@@ -1,14 +1,9 @@
 class Superlu < Formula
   desc "Solve large, sparse nonsymmetric systems of equations"
   homepage "https://portal.nersc.gov/project/sparse/superlu/"
-  url "https://github.com/xiaoyeli/superlu/archive/refs/tags/v7.0.0.tar.gz"
-  sha256 "d7b91d4e0bb52644ca74c1a4dd466a694ddf1244a7bbf93cb453e8ca1f6527eb"
+  url "https://github.com/xiaoyeli/superlu/archive/refs/tags/v7.0.1.tar.gz"
+  sha256 "86dcca1e086f8b8079990d07f00eb707fc9ef412cf3b2ce808b37956f0de2cb8"
   license "BSD-3-Clause-LBNL"
-
-  livecheck do
-    url :homepage
-    regex(/>SuperLU Version v?(\d+(?:\.\d+)+)/i)
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "ebe6d27572f2d442006da1de3b99fa24adbe5685e2bb82b5d644ac4b60226e61"
