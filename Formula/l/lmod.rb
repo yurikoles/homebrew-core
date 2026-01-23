@@ -1,8 +1,8 @@
 class Lmod < Formula
   desc "Lua-based environment modules system to modify PATH variable"
   homepage "https://lmod.readthedocs.io"
-  url "https://github.com/TACC/Lmod/archive/refs/tags/9.0.5.tar.gz"
-  sha256 "7d5b5db9f252dff7469d3a5369b7b58dbbfd4b3a879a97ee21954f26e04b13e3"
+  url "https://github.com/TACC/Lmod/archive/refs/tags/9.0.6.tar.gz"
+  sha256 "370c154ef22d5fec5dd567ed26478aaf6ff55323b09a9d96826e12ca570e777e"
   license "MIT"
 
   bottle do
@@ -32,8 +32,8 @@ class Lmod < Formula
   end
 
   resource "luafilesystem" do
-    url "https://github.com/lunarmodules/luafilesystem/archive/refs/tags/v1_8_0.tar.gz"
-    sha256 "16d17c788b8093f2047325343f5e9b74cccb1ea96001e45914a58bbae8932495"
+    url "https://github.com/lunarmodules/luafilesystem/archive/refs/tags/v1_9_0.tar.gz"
+    sha256 "1142c1876e999b3e28d1c236bf21ffd9b023018e336ac25120fb5373aade1450"
   end
 
   resource "luaposix" do
