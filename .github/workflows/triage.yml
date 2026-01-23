@@ -415,9 +415,10 @@ jobs:
                 glib|\
                 harfbuzz|\
                 openssl@3|\
-                wayland-protocols|\
+                rust|\
                 sqlite|\
-                systemd\
+                systemd|\
+                wayland-protocols\
                 ).rb"
               keep_if_no_match: true
               allow_any_match: true
