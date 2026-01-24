@@ -3,8 +3,8 @@ class Aerleon < Formula
 
   desc "Generate firewall configs for multiple firewall platforms"
   homepage "https://aerleon.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/a3/a5/ef91ae48d38cac58412bc92402f0697a2b6f409491584256ebf083d4d173/aerleon-1.14.0.tar.gz"
-  sha256 "9b7c48f65839504028de9c7199a526c806c45e948fea09d23dcd86684357b337"
+  url "https://files.pythonhosted.org/packages/25/5f/eadcc4108b75efa18a9d48ed0164ea27d13c69fb3297004b6c0728e6b5ae/aerleon-1.14.1.tar.gz"
+  sha256 "442306adaee42c0a28bef2202e116c2d1f7ae0473a0a34914bff63991617c244"
   license "Apache-2.0"
   head "https://github.com/aerleon/aerleon.git", branch: "main"
 
@@ -25,11 +25,6 @@ class Aerleon < Formula
   resource "absl-py" do
     url "https://files.pythonhosted.org/packages/10/2a/c93173ffa1b39c1d0395b7e842bbdc62e556ca9d8d3b5572926f3e4ca752/absl_py-2.3.1.tar.gz"
     sha256 "a97820526f7fbfd2ec1bce83f3f25e3a14840dac0d8e02a0b71cd75db3f77fc9"
-  end
-
-  resource "ply" do
-    url "https://files.pythonhosted.org/packages/e5/69/882ee5c9d017149285cab114ebeab373308ef0f874fcdac9beb90e0ac4da/ply-3.11.tar.gz"
-    sha256 "00c7c1aaa88358b9c765b6d3000c6eec0ba42abca5351b095321aef446081da3"
   end
 
   resource "pyyaml" do
