@@ -6,14 +6,12 @@ class GuileGnutls < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 arm64_tahoe:   "6bb5b450af554f8e7a4d620732e6bd6d5579be051adc9171f9b43b1e3ef7da9d"
-    sha256 arm64_sequoia: "774fbd9464a92152b3506f67c9e5b2f7349575e2031293e50132017b7a3e98bb"
-    sha256 arm64_sonoma:  "a50a21859c4523e1a26aa0e9b566d69b8351da2a31b8f01999b407551b2cc4d1"
-    sha256 arm64_ventura: "54ab78a024a433b7617ce26f88fac53debc42320651d7d6729a6c52c044d2071"
-    sha256 sonoma:        "5809a5ecdd6bacd5cb63f20aa5fd4d8af796e3d63c1554851090699d496f96a6"
-    sha256 ventura:       "2cf7fdb17f501d3585ec6025132bc4b598349043e4d12ee82fec511fd7864b0d"
-    sha256 arm64_linux:   "88ed2db04fcd5075579b4aa0176f0d89b8e39d9aff7e6ea8770f4aeb7ccd78bd"
-    sha256 x86_64_linux:  "6d35dcf9c11c5b00943128d0a9a4ad7e2fc97b470a34879729f77412ac6af431"
+    sha256 arm64_tahoe:   "975e9b65e6b30080b9bbac5a87afd83e2a5722c2b72920c90fb9122a2f45144c"
+    sha256 arm64_sequoia: "95394cff621d1adab78963342fe6af29b5465190b0fbe67cc0df79f7219e735c"
+    sha256 arm64_sonoma:  "1e31541c1f148acff0657dc55a994409d31c6d8be13fc16c2282775d70c5b727"
+    sha256 sonoma:        "1046862293e93ae8a461b7a6dcaf2f823c4ec052ac4f24dd6ee8ac154196bce9"
+    sha256 arm64_linux:   "1bb943a6cbc6f7aab143dfb69b26e0b17ac316f9e88614e1b833a525d134ccc4"
+    sha256 x86_64_linux:  "e83b5913dec6fedd693056a6cc6a136b7036ffbc80ab83d21896c6a013244a1f"
   end
 
   head do
