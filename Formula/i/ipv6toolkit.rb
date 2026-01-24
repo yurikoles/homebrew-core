@@ -1,17 +1,15 @@
 class Ipv6toolkit < Formula
   desc "Security assessment and troubleshooting tool for IPv6"
   homepage "https://www.si6networks.com/research/tools/ipv6toolkit/"
-  url "https://pages.cs.wisc.edu/~plonka/ipv6toolkit/ipv6toolkit-v2.0.tar.gz"
-  sha256 "16f13d3e7d17940ff53f028ef0090e4aa3a193a224c97728b07ea6e26a19e987"
+  url "https://github.com/fgont/ipv6toolkit/archive/refs/tags/v2.2.tar.gz"
+  sha256 "b6a1af3d3cf417a81dbb4cd99cf710d16a62338be4bfbbb14b8d1cb298849338"
   license "GPL-3.0-or-later"
   head "https://github.com/fgont/ipv6toolkit.git", branch: "master"
 
   livecheck do
-    url "https://pages.cs.wisc.edu/~plonka/ipv6toolkit/"
-    regex(/href=.*?ipv6toolkit[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    url :stable
+    regex(/^(?:ipv6toolkit[._-])?v?(\d+(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     rebuild 2
@@ -33,11 +31,6 @@ class Ipv6toolkit < Formula
   uses_from_macos "libpcap"
 
   def install
-    # Work around failure from GCC 10+ using default of `-fno-common`
-    # multiple definition of `pcap_filter'; /tmp/cck9bqrJ.o:(.bss+0x238): first defined here
-    # multiple definition of `errbuf'; /tmp/cck9bqrJ.o:(.bss+0x12e38): first defined here
-    inreplace "GNUmakefile", "-Wall", "-Wall -fcommon" if OS.linux?
-
     system "make"
     system "make", "install", "DESTDIR=#{prefix}", "PREFIX=", "MANPREFIX=/share"
   end
