@@ -2,20 +2,16 @@ class Influxdb < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
   url "https://github.com/influxdata/influxdb.git",
-      tag:      "v3.4.0",
-      revision: "9e26dadce59a3e453b80e8d2a9342da5bde3210a"
+      tag:      "v3.8.0",
+      revision: "5276213d5babe4441466a1117d0037909b26d1c7"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/influxdata/influxdb.git", branch: "main"
 
-  # There can be a notable gap between when a version is tagged and a
-  # corresponding release is created, so we check releases instead of the Git
-  # tags. Upstream maintains multiple major/minor versions and the "latest"
-  # release may be for an older version, so we have to check multiple releases
-  # to identify the highest version.
+  # Upstream no longer creates releases for tags on GitHub, so we check the
+  # version in the install script instead.
   livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_releases
+    url "https://www.influxdata.com/d/install_influxdb3.sh"
+    regex(/^INFLUXDB_VERSION=["']v?(\d+(?:\.\d+)+)["']$/i)
   end
 
   bottle do
@@ -39,13 +35,6 @@ class Influxdb < Formula
     on_intel do
       depends_on "lld" => :build
     end
-  end
-
-  # Fix to support Python 3.14
-  # PR ref: https://github.com/influxdata/influxdb/pull/26927
-  patch do
-    url "https://github.com/influxdata/influxdb/commit/b6fef2921d4ae1823e17d08c18eace1ae2cdeac1.patch?full_index=1"
-    sha256 "e568ef1151fb9f003d7e88f45427d43ac461f020ba79b19a0e6dc472a1eb71ad"
   end
 
   def install
