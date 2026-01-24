@@ -6,7 +6,7 @@ class Kaskade < Formula
   url "https://files.pythonhosted.org/packages/8e/e0/58bfb461d4cf41aaa673957308ed66a251e7f6aa78acde36360f800d84ae/kaskade-4.0.6.tar.gz"
   sha256 "8f88866fdb275f14be05e6e137718b7bc9667aa52434e8f21e37267b8b8a7337"
   license "MIT"
-  revision 2
+  revision 3
   head "https://github.com/sauljabin/kaskade.git", branch: "main"
 
   bottle do
@@ -143,8 +143,8 @@ class Kaskade < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/cc/5c/f912bdebdd4af4160da6a2c2b1b3aaa1b8c578d0243ba8f694f93c7095f0/protobuf-6.33.3.tar.gz"
-    sha256 "c8794debeb402963fddff41a595e1f649bcd76616ba56c835645cab4539e810e"
+    url "https://files.pythonhosted.org/packages/53/b8/cda15d9d46d03d4aa3a67cb6bffe05173440ccf86a9541afaf7ac59a1b6b/protobuf-6.33.4.tar.gz"
+    sha256 "dc2e61bca3b10470c1912d166fe0af67bfc20eb55971dcef8dfa48ce14f0ed91"
   end
 
   resource "pygments" do
@@ -173,8 +173,8 @@ class Kaskade < Formula
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/c7/14/3d5afaec9af0cfed28d629b4bce8209d680f7cd1d34aeeb2ddcf2d2aac7a/textual-7.0.3.tar.gz"
-    sha256 "e9206a33bcd9486650d3e954147cd94ef49170df09d9a6dfc349400a4b25772d"
+    url "https://files.pythonhosted.org/packages/6f/ee/620c887bfad9d6eba062dfa3b6b0e735e0259102e2667b19f21625ef598d/textual-7.3.0.tar.gz"
+    sha256 "3169e8ba5518a979b0771e60be380ab1a6c344f30a2126e360e6f38d009a3de4"
   end
 
   resource "typing-extensions" do
