@@ -3,10 +3,10 @@ class Diffoscope < Formula
 
   desc "In-depth comparison of files, archives, and directories"
   homepage "https://diffoscope.org"
-  url "https://files.pythonhosted.org/packages/01/50/2f7df57b08a3f6045e7a01aa5d6b00c8ccf4dc6603e2d2de02e1ec356c5a/diffoscope-306.tar.gz"
-  sha256 "2c489aba7334ab0d4a9946ac51fe1b17085621a5476b89950e9c4f1e612cbab3"
+  # TODO: Restore PyPI URL and previous `pypi_packages` DSL when upstream fixes uploads
+  url "https://salsa.debian.org/reproducible-builds/diffoscope/-/archive/311/diffoscope-311.tar.bz2"
+  sha256 "26d606468af01811f80ecbd0183fc958d9901634f4f587e775e1a6b52166d354"
   license "GPL-3.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "dc29c65694220079871aab80eb870a3faa3efeb21001c53ac37d95106bd237fc"
@@ -21,11 +21,12 @@ class Diffoscope < Formula
   depends_on "libmagic" => :no_linkage
   depends_on "python@3.14"
 
-  pypi_packages package_name: "diffoscope[cmdline]"
+  # pypi_packages package_name: "diffoscope[cmdline]"
+  pypi_packages extra_packages: %w[argcomplete progressbar]
 
   resource "argcomplete" do
-    url "https://files.pythonhosted.org/packages/16/0f/861e168fc813c56a78b35f3c30d91c6757d1fd185af1110f1aec784b35d0/argcomplete-3.6.2.tar.gz"
-    sha256 "d0519b1bc867f5f4f4713c41ad0aba73a4a5f007449716b16f385f2166dc6adf"
+    url "https://files.pythonhosted.org/packages/38/61/0b9ae6399dd4a58d8c1b1dc5a27d6f2808023d0b5dd3104bb99f45a33ff6/argcomplete-3.6.3.tar.gz"
+    sha256 "62e8ed4fd6a45864acc8235409461b72c9a28ee785a2011cc5eb78318786c89c"
   end
 
   resource "libarchive-c" do
