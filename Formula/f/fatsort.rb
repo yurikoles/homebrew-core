@@ -2,16 +2,13 @@ class Fatsort < Formula
   desc "Sorts FAT16 and FAT32 partitions"
   homepage "https://fatsort.sourceforge.io/"
   url "https://downloads.sourceforge.net/project/fatsort/fatsort-1.7.679.tar.xz"
-  version "1.7"
   sha256 "1012f551382639d69e194eabfbe99342ede7c856b1cd6788287f9dfd4bd8d122"
   license "GPL-2.0-or-later"
 
   livecheck do
     url :stable
-    regex(%r{url=.*?/fatsort[._-]v?(\d+(?:\.\d+)+)\.\d+\.t}i)
+    regex(%r{url=.*?/fatsort[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bf6f852b979722c1ee0872145e63a023fa6158208171ba6b09d0b6a37592a484"
