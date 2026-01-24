@@ -1,8 +1,8 @@
 class Premake < Formula
   desc "Write once, build anywhere Lua-based build system"
   homepage "https://premake.github.io/"
-  url "https://github.com/premake/premake-core/archive/refs/tags/v5.0.0-beta7.tar.gz"
-  sha256 "51c01a1bb48de2bc98c025afd4eeade0059376785337725da7ee323a79e862f0"
+  url "https://github.com/premake/premake-core/archive/refs/tags/v5.0.0-beta8.tar.gz"
+  sha256 "2a55195fd2b27e5aa3de8ff6d22cdb127232a86f801d06e7f673d30a0eba09ac"
   license "BSD-3-Clause"
   version_scheme 1
   head "https://github.com/premake/premake-core.git", branch: "master"
