@@ -10,7 +10,7 @@ class Cinecli < Formula
   head "https://github.com/eyeblech/cinecli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "19505474657e7e7403dc03a0a718c6a4f0d300484cf8f841eb7b5a726bbda3f8"
+    sha256 cellar: :any_skip_relocation, all: "c7df47db8726a05fa464365431d941c3b1006ab349057ed416ea2cb6e66744f6"
   end
 
   depends_on "certifi" => :no_linkage
