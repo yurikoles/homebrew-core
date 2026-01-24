@@ -23,12 +23,12 @@ class Mesa < Formula
   head "https://gitlab.freedesktop.org/mesa/mesa.git", branch: "main"
 
   bottle do
-    sha256 arm64_tahoe:   "2adfa830e9e069d44d8254cdba36d57ee0a7d19f1de9df0c88f4a655f36c0b01"
-    sha256 arm64_sequoia: "042aa892e1cdef746873dc062a483345c96638d2055a4dd7c1aa133fadd62df7"
-    sha256 arm64_sonoma:  "0637df8c0f8037fac049d64696173483bb5aada86febbf5c31180eb9b310290e"
-    sha256 sonoma:        "feb07d717886f7c026a0799e34900b657858e37b04543e6b69a3b35797cbc554"
-    sha256 arm64_linux:   "f5fe462ea440cc5b10c2373301cfd038056c643bee9ed374c0aaf84546a4d9a7"
-    sha256 x86_64_linux:  "48ffde1a0863f201f0d1eaf14216cb270ea9746ae8aa99e9c96882ad3d657ed3"
+    sha256 arm64_tahoe:   "ffa615e47150df39d68fdc678adef3b6d9b1827fb2b61d7fd6fc35d0c05f0369"
+    sha256 arm64_sequoia: "51a93e14311c08b78becacf1c2b7c761f99b25ca392af5cf9fcd541c6ba46327"
+    sha256 arm64_sonoma:  "358291feef5ea478c512ba017b05ea03d7a889c77d6ec87f9765a3e4ff56b5fa"
+    sha256 sonoma:        "db1620d5eeb4b23100bea86a5251d6f241a5186b45ffa9dc64dec5d7586520ae"
+    sha256 arm64_linux:   "556752f81c7e61a8e6b66e36198b85905a0202800cf5a7d3697d80f297f1afe7"
+    sha256 x86_64_linux:  "797427d3600d79309ee50049e4b8573359caa5b260776af2fda07fcaf7aa9210"
   end
 
   depends_on "bindgen" => :build
