@@ -7,12 +7,12 @@ class Bookokrat < Formula
   head "https://github.com/bugzmanov/bookokrat.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8bdc6772234dcb8d88e2329d21c9e32a3bd58474c5e7705c127083b75faf668f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1af06a6374f5b4dd1cda123d9228ab7eda6bfc203f89a3f839bb3aa5b8eae475"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "007f02a9b5b079a6da0ba037babedee974ec21ec605cceabc89ddd4bc9a4bd9a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "fe9c357138bd6685122cd59eabe38f12f9e82a5ce425971838f2c9c3cf97a09c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2933ae278eab8399c4cc4cdeffcdff602b5a389759720989400ba6b0194eb115"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d28f0ae83f56198f90e6815350f7af564d0842d2d71fcb43ddff24cd4a00ab3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1a24a167728755f0a36296a13fa622a2927fe87883cd7d3f3247272b6546ff56"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1cb5cd3d90bf132b240fe8f6bde8b0f9ce85a5c4842ace9456fd18918f3dd3ac"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f360908027023e1d513100cf606d30f5ba88746f06638ca17dbaaec43ea1ac7d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "751665b8423de2a0479b766e9fda01ed8b6ca7c2326d572acc9ab3bca1f12735"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c8345c004217255d01de708ed819f061d54337410e25b417abf7bb9ccb777214"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b1379eccb4b228e79774fd0306483bcaa2ef5092d67b649f793056e1449963eb"
   end
 
   depends_on "rust" => :build
