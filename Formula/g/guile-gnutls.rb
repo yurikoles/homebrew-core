@@ -1,20 +1,9 @@
 class GuileGnutls < Formula
   desc "Guile bindings for the GnuTLS library"
-  homepage "https://gitlab.com/gnutls/guile"
-  url "https://gitlab.com/-/project/40217954/uploads/f80b3a30cfc66c988775edc4ce3fb546/guile-gnutls-4.0.1.tar.gz"
-  sha256 "01f0ba3bea837bb44dcb1b3ffcce3c2ebe88699d0a3bddac1d879e475a9787e4"
+  homepage "https://codeberg.org/guile-gnutls/guile-gnutls"
+  url "https://codeberg.org/guile-gnutls/guile-gnutls/releases/download/v5.0.1/guile-gnutls-5.0.1.tar.gz"
+  sha256 "cc0067f3eeb421bc17247140962a49086df5450f0d3e71c55bf541a2d2b9ef2b"
   license "LGPL-2.1-or-later"
-  head "https://gitlab.com/gnutls/guile.git", branch: "master"
-
-  livecheck do
-    url "https://gitlab.com/api/v4/projects/40217954/releases"
-    regex(/^(?:gnutls[._-])?v?(\d+(?:[._]\d+)+)$/i)
-    strategy :json do |json, regex|
-      json.map { |item| item["tag_name"]&.[](regex, 1)&.tr("_", ".") }
-    end
-  end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 arm64_tahoe:   "6bb5b450af554f8e7a4d620732e6bd6d5579be051adc9171f9b43b1e3ef7da9d"
@@ -27,6 +16,17 @@ class GuileGnutls < Formula
     sha256 x86_64_linux:  "6d35dcf9c11c5b00943128d0a9a4ad7e2fc97b470a34879729f77412ac6af431"
   end
 
+  head do
+    url "https://codeberg.org/guile-gnutls/guile-gnutls.git", branch: "main"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+
+    on_system :linux, macos: :ventura_or_newer do
+      depends_on "texinfo" => :build
+    end
+  end
+
   depends_on "gnutls"
   depends_on "guile"
 
@@ -35,6 +35,7 @@ class GuileGnutls < Formula
   end
 
   def install
+    system "./bootstrap" if build.head?
     system "./configure", "--with-guile-site-dir=#{share}/guile/site/3.0",
                           "--with-guile-site-ccache-dir=#{lib}/guile/3.0/site-ccache",
                           "--with-guile-extension-dir=#{lib}/guile/3.0/extensions",
