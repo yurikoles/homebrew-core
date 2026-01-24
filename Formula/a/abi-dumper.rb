@@ -1,8 +1,8 @@
 class AbiDumper < Formula
   desc "Dump ABI of an ELF object containing DWARF debug info"
   homepage "https://github.com/lvc/abi-dumper"
-  url "https://github.com/lvc/abi-dumper/archive/refs/tags/1.2.tar.gz"
-  sha256 "8a9858c91b4e9222c89b676d59422053ad560fa005a39443053568049bd4d27e"
+  url "https://github.com/lvc/abi-dumper/archive/refs/tags/1.4.tar.gz"
+  sha256 "aa7a52bf913ab1a64743551d64575f921df3faa4a592a0f6614e047bc228708a"
   license "LGPL-2.1-or-later"
   head "https://github.com/lvc/abi-dumper.git", branch: "master"
 
@@ -11,12 +11,9 @@ class AbiDumper < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "4e69d56bf0f10ea4b9f0bea25e8a860823ff0f08846cea20ca1212f06b9d09b5"
   end
 
-  deprecate! date: "2024-06-05", because: :unmaintained
-  disable! date: "2025-06-21", because: :unmaintained
-
-  depends_on "abi-compliance-checker"
   depends_on "elfutils"
   depends_on :linux
+  depends_on "perl"
   depends_on "universal-ctags"
   depends_on "vtable-dumper"
 
