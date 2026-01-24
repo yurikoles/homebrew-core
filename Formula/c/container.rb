@@ -4,6 +4,7 @@ class Container < Formula
   url "https://github.com/apple/container/archive/refs/tags/0.8.0.tar.gz"
   sha256 "f2673cf3c3ce95dfd07068d802873a4a0a0dd8b449c7a20819a75787865a24a1"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/apple/container.git", branch: "main"
 
   bottle do
@@ -14,6 +15,13 @@ class Container < Formula
   depends_on arch: :arm64
   depends_on macos: :tahoe
   depends_on :macos
+
+  # Fixes services not stopping in different launchd domains
+  # PR ref: https://github.com/apple/container/pull/1077
+  patch do
+    url "https://github.com/apple/container/commit/048bdac921ccd8395b6c5f1305fe2473616a40fc.patch?full_index=1"
+    sha256 "1a02b062531cab7852768b724d2f57e26f37e1173f9e5b86f70e3b7171d8c331"
+  end
 
   def install
     if build.head?
@@ -71,7 +79,7 @@ class Container < Formula
   # so we stop the system service to ensure no components are out of sync.
   # Ref: https://github.com/apple/container/issues/551#issuecomment-3246928923
   def post_install
-    system libexec/"ensure-container-stopped.sh"
+    system libexec/"ensure-container-stopped.sh", "-a"
   end
 
   service do
