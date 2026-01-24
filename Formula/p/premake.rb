@@ -13,12 +13,12 @@ class Premake < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7ccc181473bc0e451fd18ab092b9368df944732b22c7ceb5b05959745f46726c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dfff1c114f920748e70d7a2d66b318ca7abc5a214d15bceaed8c1a0b6f0ab65e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ddf0a5e8d1f32c3eff0894a526d3dfef15abec064a0edc1d655ef5d4b05f2c80"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1bbf1f0319f1eec1b39a97f1932503b7b09afc333bbb717372c1d372f65d7fd7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f2e4a5174414175e12d206eb5f6c813e0c56db30d9cdb728f118ce798730b70d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a0443fb4f99c85c972356f8a123b3ef369c86cfeef497d26acb8e3f983ec6f58"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8208d6a888a07776ef2783f9922722bd447d0c0a670d6589b6c4d8f59b3cead3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7ccbee7007446621865c016ee7ee0ee72291ef2403ea07b681bf11de23e0ce0c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2165155556cf361ecb838b0672f170123f76d8f9aef457f18591ad4f551e7f36"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9aa1523add5b5ea2bfd9fbf80baa237a41e120bbd38a625507281afbbe52795e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b35d7adbc0ef9d17faeb7838b5a00b53889708a3705b833ada04288049db1b1b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01caf266ed92e54b10c818c032ef8546def23020d74c784133bf3f713be683ba"
   end
 
   on_linux do
