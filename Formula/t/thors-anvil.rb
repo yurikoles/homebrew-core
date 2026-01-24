@@ -2,8 +2,8 @@ class ThorsAnvil < Formula
   desc "Set of modern C++20 libraries for writing interactive Web-Services"
   homepage "https://github.com/Loki-Astari/ThorsAnvil"
   url "https://github.com/Loki-Astari/ThorsAnvil.git",
-      tag:      "9.0.13",
-      revision: "8dbed15846344dc33da183f7ccc7fc8129e982a6"
+      tag:      "9.0.16",
+      revision: "88d1bf13c87b8371bd1cbdb9b5b59f162f695df8"
   license "GPL-3.0-only"
 
   bottle do
