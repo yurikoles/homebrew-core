@@ -9,12 +9,12 @@ class Aerleon < Formula
   head "https://github.com/aerleon/aerleon.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "70f7c3e18fa0474c2619fc308e072b61059e45a9cead28d70a7aa26c0293a8e5"
-    sha256 cellar: :any,                 arm64_sequoia: "8b136446b187af56793489ec3d06ef7ac2d86fe51a23aa6e3fb2bdbb8d6a6607"
-    sha256 cellar: :any,                 arm64_sonoma:  "284be19f7fffaadbea982ade7bbfcc9dbe5ad7bab6d1b2f30e335a3f087dcf8c"
-    sha256 cellar: :any,                 sonoma:        "788f318211658cd09c8adc281602f0ff22e7115f3b7884cc61c4711f3d2a7cf1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5a349c925d24de73ca80d9b4ad4cdf0f12742cf2f21d568b293870d49990097f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f571b9016c62bd30c39176fd68a87b5972ba33a7f1a6aafb4c9fc2d477a38818"
+    sha256 cellar: :any,                 arm64_tahoe:   "62d3f7c40b6b0031fe592217893917623bcf349602854fded3d60baf2b0f4444"
+    sha256 cellar: :any,                 arm64_sequoia: "6d0530b071c64bdf754e2b8ea6d099a3fbe3f720544638b6acc20791a98fdb08"
+    sha256 cellar: :any,                 arm64_sonoma:  "0c95dc28b42fd09869ae81a65cbfc67be5f22264e9fc53978c7ac8622e2db231"
+    sha256 cellar: :any,                 sonoma:        "70c38da9ccb6be3ab6873d11b9379468c0c38ab5e2614ff9df394011821d8880"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1d1d88d57942259243d9342c9c7482a84760ae6a9b525f4a86af65289e037715"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "61d56da5396d4450ec8f398030548532dc19b40d0a2813580cb6c2d684360193"
   end
 
   depends_on "libyaml"
