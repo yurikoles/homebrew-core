@@ -12,6 +12,7 @@ class Antidote < Formula
   uses_from_macos "zsh"
 
   def install
+    pkgshare.install "antidote"
     pkgshare.install "antidote.zsh"
     pkgshare.install "functions"
     man.install "man/man1"
