@@ -1,17 +1,10 @@
 class Enca < Formula
   desc "Charset analyzer and converter"
   homepage "https://cihar.com/software/enca/"
-  url "https://dl.cihar.com/enca/enca-1.19.tar.gz"
-  sha256 "4c305cc59f3e57f2cfc150a6ac511690f43633595760e1cb266bf23362d72f8a"
+  url "https://github.com/Project-OSS-Revival/enca/releases/download/1.21/enca-1.21.tar.xz"
+  sha256 "8b24e8a3a84288733b78addd24afdea1a3a5e6c61dc0ca8ca1d3702e481bc5ed"
   license "GPL-2.0-only"
-  head "https://github.com/nijel/enca.git", branch: "master"
-
-  livecheck do
-    url :homepage
-    regex(/href=.*?enca[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
-
-  no_autobump! because: :requires_manual_review
+  head "https://github.com/Project-OSS-Revival/enca.git", branch: "master"
 
   bottle do
     sha256 arm64_tahoe:    "4d3a21ddb033608bec30faf735d28d3f16f94f557394b495a638136957d77da4"
@@ -29,15 +22,10 @@ class Enca < Formula
     sha256 x86_64_linux:   "c434ad486d2bc894f2562f7a02257bfa726a8623287e5f665cc4d20f7ea42c25"
   end
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
-
   def install
-    system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+    ENV.append "LIBS", "-liconv" if OS.mac?
+
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 
