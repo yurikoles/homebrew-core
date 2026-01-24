@@ -15,14 +15,12 @@ class Assimp < Formula
   head "https://github.com/assimp/assimp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "cd42d21879d88bf5c153f8c356ba0641b3cdfa8d1ae0d965734ff51440c9304d"
-    sha256 cellar: :any,                 arm64_sequoia: "6ab85fd16cd1f86fc8ee199e49d4f57d9b23eb0e2b598e32d1450913862506a8"
-    sha256 cellar: :any,                 arm64_sonoma:  "3ce55f76aaeb9b538266dfc81622bf6e33e1d4fdf2aebf69e442369378830a95"
-    sha256 cellar: :any,                 arm64_ventura: "ed951286fbf3dc3362927d2698df086e7da7ed6ae9be2fd83f4fba310431266b"
-    sha256 cellar: :any,                 sonoma:        "1b6514222b86287994281fd61e7d30e5a087ecf143fc3f190afb9fc17048f061"
-    sha256 cellar: :any,                 ventura:       "69f5e3ac41175e81f7431ea19ca6514790ce82107f71a843f739042394d221f5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7c781ef6fdfe87c1074960fd21abfa8e43c6ff35955b15b29a1e0ef0ceaf08f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e96dbe0de6b786a99551d144173516e4ae104bacb2c20ee0bcabd6af405ef90"
+    sha256 cellar: :any,                 arm64_tahoe:   "e5f8cc6c0ac3345cb557e2d453e18f9ca6e0147b794b56bc04d3207409505cad"
+    sha256 cellar: :any,                 arm64_sequoia: "f58478b26ba54029b5c9644205979ed21516f61b776f223accb3765e040747b5"
+    sha256 cellar: :any,                 arm64_sonoma:  "cdf28581b62235bdc754b3cdb954230f11f310757f5a9b72947985b47a3d47ed"
+    sha256 cellar: :any,                 sonoma:        "d95e1b76e05da13e04120ca1b8756a56470c8af589711db6b2af34241fe2369d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f81737d245c3b270d0a465baa3692dea652d3cc4f428b3adab8c04149724ad2f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "91dd18b68bbaeed8aae853caf5cce9860892cfa23e8f6e7ee0eac9e55d72b4fc"
   end
 
   depends_on "cmake" => :build
