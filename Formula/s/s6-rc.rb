@@ -1,8 +1,8 @@
 class S6Rc < Formula
   desc "Process supervision suite"
   homepage "https://skarnet.org/software/s6-rc/"
-  url "https://skarnet.org/software/s6-rc/s6-rc-0.5.6.0.tar.gz"
-  sha256 "81277f6805e8d999ad295bf9140a909943b687ffcfb5aa3c4efd84b1a574586e"
+  url "https://skarnet.org/software/s6-rc/s6-rc-0.6.0.0.tar.gz"
+  sha256 "46d4a62959ef16097b84dcfb0c3b31a6ff49aa476d4aeec9c5b7bde1ce684901"
   license "ISC"
   head "git://git.skarnet.org/s6-rc.git", branch: "main"
 
