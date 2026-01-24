@@ -1,14 +1,9 @@
 class Htpdate < Formula
   desc "Synchronize time with remote web servers"
   homepage "https://www.vervest.org/htp/"
-  url "https://www.vervest.org/htp/archive/c/htpdate-2.0.0.tar.gz"
-  sha256 "52f25811f00dfe714e0bcf122358ee0ad74e25db3ad230d5a4196e7a62633f27"
+  url "https://github.com/twekkel/htpdate/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "4c771fe3fc5c4ab5f9393dd501bdc51e4c067297cf304ad1e74e1965ac1c066f"
   license "GPL-2.0-or-later"
-
-  livecheck do
-    url "https://www.vervest.org/htp/?download"
-    regex(/href=.*?htpdate[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "f6e0c03fb82e6410178392e273f6e652c46fe05c05c6b5db8f9bc668ae91ad65"
@@ -32,6 +27,6 @@ class Htpdate < Formula
   end
 
   test do
-    system "#{sbin}/htpdate", "-q", "-d", "-u", ENV["USER"], "example.org"
+    system sbin/"htpdate", "-q", "-d", "-u", ENV["USER"], "example.org"
   end
 end
