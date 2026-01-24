@@ -1,12 +1,9 @@
 class Atasm < Formula
   desc "Atari MAC/65 compatible assembler for Unix"
   homepage "https://sourceforge.net/projects/atasm/"
-  url "https://downloads.sourceforge.net/project/atasm/atasm/atasm-1.09/atasm109.zip"
-  version "1.09"
-  sha256 "dbab21870dabdf419920fcfa4b5adfe9d38b291a60a4bc2ba824595f7fbc3ef0"
+  url "https://github.com/CycoPH/atasm/archive/refs/tags/V1.30.tar.gz"
+  sha256 "c3ae8ea1f824e0ee65e123b33982572277207d1749bcd04da3af8f06af977db5"
   license "GPL-2.0-or-later"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:    "8350e6c0e2bbb8035e95f13ad05a77bf44aa99e6d93c3ceae54c0b3265bd4a29"
