@@ -7,6 +7,7 @@ class Klee < Formula
   url "https://github.com/klee/klee/archive/refs/tags/v3.2.tar.gz"
   sha256 "83d9b9ce0ba187e48c0e55623bf1a68b5eb61376da7ce82551c9d885715a21dd"
   license "NCSA"
+  revision 1
   head "https://github.com/klee/klee.git", branch: "master"
 
   bottle do
@@ -19,6 +20,7 @@ class Klee < Formula
 
   depends_on "cmake" => :build
 
+  depends_on "cryptominisat"
   depends_on "gperftools"
   depends_on "llvm@16" # LLVM 17+ issue: https://github.com/klee/klee/issues/1754
   depends_on "python@3.14"
