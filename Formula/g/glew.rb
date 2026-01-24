@@ -1,10 +1,9 @@
 class Glew < Formula
   desc "OpenGL Extension Wrangler Library"
   homepage "https://glew.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/glew/glew/2.3.0/glew-2.3.0.tgz"
-  sha256 "b261a06dfc8b970e0a1974488530e58dd2390acf68acb05b45235cd6fb17a086"
+  url "https://downloads.sourceforge.net/project/glew/glew/2.3.1/glew-2.3.1.tgz"
+  sha256 "b64790f94b926acd7e8f84c5d6000a86cb43967bd1e688b03089079799c9e889"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/nigels-com/glew.git", branch: "master"
 
   bottle do
