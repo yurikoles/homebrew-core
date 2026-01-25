@@ -7,12 +7,12 @@ class BeancountLanguageServer < Formula
   head "https://github.com/polarmutex/beancount-language-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2ac6433de4107ee46bd43c3457a3b24b921a76e551693dccefc4a4515757c6dd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0b7409a2473ba1b9341260e37f02ba4a051ef23286ed102fc5ec1babd09b7a26"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "47e724bfa4a8bb12dcae0ef358e9d1bd2bafc74e6df4665cb0b929a6d6e142ed"
-    sha256 cellar: :any_skip_relocation, sonoma:        "88697d03a4b59ddbd0b81cad601f073788418bc8a476fa6b3bd95c7ae9fed16d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f386a1fa6c9514c459b85d22a8b70f7840f6a730ce78fb24083750a99df2456c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cc9c5c26c1934111ed5ec809f455d5887b3e832c5b7ed78c901564a54fda67ec"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2bd725c825810698d874f715b45021b7af537716294fd429381b7249d158998c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e9321cd995d440c7310aee65b74d55553fc4cc629f22d50d30a42a8572100a28"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b0002884953ee2d2637950716196d730fca696f72f8d1c7081b04066102bc03a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c631250ee10eeb5260d72fb8015d58190267c10fd031c5a40c5a135bb209d24a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0e014bd68d4178cb76f07dbb4fde3259fbbd8ed1033eb4020c040f01669b047a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f22744bbacc4b4d4ea6f504d68922f5fa8095615f1ea3f6f54b61096041a7245"
   end
 
   depends_on "rust" => :build
