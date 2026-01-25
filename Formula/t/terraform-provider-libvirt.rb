@@ -6,12 +6,12 @@ class TerraformProviderLibvirt < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "18472a60f9650b88e63baf0ba21b8f23bfb9dcefa99de62480e80dcb400d43ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "18472a60f9650b88e63baf0ba21b8f23bfb9dcefa99de62480e80dcb400d43ca"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "18472a60f9650b88e63baf0ba21b8f23bfb9dcefa99de62480e80dcb400d43ca"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4c31d906856e49b220b8a6552aa0cde06475cf8c99a94187f97865cd1f99ee60"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d09976abcd3353a491cfd48be50e468860057ea9071277a36bbc01e349c4a64f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1eecc198d9755aef2edd626259ebf2f354e4d142154cd20e9d9ca24c271ce0d8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4967f4e067a0542778062e0129bdce844b79f2d30bdef80b46630ee86fad282f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4967f4e067a0542778062e0129bdce844b79f2d30bdef80b46630ee86fad282f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4967f4e067a0542778062e0129bdce844b79f2d30bdef80b46630ee86fad282f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "eca3fdd64be5178d509ea077fdcfca04737ec6b77293c5972b065a2921b41576"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e48e05af1008a897baf0c8d87e5a8d4d9738837cddbf571faf3e054acf9b0a0c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1bbb8f44333b4dfcac7bbe657b0f1ea838250bbd40a5699af6f66f402c4f4624"
   end
 
   depends_on "go" => :build
