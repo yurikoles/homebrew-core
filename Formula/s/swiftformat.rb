@@ -1,8 +1,8 @@
 class Swiftformat < Formula
   desc "Formatting tool for reformatting Swift code"
   homepage "https://github.com/nicklockwood/SwiftFormat"
-  url "https://github.com/nicklockwood/SwiftFormat/archive/refs/tags/0.58.7.tar.gz"
-  sha256 "5b89d0bb827c8207ee5de77d20f9faa63b7514417ec31eabf4949929967f06f6"
+  url "https://github.com/nicklockwood/SwiftFormat/archive/refs/tags/0.59.0.tar.gz"
+  sha256 "3547c8128d925dc92be59eb9c386a39533148b1ac91daaf1e6bbd5617eb0f75e"
   license "MIT"
   head "https://github.com/nicklockwood/SwiftFormat.git", branch: "develop"
 
@@ -15,9 +15,13 @@ class Swiftformat < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "05dda1a4f47c0d709a7b45bebbb1c3398c2e9f7a72174eb63900cb814d582600"
   end
 
-  depends_on xcode: ["10.1", :build]
-
   uses_from_macos "swift" => :build
+
+  # Fix for macOS 13+ only Range.contains(_:) API, upstream pr ref, https://github.com/nicklockwood/SwiftFormat/pull/2328
+  patch do
+    url "https://github.com/nicklockwood/SwiftFormat/commit/9774a88b325382209eedc8e955cbaddc402b13a1.patch?full_index=1"
+    sha256 "2f77becf3c71759e01ab1821871e6f78c10c25b7d3091b36f70202de3244eb26"
+  end
 
   def install
     args = if OS.mac?
