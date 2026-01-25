@@ -44,13 +44,12 @@ class Cdo < Formula
   end
 
   def install
-    ENV.llvm_clang if OS.mac? && DevelopmentTools.clang_build_version <= 1500
-
     args = %W[
       --disable-openmp
       --with-eccodes=#{Formula["eccodes"].opt_prefix}
       --with-netcdf=#{Formula["netcdf"].opt_prefix}
       --with-hdf5=#{Formula["hdf5"].opt_prefix}
+      --with-proj=#{Formula["proj"].opt_prefix}
       --with-szlib=#{Formula["libaec"].opt_prefix}
     ]
 
