@@ -1,12 +1,12 @@
 class Fisher < Formula
   desc "Plugin manager for the Fish shell"
   homepage "https://github.com/jorgebucaran/fisher"
-  url "https://github.com/jorgebucaran/fisher/archive/refs/tags/4.4.6.tar.gz"
-  sha256 "7765b241b0072f8ab963956f06f71ca18b743704d8200955be24a4b507978982"
+  url "https://github.com/jorgebucaran/fisher/archive/refs/tags/4.4.7.tar.gz"
+  sha256 "3cb9d8284f364ea6f4efee8506d8b10a9cbead37ca5413f32347d7ca95fbdf62"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "10e24104c2fa33330b280bcc6fe13e5eaa30b160d321b8b0b84fe8aa8007abf3"
+    sha256 cellar: :any_skip_relocation, all: "b4a65ed68178c67f14e4365ad5d3955f2961c51c4b7f7b8cc9d3c620f726d000"
   end
 
   depends_on "fish"
