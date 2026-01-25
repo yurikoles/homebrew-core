@@ -3,8 +3,8 @@ class Pdfalyzer < Formula
 
   desc "PDF analysis toolkit"
   homepage "https://github.com/michelcrypt4d4mus/pdfalyzer"
-  url "https://files.pythonhosted.org/packages/af/a1/f13ab905377517b6799be5ab37d99907e2117876887bcbe4dab20139a2e0/pdfalyzer-1.18.1.tar.gz"
-  sha256 "b8feac483a84d553ca22dc9aaf52d0dc607fe434b45158a13ec8504654bc51e3"
+  url "https://files.pythonhosted.org/packages/29/a2/de59179a0463b768f6c9eb7f11a6a0eddb2cee3535c5d72afdbd460719f9/pdfalyzer-1.19.0.tar.gz"
+  sha256 "c0a6155fcae1a648ebc930b3dd1aec390cf6e24cdc6bbbfb3fcf217142f9261c"
   license "GPL-3.0-or-later"
   head "https://github.com/michelcrypt4d4mus/pdfalyzer.git", branch: "master"
 
@@ -72,8 +72,8 @@ class Pdfalyzer < Formula
   end
 
   resource "yaralyzer" do
-    url "https://files.pythonhosted.org/packages/6d/e5/396db90b4b2f9f16826d6b2f0296d4e202a1f6c4f03e675570aac0c5e8cd/yaralyzer-1.0.13.tar.gz"
-    sha256 "1bba7045315844523d80a32a40a0d67e808a9b6c12d096a45e3a7bba69685b0a"
+    url "https://files.pythonhosted.org/packages/82/07/b8073f60e5f8ed8e7c4abbf5b1fa4681c5fb1e05b641b6e769a4a85ee361/yaralyzer-1.3.0.tar.gz"
+    sha256 "7ced36cc8b88583583bd75e0aa2c8e9ef427a166dee7964bb60b07bf2569a13e"
   end
 
   def install
@@ -91,6 +91,7 @@ class Pdfalyzer < Formula
     resource("homebrew-test-pdf").stage testpath
 
     output = shell_output("#{bin}/pdfalyze dummy.pdf")
-    assert_match "'/Producer': 'OpenOffice.org 2.1'", output
+    assert_match "Producer", output
+    assert_match "OpenOffice.org 2.1", output
   end
 end
