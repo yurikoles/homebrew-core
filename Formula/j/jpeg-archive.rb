@@ -32,7 +32,7 @@ class JpegArchive < Formula
     # multiple definition of `VERSION'; /tmp/ccMJX1Ay.o:(.bss+0x8): first defined here
     ENV.append_to_cflags "-fcommon" if OS.linux?
 
-    system "make", "install", "PREFIX=#{prefix}", "MOZJPEG_PREFIX=#{Formula["mozjpeg"].opt_prefix}"
+    system "make", "install", "PREFIX=#{prefix}", "MOZJPEG_PREFIX=#{Formula["mozjpeg"].opt_prefix}", "LIBJPEG=-ljpeg"
   end
 
   test do
