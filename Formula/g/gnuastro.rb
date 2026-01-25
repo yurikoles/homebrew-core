@@ -5,6 +5,15 @@ class Gnuastro < Formula
   sha256 "c4e6401eee5d81619b82d8d18a6447851b36e0754118ebf5bdfac7a03194f981"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 arm64_tahoe:   "cd892c14cabdaac80ba71e110b465b62700c68edd28c6d78da3386def97ce9fd"
+    sha256 arm64_sequoia: "4cfd2845728a7f08a5d39f6894a68b3fc8b7b8e2b728d8172662fd4e98dd5241"
+    sha256 arm64_sonoma:  "b2054ac5b01de48d6d055bc6c57d7fab1aa7d23ff944c94e0592d5868881f4be"
+    sha256 sonoma:        "bee9d1dcefbc85b4bb16420fb094c0d46cb8d8e7cbdf07faa1f6aa03075153e5"
+    sha256 arm64_linux:   "11deea38b1051ea1ae5f3f3d70f3502dea5f83a2e2e82877d047ab4eba0f5d9c"
+    sha256 x86_64_linux:  "2e45da2c46731e0708fafa0b9a0eeab7caf5e59fe9ab68478a7e2bc2f190a373"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "cfitsio"
   depends_on "gsl"
