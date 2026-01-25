@@ -7,14 +7,12 @@ class Hjson < Formula
   head "https://github.com/hjson/hjson-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "27ebd73de9932c6cc82e9c1f1de2fbda9bb399f428a86a37b3480d179d48875c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "56b3481c44007e1c2bbe12d642ec95d55ecf79525580ce026ef1c26e9ad16fc2"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "56b3481c44007e1c2bbe12d642ec95d55ecf79525580ce026ef1c26e9ad16fc2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "56b3481c44007e1c2bbe12d642ec95d55ecf79525580ce026ef1c26e9ad16fc2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bcfc6613edc2126cad95c59980dc47d8efd368ad8ebfe19ba8fc644e45ef34cd"
-    sha256 cellar: :any_skip_relocation, ventura:       "bcfc6613edc2126cad95c59980dc47d8efd368ad8ebfe19ba8fc644e45ef34cd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "54c62c7a294556247b593ef0ccbdeb41e83086d141990ac6e9e00b5abe6d1bba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9daafea6f326b56f2922c76fc086e29ef65ac0ab49b8e7cfe660e9aa678c3ad9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cc9750fd1bca7e7cc3eaa64f7601818a33d663e2b65d7245b62fec5056ee6f6a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cc9750fd1bca7e7cc3eaa64f7601818a33d663e2b65d7245b62fec5056ee6f6a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cc9750fd1bca7e7cc3eaa64f7601818a33d663e2b65d7245b62fec5056ee6f6a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "acd2ba791152d363026d562d6f35165950fc5fe18e85ed9187a55b6f2ffe10a4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "efafdf6aee5a9a12591cddb5087bd48434f36e93a13be831d70cd98e3a5ba260"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7ebe393b4febcf6fa2248cd911e5d547028e5b9c75877058d03a159dd0cebc2d"
   end
 
   depends_on "go" => :build
