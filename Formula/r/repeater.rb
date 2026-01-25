@@ -1,8 +1,8 @@
 class Repeater < Formula
   desc "Flashcard program that uses spaced repetition"
   homepage "https://shaankhosla.github.io/repeater/"
-  url "https://github.com/shaankhosla/repeater/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "22c487432743fcf6b5684daf23619fe7fe3427b1e54fb86b09dfe53dae8d9e95"
+  url "https://github.com/shaankhosla/repeater/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "9620fdbbbaf4befc28afde38905c2915a31fc551b44f1aa6838a2f2bb8993892"
   license "Apache-2.0"
   head "https://github.com/shaankhosla/repeater.git", branch: "main"
 
@@ -25,7 +25,7 @@ class Repeater < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/repeater --version")
 
-    ENV["REPEATER_OPENAI_API_KEY"] = "Homebrew"
-    assert_match "Failed to validate API key with OpenAI", shell_output("#{bin}/repeater llm --test 2>&1", 1)
+    ENV["OPENAI_API_KEY"] = "Homebrew"
+    assert_match "Incorrect API key provided", shell_output("#{bin}/repeater llm --test 2>&1", 1)
   end
 end
