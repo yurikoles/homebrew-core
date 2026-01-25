@@ -1,8 +1,8 @@
 class BasisUniversal < Formula
   desc "Basis Universal GPU texture codec command-line compression tool"
   homepage "https://github.com/BinomialLLC/basis_universal"
-  url "https://github.com/BinomialLLC/basis_universal/archive/refs/tags/v2_0_1.tar.gz"
-  sha256 "ba83a292dc92f0ea5344208fb0befb41a4646075097e20055b002541de142091"
+  url "https://github.com/BinomialLLC/basis_universal/archive/refs/tags/v2_0_2.tar.gz"
+  sha256 "416efbe765c59ce6930eed51cfa0f1c67abefc1f12264cc65a27480f4a73186b"
   license "Apache-2.0"
   head "https://github.com/BinomialLLC/basis_universal.git", branch: "master"
 
