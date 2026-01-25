@@ -7,12 +7,12 @@ class Unxip < Formula
   head "https://github.com/saagarjha/unxip.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ca5e191670cf44169a204b22a239e8c10e9142baf0995959bf557831b5665a90"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1fa72679808308ce14aee5bf55c8d8c9080de2514705afcd8b5405ffdbfd71b0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "db9c5c1721975700b4b3bd8b55bb651a9fac41f8723dbad495495a5924905f34"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5ca746820d1e0bfdaacd3c9b051b62239cef1c765bb1b8434461aa07d8749454"
-    sha256                               arm64_linux:   "a5dab6693c7660439be128a6bf2abcbd81bacad55360c439daa4a8833f4c4315"
-    sha256                               x86_64_linux:  "a0f1eaa4fd6f16d6a20b9cc5707bf569748878e60e76e849d41fddd3115b8797"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6468584b66cbb9fc898632f86528807d8e9f917dea449ba19a0fe8e479923e71"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "12026ad622e2ae173f53a7543b9a1217535b01e378ab065a2ab21fca946036c4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ba38a6d9514ec77d66bf7a60edf41b5edcc38761af456e70938dec3d5ddcf142"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c9a26db7bac46002402305183fdb36e07b3075499e1437a1f72b4655b5a52b3e"
+    sha256                               arm64_linux:   "06a622764d33ba8aca18e76b810332da4069f6a5123de7e2af3fdfa55f6c2e42"
+    sha256                               x86_64_linux:  "6d838195777015456ba4e27dd171ebe1dccc444c24f007425b0cc844e2b311aa"
   end
 
   depends_on macos: :sonoma
