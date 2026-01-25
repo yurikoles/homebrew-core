@@ -1,12 +1,10 @@
 class Skalibs < Formula
   desc "Skarnet's library collection"
   homepage "https://skarnet.org/software/skalibs/"
-  url "https://skarnet.org/software/skalibs/skalibs-2.14.5.0.tar.gz"
-  sha256 "d8d9ec756b112ab6d4a9896ba0f53aca92559bc90aeaccd53ed8177e6e159764"
+  url "https://skarnet.org/software/skalibs/skalibs-2.14.5.1.tar.gz"
+  sha256 "fa359c70439b480400a0a2ef68026a2736b315025a9d95df69d34601fb938f0f"
   license "ISC"
   head "git://git.skarnet.org/skalibs.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "b0fc5caa5cb1d0bd2f414df97fd0aaef8980d7117fff554366cd433fe35c3045"
