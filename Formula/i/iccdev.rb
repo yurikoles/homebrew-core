@@ -4,6 +4,7 @@ class Iccdev < Formula
   url "https://github.com/InternationalColorConsortium/iccDEV/archive/refs/tags/v2.3.1.2.tar.gz"
   sha256 "c2de941c493af4a01f89369d297528e649df38b2e270c29f7b04d245b63bc4bd"
   license "BSD-3-Clause"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "adefed8f8d1f381002e735f0c15f059a710afbed3da3fbe76ae90dd35df87a49"
@@ -16,7 +17,7 @@ class Iccdev < Formula
 
   depends_on "cmake" => :build
   depends_on "nlohmann-json" => :build
-  depends_on "jpeg"
+  depends_on "jpeg-turbo"
   depends_on "libpng"
   depends_on "libtiff"
   depends_on "wxwidgets"
