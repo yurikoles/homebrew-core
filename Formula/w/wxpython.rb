@@ -1,10 +1,9 @@
 class Wxpython < Formula
   desc "Python bindings for wxWidgets"
   homepage "https://www.wxpython.org/"
-  url "https://files.pythonhosted.org/packages/4c/d9/4451392d3d6ba45aa23aa77a6f1a9970b43351b956bf61e10fd513a1dc38/wxPython-4.2.3.tar.gz"
-  sha256 "20d6e0c927e27ced85643719bd63e9f7fd501df6e9a8aab1489b039897fd7c01"
+  url "https://files.pythonhosted.org/packages/80/6e/b70e6dbdd7cb4f154b7ca424b4c7799f7b067f7a9f4204b8d16d6464648f/wxpython-4.2.4.tar.gz"
+  sha256 "2eb123979c87bcb329e8a2452269d60ff8f9f651e9bf25c67579e53c4ebbae3c"
   license "LGPL-2.0-or-later" => { with: "WxWindows-exception-3.1" }
-  revision 1
 
   bottle do
     rebuild 1
@@ -16,6 +15,7 @@ class Wxpython < Formula
     sha256               x86_64_linux:  "d9dece9868196fa78b4270172e955c87b04fa856ec02ede6bcfb1868e95cdb7b"
   end
 
+  depends_on "cython" => :build
   depends_on "doxygen" => :build
   depends_on "python-setuptools" => :build
   depends_on "sip" => :build
@@ -36,13 +36,11 @@ class Wxpython < Formula
   end
 
   def install
-    # Avoid requests build dependency which is used to download pre-builts
-    inreplace "build.py", /^(import|from) requests/, "#\\0"
-
     wxwidgets = deps.find { |dep| dep.name.match?(/^wxwidgets(@\d+(\.\d+)*)?$/) }.to_formula
     wx_config = wxwidgets.opt_bin/"wx-config-#{wxwidgets.version.major_minor}"
     ENV["WX_CONFIG"] = wx_config.to_s
 
+    ENV.append_path "PYTHONPATH", Formula["cython"].opt_libexec/Language::Python.site_packages(python)
     ENV.cxx11
     ENV["DOXYGEN"] = Formula["doxygen"].opt_bin/"doxygen"
     system python, "-u", "build.py", "dox", "touch", "etg", "sip", "build_py",
