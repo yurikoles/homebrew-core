@@ -16,41 +16,28 @@ class Libdbusmenu < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "ca161cab45f55b72eeaff556883bf7c38338f3eb120a9a1ab1806caa54aa3801"
   end
 
-  depends_on "fontconfig" => :build
-  depends_on "freetype" => :build
-  depends_on "fribidi" => :build
+  depends_on "gettext" => :build
   depends_on "gobject-introspection" => :build
-  depends_on "graphite2" => :build
   depends_on "intltool" => :build
-  depends_on "jpeg" => :build
-  depends_on "libepoxy" => :build
-  depends_on "libpng" => :build
-  depends_on "libtiff" => :build
-  depends_on "libx11" => :build
-  depends_on "libxau" => :build
-  depends_on "libxcb" => :build
-  depends_on "libxdamage" => :build
-  depends_on "libxdmcp" => :build
-  depends_on "libxext" => :build
-  depends_on "libxkbcommon" => :build
-  depends_on "libxrender" => :build
-  depends_on "perl" => :build
-  depends_on "perl-xml-parser" => :build
-  depends_on "pixman" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "vala" => :build
-  depends_on "xorgproto" => :build
-  depends_on "xz" => :build
-  depends_on "zstd" => :build
   depends_on "at-spi2-core"
-  depends_on "cairo"
   depends_on "gdk-pixbuf"
-  depends_on "gettext"
   depends_on "glib"
   depends_on "gtk+3"
-  depends_on "harfbuzz"
   depends_on "json-glib"
   depends_on "pango"
+
+  uses_from_macos "perl" => :build
+
+  on_macos do
+    depends_on "cairo"
+    depends_on "gettext"
+    depends_on "harfbuzz"
+  end
+
+  on_linux do
+    depends_on "perl-xml-parser" => :build
+  end
 
   def install
     # add --disable-tests after https://bugs.launchpad.net/ubuntu/+source/libdbusmenu/+bug/1708938
