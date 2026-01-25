@@ -1,17 +1,15 @@
 class Jpeg < Formula
   desc "Image manipulation library"
   homepage "https://www.ijg.org/"
-  url "https://www.ijg.org/files/jpegsrc.v9f.tar.gz"
-  mirror "https://fossies.org/linux/misc/jpegsrc.v9f.tar.gz"
-  sha256 "04705c110cb2469caa79fb71fba3d7bf834914706e9641a4589485c1f832565b"
+  url "https://www.ijg.org/files/jpegsrc.v10.tar.gz"
+  mirror "https://fossies.org/linux/misc/jpegsrc.v10.tar.gz"
+  sha256 "8b9eaa13242690ebd03e1728ab1edf97a81a78ed6e83624d493655f31ac95ab5"
   license "IJG"
 
   livecheck do
     url "https://www.ijg.org/files/"
     regex(/href=.*?jpegsrc[._-]v?(\d+[a-z]?)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "a9c4c46243ca95babeaa9779c982c90b134ce326124d75af8cd1cce071d5941c"
