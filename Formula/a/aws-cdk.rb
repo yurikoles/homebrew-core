@@ -1,8 +1,8 @@
 class AwsCdk < Formula
   desc "AWS Cloud Development Kit - framework for defining AWS infra as code"
   homepage "https://github.com/aws/aws-cdk"
-  url "https://registry.npmjs.org/aws-cdk/-/aws-cdk-2.1102.0.tgz"
-  sha256 "f656e5d93a93b04e6c29ed7504325895191d05e7c41f158396260a42ad1ee6e0"
+  url "https://registry.npmjs.org/aws-cdk/-/aws-cdk-2.1103.0.tgz"
+  sha256 "6782a9315f7cb203e397828ca267ce176191d3f28881ec8e43f456833157f11b"
   license "Apache-2.0"
 
   bottle do
@@ -19,9 +19,6 @@ class AwsCdk < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
-
-    node_modules = libexec/"lib/node_modules/aws-cdk/node_modules"
-    deuniversalize_machos node_modules/"fsevents/fsevents.node" if OS.mac?
   end
 
   test do
