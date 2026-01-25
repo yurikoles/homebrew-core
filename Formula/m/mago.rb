@@ -2,8 +2,8 @@ class Mago < Formula
   desc "Toolchain for PHP to help developers write better code"
   homepage "https://github.com/carthage-software/mago"
   # github tarball has issue, https://github.com/carthage-software/mago/issues/794
-  url "https://static.crates.io/crates/mago/mago-1.1.0.crate"
-  sha256 "5a4f82d424823a0036114b6db110447c09858e2a5521bb0c04812d15463b6f3f"
+  url "https://static.crates.io/crates/mago/mago-1.2.1.crate"
+  sha256 "131022f44bd34625c3e711b77a9122aa79785c37149207781c72b9d61b533a9c"
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
