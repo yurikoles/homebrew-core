@@ -1,8 +1,8 @@
 class TerraformProviderLibvirt < Formula
   desc "Terraform provisioning with Linux KVM using libvirt"
   homepage "https://github.com/dmacvicar/terraform-provider-libvirt"
-  url "https://github.com/dmacvicar/terraform-provider-libvirt/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "e547e2b46a18a8796fd91283f474fc4f8ccc494ea054f43fca3c3e8cea9c7ed4"
+  url "https://github.com/dmacvicar/terraform-provider-libvirt/archive/refs/tags/v0.9.2.tar.gz"
+  sha256 "2b9c63eb4036812482bb17ad4a22443ab0127e1438e071bc8f45454b8e50c91a"
   license "Apache-2.0"
 
   bottle do
