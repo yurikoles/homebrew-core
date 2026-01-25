@@ -1,20 +1,10 @@
 class Brpc < Formula
   desc "Better RPC framework"
   homepage "https://brpc.apache.org/"
+  url "https://dlcdn.apache.org/brpc/1.16.0/apache-brpc-1.16.0-src.tar.gz"
+  sha256 "4d5e84048e12512c008d24e52c9e0baa876b5f3f9b06f0aead38b55ea248fdc3"
   license "Apache-2.0"
-  revision 3
   head "https://github.com/apache/brpc.git", branch: "master"
-
-  stable do
-    url "https://dlcdn.apache.org/brpc/1.15.0/apache-brpc-1.15.0-src.tar.gz"
-    sha256 "0bc8c2aee810c96e6c77886f828fbfdf32ae353ce997eb46f2772c0088010c35"
-
-    # Backport support for Protobuf 30+
-    patch do
-      url "https://github.com/apache/brpc/commit/8d87814330d9ebbfe5b95774fdb71056fcb3170c.patch?full_index=1"
-      sha256 "33a133c583d39a1d8394174c8c5f02b791411036faa3b1afe38841c3e6b2e0f1"
-    end
-  end
 
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "cc71a22411322bb443295a8285e7f82056133b45a6f413fca2e770f86cb59173"
