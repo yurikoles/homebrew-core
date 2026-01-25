@@ -1,8 +1,8 @@
 class Hindent < Formula
   desc "Haskell pretty printer"
   homepage "https://github.com/mihaimaruseac/hindent"
-  url "https://github.com/mihaimaruseac/hindent/archive/refs/tags/v6.2.1.tar.gz"
-  sha256 "9f3dcd310b5ef773600551af9eda8db40f69ffd570d8ed474f7b8c2e93cd55ec"
+  url "https://github.com/mihaimaruseac/hindent/archive/refs/tags/v6.3.0.tar.gz"
+  sha256 "2726bdbf137691624997f181c29392f22f8566ebc87c5f82e420adfb0068ef07"
   license "BSD-3-Clause"
   head "https://github.com/mihaimaruseac/hindent.git", branch: "master"
 
