@@ -3,8 +3,8 @@ class Jupytext < Formula
 
   desc "Jupyter notebooks as Markdown documents, Julia, Python or R scripts"
   homepage "https://jupytext.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/2b/84/79a28abd8e6a9376fa623670ab8ac7ebcf45b10f2974e0121bb5e8e086a2/jupytext-1.19.0.tar.gz"
-  sha256 "724c1f75c850a12892ccbcdff33004ede33965d0da8520ab9ea74b39ff51283a"
+  url "https://files.pythonhosted.org/packages/13/a5/80c02f307c8ce863cb33e27daf049315e9d96979e14eead700923b5ec9cc/jupytext-1.19.1.tar.gz"
+  sha256 "82587c07e299173c70ed5e8ec7e75183edf1be289ed518bab49ad0d4e3d5f433"
   license "MIT"
   head "https://github.com/mwouts/jupytext.git", branch: "main"
 
