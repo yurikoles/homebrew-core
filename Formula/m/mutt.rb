@@ -10,16 +10,14 @@
 class Mutt < Formula
   desc "Mongrel of mail user agents (part elm, pine, mush, mh, etc.)"
   homepage "http://www.mutt.org/"
-  url "https://cdn.netbsd.org/pub/pkgsrc/distfiles/mutt-2.2.16.tar.gz"
-  mirror "http://ftp.mutt.org/pub/mutt/mutt-2.2.16.tar.gz"
-  sha256 "1d3109a743ad8b25eef97109b2bdb465db7837d0a8d211cd388be1b6faac3f32"
+  url "https://ftp.osuosl.org/pub/mutt/mutt-2.3.0.tar.gz"
+  mirror "http://ftp.mutt.org/pub/mutt/mutt-2.3.0.tar.gz"
+  sha256 "5d5ebc40843f7156d5ede30e50016798ac7336467f7ad347e716510516cc2130"
   license "GPL-2.0-or-later"
 
-  # Livecheck uses GitLab tags to determine current version.
-  # They all have `-rel` suffix which needs to be omitted.
   livecheck do
-    url "https://gitlab.com/muttmua/mutt.git"
-    regex(/^mutt[._-]v?(\d+(?:-\d+)+)-rel$/i)
+    url "http://www.mutt.org/download.html"
+    regex(/href=.*?mutt[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   bottle do
