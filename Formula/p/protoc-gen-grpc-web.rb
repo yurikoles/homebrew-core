@@ -4,7 +4,7 @@ class ProtocGenGrpcWeb < Formula
   url "https://github.com/grpc/grpc-web/archive/refs/tags/2.0.2.tar.gz"
   sha256 "0f0c8c0c1104306d67dad678be7c14efe52a698795a58b2b72ab67a8bb100c15"
   license "Apache-2.0"
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
@@ -25,8 +25,14 @@ class ProtocGenGrpcWeb < Formula
   depends_on "node" => :test
   depends_on "typescript" => :test
   depends_on "abseil"
-  depends_on "protobuf@29"
+  depends_on "protobuf"
   depends_on "protoc-gen-js"
+
+  # Workaround to build with Protobuf 30+. Issue ref: https://github.com/grpc/grpc-web/issues/1522
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/d0b7cf85a11a9acfa1a422305948dff6621bbda9/Patches/protoc-gen-grpc-web/protobuf-30.diff"
+    sha256 "9c7e0ddf5ba68c179e7b8edc2c48de5b9b9d4801a6c8fd93ee199e27291aeebd"
+  end
 
   def install
     # Workarounds to build with latest `protobuf` which needs Abseil link flags and C++17
@@ -57,7 +63,7 @@ class ProtocGenGrpcWeb < Formula
         rpc RunTest(Test) returns (TestResult);
       }
     PROTO
-    protoc = Formula["protobuf@29"].bin/"protoc"
+    protoc = Formula["protobuf"].bin/"protoc"
     system protoc, "test.proto", "--plugin=#{bin}/protoc-gen-grpc-web",
                    "--js_out=import_style=commonjs:.",
                    "--grpc-web_out=import_style=typescript,mode=grpcwebtext:."
