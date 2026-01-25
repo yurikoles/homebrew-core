@@ -1,8 +1,8 @@
 class CtagsLsp < Formula
   desc "LSP implementation using universal-ctags as backend"
   homepage "https://github.com/netmute/ctags-lsp"
-  url "https://github.com/netmute/ctags-lsp/archive/refs/tags/v0.10.2.tar.gz"
-  sha256 "8ec3fdcaca155811ad9b532c6e7b5366d2f0e52d4d673c97652c9f8af8a156b8"
+  url "https://github.com/netmute/ctags-lsp/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "86d1090c7281e65aa5f16bb3a06bb57b19b9dbb5f778c108a8f33662236523d9"
   license "MIT"
 
   bottle do
