@@ -384,8 +384,22 @@ jobs:
 
             - label: CI-build-dependents-from-source
               path:
-                - 'Formula/.+/(cabal-install|docbook-xsl|emscripten|erlang|ocaml|ocaml-findlib|ocaml-num|openjdk|pyqt-builder|rust)\.rb'
-                - 'Aliases/(ghc|go)(@[0-9.]+)?$'
+                - "Formula/.+/(\
+                    cabal-install|\
+                    docbook-xsl|\
+                    emscripten|\
+                    erlang|\
+                    ocaml|\
+                    ocaml-findlib|\
+                    ocaml-num|\
+                    openjdk|\
+                    pyqt-builder|\
+                    rust\
+                    )\\.rb"
+                - "Aliases/(\
+                    ghc|\
+                    go\
+                    )(@[0-9.]+)?$"
               missing_content: '\n  revision [0-9]+\n'
               keep_if_no_match: true
               allow_any_match: true
@@ -401,9 +415,10 @@ jobs:
                 glib|\
                 harfbuzz|\
                 openssl@3|\
-                wayland-protocols|\
+                rust|\
                 sqlite|\
-                systemd\
+                systemd|\
+                wayland-protocols\
                 ).rb"
               keep_if_no_match: true
               allow_any_match: true
