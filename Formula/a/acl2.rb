@@ -4,7 +4,7 @@ class Acl2 < Formula
   url "https://github.com/acl2/acl2/archive/refs/tags/8.6.tar.gz"
   sha256 "c2d73e66422901b3cc2a6f5a9ab50f5f3b1b4060cf9dc9148d076f3a8b957cf9"
   license "BSD-3-Clause"
-  revision 13
+  revision 14
 
   livecheck do
     url :stable
@@ -27,17 +27,20 @@ class Acl2 < Formula
       "books/kestrel/axe/x86/examples/popcount/popcount-macho-64.executable",
       "books/kestrel/axe/x86/examples/factorial/factorial.macho64",
       "books/kestrel/axe/x86/examples/tea/tea.macho64",
+      "books/kestrel/axe/x86/examples/tea/tea.elf64",
+      "books/kestrel/axe/x86/examples/add/add.elf64",
     ])
 
     # Move files and then build to avoid saving build directory in files
     libexec.install Dir["*"]
 
-    sbcl = Formula["sbcl"].opt_bin/"sbcl"
-    system "make", "-C", libexec, "all", "basic", "LISP=#{sbcl}", "USE_QUICKLISP=0"
-    system "make", "-C", libexec, "all", "basic", "LISP=#{sbcl}", "USE_QUICKLISP=0", "ACL2_PAR=p"
+    sbcl = Formula["sbcl"]
+    args = ["LISP=#{sbcl.opt_bin}/sbcl", "USE_QUICKLISP=0", "ACL2_MAKE_LOG=NONE"]
+    system "make", "-C", libexec, "all", "basic", *args
+    system "make", "-C", libexec, "all", "basic", *args, "ACL2_PAR=p"
 
     ["acl2", "acl2p"].each do |acl2|
-      inreplace libexec/"saved_#{acl2}", Formula["sbcl"].prefix.realpath, Formula["sbcl"].opt_prefix
+      inreplace libexec/"saved_#{acl2}", sbcl.prefix.realpath, sbcl.opt_prefix
       (bin/acl2).write_env_script libexec/"saved_#{acl2}", ACL2_SYSTEM_BOOKS: "#{libexec}/books"
     end
   end
