@@ -6,6 +6,7 @@ class PortableRuby < PortableFormula
   url "https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.1.tar.gz"
   sha256 "3924be2d05db30f4e35f859bf028be85f4b7dd01714142fd823e4af5de2faf9d"
   license "Ruby"
+  revision 1
 
   # This regex restricts matching to versions other than X.Y.0.
   livecheck do
@@ -164,6 +165,10 @@ class PortableRuby < PortableFormula
       # Ship libcrypt.a so that building native gems doesn't need system libcrypt installed.
       cp libxcrypt.lib/"libcrypt.a", lib/"libcrypt.a"
     end
+
+    # Ship libyaml.a & yaml.h so that building native gems doesn't need system libyaml installed.
+    cp libyaml.lib/"libyaml.a", lib/"libyaml.a"
+    cp libyaml.include/"yaml.h", include/"yaml.h"
 
     libexec.mkpath
     cp openssl.libexec/"etc/openssl/cert.pem", libexec/"cert.pem"
