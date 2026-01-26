@@ -1,11 +1,9 @@
 class Libxdamage < Formula
   desc "X.Org: X Damage Extension library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXdamage-1.1.6.tar.xz"
-  sha256 "52733c1f5262fca35f64e7d5060c6fcd81a880ba8e1e65c9621cf0727afb5d11"
+  url "https://www.x.org/archive/individual/lib/libXdamage-1.1.7.tar.xz"
+  sha256 "127067f521d3ee467b97bcb145aeba1078e2454d448e8748eb984d5b397bde24"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "db698e2d52193a57afcd2b9886a4db3d6c513e7ef127c6bb96a566a126b9d0d1"
