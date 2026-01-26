@@ -2,17 +2,15 @@ class Mrbayes < Formula
   desc "Bayesian inference of phylogenies and evolutionary models"
   homepage "https://nbisweden.github.io/MrBayes/"
   url "https://github.com/NBISweden/MrBayes/archive/refs/tags/v3.2.7a.tar.gz"
+  version "3.2.7a"
   sha256 "3eed2e3b1d9e46f265b6067a502a89732b6f430585d258b886e008e846ecc5c6"
   license "GPL-3.0-or-later"
-  revision 3
   head "https://github.com/NBISweden/MrBayes.git", branch: "develop"
 
   livecheck do
-    url :stable
-    strategy :github_latest
+    url "https://nbisweden.github.io/MrBayes/download.html"
+    regex(%r{href=\s*.*?/NBISweden/MrBayes/archive/v?(\d+(?:\.\d+)+[a-z]?)\.t}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "68e1a37bb0f6aef713da87dc8345bda73b464a7d255e5fe3a8d3ca21d0827dc8"
