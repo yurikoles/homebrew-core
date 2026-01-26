@@ -1,15 +1,13 @@
 class UniversalCtags < Formula
   desc "Maintained ctags implementation"
   homepage "https://ctags.io/"
-  url "https://github.com/universal-ctags/ctags/archive/refs/tags/p6.2.20260125.0.tar.gz"
-  version "p6.2.20260125.0"
-  sha256 "ba5a4dbd4132f9e11f6e38fdbc3960874ebdb61af7ede074de0b8c23a4a8dd6e"
+  url "https://github.com/universal-ctags/ctags/releases/download/v6.2.1/universal-ctags-6.2.1.tar.gz"
+  sha256 "2c63efe9e0e083dc50e6fdd8c5414781cc8873d8c8940cf553c01870ed962f8c"
   license "GPL-2.0-only"
-  head "https://github.com/universal-ctags/ctags.git", branch: "master"
 
   livecheck do
     url :stable
-    regex(/^(p\d+(?:\.\d+)+)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   bottle do
@@ -21,8 +19,13 @@ class UniversalCtags < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "295d8b4be91bd542854afbe09ec71bc56cb1fe07a99f34e8528baf6e2ee37535"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
+  head do
+    url "https://github.com/universal-ctags/ctags.git", branch: "master"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+  end
+
   depends_on "docutils" => :build
   depends_on "pkgconf" => :build
   depends_on "python@3.14" => :build
@@ -35,7 +38,7 @@ class UniversalCtags < Formula
   conflicts_with "ctags", because: "both install `ctags` binaries"
 
   def install
-    system "./autogen.sh"
+    system "./autogen.sh" if build.head?
     system "./configure", *std_configure_args
     system "make"
     system "make", "install"
