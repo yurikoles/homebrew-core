@@ -12,11 +12,11 @@ class Acl2 < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "79f4d9fcd79ff956c2b698d4a0d1400506a9c83a032b3b675f67382c2e2ad805"
-    sha256 arm64_sequoia: "dcb4361aebe67010a2b772fa08b00d05dce7f44e342101da07ce04fe3b4d41ed"
-    sha256 arm64_sonoma:  "238c9edf710d6c268f15b57b0da402f900618c562df34d359e5727e95a03d4c6"
-    sha256 sonoma:        "465e7552071a28adb773e85803c29193614d27fa020783e0a758d4fc1b7a1a99"
-    sha256 x86_64_linux:  "0ae5f2bf2d53143d05ad171874894656618f1b10b23a2d7c5e43a461351aa6b9"
+    sha256 arm64_tahoe:   "a4b38a21e4a0e08312a1661ecc08ac08be8e430abb8d96d0bbf58582cf7247ef"
+    sha256 arm64_sequoia: "caca08c7a554d2f88b3c86d28ff38fe7bfef97410faad9a933d1237753216c9c"
+    sha256 arm64_sonoma:  "0cce484281e73990c4cad9a07e9cdb95b152660e4d5ef58518c95bccf00413b4"
+    sha256 sonoma:        "7efac9505fb7e9633d6817e58d9d4375c3b78252f8855396baa34739555d3fb5"
+    sha256 x86_64_linux:  "1298392545f7690fe775a1ebd7352caa43fe7decfd0afdedee70ea7925c42a5c"
   end
 
   depends_on "sbcl"
