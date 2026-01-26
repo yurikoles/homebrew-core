@@ -8,13 +8,12 @@ class Texttest < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "66def708bd3edca475d00878e7a295156918753563a63e7bf8a6abbece577ab4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "707f18abde6bd5a5b501d23152c9f55ba7cdaede653995d7a6365104ed6b18b1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3cd8caf904a5695bd3e7d80008f2640a8df183a3849a82d9448ea6b153646033"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9c54892ff2a2092027639b777ee00852067dc36ed4c11f2c467426e94bbe5b6d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "56731920709d9d0a9f293793fb0cefab826cee9bcedff9e45e012178dc0970f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "37a505872aa2656f941827bdc33e9c9b0a1b8edcee4c34033b11f42c79b2b178"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "436a8ff3d8efc9ce3572fa6c92a2c8fe10a0988a66fca562f9df1e2d19ac0be8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a9704e045db66ccbb3ba47e19e3bd6e42a1a0bb172b29d56d0c0156124fbeb2a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "87d492f3eac297e328f7568feaeb0a1c12352abff053315dd34978edc9b9d4d1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "282d47d8bcc5d9df1319d15fc4ac3cd70853fe26fdecc85614083d7b41742527"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a9112d710cf89b3dd3c43e6e44e4a81cdfeb52fe320775faa3b27dd3ba188e05"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b73ee0045cb722f2d9e007b980f539caeca17e5d83ab87cfeb5a6d7e8fbfdaa8"
   end
 
   depends_on "adwaita-icon-theme"
