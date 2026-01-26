@@ -1,11 +1,9 @@
 class Libxinerama < Formula
   desc "X.Org: API for Xinerama extension to X11 Protocol"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXinerama-1.1.5.tar.xz"
-  sha256 "5094d1f0fcc1828cb1696d0d39d9e866ae32520c54d01f618f1a3c1e30c2085c"
+  url "https://www.x.org/archive/individual/lib/libXinerama-1.1.6.tar.xz"
+  sha256 "d00fc1599c303dc5cbc122b8068bdc7405d6fcb19060f4597fc51bd3a8be51d7"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "c5db7d0600258cd7dd543857f15c6f8cbcac633fd1949b235731a46393624de4"
