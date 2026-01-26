@@ -1,8 +1,8 @@
 class CodeServer < Formula
   desc "Access VS Code through the browser"
   homepage "https://github.com/coder/code-server"
-  url "https://registry.npmjs.org/code-server/-/code-server-4.108.1.tgz"
-  sha256 "489087c7400871b096acca94455b2452fe3dc854141e47e62b3316f9e7cd7668"
+  url "https://registry.npmjs.org/code-server/-/code-server-4.108.2.tgz"
+  sha256 "b188d4da150211b510116619daa8c21c4bfe0a21b5aa41910b8acab60304d4f4"
   license "MIT"
 
   bottle do
@@ -33,6 +33,9 @@ class CodeServer < Formula
 
     libexec.install Dir["*"]
     bin.install_symlink libexec/"out/node/entry.js" => "code-server"
+
+    # Remove pre-built binaries which are unused as a source-built binary is available
+    rm_r(libexec/"node_modules/argon2/prebuilds")
 
     # Remove pre-built binaries where source in not available to allow compilation
     # https://www.npmjs.com/package/@azure/msal-node-runtime
