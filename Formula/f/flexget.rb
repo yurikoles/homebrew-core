@@ -398,6 +398,6 @@ class Flexget < Formula
           rss: https://example.com/rss
           transmission: yes
     YAML
-    system bin/"flexget", "-c", "#{testpath}/config.yml", "check"
+    system bin/"flexget", "-c", testpath/"config.yml", "check"
   end
 end
