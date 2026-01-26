@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/71/2e/ee80b2a407c612d95dc66a5a7ebeb6c667f7f7a83297a2fa4089b374bc10/esphome-2026.1.1.tar.gz"
-  sha256 "5a2beb24e3b459f9cb86bcd149488b778c5fcbd996e57e65fbc30e8fa3f97b56"
+  url "https://files.pythonhosted.org/packages/0b/18/843629378fb54a7e8e27bf1ee3ec330ba236521b0e9660037c9178e9fca3/esphome-2026.1.2.tar.gz"
+  sha256 "bd6a5162a2cb996c3bd9ce620003125961a9ba33b89049e5ee0654b4e81aa5f1"
   license "MIT"
 
   # Issue ref: https://github.com/Homebrew/homebrew-core/issues/257992
@@ -274,8 +274,8 @@ class Esphome < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz"
-    sha256 "73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4"
+    url "https://files.pythonhosted.org/packages/a1/84/4831f881aa6ff3c976f6d6809b58cdfa350593ffc0dc3c58f5f6586780fb/rich-14.3.1.tar.gz"
+    sha256 "b8c5f568a3a749f9290ec6bddedf835cec33696bfc1e48bcfecb276c7386e4b8"
   end
 
   resource "rich-click" do
