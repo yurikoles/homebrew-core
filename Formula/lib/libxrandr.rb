@@ -1,11 +1,9 @@
 class Libxrandr < Formula
   desc "X.Org: X Resize, Rotate and Reflection extension library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXrandr-1.5.4.tar.xz"
-  sha256 "1ad5b065375f4a85915aa60611cc6407c060492a214d7f9daf214be752c3b4d3"
+  url "https://www.x.org/archive/individual/lib/libXrandr-1.5.5.tar.xz"
+  sha256 "72b922c2e765434e9e9f0960148070bd4504b288263e2868a4ccce1b7cf2767a"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "5786e3a7fe8620155141375bded4c2f6c7ec24149a7bdcca18db40fa3607c34c"
