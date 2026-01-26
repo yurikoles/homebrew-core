@@ -3,8 +3,8 @@ class Dxpy < Formula
 
   desc "DNAnexus toolkit utilities and platform API bindings for Python"
   homepage "https://github.com/dnanexus/dx-toolkit"
-  url "https://files.pythonhosted.org/packages/0b/b8/b25a425d2a31dd8324b6b356d06c33ccfe6a1a80518e5e0d4d6f6addf0b1/dxpy-0.402.0.tar.gz"
-  sha256 "ae3d43ac10b54162b2b51e646e3054d9824af251f771f2a846776087141e9198"
+  url "https://files.pythonhosted.org/packages/e0/b0/a24759b3b7c075a7f571693082e2964bd8dc62a67afe4c82bdc3ddd86b7a/dxpy-0.403.0.tar.gz"
+  sha256 "9d251c0d91fa7b5002bc8d1945fc7528de4d409b58ee719c52b37d1ed04e9311"
   license "Apache-2.0"
 
   bottle do
@@ -52,8 +52,8 @@ class Dxpy < Formula
   end
 
   resource "awscrt" do
-    url "https://files.pythonhosted.org/packages/82/1b/b5578329a77fe06aa66645f3827a4f5c1291ad39925775b49343f209b5d5/awscrt-0.30.0.tar.gz"
-    sha256 "e1a133430e71116e9c0f101b0d11227f47b7c561ad5303f5af00f6c33a16f382"
+    url "https://files.pythonhosted.org/packages/35/c9/8e397a679f43c53cb51b338bda2645e8a474c9a4dd5606d0ee365b7b5fbc/awscrt-0.31.1.tar.gz"
+    sha256 "abb64768d25bf563da8e2165d477a491cba18bc22c4ec8db7acbdae94e59ebc4"
   end
 
   resource "crc32c" do
