@@ -1,11 +1,9 @@
 class Libxpm < Formula
   desc "X.Org: X Pixmap (XPM) image file format library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXpm-3.5.17.tar.gz"
-  sha256 "959466c7dfcfcaa8a65055bfc311f74d4c43d9257900f85ab042604d286df0c6"
+  url "https://www.x.org/archive/individual/lib/libXpm-3.5.18.tar.gz"
+  sha256 "74eb57253ed3085686371a331737daf072223b77f76bba13ed65a4b3aa6cb403"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "7f32f5d6061fb478a3ea39d4c36464e5a26a777d25fd6ac2be014ecedd7050e3"
