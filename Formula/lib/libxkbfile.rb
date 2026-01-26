@@ -1,8 +1,8 @@
 class Libxkbfile < Formula
   desc "X.Org: XKB file handling routines"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libxkbfile-1.1.3.tar.xz"
-  sha256 "a9b63eea997abb9ee6a8b4fbb515831c841f471af845a09de443b28003874bec"
+  url "https://www.x.org/archive/individual/lib/libxkbfile-1.2.0.tar.xz"
+  sha256 "7f71884e5faf56fb0e823f3848599cf9b5a9afce51c90982baeb64f635233ebf"
   license "MIT"
 
   bottle do
@@ -18,19 +18,15 @@ class Libxkbfile < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "5298209c95e682bf215c5335aa140c4e0249f68aa2d086f058c42f5fc5446197"
   end
 
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "libx11"
 
   def install
-    args = %W[
-      --sysconfdir=#{etc}
-      --localstatedir=#{var}
-      --disable-silent-rules
-    ]
-
-    system "./configure", *args, *std_configure_args
-    system "make"
-    system "make", "install"
+    system "meson", "setup", "build", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do
