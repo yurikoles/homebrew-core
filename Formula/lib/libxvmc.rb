@@ -1,8 +1,8 @@
 class Libxvmc < Formula
   desc "X.Org: X-Video Motion Compensation API"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXvMC-1.0.14.tar.xz"
-  sha256 "e4be9eb6b6bafdbbf81f47f7163047215376e45e2dc786d0ea6181c930725ed9"
+  url "https://www.x.org/archive/individual/lib/libXvMC-1.0.15.tar.xz"
+  sha256 "4f518afde3d7fd435346af7b368d2f73517f3d5f82647c962caf3f7bb8ff7078"
   license "MIT"
 
   bottle do
