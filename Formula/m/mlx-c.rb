@@ -5,6 +5,12 @@ class MlxC < Formula
   sha256 "e22b51b810b9c3bdce8c0df0d6112ca8e8a49ce0ea78b504e1bdbb59d731f5d8"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any, arm64_tahoe:   "252a76effb17e213664f0cddb0b0c28496fa1bdad146ef806416ada91f84e584"
+    sha256 cellar: :any, arm64_sequoia: "793a81852a0b4898941e7deb9613aa200025faf65550c29d3d2dd7cd130525aa"
+    sha256 cellar: :any, arm64_sonoma:  "06a4da8e44d45deb666ed5a92f32b551202b114c485c54e1817e327ecffb7601"
+  end
+
   depends_on "cmake" => :build
   depends_on arch: :arm64
   depends_on :macos
