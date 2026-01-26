@@ -3,10 +3,9 @@ class CheckJsonschema < Formula
 
   desc "JSON Schema CLI"
   homepage "https://github.com/python-jsonschema/check-jsonschema"
-  url "https://files.pythonhosted.org/packages/ee/8b/e19cb6e2021eab721081748e1450ccda8293cc06aaf8ccfb775d1be2f2d5/check_jsonschema-0.36.0.tar.gz"
-  sha256 "9570e56ae885c59449fed9abe1766239901befe03bca7054077f8c0639fc71df"
+  url "https://files.pythonhosted.org/packages/bc/08/12904b4e7bd5a3377e14d51ec6a1c8aa4d432b6e6e2b48eb1982cea34ebf/check_jsonschema-0.36.1.tar.gz"
+  sha256 "d0fa1b92573d0404ad81d9b02b4a93cdd0d5c1871f4bea7361e664afc52938e7"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/python-jsonschema/check-jsonschema.git", branch: "main"
 
   bottle do
@@ -108,13 +107,8 @@ class CheckJsonschema < Formula
   end
 
   resource "ruamel-yaml" do
-    url "https://files.pythonhosted.org/packages/3a/2b/7a1f1ebcd6b3f14febdc003e658778d81e76b40df2267904ee6b13f0c5c6/ruamel_yaml-0.18.17.tar.gz"
-    sha256 "9091cd6e2d93a3a4b157ddb8fabf348c3de7f1fb1381346d985b6b247dcd8d3c"
-  end
-
-  resource "ruamel-yaml-clib" do
-    url "https://files.pythonhosted.org/packages/ea/97/60fda20e2fb54b83a61ae14648b0817c8f5d84a3821e40bfbdae1437026a/ruamel_yaml_clib-0.2.15.tar.gz"
-    sha256 "46e4cc8c43ef6a94885f72512094e482114a8a706d3c555a34ed4b0d20200600"
+    url "https://files.pythonhosted.org/packages/c7/3b/ebda527b56beb90cb7652cb1c7e4f91f48649fbcd8d2eb2fb6e77cd3329b/ruamel_yaml-0.19.1.tar.gz"
+    sha256 "53eb66cd27849eff968ebf8f0bf61f46cdac2da1d1f3576dd4ccee9b25c31993"
   end
 
   resource "six" do
