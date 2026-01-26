@@ -1,11 +1,9 @@
 class Libxcomposite < Formula
   desc "X.Org: Client library for the Composite extension"
   homepage "https://www.x.org/"
-  url "https://www.x.org/archive/individual/lib/libXcomposite-0.4.6.tar.xz"
-  sha256 "fe40bcf0ae1a09070eba24088a5eb9810efe57453779ec1e20a55080c6dc2c87"
+  url "https://www.x.org/archive/individual/lib/libXcomposite-0.4.7.tar.xz"
+  sha256 "8bdf310967f484503fa51714cf97bff0723d9b673e0eecbf92b3f97c060c8ccb"
   license "MIT"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "3ee0f26be9958822329e6756d778a36662369d7fe306772a01a5354a6f1af924"
