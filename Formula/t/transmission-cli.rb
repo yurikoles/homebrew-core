@@ -1,10 +1,9 @@
 class TransmissionCli < Formula
   desc "Lightweight BitTorrent client"
   homepage "https://transmissionbt.com/"
-  url "https://github.com/transmission/transmission/releases/download/4.0.6/transmission-4.0.6.tar.xz"
-  sha256 "2a38fe6d8a23991680b691c277a335f8875bdeca2b97c6b26b598bc9c7b0c45f"
+  url "https://github.com/transmission/transmission/releases/download/4.1.0/transmission-4.1.0.tar.xz"
+  sha256 "dcd28c1c9e6126229c4c17dbc9e95c9fd4aed7e76f4a1f2a74604c8cddec49d6"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only"]
-  revision 4
 
   livecheck do
     url :stable
@@ -36,15 +35,7 @@ class TransmissionCli < Formula
     depends_on "openssl@3" # Uses CommonCrypto on macOS
   end
 
-  # miniupnpc 2.2.8 compatibility patch
-  patch :DATA
-
   def install
-    odie "Remove cmake 4 build patch" if build.stable? && version > "4.0.6"
-
-    # CMake 4 compatibility for third-parties of miniupnpc
-    ENV["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5"
-
     args = %w[
       -DENABLE_CLI=ON
       -DENABLE_DAEMON=ON
@@ -55,7 +46,6 @@ class TransmissionCli < Formula
       -DENABLE_UTILS=ON
       -DENABLE_WEB=OFF
     ]
-
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
@@ -86,25 +76,3 @@ class TransmissionCli < Formula
     assert_match(/^magnet:/, shell_output("#{bin}/transmission-show -m #{testpath}/test.mp3.torrent"))
   end
 end
-
-__END__
-diff --git a/libtransmission/port-forwarding-upnp.cc b/libtransmission/port-forwarding-upnp.cc
-index 7c4865b..695d43f 100644
---- a/libtransmission/port-forwarding-upnp.cc
-+++ b/libtransmission/port-forwarding-upnp.cc
-@@ -275,8 +275,13 @@ tr_port_forwarding_state tr_upnpPulse(tr_upnp* handle, tr_port port, bool is_ena
- 
-         FreeUPNPUrls(&handle->urls);
-         auto lanaddr = std::array<char, TR_ADDRSTRLEN>{};
--        if (UPNP_GetValidIGD(devlist, &handle->urls, &handle->data, std::data(lanaddr), std::size(lanaddr) - 1) ==
--            UPNP_IGD_VALID_CONNECTED)
-+        if (
-+#if (MINIUPNPC_API_VERSION >= 18)
-+            UPNP_GetValidIGD(devlist, &handle->urls, &handle->data, std::data(lanaddr), std::size(lanaddr) - 1, nullptr, 0)
-+#else
-+            UPNP_GetValidIGD(devlist, &handle->urls, &handle->data, std::data(lanaddr), std::size(lanaddr) - 1)
-+#endif
-+            == UPNP_IGD_VALID_CONNECTED)
-         {
-             tr_logAddInfo(fmt::format(_("Found Internet Gateway Device '{url}'"), fmt::arg("url", handle->urls.controlURL)));
-             tr_logAddInfo(fmt::format(_("Local Address is '{address}'"), fmt::arg("address", lanaddr.data())));
