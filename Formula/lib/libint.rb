@@ -4,6 +4,7 @@ class Libint < Formula
   url "https://github.com/evaleev/libint/archive/refs/tags/v2.12.0.tar.gz"
   sha256 "732988a1ea95eb4eae91bcb2b2a718d95dc5caca41533746fc4111532d55ae74"
   license all_of: ["GPL-3.0-or-later", "LGPL-3.0-or-later"]
+  revision 1
 
   bottle do
     rebuild 1
@@ -17,11 +18,16 @@ class Libint < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cmake" => :build
+  depends_on "gcc" => :build # for gfortran
+  depends_on "gmp" => :build
   depends_on "libtool" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "boost"
-  depends_on "eigen"
-  depends_on "mpfr"
+
+  depends_on "boost" => :no_linkage
+  depends_on "eigen" => :no_linkage
+
+  uses_from_macos "python" => :build
 
   def install
     args = %w[
@@ -34,8 +40,17 @@ class Libint < Formula
     system "glibtoolize", "--install", "--force"
     system "./autogen.sh"
     system "./configure", *args, *std_configure_args
-    system "make"
-    system "make", "install"
+    system "make", "export"
+
+    # https://github.com/evaleev/libint/wiki#compiling-libint-library
+    system "tar", "-xf", "libint-#{version}.tgz"
+    system "cmake", "-S", "libint-#{version}", "-B", "build",
+                    "-DBUILD_SHARED_LIBS=ON",
+                    "-DLIBINT2_ENABLE_FORTRAN=ON",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+
     pkgshare.install "tests/hartree-fock/hartree-fock.cc"
     pkgshare.install "tests/hartree-fock/h2o.xyz"
   end
