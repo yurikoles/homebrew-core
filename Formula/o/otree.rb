@@ -1,8 +1,8 @@
 class Otree < Formula
   desc "Command-line tool to view objects (JSON/YAML/TOML) in TUI tree widget"
   homepage "https://github.com/fioncat/otree"
-  url "https://github.com/fioncat/otree/archive/refs/tags/v0.6.3.tar.gz"
-  sha256 "047fa4a4575d703a1bf76625b49c9291c22b8877347b4ec722a365b4aca51f8b"
+  url "https://github.com/fioncat/otree/archive/refs/tags/v0.6.4.tar.gz"
+  sha256 "eba6aefe43b3f3b3412e7c3545d88018dc6cbe35bc0824f6f5eff91ac44d4fc7"
   license "MIT"
   head "https://github.com/fioncat/otree.git", branch: "main"
 
