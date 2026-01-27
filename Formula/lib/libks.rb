@@ -12,12 +12,12 @@ class Libks < Formula
   head "https://github.com/signalwire/libks.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "f73a64c0f07c4391a8d65430fd5f634993a4e9f515ea7242ee66d4f4095c044a"
-    sha256 cellar: :any,                 arm64_sequoia: "a7e8dffe7957121f41ad61a87877170d701316647d25cee1be287b4d7cb9fcf4"
-    sha256 cellar: :any,                 arm64_sonoma:  "8659789bf2947c1ce0a865c46ec177f41b278eb0d054095c0b014bf8e4158816"
-    sha256 cellar: :any,                 sonoma:        "3a1e0878d7f81e5ddf99e93f8f1cd583b00e48f8b685da254a516e3ed5158b87"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ef344cc88ef01ac0e1375013469ee3c3197b5f1bb37b3cb4718815e8056c7278"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "706ed3466fd408dff3622234395571be20e522eaf07e0471cc32f8af5c3588de"
+    sha256 cellar: :any,                 arm64_tahoe:   "9ba56f2168609a91383abc75e3fac558628d5b729aa0bbdb98ee715b462b1948"
+    sha256 cellar: :any,                 arm64_sequoia: "8eae0c7fa3f85ddd3590395a47673945f59cd05bb895cee3f1dc668cc119914c"
+    sha256 cellar: :any,                 arm64_sonoma:  "7dde0eb9531c006912cd9760a066ed948abd7c2f74fedee0c8d9b72f289d52a8"
+    sha256 cellar: :any,                 sonoma:        "bd3a093a55efcec8aa4210e1e0e27aff50bb1fad3906b3987a20df01925a7ca0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8a61b1635a1bbf9e706a81f1a55e8b56c548c5e9c9715e3147e4ae57159d0ea0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed3213ffd82b950d4c4ef618dbff54199021392f9e741e0eed49841a4efce896"
   end
 
   depends_on "cmake" => :build
