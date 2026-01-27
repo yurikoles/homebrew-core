@@ -3,8 +3,8 @@ class OciCli < Formula
 
   desc "Oracle Cloud Infrastructure CLI"
   homepage "https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm"
-  url "https://files.pythonhosted.org/packages/db/d8/683ae64135fee6f681a51bc49d0138cdd6e3d0fcdd1597aa99fd10c5eef5/oci_cli-3.72.1.tar.gz"
-  sha256 "900a603501274a2702ed161422ed053a22ce0c16a410506fd1869c3579f5b900"
+  url "https://files.pythonhosted.org/packages/12/89/a8a88471ff8105c571377a8ab64fd2bb56d19d0228a55e3c483c33425749/oci_cli-3.73.1.tar.gz"
+  sha256 "4c53878f06d1dde38e43300ab6ff324cbd430096047eda305d6f73a42259448d"
   license any_of: ["UPL-1.0", "Apache-2.0"]
   head "https://github.com/oracle/oci-cli.git", branch: "master"
 
@@ -45,8 +45,8 @@ class OciCli < Formula
   end
 
   resource "oci" do
-    url "https://files.pythonhosted.org/packages/00/2c/4384adf75d5f1607c4370435470f1db311317a6f6318ee4aa2e9b3737dbc/oci-2.165.1.tar.gz"
-    sha256 "b3408122d0d1e3de2f8ad1ac0358eb875a0f19d3f81631e479ba565d55b0d7f2"
+    url "https://files.pythonhosted.org/packages/db/27/a8d2500545a0e244b26cff7d5cee2eabdd4f6a1feb923a25029050143e78/oci-2.166.0.tar.gz"
+    sha256 "a039162e2ef1cde591a779d0476bd25f08abdc72e99f10d7bc3260670e133c5b"
   end
 
   resource "prompt-toolkit" do
@@ -75,8 +75,8 @@ class OciCli < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
-    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
+    url "https://files.pythonhosted.org/packages/76/95/faf61eb8363f26aa7e1d762267a8d602a1b26d4f3a1e758e92cb3cb8b054/setuptools-80.10.2.tar.gz"
+    sha256 "8b0e9d10c784bf7d262c4e5ec5d4ec94127ce206e8738f29a437945fbc219b70"
   end
 
   resource "six" do
@@ -95,8 +95,8 @@ class OciCli < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/24/30/6b0809f4510673dc723187aeaf24c7f5459922d01e2f794277a3dfb90345/wcwidth-0.2.14.tar.gz"
-    sha256 "4d478375d31bc5395a3c55c40ccdf3354688364cd61c4f6adacaa9215d0b3605"
+    url "https://files.pythonhosted.org/packages/64/6e/62daec357285b927e82263a81f3b4c1790215bc77c42530ce4a69d501a43/wcwidth-0.5.0.tar.gz"
+    sha256 "f89c103c949a693bf563377b2153082bf58e309919dfb7f27b04d862a0089333"
   end
 
   def install
