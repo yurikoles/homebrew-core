@@ -1,8 +1,8 @@
 class Enzyme < Formula
   desc "High-performance automatic differentiation of LLVM"
   homepage "https://enzyme.mit.edu"
-  url "https://github.com/EnzymeAD/Enzyme/archive/refs/tags/v0.0.241.tar.gz"
-  sha256 "1e5104e950c8cb141a18deb2a2011e133f659e95ef6c221ce89b054aa68343bb"
+  url "https://github.com/EnzymeAD/Enzyme/archive/refs/tags/v0.0.242.tar.gz"
+  sha256 "9f0e4da796a309a8f90e25db638ca6d293563cbf87e1e184e33057dc015808f6"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/EnzymeAD/Enzyme.git", branch: "main"
 
