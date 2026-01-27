@@ -7,13 +7,12 @@ class Libint < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "7753ab7a751682e82933f613c3e8f0dbed020c187f4033bf7883f43c13fb9906"
-    sha256 cellar: :any,                 arm64_sequoia: "b35ebbd19dd5eceb28e1ea684489c72d038796b5a3bc8bc73df07807f9b38ae7"
-    sha256 cellar: :any,                 arm64_sonoma:  "493aff546d60aeb2d28c27328d5f097152743d26d8545628ed7232c5a9b3e2ec"
-    sha256 cellar: :any,                 sonoma:        "7dcbe9fe6ddaca8d21fd647012357711aecae571726fc34e8b42285b2dbc87a5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "05a3e7fc3a2c80b48ebec6c5a4a00d9e66aa6657a251b7c9dd7cab6377cacfd1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2a63c3942366b5bef4c40b335ffb6cea146836af7db0aeb2a0aaf9537666780f"
+    sha256 cellar: :any,                 arm64_tahoe:   "021285dd3c9f6f83647c2561fb5d51eed76f7093483fe23fb8541cb463f81b85"
+    sha256 cellar: :any,                 arm64_sequoia: "95ec5448bcc73ce713eeaf1fce1cc59ccb9bc21421cca17e33a53378cb3a14e2"
+    sha256 cellar: :any,                 arm64_sonoma:  "d311e23cd5cdeb601aaa98f8fd1c023bf8edfd95b7073814c4a7e0725599f850"
+    sha256 cellar: :any,                 sonoma:        "a90f91cd6b70acdcacf6c72eefeadf8a7973dd85f27af1ea3fcfd02b2a409f99"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b7c85675c38ecae95182d1f75922ba5a8f8cd729fe6ef441b232e7d9f0d959ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "924eb316cb90dd18ced1e1d52f2ddeefe8e6a13300d866450b966be540f72a7f"
   end
 
   depends_on "autoconf" => :build
