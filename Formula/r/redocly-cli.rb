@@ -1,8 +1,8 @@
 class RedoclyCli < Formula
   desc "Your all-in-one OpenAPI utility"
   homepage "https://redocly.com/docs/cli"
-  url "https://registry.npmjs.org/@redocly/cli/-/cli-2.14.9.tgz"
-  sha256 "e170f5079346a080dd8931f0b8e99c2c2d2cd1f7575876e9b08f7b33957beaf3"
+  url "https://registry.npmjs.org/@redocly/cli/-/cli-2.15.0.tgz"
+  sha256 "b36a42197bb6eb69fc7502114daaea74a60e2a9d030ecdb01e6f9f3edf1d1757"
   license "MIT"
 
   bottle do
@@ -19,9 +19,6 @@ class RedoclyCli < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
-
-    node_modules = libexec/"lib/node_modules/@redocly/cli/node_modules"
-    deuniversalize_machos node_modules/"fsevents/fsevents.node" if OS.mac?
   end
 
   test do
