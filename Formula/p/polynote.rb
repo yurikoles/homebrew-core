@@ -4,8 +4,8 @@ class Polynote < Formula
   desc "Polyglot notebook with first-class Scala support"
   homepage "https://polynote.org/"
   # TODO: consider switching back to dist when available: https://github.com/polynote/polynote/issues/1486
-  url "https://github.com/polynote/polynote/archive/refs/tags/0.7.1.tar.gz"
-  sha256 "00ec0b905f28b170b503ff6977cab7267bf2dd6aa28e5be21b947909fa964ee1"
+  url "https://github.com/polynote/polynote/archive/refs/tags/0.7.2.tar.gz"
+  sha256 "6802606b38c34b7e0e3717675f6d92cae5419d5927314c51b238bbd15f1d73e4"
   license "Apache-2.0"
 
   # Upstream marks all releases as "pre-release", so we have to use
