@@ -1,8 +1,8 @@
 class Libks < Formula
   desc "Foundational support for signalwire C products"
   homepage "https://github.com/signalwire/libks"
-  url "https://github.com/signalwire/libks/archive/refs/tags/v2.0.9.tar.gz"
-  sha256 "c3a352b49a0452a710e80ad9c19a318c4d946a33b5ff6094617f3d4cb9ca02e2"
+  url "https://github.com/signalwire/libks/archive/refs/tags/v2.0.10.tar.gz"
+  sha256 "cd0d8504870c2e0e1306e55fd27dede976ab9f3a919487bc10b526576d24d568"
   license all_of: [
     "MIT",
     "BSD-3-Clause", # src/ks_hash.c
@@ -12,12 +12,12 @@ class Libks < Formula
   head "https://github.com/signalwire/libks.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9ba56f2168609a91383abc75e3fac558628d5b729aa0bbdb98ee715b462b1948"
-    sha256 cellar: :any,                 arm64_sequoia: "8eae0c7fa3f85ddd3590395a47673945f59cd05bb895cee3f1dc668cc119914c"
-    sha256 cellar: :any,                 arm64_sonoma:  "7dde0eb9531c006912cd9760a066ed948abd7c2f74fedee0c8d9b72f289d52a8"
-    sha256 cellar: :any,                 sonoma:        "bd3a093a55efcec8aa4210e1e0e27aff50bb1fad3906b3987a20df01925a7ca0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8a61b1635a1bbf9e706a81f1a55e8b56c548c5e9c9715e3147e4ae57159d0ea0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ed3213ffd82b950d4c4ef618dbff54199021392f9e741e0eed49841a4efce896"
+    sha256 cellar: :any,                 arm64_tahoe:   "a4e047c7d6a018d97d15aed23f7898d8f1f4f0f46c7fe9ae790432b082e7cc1c"
+    sha256 cellar: :any,                 arm64_sequoia: "82aa683dcba005cb4012c17026023457c8effed0966553cd4b2bcd9549723f1b"
+    sha256 cellar: :any,                 arm64_sonoma:  "1a17d6bfb39fd8fd205dea626914b248aef3f3886cf1d3f977186b6275fcdc15"
+    sha256 cellar: :any,                 sonoma:        "6bfeeb306bea73531d3ce22ee0f92292024cbd1c20e3f1325cb14df1b149145a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4cf5d4dd4dfe67a804525da361f14112da1ebae458b30f7a135c1ff9963a51e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dfc07b908ad7fdd8b6eab80ff9d607542c225a1ef81f8fb061798ee812a68c18"
   end
 
   depends_on "cmake" => :build
