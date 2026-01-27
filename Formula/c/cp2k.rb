@@ -27,6 +27,7 @@ class Cp2k < Formula
 
   depends_on "fftw"
   depends_on "gcc" # for gfortran
+  depends_on "libint"
   depends_on "libxc"
   depends_on "open-mpi"
   depends_on "openblas"
@@ -38,28 +39,7 @@ class Cp2k < Formula
     cause "needs OpenMP support for C/C++ and Fortran"
   end
 
-  resource "libint" do
-    url "https://github.com/cp2k/libint-cp2k/releases/download/v2.6.0/libint-v2.6.0-cp2k-lmax-5.tgz"
-    sha256 "1cd72206afddb232bcf2179c6229fbf6e42e4ba8440e701e6aa57ff1e871e9db"
-  end
-
   def install
-    resource("libint").stage do
-      # Work around failure: ld: Assertion failed: (slot < _sideTableBuffer.size()), function addAtom
-      if DevelopmentTools.clang_build_version == 1500 && Hardware::CPU.arm?
-        inreplace "Makefile.in", "$(LTLINKLIBOPTS)", "\\0 -Wl,-ld_classic"
-      end
-
-      system "./configure", "--disable-static",
-                            "--enable-shared",
-                            "--enable-fortran",
-                            "--with-pic",
-                            *std_configure_args(prefix: libexec)
-      system "make"
-      ENV.deparallelize { system "make", "install" }
-      ENV.prepend_path "PKG_CONFIG_PATH", libexec/"lib/pkgconfig"
-    end
-
     # TODO: Add workaround to link to LLVM OpenMP (libomp) with gfortran after migrating OpenBLAS
     omp_args = []
     # if OS.mac?
@@ -87,9 +67,7 @@ class Cp2k < Formula
     # Avoid trying to access /proc/self/statm on macOS
     ENV.append "FFLAGS", "-D__NO_STATM_ACCESS" if OS.mac?
 
-    # Set -lstdc++ to allow gfortran to link libint
     cp2k_cmake_args = %W[
-      -DCMAKE_SHARED_LINKER_FLAGS=-lstdc++
       -DCMAKE_INSTALL_RPATH=#{rpath};#{rpath(target: libexec/"lib")}
       -DCP2K_BLAS_VENDOR=OpenBLAS
       -DCP2K_USE_LIBINT2=ON
