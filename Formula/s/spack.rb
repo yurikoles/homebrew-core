@@ -12,7 +12,7 @@ class Spack < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "8c8c171fcc01b16779749d9b5e3f664bf56435a8f63f4eb51486f8df62ea8a6b"
+    sha256 cellar: :any_skip_relocation, all: "5b9d292cf251fbbd0995691c36c9771913a67cc80647bd94dd95ceb94e49bea9"
   end
 
   uses_from_macos "python"
