@@ -12,12 +12,12 @@ class Nak < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7668cc62d9a202f81e589a1891968bf28e633c9c9bbe17cdd9612118fe549d3c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7668cc62d9a202f81e589a1891968bf28e633c9c9bbe17cdd9612118fe549d3c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7668cc62d9a202f81e589a1891968bf28e633c9c9bbe17cdd9612118fe549d3c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bd77f180ca87de80fbcf50776b71875ca2bacd60f9cf560ec9ddc10c86c80a73"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cbadd1b0bb79c2a927bb06d5faa99117922d6ffd405b6225113babc15a35bacf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "036996c39ab3b4e2b29b099e97064842ceca057f1b50a36a9be2d4ee047f23cf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "83d8266db96974a9fb68bb11ec32cc5d12cf3487cc37d43e2c2956a6542cc670"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "83d8266db96974a9fb68bb11ec32cc5d12cf3487cc37d43e2c2956a6542cc670"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "83d8266db96974a9fb68bb11ec32cc5d12cf3487cc37d43e2c2956a6542cc670"
+    sha256 cellar: :any_skip_relocation, sonoma:        "67c1ecd821ae7e02482ee65cb673771ce4f5ea16345d230d7dfa062f46682e87"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d00868b1ab245f562bd40d1a0ad8f71e2101f2f3ab0df26a4694aa7f3a2ac6f2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4864586fd39098cbcdc1f03a4e2ca6eaa5d56ae54a41390b79b38890c25c61a"
   end
 
   depends_on "go" => :build
