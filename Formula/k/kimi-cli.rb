@@ -3,18 +3,18 @@ class KimiCli < Formula
 
   desc "CLI agent for MoonshotAI Kimi platform"
   homepage "https://github.com/MoonshotAI/kimi-cli"
-  url "https://files.pythonhosted.org/packages/74/ed/ced20a381bbd2a26ae7b3bc76800fe8808a701316f8bc32a7985248f2182/kimi_cli-1.1.tar.gz"
-  sha256 "541e86cd0b5b21570195726931fcf28a16e7b9e85c833acc325f4f119b85479c"
+  url "https://files.pythonhosted.org/packages/32/3d/11722fdb12a9be1e166f735f68c56b9df7fbd8c3b05c96aabb0aecff48b1/kimi_cli-1.2.tar.gz"
+  sha256 "e8f04918d64e8927f499ba1ee26b693239114132cd12f06af6261bab769b8fbf"
   license "Apache-2.0"
   head "https://github.com/MoonshotAI/kimi-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b5ac1b702bf1a84ec0eeee334f12eba6d99aefb31f24b62c76b992239275495b"
-    sha256 cellar: :any,                 arm64_sequoia: "deaef4ccd5a3a6a41dd6796c62836944035dade4c1d8de00bef95a3ce9c3d41d"
-    sha256 cellar: :any,                 arm64_sonoma:  "43faed92c45734246bfd173b715e4016a4d00a59f1753d2cf738cc85d727ad8c"
-    sha256 cellar: :any,                 sonoma:        "f57178e58af28732251b0da4a1368fa53733e5ad25286d8fe481e5d857274273"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e4aea08607c184711e9419b5f1dfb89ff87cd4e87034ddaeb7767f734fd88652"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7d85a06a723322d5b4089f348c22fa8fc79026d6a41b774ce7f6a1b6567fd423"
+    sha256 cellar: :any,                 arm64_tahoe:   "f0590cc806deefa2033cd424f4df4a1970f317bb8bf32af48e62821979d425c5"
+    sha256 cellar: :any,                 arm64_sequoia: "be8b7bcc83ec8ded021001088eea814b381db268936303ac8d047fa098244d84"
+    sha256 cellar: :any,                 arm64_sonoma:  "711668644df66780357b3b4645cfdb6c952f8db14157f4be12a19bf9189fbd8b"
+    sha256 cellar: :any,                 sonoma:        "19d71d08cb8d5311118f043048624010ce68812d46f3c74aec510bf91f4c3fc0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f61818f1fd8e4d0557ac028bfdd37f1677f473653bd067f151e862be0fff10e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15c35f3b85d6aa7b41f14ad13e3a41c7b15f244c9b6f641522b83b8b018a4376"
   end
 
   depends_on "pkgconf" => :build
