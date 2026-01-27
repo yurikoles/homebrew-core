@@ -7,12 +7,12 @@ class Ty < Formula
   head "https://github.com/astral-sh/ty.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6e12dc2f476a1ea8ed3c122e35c481263b592cb2a81f306e4ba7337a60089517"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "663405252f6dedd8f3c154e6d68de78ebf8d83d53b80d2a57350db46f4e9c3cf"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "461dfd1e92153104223e11a150b8e446a65a01a6bc9d7e6b56641e7850c985dc"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b7a88178d01e9e4e31b29da82abb4423b46e04ae45a78cf4ff5dbf86eec237db"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d79011a13bae8dd1d011a52c4cdfeeecffc62f6beb06a644ec9f89e258bbb1d9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bfd30071a718bca572b9e2e937a66e21bacb816a823ce9ae4d5618c767ae4fad"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1f16eaee8f5d272011ff20ef40dafdbcd24d8f40aa4c172d08b6d88928816db0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "26cb0b5482cfd96211e52db032fbc33cb8d7f085476a333d5d95511187aabccb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7cbca8d0365803d49fbda48576bc7122da2358ceb03e1feaf89d3f3c55a5d92a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1e8442babce7029f2263056c2f7a9cf4dbf28d0eedd5cfaf0f3b7ceb05be6bea"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1fe46c25fcb53ff237748091bdda2fd3a8d6825a54f80088a30c3ac37297a202"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0f6d032ee434ceff0739e7e2426e91b4d8116414fd375a0fcc15b6aa573b416d"
   end
 
   depends_on "rust" => :build
