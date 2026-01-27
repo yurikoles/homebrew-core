@@ -1,8 +1,8 @@
 class Spack < Formula
   desc "Package manager that builds multiple versions and configurations of software"
   homepage "https://spack.io"
-  url "https://github.com/spack/spack/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "518474f546e87723c43b80143d83a51c065a8d54333c8140da6f48bc7d9e50c1"
+  url "https://github.com/spack/spack/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "a0160ae5e84adc81ac7832562a65ad79053d5c135996815dbb0d2eee6b2fca1c"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/spack/spack.git", branch: "develop"
 
