@@ -5,10 +5,10 @@ class Cmake < Formula
   head "https://gitlab.kitware.com/cmake/cmake.git", branch: "master"
 
   stable do
-    url "https://github.com/Kitware/CMake/releases/download/v4.2.2/cmake-4.2.2.tar.gz"
-    mirror "http://fresh-center.net/linux/misc/cmake-4.2.2.tar.gz"
-    mirror "http://fresh-center.net/linux/misc/legacy/cmake-4.2.2.tar.gz"
-    sha256 "bbda94dd31636e89eb1cc18f8355f6b01d9193d7676549fba282057e8b730f58"
+    url "https://github.com/Kitware/CMake/releases/download/v4.2.3/cmake-4.2.3.tar.gz"
+    mirror "http://fresh-center.net/linux/misc/cmake-4.2.3.tar.gz"
+    mirror "http://fresh-center.net/linux/misc/legacy/cmake-4.2.3.tar.gz"
+    sha256 "7efaccde8c5a6b2968bad6ce0fe60e19b6e10701a12fce948c2bf79bac8a11e9"
 
     # Backport support for Lua 5.5
     patch do
