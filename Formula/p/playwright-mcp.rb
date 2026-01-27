@@ -6,12 +6,7 @@ class PlaywrightMcp < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "687f55608fa971416d4e980c1dc7b58bc166f99f1c5f92ca468f40cc176ef280"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f507bdac5169fc8081f7d6e4469518d86d544673db2d12d78b2876a11061cb24"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f507bdac5169fc8081f7d6e4469518d86d544673db2d12d78b2876a11061cb24"
-    sha256 cellar: :any_skip_relocation, sonoma:        "dcfead9b8f622041e9b52f13820a37ee648c381bdc8c33d3c0a673556be609c0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1c0a2b9e9a1f0fbadd202a72ae4d354dcc3a24809da201512249d9cb8186560f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c0a2b9e9a1f0fbadd202a72ae4d354dcc3a24809da201512249d9cb8186560f"
+    sha256 cellar: :any_skip_relocation, all: "0ef6aac3304fc171909becf90f9722df767aca2a0381c484b9cf724c102e34b0"
   end
 
   depends_on "node"
