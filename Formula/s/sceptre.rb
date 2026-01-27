@@ -8,12 +8,12 @@ class Sceptre < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "cf785a8fa8e27132f09e37298d4dae9a12b4c03fef8642d1f588b676ead711c9"
-    sha256 cellar: :any,                 arm64_sequoia: "730b1422a240c9f169a839c6d26381151b9a6410bea1e0e6453cceb1ef0ead46"
-    sha256 cellar: :any,                 arm64_sonoma:  "59eb0a51f95a4b65b96d8d636270cc38d32f0c87bcf8f14e0dbe76d7530ccdd2"
-    sha256 cellar: :any,                 sonoma:        "63998e279de8a6f8981a455c404639b7f600c4dec755b4fd222d22ff0fea8619"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "802e3c56a3bbce3d2f582b69a8f51c24cfdb40571d62cb2bc6c170db6aa8b416"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "781ae568defbbfa6e1e1f69c619d7fda101ad032de1e591bd415b153ac46bb63"
+    sha256 cellar: :any,                 arm64_tahoe:   "87e3d977512683db98adf05910b0e3064034282f39c71fe079c158d0627c64e3"
+    sha256 cellar: :any,                 arm64_sequoia: "46b7c76e5eeee611936b9d039c7f6d5f7727c24be54410ac9b870d139a2b4e9d"
+    sha256 cellar: :any,                 arm64_sonoma:  "f20c990f721654423c6cd3adc4bc5ca2caec007aaec9c6e7c9e87fdfafa2a16f"
+    sha256 cellar: :any,                 sonoma:        "925e969949d54dde7485ae47703bec72d6a2f928d222c937dba380e1c28cc8ef"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "893fda47ff7148d2ce8b00e64c5bb18ee0c74b82a06965ec6e2539af40af6261"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb9132cc5eb20ed1fd5dba8d3047d9b976f995c61316e7413a09aa9b3b0b1f2f"
   end
 
   depends_on "certifi" => :no_linkage
