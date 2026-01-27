@@ -1,8 +1,8 @@
 class Victorialogs < Formula
   desc "Open source user-friendly database for logs from VictoriaMetrics"
   homepage "https://docs.victoriametrics.com/victorialogs/"
-  url "https://github.com/VictoriaMetrics/VictoriaLogs/archive/refs/tags/v1.43.1.tar.gz"
-  sha256 "96aead1b1d9b8cc6b2fd46448d9341ac215951e1032a7cd76b9a090eef0daf12"
+  url "https://github.com/VictoriaMetrics/VictoriaLogs/archive/refs/tags/v1.44.0.tar.gz"
+  sha256 "ce0933cb8ba9eabaff2bb8a1b397171f85209a7d2d04adc3a59c63cc9d084781"
   license "Apache-2.0"
 
   # The Git tags are interspersed with higher versions like 1.118.0, so we check
