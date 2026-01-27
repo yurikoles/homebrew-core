@@ -1,8 +1,8 @@
 class Libgr < Formula
   desc "GR framework: a graphics library for visualisation applications"
   homepage "https://gr-framework.org/"
-  url "https://github.com/sciapp/gr/archive/refs/tags/v0.73.21.tar.gz"
-  sha256 "ccc5a67f0e7116f65249d0bb5171fb09f9aa4f1e5133db355b4c77490e3c6170"
+  url "https://github.com/sciapp/gr/archive/refs/tags/v0.73.22.tar.gz"
+  sha256 "528872d82f313517b80ac9233300f6fa9a3083f98ef25585f77260e8985b8263"
   license "MIT"
 
   bottle do
