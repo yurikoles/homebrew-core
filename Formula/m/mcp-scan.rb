@@ -6,6 +6,7 @@ class McpScan < Formula
   url "https://files.pythonhosted.org/packages/fe/45/8b5ab0d13fe214c855f627a2552b2165f1f0d40861642757fd9f713e476e/mcp_scan-0.3.37.tar.gz"
   sha256 "d9164e47525acca0803b9485b01436ac1b7560d02a5114d6fcbbc0bc2b5434e2"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/invariantlabs-ai/mcp-scan.git", branch: "main"
 
   bottle do
@@ -137,8 +138,8 @@ class McpScan < Formula
   end
 
   resource "multidict" do
-    url "https://files.pythonhosted.org/packages/80/1e/5492c365f222f907de1039b91f922b93fa4f764c713ee858d235495d8f50/multidict-6.7.0.tar.gz"
-    sha256 "c6e99d9a65ca282e578dfea819cfa9c0a62b2499d8677392e09feaf305e9e6f5"
+    url "https://files.pythonhosted.org/packages/1a/c2/c2d94cbe6ac1753f3fc980da97b3d930efe1da3af3c9f5125354436c073d/multidict-6.7.1.tar.gz"
+    sha256 "ec6652a1bee61c53a3e5776b6049172c53b6aaba34f18c9ad04f82712bac623d"
   end
 
   resource "propcache" do
@@ -177,8 +178,8 @@ class McpScan < Formula
   end
 
   resource "python-multipart" do
-    url "https://files.pythonhosted.org/packages/78/96/804520d0850c7db98e5ccb70282e29208723f0964e88ffd9d0da2f52ea09/python_multipart-0.0.21.tar.gz"
-    sha256 "7137ebd4d3bbf70ea1622998f902b97a29434a9e8dc40eb203bbcf7c2a2cba92"
+    url "https://files.pythonhosted.org/packages/94/01/979e98d542a70714b0cb2b6728ed0b7c46792b695e3eaec3e20711271ca3/python_multipart-0.0.22.tar.gz"
+    sha256 "7340bef99a7e0032613f56dc36027b959fd3b30a787ed62d310e951f7c3a3a58"
   end
 
   resource "pyyaml" do
@@ -202,8 +203,8 @@ class McpScan < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/fb/d2/8920e102050a0de7bfabeb4c4614a49248cf8d5d7a8d01885fbb24dc767a/rich-14.2.0.tar.gz"
-    sha256 "73ff50c7c0c1c77c8243079283f4edb376f0f6442433aecb8ce7e6d0b92d1fe4"
+    url "https://files.pythonhosted.org/packages/a1/84/4831f881aa6ff3c976f6d6809b58cdfa350593ffc0dc3c58f5f6586780fb/rich-14.3.1.tar.gz"
+    sha256 "b8c5f568a3a749f9290ec6bddedf835cec33696bfc1e48bcfecb276c7386e4b8"
   end
 
   resource "shellingham" do
