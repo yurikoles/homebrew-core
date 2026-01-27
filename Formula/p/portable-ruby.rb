@@ -6,7 +6,6 @@ class PortableRuby < PortableFormula
   url "https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.1.tar.gz"
   sha256 "3924be2d05db30f4e35f859bf028be85f4b7dd01714142fd823e4af5de2faf9d"
   license "Ruby"
-  revision 1
 
   # This regex restricts matching to versions other than X.Y.0.
   livecheck do
@@ -150,6 +149,11 @@ class PortableRuby < PortableFormula
 
     abi_version = `#{bin}/ruby -rrbconfig -e 'print RbConfig::CONFIG["ruby_version"]'`
     abi_arch = `#{bin}/ruby -rrbconfig -e 'print RbConfig::CONFIG["arch"]'`
+
+    # Update incflags so that yaml.h (and other headers) can be found when building gems.
+    inreplace lib/"ruby/#{abi_version}/#{abi_arch}/rbconfig.rb" do |s|
+      s.sub!(/(CONFIG\["incflags"\] = )""/, "\\1\"-I$(prefix)/include\"")
+    end
 
     if OS.linux?
       # Don't restrict to a specific GCC compiler binary we used (e.g. gcc-5).
