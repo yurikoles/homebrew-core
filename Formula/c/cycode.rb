@@ -6,6 +6,7 @@ class Cycode < Formula
   url "https://files.pythonhosted.org/packages/3d/5f/589b70ae38b0513e258133e57a8da65b2e8eda99e2fc15286aa115183f0d/cycode-3.8.9.tar.gz"
   sha256 "0fd585b82917aa057727b5561651130d8f1f4c9c21b8de1dbcdc201ebb8ef1b4"
   license "MIT"
+  revision 1
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
   bottle do
@@ -122,8 +123,8 @@ class Cycode < Formula
   end
 
   resource "mcp" do
-    url "https://files.pythonhosted.org/packages/d5/2d/649d80a0ecf6a1f82632ca44bec21c0461a9d9fc8934d38cb5b319f2db5e/mcp-1.25.0.tar.gz"
-    sha256 "56310361ebf0364e2d438e5b45f7668cbb124e158bb358333cd06e49e83a6802"
+    url "https://files.pythonhosted.org/packages/fc/6d/62e76bbb8144d6ed86e202b5edd8a4cb631e7c8130f3f4893c3f90262b10/mcp-1.26.0.tar.gz"
+    sha256 "db6e2ef491eecc1a0d93711a76f28dec2e05999f93afd48795da1c1137142c66"
   end
 
   resource "mdurl" do
@@ -172,8 +173,8 @@ class Cycode < Formula
   end
 
   resource "python-multipart" do
-    url "https://files.pythonhosted.org/packages/78/96/804520d0850c7db98e5ccb70282e29208723f0964e88ffd9d0da2f52ea09/python_multipart-0.0.21.tar.gz"
-    sha256 "7137ebd4d3bbf70ea1622998f902b97a29434a9e8dc40eb203bbcf7c2a2cba92"
+    url "https://files.pythonhosted.org/packages/94/01/979e98d542a70714b0cb2b6728ed0b7c46792b695e3eaec3e20711271ca3/python_multipart-0.0.22.tar.gz"
+    sha256 "7340bef99a7e0032613f56dc36027b959fd3b30a787ed62d310e951f7c3a3a58"
   end
 
   resource "pyyaml" do
@@ -237,8 +238,8 @@ class Cycode < Formula
   end
 
   resource "types-python-dateutil" do
-    url "https://files.pythonhosted.org/packages/6a/36/06d01fb52c0d57e9ad0c237654990920fa41195e4b3d640830dabf9eeb2f/types_python_dateutil-2.9.0.20251115.tar.gz"
-    sha256 "8a47f2c3920f52a994056b8786309b43143faa5a64d4cbb2722d6addabdf1a58"
+    url "https://files.pythonhosted.org/packages/fe/41/4f8eb1ce08688a9e3e23709ed07089ccdeaf95b93745bfb768c6da71197d/types_python_dateutil-2.9.0.20260124.tar.gz"
+    sha256 "7d2db9f860820c30e5b8152bfe78dbdf795f7d1c6176057424e8b3fdd1f581af"
   end
 
   resource "urllib3" do
