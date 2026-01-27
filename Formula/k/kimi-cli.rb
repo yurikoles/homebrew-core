@@ -3,8 +3,8 @@ class KimiCli < Formula
 
   desc "CLI agent for MoonshotAI Kimi platform"
   homepage "https://github.com/MoonshotAI/kimi-cli"
-  url "https://files.pythonhosted.org/packages/6d/60/a147d7501397f9992fd29b21b45c842da753e8dac394728c356128506bfc/kimi_cli-0.88.tar.gz"
-  sha256 "387aaaaebd44e749d2374cde95a0353c1f6c5c6bc459f17c51448c66e614e2ec"
+  url "https://files.pythonhosted.org/packages/74/ed/ced20a381bbd2a26ae7b3bc76800fe8808a701316f8bc32a7985248f2182/kimi_cli-1.1.tar.gz"
+  sha256 "541e86cd0b5b21570195726931fcf28a16e7b9e85c833acc325f4f119b85479c"
   license "Apache-2.0"
   head "https://github.com/MoonshotAI/kimi-cli.git", branch: "main"
 
@@ -154,8 +154,8 @@ class KimiCli < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/60/3c/ec64b9a275ca22fa1cd3b6e77fefcf837b0732c890aa32d2bd21313d9b33/google_auth-2.47.0.tar.gz"
-    sha256 "833229070a9dfee1a353ae9877dcd2dec069a8281a4e72e72f77d4a70ff945da"
+    url "https://files.pythonhosted.org/packages/0c/41/242044323fbd746615884b1c16639749e73665b718209946ebad7ba8a813/google_auth-2.48.0.tar.gz"
+    sha256 "4f7e706b0cd3208a3d940a19a822c37a476ddba5450156c3e6624a71f7c841ce"
   end
 
   resource "google-genai" do
@@ -254,8 +254,8 @@ class KimiCli < Formula
   end
 
   resource "kosong" do
-    url "https://files.pythonhosted.org/packages/f0/68/27322a126af77e134c054dba9c14e063aa82d5c79b2358126042c86e3239/kosong-0.40.0.tar.gz"
-    sha256 "93ddc9f09dac195cc0e4a84188a260b8615f510da6dcb3268a7869d01c0796aa"
+    url "https://files.pythonhosted.org/packages/1a/1b/e2c92ea9f614d4faba7607c8918d462d660a9e5d4cef88d188ddb6b8e261/kosong-0.41.0.tar.gz"
+    sha256 "e1b4d0017ab194a197e403563912c6eebd5aaa7c11500fe472af61c24a892fc6"
   end
 
   resource "lazy-object-proxy" do
@@ -535,8 +535,8 @@ class KimiCli < Formula
   end
 
   resource "wcwidth" do
-    url "https://files.pythonhosted.org/packages/98/0a/dc5110cc99c39df65bac29229c4b637a8304e0914850348d98974c8ecfff/wcwidth-0.4.0.tar.gz"
-    sha256 "46478e02cf7149ba150fb93c39880623ee7e5181c64eda167b6a1de51b7a7ba1"
+    url "https://files.pythonhosted.org/packages/64/6e/62daec357285b927e82263a81f3b4c1790215bc77c42530ce4a69d501a43/wcwidth-0.5.0.tar.gz"
+    sha256 "f89c103c949a693bf563377b2153082bf58e309919dfb7f27b04d862a0089333"
   end
 
   resource "websockets" do
