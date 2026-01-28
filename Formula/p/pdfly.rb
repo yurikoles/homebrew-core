@@ -8,6 +8,14 @@ class Pdfly < Formula
   license "BSD-3-Clause"
   revision 6
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "89e61ff1b6e24243d49890c610b9daf69dbe1760b4ede1da30a233de46f5c00e"
+    sha256 cellar: :any,                 arm64_sequoia: "5011e985897ebe924c942a7a97b7ec0a99b73a20d88b2ed855b1117c3a5e7c64"
+    sha256 cellar: :any,                 arm64_sonoma:  "10f9a5cedeb8a69845f6380b717f3391042d0c9e255501705c2a449c3501afe4"
+    sha256 cellar: :any,                 sonoma:        "d26aa68a610a7354eacb8c282d8f4690f084159ce0db21300465b3aebec7b507"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d50e1da53555044f1d351afa89eb6b874d153e51b568386d684bf0e8ba333698"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build # for bcrypt
   depends_on "certifi" => :no_linkage
