@@ -11,14 +11,12 @@ class TransmissionCli < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "25ddc150f211ccc39b47eb5d45659b61f104ae2d777f7980ca19732abb9a2fb9"
-    sha256 arm64_sequoia: "542c4fe40c57c427680eb5a982e0a6437bbaa9adac9b174fcb5f9fc5cf98dffe"
-    sha256 arm64_sonoma:  "2e13ac5fce4a74345d5e02ae860fea0b05c7d6fbe7f94a448d14a121d9586fea"
-    sha256 arm64_ventura: "61e957019a73bb95a8805af721ce6b7f9f9acdc30c6bc8a65ab0b47b273f869b"
-    sha256 sonoma:        "498982b372e53a61addf98d76169e5c01851d89bce7b70bc3915894f184ca558"
-    sha256 ventura:       "f25b459d033bdf9842d66e09ec65989a0336caca52b195206b6dfaf39cd9ee6d"
-    sha256 arm64_linux:   "a34e16ce8d16148d11ff1eedca2ba0bbfa45a5942a272d281d88d9936be05290"
-    sha256 x86_64_linux:  "d05e4a68c07c6fa2b73df241d91d566d6af0e5ea0008cdc360ad6e65d7379624"
+    sha256 arm64_tahoe:   "9b87e790d245612dd2e8fd0ad870a9f0cbfa584638672cb9a2377e28a36dc88f"
+    sha256 arm64_sequoia: "3f71576bc3030780b5d28040ab385a2c8fb102c9bba02e77f589c4dce479e615"
+    sha256 arm64_sonoma:  "e879fc4ce079fc174720583304f728b8df1c42d6da274cc2a8d7fb00ce5857ad"
+    sha256 sonoma:        "7606941314d87058ccad12e8fc382ac578b8eb6107a28531d83ebda92a60077f"
+    sha256 arm64_linux:   "8a4f3e96438557d4e7481a63707957ce6e0e54d24b5587460fec310a899a8b89"
+    sha256 x86_64_linux:  "df9b4532ad338a71d2a1e59926103fa02c1a35911da8f138848a80c8aa7fc421"
   end
 
   depends_on "cmake" => :build
