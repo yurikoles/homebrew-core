@@ -33,7 +33,8 @@ class DockerCompose < Formula
       -s -w
       -X github.com/docker/compose/v#{version.major}/internal.Version=#{version}
     ]
-    system "go", "build", *std_go_args(ldflags:), "./cmd"
+    tags = %w[fsnotify] if OS.mac?
+    system "go", "build", *std_go_args(ldflags:, tags:), "./cmd"
 
     (lib/"docker/cli-plugins").install_symlink bin/"docker-compose"
   end
