@@ -1,16 +1,14 @@
 class Form < Formula
   desc "Symbolic manipulation system"
   homepage "https://www.nikhef.nl/~form/"
-  url "https://github.com/form-dev/form/releases/download/v4.3.1/form-4.3.1.tar.gz"
-  sha256 "f1f512dc34fe9bbd6b19f2dfef05fcb9912dfb43c8368a75b796ec472ee8bbce"
+  url "https://github.com/form-dev/form/releases/download/v5.0.0/form-5.0.0.tar.gz"
+  sha256 "10d22acf2f0acf831b494e6a73682828980b9054ea8ec2b5dc46677dca8d6518"
   license "GPL-3.0-or-later"
 
   livecheck do
     url :stable
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "68c5aae18792314ad080873826f587a7648e493621d5723cae8c45c7bb330bf5"
@@ -28,6 +26,7 @@ class Form < Formula
   end
 
   depends_on "gmp"
+  depends_on "mpfr"
 
   uses_from_macos "zlib"
 
