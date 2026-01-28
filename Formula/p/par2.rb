@@ -1,16 +1,14 @@
 class Par2 < Formula
   desc "Parchive: Parity Archive Volume Set for data recovery"
   homepage "https://github.com/Parchive/par2cmdline"
-  url "https://github.com/Parchive/par2cmdline/releases/download/v1.0.0/par2cmdline-1.0.0.tar.bz2"
-  sha256 "d4ecfd4b6a6fc28cd5b4685efdb6d305139c755d339313925f8728fab7a37cf2"
+  url "https://github.com/Parchive/par2cmdline/releases/download/v1.1.0/par2cmdline-1.1.0.tar.bz2"
+  sha256 "72db917f0e73c44833f6f8b4fb407d872076cc38daf111064ffcb852f674c4c1"
   license "GPL-2.0-or-later"
 
   livecheck do
     url :stable
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "da1851248ab9cdff094faae097c3cdca735b950851df191f6f8d4f48e17c483b"
