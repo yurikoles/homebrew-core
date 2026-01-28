@@ -18,11 +18,9 @@ class Groestlcoin < Formula
   depends_on "boost" => :build
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
-  depends_on "berkeley-db@5"
   depends_on "capnp"
   depends_on "libevent"
   depends_on macos: :big_sur
-  depends_on "miniupnpc"
   depends_on "zeromq"
 
   uses_from_macos "sqlite"
@@ -37,7 +35,7 @@ class Groestlcoin < Formula
   end
 
   def install
-    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", "-DWITH_ZMQ=ON", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
     pkgshare.install "share/rpcauth"
