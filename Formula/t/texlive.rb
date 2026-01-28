@@ -69,10 +69,10 @@ class Texlive < Formula
   depends_on "potrace"
   depends_on "pstoedit"
   depends_on "python@3.14"
+  depends_on "tcl-tk"
 
   uses_from_macos "ncurses"
   uses_from_macos "ruby"
-  uses_from_macos "tcl-tk"
   uses_from_macos "zlib"
 
   on_linux do
