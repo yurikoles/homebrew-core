@@ -1,10 +1,16 @@
 class ArpScanRs < Formula
   desc "ARP scan tool written in Rust for fast local network scans"
   homepage "https://github.com/kongbytes/arp-scan-rs"
-  url "https://github.com/kongbytes/arp-scan-rs/archive/refs/tags/v0.14.0.tar.gz"
-  sha256 "9cd8ae882d47aef59f79ceedc797a9697b0f1b81916488a43a84b0a807b482fa"
   license "AGPL-3.0-or-later"
   head "https://github.com/kongbytes/arp-scan-rs.git", branch: "master"
+
+  stable do
+    url "https://github.com/kongbytes/arp-scan-rs/archive/refs/tags/v0.15.1.tar.gz"
+    sha256 "6d478b47bdf00c2618e414d87af496892c5027a5a3d4a438ab92c084c36fa5b6"
+
+    # Workaround for https://github.com/kongbytes/arp-scan-rs/issues/9
+    patch :DATA
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "402e25b075591a2b324adfb852c1a457d445ea9821c6be9f6056f07fe38308ee"
@@ -30,3 +36,26 @@ class ArpScanRs < Formula
     assert_match "Default network interface", shell_output("#{bin}/arp-scan -l")
   end
 end
+
+__END__
+diff --git a/Cargo.toml b/Cargo.toml
+index c0db14d..9b49b3b 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -21,9 +21,6 @@ ansi_term = "0.12"
+ rand = "0.9"
+ ctrlc = "3.5"
+ 
+-[target.'cfg(target_os = "linux")'.dependencies]
+-caps = "0.5.6"
+-
+ # Network
+ pnet = "0.35"
+ pnet_datalink = "0.35"
+@@ -35,3 +32,6 @@ csv = "1.4"
+ serde = { version = "1.0", features = ["derive"] }
+ serde_json = "1.0"
+ serde_yaml = "0.9"
++
++[target.'cfg(target_os = "linux")'.dependencies]
++caps = "0.5.6"
