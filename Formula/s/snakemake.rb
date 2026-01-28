@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/31/d2/3e4fa82ea177d1b9b64619f10852e5de37dc12306cbcd32d11fef5e3cf64/snakemake-9.15.0.tar.gz"
-  sha256 "bfe08dca6c2b3ee9d8ccfcbb5c566af92bc88a671f6c941a3b904587e94210b4"
+  url "https://files.pythonhosted.org/packages/c0/3b/3283a951ea481997b2be6637de6595a21631c801b686b0e76cb224440740/snakemake-9.16.0.tar.gz"
+  sha256 "9eda0b2dacddff6985ecad1c5fa271afce0319b188f29f2dd4d9dc9bda3cea33"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -217,8 +217,8 @@ class Snakemake < Formula
   end
 
   resource "throttler" do
-    url "https://files.pythonhosted.org/packages/b4/22/638451122136d5280bc477c8075ea448b9ebdfbd319f0f120edaecea2038/throttler-1.2.2.tar.gz"
-    sha256 "d54db406d98e1b54d18a9ba2b31ab9f093ac64a0a59d730c1cf7bb1cdfc94a58"
+    url "https://files.pythonhosted.org/packages/ce/3f/47baf510c31e0e52ac0d80d9071e5e166ca069167fee4a6c13841f9d5f5f/throttler-1.2.3.tar.gz"
+    sha256 "d2f5b0b499d62f1fc984dcac8043450b606549b0097753a9c8a707f7427c27e1"
   end
 
   resource "traitlets" do
