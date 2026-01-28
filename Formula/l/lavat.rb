@@ -1,12 +1,10 @@
 class Lavat < Formula
   desc "Lava lamp simulation using metaballs in the terminal"
   homepage "https://github.com/AngelJumbo/lavat"
-  url "https://github.com/AngelJumbo/lavat/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "e8ccda9798270838244bf60497062507cae75b6ab9fb198c54b5a005bea8b87f"
+  url "https://github.com/AngelJumbo/lavat/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "c5364203a75395953560b173fae90c316b753a046acb8f557c9e684eec6d76ba"
   license "MIT"
   head "https://github.com/AngelJumbo/lavat.git", branch: "main"
-
-  no_autobump! because: :requires_manual_review
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f684f1efa1724f5d7fe73d03eb9acfb5f79309a13561088894acb99fd7f2439e"
