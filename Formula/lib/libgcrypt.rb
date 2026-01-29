@@ -1,8 +1,8 @@
 class Libgcrypt < Formula
   desc "Cryptographic library based on the code from GnuPG"
   homepage "https://gnupg.org/related_software/libgcrypt/"
-  url "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.11.2.tar.bz2"
-  sha256 "6ba59dd192270e8c1d22ddb41a07d95dcdbc1f0fb02d03c4b54b235814330aac"
+  url "https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.12.0.tar.bz2"
+  sha256 "0311454e678189bad62a7e9402a9dd793025efff6e7449898616e2fc75e0f4f5"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
 
   livecheck do
