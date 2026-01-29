@@ -4,7 +4,7 @@ class DamaskGrid < Formula
   url "https://damask-multiphysics.org/download/damask-3.0.2.tar.xz"
   sha256 "82f9b3aefde87193c12a7c908f42b711b278438f6cad650918989e37fb6dbde4"
   license "AGPL-3.0-only"
-  revision 2
+  revision 3
 
   # The first-party website doesn't always reflect the newest version, so we
   # check GitHub releases for now.
@@ -25,7 +25,7 @@ class DamaskGrid < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "fftw"
-  depends_on "gcc"
+  depends_on "gcc" # gfortran
   depends_on "hdf5-mpi"
   depends_on "metis"
   depends_on "open-mpi"
@@ -35,41 +35,54 @@ class DamaskGrid < Formula
 
   uses_from_macos "zlib"
 
+  on_macos do
+    depends_on "libomp"
+  end
+
   # Support PETSc 3.24.x
   # https://github.com/damask-multiphysics/DAMASK/commit/dc9aa42f04b9f5172b499c94328a22fed0ec6d9a
   patch :DATA
 
   def install
+    # Help link to libomp on macOS to avoid mixed OpenMP
+    inreplace "cmake/Compiler-GNU.cmake", '"-fopenmp"', '"-Xpreprocessor -fopenmp -lomp"' if OS.mac?
+
     ENV["PETSC_DIR"] = Formula["petsc"].opt_prefix
     args = %w[
       -DDAMASK_SOLVER=grid
     ]
-    system "cmake", "-S", ".", "-B", "build-grid", *args, *std_cmake_args
-    system "cmake", "--build", "build-grid", "--target", "install"
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
     pkgshare.install "examples/grid"
   end
 
   test do
-    cp_r pkgshare/"grid", testpath
-    cd "grid" do
-      inreplace "tensionX.yaml" do |s|
-        s.gsub! " t: 10", " t: 1"
-        s.gsub! " t: 60", " t: 1"
-        s.gsub! "N: 60", "N: 1"
-        s.gsub! "N: 40", "N: 1"
-      end
-
-      args = %w[
-        -w .
-        -m material.yaml
-        -g 20grains16x16x16.vti
-        -l tensionX.yaml
-        -j output
-      ]
-      system "#{bin}/DAMASK_grid", *args
-      assert_path_exists "output.hdf5", "output.hdf5 must exist"
+    if OS.mac?
+      # Avoid mixed OpenMP linkage
+      require "utils/linkage"
+      libgomp = Formula["gcc"].opt_lib/"gcc/current/libgomp.dylib"
+      refute Utils.binary_linked_to_library?(bin/"DAMASK_grid", libgomp), "Unwanted linkage to libgomp!"
     end
+
+    cp_r pkgshare/"grid/.", testpath
+    inreplace "tensionX.yaml" do |s|
+      s.gsub! " t: 10", " t: 1"
+      s.gsub! " t: 60", " t: 1"
+      s.gsub! "N: 60", "N: 1"
+      s.gsub! "N: 40", "N: 1"
+    end
+
+    args = %w[
+      -w .
+      -m material.yaml
+      -g 20grains16x16x16.vti
+      -l tensionX.yaml
+      -j output
+    ]
+    system bin/"DAMASK_grid", *args
+    assert_path_exists "output.hdf5", "output.hdf5 must exist"
   end
 end
 
