@@ -1,17 +1,17 @@
 class Promptfoo < Formula
   desc "Test your LLM app locally"
   homepage "https://promptfoo.dev/"
-  url "https://registry.npmjs.org/promptfoo/-/promptfoo-0.120.18.tgz"
-  sha256 "1aade283eef8a96873aea6b5e93d04a62b3cbcbbbc14a15e9682b213c175b57c"
+  url "https://registry.npmjs.org/promptfoo/-/promptfoo-0.120.19.tgz"
+  sha256 "9f5af22119b3bd032a74c6046efb901b12f325d6462d9538664fb2b21498e053"
   license "MIT"
 
   bottle do
-    sha256                               arm64_tahoe:   "4756b9c7867953d42d2880f072b2628e05fbf0b7746e722cecf72b7d76c5abd1"
-    sha256                               arm64_sequoia: "5c3bccf72cb640e71b41c2b7d1b6f86aa76a0f12e6b7626a490e89dfefad6783"
-    sha256                               arm64_sonoma:  "97026bc28c456306058455fe892a2085584180f9b0c2d39ac3dcfc93e054f7c0"
-    sha256                               sonoma:        "dcdb10a351d46b35fa4d77d93fa5b1b68fd1d030ae050da5a7a4f666b8353d99"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c96f593c32f432b56d5e1316a33ddd8bc40e219fa2e6d0574aaa8d58a2d88de1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "54abb5a09ee0270ede6d90431ed66ffd8a777fd3dce6438acc9a6ab19ac5c39f"
+    sha256                               arm64_tahoe:   "0b016a253f39b1058914e0b727f26349ca6cf635c394efd562248d469ec25f8a"
+    sha256                               arm64_sequoia: "9bb81546314b37b8a4bf7cf92a75e4f8005b0f82a3e6c502415a7d86242409fa"
+    sha256                               arm64_sonoma:  "dc57e8dd29216211957d51dbb9575ca2e9263ca6907096f1476d59feae3df652"
+    sha256                               sonoma:        "36d4027445482c8f1d5ac3f1e7cb88b61a20ee4f29fb684569e2874ef2f40280"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "05902d4a6680f9c1b03143bd57fe06f79541a5e69c832caf919b50a0086b8723"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "010cae127008b0ca1c97abe963faa450e88ca180f8d323eb5ebc1cac46bc8acf"
   end
 
   depends_on "glib"
@@ -36,8 +36,8 @@ class Promptfoo < Formula
   end
 
   resource "node-gyp" do
-    url "https://registry.npmjs.org/node-gyp/-/node-gyp-12.1.0.tgz"
-    sha256 "492bca8e813411386e61e488f95b375262aa8f262e6e8b20d162e26bdf025f16"
+    url "https://registry.npmjs.org/node-gyp/-/node-gyp-12.2.0.tgz"
+    sha256 "8689bbeb45a3219dfeb5b05a08d000d3b2492e12db02d46c81af0bee5c085fec"
   end
 
   def install
