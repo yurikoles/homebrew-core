@@ -3,8 +3,8 @@ class Gersemi < Formula
 
   desc "Formatter to make your CMake code the real treasure"
   homepage "https://github.com/BlankSpruce/gersemi"
-  url "https://files.pythonhosted.org/packages/5d/bc/0beae971dba37a69e4576ad3a184ac9f59003faf85cf19630738be0d041f/gersemi-0.25.3.tar.gz"
-  sha256 "3eef90f46e959c5da6ed7257560269c42c34ebecc4d3d4551dbb5d9d46bc84b8"
+  url "https://files.pythonhosted.org/packages/4f/dd/c791442e6cc4279b14b7d54ca31c9824a5e0f8b7c9d11e738430fccbde00/gersemi-0.25.4.tar.gz"
+  sha256 "834b68e663f746d2c0af54bd9bd573ae02306b76be87ab180c52c05a1b403206"
   license "MPL-2.0"
 
   bottle do
