@@ -1,8 +1,8 @@
 class RancherCli < Formula
   desc "Unified tool to manage your Rancher server"
   homepage "https://github.com/rancher/cli"
-  url "https://github.com/rancher/cli/archive/refs/tags/v2.13.1.tar.gz"
-  sha256 "e6893558d3168007e504e19977ec4c7e6cf58beb6c864214911b97a344b5e978"
+  url "https://github.com/rancher/cli/archive/refs/tags/v2.13.2.tar.gz"
+  sha256 "e3c12899efe4f1c98af5e676d7e8a637f3b6115ad0391013a10e58058bfc1e9d"
   license "Apache-2.0"
   head "https://github.com/rancher/cli.git", branch: "main"
 
@@ -30,7 +30,7 @@ class RancherCli < Formula
   end
 
   test do
-    assert_match "Failed to parse SERVERURL", shell_output("#{bin}/rancher login localhost -t foo 2>&1", 1)
+    assert_match "failed to parse SERVERURL", shell_output("#{bin}/rancher login localhost -t foo 2>&1", 1)
     assert_match "invalid token", shell_output("#{bin}/rancher login https://127.0.0.1 -t foo 2>&1", 1)
   end
 end
