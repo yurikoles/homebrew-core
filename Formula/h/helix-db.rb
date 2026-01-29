@@ -1,8 +1,8 @@
 class HelixDb < Formula
   desc "Open-source graph-vector database built from scratch in Rust"
   homepage "https://helix-db.com"
-  url "https://github.com/HelixDB/helix-db/archive/refs/tags/v2.2.5.tar.gz"
-  sha256 "6229ce5c5fdf7cb056a1eb31ef5aa1553ee974fec1e2c5723a3679fdd0a1912f"
+  url "https://github.com/HelixDB/helix-db/archive/refs/tags/v2.2.6.tar.gz"
+  sha256 "5b17329320920f7b962efa1d91b1dad3e4c96f6d43ff764a85b774c69516dca0"
   license "AGPL-3.0-only"
 
   bottle do
@@ -15,6 +15,7 @@ class HelixDb < Formula
   end
 
   depends_on "rust"
+
   on_linux do
     depends_on "openssl@3"
   end
@@ -24,13 +25,15 @@ class HelixDb < Formula
   end
 
   test do
-    assert_match "Initializing Helix project", shell_output("#{bin}/helix init")
+    project = testpath.to_s.split("/").last
+    assert_match "Initialized '#{project}' successfully", shell_output("#{bin}/helix init")
+
     assert_path_exists testpath/"helix.toml"
     assert_path_exists testpath/"db"
     assert_path_exists testpath/"db/queries.hx"
     assert_path_exists testpath/"db/schema.hx"
 
-    assert_match "SUCCESS", shell_output("#{bin}/helix add local 2>&1")
+    assert_match "Added '#{project}' successfully", shell_output("#{bin}/helix add local 2>&1")
     assert_match "already exists in helix.toml", shell_output("#{bin}/helix add local 2>&1", 1)
 
     (testpath/"db/schema.hx ").write "N::User { name: String }"
