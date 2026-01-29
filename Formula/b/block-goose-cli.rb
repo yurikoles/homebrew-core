@@ -1,8 +1,8 @@
 class BlockGooseCli < Formula
   desc "Open source, extensible AI agent that goes beyond code suggestions"
   homepage "https://block.github.io/goose/"
-  url "https://github.com/block/goose/archive/refs/tags/v1.21.2.tar.gz"
-  sha256 "e52105b0c4c24ba2c31175ee8fef562af62c7e82e8b3b94abf64566f8d448fe7"
+  url "https://github.com/block/goose/archive/refs/tags/v1.22.0.tar.gz"
+  sha256 "08b4655c75ec0551dd01b4927e19c23fde4645612d478d8f0eb4b5fbb70ba52f"
   license "Apache-2.0"
   head "https://github.com/block/goose.git", branch: "main"
 
