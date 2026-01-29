@@ -1,18 +1,9 @@
 class Watch < Formula
   desc "Executes a program periodically, showing output fullscreen"
   homepage "https://gitlab.com/procps-ng/procps"
+  url "https://downloads.sourceforge.net/project/procps-ng/Production/procps-ng-4.0.6.tar.xz"
+  sha256 "67bea6fbc3a42a535a0230c9e891e5ddfb4d9d39422d46565a2990d1ace15216"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-
-  stable do
-    url "https://downloads.sourceforge.net/project/procps-ng/Production/procps-ng-4.0.5.tar.xz"
-    sha256 "c2e6d193cc78f84cd6ddb72aaf6d5c6a9162f0470e5992092057f5ff518562fa"
-
-    # guard `SIGPOLL` to fix build on macOS, upstream pr ref, https://gitlab.com/procps-ng/procps/-/merge_requests/246
-    patch do
-      url "https://gitlab.com/procps-ng/procps/-/commit/2dc340e47669e0b0df7f71ff082e05ac5fa36615.diff"
-      sha256 "a6ae69b3aff57491835935e973b52c8b309d3943535537ff33a24c78d18d11aa"
-    end
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "9c5d3d966dd480ec6c0db515cbc01609736ece1123e1069d1b99d5199431f143"
