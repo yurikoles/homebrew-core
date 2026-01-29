@@ -5,6 +5,15 @@ class Dbcsr < Formula
   sha256 "fa5a4aeba0a07761511af2c26c779bd811b5ea0ef06a5d94535b6dd7b2e0ce59"
   license "GPL-2.0-or-later"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "2baae452ccf21e43a44b6ce2ad134398d68472651d9d27a4b8e95b4a56a9e269"
+    sha256 cellar: :any,                 arm64_sequoia: "e7efc269f64b82c1e2bcebb2e13f9c467ef9d410a25e83301414eeb8d98ee350"
+    sha256 cellar: :any,                 arm64_sonoma:  "d3bfb3075c5772492e86c5a0b15252b9eef61a8ec407cdf0ae4f5ef45041957c"
+    sha256 cellar: :any,                 sonoma:        "c7b10954c91ef37a3baba264687e88b5ccf0256244ec0ec5ffc701ee3305818e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c69b78b719f7d8332acf627f943b7befbbdf7645b11bee16b5bc7939c677f7ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "79dbffe498816deaada338e25d783eb51ff6338e2b6df63e1a3c48cc21fce0a0"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "fypp" => :build
   depends_on "gcc" # for gfortran
