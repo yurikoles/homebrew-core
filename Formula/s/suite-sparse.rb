@@ -11,6 +11,7 @@ class SuiteSparse < Formula
     "GPL-3.0-only",
     any_of: ["LGPL-3.0-or-later", "GPL-2.0-or-later"],
   ]
+  revision 1
 
   livecheck do
     url :stable
@@ -60,5 +61,14 @@ class SuiteSparse < Formula
                    "-lsuitesparseconfig", "-lklu"
     assert_path_exists testpath/"test"
     assert_match "x [0] = 1", shell_output("./test")
+
+    if OS.mac?
+      # Avoid mixed OpenMP linkage
+      require "utils/linkage"
+      libgomp = Formula["gcc"].opt_lib/"gcc/current/libgomp.dylib"
+      lib.glob("*.dylib").map(&:realpath).uniq.each do |dylib|
+        refute Utils.binary_linked_to_library?(dylib, libgomp), "Unwanted linkage to libgomp in #{dylib.basename}!"
+      end
+    end
   end
 end
