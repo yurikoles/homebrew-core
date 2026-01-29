@@ -1,8 +1,8 @@
 class Ocp < Formula
   desc "UNIX port of the Open Cubic Player"
   homepage "https://stian.cubic.org/project-ocp.php"
-  url "https://stian.cubic.org/ocp/ocp-3.1.1.tar.xz"
-  sha256 "33f5c780058eaf8098916b92ee4676c3d6bfce1a2abed39c19cd38154fdccba7"
+  url "https://stian.cubic.org/ocp/ocp-3.1.2.tar.xz"
+  sha256 "6bfa006bb0177c38fc000fce7e370961b0a7211d359a91c490cbb858afa992d9"
   license "GPL-2.0-or-later"
   head "https://github.com/mywave82/opencubicplayer.git", branch: "master"
 
@@ -50,18 +50,12 @@ class Ocp < Formula
 
   # Fix qoaplay.c:226:5: error: expected expression
   # PR ref: https://github.com/mywave82/opencubicplayer/pull/147
+  # pin to 16.0.02 to use precompiled fonts
+  # https://github.com/mywave82/opencubicplayer/blob/master/mingw/versionsconf.sh#L20
   resource "unifont" do
     url "https://ftpmirror.gnu.org/gnu/unifont/unifont-16.0.02/unifont-16.0.02.tar.gz"
     sha256 "f128ec8763f2264cd1fa069f3195631c0b1365366a689de07b1cb82387aba52d"
   end
-
-  patch do
-    url "https://github.com/mywave82/opencubicplayer/commit/9afa7489578258e6f07196a177dcbb7aa014ffe2.patch?full_index=1"
-    sha256 "f6dfa4da0815e5dd70ba7463c0ebbfb4e1a1965f9cac70e63e897c3b3dfe1c9c"
-  end
-
-  # pin to 16.0.02 to use precompiled fonts
-  # https://github.com/mywave82/opencubicplayer/blob/master/mingw/versionsconf.sh#L20
 
   def install
     # Required for SDL2
