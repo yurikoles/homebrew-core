@@ -11,13 +11,12 @@ class Cp2k < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_tahoe:   "7af6ab77ed39609075e8e08c7921f405c024dbf045dde7cf1ce6164aac550fd8"
-    sha256 arm64_sequoia: "142ab8353ffe343a3adbb5bc83841a6037f1433379f7371ffa3b97e9ca33b051"
-    sha256 arm64_sonoma:  "ff960f844b190cdffe23054a7d234012baf132db17928f2ffa4bb98c8023d946"
-    sha256 sonoma:        "2b7c500da363bbb9a7466c1ab3612827803b769b689b55194cb62efbc9074c52"
-    sha256 arm64_linux:   "14f388d665962f10f5692d5c280a150b79bc228ad93418e54e8befda5e30c590"
-    sha256 x86_64_linux:  "7f19e8f4da26c16b8f3ff8f5a7c8965d6defe54e1212a8a5b20f8be87d0fee9a"
+    sha256 arm64_tahoe:   "e70af7e7a56909fedd28848c17b44ce00c29f34c12c0fbb723be10723ee82674"
+    sha256 arm64_sequoia: "f018ca0d07f46bda2f513bc82667d52244cbab4f1cacf6f1fcdc35afd56075ea"
+    sha256 arm64_sonoma:  "5bb30a10df127ddec8771b2617f714916179eb2c3d20d61ed90b5be84728e998"
+    sha256 sonoma:        "ef7f7871b366cefad40871dd9673af9fd3c17097a081328b9043e422ad410714"
+    sha256 arm64_linux:   "e23fe5a58d5dc1d27d7ebc8984a32113ac7eb57c725b34cfab058d828e35d0cb"
+    sha256 x86_64_linux:  "74b6992544967c31921136c39dc228201b92d46b32439617085cd263d0bb52b4"
   end
 
   depends_on "cmake" => :build
