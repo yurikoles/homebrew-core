@@ -3,8 +3,8 @@ class Tmt < Formula
 
   desc "Test Management Tool"
   homepage "https://tmt.readthedocs.io"
-  url "https://files.pythonhosted.org/packages/05/ea/b3c92be257a13a1617f1c3be053d938881c63a851caa44a751fedf9c40d8/tmt-1.65.0.tar.gz"
-  sha256 "1cf7e6fe784aa842644cfced7f3f007551da1a1dfb27e1837c75095f435587a2"
+  url "https://files.pythonhosted.org/packages/4f/37/b4e604f1c392790e57bb02eb673a0031c0874e512bfe2bbb1262b2b01dc1/tmt-1.66.0.tar.gz"
+  sha256 "43fd8ea9f3423f2ae2047261b77e6f1ffc4162d2d27b80611e529dcc42c99f6c"
   license "MIT"
 
   bottle do
@@ -90,8 +90,8 @@ class Tmt < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
-    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   resource "pint" do
