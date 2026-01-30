@@ -1,24 +1,26 @@
 class Shellshare < Formula
-  include Language::Python::Shebang
-
   desc "Live Terminal Broadcast"
   homepage "https://github.com/vitorbaptista/shellshare"
-  url "https://github.com/vitorbaptista/shellshare/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "bc56d21bcef73aa2c40cd689c84cf8a0c8d2682e76b1f48e8f7ff53b7325f72e"
+  url "https://github.com/vitorbaptista/shellshare/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "3fcf05ffe220d9bb2af7706d0e3e6b3b24594861a5a249cce2ea6cb90dbdbf8c"
   license "Apache-2.0"
+  head "https://github.com/vitorbaptista/shellshare.git", branch: "master"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "ba4ddd42e53194b47c2128991ff4bc17e5eace09dd41819771fe3bd9fd02f54f"
-  end
-
-  uses_from_macos "python"
+  depends_on "rust" => :build
 
   def install
-    rewrite_shebang detected_python_shebang(use_python_from_path: true), "public/bin/shellshare"
-    bin.install "public/bin/shellshare"
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
-    system bin/"shellshare", "-v"
+    assert_match version.to_s, shell_output("#{bin}/shellshare --version")
+
+    port = free_port
+
+    Open3.popen3(bin/"shellshare", "--server", "http://localhost:#{port}") do |_, stdout, _, w|
+      assert_match("Sharing terminal", stdout.readline)
+    ensure
+      Process.kill "TERM", w.pid
+    end
   end
 end
