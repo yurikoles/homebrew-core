@@ -6,7 +6,7 @@ class McpGoogleSheets < Formula
   url "https://files.pythonhosted.org/packages/49/5c/f2a7e5bfc4557ad2fd7559a2dcd75633e5ecef9673a2070fe5b685fc6b14/mcp_google_sheets-0.6.0.tar.gz"
   sha256 "9c1523c6ec2fd5c06a39e37e25116d489e9af04cd97d7bb41e14fc3c586c95ac"
   license "MIT"
-  revision 3
+  revision 4
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9ad51ce58a898c7d40f76c54729d16bd0ca5d56ffc25ad44b6143aad038fd219"
@@ -131,8 +131,8 @@ class McpGoogleSheets < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/53/b8/cda15d9d46d03d4aa3a67cb6bffe05173440ccf86a9541afaf7ac59a1b6b/protobuf-6.33.4.tar.gz"
-    sha256 "dc2e61bca3b10470c1912d166fe0af67bfc20eb55971dcef8dfa48ce14f0ed91"
+    url "https://files.pythonhosted.org/packages/ba/25/7c72c307aafc96fa87062aa6291d9f7c94836e43214d43722e86037aac02/protobuf-6.33.5.tar.gz"
+    sha256 "6ddcac2a081f8b7b9642c09406bc6a4290128fce5f471cddd165960bb9119e5c"
   end
 
   resource "pyasn1" do
