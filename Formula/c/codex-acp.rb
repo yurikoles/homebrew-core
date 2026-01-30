@@ -6,6 +6,15 @@ class CodexAcp < Formula
   license "Apache-2.0"
   head "https://github.com/zed-industries/codex-acp.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "427d7fd06b02413aefc07950d75d38d0ad79b4b99b85b72da91d4004d3a44bc4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c3fec69e2156a5c6c6cf4f1a533b1738d3294727b7b565f18bef38c7dd6114bd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f35cd2046865b0de4bf95a7ee882ba47f3f899c5adf8e367fb6dd265be546417"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2fb1bee8520bce507745ffa9efe0c1a51cb8b6a1fcdb3872b6a265a44c448c13"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2d27d1e75fac96989e6d4076a8a3944430a0a1c4f2b835f803502016b519ef12"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e6ef408bafdb175f14ce24a7da4380f6bffed8c350491a2c3258845b299c7a4"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "openssl@3"
