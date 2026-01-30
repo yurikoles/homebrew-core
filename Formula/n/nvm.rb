@@ -7,7 +7,7 @@ class Nvm < Formula
   head "https://github.com/nvm-sh/nvm.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "f7833c9ed1c611029a5e21cbb22c85b63663da67751faa2a0bb22fc985d832f8"
+    sha256 cellar: :any_skip_relocation, all: "129cb55048c3be06d3f21eebf9c4dd2287b4f81fea5b4693070bd4d66b1fc18a"
   end
 
   def install
