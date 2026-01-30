@@ -1,18 +1,18 @@
 class Litra < Formula
   desc "Control Logitech Litra lights from the command-line"
   homepage "https://github.com/timrogers/litra-rs"
-  url "https://github.com/timrogers/litra-rs/archive/refs/tags/v3.1.0.tar.gz"
-  sha256 "65cdeee13f75b18711f3217e788fa0396644e8f582fc8830313f81cd294eb685"
+  url "https://github.com/timrogers/litra-rs/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "c17bcd2afefdc9634b22319a88ea3f366b724c046d84ca744296365574c69123"
   license "MIT"
   head "https://github.com/timrogers/litra-rs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7c6f2b88475cb118a19e3668b15ce928bf2e4fa31c2124409ff04af1a0eafc67"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cac5f7dae722ea35cd485cad20d67675f3e52ad5028cdc45c77b0ee625b47970"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "369766ce4d20c5be2d25f770a716a1f65fb1f82d40a9afc80b57e29bfef269d4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f56c0417c7b63273a7886469dc99cf2c2fcccab270dca2cba4b2b5b384dacabf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "80bacf3f67b49fc6a1b78aa63475e917cd2a0ca2d5a258ea196b348314cdea3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8115333877484cbfa51207c607d8b2fa66aacd5de27d4a37f7a652870308f60b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d20facfab389e4384e0ad9ddc25209994a9d1f99a62f4e06b7de0e4c1939176b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c78ec1209989a8a4ab913671f63d9d438925eeb5c8eaac996ea551022f1e0bcf"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a2127667a8e46a92e5e37d0a7790dd08db2e403ca0b8015632b10bc197d53bb0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "de95f352fecb9f5975e631f4b85da72f352097177aba856f6c28f849cebcee7f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b1c3eacd2b01b1af5584e701288634a7bb2207f842452369b6cc1562ae979e59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "525e76895c39c11297fec9578989775cc589c40d14d38dfdf93d6c19a701d987"
   end
 
   depends_on "pkgconf" => :build
