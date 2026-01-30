@@ -1,8 +1,8 @@
 class Turso < Formula
   desc "Interactive SQL shell for Turso"
   homepage "https://github.com/tursodatabase/turso"
-  url "https://github.com/tursodatabase/turso/archive/refs/tags/v0.4.3.tar.gz"
-  sha256 "9bcb9bcd9248ded3e066dd95f2d8a7b138a695bac43a392f719002b108820495"
+  url "https://github.com/tursodatabase/turso/archive/refs/tags/v0.4.4.tar.gz"
+  sha256 "24b737c2a04c27f0c2b7676d324bff2517a5b3f2de9e63fab9832d2c8bec5733"
   license "MIT"
   head "https://github.com/tursodatabase/turso.git", branch: "main"
 
