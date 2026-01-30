@@ -1,8 +1,8 @@
 class Tfclean < Formula
   desc "Remove applied moved block, import block, etc"
   homepage "https://github.com/takaishi/tfclean"
-  url "https://github.com/takaishi/tfclean/archive/refs/tags/v0.0.15.tar.gz"
-  sha256 "f2a958138b5449a60fad58becb8d66e556646405771c4a2c58c7d6f2db79c3a8"
+  url "https://github.com/takaishi/tfclean/archive/refs/tags/v0.0.16.tar.gz"
+  sha256 "1c0fa4a4995a9fe51d4d43dadb5e50579a354e3614a3a674cb009b4c00f3264e"
   license "MIT"
   head "https://github.com/takaishi/tfclean.git", branch: "main"
 
