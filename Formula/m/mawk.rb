@@ -1,8 +1,8 @@
 class Mawk < Formula
   desc "Interpreter for the AWK Programming Language"
   homepage "https://invisible-island.net/mawk/"
-  url "https://invisible-mirror.net/archives/mawk/mawk-1.3.4-20250131.tgz"
-  sha256 "51bcb82d577b141d896d9d9c3077d7aaa209490132e9f2b9573ba8511b3835be"
+  url "https://invisible-mirror.net/archives/mawk/mawk-1.3.4-20260129.tgz"
+  sha256 "a71fb7efea5a63770d8fb71321ef6ae7afe0592f1aa7f7e2b496c26ccbb392a4"
   license "GPL-2.0-only"
 
   livecheck do
