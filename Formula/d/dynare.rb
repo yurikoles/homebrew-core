@@ -20,12 +20,12 @@ class Dynare < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "1bf69c806c2c1290531de6f8f0fcd71c410740c063f38376668104e6f6ad4eea"
-    sha256 cellar: :any, arm64_sequoia: "e39d637e33dc4d90102ce164f42f7e039c01ed2fb651ce99c8cba0defecea304"
-    sha256 cellar: :any, arm64_sonoma:  "2228a8d6fb4009ced166372f97cdf50de578bdca0ef9eb5a4e10f7c42098e5bc"
-    sha256 cellar: :any, sonoma:        "6d8285f8ce189ca8f7b79b8950e7384431ded27e1665b2b34dcfa4a7b3cd7ce3"
-    sha256               arm64_linux:   "ac3cde07a02a160d4487d727b8930f26105154c4bd590d7fec19f57fa104bf69"
-    sha256               x86_64_linux:  "59fe01949122963831745b16e44a75f4c2eb1b82c980cc7a1cc6436b3917a8ed"
+    sha256 cellar: :any, arm64_tahoe:   "dc134e24cfec558ec656922f57084189483493291b2bf9642fef3c48df043034"
+    sha256 cellar: :any, arm64_sequoia: "b52fa22efd2173dd73b63854ec2571d8c6241ad72dfbee53492a01c8c7102790"
+    sha256 cellar: :any, arm64_sonoma:  "2b00d6af8fa2389af4abb060745d8b4743e13e3d5860e16a5811b2a5d0f94e9d"
+    sha256 cellar: :any, sonoma:        "8d4ebac67c8efa3dde83d3d5e5102c3dbdce67732acd9167d527a0d77d70b78f"
+    sha256               arm64_linux:   "27d50a92a985e9c5aa32575fd8b05509e17aaed6f90af582bdcb50a12704a343"
+    sha256               x86_64_linux:  "7e7fc5e2c8e7009c16d6660020343495d96c050b3e8e80e5a978acfa7cf4cb8c"
   end
 
   depends_on "bison" => :build
