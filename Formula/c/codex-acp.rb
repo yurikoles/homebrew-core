@@ -7,12 +7,12 @@ class CodexAcp < Formula
   head "https://github.com/zed-industries/codex-acp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "427d7fd06b02413aefc07950d75d38d0ad79b4b99b85b72da91d4004d3a44bc4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c3fec69e2156a5c6c6cf4f1a533b1738d3294727b7b565f18bef38c7dd6114bd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f35cd2046865b0de4bf95a7ee882ba47f3f899c5adf8e367fb6dd265be546417"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2fb1bee8520bce507745ffa9efe0c1a51cb8b6a1fcdb3872b6a265a44c448c13"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2d27d1e75fac96989e6d4076a8a3944430a0a1c4f2b835f803502016b519ef12"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3e6ef408bafdb175f14ce24a7da4380f6bffed8c350491a2c3258845b299c7a4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c7aa1368b2492d073a545c6ad32bd6cf74f96e2caf51c9216002ac0f1b53af4a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6b23bd01f9a297d7880ad9be793df458ff1f52a776a878deab45a16aee349a7a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "23fd12ccd423f75eb9ac765c87c7e36383da1bc91535b1fbe74d2efc0d3adb68"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6b2e95f19aa5e5d6deb1fc0230bea1a4e92e634afa0a4ddd7150b4daaa8dfb53"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "38bfa43367882ced324f3ee9550d7303597022b780d892a899181394a4ef80ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2130c4501bb1db5e300fb622195ee9216fbf9271aeac8aaed2c3a4176f1925d5"
   end
 
   depends_on "pkgconf" => :build
