@@ -1,8 +1,8 @@
 class Litra < Formula
   desc "Control Logitech Litra lights from the command-line"
   homepage "https://github.com/timrogers/litra-rs"
-  url "https://github.com/timrogers/litra-rs/archive/refs/tags/v3.1.0.tar.gz"
-  sha256 "65cdeee13f75b18711f3217e788fa0396644e8f582fc8830313f81cd294eb685"
+  url "https://github.com/timrogers/litra-rs/archive/refs/tags/v3.2.0.tar.gz"
+  sha256 "c17bcd2afefdc9634b22319a88ea3f366b724c046d84ca744296365574c69123"
   license "MIT"
   head "https://github.com/timrogers/litra-rs.git", branch: "main"
 
