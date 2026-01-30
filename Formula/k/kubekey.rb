@@ -3,7 +3,7 @@ class Kubekey < Formula
   homepage "https://kubesphere.io"
   url "https://github.com/kubesphere/kubekey.git",
       tag:      "v4.0.3",
-      revision: "5fd34cef73a94de91ece59d3b326bce393ef6dc1"
+      revision: "fd08c8caab8116f87810b5cde3313a7cbacc53fb"
   license "Apache-2.0"
   head "https://github.com/kubesphere/kubekey.git", branch: "main"
 
