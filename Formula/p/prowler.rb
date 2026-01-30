@@ -6,6 +6,7 @@ class Prowler < Formula
   url "https://files.pythonhosted.org/packages/d7/91/2af2e926e5527684bffdc96018c5bc258acd789e8a54c83df42ec7ff9514/prowler-5.17.1.tar.gz"
   sha256 "9f27b6e801ef95d94d952d650c21300b7b8427087de48e24dfe2fcf5fa24cfaa"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/prowler-cloud/prowler.git", branch: "master"
 
   bottle do
@@ -534,8 +535,8 @@ class Prowler < Formula
   end
 
   resource "google-auth" do
-    url "https://files.pythonhosted.org/packages/34/10/0d79026ba60eadaae83796600cdf997ab5c99fae35742581f77687f6f174/google_auth-2.48.0rc0.tar.gz"
-    sha256 "63dca521b006aaeb945d80076ad80df1910e4accff1b2621d2d8ae7c2cec3ec1"
+    url "https://files.pythonhosted.org/packages/f9/e5/0f232ebec2089bf7bb9c2ee5ef115957dbc9a0eed795617ac063214f8fef/google_auth-2.49.0.dev0.tar.gz"
+    sha256 "8ebdc83d298b130bde4ded0e19cb983330f885736000348a83c161de23205e86"
   end
 
   resource "google-auth-httplib2" do
@@ -589,8 +590,8 @@ class Prowler < Formula
   end
 
   resource "iamdata" do
-    url "https://files.pythonhosted.org/packages/b3/31/e121331fbaa41c6fd39d0c89a6a8733459713f177e9bcdc5558463a047ef/iamdata-0.1.202601261.tar.gz"
-    sha256 "f8e9923a85833921c505b0270502c6afc16c016de630d01d40bec495c07d2831"
+    url "https://files.pythonhosted.org/packages/ec/b1/d45554fd6370f86d2ae42f7400f5b45471b3a42f15a8f344d61918549b28/iamdata-0.1.202601301.tar.gz"
+    sha256 "19096c146031f19b0615f74b474fe6ebbfa6563466f3d7ecb67e27ea8eaea9a7"
   end
 
   resource "idna" do
@@ -790,8 +791,8 @@ class Prowler < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/53/b8/cda15d9d46d03d4aa3a67cb6bffe05173440ccf86a9541afaf7ac59a1b6b/protobuf-6.33.4.tar.gz"
-    sha256 "dc2e61bca3b10470c1912d166fe0af67bfc20eb55971dcef8dfa48ce14f0ed91"
+    url "https://files.pythonhosted.org/packages/ba/25/7c72c307aafc96fa87062aa6291d9f7c94836e43214d43722e86037aac02/protobuf-6.33.5.tar.gz"
+    sha256 "6ddcac2a081f8b7b9642c09406bc6a4290128fce5f471cddd165960bb9119e5c"
   end
 
   resource "py-iam-expand" do
@@ -897,11 +898,6 @@ class Prowler < Formula
   resource "rpds-py" do
     url "https://files.pythonhosted.org/packages/20/af/3f2f423103f1113b36230496629986e0ef7e199d2aa8392452b484b38ced/rpds_py-0.30.0.tar.gz"
     sha256 "dd8ff7cf90014af0c0f787eea34794ebf6415242ee1d6fa91eaba725cc441e84"
-  end
-
-  resource "rsa" do
-    url "https://files.pythonhosted.org/packages/da/8a/22b7beea3ee0d44b1916c0c1cb0ee3af23b700b6da9f04991899d0c555d4/rsa-4.9.1.tar.gz"
-    sha256 "e7bdbfdb5497da4c07dfd35530e1a902659db6ff241e39d9953cad06ebd0ae75"
   end
 
   resource "s3transfer" do
