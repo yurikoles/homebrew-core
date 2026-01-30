@@ -3,8 +3,8 @@ class MistralVibe < Formula
 
   desc "Minimal CLI coding agent"
   homepage "https://github.com/mistralai/mistral-vibe"
-  url "https://files.pythonhosted.org/packages/de/c9/3c4f5af9eda6d619e41440df4a06def920707a29c516365f16fce0d800bb/mistral_vibe-2.0.1.tar.gz"
-  sha256 "9e35ed0cff7ac37413c32efa0d95bc4ea0eebf7b07d17bb933d1487f85645016"
+  url "https://files.pythonhosted.org/packages/bf/0c/6896fe1a5860e63b8f360e4a479d3afbe06bf7fa325551129d0fd1d20b6d/mistral_vibe-2.0.2.tar.gz"
+  sha256 "31c7d2fa6ea69632c0d70c16dc4c800509fa01e08f2426b86decacd329ed2285"
   license "Apache-2.0"
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
@@ -208,8 +208,8 @@ class MistralVibe < Formula
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/64/8d/2fbd6b8652f4cabf9cb0852d7af1aa45b6cad32d0f50735856e8f9e41719/textual-7.4.0.tar.gz"
-    sha256 "1a9598e485492f9a8f033c7ec5e59528df3ab0742fda925681acf78b0fb210de"
+    url "https://files.pythonhosted.org/packages/9f/38/7d169a765993efde5095c70a668bf4f5831bb7ac099e932f2783e9b71abf/textual-7.5.0.tar.gz"
+    sha256 "c730cba1e3d704e8f1ca915b6a3af01451e3bca380114baacf6abf87e9dac8b6"
   end
 
   resource "textual-speedups" do
