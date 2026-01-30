@@ -5,6 +5,15 @@ class ClawdbotCli < Formula
   sha256 "a00acd33ac20787fbd342db2bc36db15b2483f88e1f8b159cf1bc37a6eb1a828"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "964654ede929bd797bfc15abf18f61edf9f1f8e2797e44ef325b96ad9e596328"
+    sha256 cellar: :any,                 arm64_sequoia: "e169d530d1bc6b06aadaf098b69887a324c9d96b692180678b4ca9cfad310be2"
+    sha256 cellar: :any,                 arm64_sonoma:  "e169d530d1bc6b06aadaf098b69887a324c9d96b692180678b4ca9cfad310be2"
+    sha256 cellar: :any,                 sonoma:        "adc792231b8f6081921baab3fda783255df3fb3e903aafbc627b49ec0abe9d56"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "98c4957a45ba074ff7d5f35d3028a892dfa7609670c10c97b617eba83ebc752e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2f9cd2101133e4f8508ba92a3a82da3510aa132c2ab7a84daa7e2183cc6954bb"
+  end
+
   depends_on "node"
 
   def install
