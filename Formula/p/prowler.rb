@@ -10,12 +10,12 @@ class Prowler < Formula
   head "https://github.com/prowler-cloud/prowler.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "d86a41c4f86c99be342e3fe1dfc3585dd1bb418d858cef7a1b104f7fe85f63bf"
-    sha256 cellar: :any,                 arm64_sequoia: "893ebbaeb398ec7cb81829a71eba18e4a608af5a97e7b89591c2916ab3b680e8"
-    sha256 cellar: :any,                 arm64_sonoma:  "2c886de369573ddb204a6acd07c2531b3693da0f97c9d3b2a7db42e96b158144"
-    sha256 cellar: :any,                 sonoma:        "2c62aaaa467871a6469550d171d05803f1314c5b12c44728a31be9c0c91d93b6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "95e0a1764e5970b72fe400b1986f6de7dd52fb36e58f6c823433e7f30fef0996"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "66160ebad7bfe63ac241b5e5e40eabacc419fa6538d27a14073b0d48e4e152cf"
+    sha256 cellar: :any,                 arm64_tahoe:   "c78476e822c17dfbe6cea0cc5aef62fc4bcab9fd9c213484d51e66103b8bb20a"
+    sha256 cellar: :any,                 arm64_sequoia: "ac0f92b5a4a20de7ef7e8bd0c1c84c4034368f5e679e26183ab9fe244a2adc58"
+    sha256 cellar: :any,                 arm64_sonoma:  "d71d3c87970f14a78e7c777e236e17a3685daf18f7bbdeff6fb630852aee3de8"
+    sha256 cellar: :any,                 sonoma:        "49001343cefb5653c5e14d38ea870ed889175d8e9206cec275149b5137283175"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8bbe6334715dac2e8c2b8541cf422e183a090d3f4ac487fcea4788469bb9b37e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eac08d8b0f69ed520367d575238352970fb99f09231783716c7aff724dadcf37"
   end
 
   depends_on "cmake" => :build
