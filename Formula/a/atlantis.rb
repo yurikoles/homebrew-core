@@ -12,12 +12,12 @@ class Atlantis < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "405d2b3cc45dc1dcc39f4bc00a872832af27a651f54aac34fb73283149f50307"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "405d2b3cc45dc1dcc39f4bc00a872832af27a651f54aac34fb73283149f50307"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "405d2b3cc45dc1dcc39f4bc00a872832af27a651f54aac34fb73283149f50307"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ccf865147c910ed01f1e8075f781bc7e7340fdad89ff4e8f1111bdff2ac21f9f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f966431950f722b91d4f49273a9e3be274ae61e508b906c6d7f0279b29ec1cce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3b6a7de809ed255eb47e75c394c6c9d540d253fa59005930cf9714a14179776e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f229c1f97447dbdaae6512ab07a084c82ecd86285f5aa2106cf8d1649bf0a6c7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f229c1f97447dbdaae6512ab07a084c82ecd86285f5aa2106cf8d1649bf0a6c7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f229c1f97447dbdaae6512ab07a084c82ecd86285f5aa2106cf8d1649bf0a6c7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "746bca9edf042bd509611b44e26cc35c193e42ecc52e8ae0de872cb185ae5e37"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a8e005e16ebebd41f7b8184d4da05b2ee8d692c6a63d439f078de799dd6722d5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a409858aa9c51b8b237fa5a97ced7aeabe89b4c72b0a82f07a2a4ff910ee138b"
   end
 
   depends_on "go" => :build
