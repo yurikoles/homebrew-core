@@ -3,17 +3,17 @@ class Ocrmypdf < Formula
 
   desc "Adds an OCR text layer to scanned PDF files"
   homepage "https://ocrmypdf.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/d2/3a/b1d0b48dc6633961e10a369bf5ff85a39acfe33619ecc3b95843f20cb182/ocrmypdf-17.0.0.tar.gz"
-  sha256 "71a370ee6f2ea201f9ab75a8ff67c2406592bad659523c81a0bf2900f5c43133"
+  url "https://files.pythonhosted.org/packages/34/d2/19411e94098fe09c8bfe0348bcf414fbcc932de3cc8c21cf0712ce9182d5/ocrmypdf-17.0.1.tar.gz"
+  sha256 "8b332fd96c2f1709f435a953676701a7b299a8dca036f361c0cc41fe1edc3984"
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "6b2698477127ab667ac8735f8f016dbe914f048c0fcfbadf4e1983f212feb2b3"
-    sha256 cellar: :any,                 arm64_sequoia: "5ea58b781f8a1c50485d2737fcbaedfe6bce8ba06616a78be09b51a51f1a5a16"
-    sha256 cellar: :any,                 arm64_sonoma:  "61b30dc9e0637b3f85fe2a159e8bb463f485af18bb2a6c3003ee565542285b51"
-    sha256 cellar: :any,                 sonoma:        "f6e185811bedd905dc592532413065b6b2f18b04e2f126ea8dd758740f9fe1ba"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ca85d5c4da7c6b1a48977e02975efcb14d6af3567289bf06b07775089b43f3a4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f31224188f7775e146554ed2e16dac226022c168bac97345b564112e3cba9dd"
+    sha256 cellar: :any,                 arm64_tahoe:   "e4e2fa29d79e7db69387b39ddfb89f7becdf0ba724f323d012bb54ed7e7311f5"
+    sha256 cellar: :any,                 arm64_sequoia: "1b08b0494c44e62ca3a9fb3f30c2e3bf0dd73980f45f8e6ea4f0d8fe930e98e7"
+    sha256 cellar: :any,                 arm64_sonoma:  "b204cea6b1147a115ca99e93ca7ad2e00be18036b59534f0f9f31a8782b5aa26"
+    sha256 cellar: :any,                 sonoma:        "cdaceda6d9f5f1efbe1574ccb56496205e81161290f567b5a6e37bf36e8b52d1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c6ca281b6f14f0155bc5dcd7240937dca8c8c80e041ea6d356cd3116b433dd52"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "328d94cac48d33f6afaa834b43c8964eb5a403f6957b2c0bf61950b6156a772d"
   end
 
   depends_on "cmake" => :build # for pikepdf
