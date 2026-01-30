@@ -14,12 +14,12 @@ class DamaskGrid < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9df36df1df3c44fafd77ffe2f800f3d6d841551625ec03edba00707bf6e902ea"
-    sha256 cellar: :any,                 arm64_sequoia: "47f893f9748b2f73b1bca5854ec9a7aa20472f36bee9369931603ca1fb0b45eb"
-    sha256 cellar: :any,                 arm64_sonoma:  "aebce96fb01a23702698deeb0e09d517beacbf32a8c7cb9c210e9f5ea18f74af"
-    sha256 cellar: :any,                 sonoma:        "110db396997a4063c67974f1816a00ff272ac2a2a5892a5387f5349bc61dc747"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "52cd6629883662df732f93e125da1939c593a47bc5d5e5993acab75ba83dab8b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f14f9441087d0102bffd6e43f4c3e87376fc79bc5029ee33b0c18aafcacef34c"
+    sha256 cellar: :any,                 arm64_tahoe:   "67feb496cbf763457114298ff648c31d07a02b01b699c350acf420b16e6aa071"
+    sha256 cellar: :any,                 arm64_sequoia: "34942e0fb23a92cdc84a2c98defb3b5f14192ac9ed4d8a52e6eb06c2cd7f4dee"
+    sha256 cellar: :any,                 arm64_sonoma:  "a9f89ca390d98710fdf4b49f46d0db6ad5fd5e28624e99cf6cd5fc4c8eadeabf"
+    sha256 cellar: :any,                 sonoma:        "0bc719369eea47492e6a96b48af2d4a880d1bc2aa01d942b65a27e3fc3d9a46e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "57974533d52d8aa4a48d9b3ab8f02acf59871c7cc4d132c644a3ac663ad1f11c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b83351a277928dee503f38ef92a5fd1f74f7a3f62fde3a9e0c65b21a1da0e083"
   end
 
   depends_on "cmake" => :build
