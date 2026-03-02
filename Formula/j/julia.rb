@@ -92,20 +92,26 @@ class Julia < Formula
       WITH_TERMINFO=0
     ]
 
+    args << "TAGGED_RELEASE_BANNER=Built by #{tap&.user || "unknown user"} (v#{pkg_version})"
     args << "MACOSX_VERSION_MIN=#{MacOS.version}" if OS.mac?
 
     # Set MARCH and JULIA_CPU_TARGET to ensure Julia works on machines we distribute to.
-    # Values adapted from https://github.com/JuliaCI/julia-buildkite/blob/main/utilities/build_envs.sh
-    args << "MARCH=#{Hardware.oldest_cpu}" if Hardware::CPU.intel?
+    # https://github.com/JuliaLang/julia/blob/master/doc/src/devdocs/build/distributing.md#target-architectures
+    march = ENV["HOMEBREW_OPTFLAGS"].to_s[/-march=(\S+)/, 1]
+    args << "MARCH=#{march}" if march
 
+    # Values adapted from https://github.com/JuliaCI/julia-buildkite/blob/main/utilities/build_envs.sh
     cpu_targets = %w[generic]
     if Hardware::CPU.arm?
       if OS.mac?
         # For Apple Silicon, we don't care about other hardware
         cpu_targets << "apple-m1,clone_all"
       else
-        cpu_targets += %w[cortex-a57 thunderx2t99 carmel,clone_all
-                          apple-m1,base(3) neoverse-512tvb,base(3)]
+        cpu_targets += %w[cortex-a57
+                          thunderx2t99
+                          carmel,clone_all
+                          apple-m1,base(3)
+                          neoverse-512tvb,base(3)]
       end
     end
     if Hardware::CPU.intel?
@@ -114,12 +120,6 @@ class Julia < Formula
                         x86-64-v4,-rdrnd,base(1)]
     end
     args << "JULIA_CPU_TARGET=#{cpu_targets.join(";")}"
-    user = begin
-      tap.user
-    rescue
-      "unknown user"
-    end
-    args << "TAGGED_RELEASE_BANNER=Built by #{user} (v#{pkg_version})"
 
     ENV.append "LDFLAGS", "-Wl,-rpath,#{lib}/julia"
     # Help Julia find keg-only dependencies
@@ -162,6 +162,9 @@ class Julia < Formula
           ln_sf so.relative_path_from(lib/"julia"), lib/"julia"
         end
       end
+
+      # Remove debug testing library which causes EOFError when parsing ELF
+      rm lib/"julia/libccalltest.so.debug" if Hardware::CPU.arm?
     end
 
     # Create copies of the necessary gcc libraries in `buildpath/"usr/lib"`
