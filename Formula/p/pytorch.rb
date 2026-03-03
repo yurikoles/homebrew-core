@@ -33,8 +33,9 @@ class Pytorch < Formula
   depends_on "libyaml"
   depends_on macos: :monterey # MPS backend only supports 12.3 and above
   depends_on "numpy"
+  depends_on "onnx"
   depends_on "openblas"
-  depends_on "protobuf@33"
+  depends_on "protobuf"
   # TODO: depends_on "pybind11"
   depends_on "sleef"
 
@@ -136,6 +137,7 @@ class Pytorch < Formula
     ENV["USE_NNPACK"] = "OFF"
     ENV["USE_OPENMP"] = "ON"
     ENV["USE_SYSTEM_EIGEN_INSTALL"] = "ON"
+    ENV["USE_SYSTEM_ONNX"] = "ON"
     ENV["USE_SYSTEM_PYBIND11"] = "OFF"
     ENV["USE_SYSTEM_SLEEF"] = "ON"
     ENV["USE_MPS"] = "ON" if OS.mac?
