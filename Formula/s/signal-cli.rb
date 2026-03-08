@@ -1,8 +1,8 @@
 class SignalCli < Formula
   desc "CLI and dbus interface for WhisperSystems/libsignal-service-java"
   homepage "https://github.com/AsamK/signal-cli"
-  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.14.0.tar.gz"
-  sha256 "fe45bf77a3dd735aa677b24c88c5b6d6af653ed9d844d5bd79e5a1f264cd2d32"
+  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.14.1.tar.gz"
+  sha256 "8d8d3a5bffcde757b8a9cb5f5e544525e8a7fd85aaa554a1fce06300b3ab27a4"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -44,9 +44,14 @@ class SignalCli < Formula
     java_version = "25"
     ENV["JAVA_HOME"] = Language::Java.java_home(java_version)
 
-    # FIXME: find a better way to handle resource version check as this can easily break
-    regexp = /^## \[#{Regexp.escape(version.to_s)}\](?:.*\s+){1,2}Requires libsignal-client version (\d+(?:\.\d+)+)/i
-    libsignal_client_version = File.read("CHANGELOG.md")[regexp, 1]
+    # TODO: Update if upstream start using machine-readable dependency versioning,
+    # see https://github.com/AsamK/signal-cli/issues/1964
+    changelog = File.read("CHANGELOG.md")
+    current_version_pos = changelog.index(/^## \[#{Regexp.escape(version.to_s)}\]/)
+    odie "Could not find version #{version} in CHANGELOG.md" if current_version_pos.nil?
+    # Search from the current version header forward; the requirement may appear in a prior release section
+    regexp = /^Requires libsignal-client version (\d+(?:\.\d+)+)/i
+    libsignal_client_version = changelog[current_version_pos..].match(regexp)&.captures&.first
     odie "Could not find libsignal-client version in CHANGELOG.md" if libsignal_client_version.blank?
 
     resource("libsignal-client").stage do |r|
