@@ -22,6 +22,7 @@ class DoviTool < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "435abf7e0424828fe2aba09c1625ef91e92fd36b1104656233f4334507d4c408"
   end
 
+  depends_on "cargo-c" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
 
@@ -33,6 +34,13 @@ class DoviTool < Formula
   def install
     system "cargo", "install", *std_cargo_args
     pkgshare.install "assets"
+
+    # Install the C library
+    cd "dolby_vision" do
+      system "cargo", "cinstall", "--jobs", ENV.make_jobs.to_s, "--release", "--locked",
+                      "--prefix", prefix, "--libdir", lib
+    end
+    pkgshare.install "dolby_vision/examples"
   end
 
   test do
@@ -46,5 +54,11 @@ class DoviTool < Formula
     EOS
 
     assert_match "dovi_tool #{version}", shell_output("#{bin}/dovi_tool --version")
+
+    cp_r "#{pkgshare}/examples", testpath
+    inreplace "examples/capi_rpu_file.c", "../../assets", "#{pkgshare}/assets"
+
+    system ENV.cc, "-o", "test", "examples/capi_rpu_file.c", "-I#{include}", "-L#{lib}", "-ldovi"
+    assert_match "Parsed RPU file: ", shell_output("./test")
   end
 end
