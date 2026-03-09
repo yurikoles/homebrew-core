@@ -1,8 +1,8 @@
 class Lighthouse < Formula
   desc "Rust Ethereum 2.0 Client"
   homepage "https://lighthouse.sigmaprime.io/"
-  url "https://github.com/sigp/lighthouse/archive/refs/tags/v8.1.1.tar.gz"
-  sha256 "a2593ebf23d17f9b6fdfcc5be14994f406b77f29ac203e520f2f27d3612436a2"
+  url "https://github.com/sigp/lighthouse/archive/refs/tags/v8.1.2.tar.gz"
+  sha256 "c1c51813968ea4f4372ea85a7c0a91eb261adc2d58d29847196e9467ffd6c8a7"
   license "Apache-2.0"
 
   livecheck do
@@ -36,6 +36,40 @@ class Lighthouse < Formula
     # Ensure that the `openssl` crate picks up the intended library.
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
     ENV["OPENSSL_NO_VENDOR"] = "1"
+
+    # fixing LLVM 22 builds, which got handled in https://github.com/sigp/xdelta3-rs/commit/fe3906605c87b6c0515bd7c8fc671f47875e3ccc
+    inreplace "Cargo.toml", <<~OLD, <<~NEW
+      xdelta3 = { git = "https://github.com/sigp/xdelta3-rs", rev = "4db64086bb02e9febb584ba93b9d16bb2ae3825a" }
+    OLD
+      xdelta3 = { git = "https://github.com/sigp/xdelta3-rs", rev = "fe3906605c87b6c0515bd7c8fc671f47875e3ccc" }
+    NEW
+    inreplace "Cargo.lock", <<~OLD, <<~NEW
+      name = "xdelta3"
+      version = "0.1.5"
+      source = "git+https://github.com/sigp/xdelta3-rs?rev=4db64086bb02e9febb584ba93b9d16bb2ae3825a#4db64086bb02e9febb584ba93b9d16bb2ae3825a"
+      dependencies = [
+       "bindgen",
+       "cc",
+       "futures-io",
+       "futures-util",
+       "libc",
+       "log",
+       "rand 0.8.5",
+      ]
+    OLD
+      name = "xdelta3"
+      version = "0.1.5"
+      source = "git+https://github.com/sigp/xdelta3-rs?rev=fe3906605c87b6c0515bd7c8fc671f47875e3ccc#fe3906605c87b6c0515bd7c8fc671f47875e3ccc"
+      dependencies = [
+       "bindgen 0.72.1",
+       "cc",
+       "futures-io",
+       "futures-util",
+       "libc",
+       "log",
+       "rand 0.9.2",
+      ]
+    NEW
 
     system "cargo", "install", "--no-default-features", *std_cargo_args(path: "./lighthouse")
   end
