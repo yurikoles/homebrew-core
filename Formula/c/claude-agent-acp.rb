@@ -1,8 +1,8 @@
 class ClaudeAgentAcp < Formula
   desc "Use Claude Code from any ACP client such as Zed!"
   homepage "https://github.com/zed-industries/claude-agent-acp"
-  url "https://registry.npmjs.org/@zed-industries/claude-agent-acp/-/claude-agent-acp-0.20.2.tgz"
-  sha256 "73ac373dfdb50dd2a8aed033d65adac762a469cad0e3e38c866760f755149f5b"
+  url "https://registry.npmjs.org/@zed-industries/claude-agent-acp/-/claude-agent-acp-0.21.0.tgz"
+  sha256 "610cc41d23e339c328ce4ca75dafbb85759d1f3381a9401644ef1288236fe59f"
   license "Apache-2.0"
   head "https://github.com/zed-industries/claude-agent-acp.git", branch: "main"
 
