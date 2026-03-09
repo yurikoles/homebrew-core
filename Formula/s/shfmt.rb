@@ -1,8 +1,8 @@
 class Shfmt < Formula
   desc "Autoformat shell script source code"
   homepage "https://github.com/mvdan/sh"
-  url "https://github.com/mvdan/sh/archive/refs/tags/v3.12.0.tar.gz"
-  sha256 "ac15f42feeba55af29bd07698a881deebed1cd07e937effe140d9300e79d5ceb"
+  url "https://github.com/mvdan/sh/archive/refs/tags/v3.13.0.tar.gz"
+  sha256 "efef583999befd358fae57858affa4eb9dc8a415f39f69d0ebab3a9f473d7dd3"
   license "BSD-3-Clause"
   head "https://github.com/mvdan/sh.git", branch: "master"
 
@@ -22,11 +22,8 @@ class Shfmt < Formula
 
   def install
     ENV["CGO_ENABLED"] = "0"
-    ldflags = %W[
-      -s -w
-      -extldflags=-static
-      -X main.version=#{version}
-    ]
+    ldflags = "-s -w -extldflags=-static"
+    inreplace "cmd/shfmt/main.go", "version = mod.Version", "version = \"#{version}\""
     system "go", "build", *std_go_args(ldflags:), "./cmd/shfmt"
     man1.mkpath
     system "scdoc < ./cmd/shfmt/shfmt.1.scd > #{man1}/shfmt.1"
