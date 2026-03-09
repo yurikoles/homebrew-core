@@ -1,8 +1,8 @@
 class Killswitch < Formula
   desc "VPN kill switch for macOS"
   homepage "https://killswitch.network"
-  url "https://github.com/vpn-kill-switch/killswitch/archive/refs/tags/0.8.1.tar.gz"
-  sha256 "3ee38708097a56c2a1a29a44b39c428e8a146072855ca85847eb66275f26a3be"
+  url "https://github.com/vpn-kill-switch/killswitch/archive/refs/tags/0.8.2.tar.gz"
+  sha256 "0a13e6ebe9f05e5cc34959779b7fc078e96246dbc82449c6a8c9ace75ff8b80d"
   license "BSD-3-Clause"
   head "https://github.com/vpn-kill-switch/killswitch.git", branch: "main"
 
