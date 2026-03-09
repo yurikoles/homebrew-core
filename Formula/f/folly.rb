@@ -1,19 +1,10 @@
 class Folly < Formula
   desc "Collection of reusable C++ library artifacts developed at Facebook"
   homepage "https://github.com/facebook/folly"
+  url "https://github.com/facebook/folly/archive/refs/tags/v2026.03.09.00.tar.gz"
+  sha256 "126b10954c75f5f10f7c061c56ae066d55d3a587455e9650e869d24691dc8226"
   license "Apache-2.0"
   head "https://github.com/facebook/folly.git", branch: "main"
-
-  stable do
-    url "https://github.com/facebook/folly/archive/refs/tags/v2026.03.02.00.tar.gz"
-    sha256 "f2a9bbd4bd36256d4554f9917fcefa9ec356cec637d2a743e01a6a1d569224dc"
-
-    # Backport fix for arm64 Linux duplicate symbol errors
-    patch do
-      url "https://github.com/facebook/folly/commit/ae5bbaf2288b2c7f289917af7ec714da8831b13f.patch?full_index=1"
-      sha256 "83fec09c173071f96b7e87aa64c4a90ab225c85c2564f53f576b09e77f76e492"
-    end
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "1cb23b2dda767c57c67f9af304c8b024f2e20915899f67a337babe2adcd6c439"
