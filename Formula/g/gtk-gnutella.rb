@@ -1,8 +1,8 @@
 class GtkGnutella < Formula
   desc "Share files in a peer-to-peer (P2P) network"
   homepage "https://gtk-gnutella.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/gtk-gnutella/gtk-gnutella/1.2.3/gtk-gnutella-1.2.3.tar.xz"
-  sha256 "dd4ba09de6ff7e928c746e6aaeb2fb6b023c7b3de4ad247ce9f0ee9ba0092ef0"
+  url "https://downloads.sourceforge.net/project/gtk-gnutella/gtk-gnutella/1.3.1/gtk-gnutella-1.3.1.tar.xz"
+  sha256 "9631c82b8c975485b9927a8fa48ef10172d1224e7b3b2049462d37ca33d71f08"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -27,6 +27,7 @@ class GtkGnutella < Formula
   on_macos do
     depends_on "gettext"
     depends_on "harfbuzz"
+    depends_on "pcre2"
   end
 
   on_linux do
