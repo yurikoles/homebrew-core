@@ -6,5 +6,6 @@
   "phpmyadmin",
   "python-setuptools",
   "rabbitmq",
-  "ruby-install"
+  "ruby-install",
+  "zsh-completions"
 ]
