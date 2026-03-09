@@ -32,10 +32,12 @@ class Dolt < Formula
 
     (var/"log").mkpath
     (var/"dolt").mkpath
+    (etc/"dolt").mkpath
+    touch etc/"dolt/config.yaml"
   end
 
   service do
-    run [opt_bin/"dolt", "sql-server"]
+    run [opt_bin/"dolt", "sql-server", "--config", etc/"dolt/config.yaml"]
     keep_alive true
     log_path var/"log/dolt.log"
     error_log_path var/"log/dolt.error.log"
