@@ -17,18 +17,23 @@ class SingBox < Formula
 
   depends_on "go" => :build
 
+  on_linux do
+    depends_on "lld" => :build
+    depends_on "llvm" => :build
+  end
+
   def install
-    ldflags = "-s -w -X github.com/sagernet/sing-box/constant.Version=#{version} -buildid="
-    tags = %w[
-      with_acme
-      with_clash_api
-      with_dhcp
-      with_gvisor
-      with_quic
-      with_tailscale
-      with_utls
-      with_wireguard
-    ]
+    tags = File.read("release/DEFAULT_BUILD_TAGS").strip.split(",")
+    ldflags_shared = File.read("release/LDFLAGS").strip
+
+    if OS.linux?
+      ENV["CC"] = Formula["llvm"].opt_bin/"clang"
+      ENV["CXX"] = Formula["llvm"].opt_bin/"clang++"
+      ENV["CGO_ENABLED"] = "1"
+      ENV["CGO_LDFLAGS"] = "-fuse-ld=#{Formula["lld"].opt_bin}/ld.lld"
+    end
+
+    ldflags = "-s -w -X github.com/sagernet/sing-box/constant.Version=#{version} #{ldflags_shared} -buildid="
     system "go", "build", *std_go_args(ldflags:, tags:), "./cmd/sing-box"
     generate_completions_from_executable(bin/"sing-box", shell_parameter_format: :cobra)
   end
