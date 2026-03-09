@@ -1,8 +1,8 @@
 class Appium < Formula
   desc "Automation for Apps"
   homepage "https://appium.io/"
-  url "https://registry.npmjs.org/appium/-/appium-3.2.1.tgz"
-  sha256 "4c08aa76150c006aed1a9db03added23b9ce733c30fb1f263fb02244fd208fb0"
+  url "https://registry.npmjs.org/appium/-/appium-3.2.2.tgz"
+  sha256 "6e2d758c1d91e22f0aab9925e9d20725f43f33d988abcce7db330ec7fd275155"
   license "Apache-2.0"
   head "https://github.com/appium/appium.git", branch: "master"
 
@@ -27,13 +27,13 @@ class Appium < Formula
   # Resources needed to build sharp from source to avoid bundled vips
   # https://sharp.pixelplumbing.com/install/#building-from-source
   resource "node-addon-api" do
-    url "https://registry.npmjs.org/node-addon-api/-/node-addon-api-8.5.0.tgz"
-    sha256 "d12f07c8162283b6213551855f1da8dac162331374629830b5e640f130f07910"
+    url "https://registry.npmjs.org/node-addon-api/-/node-addon-api-8.6.0.tgz"
+    sha256 "e3029e9581015874cc794771ec9b970be83b12c456ded15cfba9371bddc42569"
   end
 
   resource "node-gyp" do
-    url "https://registry.npmjs.org/node-gyp/-/node-gyp-12.1.0.tgz"
-    sha256 "492bca8e813411386e61e488f95b375262aa8f262e6e8b20d162e26bdf025f16"
+    url "https://registry.npmjs.org/node-gyp/-/node-gyp-12.2.0.tgz"
+    sha256 "8689bbeb45a3219dfeb5b05a08d000d3b2492e12db02d46c81af0bee5c085fec"
   end
 
   def install
