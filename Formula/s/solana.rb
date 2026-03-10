@@ -1,8 +1,8 @@
 class Solana < Formula
   desc "Web-Scale Blockchain for decentralized apps and marketplaces"
   homepage "https://www.anza.xyz/"
-  url "https://github.com/anza-xyz/agave/archive/refs/tags/v3.1.9.tar.gz"
-  sha256 "7b025d4f341c9ec5a611ff7f9c159770df33b79f5936fef53ce87f83b5068aaf"
+  url "https://github.com/anza-xyz/agave/archive/refs/tags/v3.1.10.tar.gz"
+  sha256 "e505012477de3072902d349b2f1df3aa2dbc840ae0449beec976d2fc82206c31"
   license "Apache-2.0"
   version_scheme 1
 
@@ -47,7 +47,7 @@ class Solana < Formula
 
   def install
     # Work around until new release as fixed upstream but commits do not cleanly apply
-    ENV.append_to_rustflags "--allow unused-imports"
+    ENV.append_to_rustflags "--allow unused-imports --allow unused_unsafe"
 
     # Work around librocksdb-sys build failure with Apple libclang, "Library not loaded: @rpath/libclang.dylib"
     ENV["LIBCLANG_PATH"] = Formula["llvm"].opt_lib.to_s if OS.mac?
