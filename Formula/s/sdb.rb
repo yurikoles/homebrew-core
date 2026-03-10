@@ -1,8 +1,8 @@
 class Sdb < Formula
   desc "Ondisk/memory hashtable based on CDB"
   homepage "https://www.radare.org/"
-  url "https://github.com/radareorg/sdb/archive/refs/tags/2.3.6.tar.gz"
-  sha256 "e6ddb7b5faeeeb9f2d06d984a62df1e21acaaad71febd8a1534bf88966fb9b8a"
+  url "https://github.com/radareorg/sdb/archive/refs/tags/2.3.8.tar.gz"
+  sha256 "39cf803f2eb52d3c0d2dbbb7b48023a8ef0ddef97ca6295fd4471bf987e07491"
   license "MIT"
   head "https://github.com/radareorg/sdb.git", branch: "master"
 
