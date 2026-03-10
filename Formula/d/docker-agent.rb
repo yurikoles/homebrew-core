@@ -1,8 +1,8 @@
 class DockerAgent < Formula
   desc "Agent Builder and Runtime by Docker Engineering"
   homepage "https://docker.github.io/docker-agent/"
-  url "https://github.com/docker/docker-agent/archive/refs/tags/v1.29.0.tar.gz"
-  sha256 "b0ada981b622fd74b109b93a4f4c8ddfd1c89713b248bddd337fa13213182707"
+  url "https://github.com/docker/docker-agent/archive/refs/tags/v1.30.0.tar.gz"
+  sha256 "2ede2518180892ef140866495e0854076ca221cbafcdff35f212337430b2699d"
   license "Apache-2.0"
   head "https://github.com/docker/docker-agent.git", branch: "main"
 
@@ -22,8 +22,8 @@ class DockerAgent < Formula
 
     ldflags = %W[
       -s -w
-      -X github.com/docker/cagent/pkg/version.Version=v#{version}
-      -X github.com/docker/cagent/pkg/version.Commit=#{tap.user}
+      -X github.com/docker/docker-agent/pkg/version.Version=v#{version}
+      -X github.com/docker/docker-agent/pkg/version.Commit=#{tap.user}
     ]
 
     system "go", "build", *std_go_args(ldflags:)
