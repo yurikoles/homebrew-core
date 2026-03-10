@@ -13,10 +13,10 @@ class Mas < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a365116460d17da70d0920edbee70f10f6a5a30cb960c78bba09c2f6571e1a73"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1d627c909ba3e6bf83be2bdef56304db6462c4a7effc487abb407ab3aa8a542c"
-    sha256 cellar: :any,                 arm64_sonoma:  "1a17379e3991e2880e136313297ed2e3fe8615fee8ea4e281a06a90a0bf272c3"
-    sha256 cellar: :any,                 sonoma:        "4295825031d4cf7e040b28692cb4b6583dc3b8186effd952be498f5aaf9f31f2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "230f3f2b181f34401a690183ffe7ae26b038252b7a43a07bf49941fdcfaa4f56"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "40865540d35bab88be3b08906cbad8c529b519c4fe424f4584ff1740d6f781cb"
+    sha256 cellar: :any,                 arm64_sonoma:  "3b8df47fd3a3cc15e81475337e767a779a505692e169c09a8f556cd12f8473de"
+    sha256 cellar: :any,                 sonoma:        "127de59def45b51dae56f74280a21c807e7c4a670e2c8ae00c4559f2c21fdaec"
   end
 
   depends_on :macos
