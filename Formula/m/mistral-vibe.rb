@@ -3,8 +3,8 @@ class MistralVibe < Formula
 
   desc "Minimal CLI coding agent"
   homepage "https://github.com/mistralai/mistral-vibe"
-  url "https://files.pythonhosted.org/packages/48/5b/5e53d14c727280256d9a663c22c0660de71346eef5690d03353e082a7462/mistral_vibe-2.4.0.tar.gz"
-  sha256 "8f19b513dd8c4934f4290b1966e5a6e16d6f62357f621794880e0a9cba4b280b"
+  url "https://files.pythonhosted.org/packages/10/ad/78ffad994afabc9c87e2d304e9b001b6c55417097f8c34f08f20456a7559/mistral_vibe-2.4.1.tar.gz"
+  sha256 "3a8bd62ad5a8a2bfb549abaa1e164fb43b6b18a4733d901ee57cfdb097e4637f"
   license "Apache-2.0"
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
@@ -48,8 +48,8 @@ class MistralVibe < Formula
   end
 
   resource "cachetools" do
-    url "https://files.pythonhosted.org/packages/a1/cc/eb3fd22f3b96b8b70ce456d0854ef08434e5ca79c02bf8db3fc07ccfca87/cachetools-7.0.4.tar.gz"
-    sha256 "7042c0e4eea87812f04744ce6ee9ed3de457875eb1f82d8a206c46d6e48b6734"
+    url "https://files.pythonhosted.org/packages/af/dd/57fe3fdb6e65b25a5987fd2cdc7e22db0aef508b91634d2e57d22928d41b/cachetools-7.0.5.tar.gz"
+    sha256 "0cd042c24377200c1dcd225f8b7b12b0ca53cc2c961b43757e774ebe190fd990"
   end
 
   resource "charset-normalizer" do
@@ -358,8 +358,8 @@ class MistralVibe < Formula
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/be/08/c6bcb1e3c4c9528ec9049f4ac685afdafc72866664270f0deb416ccbba2a/textual-8.0.2.tar.gz"
-    sha256 "7b342f3ee9a5f2f1bd42d7b598cae00ff1275da68536769510db4b7fe8cabf5d"
+    url "https://files.pythonhosted.org/packages/72/23/8c709655c5f2208ee82ab81b8104802421865535c278a7649b842b129db1/textual-8.1.1.tar.gz"
+    sha256 "eef0256a6131f06a20ad7576412138c1f30f92ddeedd055953c08d97044bc317"
   end
 
   resource "textual-speedups" do
