@@ -6,6 +6,15 @@ class Upterm < Formula
   license "Apache-2.0"
   head "https://github.com/owenthereal/upterm.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "567500ac5cbc11d7c20d9c49099fd10627f31ceb3a8754fec3177fe41f554599"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d738f81d704f7fe9fe0e2270f3941e896b5b5cf1621f01bd58e510efe74bc31a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6b6bf3da922fa0363f57c285ff60eef0433aba0b7274c6cac4713f5c1f72ef30"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a1cf3e9a76955c70ea802d2960ade9694b04cc34a0b5cf49b30f9a82bc39ff51"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "76cdef950e66dd0f142ca411589f8eb698dae3ea7870196c1aea5a4975ac4b73"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8efaec7ccc144dbea8174e867ec88ade4dad38d47abc147d056b0fe1e9f0942f"
+  end
+
   depends_on "go" => :build
 
   def install
