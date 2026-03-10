@@ -6,6 +6,13 @@ class Nfd2nfc < Formula
   license "MIT"
   head "https://github.com/elgar328/nfd2nfc.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e4846e44a1c14c1b76eef72df36adb7ba84fe51a8f20da6f82439b1c0b610f90"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f385ac54a2ac690e578a37685256407726df2fa8912344c7bfc557374b9095f8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a71ac65f6c1cb86807bba5643e9fc64f714c22f9908a905ff2f1505cc8cecae1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "287142bdaba3ce58a5a65850241522ad04539a1f63026b3aad0e26e6114a04fa"
+  end
+
   depends_on "rust" => :build
   depends_on :macos
 
