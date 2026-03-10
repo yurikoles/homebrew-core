@@ -1,4 +1,4 @@
-class HuggingfaceCli < Formula
+class Hf < Formula
   include Language::Python::Virtualenv
 
   desc "Client library for huggingface.co hub"
@@ -7,15 +7,6 @@ class HuggingfaceCli < Formula
   sha256 "d931ddad8ba8dfc1e816bf254810eb6f38e5c32f60d4184b5885662a3b167325"
   license "Apache-2.0"
   head "https://github.com/huggingface/huggingface_hub.git", branch: "main"
-
-  bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "0a4cfed093b4a03e36ddfed2e6e958bd38bed93d7f5a28cb986da2219f469849"
-    sha256 cellar: :any,                 arm64_sequoia: "777aa4e12a9c49ed01773d3f02640124747c8901f7b3980359475251e6d8b701"
-    sha256 cellar: :any,                 arm64_sonoma:  "c98a8a87883dbfec1b41134d34cec93824f886d9430e52e89001d46c41ced6b4"
-    sha256 cellar: :any,                 sonoma:        "8363f935ff7aa9b634316db691b0086c1ad3032005805134f80a09d01850dbb5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "44e35d6f4a7a78bc1bcf7bf56749287ea8769ba9e78ef0a9c00437f5b0b9deb7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2003277875c3ac6c426d4a97f5c3d653356c7160e0deba890e895e8be4262e07"
-  end
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build # for `hf-xet`
