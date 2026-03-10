@@ -8,6 +8,15 @@ class Hf < Formula
   license "Apache-2.0"
   head "https://github.com/huggingface/huggingface_hub.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "5d451bec59c74b5a3ddc10fa438968d8fd3f1c26054c84fc1def01fc313bcddf"
+    sha256 cellar: :any,                 arm64_sequoia: "3aaaf3c6261a02f471df2cf5fcff02a0488b22c40d929f93a8638b3b9e65e415"
+    sha256 cellar: :any,                 arm64_sonoma:  "56349b0e9a551d13b4163c7e7737745c51a0038f50cc8b5fc343b3380823506e"
+    sha256 cellar: :any,                 sonoma:        "9e9b944d705a82b309b260a508cfc413080fc80ad06edc4bb2048e38451d88a5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1c82f3a54293940560e2473d0cea1b32aa76d2c48c39134866d21c2f86e171da"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d7df20bcc8703a84ce0d77579cf03daf91f2d7dae93e9b47f5ba5c47638b2119"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build # for `hf-xet`
 
