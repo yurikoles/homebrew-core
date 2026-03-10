@@ -7,12 +7,12 @@ class Sdb < Formula
   head "https://github.com/radareorg/sdb.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "a1a4dd3159fac8732d6b7b5cd11d04048e2b181a4798b6f8ad0baf1ae0efa2e0"
-    sha256 cellar: :any,                 arm64_sequoia: "3ffa8b0e0c82522652e82534120723774bc20ecca6bd1e20556cc7c924d6cdce"
-    sha256 cellar: :any,                 arm64_sonoma:  "9a7918e96e3537de74254a8aaaaa2493c6526e3980bfd3ea120ffeb4fa03db0f"
-    sha256 cellar: :any,                 sonoma:        "679a835d8c2dbf05b71b44157a948eb3ea3bf2f4a6da503126ed5d17511d272f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0a847c514b996a6e73fd594567e66169bd63b1ad8d38d050e50616235ba55e67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1302c9024fb30296ed0656328aa73fa2937279e452d5c2f0256f6ea0bf4eb455"
+    sha256 cellar: :any,                 arm64_tahoe:   "281e3ceb5a1890ea3bac6107506cb275547d803523a4643d8de41a2cc5a9faab"
+    sha256 cellar: :any,                 arm64_sequoia: "242714c5f345106d15759df70cf2f7942d78535e1748092b7c7477582304af95"
+    sha256 cellar: :any,                 arm64_sonoma:  "f7fc2055ee92a0ecc62b160630c590e4a88f7a21ce8ca259bfa21a84a215606b"
+    sha256 cellar: :any,                 sonoma:        "bd12f2acb355b98355aae695dc50c312f88115267582f6a12399834bf55a0261"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "99990f59678145671ed55cb5c452b1ea9bcf16993decfd4ad459ae9650b87de4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "775ed9f3e72d9785b6cfce1487673722ea429d6da5174e5c5d625eea8cbeffbf"
   end
 
   depends_on "meson" => :build
