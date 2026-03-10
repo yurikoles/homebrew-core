@@ -1,8 +1,8 @@
 class SentryCli < Formula
   desc "Command-line utility to interact with Sentry"
   homepage "https://docs.sentry.io/cli/"
-  url "https://github.com/getsentry/sentry-cli/archive/refs/tags/3.3.0.tar.gz"
-  sha256 "41e1becb51a2b55172d64725538554a38f0c1c43fae5998523fdb30ad2bf44c5"
+  url "https://github.com/getsentry/sentry-cli/archive/refs/tags/3.3.1.tar.gz"
+  sha256 "e4b328462ca4534ccc065b2789711efacfb7eca2d0d9b951d1959373988e32e6"
   license "BSD-3-Clause"
   head "https://github.com/getsentry/sentry-cli.git", branch: "master"
 
