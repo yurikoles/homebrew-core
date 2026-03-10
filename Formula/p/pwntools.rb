@@ -31,7 +31,6 @@ class Pwntools < Formula
   conflicts_with "moreutils", because: "both install an `errno` executable"
   conflicts_with "cspice", because: "both install `version` binaries"
   conflicts_with "jena", because: "both install `update` binaries"
-  conflicts_with "scala", because: "both install `common` binaries"
 
   pypi_packages exclude_packages: %w[capstone certifi cryptography]
 
