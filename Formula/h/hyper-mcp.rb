@@ -1,8 +1,8 @@
 class HyperMcp < Formula
   desc "MCP server that extends its capabilities through WebAssembly plugins"
   homepage "https://github.com/hyper-mcp-rs/hyper-mcp"
-  url "https://github.com/hyper-mcp-rs/hyper-mcp/archive/refs/tags/v0.4.6.tar.gz"
-  sha256 "6787effb2a7573cb134748cd30831c56e335b455701f3e6d045510ceaec0bf2b"
+  url "https://github.com/hyper-mcp-rs/hyper-mcp/archive/refs/tags/v0.4.7.tar.gz"
+  sha256 "ebd2d4b4737fffdce87ad2bdd57717569ed580cbc416beb6ca8eae8f7cb5f995"
   license "Apache-2.0"
   head "https://github.com/hyper-mcp-rs/hyper-mcp.git", branch: "main"
 
