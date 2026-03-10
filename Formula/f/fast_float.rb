@@ -7,7 +7,7 @@ class FastFloat < Formula
   head "https://github.com/fastfloat/fast_float.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "0776c607123498722550dc0c219fec9ac3a8f420665fe67f5aa4a53bf6e1aa12"
+    sha256 cellar: :any_skip_relocation, all: "c97854f232ce6f13f283674295479708a1ce93eaa89685f90e260e394114ac66"
   end
 
   depends_on "cmake" => :build
