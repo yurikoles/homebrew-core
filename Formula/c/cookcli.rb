@@ -7,12 +7,12 @@ class Cookcli < Formula
   head "https://github.com/cooklang/cookcli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "503bb6831519448244152f9a20b542c9c58c48196414ee0b8a215fb4d4d1202e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bdf9cc43a0b80e1047e174216455fe458e63508c090b406c65ab8cca3dd4aba0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0637ef6b9aeb6494e0e547db5a573a241f58bcb0b44de109937eb62d3413e65b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "407d1c7b909103f0bc66a3e0cdb3459729d67ed1be29de95d03a28d0fd1de532"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e40690eed710c27a0febe323c00ef4e8747437e01868b7ca6ac8f40850ac36fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15865b963f49bbb056c5a49af0bc43b08bd5d0147ffdcb301edb98f7ed40c2e6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9c2d958307cfd0461c0b6263aabaa65113672968626a22f1ba678b316ea317e0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "641aac76e48c49ff244f6ef282a6c3f76629f84ea6a49a30d36c5de7709edc79"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f736e85b9e1570d1043926875e8f9831156f407d9b19bb8916e294d46ed712c5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e034711972286eba231d814b8e5c266251142f2cb9472ed24b82b849d8c6ba08"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d02609cf0ba50092c0a5bbc135c8090a20d9471fe19e19e5e798300393099a5c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "17a287106a02d145ea6d8a1bd1591da93f84a114a3f24953e51ecbc52ecd634b"
   end
 
   depends_on "node" => :build
