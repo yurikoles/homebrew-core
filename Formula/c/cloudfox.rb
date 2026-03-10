@@ -7,13 +7,12 @@ class Cloudfox < Formula
   head "https://github.com/BishopFox/cloudfox.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "78f58ed261a29e27825858cd4b99b200d68927589f1fc591c84e986d9286d91e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "78f58ed261a29e27825858cd4b99b200d68927589f1fc591c84e986d9286d91e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "78f58ed261a29e27825858cd4b99b200d68927589f1fc591c84e986d9286d91e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b44ac8a7e14b3c0bfa0f1be104220fd8e0cd965bcba200984892c7dc2a07e3c3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9220bf69db639a1c07eb534963b6ee780b56a7547ad182ed6bacda9487f90fd2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b5ae1d70456eb61bca41051b6541a577e9834f76a57641b14f8f69c964ebda9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f1535f63bf52392205ac68dce9a6898f7bec0d5b7b2470696f219253083c404a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f1535f63bf52392205ac68dce9a6898f7bec0d5b7b2470696f219253083c404a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f1535f63bf52392205ac68dce9a6898f7bec0d5b7b2470696f219253083c404a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0242cc7ef0b849d50221f900cc72f4c493aea89f367e1672fac2434fa4801f5c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ee765a524cbffefcb80e2986aa6bdcd0f6f934ef8746070aeb14afdb134c6c98"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "670fe16c63f8c51c790ab75fb07cea0887713ed6e359bc2b9fd77c804e836ceb"
   end
 
   depends_on "go" => :build
