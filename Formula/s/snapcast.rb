@@ -1,8 +1,8 @@
 class Snapcast < Formula
   desc "Synchronous multiroom audio player"
-  homepage "https://github.com/badaix/snapcast"
-  url "https://github.com/badaix/snapcast/archive/refs/tags/v0.34.0.tar.gz"
-  sha256 "a2918ea4d1f9b2df9c4247fd71bd452ea03a5d20ac44f60a736df90488858944"
+  homepage "https://github.com/snapcast/snapcast"
+  url "https://github.com/snapcast/snapcast/archive/refs/tags/v0.35.0.tar.gz"
+  sha256 "cb75a71479bf52910bf5f47ae8120ec41c89459b0d77d7cd560e674e437ef050"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -37,9 +37,6 @@ class Snapcast < Formula
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-    # FIXME: if permissions aren't changed, the install fails with:
-    # Error: Failed to read Mach-O binary: share/snapserver/plug-ins/meta_mpd.py
-    chmod 0555, share/"snapserver/plug-ins/meta_mpd.py"
   end
 
   test do
