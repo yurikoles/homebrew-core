@@ -1,10 +1,15 @@
 class Picoclaw < Formula
   desc "Ultra-efficient personal AI assistant in Go"
   homepage "https://picoclaw.io/"
-  url "https://github.com/sipeed/picoclaw/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "2b24db59ee2798d07ee9ad931826e9f7550f6bb8b0e0fd48dec20730e37d51d3"
+  url "https://github.com/sipeed/picoclaw/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "cfacbfbdde3dcf732cd588162af7ceab504464ff2988c8811a6bcc5d6e00d23a"
   license "MIT"
   head "https://github.com/sipeed/picoclaw.git", branch: "main"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2e0f8541d7bdc46d3f3f7244fa36295ed78aebef02210b5b2206e985983374c7"
@@ -35,7 +40,7 @@ class Picoclaw < Formula
 
     system bin/"picoclaw", "onboard"
     assert_path_exists testpath/".picoclaw/config.json"
-    assert_path_exists testpath/".picoclaw/workspace/AGENT.md"
+    assert_path_exists testpath/".picoclaw/workspace/AGENTS.md"
 
     assert_match "picoclaw Status", shell_output("#{bin}/picoclaw status")
   end
