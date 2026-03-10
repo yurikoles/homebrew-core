@@ -1,18 +1,18 @@
 class SentryCli < Formula
   desc "Command-line utility to interact with Sentry"
   homepage "https://docs.sentry.io/cli/"
-  url "https://github.com/getsentry/sentry-cli/archive/refs/tags/3.3.1.tar.gz"
-  sha256 "e4b328462ca4534ccc065b2789711efacfb7eca2d0d9b951d1959373988e32e6"
+  url "https://github.com/getsentry/sentry-cli/archive/refs/tags/3.3.2.tar.gz"
+  sha256 "e7077589f724564c78e654fbc070c2732409b0d7905b58314044b5151f038e70"
   license "BSD-3-Clause"
   head "https://github.com/getsentry/sentry-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e1251f5712198cbacc0e31ac407dd76c4f87064b129ffcab16ea8af9176ee0eb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "22baf2ad3b8882ec9c977753392c8f560c796657a5d2c77d0d9de5aa629e48dd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8d7e23b96b7e8bc05a6ded60c80dd8ba54927530ca8c9cc5dc6e45cc411f7026"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a694810fc4edd8a6ff9bc9fd4bbbdbd037daf9a8fec86a24b8173dd9178c5216"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b41f250cfd8edb64153ce0ee93a84f3ff0f942a59dc5efc7bbfb8c2a942cb2c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "542181f295b5306bbf34f93cb3502b55db1d0a7eb5aeea52cb55f15a3bfa3bcc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1899623fd932310b80e607dc776c3fc60af94ec1ab99e5d889127a44bdb03723"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "97f280ad12a9e0941f9dc476bac55677168521aa6c6fcb60cc7b65f2165f7082"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b27701434fcb0e13ee90f604e2a03af863f764a741322bbbc91fbf347c31ca35"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0feac61e6829a2e38b5677b8b981cbd40d20cd398d6240dd8c08e3809dee68c5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ef3c670ddd9c8e52bd111952bb2750f5c2f20b095c007bc228f6b4a13adf565a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "168efdf6688d9240b807d6e424acc67ee544fff474101eabc0f2d74ba8004273"
   end
 
   depends_on "pkgconf" => :build
