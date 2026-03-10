@@ -12,12 +12,12 @@ class TofuLs < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "357ccd1bb00fc2383d210df836db6d91cb0b3d98aebd3c098d391e08709ef5fb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "357ccd1bb00fc2383d210df836db6d91cb0b3d98aebd3c098d391e08709ef5fb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "357ccd1bb00fc2383d210df836db6d91cb0b3d98aebd3c098d391e08709ef5fb"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a0702775a12d5a8c420780b1dafe0d31f7a16455e1058f6f539c9b4900b690d0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "096bfcc33d92da2690fb3985e855c1ee1d4d6ff45e3f1f44ad40296cd592427f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cab98ccfc37701a33465bddc81bf83bac23eb4b6247f4f8a91bdf3c52d7ccb74"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fc7fa752152586e7704036a6e342fb773c0c909bda028a532c26ae48baa245b9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fc7fa752152586e7704036a6e342fb773c0c909bda028a532c26ae48baa245b9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fc7fa752152586e7704036a6e342fb773c0c909bda028a532c26ae48baa245b9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4220121b5934da5766c7333d117b2585ecf81857d6c07e19078ee4aaf2bd36e0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "df3939060de992b9e1a3256ba5f365af89b36b3d666f0adac377f6d9b16fc1c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "564d414c2acca220332259f8186a74e331ae08e6465ca035b91f60565e752bb9"
   end
 
   depends_on "go" => :build
