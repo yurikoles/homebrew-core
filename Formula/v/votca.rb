@@ -1,10 +1,9 @@
 class Votca < Formula
   desc "Versatile Object-oriented Toolkit for Coarse-graining Applications"
   homepage "https://www.votca.org/"
-  url "https://github.com/votca/votca/archive/refs/tags/v2025.1.tar.gz"
-  sha256 "85b487d2b2a31f26869be422c98f816b95c88a4ab112ea4650cccd4c2706bdbf"
+  url "https://github.com/votca/votca/archive/refs/tags/v2026.tar.gz"
+  sha256 "bf5827e93aecdfd040131ef8427f49efac4ea87d30882c2eb83fea16a054fbc8"
   license "Apache-2.0"
-  revision 4
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "8ea2eec9085cfb8e8f8c964828081125904a2c2307ae570859446d8e371a0cd1"
@@ -33,13 +32,6 @@ class Votca < Formula
     depends_on "libomp"
   end
 
-  # Apply open PR to support eigen 5.0.0
-  # PR ref: https://github.com/votca/votca/pull/1189
-  patch do
-    url "https://github.com/votca/votca/commit/cc581d91196c3505c649e35ba69bcc8ec33fa14b.patch?full_index=1"
-    sha256 "08da2d4fd694eb1b3909fe4ef452b042a0b0733ca5d8b68e0e655b09842cb069"
-  end
-
   def install
     args = [
       "-DINSTALL_RC_FILES=OFF",
@@ -48,18 +40,24 @@ class Votca < Formula
       "-DENABLE_RPATH_INJECT=ON",
       "-DPYrdkit_FOUND=OFF",
     ]
+
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
 
   test do
-    system bin/"csg_property", "--help"
-    (testpath/"table.in").write <<~EOS
-      0 0 i
-      1 1 i
-    EOS
-    system bin/"csg_resample", "--in", "table.in", "--out", "table.out", "--grid", "0:0.1:1", "--type", "linear"
-    assert_path_exists "#{testpath}/table.out"
+    (testpath/"topol.xml").write <<~XML
+      <topology>
+        <molecules>
+          <molecule name="MOL" nmols="1" nbeads="1">
+            <bead name="B" type="B" mass="1.0" q="0.0" resid="1"/>
+          </molecule>
+        </molecules>
+      </topology>
+    XML
+
+    output = shell_output("#{bin}/csg_dump --top topol.xml")
+    assert_match "I have 1 beads in 1 molecules", output
   end
 end
