@@ -21,23 +21,29 @@ class Brpc < Formula
   depends_on "gflags"
   depends_on "leveldb"
   depends_on "openssl@3"
-  depends_on "protobuf@33"
+  depends_on "protobuf"
 
   on_linux do
     depends_on "pkgconf" => :test
   end
 
-  def install
-    inreplace "CMakeLists.txt", "/usr/local/opt/openssl",
-                                Formula["openssl@3"].opt_prefix
+  # Apply open PR to support Protobuf 34
+  # PR ref: https://github.com/apache/brpc/pull/3241
+  patch do
+    url "https://github.com/apache/brpc/commit/09b50d2c144e20e687c53829c89138caa7f1f31c.patch?full_index=1"
+    sha256 "85536080d6ef84b446c7a3277dd0a6b8ac9672366bde8709abb4e592dc5f61b5"
+  end
 
-    args = %w[
+  def install
+    args = %W[
       -DBUILD_SHARED_LIBS=ON
       -DBUILD_UNIT_TESTS=OFF
       -DDOWNLOAD_GTEST=OFF
       -DWITH_DEBUG_SYMBOLS=OFF
       -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+      -DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}
     ]
+
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
@@ -72,7 +78,7 @@ class Brpc < Formula
       }
     CPP
 
-    protobuf = Formula["protobuf@33"]
+    protobuf = Formula["protobuf"]
     flags = %W[
       -I#{include}
       -I#{protobuf.opt_include}
@@ -85,7 +91,7 @@ class Brpc < Formula
     # '_ZN4absl12lts_2024072212log_internal21CheckOpMessageBuilder7ForVar2Ev'
     flags += shell_output("pkgconf --libs absl_log_internal_check_op").chomp.split if OS.linux?
 
-    system ENV.cxx, "-std=c++17", "test.cpp", "-o", "test", *flags
+    system ENV.cxx, "-std=gnu++17", "test.cpp", "-o", "test", *flags
     assert_equal "200", shell_output("./test")
   end
 end
