@@ -6,6 +6,15 @@ class Topicctl < Formula
   license "MIT"
   head "https://github.com/segmentio/topicctl.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f71f5d8f760ec5e5772a82bebf1a9bd0b921d3267d259b8effb8210905572444"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f71f5d8f760ec5e5772a82bebf1a9bd0b921d3267d259b8effb8210905572444"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f71f5d8f760ec5e5772a82bebf1a9bd0b921d3267d259b8effb8210905572444"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8d9804fa4bab8b68a3555e102184f763d8e22a6edcf18cba09441cd0414a95bf"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "24889b807c09e8094152a1f5fcb32a67dfaac884afefb5333b3d1652358e92dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "54f7b1d2d2b7ad45ec86e051ae83c44fa814b4e86d6ef4677901d91c3d6c2024"
+  end
+
   depends_on "go" => :build
 
   def install
