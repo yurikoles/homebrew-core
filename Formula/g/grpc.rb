@@ -76,6 +76,7 @@ class Grpc < Formula
 
     # `grpc_cli` fails to build on Linux. In any case, it looks like it isn't meant to be installed.
     # TODO: consider dropping this on macOS too.
+    odie "Remove grpc_cli!" if build.stable? && version >= "1.80.0"
     return unless OS.mac?
 
     # The following are installed manually, so need to use CMAKE_*_LINKER_FLAGS
@@ -88,8 +89,19 @@ class Grpc < Formula
     ]
     system "cmake", "-S", ".", "-B", "_build-grpc_cli", *args, *grpc_cli_args, *std_cmake_args
     system "cmake", "--build", "_build-grpc_cli", "--target", "grpc_cli"
-    bin.install "_build-grpc_cli/grpc_cli"
     lib.install (buildpath/"_build-grpc_cli").glob(shared_library("libgrpc++_test_config", "*"))
+    libexec.install "_build-grpc_cli/grpc_cli"
+    (bin/"grpc_cli").write <<~SHELL
+      #!/bin/bash
+      echo "WARNING: grpc_cli will be removed from grpc formula in version 1.80.0" >&2
+      exec "#{libexec}/grpc_cli" "$@"
+    SHELL
+  end
+
+  def caveats
+    on_macos do
+      "grpc_cli will be removed from grpc formula in 1.80.0"
+    end
   end
 
   test do
