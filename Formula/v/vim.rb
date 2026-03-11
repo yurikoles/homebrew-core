@@ -5,7 +5,7 @@ class Vim < Formula
   url "https://github.com/vim/vim/archive/refs/tags/v9.2.0100.tar.gz"
   sha256 "0f35dbb9bcebc00d97b06aa229129f1a707960b64f064f65c7bcb8b424fe129b"
   license "Vim"
-  revision 1
+  revision 2
   head "https://github.com/vim/vim.git", branch: "master"
 
   # The Vim repository contains thousands of tags and the `Git` strategy isn't
@@ -36,7 +36,7 @@ class Vim < Formula
 
   depends_on "gettext" => :build
   depends_on "libsodium"
-  depends_on "lua"
+  depends_on "lua@5.4" # Lua 5.5 doesn't work for now, see https://github.com/vim/vim/issues/19639
   depends_on "ncurses"
   depends_on "python@3.14"
   depends_on "ruby"
@@ -84,7 +84,7 @@ class Vim < Formula
                           "--disable-gui",
                           "--without-x",
                           "--enable-luainterp",
-                          "--with-lua-prefix=#{Formula["lua"].opt_prefix}"
+                          "--with-lua-prefix=#{Formula["lua@5.4"].opt_prefix}"
     system "make"
     # Parallel install could miss some symlinks
     # https://github.com/vim/vim/issues/1031
