@@ -1,8 +1,8 @@
 class Pcb2gcode < Formula
   desc "Command-line tool for isolation, routing and drilling of PCBs"
   homepage "https://github.com/pcb2gcode/pcb2gcode"
-  url "https://github.com/pcb2gcode/pcb2gcode/archive/refs/tags/v3.0.2.tar.gz"
-  sha256 "463c53e2102aac0be002b092b508751d20b7ba1da057f41470585ccbdb6e8a79"
+  url "https://github.com/pcb2gcode/pcb2gcode/archive/refs/tags/v3.0.3.tar.gz"
+  sha256 "a565905652963e5486a2e611e927550715fe59ea7a84b4bf8eceb03cbf72f574"
   license "GPL-3.0-or-later"
   head "https://github.com/pcb2gcode/pcb2gcode.git", branch: "master"
 
@@ -20,14 +20,12 @@ class Pcb2gcode < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "d27c42ab6fddb5e48d644d35c64a6d97d9fde47b584f9cd8caec3acc3af04032"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
   depends_on "cairomm@1.14" => :build
+  depends_on "cmake" => :build
   depends_on "glibmm@2.66" => :build
   depends_on "gtkmm" => :build
   depends_on "librsvg" => :build
   depends_on "libsigc++@2" => :build
-  depends_on "libtool" => :build
   depends_on "pangomm@2.46" => :build
   depends_on "pkgconf" => :build
   depends_on "at-spi2-core"
@@ -42,9 +40,9 @@ class Pcb2gcode < Formula
   depends_on "pango"
 
   def install
-    system "autoreconf", "--force", "--install", "--verbose"
-    system "./configure", "--disable-silent-rules", *std_configure_args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
