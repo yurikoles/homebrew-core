@@ -1,8 +1,8 @@
 class Fedify < Formula
   desc "CLI toolchain for Fedify"
   homepage "https://fedify.dev/cli"
-  url "https://github.com/fedify-dev/fedify/archive/refs/tags/2.0.3.tar.gz"
-  sha256 "a0a447ead69004b271177258fc65154c2f91c09b9b4254e1a90e14c25cb81f12"
+  url "https://github.com/fedify-dev/fedify/archive/refs/tags/2.0.4.tar.gz"
+  sha256 "d2a8f059ad8e23aee886e689e2fa8b62d689123ccf53c920b8fd2c3b6f1ee05f"
   license "MIT"
   head "https://github.com/fedify-dev/fedify.git", branch: "main"
 
