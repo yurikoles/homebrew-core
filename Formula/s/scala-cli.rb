@@ -6,6 +6,15 @@ class ScalaCli < Formula
       revision: "ca3f6e8f59562e1adcf798cd868b0233500f94f1"
   license "Apache-2.0"
 
+  bottle do
+    sha256                               arm64_tahoe:   "bbe4de04e1a58fb60cf7f6abd8d9839ebb0a89a48f3f003659a9f553cdae5708"
+    sha256                               arm64_sequoia: "92cb26714138cd1eab785157659477e0883fd0ca4e51ff7820cb54332e6b83c5"
+    sha256                               arm64_sonoma:  "e3667e5d7edec1eeb3f53d00d0be9ac16821f83d5c23d3b6c6fa9049ba375518"
+    sha256 cellar: :any_skip_relocation, sonoma:        "954a05d9404aa9ee9fe9d595995a64aa28e89274ad840414144795ffb825ca01"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d22f74419d8c1558e0844a50d2cb82711d93412faa9f04c393a77bef3bb9549f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eef9116b580721ac705d3b0ccc9a10b78411087163e80b1fa1f22153c107e4de"
+  end
+
   depends_on "openjdk@17" => [:build, :test]
 
   on_linux do
