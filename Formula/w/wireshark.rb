@@ -27,12 +27,13 @@ class Wireshark < Formula
   end
 
   bottle do
-    sha256                               arm64_tahoe:   "b06ccbfaf7de9dab53effd709750f0157fe6cd01236b5f11c17f14d8e03d753e"
-    sha256                               arm64_sequoia: "cfd9015fb7a9e4498df537c69ac395b5d8b4b53b0887cff0241114286cb199ea"
-    sha256                               arm64_sonoma:  "5f368a3253b16c5419f9c904524106aeb55a2d4af492c5faed3b9623eebef54f"
-    sha256                               sonoma:        "d4571034a1f8e53852cc728a41f36240139d3b14c81413468c8cef09d8a73ce6"
-    sha256                               arm64_linux:   "c102409ccfabafdb24cde73b68690a7c75fdfcd784960b8ee30d09bf12819352"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f50e9cf5822d3baf7a521c0a70d3148297d4ccf0e56a67bab31cd197b451603c"
+    rebuild 1
+    sha256                               arm64_tahoe:   "fb70cc4a30876469e96717a747f113ea408fe6e3af51584735055646d226fd13"
+    sha256                               arm64_sequoia: "6e18b24d8a0333bf7cfd1c92f602ff0d6019580451d1bc7858c8b106f8599550"
+    sha256                               arm64_sonoma:  "85ee2997391e87141421c168fa4497388c9889eb8be390cd4a3294a3065a4a96"
+    sha256                               sonoma:        "27ac99b2d325d07a4f4324dc50ecb59de4bf3f07423cc76b91f91baa151c7bc6"
+    sha256                               arm64_linux:   "ba445c07c071e8f8661506084b2a92df131e29b1a8cb877d69b2f8670714ceb4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b488d1d3c7496b88afaef35ba42f43deceae3dbb8a3dee416691fcddd56c6ee"
   end
 
   depends_on "cmake" => :build
