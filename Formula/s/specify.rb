@@ -3,8 +3,8 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "173f21a5f251e644f2229a2db23fb2cb13f2810748bda11c49831e78cf67932d"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "331a50156a7a27eb1770c5afc755e217e51f470026f1890a0d9371d8c22fbd11"
   license "MIT"
 
   bottle do
@@ -70,6 +70,11 @@ class Specify < Formula
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
     sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
+  end
+
+  resource "pathspec" do
+    url "https://files.pythonhosted.org/packages/fa/36/e27608899f9b8d4dff0617b2d9ab17ca5608956ca44461ac14ac48b44015/pathspec-1.0.4.tar.gz"
+    sha256 "0210e2ae8a21a9137c0d470578cb0e595af87edaa6ebf12ff176f14a02e0e645"
   end
 
   resource "platformdirs" do
