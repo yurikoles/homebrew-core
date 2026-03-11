@@ -1,14 +1,9 @@
 class Tofrodos < Formula
   desc "Converts DOS <-> UNIX text files, alias tofromdos"
-  homepage "https://www.thefreecountry.com/tofrodos/"
-  url "https://www.thefreecountry.com/tofrodos/tofrodos-1.8.4.zip"
-  sha256 "fd7b5b5b368a38104dd3c8845c1f24198d973d8b96d4765e24643266a0fa2034"
+  homepage "https://github.com/ChristopherHeng/tofrodos"
+  url "https://github.com/ChristopherHeng/tofrodos/archive/refs/tags/1.9.0.tar.gz"
+  sha256 "f4e16646a1eca631cb0ba62440b47cb8651ce1e6bd2982e8426d3a98ad8083ec"
   license "GPL-2.0-only"
-
-  livecheck do
-    url :homepage
-    regex(/href=.*?tofrodos[._-]v?(\d+(?:\.\d+)+)\.(?:t|zip)/i)
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a9b776268d2a16c1b90af8e737892c3d7d5cf7992e16d4c10f2577b6cd3ab2db"
@@ -22,8 +17,8 @@ class Tofrodos < Formula
   def install
     mkdir_p [bin, man1]
 
-    system "make", "-C", "src", "all"
-    system "make", "-C", "src", "BINDIR=#{bin}", "MANDIR=#{man1}", "install"
+    system "make", "-f", "makefile.gcc", "all"
+    system "make", "-f", "makefile.gcc", "BINDIR=#{bin}", "MANDIR=#{man1}", "install"
   end
 
   test do
