@@ -6,6 +6,11 @@ class Powershell < Formula
       revision: "7c8d9e7e0ed2fc1f2caf50746fe9fef720ca2a0a"
   license "MIT"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "0f9e423fb1fee82f58b712cbd2a6fe119bf389aaec6936594579d07f566c3a80"
     sha256 cellar: :any,                 arm64_sequoia: "9c83abf90d133412278bc76f6842bf064ddd425acb14069b91df623fe9356d3a"
