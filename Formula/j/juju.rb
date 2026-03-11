@@ -1,19 +1,11 @@
 class Juju < Formula
   desc "DevOps management tool"
-  homepage "https://juju.is/"
-  url "https://launchpad.net/juju/3.6/3.6.8/+download/juju-core_3.6.8.tar.gz"
-  sha256 "c11bb17d5bde7823a63e6354c785274c42008cfaf0e6abeb203b7ec89c83f890"
+  homepage "https://canonical.com/juju"
+  url "https://github.com/juju/juju/archive/refs/tags/v4.0.3.tar.gz"
+  sha256 "a8ce3cceeada77fead61bc0db551e1c4ba1a3fb51865cd075df39df307ff8abc"
   license "AGPL-3.0-only"
   version_scheme 1
   head "https://github.com/juju/juju.git", branch: "main"
-
-  # We check the Launchpad download page for Juju because the latest version
-  # listed on the main project page isn't always a stable version.
-  livecheck do
-    url "https://launchpad.net/juju/+download"
-    regex(/href=.*?juju-core[._-]v?(\d+(?:\.\d+)+)\.t/i)
-    strategy :page_match
-  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b98c9f297f29e76112887dfd4eb4d978f409d89ca46dbcd4b7e1802bb92f098f"
@@ -29,11 +21,9 @@ class Juju < Formula
   depends_on "go" => :build
 
   def install
-    cd "src/github.com/juju/juju" do
-      system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/juju"
-      system "go", "build", *std_go_args(output: bin/"juju-metadata", ldflags: "-s -w"), "./cmd/plugins/juju-metadata"
-      bash_completion.install "etc/bash_completion.d/juju"
-    end
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/juju"
+    system "go", "build", *std_go_args(output: bin/"juju-metadata", ldflags: "-s -w"), "./cmd/plugins/juju-metadata"
+    bash_completion.install "etc/bash_completion.d/juju"
   end
 
   test do
