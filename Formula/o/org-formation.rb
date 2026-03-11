@@ -1,8 +1,8 @@
 class OrgFormation < Formula
   desc "Infrastructure as Code (IaC) tool for AWS Organizations"
   homepage "https://github.com/org-formation/org-formation-cli"
-  url "https://registry.npmjs.org/aws-organization-formation/-/aws-organization-formation-1.0.16.tgz"
-  sha256 "a3d4be909939bb85b033886bbf8913ffe20e0946ad62f19a0169e2cfc8811406"
+  url "https://registry.npmjs.org/aws-organization-formation/-/aws-organization-formation-1.0.17.tgz"
+  sha256 "347b3b10690569cbd36104ea612f0de9b9092afd0e81115818f648f68235ec4a"
   license "MIT"
 
   bottle do
