@@ -6,8 +6,8 @@ class ClickhouseOdbc < Formula
 
   stable do
     # Git modules are all for bundled libraries so can use tarball without them
-    url "https://github.com/ClickHouse/clickhouse-odbc/archive/refs/tags/v1.5.2.20260217.tar.gz"
-    sha256 "fd2832bc98c5592681ad58c44ddd1138d4e5549c17194806c23bdddc9ce2dbba"
+    url "https://github.com/ClickHouse/clickhouse-odbc/archive/refs/tags/v1.5.3.20260311.tar.gz"
+    sha256 "bb9311b48ddcd499ed2222a72a07f168f3d4909bd77ec69a78c665784b81c1c1"
 
     # TODO: Consider adding formula for https://github.com/nanodbc/nanodbc
     resource "nanodbc" do
