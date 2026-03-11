@@ -6,6 +6,14 @@ class Powershell < Formula
       revision: "7c8d9e7e0ed2fc1f2caf50746fe9fef720ca2a0a"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "0f9e423fb1fee82f58b712cbd2a6fe119bf389aaec6936594579d07f566c3a80"
+    sha256 cellar: :any,                 arm64_sequoia: "9c83abf90d133412278bc76f6842bf064ddd425acb14069b91df623fe9356d3a"
+    sha256 cellar: :any,                 arm64_sonoma:  "8569cf80986498d035648ddb081436e08f83dafe40e31833e9acdf1838cf2eb1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0b9d273567b506ac8362df6a91f9d2012299c3e5f32cc8266299b104aceaf111"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "711a84538375f0a0746a206aa1c5f54d8affeabed704e06519f432a6ec611002"
+  end
+
   depends_on "dotnet@9"
 
   on_linux do
