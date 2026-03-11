@@ -1,11 +1,24 @@
 class Luv < Formula
   desc "Bare libuv bindings for lua"
   homepage "https://github.com/luvit/luv"
-  url "https://github.com/luvit/luv/archive/refs/tags/1.51.0-2.tar.gz"
-  sha256 "d70cf20b16ab05ceaa3bb448f3e1b3ef63a5949e34184255c52a3e92efcd39b4"
   license "Apache-2.0"
   revision 1
   head "https://github.com/luvit/luv.git", branch: "master"
+
+  stable do
+    url "https://github.com/luvit/luv/archive/refs/tags/1.51.0-2.tar.gz"
+    sha256 "d70cf20b16ab05ceaa3bb448f3e1b3ef63a5949e34184255c52a3e92efcd39b4"
+
+    # Backport support for Lua 5.5
+    patch do
+      url "https://github.com/luvit/luv/commit/297bd3341257a534cb3f7759ba20aac8916ce93d.patch?full_index=1"
+      sha256 "0be1bb91014cbc71e5822a3bb7b7c10c794282f7a88585a6adb123575f973e65"
+    end
+    patch do
+      url "https://github.com/luvit/luv/commit/a60fcf61b29b877277dde8a58945d5667409c8bc.patch?full_index=1"
+      sha256 "c6ad102f3bd2b1792ad9e3d0ea4ca2095464601ebbc692279da1ff71bb82d393"
+    end
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "f39bd668b051ad916ffb10aea31c37f98f79c7cdc49b04794c69f4c79ecdbbf8"
@@ -17,7 +30,7 @@ class Luv < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "lua@5.4" => [:build, :test]
+  depends_on "lua" => [:build, :test]
   depends_on "luajit" => [:build, :test]
   depends_on "libuv"
 
@@ -27,7 +40,7 @@ class Luv < Formula
   end
 
   def lua
-    Formula["lua@5.4"]
+    Formula["lua"]
   end
 
   def install
@@ -52,6 +65,8 @@ class Luv < Formula
                     "-DWITH_LUA_ENGINE=Lua",
                     "-DBUILD_STATIC_LIBS=OFF",
                     "-DBUILD_SHARED_LIBS=OFF",
+                    # https://github.com/luvit/luv/issues/787#issuecomment-4041758224
+                    "-DMODULE_INSTALL_LIB_DIR=#{lib}/lua/#{lua.version.major_minor}",
                     *args, *std_cmake_args
     system "cmake", "--build", "buildlua"
     system "cmake", "--install", "buildlua"
