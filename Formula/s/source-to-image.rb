@@ -8,14 +8,12 @@ class SourceToImage < Formula
   head "https://github.com/openshift/source-to-image.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7735582f91687e77f5e48c13fa4c8a53ce5fccb4432e68799ed548c869801ef5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f7778f7eed763ebd1813a981473c5dc3420e4f1e537b385ddfb04d732c248c19"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5859f81f7f4b2e3c99b9e404a4b31d8f8bb819a6cc353a12d682298541420f29"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d3f76254dcc783550de56245b53142ca82df53ee5df5708eab4614a201ac3843"
-    sha256 cellar: :any_skip_relocation, sonoma:        "140175f74190d78aa15506c88c60e4b0edf3f0a610631331cf5c89be2c07d499"
-    sha256 cellar: :any_skip_relocation, ventura:       "4306563c8c5eac66011ea690f7c334334f5769b9b72986483201f7c8a3eed88d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b56f0ebfe195a88d684881f6240c4c2a2ea906a9e62c9b4b8ac667831b2f11ea"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "274fd87a87e799afb59ec2e03b3ac12bf555f491bf0395ff1921c353d87375ad"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "39886be4befd353b4464b5368d64515e6515844e0f5399ed7f496826db5cede7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "38aabb78bb527e87bd194bbc8cc4c576b3854408de685611c601ed8080fa2863"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d77d65189af732c437815a361058003fd0dabe5e4a4951ce75a5858e158e7b9e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c61dfe1f0f52d0fd016a304920384674a8044f679c9e110691149c19482ff0b7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "048f8be69ce06b19bda61a44ff33492258f56b6dc06e53d8b351f2e75617c8b2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a5051c12c86190010ed57cecef0614e7b45a24e939a859f2fc7e129dabf6df31"
   end
 
   depends_on "go" => :build
