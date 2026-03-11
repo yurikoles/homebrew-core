@@ -7,12 +7,12 @@ class Pixlet < Formula
   head "https://github.com/tronbyt/pixlet.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "6d7060a7922dfa693b61fcc949c383e379abd56d6b3c5804220aa84a46154058"
-    sha256 cellar: :any,                 arm64_sequoia: "4c8c7f11abceef56f36c1169f8d7c688e2799465732652ddd21bbf06fdaae026"
-    sha256 cellar: :any,                 arm64_sonoma:  "e8dd998ce261c8271f5923270f2cd9a9290b29499c2574f14cdbe89d4290498e"
-    sha256 cellar: :any,                 sonoma:        "852c341334751a94ffc411b5c51ac428b6cfa1c29f6a62baff69a5feb7e4e0a9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8792c18c2b73b090afdba0c5b2eeede8e72d786d5f41abca9fda09a9a26d801e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c7c5d8fed769be09795f43b01cb1ee4d2f4545949b6cdc7236c074e4b4fd4e01"
+    sha256 cellar: :any,                 arm64_tahoe:   "717a462eb7ff00ed620ce43a0dc4d8bd626bcb6087e2551db7f75f4085dfb444"
+    sha256 cellar: :any,                 arm64_sequoia: "478b2cfc9b41c4e59f39c9edd705ce85b1e8ef10e4763fc87151a48ffb2f69c6"
+    sha256 cellar: :any,                 arm64_sonoma:  "7c03f0ad5d2ee369516e024ba05d71484998f79dffbb4f98f41b8f6221384edd"
+    sha256 cellar: :any,                 sonoma:        "cf7d4f21188dd7841668d03c7d6d238137970e4e15f92a56ad96deb7186fbb66"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6dc15cfd057513b0851b340df65c42a9b18e972f9f65cff11d50f908845c5b93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3f80fe2e4692c71b0bde31c2073d5b2f816a9a59c325dbbaf7f8b71c817604c2"
   end
 
   depends_on "go" => :build
