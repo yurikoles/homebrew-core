@@ -1,8 +1,9 @@
 class FfcH < Formula
   desc "Single-header C99 accelerated float/double parsing"
   homepage "https://github.com/kolemannix/ffc.h"
-  url "https://github.com/kolemannix/ffc.h/archive/refs/tags/v26.03.03.tar.gz"
-  sha256 "691a49fa2f8d19f6b02c8de23c3fffa62fefafd815948d68dbd25a91f96fb795"
+  url "https://github.com/kolemannix/ffc.h/archive/refs/tags/v26.03.4-test.tar.gz"
+  version "26.03.4-test"
+  sha256 "2a89445d5d29e4a24e00eb9b0c7167286a6d38216c238069b6be512fe0568f95"
   license "Apache-2.0"
   head "https://github.com/kolemannix/ffc.h.git", branch: "main"
 
