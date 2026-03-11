@@ -6,6 +6,10 @@ class FfcH < Formula
   license "Apache-2.0"
   head "https://github.com/kolemannix/ffc.h.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "11fe58e687d959752240ac9fa289999d7de749375a3cf9f5a8dd81579867f381"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   def install
