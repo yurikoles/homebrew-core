@@ -3,8 +3,8 @@ class SnykAgentScan < Formula
 
   desc "Constrain, log and scan your MCP connections for security vulnerabilities"
   homepage "https://github.com/snyk/agent-scan"
-  url "https://files.pythonhosted.org/packages/63/ce/98e6be50739a884218d9a100dae90b1a21452a8e7250b380d9688b98248f/snyk_agent_scan-0.4.5.tar.gz"
-  sha256 "ff16520b0ccc780e3d881141fccf9ea2415d5927638aec8350bbe9ddc450213c"
+  url "https://files.pythonhosted.org/packages/73/59/36d3fbfa59a03206f8bcfc2e494fe3e5d65dbb81805c550908d1056dd0ec/snyk_agent_scan-0.4.6.tar.gz"
+  sha256 "a5553a23b879f45c8a8701182043318b1aa20fced4572d87eb5fd1c05bb42c14"
   license "Apache-2.0"
 
   bottle do
@@ -66,8 +66,8 @@ class SnykAgentScan < Formula
   end
 
   resource "filelock" do
-    url "https://files.pythonhosted.org/packages/77/18/a1fd2231c679dcb9726204645721b12498aeac28e1ad0601038f94b42556/filelock-3.25.0.tar.gz"
-    sha256 "8f00faf3abf9dc730a1ffe9c354ae5c04e079ab7d3a683b7c32da5dd05f26af3"
+    url "https://files.pythonhosted.org/packages/b3/8b/4c32ecde6bea6486a2a5d05340e695174351ff6b06cf651a74c005f9df00/filelock-3.25.1.tar.gz"
+    sha256 "b9a2e977f794ef94d77cdf7d27129ac648a61f585bff3ca24630c1629f701aa9"
   end
 
   resource "frozenlist" do
@@ -240,9 +240,8 @@ class SnykAgentScan < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/snyk-agent-scan --opt-out", 1)
-
-    output = shell_output("#{bin}/snyk-agent-scan scan --opt-out", 1)
+    output = shell_output("#{bin}/snyk-agent-scan scan", 1)
+    assert_match "Snyk Agent Scan v#{version}", output
     assert_match "To use Agent Scan, set the SNYK_TOKEN environment variable", output
   end
 end
