@@ -7,12 +7,12 @@ class Asc < Formula
   head "https://github.com/rudrankriyam/App-Store-Connect-CLI.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "aba041d0716f37292be9f342f4f3b1caae70e15bfb3cf6a1325cad028d5d2ea4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a88a15df9261e5588d2f72fc99e14ce05ec7ff556b7281294901ba76eb35db14"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8353276f04303b2f62fe672f2620b5fc9cac3cd6f77b2dc4948ba7ff8569c614"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3978bb504137e38eca3424d515416f903b3d185e76a2aa756eca5438d275d057"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "aa383ec300d29bba06f836904d74dafc825e061e32289dfb94e2ea40c52fa1eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c8ad9d2f5f27c74476a0ce04bf4dbe58bdc7216e107f008440c49ce5d92fbfa1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "583295fe06fe14935f43ece84e80e12db5b43c97d3c865ee457357725594288b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1bd7fa2779fae6c13ec7ef5f60527953c8a52abb2b20e0fe17c208107eb61f77"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b045549c658b74cee26194b62bcaf68a2344740809db2f44808cf33ef8f7389"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1b9262e81d91b44c6c4e37a053dabcb50904bd1e080f8c3394adf4e9d127cbb6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3ea29c95b496a126e3cb3d230a15dcfdb1398a52eb6fe4269215f862731cd41b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "658e762ebb7ea71781f0efdfbf2c733bf47696bce56e4ae0e789f604a1de7828"
   end
 
   depends_on "go" => :build
