@@ -1,8 +1,8 @@
 class Jjui < Formula
   desc "TUI for interacting with the Jujutsu version control system"
   homepage "https://github.com/idursun/jjui"
-  url "https://github.com/idursun/jjui/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "bfc0664b846c434fb66b81e40486ae22a0dac569543a22e40f62fcf32ebfc259"
+  url "https://github.com/idursun/jjui/archive/refs/tags/v0.10.1.tar.gz"
+  sha256 "a6167021279bffab6915f19f133c01eb0cfa1800220e4368193e1b8e1ead4f44"
   license "MIT"
 
   bottle do
