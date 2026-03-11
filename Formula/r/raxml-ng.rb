@@ -2,8 +2,8 @@ class RaxmlNg < Formula
   desc "RAxML Next Generation: faster, easier-to-use and more flexible"
   homepage "https://cme.h-its.org/exelixis/web/software/raxml/"
   url "https://github.com/amkozlov/raxml-ng.git",
-      tag:      "1.2.2",
-      revision: "805318cef87bd5d67064efa299b5d1cf948367fd"
+      tag:      "2.0.0",
+      revision: "e995a54dda83e440ee15e890093c5b2718787043"
   license "AGPL-3.0-or-later"
 
   bottle do
@@ -33,6 +33,16 @@ class RaxmlNg < Formula
     args = %w[-DUSE_GMP=ON]
     # Workaround to build with CMake 4
     args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    if Hardware::CPU.arm?
+      # `PORTABLE_BUILD=ON` still enables x86 SIMD paths on macOS arm64,
+      # upstream issue ref, https://github.com/amkozlov/raxml-ng/issues/226.
+      args << "-DPORTABLE_BUILD=ON"
+      args += %w[
+        -DCORAX_ENABLE_SSE=OFF
+        -DCORAX_ENABLE_AVX=OFF
+        -DCORAX_ENABLE_AVX2=OFF
+      ]
+    end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
@@ -56,6 +66,9 @@ class RaxmlNg < Formula
     end
 
     testpath.install resource("homebrew-example")
-    system bin/"raxml-ng", "--msa", "dna.phy", "--start", "--model", "GTR"
+    # `--start` fails with missing `startTree` output on 2.0.0,
+    # upstream issue ref, https://github.com/amkozlov/raxml-ng/issues/227.
+    system bin/"raxml-ng", "--parse", "--msa", "dna.phy", "--model", "GTR"
+    assert_path_exists testpath/"dna.phy.raxml.rba"
   end
 end
