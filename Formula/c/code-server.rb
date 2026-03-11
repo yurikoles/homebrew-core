@@ -6,12 +6,12 @@ class CodeServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d9e3ca227bd0fd764c4211b3fcd82d19d4e0cedc86dddb0ec541be9100e87c2d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6ac7d677a446546df3496a748fce9a42548fc27a2913459b53b3c4023c56c2f9"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6662fb8cdd0bb276bb2e1d1e83abe5ffa71cff8688f2efee96b9caf22439e0a7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3bc62160a85c5697a69fd98c82f8373e690662dc2b23f4c3c656b6f795984c4b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b168a7f5b63efb0c6fec131bba071e477bc3be023f3e48c041350600b99119a1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "93793793f7f0a3e1f584bb29a0e4977362817d695ab81c9fdc5333ee6039ce7d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ba118f961f4bca617a3591f24cdcde944d52a3cc108681be050213a73a3636c7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b9eed8e68145aefad367f7a51ea1876f449468aaf7d756f06fbea0110cdb8d91"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "642c647d426eb660a83f65f71edf51960d1cecee998a3b9e1b369fa04cf4b935"
+    sha256 cellar: :any_skip_relocation, sonoma:        "07409fb0184af7bc7c4a028822dcf0c3dad551daa25ebda57052996d63a54fe2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "70861354877af85c0feb92ff9e966132576b6a7cae1a566fe15d0b1b7f8e6039"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0b7d9d64bd800e8f1cdab9568fe7be1ff97e47fab95164f22f9d58d9376a6841"
   end
 
   depends_on "pkgconf" => :build
