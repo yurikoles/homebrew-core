@@ -7,12 +7,12 @@ class Garden < Formula
   head "https://github.com/garden-rs/garden.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3b5e7d21549c7d8fe7152fac5ec8438b60123d8b3d0d35b30c26ecb5ffd50bca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3b405cc9b0a0b70478e5ae3971703cfc31ca8680c6d945d2fa6d7102c2a64b21"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "268044e3af3645e4fe5fd3c4333c6be80bc8b4306afd4f95fa4603aa0fdaa8a1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0a9bef45553925aa15ee08537137ca7e6536dd608399fa3c22db14b90891eeee"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8fe16cada7d3927a81b1c277bef948344edd9dcc58131e2496b6750977925427"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "362052def31376f64ea1cb0c199aaad742a4b2563799d561f140f6a0d93bdfbf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "88d592302c28b8bfd9e0dc50dfe67279f2f7076a9051051cfe9c08f99207cafd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "db2e5daec023fffc870f1737b86fa455a9936a579213e1280e2e82ec14557075"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "342ef03e317fc9d05d12785ea64fb30100fd65bb58ce4c4c3c8fab849ff60419"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6bc9dfd4fec2347eb516a8646c622db3a25e058592560d2f04b785f17f34be25"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "80454641e638137441808c79f9e29fd9e0e330546c4313f6a5bf1e40ea32fec0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "063594a259087ca1b5ade40743f1a7288d1670df7447f9c1dc358b61b03d9eba"
   end
 
   depends_on "rust" => :build
