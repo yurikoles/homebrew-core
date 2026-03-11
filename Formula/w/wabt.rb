@@ -1,9 +1,8 @@
 class Wabt < Formula
   desc "Web Assembly Binary Toolkit"
   homepage "https://github.com/WebAssembly/wabt"
-  url "https://github.com/WebAssembly/wabt.git",
-      tag:      "1.0.39",
-      revision: "ad75c5edcdff96d73c245b57fbc07607aaca9f95"
+  url "https://github.com/WebAssembly/wabt/releases/download/1.0.40/wabt-1.0.40.tar.xz"
+  sha256 "e152b0c348825923df10dc39ca248609dca67ef52c7a1575f3ac61a808603073"
   license "Apache-2.0"
 
   livecheck do
@@ -26,16 +25,12 @@ class Wabt < Formula
   uses_from_macos "python" => :build
 
   def install
-    ENV.append_to_cflags "-fPIC" if OS.linux?
-
     args = %w[
       -DBUILD_TESTS=OFF
       -DWITH_WASI=ON
-      -DFETCHCONTENT_FULLY_DISCONNECTED=OFF
       -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     ]
-
-    system "cmake", *args, *std_cmake_args
+    args << "-DCMAKE_POSITION_INDEPENDENT_CODE=ON" if OS.linux?
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
