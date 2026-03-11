@@ -12,12 +12,12 @@ class Pcb2gcode < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "1bbc11859080838a33d817b7e21424967a7f074315b7da188d68a54f2842d6f3"
-    sha256 cellar: :any,                 arm64_sequoia: "d87848faa361ecf2e7660fdaf47745210bd14cf8072d6ed705c9c400c06e5527"
-    sha256 cellar: :any,                 arm64_sonoma:  "e0f2825e6e17348367b467aef23e0fba4263063cbe3bb7493a1fa1825c013b80"
-    sha256 cellar: :any,                 sonoma:        "c280beaa3eb3c108e6829dd4e6f2094a121b036c633066442ec60c076caede3b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5b0c539746bdebdb7c71a7d2566b2fe97aeeded50e61759c612adc9c0a48e056"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d27c42ab6fddb5e48d644d35c64a6d97d9fde47b584f9cd8caec3acc3af04032"
+    sha256 cellar: :any,                 arm64_tahoe:   "79f6821c5f0c9b9aab253f4cdb3e36802e75d368cb16690aeccb84a0313f63fc"
+    sha256 cellar: :any,                 arm64_sequoia: "9263e3befe02cb621424fec0e20362dcd51a034fe5384d3a3bbad6b2b2c6f292"
+    sha256 cellar: :any,                 arm64_sonoma:  "140b0609ab0daea91c53a2d56fc8cf4a815e9ecd4a7136be1d830e2fa9b39c72"
+    sha256 cellar: :any,                 sonoma:        "c73ca51c2d9130503f4548c47056a86ce4184ad10212f2e0142e33849612593a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "de4cdfcd61ac455579ff0cec8631304122bb65ea68fb201442af778d5a66e3c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b043174ffef39a89c0b672c263edd7de8feb4445cee66cad8eb54937d26338db"
   end
 
   depends_on "cairomm@1.14" => :build
