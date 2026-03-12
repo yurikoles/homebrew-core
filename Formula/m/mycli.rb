@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/d3/f6/a3459eb4ef1523fbed3824556bd2f8f007237bcaeb5dc7c32516b18432ab/mycli-1.62.0.tar.gz"
-  sha256 "8782396bc856f204a5b963a1744346d24257279fc55849d62d36638715082d56"
+  url "https://files.pythonhosted.org/packages/7c/a2/001581c614f69cc58efb79a32ad729cd037e4dfaec96a1c8000c828ea847/mycli-1.63.0.tar.gz"
+  sha256 "a818ef3dc70c07313c519635391998e40b25a9430557dd8a4dc6bca341e95a2c"
   license "BSD-3-Clause"
 
   bottle do
@@ -139,8 +139,8 @@ class Mycli < Formula
   end
 
   resource "puremagic" do
-    url "https://files.pythonhosted.org/packages/dc/df/a2ee3bbf55f036acb9725b35732e3a785cb06f5c5b9fe47bde8c05ab873a/puremagic-2.0.0.tar.gz"
-    sha256 "224fe42b6b3467276a45914e12b5f40905dea0e87963adbe5289667e7c607851"
+    url "https://files.pythonhosted.org/packages/02/3b/0fe979ea1e2768758259f4d412b8cb26d9418e82d5fd10fdf7f00dc70e15/puremagic-2.0.2.tar.gz"
+    sha256 "3ebc28f9380e19dbd8179aeaa08e9692334d71194fc6e5865818770d2bee44c8"
   end
 
   resource "pycryptodomex" do
@@ -194,8 +194,8 @@ class Mycli < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/82/f3/748f4d6f65d1756b9ae577f329c951cda23fb900e4de9f70900ced962085/setuptools-82.0.0.tar.gz"
-    sha256 "22e0a2d69474c6ae4feb01951cb69d515ed23728cf96d05513d36e42b62b37cb"
+    url "https://files.pythonhosted.org/packages/4f/db/cfac1baf10650ab4d1c111714410d2fbb77ac5a616db26775db562c8fab2/setuptools-82.0.1.tar.gz"
+    sha256 "7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9"
   end
 
   resource "six" do
@@ -209,13 +209,13 @@ class Mycli < Formula
   end
 
   resource "sqlglot" do
-    url "https://files.pythonhosted.org/packages/d1/50/766692a83468adb1bde9e09ea524a01719912f6bc4fdb47ec18368320f6e/sqlglot-27.29.0.tar.gz"
-    sha256 "2270899694663acef94fa93497971837e6fadd712f4a98b32aee1e980bc82722"
+    url "https://files.pythonhosted.org/packages/61/12/c3f7533fde302fcd59bebcd4c2e46d5bf0eef21f183c67995bbb010fb578/sqlglot-29.0.1.tar.gz"
+    sha256 "0010b4f77fb996c8d25dd4b16f3654e6da163ff1866ceabc70b24e791c203048"
   end
 
   resource "sqlglotrs" do
-    url "https://files.pythonhosted.org/packages/87/5a/46d8efeda45be6ce1c630229455f000cafedea6129b47e6cfab39ff462f5/sqlglotrs-0.7.3.tar.gz"
-    sha256 "caadc572c8a194f99d6ba44d02f9ada0110e3d47cca3330c81f4aa608f1143eb"
+    url "https://files.pythonhosted.org/packages/1c/03/4c8133ff544788df8df3bb1f1a2395c8fe6a116f27ea2ae30eab4a3de54b/sqlglotrs-0.13.0.tar.gz"
+    sha256 "ad1ad158234af0f8ba5054ca51bd17a7c1e3f81b4798c7970ebf7953fe08ddcb"
   end
 
   resource "sqlite-fts4" do
