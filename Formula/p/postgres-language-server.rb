@@ -1,8 +1,8 @@
 class PostgresLanguageServer < Formula
   desc "Language Server for Postgres"
   homepage "https://pg-language-server.com/"
-  url "https://github.com/supabase-community/postgres-language-server/archive/refs/tags/0.21.0.tar.gz"
-  sha256 "e43461f0c98f3fdb9f42b0fd3b4d7c54f4095513e802eac0cd421e4f2e6cc767"
+  url "https://github.com/supabase-community/postgres-language-server/archive/refs/tags/0.22.0.tar.gz"
+  sha256 "bdeaa2677aa6b17995adf9bab1cefff0eaa7d969aa907d58aa592352f7972f94"
   license "MIT"
   head "https://github.com/supabase-community/postgres-language-server.git", branch: "main"
 
@@ -19,6 +19,7 @@ class PostgresLanguageServer < Formula
   depends_on "node" => :build
   depends_on "rust" => :build
   depends_on "tree-sitter" => :build
+  depends_on "tree-sitter-cli" => :build
   depends_on "libpg_query"
 
   def install
