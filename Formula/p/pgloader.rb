@@ -38,13 +38,12 @@ class Pgloader < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any,                 arm64_tahoe:   "f5baa53cabbdcdba97c61a8734543b06ffecf1edfb6a072fffe33673b6adda14"
-    sha256 cellar: :any,                 arm64_sequoia: "0b51ea7384a8623316882a7e4ca9fd5a67fd290fc2cea4f37e1b202b565a33cf"
-    sha256 cellar: :any,                 arm64_sonoma:  "02643e311b7153fc874298fc931b1a685a2cacee774b094807ca907938d1d778"
-    sha256 cellar: :any,                 sonoma:        "b3e66db5bd5d27ebb26eb4afad56169753c690f85606abcd28855f15eafbf5b2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9dad60ccd17c70c50388e58642587f660497c819d964544cb59ef9a80f942133"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3383d6eb3b97d354416fa7257bf7beafbbaa14d671dc285e44cf6b2c0116356b"
+    sha256 cellar: :any,                 arm64_tahoe:   "12b8c22a69da1b380adc072b1f8ea9b9d2bdc69d03530a566251e163c7cfbe2b"
+    sha256 cellar: :any,                 arm64_sequoia: "65977622649cc618a60bd5acaaedcce4ea0b5de39ef9a0ee3a77a5ba0819ffad"
+    sha256 cellar: :any,                 arm64_sonoma:  "69167a059b6cf21e05fba0680ca9e0184dc269b556940ce0e304d1bd731c30ef"
+    sha256 cellar: :any,                 sonoma:        "826b9b6529e101637416205667f78a0d0830f6f54c50b0b21f3ed8ef0d750758"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f5640cc4d253febe88e8531a1767f7f3e3be20521192def77bac8bbeb1b10225"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f23ab10e44dba2d37a2581cf3ded0f0cfceb731e49af0f4565c98d60278a8a7"
   end
 
   depends_on "buildapp" => :build
