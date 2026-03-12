@@ -2,8 +2,8 @@ class GoogleworkspaceCli < Formula
   desc "CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more"
   homepage "https://developers.google.com/workspace"
   # We cannot install from the npm registry because it installs precompiled binaries
-  url "https://github.com/googleworkspace/cli/archive/refs/tags/v0.11.1.tar.gz"
-  sha256 "431d03a02482a733d6ab4b752524a49e0ec6af28cc45e4eb7c4fd0ca4b74935f"
+  url "https://github.com/googleworkspace/cli/archive/refs/tags/v0.13.1.tar.gz"
+  sha256 "8a6ed801ce405c0188a0b16a0db34bc331f4222436421ffa4bb76e4b53d483a0"
   license "Apache-2.0"
 
   bottle do
@@ -25,7 +25,7 @@ class GoogleworkspaceCli < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/gws --version")
-    output = shell_output("#{bin}/gws drive files list --params '{\"pageSize\": 10}'", 1)
+    output = shell_output("#{bin}/gws drive files list --params '{\"pageSize\": 10}'", 2)
     assert_match "Access denied. No credentials provided.", output
   end
 end
