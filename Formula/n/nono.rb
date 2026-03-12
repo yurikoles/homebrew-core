@@ -5,6 +5,8 @@ class Nono < Formula
   sha256 "9f3673b540c3290b336366439b70c776d1b04635342a6c9ccfcd2f0a1bb0d42e"
   license "Apache-2.0"
 
+  no_autobump! because: :bumped_by_upstream
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "26c2885db6892628c7e05f678e8d2c8a4289fc493100b2c4c801bb71f14732cb"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "cd57d79e86d8f19589358da1e58caa79453a6da1770268ad56f29ca70f7f5d2a"
