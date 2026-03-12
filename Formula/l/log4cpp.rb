@@ -1,8 +1,8 @@
 class Log4cpp < Formula
   desc "Configurable logging for C++"
   homepage "https://log4cpp.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/log4cpp/log4cpp-1.1.x%20%28new%29/log4cpp-1.1/log4cpp-1.1.5.tar.gz"
-  sha256 "6ae48cc0081b24270ec3398e71b68f77b45e93be15ff4d44c00259c9cdc5cc5a"
+  url "https://downloads.sourceforge.net/project/log4cpp/log4cpp-1.1.x%20%28new%29/log4cpp-1.1/log4cpp-1.1.6.tar.gz"
+  sha256 "a036bc6bd6044479e6c456de7edd042b060ea5c843e47beb75f59baea9b20e3a"
   license "LGPL-2.1-or-later"
 
   livecheck do
