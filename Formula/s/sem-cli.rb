@@ -6,6 +6,15 @@ class SemCli < Formula
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/Ataraxy-Labs/sem.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "8f692d81a0741094890c34d4e16519ec3504860665765ff4c7d7cd5fb8ef97a5"
+    sha256 cellar: :any,                 arm64_sequoia: "35f6547d13dc866cf518ebcb4837fe75b233ac0745a64e4455e3acb26f62901d"
+    sha256 cellar: :any,                 arm64_sonoma:  "a54dae5cf3568fb67843415d531d6c6d2f6cf22b41a23330b4d2e4fcea7629fb"
+    sha256 cellar: :any,                 sonoma:        "09949255fd0d872511deaec05bc43238e611474869f090e330df181e440d4355"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "54023360ab2621af8b2b5f6cbc308936a05b194d39fdb1de3bbcfab2d6278f1d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2d25829a47355f6b56e16d2f06829355adab7a44b56bc83ec92c348efbdbb113"
+  end
+
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "libgit2"
