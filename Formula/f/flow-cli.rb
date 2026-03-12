@@ -4,6 +4,7 @@ class FlowCli < Formula
   url "https://github.com/onflow/flow-cli/archive/refs/tags/v2.14.3.tar.gz"
   sha256 "fcfdc4d62d907278e040e43609f5a37fdce0c2fddb67d03ec6b2a8f9c365f072"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/onflow/flow-cli.git", branch: "master"
 
   livecheck do
@@ -25,14 +26,8 @@ class FlowCli < Formula
   conflicts_with "flow", because: "both install `flow` binaries"
 
   def install
-    ENV["CGO_ENABLED"] = "1" if OS.linux? && Hardware::CPU.arm?
-
-    ldflags = %W[
-      -s -w
-      -X github.com/onflow/flow-cli/build.semver=v#{version}
-      -X github.com/onflow/flow-cli/build.commit=homebrew
-    ]
-    system "go", "build", *std_go_args(ldflags:, output: bin/"flow"), "./cmd/flow"
+    system "make", "cmd/flow/flow", "VERSION=v#{version}"
+    bin.install "cmd/flow/flow"
 
     generate_completions_from_executable(bin/"flow", shell_parameter_format: :cobra)
   end
