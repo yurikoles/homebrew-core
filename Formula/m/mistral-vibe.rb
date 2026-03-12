@@ -3,8 +3,8 @@ class MistralVibe < Formula
 
   desc "Minimal CLI coding agent"
   homepage "https://github.com/mistralai/mistral-vibe"
-  url "https://files.pythonhosted.org/packages/10/ad/78ffad994afabc9c87e2d304e9b001b6c55417097f8c34f08f20456a7559/mistral_vibe-2.4.1.tar.gz"
-  sha256 "3a8bd62ad5a8a2bfb549abaa1e164fb43b6b18a4733d901ee57cfdb097e4637f"
+  url "https://files.pythonhosted.org/packages/ec/a3/67d380ab63a43cceab367f8116ac09171a8f44e247ca8e3d3767613bc3b4/mistral_vibe-2.4.2.tar.gz"
+  sha256 "961b38e0605cfc3bedd2b66689fdf7a6e6ebafde5c392fc1cd3395de8ed402da"
   license "Apache-2.0"
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
@@ -278,8 +278,8 @@ class MistralVibe < Formula
   end
 
   resource "pyjwt" do
-    url "https://files.pythonhosted.org/packages/5c/5a/b46fa56bf322901eee5b0454a34343cdbdae202cd421775a8ee4e42fd519/pyjwt-2.11.0.tar.gz"
-    sha256 "35f95c1f0fbe5d5ba6e43f00271c275f7a1a4db1dab27bf708073b75318ea623"
+    url "https://files.pythonhosted.org/packages/a8/10/e8192be5f38f3e8e7e046716de4cae33d56fd5ae08927a823bb916be36c1/pyjwt-2.12.0.tar.gz"
+    sha256 "2f62390b667cd8257de560b850bb5a883102a388829274147f1d724453f8fb02"
   end
 
   resource "pyperclip" do
