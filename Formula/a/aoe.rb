@@ -7,12 +7,12 @@ class Aoe < Formula
   head "https://github.com/njbrake/agent-of-empires.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "f094760471bd674c34b061c72f432cd8cdfed9445949f978617847b7766a1554"
-    sha256 cellar: :any,                 arm64_sequoia: "c51107d8092e750e4095d8c7a4dfb6bb331f894bc56a0b8d439ea8fb3c910d93"
-    sha256 cellar: :any,                 arm64_sonoma:  "a65ed190515178eadc1679fe6b6caa8369a2c8421cb04fbaba963460d2948365"
-    sha256 cellar: :any,                 sonoma:        "31ef6c2aa0860dd732942a33b90d846d2e75cd6b358fec515f434a1cca0c78f5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "19eaa923824da162a83de7dd7c25d96c273fcd35cb76b56f9f2e3adfe23cacb5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "089454996714b9d548d3674d5806f51020f265a77fc69d151e9080ecb2032dea"
+    sha256 cellar: :any,                 arm64_tahoe:   "21cb9555f2c56348c6d7b4df7ee1b96afdb2ec41c8d00713c7e1b720c6def869"
+    sha256 cellar: :any,                 arm64_sequoia: "913df596cfed927b29505db1429da60f40ec5fa3642d2c342bf5bf55d2eb9472"
+    sha256 cellar: :any,                 arm64_sonoma:  "fcc8d951aeca56aa48fafb8e0a33e28fb88dd71c17b84aa376260f71f3b6398e"
+    sha256 cellar: :any,                 sonoma:        "e167b72cc12f7f00b9af43c802d487f282a6e5f19f886a1d0819e13d52b5c632"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3424c521f829e72372e1d095b0ea495266b75127324a4ac4ae09ae32f2b2b19f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1732a873e6c2119e6b09f45c324bdac82bfacfd898e39f8ff327c1a01c990ebe"
   end
 
   depends_on "pkgconf" => :build
