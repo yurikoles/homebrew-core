@@ -1,8 +1,8 @@
 class Ducker < Formula
   desc "Slightly quackers Docker TUI based on k9s"
   homepage "https://github.com/robertpsoane/ducker"
-  url "https://github.com/robertpsoane/ducker/archive/refs/tags/v0.6.3.tar.gz"
-  sha256 "263cc295df1781693cbd87fbe165f2b5ba6680a01f533d1b49346eda0b4f3c2c"
+  url "https://github.com/robertpsoane/ducker/archive/refs/tags/v0.6.4.tar.gz"
+  sha256 "79f403a29aedfca1e043dd9aa54363e1c142ba8c46b09623e7ec70f18a6d3595"
   license "MIT"
 
   bottle do
