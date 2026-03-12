@@ -32,7 +32,7 @@ class Solr < Formula
   end
 
   service do
-    run [opt_bin/"solr", "start", "-f", "--solr-home", HOMEBREW_PREFIX/"var/lib/solr"]
+    run [opt_bin/"solr", "start", "-f", "--user-managed", "--solr-home", HOMEBREW_PREFIX/"var/lib/solr"]
     working_dir HOMEBREW_PREFIX
   end
 
@@ -43,11 +43,11 @@ class Solr < Formula
     assert_match "No Solr nodes are running", shell_output("#{bin}/solr status")
 
     # Start a Solr node => exit code 0
-    shell_output("#{bin}/solr start -p #{port} -Djava.io.tmpdir=/tmp")
+    shell_output("#{bin}/solr start --user-managed -p #{port} -Djava.io.tmpdir=/tmp")
     assert_match(/Solr process \d+ running on port #{port}/, shell_output("#{bin}/solr status"))
 
     # Impossible to start a second Solr node on the same port => exit code 1
-    shell_output("#{bin}/solr start -p #{port}", 1)
+    shell_output("#{bin}/solr start --user-managed -p #{port}", 1)
     # Stop a Solr node => exit code 0
     # Exit code is 1 without init process in a docker container
     shell_output("#{bin}/solr stop -p #{port}", (OS.linux? && ENV["HOMEBREW_GITHUB_ACTIONS"]) ? 1 : 0)
