@@ -7,6 +7,15 @@ class ApifyCli < Formula
 
   no_autobump! because: :bumped_by_upstream
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "ada6e99ce41698be794489092c8d22ed752fef701ab2c6d9310cf73c6261cc8d"
+    sha256 cellar: :any,                 arm64_sequoia: "0a5de02cbcfb868f392607ed1ba264a899f19316b13b643e8ced23af374e17bb"
+    sha256 cellar: :any,                 arm64_sonoma:  "0a5de02cbcfb868f392607ed1ba264a899f19316b13b643e8ced23af374e17bb"
+    sha256 cellar: :any,                 sonoma:        "27bfd74daefbc61957a200faac6ae71cb1078d899ee3f84879073367a7516673"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "11cccddb2fd8db58a45227ff4d0b8ac481e3a164b0c0b374d50d8babff3c3790"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "425e28cea0f14ac9dbd24e41b551add460882fdea919ccae995dcff719f98ad9"
+  end
+
   depends_on "node"
 
   def install
