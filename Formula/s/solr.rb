@@ -7,8 +7,8 @@ class Solr < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "0325be6c048e10ef7a3dc6d7e782ad9b1d12cf7f53a87d9f68d84bf7de01bd2c"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, all: "5acd947f8767a29eebf0748639ab369d30c981170b8211082d987aab0c351180"
   end
 
   # Can be updated after https://github.com/apache/solr/pull/3153
