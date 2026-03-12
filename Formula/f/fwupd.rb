@@ -3,8 +3,8 @@ class Fwupd < Formula
 
   desc "Firmware update daemon"
   homepage "https://github.com/fwupd/fwupd"
-  url "https://github.com/fwupd/fwupd/releases/download/2.0.20/fwupd-2.0.20.tar.xz"
-  sha256 "431fb30fb27500ca55ae515d2fbda69878b58247cd4031d5c79f88b166db70c9"
+  url "https://github.com/fwupd/fwupd/releases/download/2.1.1/fwupd-2.1.1.tar.xz"
+  sha256 "0ae697f1f2011571310cef5d96429d8a5d541f73b0025bd2b622c9c7f4fe05b6"
   license "LGPL-2.1-or-later"
   head "https://github.com/fwupd/fwupd.git", branch: "main"
 
@@ -27,13 +27,10 @@ class Fwupd < Formula
 
   depends_on "glib"
   depends_on "gnutls"
-  depends_on "json-glib"
-  depends_on "libarchive"
   depends_on "libcbor"
   depends_on "libjcat"
   depends_on "libusb"
   depends_on "libxmlb"
-  depends_on "protobuf-c"
   depends_on "readline"
   depends_on "sqlite"
   depends_on "usb.ids"
@@ -74,7 +71,6 @@ class Fwupd < Formula
 
     system "meson", "setup", "build",
                     "-Dbuild=standalone", # this is used as PolicyKit is not available on macOS
-                    "-Dlibarchive=enabled", # fail if missing
                     "-Dpython=#{which(python3)}",
                     "-Dsupported_build=enabled",
                     "-Dplugin_flashrom=disabled",
