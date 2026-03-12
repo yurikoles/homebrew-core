@@ -7,16 +7,12 @@ class RaxmlNg < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:    "c74c9931e040c4511002c51f6828473eb44842300ce6f4aab7052279d156b0ca"
-    sha256 cellar: :any,                 arm64_sequoia:  "4f7e500c5a3615a4c814bf38bd8720a745c4155827910f4cd5638113e129d2c6"
-    sha256 cellar: :any,                 arm64_sonoma:   "bd6bd94ccee20b21d5c9146a8bc4a484c261a11586224ec4303a2d269590b32f"
-    sha256 cellar: :any,                 arm64_ventura:  "6fcf4ec42def10fd485108f16f3d9c03f59f06ff72b663e469d7985332b99222"
-    sha256 cellar: :any,                 arm64_monterey: "a2e435fabdb95292270d576aa6fd6dceda14ad722cd12ccb916371b8aa01e0a4"
-    sha256 cellar: :any,                 sonoma:         "63100f2fe0b660b831fcb16cc08b299bf62a978d4c97949d87d5e09716b4670d"
-    sha256 cellar: :any,                 ventura:        "456c5f39dacdc8ce957c17d67f53410977c8217bc98ca45ba97c1df187442aa9"
-    sha256 cellar: :any,                 monterey:       "7bbd86f8a89f92287d21cab56e055333a5c5ec90e955b76f78d3c8a36cb9dda4"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "9aa9f1417b9bf4ed64b5e690d2a6901d5c181cc9fd8e641589301b8118d2ab1b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "53e258a6db4cb2d05aa6013741ac3c2345a9d92da103a23d34dda647b8e8d532"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "23abe5b75f51e9b192e090d5d0be80e45ad5c19c5aa1ec54f7ff0a6113d81e22"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c06b5319a7877e62e01d672e18ca8abdedf402f1eafce1a8d3fcd26bd9ba85e2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cb756e6e32e613f364dbc9c72b6be954cd98935c6faf99162172a5e2dab84211"
+    sha256 cellar: :any_skip_relocation, sonoma:        "285955dfad46130dd32556aa964f7edb2e6a1f1fbed29ecc58347d3eebb58ec3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d549b9dfd0c03f3c39a19a1aa640da905b0ed71360d69cbee11f14a9ebc4e1c8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e73be7c74afaab314353cc6bcc1e2fa5a76a7f1347ca789f4cde39efe260b34e"
   end
 
   depends_on "bison" => :build # fix syntax error with `parse_utree.y`
