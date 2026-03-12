@@ -5,8 +5,8 @@ class Rockcraft < Formula
   homepage "https://documentation.ubuntu.com/rockcraft/"
   # git checkout needed for setuptools-scm
   url "https://github.com/canonical/rockcraft.git",
-      tag:      "1.17.1",
-      revision: "311130078f0f11688c0d15f66fe82ab41d126930"
+      tag:      "1.17.2",
+      revision: "272fa0c8deeef92ad97ba9b29ad187ad0c68a50f"
   license "GPL-3.0-only"
   head "https://github.com/canonical/rockcraft.git", branch: "main"
 
@@ -46,13 +46,13 @@ class Rockcraft < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz"
-    sha256 "94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a"
+    url "https://files.pythonhosted.org/packages/1d/35/02daf95b9cd686320bb622eb148792655c9412dbb9b67abb5694e5910a24/charset_normalizer-3.4.5.tar.gz"
+    sha256 "95adae7b6c42a6c5b5b559b1a99149f090a57128155daeea91732c8d970d8644"
   end
 
   resource "craft-application" do
-    url "https://files.pythonhosted.org/packages/81/86/4ee23f43b5b28d4bda940a441bd4fb599bd264ddd9f9d420d6c0673be92d/craft_application-6.2.0.tar.gz"
-    sha256 "ad89335d42afc74d5ab78ee9450b0d4c4abc4b88ec6cbe37b033f27378027e43"
+    url "https://files.pythonhosted.org/packages/ec/df/72c6e7265bcc312bc9156387bb15293ee8572cbf0e20f463502bdf132f7e/craft_application-6.2.1.tar.gz"
+    sha256 "ae08c2f879757372841b0be49b669f3b24fd7b69374bf0516c462c92a4058f4d"
   end
 
   resource "craft-archives" do
