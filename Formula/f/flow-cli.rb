@@ -4,6 +4,7 @@ class FlowCli < Formula
   url "https://github.com/onflow/flow-cli/archive/refs/tags/v2.15.0.tar.gz"
   sha256 "079ad60a0bae0dd937c2fc1111a8e650aff2ea709e76cce5e6bd85e6dbe1d327"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/onflow/flow-cli.git", branch: "master"
 
   livecheck do
@@ -12,12 +13,12 @@ class FlowCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "027febf03edef23125e936dd6faa4619831d09a4956cc6e2c3227a926eedc96c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a75791bbd9168c39261113d27a531b83137f5104dad0f66d50a32839b7990696"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "36dfa8506b162d168a430895b98b4c1057c689caef557d63114e5aff504e9200"
-    sha256 cellar: :any_skip_relocation, sonoma:        "812d2621bf94a09caf857d543d8874f50975958f11a230446a4168235f151862"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bd5f91ef3f9fb7234ac256dc241435546a986e2abdfca73416747094cd981714"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8870e5e0deeac62ca2708fab97b7ca18ba6bc053e0e4cf154b399bd71961158d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0e8440379ca40172d6332a128fc199e707356083c79af13cdb59dd0e1a071ec8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3ca806289a3ae033d2938b50f257faa9f0514f3d92ce213fd1988bf55cd23ae4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "93464774235c6e45aa5a5087cd4b54075785e0fd63e31dff349df57abcf3debf"
+    sha256 cellar: :any_skip_relocation, sonoma:        "37f497158c1cb8404b7ecc95122f6b27a6fd0ac50a5b47e0aba04eaa00c916fa"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "916eff7c5a2753a3ee9570ef19b5a7afacf16268e1037729edc29e9524eb5bc4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1eb4b84da6d5715578dc268f42d4b03305261cb1863f48926b9e7eaa865d34ad"
   end
 
   depends_on "go@1.25" => :build
@@ -25,14 +26,8 @@ class FlowCli < Formula
   conflicts_with "flow", because: "both install `flow` binaries"
 
   def install
-    ENV["CGO_ENABLED"] = "1" if OS.linux? && Hardware::CPU.arm?
-
-    ldflags = %W[
-      -s -w
-      -X github.com/onflow/flow-cli/build.semver=v#{version}
-      -X github.com/onflow/flow-cli/build.commit=homebrew
-    ]
-    system "go", "build", *std_go_args(ldflags:, output: bin/"flow"), "./cmd/flow"
+    system "make", "cmd/flow/flow", "VERSION=v#{version}"
+    bin.install "cmd/flow/flow"
 
     generate_completions_from_executable(bin/"flow", shell_parameter_format: :cobra)
   end
