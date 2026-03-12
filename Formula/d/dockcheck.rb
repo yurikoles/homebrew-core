@@ -1,8 +1,8 @@
 class Dockcheck < Formula
   desc "CLI tool to automate docker image updates"
   homepage "https://github.com/mag37/dockcheck"
-  url "https://github.com/mag37/dockcheck/archive/refs/tags/v0.7.6.tar.gz"
-  sha256 "fdd2040992e3c542f50c31f38c18f8631b1f9a53df9654dcfa74b33837a8ca8e"
+  url "https://github.com/mag37/dockcheck/archive/refs/tags/v0.7.7.tar.gz"
+  sha256 "7a14aa388aae28d6412a3118b47e53d33a34505328a5ea5f43deaa5a20b3a0cb"
   license "GPL-3.0-only"
   head "https://github.com/mag37/dockcheck.git", branch: "main"
 
