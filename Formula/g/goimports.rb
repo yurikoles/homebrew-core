@@ -1,8 +1,8 @@
 class Goimports < Formula
   desc "Go formatter that additionally inserts import statements"
   homepage "https://pkg.go.dev/golang.org/x/tools/cmd/goimports"
-  url "https://github.com/golang/tools/archive/refs/tags/v0.42.0.tar.gz"
-  sha256 "f058eb3f9d53c2c0315f0de0b6a86391e41e4249a35faf0703d77a5e7c286173"
+  url "https://github.com/golang/tools/archive/refs/tags/v0.43.0.tar.gz"
+  sha256 "e35710736fcaeeb4fd9cd0279af97270af119a7dd7e9877c00608799c799de77"
   license "BSD-3-Clause"
   head "https://github.com/golang/tools.git", branch: "master"
 
