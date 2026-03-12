@@ -1,18 +1,18 @@
 class Ironclaw < Formula
   desc "Security-first personal AI assistant with WASM sandbox channels"
   homepage "https://github.com/nearai/ironclaw"
-  url "https://github.com/nearai/ironclaw/archive/refs/tags/v0.16.1.tar.gz"
-  sha256 "d69678e95ad4f447f6ffcdf88175783c77ebb11b8c0c3806e279b41e3aca8e60"
+  url "https://github.com/nearai/ironclaw/archive/refs/tags/v0.18.0.tar.gz"
+  sha256 "e8c2f5ee2c31e577ab27096865abd98736975a90b5ed7b40521a7ec8c94b8dd2"
   license any_of: ["MIT", "Apache-2.0"]
-  head "https://github.com/nearai/ironclaw.git", branch: "main"
+  head "https://github.com/nearai/ironclaw.git", branch: "staging"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1af76ca52da79e552f96e9b1b66132bc4f259035c5dd487b68ba858bea47c016"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "60cc300e9c863f5d3063cc71e152da76f8e0e4154b1164e2231c983cdcf42bcf"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "37ddfe86e5fe090fe7fb5b600ea67079524848f3f36de3b403152b406c947104"
-    sha256 cellar: :any_skip_relocation, sonoma:        "48a5e9c7de0796c3b602f444b73c166ce0ea06d12dbc65d879314ffd60c98f32"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f663d4cd2048388e6e257b8ddce762ead85c7dc592b7f0b7dec96fabcf75c938"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0c412a9930376dde39f0bf763950aa2ce1abd84d818899c0c451287257f8e10d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "172bbb7889be6272deca2604d64d1be4cd3049b8b46db34dcdf485e108d81f3a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2d6278afc713f62a18a02c8d3f8c3ecef04c69cc4fc91c3e69ebf7365e2f4006"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a60064c828773052b1e203cf23cd23a3988ec8e7a7fe40e33b10dbf578d37ac1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "38ba2b983796ebacb75fec1f34a1785f63bd5921e013b87dafe0b557efcc1dc5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "78d780f52a3193017719c8e169e4f4b0b62b1d79e2d7fa53c8dc5427b20c5f4a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "73bbdd313140032ecd0fac8dd12e60829a5793d10f5436892b0bf85929570b57"
   end
 
   depends_on "pkgconf" => :build

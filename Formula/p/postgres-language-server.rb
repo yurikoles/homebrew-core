@@ -1,24 +1,25 @@
 class PostgresLanguageServer < Formula
   desc "Language Server for Postgres"
   homepage "https://pg-language-server.com/"
-  url "https://github.com/supabase-community/postgres-language-server/archive/refs/tags/0.21.0.tar.gz"
-  sha256 "e43461f0c98f3fdb9f42b0fd3b4d7c54f4095513e802eac0cd421e4f2e6cc767"
+  url "https://github.com/supabase-community/postgres-language-server/archive/refs/tags/0.22.0.tar.gz"
+  sha256 "bdeaa2677aa6b17995adf9bab1cefff0eaa7d969aa907d58aa592352f7972f94"
   license "MIT"
   head "https://github.com/supabase-community/postgres-language-server.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "926ee03e7cb3a129772305e64e15fbe81582c240a13581db079e5a053bcce27a"
-    sha256 cellar: :any,                 arm64_sequoia: "a1225454717fe8a64a1839b76ccbdc1886d336c33a3e843e3364c2916b8ab945"
-    sha256 cellar: :any,                 arm64_sonoma:  "2e9f19fdfb5a4655b73c1e98396db74c5ad71800b2824455eaa777510109e095"
-    sha256 cellar: :any,                 sonoma:        "03bad6dcad6f89c5f203d174dee0ebb086d0a36552dfea121f5e5f74b9553070"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "007203d2be4c18a14ceaab825157d0508c4b66e93dd4999a6b25d7209f778cde"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "caa638af5cd4316583c8036b20cb3328a105e1bcfb3dec841832eff27e1a73f9"
+    sha256 cellar: :any,                 arm64_tahoe:   "7677d135c6de86bb4949273088603bb4d620332a89f306116486beec89127fb5"
+    sha256 cellar: :any,                 arm64_sequoia: "9a1928d9760536b9fffcbb4d57fe08fdfb6902e3795fb7c983ff21296f8e9c66"
+    sha256 cellar: :any,                 arm64_sonoma:  "437980d0fb0b96270ce0fda7036dbb93e5fa4c45a294870ecedfbbf24844a1b7"
+    sha256 cellar: :any,                 sonoma:        "06a0d4ad6d1d6b79456a489e56eb33370e970e2c134be034d335fda7e6cc85a3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f9fc920284d9eb15f9ba72c4503e6db149bb21aa15531f6ccca00d968fc396bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "50f3e72fc61766bd624a26c7afd208d10f4a775d0cd00e0dee296c3ed81207e0"
   end
 
   depends_on "llvm" => :build
   depends_on "node" => :build
   depends_on "rust" => :build
   depends_on "tree-sitter" => :build
+  depends_on "tree-sitter-cli" => :build
   depends_on "libpg_query"
 
   def install

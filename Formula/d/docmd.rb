@@ -1,17 +1,17 @@
 class Docmd < Formula
   desc "Minimal Markdown documentation generator"
   homepage "https://docmd.mgks.dev/"
-  url "https://registry.npmjs.org/@docmd/core/-/core-0.5.1.tgz"
-  sha256 "45ed7456d6a33a6c8a22091256935a0109ec0369729402ee7afc74a656461ce3"
+  url "https://registry.npmjs.org/@docmd/core/-/core-0.6.1.tgz"
+  sha256 "74bf3ee5ca636c504d19e6a9a94f8bfd9d600d3f680bdbec3acf42bf2b3e1626"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ddcf4279962b7bbfcd4a00929e56b2204da917021983ab27bb3367eb2a8c0f62"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d6700e4c48367254a453204e18d9fcd251a8922525894a4464ee7f953a88c4ce"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d6700e4c48367254a453204e18d9fcd251a8922525894a4464ee7f953a88c4ce"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5c4b0f2bc34fdcd70a69a8d08b0182610b123bca3a7db8af8612cd10722bd968"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4bfc51f86292e049321ab078f71b41d288a4f4042ccea0ec1f29e1289831b2f2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4bfc51f86292e049321ab078f71b41d288a4f4042ccea0ec1f29e1289831b2f2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "45a627c675138cc8bc9747c81a37822af267ba9ddc7120f09376b0820091db55"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e60213efa9e25e70067c16c477714dc688d494773fde5e67297afa34d951ec3f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e60213efa9e25e70067c16c477714dc688d494773fde5e67297afa34d951ec3f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5fd1e6fa307894b62e24ffd02715da4925ecfe534dfe36e87bb5c314c08b9d7b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "236531a94a4f522e2ceba64b695d440e4ee133abe0231ad6b81a5ca07e231ab5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "236531a94a4f522e2ceba64b695d440e4ee133abe0231ad6b81a5ca07e231ab5"
   end
 
   depends_on "esbuild" # for prebuilt binaries

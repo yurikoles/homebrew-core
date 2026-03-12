@@ -3,17 +3,17 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v0.1.13.tar.gz"
-  sha256 "a7fca1e13a35aa15d0378b4c54a9bace2d068cde72f11b3caf61df6437d38010"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "331a50156a7a27eb1770c5afc755e217e51f470026f1890a0d9371d8c22fbd11"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c6863130f1979f759e6e57317d6ffee0390152639f55abe4252957e2f85ad1ae"
-    sha256 cellar: :any,                 arm64_sequoia: "0f34847f82c996163eb13d30c022fe4feb001052fa19556933357f8ecfec6fef"
-    sha256 cellar: :any,                 arm64_sonoma:  "5c7e31f7a42f66df34720f6dd56ccd30b04a9e847cd5aa2ef86fc4bd4e2a5368"
-    sha256 cellar: :any,                 sonoma:        "38f9ccfdacd4856d96521272a30916ece2c26ec11c325bab024edf42c4d75d71"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3f9635449a71ef1e2c2bfd85049fc6b2764cbeecfd47634960a2fef30c2a7915"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "51d5726bca53df20b11f5e6fc3871d581fb135deb71a7c188b133eefc214f688"
+    sha256 cellar: :any,                 arm64_tahoe:   "25c3450c36f5d93adf5a143b2981b307bd20e93f82b964176cb69f061f0277be"
+    sha256 cellar: :any,                 arm64_sequoia: "4f7f1c18e8be267042f8059d1b2c95e30387fcd2e012639f38cf715385e37f18"
+    sha256 cellar: :any,                 arm64_sonoma:  "96ef3a4de2de551b5d3695648703cf30529f3a511ce96f32e7e24caa20f98d72"
+    sha256 cellar: :any,                 sonoma:        "575243a0a1065e9d98b8ac8242f76e584c6e0c56dee968d329d5ba193d4db3a9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4986249a275c95aa373556e87f206a88b41abba664deba53aa43dabedf513d96"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "12491b3efe8b493e2593c63930bbac03c9d64a1124721cb8ed34d02af5000f42"
   end
 
   depends_on "certifi" => :no_linkage
@@ -72,9 +72,14 @@ class Specify < Formula
     sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
+  resource "pathspec" do
+    url "https://files.pythonhosted.org/packages/fa/36/e27608899f9b8d4dff0617b2d9ab17ca5608956ca44461ac14ac48b44015/pathspec-1.0.4.tar.gz"
+    sha256 "0210e2ae8a21a9137c0d470578cb0e595af87edaa6ebf12ff176f14a02e0e645"
+  end
+
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/1b/04/fea538adf7dbbd6d186f551d595961e564a3b6715bdf276b477460858672/platformdirs-4.9.2.tar.gz"
-    sha256 "9a33809944b9db043ad67ca0db94b14bf452cc6aeaac46a88ea55b26e2e9d291"
+    url "https://files.pythonhosted.org/packages/19/56/8d4c30c8a1d07013911a8fdbd8f89440ef9f08d07a1b50ab8ca8be5a20f9/platformdirs-4.9.4.tar.gz"
+    sha256 "1ec356301b7dc906d83f371c8f487070e99d3ccf9e501686456394622a01a934"
   end
 
   resource "pygments" do
