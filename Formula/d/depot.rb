@@ -1,8 +1,8 @@
 class Depot < Formula
   desc "Build your Docker images in the cloud"
   homepage "https://depot.dev/"
-  url "https://github.com/depot/cli/archive/refs/tags/v2.101.16.tar.gz"
-  sha256 "68375808ba990ecc3a7063ab95c1fd0ebf42832fdce4c4943bf07bb7be1a04d7"
+  url "https://github.com/depot/cli/archive/refs/tags/v2.101.17.tar.gz"
+  sha256 "83ed64a793904e399ac8aef631d22c0006b77305fcc99c4ed9132fc5f5fc3820"
   license "MIT"
   head "https://github.com/depot/cli.git", branch: "main"
 
