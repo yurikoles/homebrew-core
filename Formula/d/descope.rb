@@ -7,12 +7,12 @@ class Descope < Formula
   head "https://github.com/descope/descopecli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f2ffb03c5de523a9d9ca622ff0db3882ed43750bae96ed2806526fe2a506efb8"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f2ffb03c5de523a9d9ca622ff0db3882ed43750bae96ed2806526fe2a506efb8"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f2ffb03c5de523a9d9ca622ff0db3882ed43750bae96ed2806526fe2a506efb8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1983fea3098812cc34c649bda7cf330a407738614528c6bf73224e8612790a73"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c9095d2d63e1d857f1dc58e852a27403d1282204bc5304d3bba299c5989bde38"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9d5a2d37ee7a0c569eba84b9ebbf85163bf4ffb3749176cd0ee02e4e7c61bf9e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "74cd8ef58b15b1f107e1b146b512f3cca0d801616654e8cff59da1ca549a2bbc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "74cd8ef58b15b1f107e1b146b512f3cca0d801616654e8cff59da1ca549a2bbc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "74cd8ef58b15b1f107e1b146b512f3cca0d801616654e8cff59da1ca549a2bbc"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6b639d18cff586a44788ff0ee4dc1303c5b87d354ea56d8b152db298f6da4ce5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ed568a0c7e895b958f619f2d7f478f565f715d660f0671a5380003e1ea5a05d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "94b4eaf4c98e34b2741a8a0260aeb28a8b751defdd840b6b3792b4f709ea38d9"
   end
 
   depends_on "go" => :build
