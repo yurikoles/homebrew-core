@@ -1,8 +1,8 @@
 class Lexbor < Formula
   desc "Fast embeddable web browser engine written in C with no dependencies"
   homepage "https://lexbor.com/"
-  url "https://github.com/lexbor/lexbor/archive/refs/tags/v2.6.0.tar.gz"
-  sha256 "e9bb1aa8027ab92f11d5e8e6e7dc9b7bd632248c11a288eec95ade97bb7951a3"
+  url "https://github.com/lexbor/lexbor/archive/refs/tags/v2.7.0.tar.gz"
+  sha256 "e2473ade7173f69c56731ba71291d2ba705675ede2bb4423dc939ed70bcb55b5"
   license "Apache-2.0"
 
   bottle do
