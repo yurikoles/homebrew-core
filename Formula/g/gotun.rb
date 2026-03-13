@@ -1,8 +1,8 @@
 class Gotun < Formula
   desc "Lightweight HTTP proxy over SSH"
   homepage "https://github.com/Sesame2/gotun"
-  url "https://github.com/Sesame2/gotun/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "c0521f2e4df9bd8bae9afbca4bd4ab48bc1b3b24ef06ec17301dcfa1dfef1f93"
+  url "https://github.com/Sesame2/gotun/archive/refs/tags/v0.8.1.tar.gz"
+  sha256 "4448e9cd2efaf1ea5c1da50f39d3ea967632e15cffc36d2e1041f5c03b615750"
   license "MIT"
 
   bottle do
@@ -14,8 +14,7 @@ class Gotun < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4781293eb4e7feed7cb77184d0896c1e84f7416b90f20a220d08942606527910"
   end
 
-  # Unpin Go when gotun supports Go 1.26, ref: https://github.com/Sesame2/gotun/issues/22
-  depends_on "go@1.25" => :build
+  depends_on "go" => :build
 
   def install
     ldflags = "-s -w -X main.Version=#{version}"
