@@ -1,8 +1,8 @@
 class Libshumate < Formula
   desc "Shumate is a GTK toolkit providing widgets for embedded maps"
   homepage "https://gitlab.gnome.org/GNOME/libshumate"
-  url "https://download.gnome.org/sources/libshumate/1.5/libshumate-1.5.3.tar.xz"
-  sha256 "35f013b25391856e1b5c3d4409a5c4a640c6ccb5f5296ff982ec7bed39f56d4c"
+  url "https://download.gnome.org/sources/libshumate/1.6/libshumate-1.6.0.tar.xz"
+  sha256 "66097ee05c3cc4dfbdc124dfc9b885085f5c6ba2f1b2e642d0475987f9222939"
   license "LGPL-2.1-or-later"
 
   # libshumate doesn't use GNOME's "even-numbered minor is stable" version
@@ -62,9 +62,6 @@ class Libshumate < Formula
         return 0;
       }
     C
-
-    # TODO: remove this after rewriting icu-uc in `libpsl`'s pkg-config file
-    ENV.prepend_path "PKG_CONFIG_PATH", Formula["icu4c"].opt_lib/"pkgconfig" if OS.mac?
 
     flags = shell_output("#{Formula["pkgconf"].opt_bin}/pkgconf --cflags --libs shumate-1.0").strip.split
     system ENV.cc, "test.c", "-o", "test", *flags
