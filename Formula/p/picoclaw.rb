@@ -12,12 +12,12 @@ class Picoclaw < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3bd2d0ba51db225cfe2a18c63a8b9c2472876fd08340cfa5bba2ca40c8ddd725"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3bd2d0ba51db225cfe2a18c63a8b9c2472876fd08340cfa5bba2ca40c8ddd725"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3bd2d0ba51db225cfe2a18c63a8b9c2472876fd08340cfa5bba2ca40c8ddd725"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e4a1c5c958eac29896c7913a3c53e4c25650d5257661abbec81b8932b7d3fad1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f98f135bd52f9c6884626ad740e38570efeb7116de9debe82ce2b12f62c34254"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4bfa0090e180282f66d8016b9ea9ad1c712d5cbbe90148ae4b8ae87392d02102"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "90ae35f29a5e630654c3de923adc83648a94e9bdf5ba71b57e186a60cb44764d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "90ae35f29a5e630654c3de923adc83648a94e9bdf5ba71b57e186a60cb44764d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "90ae35f29a5e630654c3de923adc83648a94e9bdf5ba71b57e186a60cb44764d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "78d284e459d90a406a3cecbf1792a7c752a2bb04d78d75d487d38b9dc597d71b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "33681f98cf40dbb18e79e07be4c90c35512a4ca99a8acf39fca8c52b796ae4e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "62e9bac2db3019f6be891505f510b2c7f7878f07feb5a8aece320cecfe4bc53d"
   end
 
   depends_on "go" => :build
