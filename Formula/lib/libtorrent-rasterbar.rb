@@ -1,10 +1,9 @@
 class LibtorrentRasterbar < Formula
   desc "C++ bittorrent library with Python bindings"
   homepage "https://www.libtorrent.org/"
-  url "https://github.com/arvidn/libtorrent/releases/download/v2.0.11/libtorrent-rasterbar-2.0.11.tar.gz"
-  sha256 "f0db58580f4f29ade6cc40fa4ba80e2c9a70c90265cd77332d3cdec37ecf1e6d"
+  url "https://github.com/arvidn/libtorrent/releases/download/v2.0.12/libtorrent-rasterbar-2.0.12.tar.gz"
+  sha256 "25b898d02e02e43ee9a8ea5480c20007f129091b5754d0283f94e4d51d11a19e"
   license "BSD-3-Clause"
-  revision 4
   head "https://github.com/arvidn/libtorrent.git", branch: "RC_2_0"
 
   livecheck do
@@ -31,6 +30,11 @@ class LibtorrentRasterbar < Formula
   conflicts_with "libtorrent-rakshasa", because: "both use the same libname"
 
   def install
+    # Work around Homebrew's prefix scheme, which makes Python's reported
+    # site-packages path absolute and outside the keg.
+    site_packages = prefix/Language::Python.site_packages("python3.14")
+    inreplace "bindings/python/CMakeLists.txt", "${_PYTHON3_SITE_ARCH}", site_packages
+
     args = %W[
       -DCMAKE_CXX_STANDARD=14
       -Dencryption=ON
