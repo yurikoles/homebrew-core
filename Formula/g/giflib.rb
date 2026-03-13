@@ -11,16 +11,12 @@ class Giflib < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:    "aab2a621b970bab0baf55c4cd72cebd118a7e283a3a0ce4a85a91546707df2f1"
-    sha256 cellar: :any,                 arm64_sequoia:  "bf188a3d3e386e0b100831ca92173118c74645b033b56b4a7c148a91c2cfecb5"
-    sha256 cellar: :any,                 arm64_sonoma:   "c6b05aecad00588daf749dbde717fb6a03ce83fb9723b15f5786e7b974ef4c02"
-    sha256 cellar: :any,                 arm64_ventura:  "f0c469da58fa4384fb67b249b4869f3daced90a8326e520aeb2a030af54ccc48"
-    sha256 cellar: :any,                 arm64_monterey: "3089db3525957dedba2e0297997fe5bc6f3add879464102e48257ac12775cff7"
-    sha256 cellar: :any,                 sonoma:         "40d390aab5bc396eb3efa0ae00987efd8c9eb8049239f709f486a879577a41ef"
-    sha256 cellar: :any,                 ventura:        "b3d5cfa490fb61890dceb4b49510171783ab0e4dfc6f64f2f5f8ee1cecc08013"
-    sha256 cellar: :any,                 monterey:       "1b8828d26eeaccc1f3cefdbc41bd55551045d1ae55a18a1c96f4d27bd214df17"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "162732cc2ffcd48bfb68353fc4b454e6fbd5c2316b15eb6d98cbe8926f3ecb25"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "db5d2754722a81e5a842a66236aeebe889ebae26b08329dbd506007b9e63339c"
+    sha256 cellar: :any,                 arm64_tahoe:   "47c053a47ffdb60efe8a86e42f3ebfd0790630c8e209c76abbc1301aea7af33b"
+    sha256 cellar: :any,                 arm64_sequoia: "ab9ea92328ff025c3c50a2f5be370d2cd970fe31b746417a9bae99fa038e6a46"
+    sha256 cellar: :any,                 arm64_sonoma:  "3046550c4e6e7525239c20798fb090acf521361134224ccee4f24dce975b28df"
+    sha256 cellar: :any,                 sonoma:        "01044b2d4051eeeb8acc4ae16f017b74df7adc0fdfd77d9d1f3d8b3b5e97bc5c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7fcdfe49c9fb632dbcf4ffe4a6adbe98f19e7d36410a6ab398746a6b29c29934"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b6756c7d0bd5d9c0a3437288e4bd78cd1f05c4e13b27d17bdb4f5242dd4d8974"
   end
 
   def install
