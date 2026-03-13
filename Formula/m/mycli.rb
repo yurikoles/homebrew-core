@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/7c/a2/001581c614f69cc58efb79a32ad729cd037e4dfaec96a1c8000c828ea847/mycli-1.63.0.tar.gz"
-  sha256 "a818ef3dc70c07313c519635391998e40b25a9430557dd8a4dc6bca341e95a2c"
+  url "https://files.pythonhosted.org/packages/5e/b6/c5ac7f0c0c0d2e1390ff3ac5b9cd0e828432e80484f63f3c15fc24ecd54b/mycli-1.64.0.tar.gz"
+  sha256 "2f3cb51cd632718896582d2c665c2865c4a25c8ca55ce53939e0b59d84c4e8db"
   license "BSD-3-Clause"
 
   bottle do
@@ -213,9 +213,9 @@ class Mycli < Formula
     sha256 "0010b4f77fb996c8d25dd4b16f3654e6da163ff1866ceabc70b24e791c203048"
   end
 
-  resource "sqlglotrs" do
-    url "https://files.pythonhosted.org/packages/1c/03/4c8133ff544788df8df3bb1f1a2395c8fe6a116f27ea2ae30eab4a3de54b/sqlglotrs-0.13.0.tar.gz"
-    sha256 "ad1ad158234af0f8ba5054ca51bd17a7c1e3f81b4798c7970ebf7953fe08ddcb"
+  resource "sqlglotc" do
+    url "https://files.pythonhosted.org/packages/2c/80/cae9e2bcdb6095c498d3eece04f7f8b6f6bc2b5c4b17c5a1bdfd8c14beff/sqlglotc-29.0.1.tar.gz"
+    sha256 "2b3116880e6f44c8cee2f690ae9ac58dfa23ce2921e6f67ea1715d70873a0d51"
   end
 
   resource "sqlite-fts4" do
