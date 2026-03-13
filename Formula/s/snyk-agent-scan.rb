@@ -3,8 +3,8 @@ class SnykAgentScan < Formula
 
   desc "Constrain, log and scan your MCP connections for security vulnerabilities"
   homepage "https://github.com/snyk/agent-scan"
-  url "https://files.pythonhosted.org/packages/49/cb/3650bbf79f8387776bd712171fed482f605dbb9ab04cd9a2e2d6321e5fc3/snyk_agent_scan-0.4.7.tar.gz"
-  sha256 "b9759aecb558d0e4e02a3fc0bd3706698a3bdec238b9c7b1bcdf4fee1a6d3f5a"
+  url "https://files.pythonhosted.org/packages/af/93/170aee851096ff44b108f8f4e9a1f3e79191ca5b79ed570a21d0a89eff32/snyk_agent_scan-0.4.8.tar.gz"
+  sha256 "414efa7dfec9bd2e39c66c3c38ccb50a0b57a1369bc414aa32fa6fa1ffc44c29"
   license "Apache-2.0"
 
   bottle do
@@ -161,8 +161,8 @@ class SnykAgentScan < Formula
   end
 
   resource "pyjwt" do
-    url "https://files.pythonhosted.org/packages/5c/5a/b46fa56bf322901eee5b0454a34343cdbdae202cd421775a8ee4e42fd519/pyjwt-2.11.0.tar.gz"
-    sha256 "35f95c1f0fbe5d5ba6e43f00271c275f7a1a4db1dab27bf708073b75318ea623"
+    url "https://files.pythonhosted.org/packages/a8/10/e8192be5f38f3e8e7e046716de4cae33d56fd5ae08927a823bb916be36c1/pyjwt-2.12.0.tar.gz"
+    sha256 "2f62390b667cd8257de560b850bb5a883102a388829274147f1d724453f8fb02"
   end
 
   resource "python-dotenv" do
