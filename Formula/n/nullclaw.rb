@@ -7,12 +7,12 @@ class Nullclaw < Formula
   head "https://github.com/nullclaw/nullclaw.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b5961e6c0bce34ca7e95df91ad618cf91ccc0b9d1c1fea61cb8de24412fe2f72"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f438deebe9730cf655110bbf96729b57500a0dd2e6cdf022781e712eaa088192"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7cbf2947b4b4f046125c919ada3d91c948bebb26e6b5dc4ed5939ea04c199e2d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "663f0ff92d114509947a02d77984fb688b4f52dc5b1bcb5aa3dbd5eb17fad82b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a87d2ab06b2d3bd32946fc6f768ac2431e31ae921df0c0cee0084a0820a867e5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e0c8a2d2dd97629caac7a3dfa8d47e3918a196a85bb5d9cf878c08d730b28465"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "47d75895858f044885fdadf1105b66aa785013db3b26a930401d1d0420cfb366"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "958b43fb25f0fb082b35f6b1ffff9d282dab89433323f7415c243fe4be9123a4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "af211883ed0f5a29af47257549fc1a67cb72ae445ae4efc580ec1f7eea1aeb5c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e07e85124bd5d05f0f7f7fb4a5198746a4b03bc36e01cffcdc69c72193b71af4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2978d08b95b49b17c71018588a1e8de2f4b18823bfadfedf74d2607f30a73f22"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aef52830e9fbf251c74e90f8b11918d7b2ea37e01ff4866aaa6415f7b220f328"
   end
 
   depends_on "zig" => :build
