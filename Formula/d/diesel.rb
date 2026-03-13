@@ -7,12 +7,12 @@ class Diesel < Formula
   head "https://github.com/diesel-rs/diesel.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "37a1422a47206ba830b99bd09cccf6b7125b1f9685726235516ae4734be9e911"
-    sha256 cellar: :any,                 arm64_sequoia: "a6679308bdc2113f77acd8029490f2667a3689131c450c3d3c54a628cbb1c5f1"
-    sha256 cellar: :any,                 arm64_sonoma:  "287f81c4e14e37ced88b06329baaffe9e9d506dbf95cd78adc22b8df38a6eda5"
-    sha256 cellar: :any,                 sonoma:        "5dc92c115496af0a341643c05110a9c8b9be0420f98df5041c38569467c9d19a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7adcde0814692ab9560a8b9ccea883584bbe395685180694bb96974079a407b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "75ac078526a9aa18442b53138d18e84d596810fc52cac7cb6a4c1957e6d4a102"
+    sha256 cellar: :any,                 arm64_tahoe:   "c1f1c9cab255fee784506dcb916ea5c97346b13159a98d6be2afe4809d65dd7c"
+    sha256 cellar: :any,                 arm64_sequoia: "921154ebcda7421e89fc0543d1cee2a11d4022a00e4dbad09363b9b618c1ca3d"
+    sha256 cellar: :any,                 arm64_sonoma:  "2f4394c22dfe78e85d7255c40eadc4c6d373024e0a182909e6c0445220c32bb5"
+    sha256 cellar: :any,                 sonoma:        "d61909a2dfa663fdafc40a03ca2f1ad2f066a1cdc2a543e233e2c598ece2799b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "24d8ac3184d827b33b3ae457f55c4952d17101ea7e2f6e675ba3fa78afa12a1e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b5ec14987a0ee90f246bff260aadc4d135dfeee79d3f56d9d71a8785f0bfea03"
   end
 
   depends_on "rust" => [:build, :test]
