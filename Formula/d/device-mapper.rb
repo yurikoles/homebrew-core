@@ -1,9 +1,9 @@
 class DeviceMapper < Formula
   desc "Userspace library and tools for logical volume management"
   homepage "https://sourceware.org/dm"
-  url "https://sourceware.org/pub/lvm2/releases/LVM2.2.03.38.tgz"
-  version "2.03.38"
-  sha256 "322d44bf40de318e6e6b52c56999aaeb86b16c8267187ac2e01a44d4dc526960"
+  url "https://sourceware.org/pub/lvm2/releases/LVM2.2.03.39.tgz"
+  version "2.03.39"
+  sha256 "54753b7d82a8ffdcc29d9f2c7ff523048a30cc0094048db129496ead1804f482"
   license "LGPL-2.1-only"
   head "https://gitlab.com/lvmteam/lvm2.git", branch: "main"
 
