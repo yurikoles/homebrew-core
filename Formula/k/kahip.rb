@@ -7,12 +7,12 @@ class Kahip < Formula
   head "https://github.com/KaHIP/KaHIP.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "87239b7a753afdd60c562f2add48ae5b5eb6cd1bc0635777f1cb44c4a2913c5d"
-    sha256 cellar: :any,                 arm64_sequoia: "05f0a7b049eb2d90fea57b731910b4936a9ff6649b82a23684da7455a02b1822"
-    sha256 cellar: :any,                 arm64_sonoma:  "dec9e593e35dc1605fd81e4a15f0402acc13c5b0f55755af645f706f7530a271"
-    sha256 cellar: :any,                 sonoma:        "03b0d914e25d932d6a35ebcbd65add0f412f8428972446cbbfcde43a1b592e1f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ad42f7f27eb1443eeca5de35dacae4e4c8e5071f8b2dc08f3f79bd30ea3e9bdd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c939e7189c1280172a87068eb4bae9df43dbd3b17d89be4dd7497b8c63ec3c9d"
+    sha256 cellar: :any,                 arm64_tahoe:   "3145952e3e56d322858fb0d54debceab5dcceccd92820054c7c80d923267e68c"
+    sha256 cellar: :any,                 arm64_sequoia: "4c069f2781f1da3466f28138ff73a0f9d928a7028b7c4270cd2ff6fe8cf5a894"
+    sha256 cellar: :any,                 arm64_sonoma:  "63e9b088b8ec6058fc4d5961c832d0da7103a5283147b8d51746b69e53c412a6"
+    sha256 cellar: :any,                 sonoma:        "fbaec3a182f3b8d6ca0e2811339797f6964f347c6223cf562563b32d21a07d12"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b8f3c057748120774f38157c5a3583d8923a4ac072dd6f1b3b527e4f0853b853"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1cd4afeb790f496a5640ea571a89654304c06edb496db72f151590359bd134ea"
   end
 
   depends_on "cmake" => :build
