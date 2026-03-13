@@ -1,8 +1,8 @@
 class Goshs < Formula
   desc "Simple, yet feature-rich web server written in Go"
   homepage "https://goshs.de/en/index.html"
-  url "https://github.com/patrickhener/goshs/archive/refs/tags/1.1.3.tar.gz"
-  sha256 "f6b62e2161161c368538b0911c0f1ccfc16ce68d0531495ce8d1ffd4d9110a9f"
+  url "https://github.com/patrickhener/goshs/archive/refs/tags/v1.1.4.tar.gz"
+  sha256 "0b3ca3429b5b0c4ecefe8569c982cc4f2eeca5880d85081136b81cc36338f823"
   license "MIT"
   head "https://github.com/patrickhener/goshs.git", branch: "main"
 
@@ -27,12 +27,11 @@ class Goshs < Formula
     (testpath/"test.txt").write "Hello, Goshs!"
 
     port = free_port
-    server_pid = spawn bin/"goshs", "-p", port.to_s, "-d", testpath, "-si"
-    sleep 2
-    output = shell_output("curl -s http://localhost:#{port}/test.txt")
+    pid = spawn bin/"goshs", "-p", port.to_s, "-d", testpath, "-si"
+    output = shell_output("curl --retry 5 --retry-connrefused -s http://localhost:#{port}/test.txt")
     assert_match "Hello, Goshs!", output
   ensure
-    Process.kill("TERM", server_pid)
-    Process.wait(server_pid)
+    Process.kill("TERM", pid)
+    Process.wait(pid)
   end
 end
