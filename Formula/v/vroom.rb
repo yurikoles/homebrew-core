@@ -7,12 +7,12 @@ class Vroom < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "603f9db571c5a11951f2d2f7a07e4a1108c07798cd1f347dbf4736e6baf6d7b3"
-    sha256 cellar: :any,                 arm64_sequoia: "e6cb0a6729f091b1d219c0ba4bfb995dfd3e2e2a445091550743ed273e1c5812"
-    sha256 cellar: :any,                 arm64_sonoma:  "a536b93c09c30d3c6ba2970a4b5dbb00dc0b1b87d9edc006b1d639129ecf113c"
-    sha256 cellar: :any,                 sonoma:        "e4173177423d3cc154d5a13b740793bd9045ad5c410e224e91766d35a8fa1b33"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3c01b046eb63ab22c7567f7ecfe3f48dabdb17f410658184e11eecf32ddb5ff2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d7e36a54cfde07f9cf24edfdc3ff570621414264cd20f4d4b9a83c2e9b8dab3"
+    sha256 cellar: :any,                 arm64_tahoe:   "b8b5b8201eb2a208ccf15450bc41fe368b6370b99f396b42fe8ca86b243ac6b7"
+    sha256 cellar: :any,                 arm64_sequoia: "4ef7a45d8ddb7fa202817b2abe984bd735c8af3e72ecda4a616ffa750c440def"
+    sha256 cellar: :any,                 arm64_sonoma:  "167932e93c1bbb4bac127ab8cbbbe3e5ef540ed38c24bac411afecaac39a6fce"
+    sha256 cellar: :any,                 sonoma:        "368891c8f744c684cb6a247453d24c00669a4ee2f74087dd83f33b77ede9e46c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d4843c6585ed3a4f3577343def96dbb5b642310a295c44960bafaeafd7d7909f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cdf83b02f2274b91d4cda4ab204050768833b00a8db87b3f85744742e271bf20"
   end
 
   depends_on "asio" => :build
