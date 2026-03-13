@@ -6,12 +6,12 @@ class WebExt < Formula
   license "MPL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9e345e1a320cb57cff6c7f78f7d233b10f231d3a9bfdca1e9e971bb7215e6cca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9e345e1a320cb57cff6c7f78f7d233b10f231d3a9bfdca1e9e971bb7215e6cca"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9e345e1a320cb57cff6c7f78f7d233b10f231d3a9bfdca1e9e971bb7215e6cca"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9e345e1a320cb57cff6c7f78f7d233b10f231d3a9bfdca1e9e971bb7215e6cca"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "57f04c57e5925120c038f5def15491102bb5b3fc9ea99c3a5063c25d245bf052"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "57f04c57e5925120c038f5def15491102bb5b3fc9ea99c3a5063c25d245bf052"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8a15784dff249431f88754845f288ef53d95ecf1119276048316bbb766fc6237"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8a15784dff249431f88754845f288ef53d95ecf1119276048316bbb766fc6237"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8a15784dff249431f88754845f288ef53d95ecf1119276048316bbb766fc6237"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8a15784dff249431f88754845f288ef53d95ecf1119276048316bbb766fc6237"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "144c2f96be7ffa60e0429cd2dc3d5bbda6cb78bbab1a7cf42f97371613b6bb1d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "144c2f96be7ffa60e0429cd2dc3d5bbda6cb78bbab1a7cf42f97371613b6bb1d"
   end
 
   depends_on "node"
