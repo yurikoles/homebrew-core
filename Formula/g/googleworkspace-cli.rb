@@ -2,8 +2,8 @@ class GoogleworkspaceCli < Formula
   desc "CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more"
   homepage "https://developers.google.com/workspace"
   # We cannot install from the npm registry because it installs precompiled binaries
-  url "https://github.com/googleworkspace/cli/archive/refs/tags/v0.13.3.tar.gz"
-  sha256 "a7df48dc7b4d5436ded4d2ef13aa4265ec096376141dc173bceee5e926dd513c"
+  url "https://github.com/googleworkspace/cli/archive/refs/tags/v0.15.0.tar.gz"
+  sha256 "19d3c004bb33627eaed9d9aa3eaecbabb8e6f30f03a7842d9f9a46c9bcd1ee30"
   license "Apache-2.0"
 
   bottle do
