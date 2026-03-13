@@ -1,8 +1,8 @@
 class AtomicQueue < Formula
   desc "C++14 lock-free queues"
   homepage "https://github.com/max0x7ba/atomic_queue"
-  url "https://github.com/max0x7ba/atomic_queue/archive/refs/tags/v1.7.1.tar.gz"
-  sha256 "6eeff578f8b0499717bf890d90e2c58106ac2b8076084b73f2183a631742b4ab"
+  url "https://github.com/max0x7ba/atomic_queue/archive/refs/tags/v1.7.2.tar.gz"
+  sha256 "7f0004b3821f90e35d898d37564be273909aeb24a8ca71a988fc65a5cf584a68"
   license "MIT"
 
   bottle do
