@@ -1,8 +1,8 @@
 class Pypy < Formula
   desc "Highly performant implementation of Python 2 in Python"
   homepage "https://pypy.org/"
-  url "https://downloads.python.org/pypy/pypy2.7-v7.3.20-src.tar.bz2"
-  sha256 "bf958498445f7bf78338723c8d86bd6711e8792461725d2481df77a9566a3e62"
+  url "https://downloads.python.org/pypy/pypy2.7-v7.3.21-src.tar.bz2"
+  sha256 "23537c62e875ad1a3e675c64d4435eff392ea20843e20d690fd1400b79363d64"
   license "MIT"
   head "https://github.com/pypy/pypy.git", branch: "main"
 
@@ -78,8 +78,8 @@ class Pypy < Formula
   # - Disable Linux tcl-tk detection since the build script only searches system paths.
   #   When tcl-tk is not found, it uses unversioned `-ltcl -ltk`, which breaks build.
   patch do
-    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/pypy/tcl-tk.diff"
-    sha256 "d17725c11842d83b5432312348715241b1b402173cd68166620c1b6bd8162fbd"
+    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/f3c99d21d0b8fe79a579ef1a7405f10fa18ccde8/Patches/pypy/tcl-tk.diff"
+    sha256 "ed10c9fc9d3a5b8f43ef51c23224605e0ac7bca07aa2e8dc20335b69d13a082f"
   end
 
   def install
@@ -94,8 +94,8 @@ class Pypy < Formula
     tcltk = Formula["tcl-tk@8"]
     inreplace "lib_pypy/_tkinter/tklib_build.py" do |s|
       s.gsub! "['/usr/local/opt/tcl-tk/include']", "[]"
-      s.gsub! "(homebrew + '/include')", "('#{tcltk.opt_include}/tcl-tk')"
-      s.gsub! "(homebrew + '/opt/tcl-tk/lib')", "('#{tcltk.opt_lib}')"
+      s.gsub! "(homebrew + '/opt/tcl-tk@8/include/tcl-tk')", "('#{tcltk.opt_include}/tcl-tk')"
+      s.gsub! "(homebrew + '/opt/tcl-tk@8/lib')", "('#{tcltk.opt_lib}')"
     end
 
     if OS.mac?
