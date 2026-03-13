@@ -6,7 +6,7 @@ class Macvim < Formula
   version "9.1.1887"
   sha256 "82148b9f7fa4c83e18ba7fea3f65289b1eb3e2775a4d17a4c3e0fe16087e0e53"
   license "Vim"
-  revision 2
+  revision 3
   head "https://github.com/macvim-dev/macvim.git", branch: "master"
 
   # The stable Git tags use a `release-123` format and it's necessary to check
@@ -36,7 +36,7 @@ class Macvim < Formula
   depends_on "libsodium" => :build
   depends_on xcode: :build # for xcodebuild
   depends_on "cscope"
-  depends_on "lua"
+  depends_on "lua@5.4" # Lua 5.5 doesn't work for now, see https://github.com/vim/vim/issues/19639
   depends_on :macos
   depends_on "python@3.14"
   depends_on "ruby"
@@ -70,7 +70,7 @@ class Macvim < Formula
                           "--with-local-dir=#{HOMEBREW_PREFIX}",
                           "--enable-cscope",
                           "--enable-luainterp",
-                          "--with-lua-prefix=#{Formula["lua"].opt_prefix}",
+                          "--with-lua-prefix=#{Formula["lua@5.4"].opt_prefix}",
                           "--enable-luainterp",
                           "--enable-python3interp",
                           "--disable-sparkle",
