@@ -5,6 +5,8 @@ class WhisperkitCli < Formula
   sha256 "01c80f436721ec8a8c3abb6710a96629f5c2a12666e6fdfde33e0bc57a74a8bf"
   license "MIT"
 
+  no_autobump! because: :bumped_by_upstream
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2ca67492fbb2c7da120cb79f225049a9834ac03c752b8f8be2cdabcdfbb0a0f9"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "4b6ad99a3ecfcd00a95297a5ae9969e798ed13a892331359ecd8840b82217f93"
