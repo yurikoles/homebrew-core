@@ -2,17 +2,17 @@ class GoogleworkspaceCli < Formula
   desc "CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more"
   homepage "https://developers.google.com/workspace"
   # We cannot install from the npm registry because it installs precompiled binaries
-  url "https://github.com/googleworkspace/cli/archive/refs/tags/v0.11.1.tar.gz"
-  sha256 "431d03a02482a733d6ab4b752524a49e0ec6af28cc45e4eb7c4fd0ca4b74935f"
+  url "https://github.com/googleworkspace/cli/archive/refs/tags/v0.13.1.tar.gz"
+  sha256 "8a6ed801ce405c0188a0b16a0db34bc331f4222436421ffa4bb76e4b53d483a0"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "68c644338a5aefbf23895e0614fc9a3e142b63e403de2850fb2c43e9d652b40e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f94dc1715c18c7081407544c226be3996f9da2e5aaa3cd9f41921b65e4d94ea7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ae115cd8ba0fd503e8416ef7d58eb5b4c38a8976a2c86a02ef22aea4f8f8347f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "23495916701736d0dd8d322a974c05a6703fbfb85c3f9e060fd1afba97aa4702"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "af5ab47d5b02d31d7a258a1abac3233382b0912317a8e908e0e92f7405ba76fd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d39fc25189ddb53d78dbfbf013a66bdfd15fb317d5452b33037fbfd72e2c5dd0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "dbeff4d6aa8b3dcab8055a45d9d1240c8dd73119d8bee2a6e44af22acd33d92b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1fc5c408375319223227c0335e50866990384536aaf1941dc4900aecdae922ff"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6583f66a3d1c4b5709deecd9ee5e07e91e770673d0df4ea27ab8db9f4d87b24b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "41b3ede75962a6cff732e9ca3408b84406dbf90b115f9f87a12ff0ee37a655fe"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "29dbb63abc896279afc0c369ab5b94becb18f15d6d77e6141a12c6e0803e4bd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "601c7f8e9228d21c23bd2acbd575f2a1ac5a2b1015dbba931dce947f63222c92"
   end
 
   depends_on "rust" => :build
@@ -25,7 +25,7 @@ class GoogleworkspaceCli < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/gws --version")
-    output = shell_output("#{bin}/gws drive files list --params '{\"pageSize\": 10}'", 1)
+    output = shell_output("#{bin}/gws drive files list --params '{\"pageSize\": 10}'", 2)
     assert_match "Access denied. No credentials provided.", output
   end
 end
