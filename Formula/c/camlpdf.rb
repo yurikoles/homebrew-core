@@ -1,10 +1,9 @@
 class Camlpdf < Formula
   desc "OCaml library for reading, writing and modifying PDF files"
   homepage "https://github.com/johnwhitington/camlpdf"
-  url "https://github.com/johnwhitington/camlpdf/archive/refs/tags/v2.8.1.tar.gz"
-  sha256 "148994c70016f1b02fee1f5548ff7d36ba7d0a5716e03f95011160fcc495657b"
+  url "https://github.com/johnwhitington/camlpdf/archive/refs/tags/v2.9.tar.gz"
+  sha256 "2bbc222eb6e1be4ef6ec2900a1bba1da652704ff1343e742726689e077d35a27"
   license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
-  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "11905e6ecf963dd498f8375ed474be764b50922044fc210d660376d250c49f98"
