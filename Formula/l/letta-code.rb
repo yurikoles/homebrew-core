@@ -1,8 +1,8 @@
 class LettaCode < Formula
   desc "Memory-first coding agent"
   homepage "https://docs.letta.com/letta-code"
-  url "https://registry.npmjs.org/@letta-ai/letta-code/-/letta-code-0.18.2.tgz"
-  sha256 "5875b7c409e1825ab4c718b09c4b7244088cd26a7eb886d98feccb2db7cb2807"
+  url "https://registry.npmjs.org/@letta-ai/letta-code/-/letta-code-0.18.3.tgz"
+  sha256 "d1ab13032602c2710a2267587b3bfd466752e1332e5374bb658ee95d1c79fed0"
   license "Apache-2.0"
 
   bottle do
@@ -19,6 +19,14 @@ class LettaCode < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
+
+    # Remove incompatible pre-built binaries
+    os = OS.kernel_name.downcase
+    arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
+    node_modules = libexec/"lib/node_modules/@letta-ai/letta-code/node_modules"
+    (node_modules/"node-pty/prebuilds").glob("*").each do |dir|
+      rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}"
+    end
   end
 
   test do
