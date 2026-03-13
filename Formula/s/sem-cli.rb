@@ -1,18 +1,18 @@
 class SemCli < Formula
   desc "Semantic version control CLI with entity-level diffs and blame"
   homepage "https://github.com/Ataraxy-Labs/sem"
-  url "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.3.8.tar.gz"
-  sha256 "08453cf7809510148db7c12c370bba18bd709aa15a38026aebd56d7f5e039bfa"
+  url "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.3.9.tar.gz"
+  sha256 "c2b108f92881845ea52a86975b322c5965e5849581997782108a7d126409962f"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/Ataraxy-Labs/sem.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "8f692d81a0741094890c34d4e16519ec3504860665765ff4c7d7cd5fb8ef97a5"
-    sha256 cellar: :any,                 arm64_sequoia: "35f6547d13dc866cf518ebcb4837fe75b233ac0745a64e4455e3acb26f62901d"
-    sha256 cellar: :any,                 arm64_sonoma:  "a54dae5cf3568fb67843415d531d6c6d2f6cf22b41a23330b4d2e4fcea7629fb"
-    sha256 cellar: :any,                 sonoma:        "09949255fd0d872511deaec05bc43238e611474869f090e330df181e440d4355"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "54023360ab2621af8b2b5f6cbc308936a05b194d39fdb1de3bbcfab2d6278f1d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2d25829a47355f6b56e16d2f06829355adab7a44b56bc83ec92c348efbdbb113"
+    sha256 cellar: :any,                 arm64_tahoe:   "374efc5a7ba6a8ebc9700a0797f7badf60b8099a5909732324fd10758af65ce7"
+    sha256 cellar: :any,                 arm64_sequoia: "770e77d4eee05897dfb88e827e2d6b9029b3a557fa7e1fb6d108f36cf86801f4"
+    sha256 cellar: :any,                 arm64_sonoma:  "d59d17e2402afd7fffb128d051ee7c14146fd48a5c149834b1db650262ec7226"
+    sha256 cellar: :any,                 sonoma:        "fa009931bd2e130dfab0f5a4783b176c45d5ebdf63abb37f272c63aacbbf1dcc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "de79940b8307534afecdcf47436bcbd09d64b1d08e76636f1c8f9be146275e73"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "be35167d5cfdc548c26426ce0c9aa5197974544298c7fd876f109484b71b8af1"
   end
 
   depends_on "pkgconf" => :build
