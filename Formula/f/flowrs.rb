@@ -7,12 +7,12 @@ class Flowrs < Formula
   head "https://github.com/jvanbuel/flowrs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "97f8bd1c949a62f80d17eb494c9d709c8050011f062252274f52d6400b14325d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8cb9fe8ae6f8d3041438cfd9ac8af3046af7a63f56c92676a6b3533748ab683f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2e7d0b4a2c6ca264abb6fb59f832007056cbf2f9a2589ea7d1de29c6f0ad991f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "663de9ed0eb1b538b1f9629ff53981e1cb9bd53f7686c4237c63017d1777c68b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8ee65585113ad8e785d61d30420b9c45ab26529475b9d713e6d829f5f17bfad0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a2bff0b4bd82866c7f7df2446b8d1305c877017639769d45d107b76647a887c0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "128d27eb3466dd9162d3d0be6b575e3d5665509754e480f22ea3a5e14a7e3667"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6e1aa89ef7de9d086e1ff3eb05e0e0072e4e81c76afc71e1df90c781450248ba"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "214e6e83a7fdefe80808515d70c6dc929f4afc091e2297f134713ecf6314a98d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c54c6c432d5e58ec984d02b6d5b4ec93158df6ee4c37e7c66a87f5cc11cb98d9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b597d7b137c044c41893955b612d69d5d68320f7251f5e7ff8892282207f628d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1d328c5362232dd3f352ba0494735d70694da7d5b2b88d8c3edeefd0a63fbb30"
   end
 
   depends_on "pkgconf" => :build
