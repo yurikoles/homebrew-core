@@ -1,8 +1,8 @@
 class Harfbuzz < Formula
   desc "OpenType text shaping engine"
   homepage "https://github.com/harfbuzz/harfbuzz"
-  url "https://github.com/harfbuzz/harfbuzz/releases/download/13.1.0/harfbuzz-13.1.0.tar.xz"
-  sha256 "a9959a0db77554d266803e1e524249ed4504695fef63524aebca749ac6260a7f"
+  url "https://github.com/harfbuzz/harfbuzz/releases/download/13.1.1/harfbuzz-13.1.1.tar.xz"
+  sha256 "e7f3b8bac3fdcc529985be8e84fbd65c675ac47ee58512b15a5dd620c79ffe2a"
   license "MIT"
   head "https://github.com/harfbuzz/harfbuzz.git", branch: "main"
 
@@ -27,6 +27,10 @@ class Harfbuzz < Formula
   depends_on "graphite2"
   depends_on "icu4c@78"
   depends_on "libpng"
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   def install
     args = %w[
