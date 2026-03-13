@@ -46,6 +46,27 @@ class Onnxruntime < Formula
     end
   end
 
+  resource "coremltools" do
+    url "https://github.com/apple/coremltools/archive/refs/tags/7.1.tar.gz"
+    sha256 "d3222966982367b2be4ce62f1bd2b3dddc5a0ae018724a9acf850fbf2b0cc09a"
+
+    livecheck do
+      url "https://raw.githubusercontent.com/microsoft/onnxruntime/refs/tags/v#{LATEST_VERSION}/cmake/deps.txt"
+      regex(%r{^coremltools;.*/(\h+)\.zip}i)
+    end
+  end
+
+  resource "fp16" do
+    url "https://github.com/Maratyszcza/FP16/archive/3d2de1816307bac63c16a297e8c4dc501b4076df.tar.gz"
+    version "3d2de1816307bac63c16a297e8c4dc501b4076df"
+    sha256 "65ace2f05fd9434b0acb7a7d3cc6cd96842ea6236b680594af932b359bedbfc1"
+
+    livecheck do
+      url "https://raw.githubusercontent.com/microsoft/onnxruntime/refs/tags/v#{LATEST_VERSION}/cmake/deps.txt"
+      regex(%r{^fp16;.*/(\h+)\.zip}i)
+    end
+  end
+
   # Apply Fedora's workaround[^1] to allow `onnxruntime` to use `onnx` built without
   # ONNX_DISABLE_STATIC_REGISTRATION[^2]. We can't use this option as it will
   # break functionality for any dependents/users expecting the default behavior.
@@ -77,6 +98,12 @@ class Onnxruntime < Formula
       -Donnxruntime_USE_FULL_PROTOBUF=OFF
     ]
 
+    args << if OS.mac?
+      "-Donnxruntime_USE_COREML=ON"
+    else
+      "-Donnxruntime_USE_COREML=OFF"
+    end
+
     # Regenerate C++ bindings to use newer `flatbuffers`
     flatc = Formula["flatbuffers"].opt_bin/"flatc"
     system python3, "onnxruntime/core/flatbuffers/schema/compile_schema.py", "--flatc", flatc
@@ -97,10 +124,19 @@ class Onnxruntime < Formula
       #include <cassert>
       #include <iostream>
       #include <onnxruntime/onnxruntime_cxx_api.h>
+      #ifdef __APPLE__
+      #include <Availability.h>
+      #include <onnxruntime/coreml_provider_factory.h>
+      #endif
 
       int main(void) {
         Ort::Env ort_env;
-        Ort::Session session{ort_env, "mul_1.onnx", Ort::SessionOptions{nullptr}};
+        Ort::SessionOptions so;
+        #if defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED >= 150000
+        uint32_t coreml_flags = 0;
+        Ort::ThrowOnError(OrtSessionOptionsAppendExecutionProvider_CoreML(so, coreml_flags));
+        #endif
+        Ort::Session session{ort_env, "mul_1.onnx", so};
         auto memory_info = Ort::MemoryInfo::CreateCpu(OrtDeviceAllocator, OrtMemTypeCPU);
 
         std::array<float, 6> input_data{1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f};
