@@ -3,8 +3,8 @@ class LanggraphCli < Formula
 
   desc "Command-line interface for deploying apps to the LangGraph platform"
   homepage "https://www.github.com/langchain-ai/langgraph"
-  url "https://files.pythonhosted.org/packages/16/0c/eecfcc44bd45860dda9cf879e459e8e61cfe48abdc066e9aaa14dcf734fc/langgraph_cli-0.4.15.tar.gz"
-  sha256 "4705f53d060e31b2fb8d70bb3663a14ff89e4cb14bf3a05222547a95356645d7"
+  url "https://files.pythonhosted.org/packages/81/47/daa0047d4c9fcc58d5fdb7bab3407bee70fe6354a59e1ee726846b1af822/langgraph_cli-0.4.16.tar.gz"
+  sha256 "bf5da864292de44340cbbda27d0d69cd95aae7a8d741ab4113c6cb462e43b616"
   license "MIT"
 
   bottle do
@@ -53,8 +53,8 @@ class LanggraphCli < Formula
   end
 
   resource "langgraph-sdk" do
-    url "https://files.pythonhosted.org/packages/4b/fd/634ea850ff850f098229e06d577ab165b1a9b232911e47b06b0dc1d9247d/langgraph_sdk-0.3.10.tar.gz"
-    sha256 "e8829d618a8c3e1402dc3415dced07423878c3914fb68ddbeabe8657402f7f0f"
+    url "https://files.pythonhosted.org/packages/35/cd/a019f1b1e97c519f2425593f9bccd3ac463a18fb5d2111cff59ce1ef62fe/langgraph_sdk-0.3.11.tar.gz"
+    sha256 "3640134835d89d2c7c8bb7de73bd10673d4b282db3ff0e2fdaf1cee9e50cb1eb"
   end
 
   resource "orjson" do
