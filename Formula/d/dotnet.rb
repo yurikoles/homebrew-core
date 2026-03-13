@@ -7,12 +7,12 @@ class Dotnet < Formula
 
   stable do
     # Source-build tag announced at https://github.com/dotnet/source-build/discussions
-    url "https://github.com/dotnet/dotnet/archive/refs/tags/v10.0.103.tar.gz"
-    sha256 "92fbc35b1b7ede2f4995e32aaa354c7d227e99179aaaa4661282a9d0ec977e4e"
+    url "https://github.com/dotnet/dotnet/archive/refs/tags/v10.0.105.tar.gz"
+    sha256 "c634e849db52424b75c82c010116cb8290bc952431b7ccf6078ed7365d57b90e"
 
     resource "release.json" do
-      url "https://github.com/dotnet/dotnet/releases/download/v10.0.103/release.json"
-      sha256 "05154d070eebb81ef7b1eff89466956db93ee42f9d03059a9eb91c0f2bd745ba"
+      url "https://github.com/dotnet/dotnet/releases/download/v10.0.105/release.json"
+      sha256 "e8f1ccc6f7f1e2f5b2265bcab5a5351535288c9c5261ac7c677e865a6a547dcd"
 
       livecheck do
         formula :parent
@@ -20,9 +20,13 @@ class Dotnet < Formula
     end
   end
 
+  # Upstream has unstable tags that use the same scheme as release tags so we cannot use git strategy.
+  # Also, we currently only support building 1xx band since 2xx/3xx/4xx bands require additional work:
+  # https://github.com/dotnet/source-build/blob/main/Documentation/feature-band-source-building.md
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^v?(\d+\.\d+\.1\d\d)$/i)
+    strategy :github_releases
   end
 
   bottle do
@@ -106,13 +110,12 @@ class Dotnet < Formula
     end
 
     args = %w[
-      --branding release
       --clean-while-building
       --source-build
       --with-system-libs all
     ]
     if build.stable?
-      args += ["--release-manifest", "release.json"]
+      args += %w[--release-manifest release.json]
       odie "Update release.json resource!" if resource("release.json").version != version
       buildpath.install resource("release.json")
     end
