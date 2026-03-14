@@ -1,18 +1,18 @@
 class Pvetui < Formula
   desc "Terminal UI for Proxmox VE"
   homepage "https://github.com/devnullvoid/pvetui"
-  url "https://github.com/devnullvoid/pvetui/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "e112a5d5af45f6ec316a7a90bc4a9ec73220de5927bec3147c8bbf7fdcde8419"
+  url "https://github.com/devnullvoid/pvetui/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "962aae0860c2a6bcaf74453da5fdc0c21f9d3304eefc1f87b54a848cc3437500"
   license "MIT"
   head "https://github.com/devnullvoid/pvetui.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "40c67497fc838e1e558d040001a20b11bb4c1e0933cfbbe119dfb7591a132c28"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "40c67497fc838e1e558d040001a20b11bb4c1e0933cfbbe119dfb7591a132c28"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "40c67497fc838e1e558d040001a20b11bb4c1e0933cfbbe119dfb7591a132c28"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a3910b3d0c5d2b31d16409ecd0da23798b37ebd099a03da56f7ec742c053fdae"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fd97e127e89a351510a1f0e94b56f635588d2d9c4dbd2f6553b07e8eee5166de"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "acf9d9839367fa67bf0de032cf64cafdb02fcb36f543e2c63b255252b2431a82"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "da804e03c8c78d15dba47da93828c4e8a99047b87c74309e5af559033dd024c0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "da804e03c8c78d15dba47da93828c4e8a99047b87c74309e5af559033dd024c0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "da804e03c8c78d15dba47da93828c4e8a99047b87c74309e5af559033dd024c0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ba087ada44ab865264570f119854f6b1c80c690cc443a4703937925730203239"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0167b1c847b73c1208b895862a66ffa4dc87de90060980320cd41c779ee000b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "218f48a091654af692fad688b3f0ea46f3c7bbf0ec23caef6fb882b4102b7704"
   end
 
   depends_on "go" => :build
