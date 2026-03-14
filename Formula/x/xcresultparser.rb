@@ -1,8 +1,8 @@
 class Xcresultparser < Formula
   desc "Parse binary .xcresult bundles from Xcode builds and test runs"
   homepage "https://github.com/a7ex/xcresultparser"
-  url "https://github.com/a7ex/xcresultparser/archive/refs/tags/1.9.4.tar.gz"
-  sha256 "1d316fbed0ed1df76f434b6231a8f3d3ee71904e1ee415380974094891107f2c"
+  url "https://github.com/a7ex/xcresultparser/archive/refs/tags/2.0.0.tar.gz"
+  sha256 "c579a8937dffe24e00d0ac1f5275dd87d8dddd244c7df71db2bf64eaf1bf5ebf"
   license "MIT"
   head "https://github.com/a7ex/xcresultparser.git", branch: "main"
 
@@ -27,7 +27,8 @@ class Xcresultparser < Formula
     assert_match version.to_s, shell_output("#{bin}/xcresultparser -v")
 
     cp_r pkgshare/"test.xcresult", testpath
-    assert_match "Number of failed tests = 1",
-      shell_output("#{bin}/xcresultparser #{testpath}/test.xcresult")
+    output = shell_output("#{bin}/xcresultparser --target-info #{testpath}/test.xcresult")
+    assert_match "XcresultparserLib", output
+    assert_match "XcresultparserTests", output
   end
 end
