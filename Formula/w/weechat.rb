@@ -20,8 +20,8 @@ class Weechat < Formula
   depends_on "cmake" => :build
   depends_on "gettext" => :build # for xgettext
   depends_on "pkgconf" => :build
-  depends_on "aspell"
   depends_on "cjson"
+  depends_on "enchant"
   depends_on "gnutls"
   depends_on "libgcrypt"
   depends_on "lua"
@@ -46,6 +46,7 @@ class Weechat < Formula
   def install
     tcltk = Formula["tcl-tk"]
     args = %W[
+      -DENABLE_ENCHANT=ON
       -DENABLE_GUILE=OFF
       -DENABLE_JAVASCRIPT=OFF
       -DENABLE_MAN=ON
@@ -60,7 +61,10 @@ class Weechat < Formula
     if OS.mac?
       perl = DevelopmentTools.locate("perl")
       perl_archlib = Utils.safe_popen_read(perl.to_s, "-MConfig", "-e", "print $Config{archlib}")
-      args << "-DPERL_INCLUDE_PATH=#{MacOS.sdk_path}/#{perl_archlib}/CORE"
+      args += %W[
+        -DPERL_EXECUTABLE=#{perl}
+        -DPERL_INCLUDE_PATH=#{MacOS.sdk_path}/#{perl_archlib}/CORE
+      ]
     end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
