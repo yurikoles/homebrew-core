@@ -1,8 +1,8 @@
 class Gucharmap < Formula
   desc "GNOME Character Map, based on the Unicode Character Database"
   homepage "https://wiki.gnome.org/Apps/Gucharmap"
-  url "https://gitlab.gnome.org/GNOME/gucharmap/-/archive/17.0.1/gucharmap-17.0.1.tar.bz2"
-  sha256 "97a642e21d06b295066585e91e6724d622e2b2e952a725e417f81cb0fde9c2ac"
+  url "https://gitlab.gnome.org/GNOME/gucharmap/-/archive/17.0.2/gucharmap-17.0.2.tar.bz2"
+  sha256 "d5aa79bee703846af9ba477803e0fd8c8f63d9c7c522a48e64ebf304bfbfe324"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -42,8 +42,8 @@ class Gucharmap < Formula
     sha256 "2066d1909b2ea93916ce092da1c0ee4808ea3ef8407c94b4f14f5b7eb263d28e"
 
     livecheck do
-      url "https://www.unicode.org/Public/"
-      regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+      url "https://gitlab.gnome.org/GNOME/gucharmap/-/raw/#{LATEST_VERSION}/gucharmap/unicode-i18n.h"
+      regex(/UCD\s+version\s+(\d+(?:\.\d+)+)/)
     end
   end
 
@@ -52,8 +52,8 @@ class Gucharmap < Formula
     sha256 "f7a48b2b545acfaa77b2d607ae28747404ce02baefee16396c5d2d7a8ef34b5e"
 
     livecheck do
-      url "https://www.unicode.org/Public/"
-      regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+      url "https://gitlab.gnome.org/GNOME/gucharmap/-/raw/#{LATEST_VERSION}/gucharmap/unicode-i18n.h"
+      regex(/UCD\s+version\s+(\d+(?:\.\d+)+)/)
     end
   end
 
