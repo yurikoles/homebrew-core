@@ -20,6 +20,11 @@ class Hunspell < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "09ba93523c0b255617dd5c9771da092b73a9e9f40f0e7f5c727b7b181f6c8248"
   end
 
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "gettext" => :build
+  depends_on "libtool" => :build
+
   depends_on "readline"
 
   uses_from_macos "ncurses"
@@ -30,14 +35,29 @@ class Hunspell < Formula
 
   conflicts_with "freeling", because: "both install 'analyze' binary"
 
+  skip_clean "share/hunspell"
+
+  # Backport support for searching hunspell dictionaries in pkgshare
+  patch do
+    url "https://github.com/hunspell/hunspell/commit/874abbbe65e228df525023afe176b42df34a7a4f.patch?full_index=1"
+    sha256 "b1b59cc11e720a047302b72ce1870712f29ca22f3023726c576ffd6f713d2841"
+  end
+
   def install
-    system "./configure", *std_configure_args,
-                          "--disable-silent-rules",
+    # Regenerate configure to use patch
+    odie "Remove autoreconf and build dependencies!" if version > "1.7.2"
+    system "autoreconf", "--force", "--install", "--verbose"
+
+    system "./configure", "--disable-silent-rules",
                           "--with-ui",
-                          "--with-readline"
+                          "--with-readline",
+                          *std_configure_args
     system "make"
     system "make", "check"
     system "make", "install"
+
+    # Find dictionaries installed by other formulae
+    share.install_symlink HOMEBREW_PREFIX/"share/hunspell"
   end
 
   def caveats
