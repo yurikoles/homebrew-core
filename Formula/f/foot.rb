@@ -6,8 +6,8 @@ class Foot < Formula
   license "MIT"
 
   bottle do
-    sha256 arm64_linux:  "c67d38d57e65ed9be3c67c076c239801b2e1b34573f41ec78fdac3436b01cc07"
-    sha256 x86_64_linux: "12ea4fea4959c093d6a6253ef7c13997c479b65d2eb3220f4d61d0804e4c2640"
+    sha256 arm64_linux:  "7d9e33f698e33bdc950f88161b1f97302b09e3dd29ebf61a32519c76b75e554e"
+    sha256 x86_64_linux: "1a9d778186d17f6c2e320c4361d0c79adf379698944568d8ffbe271354e9465e"
   end
 
   depends_on "cmake" => :build
