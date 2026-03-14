@@ -1,10 +1,9 @@
 class Libpciaccess < Formula
   desc "Generic PCI access library"
   homepage "https://www.x.org/"
-  url "https://www.x.org/pub/individual/lib/libpciaccess-0.18.1.tar.xz"
-  sha256 "4af43444b38adb5545d0ed1c2ce46d9608cc47b31c2387fc5181656765a6fa76"
+  url "https://www.x.org/pub/individual/lib/libpciaccess-0.19.tar.xz"
+  sha256 "3c55aa86c82e54a4e3109786f0463530d53b36b6d1cfd14616454f985dd2aa43"
   license "MIT"
-  revision 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_linux:  "8dbbb641d72ca3d52c3e888e98ce1b4ebca20f5eca28a171b5ddc00b7a52bbf9"
