@@ -1,8 +1,8 @@
 class Tmuxai < Formula
   desc "AI-powered, non-intrusive terminal assistant"
   homepage "https://tmuxai.dev/"
-  url "https://github.com/BoringDystopiaDevelopment/tmuxai/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "e6de2038f7af82f11b6b3780684a737f5922db175f6298617f94f42a8bbc7ce1"
+  url "https://github.com/BoringDystopiaDevelopment/tmuxai/archive/refs/tags/v2.1.1.tar.gz"
+  sha256 "d2ce3c1bcbf71dd82ccc092bf312f802009d5efdaf98ba6b3d861701be0b0887"
   license "Apache-2.0"
 
   bottle do
@@ -18,7 +18,7 @@ class Tmuxai < Formula
   depends_on "tmux"
 
   def install
-    ldflags = "-s -w -X github.com/BoringDystopiaDevelopment/tmuxai/internal.Version=v#{version}"
+    ldflags = "-s -w -X github.com/alvinunreal/tmuxai/internal.Version=v#{version}"
 
     system "go", "build", *std_go_args(ldflags:)
   end
