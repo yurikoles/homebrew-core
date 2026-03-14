@@ -7,7 +7,8 @@ class Quint < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e23549d53ff802e620b55539f16ce88eda7d81298c5ec39104c1ebcd242a692d"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "e5d55a85d44caa8787c4eae2469dde0a21bee2746ae7e746985b06f4489e586c"
   end
 
   depends_on "node"
