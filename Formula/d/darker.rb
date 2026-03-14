@@ -8,6 +8,15 @@ class Darker < Formula
   license "BSD-3-Clause"
   revision 1
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2c892185978be30469bd0869f46c9682343e2e993238932fbb5e58431b57a527"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "374b3a3442372a649f98cb35507910f6410186f47c77caa87f1111bfd5c30862"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b38b2b2816e15771b7e01b345c2a56fc46f8a35cf5321a069a80734a191658dd"
+    sha256 cellar: :any_skip_relocation, sonoma:        "36d0cbc934db0844321c6e57bcf7cb065f84937368ea481fd0d44607929d4af3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "67dd1c58f8618e3540ba09a5e4bb918c82ffb1a198de2b2357ce451fae802b96"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a90863d314ae33c6952fdaa2a6f81ee6370163afcba24b9d7a56e01cd0bf236"
+  end
+
   depends_on "python@3.14"
 
   pypi_packages package_name: "darker[black]"
