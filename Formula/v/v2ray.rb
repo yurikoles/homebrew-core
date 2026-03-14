@@ -1,8 +1,8 @@
 class V2ray < Formula
   desc "Platform for building proxies to bypass network restrictions"
   homepage "https://v2fly.org/"
-  url "https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.46.0.tar.gz"
-  sha256 "ae4e85dfe0efa299e9cc4097aa2ea077f409237797e6b51093f986ad8fbe603a"
+  url "https://github.com/v2fly/v2ray-core/archive/refs/tags/v5.47.0.tar.gz"
+  sha256 "90ef85f8f2c5478fc1e4f455b40eaf35a1738e06ef519b85a62c0763e2391405"
   license all_of: ["MIT", "CC-BY-SA-4.0"]
   head "https://github.com/v2fly/v2ray-core.git", branch: "master"
 
@@ -33,8 +33,8 @@ class V2ray < Formula
   end
 
   resource "geosite" do
-    url "https://github.com/v2fly/domain-list-community/releases/download/20260309055128/dlc.dat"
-    sha256 "3ec0ebbc2776133afe1e81c565e834e692e25d103104d2950b5e94328f1d8e11"
+    url "https://github.com/v2fly/domain-list-community/releases/download/20260313135254/dlc.dat"
+    sha256 "02c3911237c554850e613d2147ae5c71cdd6260f9a18db7edd5a232305f73399"
   end
 
   def install
