@@ -1,8 +1,8 @@
 class Elvis < Formula
   desc "Erlang Style Reviewer"
   homepage "https://github.com/inaka/elvis"
-  url "https://github.com/inaka/elvis/archive/refs/tags/4.2.3.tar.gz"
-  sha256 "60ba94dff69713daa740f15ae45b79d8bba18c4d8f35dcab537f878affb7ddda"
+  url "https://github.com/inaka/elvis/archive/refs/tags/5.0.1.tar.gz"
+  sha256 "fde07d4452ef8186f35a1001b1ab2303858ebdff0987155f2c7503073a8d9ffe"
   license "Apache-2.0"
   head "https://github.com/inaka/elvis.git", branch: "master"
 
@@ -33,20 +33,23 @@ class Elvis < Formula
   end
 
   test do
-    (testpath/"src/example.erl").write <<~EOS
+    (testpath/"src/example.erl").write <<~ERLANG
       -module(example).
 
       -define(bad_macro_name, "should be upper case").
-    EOS
+    ERLANG
 
-    (testpath/"elvis.config").write <<~EOS
-      [{elvis, [
+    (testpath/"elvis.config").write <<~CONFIG
+      [
         {config, [
-          \#{ dirs => ["src"], filter => "*.erl", ruleset => erl_files }
+          \#{
+            files => ["src/*.erl"],
+            ruleset => erl_files
+          }
         ]},
         {output_format, parsable}
-      ]}].
-    EOS
+      ].
+    CONFIG
 
     expected = <<~EOS.chomp
       At line 3, column 2, the name of macro "bad_macro_name" is not acceptable by regular expression
