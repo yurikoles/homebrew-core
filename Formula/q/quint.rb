@@ -10,9 +10,7 @@ class Quint < Formula
     sha256 cellar: :any_skip_relocation, all: "e23549d53ff802e620b55539f16ce88eda7d81298c5ec39104c1ebcd242a692d"
   end
 
-  # Remove when Node 25 is fixed upstream: https://github.com/nodejs/node/issues/61971
-  # Formula-specific tracking: https://github.com/informalsystems/quint/issues/1926
-  depends_on "node@24"
+  depends_on "node"
 
   def install
     system "npm", "install", *std_npm_args
@@ -49,7 +47,7 @@ class Quint < Formula
     QNT
 
     out = shell_output("#{bin}/quint compile bank.qnt")
-    assert_match "\"stage\":\"compiling\"", out
-    assert_match "\"main\":\"bank\"", out
+    assert_match '"stage":"compiling"', out
+    assert_match '"main":"bank"', out
   end
 end
