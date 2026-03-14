@@ -11,6 +11,15 @@ class Wartremover < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fb0a908967673f88014a197ffe0befe02a4e1d4072e77d0d00284d69a42e5b9b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fb0a908967673f88014a197ffe0befe02a4e1d4072e77d0d00284d69a42e5b9b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fb0a908967673f88014a197ffe0befe02a4e1d4072e77d0d00284d69a42e5b9b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "fb0a908967673f88014a197ffe0befe02a4e1d4072e77d0d00284d69a42e5b9b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b0c1b467990b722c863de9af5db7993e17daa477ee8675aa38be89bc19f1a3a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b0c1b467990b722c863de9af5db7993e17daa477ee8675aa38be89bc19f1a3a6"
+  end
+
   depends_on "sbt" => :build
   depends_on "openjdk"
 
