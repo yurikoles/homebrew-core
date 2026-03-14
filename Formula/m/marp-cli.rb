@@ -14,9 +14,7 @@ class MarpCli < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "821db6be0855e372344cf2ea64e8ca836600aadef798cce2d4d98583f303502e"
   end
 
-  # Remove when Node 25 is fixed upstream: https://github.com/nodejs/node/issues/61971
-  # Formula-specific tracking: https://github.com/marp-team/marp-cli/issues/708
-  depends_on "node@24"
+  depends_on "node"
 
   def install
     system "npm", "install", *std_npm_args
@@ -49,7 +47,7 @@ class MarpCli < Formula
     assert_path_exists testpath/"deck.html"
     content = (testpath/"deck.html").read
     assert_match "theme:uncover", content
-    assert_match "<h1 id=\"hello-homebrew\">Hello, Homebrew!</h1>", content
+    assert_match '<h1 id="hello-homebrew">Hello, Homebrew!</h1>', content
     assert_match "background-color:blue", content
     assert_match "👍", content
   end
