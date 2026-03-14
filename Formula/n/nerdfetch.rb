@@ -7,7 +7,7 @@ class Nerdfetch < Formula
   head "https://github.com/ThatOneCalculator/NerdFetch.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "73058a8015491ad96ee41ab22299b4f8efe6c4c9c321ed93adc1d2f23abb5e0c"
+    sha256 cellar: :any_skip_relocation, all: "6721af303394d6fb63df3017f5c41b821a502de1f21b93128697270b1e3d5a86"
   end
 
   def install
