@@ -18,6 +18,7 @@ class CoboCli < Formula
   end
 
   depends_on "certifi" => :no_linkage
+  depends_on "cffi" => :no_linkage
   depends_on "libsodium"
   depends_on "libyaml"
   depends_on "pydantic" => :no_linkage
@@ -25,12 +26,7 @@ class CoboCli < Formula
 
   uses_from_macos "libffi"
 
-  pypi_packages exclude_packages: ["certifi", "pydantic"]
-
-  resource "cffi" do
-    url "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz"
-    sha256 "44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529"
-  end
+  pypi_packages exclude_packages: %w[certifi cffi pydantic]
 
   resource "charset-normalizer" do
     url "https://files.pythonhosted.org/packages/1d/35/02daf95b9cd686320bb622eb148792655c9412dbb9b67abb5694e5910a24/charset_normalizer-3.4.5.tar.gz"
@@ -85,11 +81,6 @@ class CoboCli < Formula
   resource "packaging" do
     url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
     sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
-  end
-
-  resource "pycparser" do
-    url "https://files.pythonhosted.org/packages/1b/7d/92392ff7815c21062bea51aa7b87d45576f649f16458d78b7cf94b9ab2e6/pycparser-3.0.tar.gz"
-    sha256 "600f49d217304a5902ac3c37e1281c9fe94e4d0489de643a9504c5cdfdfc6b29"
   end
 
   resource "pydantic-settings" do
