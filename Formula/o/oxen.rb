@@ -1,8 +1,8 @@
 class Oxen < Formula
   desc "Data VCS for structured and unstructured machine learning datasets"
   homepage "https://www.oxen.ai/"
-  url "https://github.com/Oxen-AI/Oxen/archive/refs/tags/v0.45.0.tar.gz"
-  sha256 "d05f553b9473f01f71b75672c90cc9f6506b4b828d298d03ae2873104b8ff62b"
+  url "https://github.com/Oxen-AI/Oxen/archive/refs/tags/v0.46.1.tar.gz"
+  sha256 "fb4373867fa7849d7b2789699ef09883c9a00979bad884fce96a9f8e05d872bf"
   license "Apache-2.0"
   head "https://github.com/Oxen-AI/Oxen.git", branch: "main"
 
@@ -38,7 +38,7 @@ class Oxen < Formula
 
   def install
     cd "oxen-rust" do
-      system "cargo", "install", *std_cargo_args(path: "src/cli")
+      system "cargo", "install", *std_cargo_args(path: "crates/cli")
     end
   end
 
