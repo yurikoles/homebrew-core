@@ -9,12 +9,12 @@ class Livereload < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0fed352cb705f7468ec7349e98c01df7979143b3fd5d2eed8ee051e4705f6d36"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fba0ef1c9980a6d84962fe1fcb16e76b8f02978814b5788dea5f575e3a8397ab"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "55b277ba3ca4ecd34efbdf16d668d4a0d74e5209f87cf725c0ab6f08eea98949"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cfddf49c8779a00ad2f1e31c643e0a91b6f779973b0cdb2c1a8d4e92f951723a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b6f08550650309b022ca110f1466bce5e8fccc2d9516bd03c914c94f3e4bcb75"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4d6031b88eed3220e42fc8258f15e0185bedcd6b214bcededc6584c30164bff4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "116f5fca359f8496313310d42ec7b1dd307d209c463256f7a951d1d0b56294d3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "651acd218fee0221cf2905deb8fa7a703c24272ffee9696936459741e93214e6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "60aa96f61ffc238033fe728ffafaa12a8b66a7c1d96c91fa46894416c59ec2d6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ded998ab1338752e030f905b6806f575a6bb2329741969a837320a582f4c6ca5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c9825e222b28fa8f334b6bbfb90374f1ec5d8b50778fb6641618ad605cffb0dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "31fef9050f7a1e6604ba62e5dc09eaaedae232695864d9e8b7d42543d24a01a3"
   end
 
   depends_on "python@3.14"
