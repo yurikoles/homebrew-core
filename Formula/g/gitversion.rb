@@ -1,8 +1,8 @@
 class Gitversion < Formula
   desc "Easy semantic versioning for projects using Git"
   homepage "https://gitversion.net/docs/"
-  url "https://github.com/GitTools/GitVersion/archive/refs/tags/6.6.0.tar.gz"
-  sha256 "51f35533fff4d3dde0167b903a4234b4c492063415eb3e740c8b87c9555a696b"
+  url "https://github.com/GitTools/GitVersion/archive/refs/tags/6.6.1.tar.gz"
+  sha256 "39430860cf935f531199fab1eae449fd1c870d5446cffbe25db94b4b505b2403"
   license "MIT"
 
   no_autobump! because: :bumped_by_upstream
