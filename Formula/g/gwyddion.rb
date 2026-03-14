@@ -1,9 +1,14 @@
 class Gwyddion < Formula
   desc "Scanning Probe Microscopy visualization and analysis tool"
   homepage "https://gwyddion.net/"
-  url "https://downloads.sourceforge.net/project/gwyddion/gwyddion/2.70/gwyddion-2.70.tar.xz"
-  sha256 "942f4e041945a850bc32d05193a115ac8a5118a6f841afa6d4dea510f9913f59"
   license "GPL-2.0-or-later"
+
+  stable do
+    url "https://downloads.sourceforge.net/project/gwyddion/gwyddion/2.70/gwyddion-2.70.tar.xz"
+    sha256 "942f4e041945a850bc32d05193a115ac8a5118a6f841afa6d4dea510f9913f59"
+
+    depends_on "gtk+"
+  end
 
   livecheck do
     url "https://gwyddion.net/download.php"
@@ -20,16 +25,33 @@ class Gwyddion < Formula
     sha256 x86_64_linux:  "2abe37cb9a8afe42ec478fb057e3dfc4ca19ca1de0b5428ace7df39ab8cc5a2b"
   end
 
+  head do
+    url "https://svn.code.sf.net/p/gwyddion/code/branches/GWYDDION-UNSTABLE"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "docbook-xsl" => :build
+    depends_on "gettext" => :build
+    depends_on "gobject-introspection" => :build
+    depends_on "gtk-doc" => :build
+    depends_on "libtool" => :build
+    depends_on "gtk+3"
+
+    uses_from_macos "libxslt" => :build
+
+    on_macos do
+      depends_on "gtk-mac-integration"
+    end
+  end
+
   depends_on "pkgconf" => [:build, :test]
   depends_on "cairo"
   depends_on "fftw"
   depends_on "gdk-pixbuf"
   depends_on "glib"
-  depends_on "gtk+"
-  depends_on "gtkglext"
   depends_on "libpng"
   depends_on "libxml2"
-  depends_on "minizip"
+  depends_on "libzip"
   depends_on "pango"
 
   uses_from_macos "bzip2"
@@ -41,7 +63,6 @@ class Gwyddion < Formula
     depends_on "automake" => :build
     depends_on "gtk-doc" => :build
     depends_on "libtool" => :build
-    # TODO: depends_on "gtk-mac-integration"
     depends_on "at-spi2-core"
     depends_on "gettext"
     depends_on "harfbuzz"
@@ -55,13 +76,26 @@ class Gwyddion < Formula
   patch :DATA
 
   def install
-    system "autoreconf", "--force", "--install", "--verbose" if OS.mac?
-    system "./configure", "--disable-desktop-file-update",
-                          "--disable-pygwy",
-                          "--disable-silent-rules",
-                          "--with-html-dir=#{doc}",
-                          "--without-gtksourceview",
-                          *std_configure_args
+    configure = if build.head?
+      ENV["LIBTOOLIZE"] = "glibtoolize"
+      ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
+      ENV.append "ACLOCAL_FLAGS", "--system-acdir=#{HOMEBREW_PREFIX}/share/aclocal"
+      ENV.append_path "ACLOCAL_PATH", Formula["gettext"].pkgshare/"m4"
+      "./autogen.sh"
+    else
+      system "autoreconf", "--force", "--install", "--verbose" if OS.mac?
+      "./configure"
+    end
+
+    args = %W[
+      --disable-desktop-file-update
+      --disable-pygwy
+      --disable-silent-rules
+      --with-html-dir=#{doc}
+      --without-gtksourceview
+    ]
+
+    system configure, *args, *std_configure_args
     system "make", "install"
   end
 
