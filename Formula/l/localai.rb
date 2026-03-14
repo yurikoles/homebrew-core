@@ -1,8 +1,8 @@
 class Localai < Formula
   desc "OpenAI alternative"
   homepage "https://localai.io"
-  url "https://github.com/mudler/LocalAI/archive/refs/tags/v3.12.1.tar.gz"
-  sha256 "318ea314b31afce1858d30a52f8a8c16212e95e7a395d1b49e967af8ddfd8af7"
+  url "https://github.com/mudler/LocalAI/archive/refs/tags/v4.0.0.tar.gz"
+  sha256 "6673edefdff0e2f1373ae35348b11e95638eb94850326d0dbd9fbeee6b5f16bc"
   license "MIT"
   head "https://github.com/mudler/LocalAI.git", branch: "master"
 
@@ -16,6 +16,7 @@ class Localai < Formula
   end
 
   depends_on "go" => :build
+  depends_on "node" => :build
   depends_on "protobuf" => :build
   depends_on "protoc-gen-go" => :build
   depends_on "protoc-gen-go-grpc" => :build
