@@ -35,6 +35,8 @@ class Scarb < Formula
     ].each do |f|
       system "cargo", "install", *std_cargo_args(path: f)
     end
+
+    generate_completions_from_executable(bin/"scarb", "completions", shell_parameter_format: :clap)
   end
 
   test do
