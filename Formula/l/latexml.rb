@@ -13,12 +13,13 @@ class Latexml < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bf351f2a5fabcf2e7a3c41e3eed74e545d2b7e9794d453e36063a4fda573fba6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "42357059c8adcd3b7fb4fee64e394bb12eb2f41b08b73ac3094a72ae230d3c5a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "976befc421c0dc888763fa18bca525d9d73129be22cbfc51c6d1314c2c3f7c10"
-    sha256 cellar: :any_skip_relocation, sonoma:        "43ec71440eb6168973a749bf05991317208dfd3321489bf0bb96e816391cf3d7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cc89bfc08c008d55534468490880499f205e56454f5e731899be2f2698d70742"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fc94fb47aa14b8abe6542e3d6fc55139259a702f91ffe335ab5da1567dfae542"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "057d23d0e132bd293cc5bd6d7edfbd1948f217f78e10c6a165c80162d0062eac"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "057d23d0e132bd293cc5bd6d7edfbd1948f217f78e10c6a165c80162d0062eac"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "057d23d0e132bd293cc5bd6d7edfbd1948f217f78e10c6a165c80162d0062eac"
+    sha256 cellar: :any_skip_relocation, sonoma:        "346ae87bee5846e6061da231725ff8d36536f4f54573f35ee45fc2a9d550ab00"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3edef95e5de01faea89df58067032b97f35a39167a0088b2e57b5b0f7d20cc3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "66cf9a55bdf9f5a78849620c3a3e02d3c4a903b08d0a7bbd6b57c66768fe1716"
   end
 
   depends_on "pkgconf" => :build
