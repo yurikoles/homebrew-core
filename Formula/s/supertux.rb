@@ -11,13 +11,12 @@ class Supertux < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "f30e013af1d8f3bb1d2b99c0ac72b98fa0c9a46840814b97a0c8890eb999dc5b"
-    sha256 cellar: :any,                 arm64_sequoia: "01ebea1522024f5f5cd9d24c2a1914b68f827634157a137ae562609709d7cd97"
-    sha256 cellar: :any,                 arm64_sonoma:  "34dd087568e006e80bd54e7541b4f8168f9bba8e37858af92305e145b5073937"
-    sha256 cellar: :any,                 sonoma:        "8b514eefd571f39fdca1ca0ea2b3b061b1a13570bb42475c6771855cbd649101"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2c0f614acac9dba3b3b455793df275e63775ea58af94c1fbc8c8e51fd2219fc9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a0be5ada884d712e94104eb8c14cf314cfdfc0ac32d81adcda88ecd2104e029f"
+    sha256 cellar: :any,                 arm64_tahoe:   "90e8bb806543bea14b1ff9a90c12b18d1366a92b172f5d48186f245ef82729be"
+    sha256 cellar: :any,                 arm64_sequoia: "11bb1bad9aafae4445904c65eb9b4e18812bcedc1714699bc1f79f234e0209ef"
+    sha256 cellar: :any,                 arm64_sonoma:  "caa57067cd1dfa66e3d39669e7d89ca92c158b54f9b1fc85b88acd626ba2587d"
+    sha256 cellar: :any,                 sonoma:        "25124eaad411fdc607c923d4a79afe0b5e29e19a3a58b61ef58481b6844d0ffb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dd46b29b85232c359dd1d6cb4964190d01a3be01d51579b58299313a699e8c1e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0c8498d5a9d604d055d87358da12507286ba6954153b1f202f5c552b3e89ecde"
   end
 
   head do
