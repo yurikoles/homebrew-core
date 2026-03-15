@@ -15,12 +15,12 @@ class ArgusClients < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "eda872f8bd03edefe8f6c54e096030be6f21e7515c37dfc507944a56944d82db"
   end
 
-  depends_on "perl"
   depends_on "readline"
   depends_on "rrdtool"
 
   uses_from_macos "bison" => :build
   uses_from_macos "flex" => :build
+  uses_from_macos "perl"
 
   on_linux do
     depends_on "libtirpc"
@@ -30,6 +30,10 @@ class ArgusClients < Formula
   resource "Switch" do
     url "https://cpan.metacpan.org/authors/id/C/CH/CHORNY/Switch-2.17.tar.gz"
     sha256 "31354975140fe6235ac130a109496491ad33dd42f9c62189e23f49f75f936d75"
+
+    livecheck do
+      url :url
+    end
   end
 
   def install
