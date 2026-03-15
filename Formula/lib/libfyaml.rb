@@ -1,8 +1,8 @@
 class Libfyaml < Formula
   desc "Fully feature complete YAML parser and emitter"
   homepage "https://github.com/pantoniou/libfyaml"
-  url "https://github.com/pantoniou/libfyaml/releases/download/v0.9.5/libfyaml-0.9.5.tar.gz"
-  sha256 "9acbc9737808b2833a51be0d4b361987ab6bbbb19cbda7c0c5c83148c8addd8a"
+  url "https://github.com/pantoniou/libfyaml/releases/download/v0.9.6/libfyaml-0.9.6.tar.gz"
+  sha256 "a59cc3331e2eb903ec36933ad52a45888041cac31e44f553a00511131242c483"
   license "MIT"
 
   bottle do
@@ -15,6 +15,12 @@ class Libfyaml < Formula
   end
 
   uses_from_macos "m4" => :build
+
+  # TODO: Remove patch when https://github.com/pantoniou/libfyaml/pull/267 is merged
+  patch do
+    url "https://github.com/pantoniou/libfyaml/commit/45faa819b6c3eb54b2d63b46d4c7690fa1e8e8ff.patch?full_index=1"
+    sha256 "22fbbb360b96cf879397f1ab3dadf8876277f8d77708b6252c0908d37e09a4f9"
+  end
 
   def install
     system "./configure", *std_configure_args, "--disable-silent-rules"
