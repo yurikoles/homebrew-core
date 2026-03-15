@@ -6,12 +6,12 @@ class AgentBrowser < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a57c4c9926a14238f86e2ab8b9d754a45c287dda939d70cb615e0beee24078ad"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a57c4c9926a14238f86e2ab8b9d754a45c287dda939d70cb615e0beee24078ad"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a57c4c9926a14238f86e2ab8b9d754a45c287dda939d70cb615e0beee24078ad"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7641a43d427ce04d062192a9983455263397f1e433a0144847609d5baed74ffe"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4602ff8af35e0cfc47551676aaffcd8190ffc723a4cfe2f313b6b10c239ed2ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb86c127b928321d5a64064f9f2eef4111abf066f1ab502f9401589b106bd82a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2992ad36db54816b0a0d88eb767441e8141a765ed9db9319edc0f3dfe3f8cd04"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2992ad36db54816b0a0d88eb767441e8141a765ed9db9319edc0f3dfe3f8cd04"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2992ad36db54816b0a0d88eb767441e8141a765ed9db9319edc0f3dfe3f8cd04"
+    sha256 cellar: :any_skip_relocation, sonoma:        "03676b40d6dda2daa0ab861afd23f2b28eccf84840fdfa3a9c209f4081e7d4e7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "62d724b885962f7b71e70956f25f961ecbc76dc85cb59961253f8bbcb8d21590"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6a478bae224b5cd2daeafa5993bcaa25984dc3d96f714b3be07131c9857f10cd"
   end
 
   depends_on "node"
