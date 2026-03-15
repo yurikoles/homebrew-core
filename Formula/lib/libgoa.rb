@@ -1,8 +1,8 @@
 class Libgoa < Formula
   desc "Single sign-on framework for GNOME - client library"
   homepage "https://gitlab.gnome.org/GNOME/gnome-online-accounts"
-  url "https://download.gnome.org/sources/gnome-online-accounts/3.56/gnome-online-accounts-3.56.4.tar.xz"
-  sha256 "2a831eadab45e38aae33e8229c3c944dfa1521de9c3140d3602a9277caa161b3"
+  url "https://download.gnome.org/sources/gnome-online-accounts/3.58/gnome-online-accounts-3.58.0.tar.xz"
+  sha256 "344d4dff9149a1adc4539417193e1eccc2f76ef40ac24e104ccf58072be55999"
   license "LGPL-2.0-or-later"
   head "https://gitlab.gnome.org/GNOME/gnome-online-accounts.git", branch: "master"
 
@@ -20,6 +20,7 @@ class Libgoa < Formula
   end
 
   depends_on "dbus" => [:build, :test]
+  depends_on "docbook-xsl" => :build
   depends_on "gobject-introspection" => :build
   depends_on "gtk4" => :build # gtk4-update-icon-cache
   depends_on "meson" => :build
@@ -29,14 +30,24 @@ class Libgoa < Formula
 
   depends_on "glib"
 
+  uses_from_macos "libxslt" => :build # for xsltproc
+  uses_from_macos "libxml2"
+
+  on_linux do
+    depends_on "gettext" => :build
+  end
+
   def install
     ENV["DESTDIR"] = "/"
+    ENV["XML_CATALOG_FILES"] = etc/"xml/catalog"
 
     system "meson", "setup", "build", "-Ddocumentation=false", "-Dgoabackend=false", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
 
-    # Remove directories that are installed in `gnome-online-accounts`
+    # Remove assets that are installed in `gnome-online-accounts`
+    rm share/"applications/org.gnome.goa-daemon.desktop"
+    rm share/"man/man8/goa-daemon.8"
     rm_r([share/"icons", share/"locale"].select(&:exist?))
   end
 
