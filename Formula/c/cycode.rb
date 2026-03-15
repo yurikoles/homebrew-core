@@ -6,6 +6,7 @@ class Cycode < Formula
   url "https://files.pythonhosted.org/packages/a3/9f/6dcc9a3d35d6afc344b88a2ba89c870e48dd3ccaa19ec2d2ff2b79a8b2d6/cycode-3.11.3.tar.gz"
   sha256 "fdee0ce807806cabe8a85489e55f7358e4d9f13322328431e7347ea2b616781e"
   license "MIT"
+  revision 1
   head "https://github.com/cycodehq/cycode-cli.git", branch: "main"
 
   bottle do
@@ -147,8 +148,8 @@ class Cycode < Formula
   end
 
   resource "pyjwt" do
-    url "https://files.pythonhosted.org/packages/5c/5a/b46fa56bf322901eee5b0454a34343cdbdae202cd421775a8ee4e42fd519/pyjwt-2.11.0.tar.gz"
-    sha256 "35f95c1f0fbe5d5ba6e43f00271c275f7a1a4db1dab27bf708073b75318ea623"
+    url "https://files.pythonhosted.org/packages/c2/27/a3b6e5bf6ff856d2509292e95c8f57f0df7017cf5394921fc4e4ef40308a/pyjwt-2.12.1.tar.gz"
+    sha256 "c74a7a2adf861c04d002db713dd85f84beb242228e671280bf709d765b03672b"
   end
 
   resource "python-dateutil" do
