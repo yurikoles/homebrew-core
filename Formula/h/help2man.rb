@@ -17,17 +17,25 @@ class Help2man < Formula
   end
 
   depends_on "gettext"
-  depends_on "perl"
+  uses_from_macos "perl"
 
   resource "Locale::gettext" do
     url "https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/gettext-1.07.tar.gz"
     sha256 "909d47954697e7c04218f972915b787bd1244d75e3bd01620bc167d5bbc49c15"
+
+    livecheck do
+      url :url
+    end
   end
 
   def install
     ENV.prepend_create_path "PERL5LIB", libexec/"lib/perl5"
 
     resource("Locale::gettext").stage do
+      # Workaround for macOS perl as MakeMaker can only search libraries in perl compile-time paths
+      # Issue ref: https://github.com/Perl-Toolchain-Gang/ExtUtils-MakeMaker/issues/277
+      inreplace "Makefile.PL", '$libs = "-lintl"', "$libs = \"-L#{Formula["gettext"].opt_lib} -lintl\"" if OS.mac?
+
       system "perl", "Makefile.PL", "INSTALL_BASE=#{libexec}", "NO_MYMETA=1"
       system "make", "install"
     end
