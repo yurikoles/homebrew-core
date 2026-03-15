@@ -1,25 +1,9 @@
 class Supertux < Formula
   desc "Classic 2D jump'n run sidescroller game"
   homepage "https://www.supertux.org/"
+  url "https://github.com/SuperTux/supertux/releases/download/v0.7.0/SuperTux-v0.7.0-Source.tar.gz"
+  sha256 "32fc5b99b9994ed58e58341d6f21de925764b381256e108591136de53bc31da5"
   license "GPL-3.0-or-later"
-  revision 14
-
-  stable do
-    url "https://github.com/SuperTux/supertux/releases/download/v0.6.3/SuperTux-v0.6.3-Source.tar.gz"
-    sha256 "f7940e6009c40226eb34ebab8ffb0e3a894892d891a07b35d0e5762dd41c79f6"
-
-    depends_on "boost"
-
-    # Backport fix for newer GCC
-    patch do
-      url "https://github.com/SuperTux/supertux/commit/81809dd5e6f611b1d64d952f6d96310bcc9c5fca.patch?full_index=1"
-      sha256 "cd251ef6831c482c32e5aa2c56422cad2898747493797b4018f02131ea19dc88"
-    end
-
-    # Workaround to build with Boost 1.89.0 until new release that drops Boost dependency
-    # https://github.com/SuperTux/supertux/commit/5333cebf629eb20621b284fc96b494257f3314bb
-    patch :DATA
-  end
 
   livecheck do
     url :stable
@@ -45,12 +29,14 @@ class Supertux < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
+  depends_on "fmt"
   depends_on "freetype"
   depends_on "glew"
   depends_on "glm"
   depends_on "libogg"
   depends_on "libpng"
   depends_on "libvorbis"
+  depends_on "openal-soft"
   depends_on "physfs"
   depends_on "sdl2"
   depends_on "sdl2_image"
@@ -59,21 +45,17 @@ class Supertux < Formula
 
   on_linux do
     depends_on "mesa"
-    depends_on "openal-soft"
     depends_on "zlib-ng-compat"
   end
 
   def install
-    # Support cmake 4 build, upstream pr ref, https://github.com/SuperTux/supertux/pull/3290
-    ENV["CMAKE_POLICY_VERSION_MINIMUM"] = "3.5"
-
     args = [
       "-DINSTALL_SUBDIR_BIN=bin",
       "-DINSTALL_SUBDIR_SHARE=share/supertux",
       # Without the following option, Cmake intend to use the library of MONO framework.
       "-DPNG_PNG_INCLUDE_DIR=#{Formula["libpng"].opt_include}",
+      "-DCMAKE_INSTALL_RPATH=#{rpath}",
     ]
-    args << "-DCMAKE_INSTALL_RPATH=#{rpath}" if build.head?
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
@@ -90,18 +72,3 @@ class Supertux < Formula
     assert_equal "supertux2 v#{version}", shell_output("#{bin}/supertux2 --userdir #{testpath} --version").chomp
   end
 end
-
-__END__
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b77029c0a..1842b4943 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -171,7 +171,7 @@ if(ENABLE_BOOST_STATIC_LIBS)
- else(ENABLE_BOOST_STATIC_LIBS)
-   set(Boost_USE_STATIC_LIBS FALSE)
- endif(ENABLE_BOOST_STATIC_LIBS)
--find_package(Boost REQUIRED COMPONENTS filesystem system date_time locale)
-+find_package(Boost REQUIRED COMPONENTS filesystem date_time locale)
- include_directories(SYSTEM ${Boost_INCLUDE_DIR})
- link_directories(${Boost_LIBRARY_DIRS})
- 
