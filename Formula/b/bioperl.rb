@@ -17,12 +17,12 @@ class Bioperl < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "17405e0b0b17e484a222e76279b4b9732b3d1010f0ef33a05552d8ee4cec1272"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "61acb5dde612cf25bbc0f07789dc4275f0b630f09c3b264c36e1d015f8b9eb52"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cc1d1db579a29a458201328a3607ab29ed9ad2702fbece0f6f3152f32614c5b1"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3b8c427638890704e973ffabfaedf465c9f26da45019d3b0a06a0ed35982d804"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "55291459382b946db20a86f1dc47d828263b2cb79470351fe18a3396880db4d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c47f38eb54d21c53685df9838272b3cc06a7ded2ec3c51a3a6a75160a3c0abcf"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "293417ccf86c9a0c7cbba6ea6f3074ca6d54b0ae9b192a85e57c0500eaae8b74"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "17556c5bf70068e4e7bf489bc486076f76304648c7fdda955138f305c751420a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "7095b993a428c044b7722b4c4b52b8bf9ed46804dfd0b4625175eb02d7b7a7c0"
+    sha256 cellar: :any_skip_relocation, sonoma:        "519a9359035523356d8bc712280715dc21337d4c987360f769f1d6255e2278a7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cbfce7db6b21fd7ef9139acb05f5c740aafe7cabde5e582a9b243eda8c66288a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3d791346056696397c1a244a097a2c1d3cfaa1be0a194c6c8e2d18fbc142a8e4"
   end
 
   depends_on "pkgconf" => :build
