@@ -3,8 +3,8 @@ class Sqlite3ToMysql < Formula
 
   desc "Transfer data from SQLite to MySQL"
   homepage "https://github.com/techouse/sqlite3-to-mysql"
-  url "https://files.pythonhosted.org/packages/7f/a6/a472f84f2df6a604e85cc70d6cad2dca3a392bdd97906afc5958f5802919/sqlite3_to_mysql-2.5.5.tar.gz"
-  sha256 "f12165f80d8208ab4c1c668953862d08278fcf65a7aaf39ca99a347eae905127"
+  url "https://files.pythonhosted.org/packages/3d/ed/1758693d7005db7fdb09e5db56f245fdce45904bbeb37dabab6f91689192/sqlite3_to_mysql-2.5.6.tar.gz"
+  sha256 "f5b615954d59481ff6291d813a138b8a52152ffdfe97337c2997def8f84811f2"
   license "MIT"
   head "https://github.com/techouse/sqlite3-to-mysql.git", branch: "master"
 
@@ -28,13 +28,13 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "mysql-connector-python" do
-    url "https://files.pythonhosted.org/packages/39/33/b332b001bc8c5ee09255a0d4b09a254da674450edd6a3e5228b245ca82a0/mysql_connector_python-9.5.0.tar.gz"
-    sha256 "92fb924285a86d8c146ebd63d94f9eaefa548da7813bc46271508fdc6cc1d596"
+    url "https://files.pythonhosted.org/packages/6f/6e/c89babc7de3df01467d159854414659c885152579903a8220c8db02a3835/mysql_connector_python-9.6.0.tar.gz"
+    sha256 "c453bb55347174d87504b534246fb10c589daf5d057515bf615627198a3c7ef1"
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
-    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   resource "python-dateutil" do
@@ -58,18 +58,18 @@ class Sqlite3ToMysql < Formula
   end
 
   resource "sqlglot" do
-    url "https://files.pythonhosted.org/packages/bf/8c/a4d24b6103305467506c1dea9c3ca8dc92773a91bae246c2517c256a0cf9/sqlglot-28.5.0.tar.gz"
-    sha256 "b3213b3e867dcc306074f1c90480aeee89a0e635cf0dfe70eb4a3af7b61972e6"
+    url "https://files.pythonhosted.org/packages/61/12/c3f7533fde302fcd59bebcd4c2e46d5bf0eef21f183c67995bbb010fb578/sqlglot-29.0.1.tar.gz"
+    sha256 "0010b4f77fb996c8d25dd4b16f3654e6da163ff1866ceabc70b24e791c203048"
   end
 
   resource "tabulate" do
-    url "https://files.pythonhosted.org/packages/ec/fe/802052aecb21e3797b8f7902564ab6ea0d60ff8ca23952079064155d1ae1/tabulate-0.9.0.tar.gz"
-    sha256 "0095b12bf5966de529c0feb1fa08671671b3368eec77d7ef7ab114be2c068b3c"
+    url "https://files.pythonhosted.org/packages/46/58/8c37dea7bbf769b20d58e7ace7e5edfe65b849442b00ffcdd56be88697c6/tabulate-0.10.0.tar.gz"
+    sha256 "e2cfde8f79420f6deeffdeda9aaec3b6bc5abce947655d17ac662b126e48a60d"
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz"
-    sha256 "f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2"
+    url "https://files.pythonhosted.org/packages/09/a9/6ba95a270c6f1fbcd8dac228323f2777d886cb206987444e4bce66338dd4/tqdm-4.67.3.tar.gz"
+    sha256 "7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb"
   end
 
   resource "unidecode" do
