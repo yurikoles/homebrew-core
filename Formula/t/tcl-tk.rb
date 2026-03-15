@@ -55,18 +55,13 @@ class TclTk < Formula
     end
   end
 
-  # There is no tcltls release compatible with TCL 9 and upstream Fossil repo
-  # added bot check that breaks download so instead track the Debian version.
-  # TODO: Track official versions once available
-  # Ref: https://core.tcl-lang.org/tcltls/tktview/f5a0fe8ddf
-  # Ref: https://sourceforge.net/p/tcl/mailman/tcl-core/thread/eab3a8bf-b846-45ef-a80c-6bc94d6dfe91@elmicron.de/
   resource "tcltls" do
-    url "https://deb.debian.org/debian/pool/main/t/tcltls/tcltls_1.8.0.orig.tar.gz"
-    sha256 "720a9e0bed3ba41b1ad141443c8651b7d0dc8fc9087f2077accb1ba9a5736489"
+    url "https://core.tcl-lang.org/tcltls/uv/tcltls-2.0-src.tar.gz"
+    sha256 "f1fa46067984c4096976f04f131fdea54c07ba45ce2b03a0697a0ea801e3a23a"
 
     livecheck do
-      url "https://deb.debian.org/debian/pool/main/t/tcltls/"
-      regex(/href=.*?tcltls[._-]v?(\d+(?:\.\d+)+)\.orig\.t/i)
+      url "https://core.tcl-lang.org/tcltls/wiki/Download"
+      regex(/href=.*?tcltls[._-]v?(\d+(?:\.\d+)+)(?:[._-]src)?\.t/i)
     end
   end
 
