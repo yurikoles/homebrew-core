@@ -1,9 +1,9 @@
 class Lemon < Formula
   desc "LALR(1) parser generator like yacc or bison"
   homepage "https://www.hwaci.com/sw/lemon/"
-  url "https://sqlite.org/2026/sqlite-src-3520000.zip"
-  version "3.52.0"
-  sha256 "652a98ca833ed638809a52bec225a7f37799f71a995778f9ccb68ad03bd1fc11"
+  url "https://sqlite.org/2026/sqlite-src-3510300.zip"
+  version "3.51.3"
+  sha256 "f8a67a1f5b5cae7c6d42f0994ca7bf1a4a5858868c82adc9fc1340bed5eb8cd2"
   license "blessing"
 
   livecheck do
