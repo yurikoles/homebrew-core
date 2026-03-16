@@ -1,8 +1,8 @@
 class Wangle < Formula
   desc "Modular, composable client/server abstractions framework"
   homepage "https://github.com/facebook/wangle"
-  url "https://github.com/facebook/wangle/archive/refs/tags/v2026.03.09.00.tar.gz"
-  sha256 "020679cb67bbec2c2a7da678e5020f140415af0719ac7e159f028902e4eb5d8b"
+  url "https://github.com/facebook/wangle/archive/refs/tags/v2026.03.16.00.tar.gz"
+  sha256 "a16f036f58def0eafbe637f1097835327db408c8e48a63da0eb532b206212dd0"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/facebook/wangle.git", branch: "main"
@@ -44,9 +44,9 @@ class Wangle < Formula
 
   test do
     (testpath/"CMakeLists.txt").write <<~CMAKE
-      cmake_minimum_required(VERSION 3.5)
+      cmake_minimum_required(VERSION 4.0)
       project(Echo LANGUAGES CXX)
-      set(CMAKE_CXX_STANDARD 17)
+      set(CMAKE_CXX_STANDARD 20)
 
       list(APPEND CMAKE_MODULE_PATH "#{Formula["fizz"].opt_libexec}/cmake")
       find_package(gflags REQUIRED)
