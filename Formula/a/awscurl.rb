@@ -8,6 +8,15 @@ class Awscurl < Formula
   license "MIT"
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "e3dec59324f49e2e2422c56e3b7e25fb59a6839cda58c975fd646f20d710aa0c"
+    sha256 cellar: :any,                 arm64_sequoia: "cc5422f1a9fac8e5ea3c9581ef85067573e1e5bebcff0acc79883fd45ea0ff10"
+    sha256 cellar: :any,                 arm64_sonoma:  "91f75a78444737ae2d82ae4f443bda63665302983596f781d45bfabb13662667"
+    sha256 cellar: :any,                 sonoma:        "0d22b752ac484461dbe6135677c976d01734f19687161c96242a54516b25c3fb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8814c13449e8c2912e8c6d4555de57f0b7dc68fd465d95ca6cd83177c1e181ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "40b4ed22e494192d2778a3520f8752c7a4fc7542b28648bde03689d1430fe34c"
+  end
+
   depends_on "cmake" => :build # for `awscrt`
   depends_on "aws-c-auth"
   depends_on "aws-c-cal"
