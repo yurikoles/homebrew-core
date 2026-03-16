@@ -2,8 +2,8 @@ class Flyctl < Formula
   desc "Command-line tools for fly.io services"
   homepage "https://fly.io"
   url "https://github.com/superfly/flyctl.git",
-      tag:      "v0.4.21",
-      revision: "bf1a8dbde46df63bf1e686eaec07f8eb15341d4d"
+      tag:      "v0.4.22",
+      revision: "ab42503d3e1d8d49dcfaea89959a6f665abff9a1"
   license "Apache-2.0"
   head "https://github.com/superfly/flyctl.git", branch: "master"
 
@@ -49,7 +49,7 @@ class Flyctl < Formula
     assert_match "flyctl v#{version}", shell_output("#{bin}/flyctl version")
 
     flyctl_status = shell_output("#{bin}/flyctl status 2>&1", 1)
-    assert_match "Error: No access token available. Please login with 'flyctl auth login'", flyctl_status
+    assert_match "Error: no access token available. Please login with 'flyctl auth login'\n", flyctl_status
 
     json = <<~JSON
       {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26"}}
