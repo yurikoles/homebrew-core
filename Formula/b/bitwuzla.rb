@@ -1,8 +1,8 @@
 class Bitwuzla < Formula
   desc "SMT solver for bit-vectors, floating-points, arrays and uninterpreted functions"
   homepage "https://bitwuzla.github.io"
-  url "https://github.com/bitwuzla/bitwuzla/archive/refs/tags/0.8.2.tar.gz"
-  sha256 "637ed0b8d43291004089543b8c7bb744d325231113cab9bfa07f7bb7a154eeb5"
+  url "https://github.com/bitwuzla/bitwuzla/archive/refs/tags/0.9.0.tar.gz"
+  sha256 "e15420eaaef586c0d02d4b46cf3bdf203ba2511147b0decab99a9df9c9f115ca"
   license "MIT"
 
   livecheck do
@@ -23,6 +23,7 @@ class Bitwuzla < Formula
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "gmp"
+  depends_on "mpfr"
 
   def install
     # Not compatible with brew cadical (>= 3)
