@@ -1,8 +1,8 @@
 class Mvfst < Formula
   desc "QUIC transport protocol implementation"
   homepage "https://github.com/facebook/mvfst"
-  url "https://github.com/facebook/mvfst/archive/refs/tags/v2026.03.09.00.tar.gz"
-  sha256 "0fbdf46b742a76f32ca2c2bfcd9c6e9246f8bf9bb6921dbef65e087253af8970"
+  url "https://github.com/facebook/mvfst/archive/refs/tags/v2026.03.16.00.tar.gz"
+  sha256 "4095de8db4108cec9351aed2df202e0353175687ad3235bf254c06e92ccab50f"
   license "MIT"
   compatibility_version 1
   head "https://github.com/facebook/mvfst.git", branch: "main"
@@ -40,9 +40,9 @@ class Mvfst < Formula
     stable.stage testpath
 
     (testpath/"CMakeLists.txt").atomic_write <<~CMAKE
-      cmake_minimum_required(VERSION 3.20)
+      cmake_minimum_required(VERSION 4.0)
       project(echo CXX)
-      set(CMAKE_CXX_STANDARD 17)
+      set(CMAKE_CXX_STANDARD 20)
 
       list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
       find_package(fizz REQUIRED)
