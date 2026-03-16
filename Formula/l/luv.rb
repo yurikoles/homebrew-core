@@ -1,24 +1,10 @@
 class Luv < Formula
   desc "Bare libuv bindings for lua"
   homepage "https://github.com/luvit/luv"
+  url "https://github.com/luvit/luv/archive/refs/tags/1.52.1-0.tar.gz"
+  sha256 "e8b8774b31d24be4fcf2b021b90599ecccc8e476c61efcc59c3c10cab813a885"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/luvit/luv.git", branch: "master"
-
-  stable do
-    url "https://github.com/luvit/luv/archive/refs/tags/1.51.0-2.tar.gz"
-    sha256 "d70cf20b16ab05ceaa3bb448f3e1b3ef63a5949e34184255c52a3e92efcd39b4"
-
-    # Backport support for Lua 5.5
-    patch do
-      url "https://github.com/luvit/luv/commit/297bd3341257a534cb3f7759ba20aac8916ce93d.patch?full_index=1"
-      sha256 "0be1bb91014cbc71e5822a3bb7b7c10c794282f7a88585a6adb123575f973e65"
-    end
-    patch do
-      url "https://github.com/luvit/luv/commit/a60fcf61b29b877277dde8a58945d5667409c8bc.patch?full_index=1"
-      sha256 "c6ad102f3bd2b1792ad9e3d0ea4ca2095464601ebbc692279da1ff71bb82d393"
-    end
-  end
 
   bottle do
     rebuild 1
