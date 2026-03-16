@@ -8,7 +8,7 @@ class DoviConvert < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9570676364b1b5e913d9402d7a715eafab09cfa18cf541424b9a1689d4c55d74"
+    sha256 cellar: :any_skip_relocation, all: "dd0e7cd8a783a1aa0fd13df1c0c0b4728f6ec6f49f24705088bed20baa44dab0"
   end
 
   depends_on "dovi_tool"
