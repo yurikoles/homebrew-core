@@ -1,8 +1,8 @@
 class ClaudeAgentAcp < Formula
   desc "Use Claude Code from any ACP client such as Zed!"
   homepage "https://github.com/zed-industries/claude-agent-acp"
-  url "https://registry.npmjs.org/@zed-industries/claude-agent-acp/-/claude-agent-acp-0.21.0.tgz"
-  sha256 "610cc41d23e339c328ce4ca75dafbb85759d1f3381a9401644ef1288236fe59f"
+  url "https://registry.npmjs.org/@zed-industries/claude-agent-acp/-/claude-agent-acp-0.22.0.tgz"
+  sha256 "61cfe47d72e50586c7965d4963ebeced476f6d924fa84813823493683cef202e"
   license "Apache-2.0"
   head "https://github.com/zed-industries/claude-agent-acp.git", branch: "main"
 
@@ -20,11 +20,17 @@ class ClaudeAgentAcp < Formula
 
   def install
     system "npm", "install", *std_npm_args
-    ripgrep_vendor_dir = libexec/"lib/node_modules/@zed-industries/claude-agent-acp" /
-                         "node_modules/@anthropic-ai/claude-agent-sdk/vendor/ripgrep"
-    rm_r ripgrep_vendor_dir
+    vendor_dir = libexec/"lib/node_modules/@zed-industries/claude-agent-acp" /
+                 "node_modules/@anthropic-ai/claude-agent-sdk/vendor"
+
+    %w[ripgrep audio-capture tree-sitter-bash].each do |dep|
+      dep_dir = vendor_dir/dep
+      rm_r dep_dir
+    end
+
     arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
     ripgrep_platform = "#{arch}-#{OS.kernel_name.downcase}"
+    ripgrep_vendor_dir = vendor_dir/"ripgrep"
     platform_dir = ripgrep_vendor_dir/ripgrep_platform
     platform_dir.mkpath
     ln_s Formula["ripgrep"].opt_bin/"rg", platform_dir/"rg"
