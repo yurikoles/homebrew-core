@@ -6,6 +6,7 @@ class Charmcraft < Formula
   url "https://files.pythonhosted.org/packages/1b/5e/d44a172677234e9f76ac367d09bce6173908af6d532661bdbcde36710eb7/charmcraft-4.2.0.tar.gz"
   sha256 "c498604ceca4981b25eae42d1b7b838e22157d7e950accb91d4ca9c10639ba22"
   license "Apache-2.0"
+  head "https://github.com/canonical/charmcraft.git", branch: "main"
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "026f02b83a1d600b0f97105915e56e9117ea56c3d99f463fe5c2449060faccde"
@@ -22,7 +23,7 @@ class Charmcraft < Formula
   depends_on "libyaml"
   depends_on "pydantic" => :no_linkage
   depends_on "pygit2" => :no_linkage
-  depends_on "python@3.13" # craft-cli not yet compatible with py3.14, https://github.com/canonical/craft-cli/issues/360
+  depends_on "python@3.14"
   depends_on "rpds-py" => :no_linkage
 
   uses_from_macos "libxml2", since: :ventura
