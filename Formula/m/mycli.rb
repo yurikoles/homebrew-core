@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/5e/b6/c5ac7f0c0c0d2e1390ff3ac5b9cd0e828432e80484f63f3c15fc24ecd54b/mycli-1.64.0.tar.gz"
-  sha256 "2f3cb51cd632718896582d2c665c2865c4a25c8ca55ce53939e0b59d84c4e8db"
+  url "https://files.pythonhosted.org/packages/e1/ee/ac6560393f6c865819fe65d556087055eb4309888d12b15a298b79730a08/mycli-1.65.0.tar.gz"
+  sha256 "3458bbef452c2f967c3a275202b23cf5cae83b46cd3a01a44793042bc2b5fbd0"
   license "BSD-3-Clause"
 
   bottle do
@@ -124,8 +124,8 @@ class Mycli < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/d7/91/2a06c4e9597c338cac1e5e5a8dd6f29e1836fc229c4c523529dca387fda8/openai-2.26.0.tar.gz"
-    sha256 "b41f37c140ae0034a6e92b0c509376d907f3a66109935fba2c1b471a7c05a8fb"
+    url "https://files.pythonhosted.org/packages/56/87/eb0abb4ef88ddb95b3c13149384c4c288f584f3be17d6a4f63f8c3e3c226/openai-2.28.0.tar.gz"
+    sha256 "bb7fdff384d2a787fa82e8822d1dd3c02e8cf901d60f1df523b7da03cbb6d48d"
   end
 
   resource "pluggy" do
@@ -139,8 +139,8 @@ class Mycli < Formula
   end
 
   resource "puremagic" do
-    url "https://files.pythonhosted.org/packages/02/3b/0fe979ea1e2768758259f4d412b8cb26d9418e82d5fd10fdf7f00dc70e15/puremagic-2.0.2.tar.gz"
-    sha256 "3ebc28f9380e19dbd8179aeaa08e9692334d71194fc6e5865818770d2bee44c8"
+    url "https://files.pythonhosted.org/packages/98/61/3c849a5bd7e07fc746f26ae56cf8a1b7b4c9bed12d68d9648cc903d14fbd/puremagic-2.1.0.tar.gz"
+    sha256 "06beb598183c625bf9bfed70016930c2d1299e138cd07ed5d6085a7c5deaab19"
   end
 
   resource "pycryptodomex" do
