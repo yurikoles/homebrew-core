@@ -7,8 +7,8 @@ class CniPlugins < Formula
   head "https://github.com/containernetworking/plugins.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "17f6ba7c9c16583da1cfbb60e5c41066f55477e048357fb0be322457973d0469"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b951c1f4e1e4f7b25c09a802d7e5eac98beac36c36109f37b77281a04c98959f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "58fea2ae3068fdf46c1cf84a585366785a46bef334f4b6bc88e5383e2891bbc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "cd14e4979a63ef1371aa5999d680b2a799dee7db41648024c5bc56023bda941a"
   end
 
   keg_only "plugin binaries are not intended to be under the $PATH"
