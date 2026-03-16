@@ -3,8 +3,8 @@ class Fobis < Formula
 
   desc "KISS build tool for automatically building modern Fortran projects"
   homepage "https://github.com/szaghi/FoBiS"
-  url "https://files.pythonhosted.org/packages/83/5d/a241d878ad67d4b58df9bb7e3214be4c0f2dab24ad98a18b92b034c4be57/fobis_py-3.6.11.tar.gz"
-  sha256 "3c0ec4522546783637856a1cb06de0dacdf9f68fe6ab79fb478c50818ac37958"
+  url "https://files.pythonhosted.org/packages/12/51/8ec4d27fb0f94df3b538cebcdad15db373f59a85d76716d3291e57328ef6/fobis_py-3.7.3.tar.gz"
+  sha256 "b5fd5f9b73fa47e12a3f5ad68ef6aa6317c9d1ed70e6032ce8c71066ac7bbaa6"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -53,11 +53,6 @@ class Fobis < Formula
   resource "typer" do
     url "https://files.pythonhosted.org/packages/f5/24/cb09efec5cc954f7f9b930bf8279447d24618bb6758d4f6adf2574c41780/typer-0.24.1.tar.gz"
     sha256 "e39b4732d65fbdcde189ae76cf7cd48aeae72919dea1fdfc16593be016256b45"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
-    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
   end
 
   def install
