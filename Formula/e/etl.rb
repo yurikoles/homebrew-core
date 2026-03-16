@@ -1,8 +1,8 @@
 class Etl < Formula
   desc "Extensible Template Library"
   homepage "https://synfig.org"
-  url "https://github.com/synfig/synfig/releases/download/v1.5.4/ETL-1.5.4.tar.gz"
-  sha256 "d9f9d162fa8a8f61ab1b9983b69180fb0e39573535dfce3b1cbb912a6ffe2d51"
+  url "https://github.com/synfig/synfig/releases/download/v1.5.5/ETL-1.5.5.tar.gz"
+  sha256 "570c898f1c976fac3026866d718ea3f48f8bce1b232ed8cbedc65921c4e3cc25"
   license "GPL-3.0-or-later"
 
   livecheck do
