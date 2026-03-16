@@ -6,14 +6,16 @@ class Charmcraft < Formula
   url "https://files.pythonhosted.org/packages/1b/5e/d44a172677234e9f76ac367d09bce6173908af6d532661bdbcde36710eb7/charmcraft-4.2.0.tar.gz"
   sha256 "c498604ceca4981b25eae42d1b7b838e22157d7e950accb91d4ca9c10639ba22"
   license "Apache-2.0"
+  head "https://github.com/canonical/charmcraft.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "026f02b83a1d600b0f97105915e56e9117ea56c3d99f463fe5c2449060faccde"
-    sha256 cellar: :any,                 arm64_sequoia: "ff77e45d623481965cdca4db995b6a4360aaa22df371954fa5e0661830b7431a"
-    sha256 cellar: :any,                 arm64_sonoma:  "44412fc7a84dc4826e9b951c66d28b19597d1440122d81c686cb4b49118d96c4"
-    sha256 cellar: :any,                 sonoma:        "bde773e653ebbf7729546fd6567c8301695c850c08f3b9e108d2f6e728f68ba2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "05dd84bac4d2c5b83f017532d34aab0285755e47594e198161011b427695445d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "40a665f9bed8c61d1d3bcc734bb095a444d26dcf3ad1b4dea6097ef99c0f0f97"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "494183ff69f13d5df9d56be85aec2d04fd69c9c3e0326d3406e64b7543f185c9"
+    sha256 cellar: :any,                 arm64_sequoia: "ca6d1106a54e5421df78e01f7008c53ffc8e878a9acd81ccb6ce7d1e77948fa2"
+    sha256 cellar: :any,                 arm64_sonoma:  "857af1fd3e0590d9dd7fd1a85ed43caefd8a421ac9b90ebd906c846db7e25c13"
+    sha256 cellar: :any,                 sonoma:        "467df97f7e50d78732c6025b2cb9cd5a460af1b533588a64ef538e3f8d61ac4b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b72a764ab66cd2d9b14f2b7f510a47a8728b436bb1f99e67ff4fc3d6ce0fb5ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b31a8c702af98e16c4e0f468a731a41888f9066249503e99515f144be77b74aa"
   end
 
   depends_on "certifi" => :no_linkage
@@ -22,7 +24,7 @@ class Charmcraft < Formula
   depends_on "libyaml"
   depends_on "pydantic" => :no_linkage
   depends_on "pygit2" => :no_linkage
-  depends_on "python@3.13" # craft-cli not yet compatible with py3.14, https://github.com/canonical/craft-cli/issues/360
+  depends_on "python@3.14"
   depends_on "rpds-py" => :no_linkage
 
   uses_from_macos "libxml2", since: :ventura
