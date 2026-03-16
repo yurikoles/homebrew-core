@@ -1,8 +1,8 @@
 class Cvsync < Formula
   desc "Portable CVS repository synchronization utility"
   homepage "https://www.cvsync.org/"
-  url "https://www.cvsync.org/dist/cvsync-0.24.19.tar.gz"
-  sha256 "75d99fc387612cb47141de4d59cb3ba1d2965157230f10015fbaa3a1c3b27560"
+  url "https://www.cvsync.org/dist/cvsync-0.24.20.tar.bz2"
+  sha256 "38fe7ed5e5b8e93858cf59484e0c3e661a52fb82177f73ce29e6170d3069a2a5"
   license "BSD-3-Clause"
 
   livecheck do
