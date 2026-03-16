@@ -4,6 +4,7 @@ class Perl < Formula
   url "https://www.cpan.org/src/5.0/perl-5.42.1.tar.xz"
   sha256 "098c7f76e7a28443f6403610c7e339777905360c5225798fd142b8d33b05c6b4"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
+  revision 1
   head "https://github.com/perl/perl5.git", branch: "blead"
 
   livecheck do
@@ -38,6 +39,8 @@ class Perl < Formula
       -Dprivlib=#{opt_lib}/perl5/#{version.major_minor}
       -Dsitelib=#{opt_lib}/perl5/site_perl/#{version.major_minor}
       -Dotherlibdirs=#{HOMEBREW_PREFIX}/lib/perl5/site_perl/#{version.major_minor}
+      -Dvendorlib=#{HOMEBREW_PREFIX}/lib/perl5/vendor_perl/#{version.major_minor}
+      -Dvendorprefix=#{HOMEBREW_PREFIX}
       -Dperlpath=#{opt_bin}/perl
       -Dstartperl=#!#{opt_bin}/perl
       -Dman1dir=#{opt_share}/man/man1
@@ -51,21 +54,6 @@ class Perl < Formula
     system "./Configure", *args
     system "make"
     system "make", "install"
-  end
-
-  def post_install
-    if OS.linux?
-      perl_archlib = Utils.safe_popen_read(bin/"perl", "-MConfig", "-e", "print $Config{archlib}")
-      perl_core = Pathname.new(perl_archlib)/"CORE"
-      if File.readlines("#{perl_core}/perl.h").grep(/include <xlocale.h>/).any? &&
-         (OS::Linux::Glibc.system_version >= "2.26" ||
-         (Formula["glibc"].any_version_installed? && Formula["glibc"].version >= "2.26"))
-        # Glibc does not provide the xlocale.h file since version 2.26
-        # Patch the perl.h file to be able to use perl on newer versions.
-        # locale.h includes xlocale.h if the latter one exists
-        inreplace "#{perl_core}/perl.h", "include <xlocale.h>", "include <locale.h>"
-      end
-    end
   end
 
   def caveats
