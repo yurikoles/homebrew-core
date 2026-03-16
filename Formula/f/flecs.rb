@@ -1,8 +1,8 @@
 class Flecs < Formula
   desc "Fast entity component system for C & C++"
   homepage "https://www.flecs.dev"
-  url "https://github.com/SanderMertens/flecs/archive/refs/tags/v4.1.4.tar.gz"
-  sha256 "1ecd4b2b463388d1243c15a900dd62096b28cebba48ad76c204b562304945f0d"
+  url "https://github.com/SanderMertens/flecs/archive/refs/tags/v4.1.5.tar.gz"
+  sha256 "8b94f56dfdda0b3c86110f651a4e0ec1c59030db43bb4810ae296a0630682ab9"
   license "MIT"
   head "https://github.com/SanderMertens/flecs.git", branch: "master"
 
