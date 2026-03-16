@@ -6,12 +6,12 @@ class Wuppiefuzz < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "88b347a48043a9fabed637be5f76981c331d097e060ef44cf3070c84cf7e96d7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2e651f22d76f01e20450caa44a8fe62e62e8f81c4695cbbf8edc8f501df16c11"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a228bf77c3a643b39b536f39a9bd94c87ddc4f4ff86b2e5010182a1aed076a58"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f2d6b8dbde82e1d2a46c2db9eec1d2ee004b27483db72287a0b18c6692246d52"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "71fae217d613f5ef1948b7e531bca70a2229703cee391296e9676984a7ecc1e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6d75da71f6e2e2be6b0fac2cd7657442dfb755626dcbe7c5f329d46943435a07"
+    sha256 cellar: :any,                 arm64_tahoe:   "b7837adad1781bd07b850695d5ce6ddefc967fcec2d2b8ddbd993ac293e81360"
+    sha256 cellar: :any,                 arm64_sequoia: "9ddb9a4fdf7bf8cf8faa96fa507ddd847b71d828da71f5b5667e1feb20a15f8b"
+    sha256 cellar: :any,                 arm64_sonoma:  "823b10b0b893600991d1e90e66fcb8c6116a54ab824114c1057bb5cbec4f2ee8"
+    sha256 cellar: :any,                 sonoma:        "17992da78d913a54fe9eaac7d84a4482e62bcff0b74e7705cad15e3a241aa587"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cd78f339f6b24585f6eeb80cad64ed0d3181d710448bc4c5a2f7af6c5dc76b33"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "42fbe354c80c59a2e5356107cecb887a6ed495db5dc6868032daa75ef4a1dfc5"
   end
 
   depends_on "cmake" => :build
