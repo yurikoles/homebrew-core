@@ -1,8 +1,8 @@
 class CniPlugins < Formula
   desc "Container Network Interface plugins"
   homepage "https://www.cni.dev"
-  url "https://github.com/containernetworking/plugins/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "5091841a4f379ab6159152b546efc4523d55694c8adc4f19cc7c68f9d1db6d75"
+  url "https://github.com/containernetworking/plugins/archive/refs/tags/v1.9.1.tar.gz"
+  sha256 "34bd82d47e981940751619c9cc44c095bb90bfcaf8d71865cbb822c37690a764"
   license "Apache-2.0"
   head "https://github.com/containernetworking/plugins.git", branch: "main"
 
