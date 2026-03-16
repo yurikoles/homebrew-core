@@ -6,7 +6,7 @@ class FzfTab < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2910cb431fc8fdae1ee9f6e3e1a14434b2010e09cedc1deedf4a70c3b0502d07"
+    sha256 cellar: :any_skip_relocation, all: "070b819cece9212109f22a5f0c8dc93aedf3e2e5d58378a8d4f945a81a0f99b0"
   end
 
   uses_from_macos "zsh"
