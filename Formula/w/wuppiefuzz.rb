@@ -1,8 +1,8 @@
 class Wuppiefuzz < Formula
   desc "Coverage-guided REST API fuzzer developed on top of LibAFL"
   homepage "https://github.com/TNO-S3/WuppieFuzz"
-  url "https://github.com/TNO-S3/WuppieFuzz/releases/download/v1.4.1/source.tar.gz"
-  sha256 "3bab829967b0998cab71ecb32c1bd5a7d5592a31ff0294097a172e62da8dcb71"
+  url "https://github.com/TNO-S3/WuppieFuzz/releases/download/v1.4.3/source.tar.gz"
+  sha256 "283450c7b4d9723a0c3e67e537cddb1d4d6d77e3d93e5630dafc8f071ce79cfd"
   license "Apache-2.0"
 
   bottle do
@@ -20,6 +20,7 @@ class Wuppiefuzz < Formula
   depends_on "z3"
 
   uses_from_macos "llvm" => :build # for libclang
+  uses_from_macos "sqlite"
 
   on_linux do
     depends_on "openssl@3"
@@ -27,8 +28,8 @@ class Wuppiefuzz < Formula
 
   def install
     ENV["Z3_LIBRARY_PATH_OVERRIDE"] = Formula["z3"].opt_lib
-    ENV["Z3_SYS_Z3_HEADER"] = Formula["z3"].opt_include
-    system "cargo", "install", *std_cargo_args
+    ENV["Z3_SYS_Z3_HEADER"] = Formula["z3"].opt_include/"z3.h"
+    system "cargo", "install", "--no-default-features", *std_cargo_args(features: ["std"])
   end
 
   test do
