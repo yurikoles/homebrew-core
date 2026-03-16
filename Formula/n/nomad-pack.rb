@@ -1,8 +1,8 @@
 class NomadPack < Formula
   desc "Templating and packaging tool used with HashiCorp Nomad"
   homepage "https://github.com/hashicorp/nomad-pack"
-  url "https://github.com/hashicorp/nomad-pack/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "4865cc1490d3aeb48248133ec667162cb1199e379d592643ef024b9ac0f30640"
+  url "https://github.com/hashicorp/nomad-pack/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "844a072ba9c9098d846899899a5603d3058290a2ecdc7dfd77cb3c9a9de9585e"
   license "MPL-2.0"
 
   bottle do
