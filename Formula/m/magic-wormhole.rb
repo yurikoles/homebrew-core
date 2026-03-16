@@ -6,6 +6,7 @@ class MagicWormhole < Formula
   url "https://files.pythonhosted.org/packages/02/0e/b00b4a0de6d82b25f30a2405e3640c508b18dd3544d0104efe2d6c161719/magic_wormhole-0.23.0.tar.gz"
   sha256 "4cd8f48a5c47f70578be7063f892988177681ab66845f4d6ad2d5eb03ce82acf"
   license "MIT"
+  revision 1
   head "https://github.com/magic-wormhole/magic-wormhole.git", branch: "master"
 
   bottle do
@@ -111,8 +112,8 @@ class MagicWormhole < Formula
   end
 
   resource "pyopenssl" do
-    url "https://files.pythonhosted.org/packages/80/be/97b83a464498a79103036bc74d1038df4a7ef0e402cfaf4d5e113fb14759/pyopenssl-25.3.0.tar.gz"
-    sha256 "c981cb0a3fd84e8602d7afc209522773b94c1c2446a3c710a75b06fe1beae329"
+    url "https://files.pythonhosted.org/packages/8e/11/a62e1d33b373da2b2c2cd9eb508147871c80f12b1cacde3c5d314922afdd/pyopenssl-26.0.0.tar.gz"
+    sha256 "f293934e52936f2e3413b89c6ce36df66a0b34ae1ea3a053b8c5020ff2f513fc"
   end
 
   resource "qrcode" do
@@ -156,8 +157,8 @@ class MagicWormhole < Formula
   end
 
   resource "ujson" do
-    url "https://files.pythonhosted.org/packages/43/d9/3f17e3c5773fb4941c68d9a37a47b1a79c9649d6c56aefbed87cc409d18a/ujson-5.11.0.tar.gz"
-    sha256 "e204ae6f909f099ba6b6b942131cee359ddda2b6e4ea39c12eb8b991fe2010e0"
+    url "https://files.pythonhosted.org/packages/cb/3e/c35530c5ffc25b71c59ae0cd7b8f99df37313daa162ce1e2f7925f7c2877/ujson-5.12.0.tar.gz"
+    sha256 "14b2e1eb528d77bc0f4c5bd1a7ebc05e02b5b41beefb7e8567c9675b8b13bcf4"
   end
 
   resource "zipstream-ng" do
