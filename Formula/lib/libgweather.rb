@@ -1,10 +1,9 @@
 class Libgweather < Formula
   desc "GNOME library for weather, locations and timezones"
   homepage "https://wiki.gnome.org/Projects/LibGWeather"
-  url "https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.4.tar.xz"
-  sha256 "7017677753cdf7d1fdc355e4bfcdb1eba8369793a8df24d241427a939cbf4283"
+  url "https://download.gnome.org/sources/libgweather/4.6/libgweather-4.6.0.tar.xz"
+  sha256 "7f5d0e8c9685ef2ff46c2f3a57cae48d7bf3540b2d83921f889ef28e6a876788"
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later"]
-  revision 1
   version_scheme 1
 
   # Ignore version 40 which is older than 4.0 as discussed in
@@ -45,13 +44,18 @@ class Libgweather < Formula
     depends_on "gettext"
   end
 
-  # Backport fix for "error: call to undeclared library function 'alloca'"
-  patch do
-    url "https://gitlab.gnome.org/GNOME/libgweather/-/commit/12080775978b6d5140c741562894ea5d21601e15.diff"
-    sha256 "64f638c4ffe0936016117f7355a1bbbbf2fec41b1e67bb64eac1bdca760eba23"
+  resource "gweather-locations" do
+    url "https://gitlab.gnome.org/GNOME/gweather-locations/-/archive/2026.2/gweather-locations-2026.2.tar.bz2"
+    sha256 "6fac60bd832782bf65f8e2d47e9a33de79a1c5bae9dacdd0e414bf465b3b52a2"
   end
 
   def install
+    resource("gweather-locations").stage do
+      system "meson", "setup", "build", *std_meson_args
+      system "meson", "compile", "-C", "build", "--verbose"
+      system "meson", "install", "-C", "build"
+    end
+    ENV.prepend_path "PKG_CONFIG_PATH", share/"pkgconfig"
     ENV["DESTDIR"] = "/"
 
     system "meson", "setup", "build", "-Dgtk_doc=false", "-Dtests=false", *std_meson_args
@@ -64,6 +68,8 @@ class Libgweather < Formula
   end
 
   test do
+    assert_path_exists lib/"gweather-locations/Locations.bin"
+
     (testpath/"test.c").write <<~C
       #include <libgweather/gweather.h>
 
