@@ -7,7 +7,7 @@ class Fatal < Formula
   head "https://github.com/facebook/fatal.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "aabe92c2c07c6f9db74c68fb49327563c1c7416e4cf8d0db1ee40aef16d41cdd"
+    sha256 cellar: :any_skip_relocation, all: "d502de10170a63e8a5803dde9c0461204cb1d2ffa46c95ca8c81bf2eea12ab29"
   end
 
   def install
