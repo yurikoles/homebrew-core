@@ -2,7 +2,7 @@ class Subversion < Formula
   desc "Version control system designed to be a better CVS"
   homepage "https://subversion.apache.org/"
   license "Apache-2.0"
-  revision 3
+  revision 4
 
   stable do
     url "https://www.apache.org/dyn/closer.lua?path=subversion/subversion-1.14.5.tar.bz2"
@@ -121,32 +121,13 @@ class Subversion < Formula
 
     system "make", "swig-py"
     system "make", "install-swig-py"
-    (prefix/Language::Python.site_packages(python3)).install_symlink Dir["#{lib}/svn-python/*"]
+    (prefix/Language::Python.site_packages(python3)).install_symlink lib.glob("svn-python/*")
 
-    perl_archlib = Utils.safe_popen_read(perl.to_s, "-MConfig", "-e", "print $Config{archlib}")
-    perl_core = Pathname.new(perl_archlib)/"CORE"
-    perl_extern_h = perl_core/"EXTERN.h"
-
-    if OS.mac? && !perl_extern_h.exist?
-      # No EXTERN.h, maybe it's system perl
-      perl_version = Utils.safe_popen_read(perl.to_s, "--version")[/v(\d+\.\d+)(?:\.\d+)?/, 1]
-      perl_core = MacOS.sdk_path/"System/Library/Perl"/perl_version/"darwin-thread-multi-2level/CORE"
-      perl_extern_h = perl_core/"EXTERN.h"
-    end
-
-    onoe "'#{perl_extern_h}' does not exist" unless perl_extern_h.exist?
-
-    if OS.mac?
-      inreplace "Makefile" do |s|
-        s.change_make_var! "SWIG_PL_INCLUDES",
-          "$(SWIG_INCLUDES) -arch #{Hardware::CPU.arch} -g -pipe -fno-common " \
-          "-DPERL_DARWIN -fno-strict-aliasing -I#{HOMEBREW_PREFIX}/include -I#{perl_core}"
-      end
-    end
     system "make", "swig-pl-lib"
     system "make", "install-swig-pl-lib"
     cd "subversion/bindings/swig/perl/native" do
-      system perl, "Makefile.PL", "PREFIX=#{prefix}", "INSTALLSITEMAN3DIR=#{man3}"
+      args = OS.mac? ? ["INSTALLSITEMAN3DIR=#{man3}"] : ["INSTALLDIRS=vendor"]
+      system perl, "Makefile.PL", "PREFIX=#{prefix}", *args
       ENV.deparallelize { system "make", "install" }
     end
 
@@ -172,17 +153,11 @@ class Subversion < Formula
     system bin/"svnadmin", "verify", "test"
     system bin/"svn", "checkout", "file://#{testpath}/test", "svn-test"
 
-    platform = if OS.mac?
-      "darwin-thread-multi-2level"
-    else
-      arch = Hardware::CPU.arm? ? :aarch64 : Hardware::CPU.arch
-      "#{arch}-#{OS.kernel_name.downcase}-thread-multi"
-    end
-
     perl = DevelopmentTools.locate("perl")
-
-    perl_version = Utils.safe_popen_read(perl.to_s, "--version")[/v(\d+\.\d+(?:\.\d+)?)/, 1]
-    ENV["PERL5LIB"] = "#{lib}/perl5/site_perl/#{perl_version}/#{platform}"
+    if OS.mac?
+      perl_version = Utils.safe_popen_read(perl.to_s, "--version")[/v(\d+\.\d+(?:\.\d+)?)/, 1]
+      ENV["PERL5LIB"] = "#{lib}/perl5/site_perl/#{perl_version}/darwin-thread-multi-2level"
+    end
     system perl, "-e", "use SVN::Client; new SVN::Client()"
 
     system python3, "-c", "import svn.client, svn.repos"
