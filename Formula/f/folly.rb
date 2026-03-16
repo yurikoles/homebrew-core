@@ -1,11 +1,24 @@
 class Folly < Formula
   desc "Collection of reusable C++ library artifacts developed at Facebook"
   homepage "https://github.com/facebook/folly"
-  url "https://github.com/facebook/folly/archive/refs/tags/v2026.03.09.00.tar.gz"
-  sha256 "126b10954c75f5f10f7c061c56ae066d55d3a587455e9650e869d24691dc8226"
   license "Apache-2.0"
   compatibility_version 1
   head "https://github.com/facebook/folly.git", branch: "main"
+
+  stable do
+    url "https://github.com/facebook/folly/archive/refs/tags/v2026.03.16.00.tar.gz"
+    sha256 "071f5d830a70beb8c193989def4523708c79dc7ee1fa9342c84eb47a5be0ea85"
+
+    # Backport fixes for macOS build
+    patch do
+      url "https://github.com/facebook/folly/commit/d397633c2976a73939c69916d9db4fead3fd92c1.patch?full_index=1"
+      sha256 "0b74418465827b5de62b1fc7f58cb364f017b56cf528a3524276f07a3259ed82"
+    end
+    patch do
+      url "https://github.com/facebook/folly/commit/f43e0079fe3992231dfa2562ac9ae17b4f5e14c5.patch?full_index=1"
+      sha256 "1348748fe5fe9af3fd97c8ec2ab67d3a43592f8073459bdca0e29031773e1791"
+    end
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "8b54e5438ec87d18f363a3e3ffdf5bad4c6ad16d0f7e80c5b2e6028fe334f69e"
@@ -87,7 +100,7 @@ class Folly < Formula
         return 0;
       }
     CPP
-    system ENV.cxx, "-std=c++17", "test.cc", "-I#{include}", "-L#{lib}", "-lfolly", "-o", "test"
+    system ENV.cxx, "-std=c++20", "test.cc", "-I#{include}", "-L#{lib}", "-lfolly", "-o", "test"
     system "./test"
   end
 end
