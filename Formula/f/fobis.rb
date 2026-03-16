@@ -3,8 +3,8 @@ class Fobis < Formula
 
   desc "KISS build tool for automatically building modern Fortran projects"
   homepage "https://github.com/szaghi/FoBiS"
-  url "https://files.pythonhosted.org/packages/13/b2/f3851edd883ffba1d96e710e62c509f39d052dacc1c8d8eeecf10cd99961/fobis_py-3.6.4.tar.gz"
-  sha256 "9dfe34e615b2e6b0ad108708229f2f358ff343ee25a3df9200a326d7eb19f9b2"
+  url "https://files.pythonhosted.org/packages/ae/dd/7162ea655232e4d3922c978792c6197e518aa5342c90683a8e629da7b797/fobis_py-3.6.8.tar.gz"
+  sha256 "a324a33208096a9a9ae73def9ced310e7ecbc22f11fec290a1d2410b30754318"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -23,16 +23,6 @@ class Fobis < Formula
   resource "click" do
     url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
     sha256 "12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"
-  end
-
-  resource "configparser" do
-    url "https://files.pythonhosted.org/packages/8b/ac/ea19242153b5e8be412a726a70e82c7b5c1537c83f61b20995b2eda3dcd7/configparser-7.2.0.tar.gz"
-    sha256 "b629cc8ae916e3afbd36d1b3d093f34193d851e11998920fdcfc4552218b7b70"
-  end
-
-  resource "future" do
-    url "https://files.pythonhosted.org/packages/a7/b2/4140c69c6a66432916b26158687e821ba631a4c9273c474343badf84d3ba/future-1.0.0.tar.gz"
-    sha256 "bd2968309307861edae1458a4f8a4f3598c03be43b97521076aebf5d94c07b05"
   end
 
   resource "markdown-it-py" do
