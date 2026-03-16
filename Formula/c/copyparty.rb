@@ -9,12 +9,12 @@ class Copyparty < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "0d249a9aa5b0f2d29b110d21b171543db0c19faf780e32cd9bba1695168280ba"
-    sha256 cellar: :any,                 arm64_sequoia: "464667c8a30aa3e4f56810f04304eff8fd80d0a22e0557b0ddfbe28257d5bf6a"
-    sha256 cellar: :any,                 arm64_sonoma:  "d5dd5f45cb64b3d0cb816b5b8958640dd6798f1bc99a61bdb6799ec87d338aee"
-    sha256 cellar: :any,                 sonoma:        "31ed9f0de52500b178571f378bb67ca053836b1a5cf64851232ddd20232bf37d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fe846f82e47493c1104f482a85ecce809e6fbf1b81b4e71fa281dc78b078c3ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c688efbb7513ae3a657c97bd782869749c743e97ebf7f84c6ede7e79feb8789"
+    sha256 cellar: :any,                 arm64_tahoe:   "37f43d2ec1e05cb27ebc5d390b9f1ed1134c3fbb80092ac8ceb4a2e086a3881c"
+    sha256 cellar: :any,                 arm64_sequoia: "9c8b56a3872dd8f1871c8e9a72528342dd0e7a9f293fd9deec0c5b9505ac5172"
+    sha256 cellar: :any,                 arm64_sonoma:  "6387b8241598e51c6f0d69521c1920fcb6857aefc1ee6a0d8d54421528de4d3e"
+    sha256 cellar: :any,                 sonoma:        "a5842de19b9f78c48abdb6bd7a2106529cd22421033a6a6deff5689d1b7e4c7c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "62f7f8d8491539415ae25e301dd474c3e58ee9ede9560855538d377f56235cc1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "636e9626058de087adee9e54dbed8ed688f77ef46cd4b1882f259e6c0957c24f"
   end
 
   depends_on "cmake" => :build
