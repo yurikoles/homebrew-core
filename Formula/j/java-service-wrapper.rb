@@ -1,8 +1,8 @@
 class JavaServiceWrapper < Formula
   desc "Simplify the deployment, launch and monitoring of Java applications"
   homepage "https://wrapper.tanukisoftware.com/"
-  url "https://downloads.sourceforge.net/project/wrapper/wrapper_src/Wrapper_3.6.4_20251218/wrapper_3.6.4_src.tar.gz"
-  sha256 "fb22e05d89f0a6a12bcd5fd8d4742ab42cbfba5324e367a87810a6a67f595a12"
+  url "https://downloads.sourceforge.net/project/wrapper/wrapper_src/Wrapper_3.6.5_20260317/wrapper_3.6.5_src.tar.gz"
+  sha256 "e1368eff719f7e1e358d5a3cb4749759cbdbdc455515eebf45ade646be1f82c0"
   license any_of: ["GPL-2.0-only", "GPL-3.0-only"]
 
   no_autobump! because: :incompatible_version_format
