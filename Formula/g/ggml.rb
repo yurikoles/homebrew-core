@@ -6,6 +6,15 @@ class Ggml < Formula
   license "MIT"
   head "https://github.com/ggml-org/ggml.git", branch: "master"
 
+  bottle do
+    sha256 arm64_tahoe:   "69c486240fa80e4e1d0db4002ade1a6152425cca50869ef8cac3b995ab8f52de"
+    sha256 arm64_sequoia: "e31d4d11b621d5243b98764e8cfaa41b5e2daf4e469d52fb8bafdfb0f3b85fe3"
+    sha256 arm64_sonoma:  "fafe775086bf0c4f1bf58b7f64eef846df873054595236a7b3fbcafce06a64d2"
+    sha256 sonoma:        "9be7f6b68ecf34fd2c767055df6827684e14fae8ea0e57927ff106ca1cd7c276"
+    sha256 arm64_linux:   "aa6acaf0edbc16e2403fb5586af96ef7f01fa91a2186fa281003f45b92c4c621"
+    sha256 x86_64_linux:  "28a7ea4ae8b17ab73941aac60daa44be9aa8109ac7fc25a734adb84631905e1d"
+  end
+
   depends_on "cmake" => [:build, :test]
 
   on_macos do
