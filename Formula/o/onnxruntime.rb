@@ -1,11 +1,9 @@
 class Onnxruntime < Formula
   desc "Cross-platform, high performance scoring engine for ML models"
   homepage "https://github.com/microsoft/onnxruntime"
-  url "https://github.com/microsoft/onnxruntime.git",
-      tag:      "v1.24.3",
-      revision: "3a728b75062256951b6e19ce718907cf1a1d4cf0"
+  url "https://github.com/microsoft/onnxruntime/archive/refs/tags/v1.24.4.tar.gz"
+  sha256 "0cf4d2ee4392fbb8aedaabc6b2ba11b4a680d1071fa4f75546c2289ca5b404cf"
   license "MIT"
-  revision 1
 
   livecheck do
     url :stable
@@ -53,18 +51,29 @@ class Onnxruntime < Formula
 
     livecheck do
       url "https://raw.githubusercontent.com/microsoft/onnxruntime/refs/tags/v#{LATEST_VERSION}/cmake/deps.txt"
-      regex(%r{^coremltools;.*/(\h+)\.zip}i)
+      regex(%r{^coremltools;.*/v?(\d+(?:\.\d+)+)\.zip}i)
     end
   end
 
   resource "fp16" do
-    url "https://github.com/Maratyszcza/FP16/archive/3d2de1816307bac63c16a297e8c4dc501b4076df.tar.gz"
-    version "3d2de1816307bac63c16a297e8c4dc501b4076df"
-    sha256 "65ace2f05fd9434b0acb7a7d3cc6cd96842ea6236b680594af932b359bedbfc1"
+    url "https://github.com/Maratyszcza/FP16/archive/0a92994d729ff76a58f692d3028ca1b64b145d91.tar.gz"
+    version "0a92994d729ff76a58f692d3028ca1b64b145d91"
+    sha256 "a91f4770ff9c39f4d72e339c379f566b3bbb359fa66122d85fc0bae3dde7abc7"
 
     livecheck do
       url "https://raw.githubusercontent.com/microsoft/onnxruntime/refs/tags/v#{LATEST_VERSION}/cmake/deps.txt"
       regex(%r{^fp16;.*/(\h+)\.zip}i)
+    end
+  end
+
+  resource "psimd" do
+    url "https://github.com/Maratyszcza/psimd/archive/072586a71b55b7f8c584153d223e95687148a900.tar.gz"
+    version "072586a71b55b7f8c584153d223e95687148a900"
+    sha256 "f6c4dab91ae9a03b3019e7cab0572743afd0e1b6e75b97fcca50259c737c924e"
+
+    livecheck do
+      url "https://raw.githubusercontent.com/microsoft/onnxruntime/refs/tags/v#{LATEST_VERSION}/cmake/deps.txt"
+      regex(%r{^psimd;.*/(\h+)\.zip}i)
     end
   end
 
@@ -86,6 +95,7 @@ class Onnxruntime < Formula
     end
 
     args = %W[
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       -DHOMEBREW_ALLOW_FETCHCONTENT=ON
       -DFETCHCONTENT_FULLY_DISCONNECTED=ON
       -DFETCHCONTENT_TRY_FIND_PACKAGE_MODE=ALWAYS
