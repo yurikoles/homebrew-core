@@ -25,6 +25,7 @@ class IcpCli < Formula
   end
 
   def install
+    ENV["ICP_CLI_BUILD_DIST"] = "homebrew-core"
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
     ENV["OPENSSL_NO_VENDOR"] = "1"
 
