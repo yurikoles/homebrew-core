@@ -1,5 +1,6 @@
 [
   "colordiff",
+  "cpanminus",
   "davmail",
   "luarocks",
   "meson",
