@@ -7,14 +7,13 @@ class Zydis < Formula
   head "https://github.com/zyantific/zydis.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "79b00be9f9a41dc1ba17f76b0b7ad4017db140c44076666d210f1bbd50a6fcc1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f925b7d0345acb686c8e62409639b866e7a1123e1209508de02393d5e7af0bee"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a59d5b51d0d85f0a7d4970e9e1f9c88a4e70d1f2edb032954ef841868ac3e4c3"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "ae399b5f60c5d4bda9a1423990471f8dd13f53dafedffcba423fa911d89265d9"
-    sha256 cellar: :any_skip_relocation, sonoma:        "0f1bd1d7a92035759a01a25a9c2e7657e5c7a6a0c64d121ca3821dd0d5bf6c26"
-    sha256 cellar: :any_skip_relocation, ventura:       "9cef22740cd31a9e97983504c80eddfb4201860fccbe6887dd9692577ea7897d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "18b2f83673880c27fbbdf90ca73ca1d5cf2777727f188a0d18dd6b2d9849e1e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "57fa80a8a5f5de2515de7c9e0ec1df9c29bed0035716ca4abd64fadbc1e868ce"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "3d64cf57d8e2eb55ac2457d12c35d227cca34db9c480d0c7fe6e41fd207bacd2"
+    sha256 cellar: :any,                 arm64_sequoia: "be71db07f686d7a09c8db9171418d0f8b0fbe3129f02b32b4d2fb956be023a6d"
+    sha256 cellar: :any,                 arm64_sonoma:  "3f74e22ca0befe90b33a8682e243c4ad4faad8e05ed730b5a320d5fd0426b27e"
+    sha256 cellar: :any,                 sonoma:        "01ec1f6ed5fb736d90dceded3f6ce60e79a97749441b1974d74038fec675ee62"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bfcb9abc2e3e2787212e9f9d3f2325730a33405e07567d2d0b67a4b82657b797"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb5cf27e4ef3db8977e70c0f33f9aa71da5ca8140769cfdd13e65925ca86c4d9"
   end
 
   depends_on "cmake" => :build
