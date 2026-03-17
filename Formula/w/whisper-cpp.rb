@@ -4,6 +4,7 @@ class WhisperCpp < Formula
   url "https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v1.8.3.tar.gz"
   sha256 "870ba21409cdf66697dc4db15ebdb13bc67037d76c7cc63756c81471d8f1731a"
   license "MIT"
+  revision 1
   head "https://github.com/ggml-org/whisper.cpp.git", branch: "master"
 
   livecheck do
@@ -22,35 +23,23 @@ class WhisperCpp < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :test
+  depends_on "ggml"
   depends_on "sdl2"
 
   def install
     args = %W[
       -DBUILD_SHARED_LIBS=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}
-      -DGGML_METAL=#{(OS.mac? && !Hardware::CPU.intel?) ? "ON" : "OFF"}
-      -DGGML_METAL_EMBED_LIBRARY=#{OS.mac? ? "ON" : "OFF"}
-      -DGGML_NATIVE=#{build.bottle? ? "OFF" : "ON"}
       -DWHISPER_SDL2=ON
       -DWHISPER_BUILD_EXAMPLES=ON
       -DWHISPER_BUILD_TESTS=OFF
       -DWHISPER_BUILD_SERVER=OFF
+      -DWHISPER_USE_SYSTEM_GGML=ON
     ]
 
-    # avoid installing into prefix as ggml libraries/headers would conflict with llama.cpp
-    # TODO: change this once ggml has releases, https://github.com/ggml-org/ggml/issues/1333
-    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args(install_prefix: libexec)
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-
-    # Expose executables and pkgconfig files
-    bin.install_symlink libexec.glob("bin/*")
-    (lib/"pkgconfig").install_symlink libexec.glob("lib/pkgconfig/*")
-
-    # Install whisper headers and libraries for opt paths
-    include.install_symlink libexec.glob("include/whisper.h")
-    lib.install_symlink libexec.glob("lib/libwhisper*")
-
     pkgshare.install "models/for-tests-ggml-tiny.bin", "samples/jfk.wav"
   end
 
@@ -82,8 +71,7 @@ class WhisperCpp < Formula
       }
     CPP
 
-    flags = shell_output("pkgconf --cflags --libs whisper").chomp.split
-    flags << "-Wl,-rpath,#{libexec}/lib" if OS.linux?
+    flags = shell_output("pkgconf --cflags --libs ggml whisper").chomp.split
     system ENV.cxx, "-std=c++11", "test.cpp", "-o", "test", *flags
     system "./test"
   end
