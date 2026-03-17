@@ -1,12 +1,12 @@
 class OhdearCli < Formula
   desc "Tool to manage your Oh Dear sites"
   homepage "https://github.com/ohdearapp/ohdear-cli"
-  url "https://github.com/ohdearapp/ohdear-cli/releases/download/v5.1.5/ohdear.phar"
+  url "https://github.com/ohdearapp/ohdear-cli/releases/download/v5.1.6/ohdear.phar"
   sha256 "ab399d4301a23ebfbfb49a430f0c3caf558919c4549f36c027cf8c89095f2f87"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d2afe71a36a5b6550f71d9327b9fc347acf5e1229c28a6cc08a7599694ae4d71"
+    sha256 cellar: :any_skip_relocation, all: "26079928f3d76131e2395e3510ef208ce197581673e78caa64ed3f901c375099"
   end
 
   depends_on "php"
