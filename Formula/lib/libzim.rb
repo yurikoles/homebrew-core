@@ -4,6 +4,7 @@ class Libzim < Formula
   url "https://github.com/openzim/libzim/archive/refs/tags/9.5.0.tar.gz"
   sha256 "0e5290a21a4efe8281dfa2325c59d465ba8ace7ccc1082554763c1a58fdd3b42"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "48cd61ca906e796a5f052b7b785a246990586710911f35a8e8aa972b5ffd3577"
