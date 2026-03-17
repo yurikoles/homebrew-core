@@ -7,6 +7,7 @@ class Mu < Formula
   url "https://github.com/djcb/mu/releases/download/v1.12.15/mu-1.12.15.tar.xz"
   sha256 "49d75622acff9d8a552622eba29d8abe49ae26d7fe80d835898f75f43e673ee3"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://github.com/djcb/mu.git", branch: "master"
 
   # We restrict matching to versions with an even-numbered minor version number,
