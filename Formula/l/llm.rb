@@ -3,8 +3,8 @@ class Llm < Formula
 
   desc "Access large language models from the command-line"
   homepage "https://llm.datasette.io/"
-  url "https://files.pythonhosted.org/packages/cb/91/5071c6e0e7eabbf3a95870a4b2ec0fc585e0d4d57532d305d08d6595f8a3/llm-0.28.tar.gz"
-  sha256 "e3d8bcc0f016fae8aeca1d702491a1891523702983459cb66afec99d74cabfc1"
+  url "https://files.pythonhosted.org/packages/e4/5a/c882d099a623f9d9d10a2718a6179aca87e541d3f60939e751d565efda87/llm-0.29.tar.gz"
+  sha256 "75256631dc8bb990253f46be315ba43f21c0350ac47b09f673024191ebcf93cc"
   license "Apache-2.0"
 
   bottle do
@@ -25,8 +25,8 @@ class Llm < Formula
   pypi_packages exclude_packages: ["certifi", "pydantic"]
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/16/ce/8a777047513153587e5434fd752e89334ac33e379aa3497db860eeb60377/anyio-4.12.0.tar.gz"
-    sha256 "73c693b567b0c55130c104d0b43a9baf3aa6a31fc6110116509f27bf75e21ec0"
+    url "https://files.pythonhosted.org/packages/96/f0/5eb65b2bb0d09ac6776f2eb54adee6abe8228ea05b20a5ad0e4945de8aac/anyio-4.12.1.tar.gz"
+    sha256 "41cfcc3a4c85d3f05c932da7c26d0201ac36f72abd4435ba90d0464a3ffed703"
   end
 
   resource "click" do
@@ -70,13 +70,13 @@ class Llm < Formula
   end
 
   resource "jiter" do
-    url "https://files.pythonhosted.org/packages/45/9d/e0660989c1370e25848bb4c52d061c71837239738ad937e83edca174c273/jiter-0.12.0.tar.gz"
-    sha256 "64dfcd7d5c168b38d3f9f8bba7fc639edb3418abcc74f22fdbe6b8938293f30b"
+    url "https://files.pythonhosted.org/packages/0d/5e/4ec91646aee381d01cdb9974e30882c9cd3b8c5d1079d6b5ff4af522439a/jiter-0.13.0.tar.gz"
+    sha256 "f2839f9c2c7e2dffc1bc5929a510e14ce0a946be9365fd1219e7ef342dae14f4"
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/f4/8c/aa6aea6072f985ace9d6515046b9088ff00c157f9654da0c7b1e129d9506/openai-2.11.0.tar.gz"
-    sha256 "b3da01d92eda31524930b6ec9d7167c535e843918d7ba8a76b1c38f1104f321e"
+    url "https://files.pythonhosted.org/packages/b4/15/203d537e58986b5673e7f232453a2a2f110f22757b15921cbdeea392e520/openai-2.29.0.tar.gz"
+    sha256 "32d09eb2f661b38d3edd7d7e1a2943d1633f572596febe64c0cd370c86d52bec"
   end
 
   resource "pluggy" do
@@ -85,8 +85,8 @@ class Llm < Formula
   end
 
   resource "puremagic" do
-    url "https://files.pythonhosted.org/packages/dd/7f/9998706bc516bdd664ccf929a1da6c6e5ee06e48f723ce45aae7cf3ff36e/puremagic-1.30.tar.gz"
-    sha256 "f9ff7ac157d54e9cf3bff1addfd97233548e75e685282d84ae11e7ffee1614c9"
+    url "https://files.pythonhosted.org/packages/98/61/3c849a5bd7e07fc746f26ae56cf8a1b7b4c9bed12d68d9648cc903d14fbd/puremagic-2.1.0.tar.gz"
+    sha256 "06beb598183c625bf9bfed70016930c2d1299e138cd07ed5d6085a7c5deaab19"
   end
 
   resource "python-dateutil" do
@@ -105,8 +105,8 @@ class Llm < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz"
-    sha256 "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c"
+    url "https://files.pythonhosted.org/packages/4f/db/cfac1baf10650ab4d1c111714410d2fbb77ac5a616db26775db562c8fab2/setuptools-82.0.1.tar.gz"
+    sha256 "7d872682c5d01cfde07da7bccc7b65469d3dca203318515ada1de5eda35efbf9"
   end
 
   resource "six" do
@@ -135,13 +135,13 @@ class Llm < Formula
   end
 
   resource "tabulate" do
-    url "https://files.pythonhosted.org/packages/ec/fe/802052aecb21e3797b8f7902564ab6ea0d60ff8ca23952079064155d1ae1/tabulate-0.9.0.tar.gz"
-    sha256 "0095b12bf5966de529c0feb1fa08671671b3368eec77d7ef7ab114be2c068b3c"
+    url "https://files.pythonhosted.org/packages/46/58/8c37dea7bbf769b20d58e7ace7e5edfe65b849442b00ffcdd56be88697c6/tabulate-0.10.0.tar.gz"
+    sha256 "e2cfde8f79420f6deeffdeda9aaec3b6bc5abce947655d17ac662b126e48a60d"
   end
 
   resource "tqdm" do
-    url "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz"
-    sha256 "f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2"
+    url "https://files.pythonhosted.org/packages/09/a9/6ba95a270c6f1fbcd8dac228323f2777d886cb206987444e4bce66338dd4/tqdm-4.67.3.tar.gz"
+    sha256 "7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb"
   end
 
   def install
