@@ -34,6 +34,8 @@ class OryHydra < Formula
       -X github.com/ory/hydra/v2/driver/config.Commit=#{Utils.git_head}
     ]
     system "go", "build", *std_go_args(ldflags:, tags: "sqlite", output: bin/"hydra")
+
+    generate_completions_from_executable(bin/"hydra", shell_parameter_format: :cobra)
   end
 
   test do
