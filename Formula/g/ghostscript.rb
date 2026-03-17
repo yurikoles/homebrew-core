@@ -1,10 +1,9 @@
 class Ghostscript < Formula
   desc "Interpreter for PostScript and PDF"
   homepage "https://www.ghostscript.com/"
-  url "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10060/ghostpdl-10.06.0.tar.xz"
-  sha256 "3602056368cf649026231e2d65250b5860c023f3d4a0d9c35e6605e28e543ec1"
+  url "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10070/ghostpdl-10.07.0.tar.xz"
+  sha256 "ba1366006a93b91e615f74aad9c0905fae503d3f5b04078ce2ddbe360bd2f9df"
   license "AGPL-3.0-or-later"
-  revision 1
 
   # The GitHub tags omit delimiters (e.g. `gs9533` for version 9.53.3). The
   # `head` repository tags are formatted fine (e.g. `ghostpdl-9.53.3`) but a
@@ -93,13 +92,6 @@ class Ghostscript < Formula
     ENV.deparallelize { system "make", "install-so" }
 
     (pkgshare/"fonts").install resource("fonts")
-
-    # Temporary backwards compatibility symlinks
-    if build.stable?
-      odie "Remove backwards compatibility symlink and caveat!" if version >= "10.07"
-      pkgshare.install_symlink pkgshare => version.to_s
-      doc.install_symlink doc => version.to_s
-    end
   end
 
   def caveats
