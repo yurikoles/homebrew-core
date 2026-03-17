@@ -2,8 +2,8 @@ class Cpanminus < Formula
   desc "Get, unpack, build, and install modules from CPAN"
   homepage "https://github.com/miyagawa/cpanminus"
   # Don't use git tags, their naming is misleading
-  url "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7048.tar.gz"
-  sha256 "59b60907ab9fa4f72ca2004fbe6054911439ae9a906890b4d842a87b25f20f3c"
+  url "https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7049.tar.gz"
+  sha256 "b9ffb88e62a06aa91bd7d5a28ef6bdbb942608aea90e3969aa29b33640035214"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   version_scheme 1
 
