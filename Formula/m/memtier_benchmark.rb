@@ -1,8 +1,8 @@
 class MemtierBenchmark < Formula
   desc "Redis and Memcache traffic generation and benchmarking tool"
   homepage "https://github.com/RedisLabs/memtier_benchmark"
-  url "https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.2.2.tar.gz"
-  sha256 "0a022f6d54b718b69c9d1342dbe7a2590d187575a22f5d13810bc8a0ac3ba215"
+  url "https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.3.0.tar.gz"
+  sha256 "4c3238e28e63b524e6adf31e3c306af911597c5a73da4957b1dd2498d6ae7c74"
   license all_of: [
     "GPL-2.0-only",
     any_of: ["CC0-1.0", "BSD-2-Clause"], # deps/hdr_histogram
