@@ -1,8 +1,8 @@
 class LimaAdditionalGuestagents < Formula
   desc "Additional guest agents for Lima"
   homepage "https://lima-vm.io/"
-  url "https://github.com/lima-vm/lima/archive/refs/tags/v2.0.3.tar.gz"
-  sha256 "55625e642de492827e6cf7740c095822ef8193458211e286f17a3c11ebf50a93"
+  url "https://github.com/lima-vm/lima/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "9358f4629ba01a5998327017be0470fff914b5f1bf902bbd2616ec520074ec78"
   license "Apache-2.0"
   head "https://github.com/lima-vm/lima.git", branch: "master"
 
