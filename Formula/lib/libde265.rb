@@ -1,8 +1,8 @@
 class Libde265 < Formula
   desc "Open h.265 video codec implementation"
   homepage "https://github.com/strukturag/libde265"
-  url "https://github.com/strukturag/libde265/releases/download/v1.0.16/libde265-1.0.16.tar.gz"
-  sha256 "b92beb6b53c346db9a8fae968d686ab706240099cdd5aff87777362d668b0de7"
+  url "https://github.com/strukturag/libde265/releases/download/v1.0.17/libde265-1.0.17.tar.gz"
+  sha256 "e919bbe34370fbcfa36c48ecc6efd5c861f7df43b9a58210e68350d43bab71a5"
   license "LGPL-3.0-or-later"
 
   bottle do
@@ -16,23 +16,16 @@ class Libde265 < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "1bca710186d841ef99740adb1bdd747ae4b0bebb4ffcfa4bc4024199b26c0a5d"
   end
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/libtool/configure-big_sur.diff"
-    sha256 "35acd6aebc19843f1a2b3a63e880baceb0f5278ab1ace661e57a502d9d78c93c"
-  end
+  depends_on "cmake" => :build
 
   def install
-    extra_args = []
-    extra_args << "--build=aarch64-apple-darwin#{OS.kernel_version}" if OS.mac? && Hardware::CPU.arm?
-
-    system "./configure", "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--disable-sherlock265",
-                          "--disable-dec265",
-                          "--prefix=#{prefix}",
-                          *extra_args
-    system "make", "install"
+    system "cmake", "-S", ".", "-B", "build",
+                    "-DCMAKE_INSTALL_RPATH=#{rpath};#{rpath(source: libexec/"bin")}",
+                    "-DENABLE_DECODER=OFF",
+                    "-DENABLE_TOOLS=ON",
+                    *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
 
     # Install the test-related executables in libexec.
     (libexec/"bin").install bin/"block-rate-estim",
@@ -40,6 +33,41 @@ class Libde265 < Formula
   end
 
   test do
-    system libexec/"bin/tests"
+    (testpath/"test.c").write <<~'C'
+      #include <libde265/de265.h>
+      #include <stdio.h>
+      #include <string.h>
+
+      int main(void) {
+        de265_decoder_context *ctx;
+        const char *version = de265_get_version();
+
+        if (strcmp(version, LIBDE265_VERSION) != 0) {
+          return 1;
+        }
+
+        if (de265_init() != DE265_OK) {
+          return 2;
+        }
+
+        ctx = de265_new_decoder();
+        if (ctx == NULL) {
+          de265_free();
+          return 3;
+        }
+
+        printf("%s\n", version);
+
+        de265_free_decoder(ctx);
+        de265_free();
+
+        return 0;
+      }
+    C
+
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lde265", "-o", "test"
+    assert_equal version.to_s, shell_output("./test").strip
+
+    assert_match "list ... passed", shell_output("#{libexec}/bin/tests")
   end
 end
