@@ -1,8 +1,8 @@
 class Packcc < Formula
   desc "Parser generator for C"
   homepage "https://github.com/arithy/packcc"
-  url "https://github.com/arithy/packcc/archive/refs/tags/v3.0.0.tar.gz"
-  sha256 "6dc28154e04a5af6f1cfa89eb654cd4c691bbced75d2b2a5feb09c6e7d458ede"
+  url "https://github.com/arithy/packcc/archive/refs/tags/v3.1.0.tar.gz"
+  sha256 "26fa5c99ea36c4632fcb231479d01f354d016d2d8d97d74c44c08bc1924ae0a6"
   license "MIT"
   head "https://github.com/arithy/packcc.git", branch: "main"
 
@@ -24,12 +24,7 @@ class Packcc < Formula
   depends_on "cmake" => :build
 
   def install
-    import_path = if build.head?
-      pkgshare
-    else
-      prefix
-    end
-    inreplace "src/packcc.c", "/usr/share/packcc/", "#{import_path}/"
+    inreplace "src/packcc.c", "/usr/share/packcc/import", "#{opt_pkgshare}/import"
 
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
@@ -39,9 +34,9 @@ class Packcc < Formula
   end
 
   test do
-    cp pkgshare/"examples/ast-calc.peg", testpath
-    system bin/"packcc", "ast-calc.peg"
-    system ENV.cc, "ast-calc.c", "-o", "ast-calc"
+    cp pkgshare/"examples/ast-calc.v3.peg", testpath
+    system bin/"packcc", "ast-calc.v3.peg"
+    system ENV.cc, "ast-calc.v3.c", "-o", "ast-calc"
     output = pipe_output(testpath/"ast-calc", "1+2*3\n")
     assert_equal <<~EOS, output
       binary: "+"
