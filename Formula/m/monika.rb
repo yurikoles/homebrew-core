@@ -15,7 +15,9 @@ class Monika < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "98229abf3b9246bf3478688d12018043004695ce89588260ddea3346b4f207fd"
   end
 
-  depends_on "node@24"
+  depends_on "rust" => :build
+  depends_on "node@24" # node 25+ fails with Clang < 1700. LLVM Clang fails on node-addon-api@^4.2.0
+  depends_on "sqlite"
 
   on_linux do
     # Workaround for old `node-gyp` that needs distutils.
@@ -23,21 +25,36 @@ class Monika < Formula
     depends_on "python-setuptools" => :build
   end
 
+  resource "@napi-rs/nice" do
+    url "https://github.com/Brooooooklyn/nice/archive/refs/tags/v1.1.1.tar.gz"
+    sha256 "d6570f64e2efa79d5bbeb6765b2ad42f41e732e900e5668f5336d5033f250137"
+
+    livecheck do
+      url "https://registry.npmjs.org/@napi-rs/nice/latest"
+      strategy :json do |json|
+        json["version"]
+      end
+    end
+  end
+
   def install
-    system "npm", "install", *std_npm_args
+    system "npm", "install", "--sqlite=#{Formula["sqlite"].opt_prefix}", *std_npm_args(ignore_scripts: false)
     bin.install_symlink libexec.glob("bin/*")
 
-    # Remove incompatible pre-built binaries
-    os = OS.kernel_name.downcase
-    arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
+    # Replace pre-built binaries
     node_modules = libexec/"lib/node_modules/@hyperjumptech/monika/node_modules"
-    node_modules.glob("nice-napi/prebuilds/*")
-                .each { |dir| rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}" }
+    resource("@napi-rs/nice").stage do
+      system "npm", "install", *std_npm_args(prefix: false)
+      system "npm", "run", "build"
+      (node_modules/"@napi-rs/nice").install Dir["nice.*.node"]
+      rm_r(node_modules.glob("@napi-rs/nice-*"))
+    end
 
-    cpu_profiler = "@sentry/profiling-node/lib/sentry_cpu_profiler"
-    node_modules.glob("#{cpu_profiler}-*")
-                .each { |file| rm(file) unless file.basename.to_s.start_with?("sentry_cpu_profiler-#{os}-#{arch}") }
-    node_modules.glob("#{cpu_profiler}-*-musl-*").map(&:unlink) if OS.linux?
+    cd node_modules/"@sentry/profiling-node" do
+      rm(Dir["lib/sentry_cpu_profiler*.node"])
+      system "npm", "run", "build:bindings:configure"
+      system "npm", "run", "build:bindings"
+    end
   end
 
   test do
