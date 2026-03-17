@@ -6,12 +6,12 @@ class Ghex < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 arm64_tahoe:   "28c03f317c94d3fa0f0d8fb4e83e71b9558b9d301d287b76a1590a5bbf499414"
-    sha256 arm64_sequoia: "29e87247e5434888b03fa07223c4df2414e2dd1dc4a10586d661eaf1c1befa2c"
-    sha256 arm64_sonoma:  "4e7a1d4c2c85ca5eefe98d25793f0bbd0e0a056926119051a36963773a428252"
-    sha256 sonoma:        "a54e12aff1120f1edf01d8179eec69aabd44b6fdacc3f8a4f94f30d66e9cf614"
-    sha256 arm64_linux:   "76d601774e3d566e5a44e9148e9cbe7621898508ea5b7cc5a45c879ea9509989"
-    sha256 x86_64_linux:  "90dea601a000ddab7edaf0fdc98abe0dffee0760e0995f5520f3bb7904d32c46"
+    sha256 arm64_tahoe:   "9025288811efc627d6a16727f16310bd7c724b3f6f4e630434ae3f68444e4ab2"
+    sha256 arm64_sequoia: "f486dac7dced3452a419339eb788f0c90cc95962cecc9571ce7122e10fbe013a"
+    sha256 arm64_sonoma:  "3dbb99e3e6a2ed28e6a87f91d845e20dc0ec7a0a4c47e7e0f176a1ce1d9e3e32"
+    sha256 sonoma:        "328b3b8e8b031e335ce2b45e8fc75aa9d3aa9c96c7b407e74017baa27942737a"
+    sha256 arm64_linux:   "f00a8f47a02134fb42104eee47a1ea5314bc9fb67407a88bc0e767e580f1de8c"
+    sha256 x86_64_linux:  "058054534869bc6abf483a87d82bb6b1fd210d5e4d2432307f11040d3a57e1bb"
   end
 
   depends_on "desktop-file-utils" => :build
