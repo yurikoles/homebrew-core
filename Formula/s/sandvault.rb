@@ -1,8 +1,8 @@
 class Sandvault < Formula
   desc "Run AI agents isolated in a sandboxed macOS user account"
   homepage "https://github.com/webcoyote/sandvault"
-  url "https://github.com/webcoyote/sandvault/archive/refs/tags/v1.1.27.tar.gz"
-  sha256 "6ab4732630fdd736242fc163a2798fe05dccc5a45e47efaa58bdc5e13e3a99ac"
+  url "https://github.com/webcoyote/sandvault/archive/refs/tags/v1.1.28.tar.gz"
+  sha256 "3e26015807e2db8e0066205a08fb6858c0313d90899f9d0a1e0077af86f2a9d4"
   license "Apache-2.0"
 
   bottle do
