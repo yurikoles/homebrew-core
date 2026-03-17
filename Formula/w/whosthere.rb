@@ -1,8 +1,8 @@
 class Whosthere < Formula
   desc "LAN discovery tool with a modern TUI written in Go"
   homepage "https://github.com/ramonvermeulen/whosthere"
-  url "https://github.com/ramonvermeulen/whosthere/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "fafb6a69cf64593818c2944055b7a55572715f6136aa0b97767843b68c3556f7"
+  url "https://github.com/ramonvermeulen/whosthere/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "73a7dfc2b31c74ae1fc0cf56d68fbcd6dfe47be53adfdafa5b00be17da7477d2"
   license "Apache-2.0"
   head "https://github.com/ramonvermeulen/whosthere.git", branch: "main"
 
