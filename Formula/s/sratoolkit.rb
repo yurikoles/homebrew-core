@@ -4,22 +4,16 @@ class Sratoolkit < Formula
   license all_of: [:public_domain, "GPL-3.0-or-later", "MIT"]
 
   stable do
-    url "https://github.com/ncbi/sra-tools/archive/refs/tags/3.3.0.tar.gz"
-    sha256 "3bfa26c5499a94d3b2a98eb65113bbb902f51dadef767c7c7247fc0175885a9a"
+    url "https://github.com/ncbi/sra-tools/archive/refs/tags/3.4.0.tar.gz"
+    sha256 "6f60984a212d35b239244c23b9686e2a1131c76b92f0c41e8b56d3f5b6fff2d0"
 
     resource "ncbi-vdb" do
-      url "https://github.com/ncbi/ncbi-vdb/archive/refs/tags/3.3.0.tar.gz"
-      sha256 "36b3467affd53bea794e3eeb5598619d820bc726dc68751a189181ac7973047d"
+      url "https://github.com/ncbi/ncbi-vdb/archive/refs/tags/3.4.0.tar.gz"
+      sha256 "ff7f49994620d2453043ccfcff1eb7d376bb6ab5402eaae127497a94b4a210b2"
 
       livecheck do
         formula :parent
       end
-    end
-
-    # Backport fix for newer libxml2
-    patch do
-      url "https://github.com/ncbi/sra-tools/commit/e2b9d82b59c2636a1224995dbb7164c0b1391c77.patch?full_index=1"
-      sha256 "47a5b9811ef4745ebce51a7c7ed794855131702d93e8272385d326ef9cd0c52f"
     end
   end
 
