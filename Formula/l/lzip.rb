@@ -1,8 +1,8 @@
 class Lzip < Formula
   desc "LZMA-based compression program similar to gzip or bzip2"
   homepage "https://www.nongnu.org/lzip/"
-  url "https://download-mirror.savannah.gnu.org/releases/lzip/lzip-1.25.tar.gz"
-  sha256 "09418a6d8fb83f5113f5bd856e09703df5d37bae0308c668d0f346e3d3f0a56f"
+  url "https://download-mirror.savannah.gnu.org/releases/lzip/lzip-1.26.tar.gz"
+  sha256 "641cf30961525cbe3b340cc883436c8854e9f5032f459f444de4782b621e6572"
   license "GPL-2.0-or-later"
 
   livecheck do
