@@ -4,6 +4,7 @@ class Nmail < Formula
   url "https://github.com/d99kris/nmail/archive/refs/tags/v5.10.3.tar.gz"
   sha256 "a667b410a865eef7fb08ca9afceebf6a9a85c61850df875005255a88960c5158"
   license "MIT"
+  revision 1
   head "https://github.com/d99kris/nmail.git", branch: "master"
 
   bottle do
@@ -32,6 +33,9 @@ class Nmail < Formula
   end
 
   def install
+    # Workaround for xapian >= 2.0.0 which needs C++17
+    inreplace "CMakeLists.txt", "set(CMAKE_CXX_STANDARD 14)", "set(CMAKE_CXX_STANDARD 17)"
+
     args = []
     # Workaround to use uuid from Xcode CLT
     args << "-DLIBUUID_LIBRARIES=System" if OS.mac?
