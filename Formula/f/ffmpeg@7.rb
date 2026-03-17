@@ -86,13 +86,6 @@ class FfmpegAT7 < Formula
     depends_on "nasm" => :build
   end
 
-  # Fix for QtWebEngine, do not remove
-  # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=270209
-  patch do
-    url "https://gitlab.archlinux.org/archlinux/packaging/packages/ffmpeg/-/raw/5670ccd86d3b816f49ebc18cab878125eca2f81f/add-av_stream_get_first_dts-for-chromium.patch"
-    sha256 "57e26caced5a1382cb639235f9555fc50e45e7bf8333f7c9ae3d49b3241d3f77"
-  end
-
   # Backport support for svt-av1 4.x
   patch do
     url "https://git.ffmpeg.org/gitweb/ffmpeg.git/patch/a5d4c398b411a00ac09d8fe3b66117222323844c"
