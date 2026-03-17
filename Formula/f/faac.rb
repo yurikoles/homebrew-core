@@ -1,9 +1,10 @@
 class Faac < Formula
   desc "ISO AAC audio encoder"
   homepage "https://sourceforge.net/projects/faac/"
-  url "https://github.com/knik0/faac/archive/refs/tags/faac-1.31.1.tar.gz"
-  sha256 "3191bf1b131f1213221ed86f65c2dfabf22d41f6b3771e7e65b6d29478433527"
+  url "https://github.com/knik0/faac/archive/refs/tags/faac-1.40.tar.gz"
+  sha256 "3ef4cc1fa6a750003602adc6eea892ca3815becd9145797b787f0999e8b2b89c"
   license "LGPL-2.1-or-later"
+  head "https://github.com/knik0/faac.git", branch: "master"
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "00c66e8dd158e8c2f606e0707c261f8b5438951e9b38e316949900152058ddca"
@@ -16,14 +17,13 @@ class Faac < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "30940df984b4f44d7c7b4bb0f55de660262490bf0e0288edfe5f5e673c26cea9"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
 
   def install
-    system "./bootstrap"
-    system "./configure", *std_configure_args
-    system "make", "install"
+    system "meson", "setup", "build", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   test do
