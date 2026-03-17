@@ -6,12 +6,13 @@ class IcpCli < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b758599c874159eadd8f4a4d6d265f6ee0ee7d3225db4ff4d919b907fa51bc38"
-    sha256 cellar: :any,                 arm64_sequoia: "14b570772217d85f4f89a3275d6f7e26632f235d693e8018adbf625b1702bed1"
-    sha256 cellar: :any,                 arm64_sonoma:  "1f64e4e225529925128fdc7887e1da79f29c47204b255ba8039e68b107e92b93"
-    sha256 cellar: :any,                 sonoma:        "77df5e697d326092b358842209a1e0e96520588b2c2be5b5520ff44e3af52898"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "48d63029edb04c0a82371f496c30ed770e2aec29b479449f05d94ad626ae42c1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "033b82653683fa2f534868e38413d8d1ea3d001cb1e72ad6281267d23db72076"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "2be5acb73fd19e41e6a6b32d9a21eab56f1f7b06f5e51819ac62f094efabe0f1"
+    sha256 cellar: :any,                 arm64_sequoia: "b6f4adee98cb8f31ffc7c1f36200ef766e08fd5dfe017718c960bd9165937e65"
+    sha256 cellar: :any,                 arm64_sonoma:  "89564774dfe7331d7151556336a88228add0f3c338b2a3047c286b7eb1666c19"
+    sha256 cellar: :any,                 sonoma:        "a3e2a6ca0e20e76f88e2b712d5ae258ffe83050ab46e7bf19f9cdbb13436cd23"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "86d2eae198577d82d13e891983736ff85344c0241af5fc4a629f742c01f26dc6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f4c8aa8185b9721c0b61e568cc04936280becef8e4ca2c1a5efb313b3727f744"
   end
 
   depends_on "rust" => :build
