@@ -5,7 +5,6 @@ class Kubescape < Formula
   url "https://github.com/kubescape/kubescape.git",
       tag:      "v4.0.3",
       revision: "b79488dca6a1e1dc3a1c602de082b0de47a32d91"
-
   license "Apache-2.0"
   head "https://github.com/kubescape/kubescape.git", branch: "master"
 
