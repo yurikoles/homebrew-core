@@ -1,8 +1,8 @@
 class Fastly < Formula
   desc "Build, deploy and configure Fastly services"
   homepage "https://www.fastly.com/documentation/reference/cli/"
-  url "https://github.com/fastly/cli/archive/refs/tags/v14.0.4.tar.gz"
-  sha256 "25a203f89075031da408e94b1d272909ea2cd5ed72b78936fc7b7ba0f06d8976"
+  url "https://github.com/fastly/cli/archive/refs/tags/v14.1.0.tar.gz"
+  sha256 "bc6f82a71812d1a6964c321a94a9882f4cdd8b21156e781ed78946be794651e6"
   license "Apache-2.0"
   head "https://github.com/fastly/cli.git", branch: "main"
 
@@ -41,7 +41,8 @@ class Fastly < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/fastly version")
 
+    ENV["FASTLY_API_TOKEN"] = "invalid-token"
     output = shell_output("#{bin}/fastly service list 2>&1", 1)
-    assert_match "Fastly API returned 401 Unauthorized", output
+    assert_match "401 Unauthorized", output
   end
 end
