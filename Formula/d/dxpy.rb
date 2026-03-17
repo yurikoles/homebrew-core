@@ -8,12 +8,12 @@ class Dxpy < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "e048e0fc6d403c878898d34a8cb5e95ee5251284f0e25d2c8badaef6503c1496"
-    sha256 cellar: :any,                 arm64_sequoia: "938c6efa6c45acaaf6a6b644569d9be5f1f96e9b297dd15dce9f8c6783d09bdf"
-    sha256 cellar: :any,                 arm64_sonoma:  "4bf8c101cbc5ffd0194c31df7dbed236384e219e1edf6e6342f6bbc70d959371"
-    sha256 cellar: :any,                 sonoma:        "64bbc96660e37d9bb9b48cd1f49275e7ccd49a0b5826cbfe010ec33bf9979345"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b2d605ca35855a6fe04f95064a146748eafd2f8b59cd5c52dc2a44d9c0d5509a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f519b3b26b423249f255f39d5506b2ee66c0408719cbc2f3108857e7f589102c"
+    sha256 cellar: :any,                 arm64_tahoe:   "1640d0867a527808d280798555c60a3d8297ede683546d28188fa255afb63578"
+    sha256 cellar: :any,                 arm64_sequoia: "1fe173e860db8a89ab7aa25fbd5598fed66ed58b30f9cd71f735ee20d9b28748"
+    sha256 cellar: :any,                 arm64_sonoma:  "1ddafb94579e266e1f40b4d99db97ab7751a72a794ab87acb3057d2572260465"
+    sha256 cellar: :any,                 sonoma:        "a87c567bfa83383836cf3968479e798cb83cd163fd76dac36b34a1281ed38f2e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fdb17d2c6831325680d17ff0aaac9259a9bd88b9bb70702fbba0912dda1086f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "593f165fd0a02c93c69f87598495ea04b0f2361ca5a1580457a7438f745e65f9"
   end
 
   depends_on "cmake" => :build # for awscrt
