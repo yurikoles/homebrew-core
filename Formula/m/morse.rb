@@ -1,8 +1,8 @@
 class Morse < Formula
   desc "QSO generator and morse code trainer"
   homepage "http://www.catb.org/~esr/morse/"
-  url "https://gitlab.com/esr/morse-classic/-/archive/2.6/morse-classic-2.6.tar.bz2"
-  sha256 "ec44144d52a1eef36fbe0ca400c54556a7ba8f8c3de38d80512d19703b89f615"
+  url "https://gitlab.com/esr/morse-classic/-/archive/2.7/morse-classic-2.7.tar.bz2"
+  sha256 "b0414150fc61387775656a1e7fbbc423eb24f45da063ea531d3810ed951202d7"
   license "BSD-2-Clause"
 
   # The homepage links to the `stable` tarball but it can take longer than the
