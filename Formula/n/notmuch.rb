@@ -6,6 +6,7 @@ class Notmuch < Formula
   url "https://notmuchmail.org/releases/notmuch-0.40.tar.xz"
   sha256 "4b4314bbf1c2029fdf793637e6c7bb15c1b1730d22be9aa04803c98c5bbc446f"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://git.notmuchmail.org/git/notmuch", using: :git, branch: "master"
 
   livecheck do
@@ -50,7 +51,7 @@ class Notmuch < Formula
   end
 
   def install
-    ENV.cxx11 if OS.linux?
+    ENV.append "CXXFLAGS", "-std=c++17"
     site_packages = Language::Python.site_packages(python3)
     with_env(PYTHONPATH: Formula["sphinx-doc"].opt_libexec/site_packages) do
       system "./configure", "--prefix=#{prefix}",
