@@ -3,8 +3,8 @@ class Specify < Formula
 
   desc "Toolkit to help you get started with Spec-Driven Development"
   homepage "https://github.com/github/spec-kit"
-  url "https://github.com/github/spec-kit/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "af14ac067426821fa147fbe021df8a6f4e758130e4b82bc808332c3d193d8f8d"
+  url "https://github.com/github/spec-kit/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "e2f8c2d1879d97a5c041cb0e6649712c56c1058fe4c0e6f334ffcb47356b577c"
   license "MIT"
 
   bottle do
@@ -55,6 +55,11 @@ class Specify < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
     sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
+  end
+
+  resource "json5" do
+    url "https://files.pythonhosted.org/packages/77/e8/a3f261a66e4663f22700bc8a17c08cb83e91fbf086726e7a228398968981/json5-0.13.0.tar.gz"
+    sha256 "b1edf8d487721c0bf64d83c28e91280781f6e21f4a797d3261c7c828d4c165bf"
   end
 
   resource "markdown-it-py" do
