@@ -17,7 +17,7 @@ class Qtwebengine < Formula
     "Apache-2.0",        # Abseil; Crashpad; FlatBuffers; libgav1; ...
     "blessing",          # sqlite
     "BSD-2-Clause",      # aom; cpuinfo; dav1d; libavif
-    "LGPL-2.1-or-later", # ffmpeg (macOS); speech-dispatcher (Linux)
+    "LGPL-2.1-or-later", # ffmpeg; speech-dispatcher (Linux)
     "libpng-2.0",        # libpng (macOS)
     "MIT",               # Brotli; CityHash; FP16; fast_float; ...
     "MPL-1.1",           # hunspell
@@ -79,7 +79,6 @@ class Qtwebengine < Formula
     depends_on "alsa-lib"
     depends_on "dbus"
     depends_on "expat"
-    depends_on "ffmpeg"
     depends_on "fontconfig"
     depends_on "freetype"
     depends_on "harfbuzz"
@@ -191,10 +190,12 @@ class Qtwebengine < Formula
       #
       # The vendored copy of `re2` is used to avoid rebuilds with `re2` version
       # bumps and due to frequent API incompatibilities in Qt's copy of Chromium.
+      #
+      # The vendored copy of `ffmpeg` is used due to Chromium's usage of private API
+      # Issue ref: https://issues.chromium.org/issues/40218408
       %w[
         -DFEATURE_webengine_ozone_x11=ON
         -DFEATURE_webengine_system_alsa=ON
-        -DFEATURE_webengine_system_ffmpeg=ON
         -DFEATURE_webengine_system_freetype=ON
         -DFEATURE_webengine_system_gbm=ON
         -DFEATURE_webengine_system_harfbuzz=ON
