@@ -10,7 +10,7 @@ class Cpanminus < Formula
   head "https://github.com/miyagawa/cpanminus.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "e7998b2229d3419be9c48b534addac8852e302f9ab56bdfe13203fc5dcd8c274"
+    sha256 cellar: :any_skip_relocation, all: "4c821fab27813b58a25595c949578c8b3316e51ab386edbb693e0f77a56ff049"
   end
 
   depends_on "perl" => :build
