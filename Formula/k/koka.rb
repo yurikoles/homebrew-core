@@ -2,8 +2,8 @@ class Koka < Formula
   desc "Compiler for the Koka language"
   homepage "http://koka-lang.org"
   url "https://github.com/koka-lang/koka.git",
-      tag:      "v3.2.2",
-      revision: "39b4bec7327dbbcb2f83ce7aca5fe061931a4dc3"
+      tag:      "v3.2.3",
+      revision: "49dede749f9eb77c717077c00fe52039b3183b5f"
   license "Apache-2.0"
   head "https://github.com/koka-lang/koka.git", branch: "dev"
 
@@ -30,6 +30,10 @@ class Koka < Formula
   depends_on "gmp"
 
   uses_from_macos "libffi"
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   def install
     inreplace "src/Compile/Options.hs" do |s|
