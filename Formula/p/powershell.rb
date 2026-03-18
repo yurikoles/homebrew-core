@@ -2,8 +2,8 @@ class Powershell < Formula
   desc "Command-line shell and scripting language"
   homepage "https://github.com/PowerShell/PowerShell"
   url "https://github.com/PowerShell/PowerShell.git",
-      tag:      "v7.5.5",
-      revision: "695a2d90541eb8bd49e4578b25d13db978a85b8f"
+      tag:      "v7.6.0",
+      revision: "767990ba06f8579d69f99eec46057541374aa892"
   license "MIT"
 
   livecheck do
@@ -19,14 +19,14 @@ class Powershell < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e8b0783a79e6a3751434f5a1b7a65da7c69f579261cb5b110172482f5badc23"
   end
 
-  depends_on "dotnet@9"
+  depends_on "dotnet"
 
   on_linux do
     depends_on "openssl@3"
   end
 
   def install
-    dotnet = Formula["dotnet@9"]
+    dotnet = Formula["dotnet"]
     ENV["DOTNET_CLI_TELEMETRY_OPTOUT"] = "1"
     ENV["DOTNET_CLI_HOME"] = buildpath
     ENV["NUGET_PACKAGES"] = buildpath/".nuget/packages"
