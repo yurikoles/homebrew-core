@@ -5,6 +5,10 @@ class OhMyAgent < Formula
   sha256 "b0ddf8aac3da51dee59c5df3f5cb7d88bfd8c8c8c0242b3d1b6e1518c1362985"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "8fb46a220bdac1ce8b0ef27ee36c7bc7d06a2ca6500f2b9d7a682d96e5482bd8"
+  end
+
   depends_on "node"
 
   def install
