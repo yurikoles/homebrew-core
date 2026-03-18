@@ -3,8 +3,8 @@ class CoboCli < Formula
 
   desc "Build, test, and manage your integration with Cobo Wallet-as-a-Service"
   homepage "https://github.com/CoboGlobal/cobo-cli"
-  url "https://files.pythonhosted.org/packages/72/ec/6d82b7501a8963b97612c7b98f97fab6ff2c623a2141c0e20f12ce19d8e3/cobo_cli-0.1.4.tar.gz"
-  sha256 "6efe88cc06f9309159df569e4a7fa00dc54181dc70957913e2573a2a0aef4556"
+  url "https://files.pythonhosted.org/packages/6c/0c/4b9bf0c12776b1334a077dc4f54e6ca15bd384e774c882e4c97d7fe4cfd7/cobo_cli-0.1.5.tar.gz"
+  sha256 "7a9e627720618a722589e844393ad233956c91ded9c64f5a44be4e71cf967f6d"
   license "MIT"
   head "https://github.com/CoboGlobal/cobo-cli.git", branch: "master"
 
@@ -30,8 +30,8 @@ class CoboCli < Formula
   pypi_packages exclude_packages: %w[certifi cffi pydantic]
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/1d/35/02daf95b9cd686320bb622eb148792655c9412dbb9b67abb5694e5910a24/charset_normalizer-3.4.5.tar.gz"
-    sha256 "95adae7b6c42a6c5b5b559b1a99149f090a57128155daeea91732c8d970d8644"
+    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
+    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
   end
 
   resource "click" do
