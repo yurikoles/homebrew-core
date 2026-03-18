@@ -1,8 +1,8 @@
 class Crane < Formula
   desc "Tool for interacting with remote images and registries"
   homepage "https://github.com/google/go-containerregistry"
-  url "https://github.com/google/go-containerregistry/archive/refs/tags/v0.21.2.tar.gz"
-  sha256 "4b8a2c8a4c1955da7802806ea9437952e2c7f17f3dcf0362ac6c2f75388c389a"
+  url "https://github.com/google/go-containerregistry/archive/refs/tags/v0.21.3.tar.gz"
+  sha256 "5043dc8f756fb1a4931c755a0615122ad355d155d07e385cccd736d046e77d0c"
   license "Apache-2.0"
   head "https://github.com/google/go-containerregistry.git", branch: "main"
 
