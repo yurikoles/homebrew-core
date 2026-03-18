@@ -1,8 +1,8 @@
 class Lowdown < Formula
   desc "Simple markdown translator"
   homepage "https://kristaps.bsd.lv/lowdown"
-  url "https://kristaps.bsd.lv/lowdown/snapshots/lowdown-3.0.0.tar.gz"
-  sha256 "c47b7208c941fadc6e646939bc548cc9a11f8bb22975b568c0249f78e78813b8"
+  url "https://kristaps.bsd.lv/lowdown/snapshots/lowdown-3.0.1.tar.gz"
+  sha256 "ac9ea2b51c8bd59350c7bf8db5e2067e9d961b1f48d362cd8a56b022850e965c"
   license "ISC"
   compatibility_version 1
   head "https://github.com/kristapsdz/lowdown.git", branch: "master"
