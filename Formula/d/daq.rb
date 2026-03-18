@@ -1,9 +1,9 @@
 class Daq < Formula
   desc "Network intrusion prevention and detection system"
   homepage "https://www.snort.org/"
-  url "https://github.com/snort3/libdaq/archive/refs/tags/v3.0.25.tar.gz"
-  mirror "https://fossies.org/linux/misc/libdaq-3.0.25.tar.gz"
-  sha256 "651e38a2737d179a224bcb01d8a06300667708ee614d19a8b411fdd212cc035d"
+  url "https://github.com/snort3/libdaq/archive/refs/tags/v3.0.27.tar.gz"
+  mirror "https://fossies.org/linux/misc/libdaq-3.0.27.tar.gz"
+  sha256 "03fac3da27e3230a7d26262f2480cd65a409cee3596c6758a7f9eacb7f24601c"
   license "GPL-2.0-only"
   head "https://github.com/snort3/libdaq.git", branch: "master"
 
