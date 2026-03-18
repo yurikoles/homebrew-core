@@ -6,7 +6,7 @@ class MagicWormhole < Formula
   url "https://files.pythonhosted.org/packages/02/0e/b00b4a0de6d82b25f30a2405e3640c508b18dd3544d0104efe2d6c161719/magic_wormhole-0.23.0.tar.gz"
   sha256 "4cd8f48a5c47f70578be7063f892988177681ab66845f4d6ad2d5eb03ce82acf"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/magic-wormhole/magic-wormhole.git", branch: "master"
 
   bottle do
@@ -97,8 +97,8 @@ class MagicWormhole < Formula
   end
 
   resource "pyasn1" do
-    url "https://files.pythonhosted.org/packages/fe/b6/6e630dff89739fcd427e3f72b3d905ce0acb85a45d4ec3e2678718a3487f/pyasn1-0.6.2.tar.gz"
-    sha256 "9b59a2b25ba7e4f8197db7686c09fb33e658b98339fadb826e9512629017833b"
+    url "https://files.pythonhosted.org/packages/5c/5f/6583902b6f79b399c9c40674ac384fd9cd77805f9e6205075f828ef11fb2/pyasn1-0.6.3.tar.gz"
+    sha256 "697a8ecd6d98891189184ca1fa05d1bb00e2f84b5977c481452050549c8a72cf"
   end
 
   resource "pyasn1-modules" do
