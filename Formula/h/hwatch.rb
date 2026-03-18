@@ -20,9 +20,7 @@ class Hwatch < Formula
   def install
     system "cargo", "install", *std_cargo_args
     man1.install "man/hwatch.1"
-    bash_completion.install "completion/bash/hwatch-completion.bash" => "hwatch"
-    zsh_completion.install "completion/zsh/_hwatch"
-    fish_completion.install "completion/fish/hwatch.fish"
+    generate_completions_from_executable(bin/"hwatch", "--completion")
   end
 
   test do
