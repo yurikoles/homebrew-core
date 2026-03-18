@@ -1,8 +1,8 @@
 class JenkinsLts < Formula
   desc "Extendable open source continuous integration server"
   homepage "https://www.jenkins.io/"
-  url "https://get.jenkins.io/war-stable/2.541.2/jenkins.war"
-  sha256 "dc9d532e54d4b7eb7d78edcd3217876dd4811b49d1a3b66e599ad4a642d57193"
+  url "https://get.jenkins.io/war-stable/2.541.3/jenkins.war"
+  sha256 "0000addfa8722963164137a4e0e60abc227d9d60710c4deb19481f9a751cf512"
   license "MIT"
 
   livecheck do
