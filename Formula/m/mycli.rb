@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/e1/ee/ac6560393f6c865819fe65d556087055eb4309888d12b15a298b79730a08/mycli-1.65.0.tar.gz"
-  sha256 "3458bbef452c2f967c3a275202b23cf5cae83b46cd3a01a44793042bc2b5fbd0"
+  url "https://files.pythonhosted.org/packages/3e/02/f9411c55fcb0bae6af5f02404a324e59663359378ce48c283dff2abda7d7/mycli-1.65.1.tar.gz"
+  sha256 "82f5eee16e13a12a770ad07190c5bb9f0766f22edc77023ee0eca7612fbd6440"
   license "BSD-3-Clause"
 
   bottle do
@@ -26,7 +26,8 @@ class Mycli < Formula
   uses_from_macos "libffi"
 
   pypi_packages package_name:     "mycli[llm]",
-                exclude_packages: %w[certifi cryptography pydantic]
+                exclude_packages: %w[certifi cryptography pydantic],
+                extra_packages:   %w[jeepney secretstorage]
 
   resource "anyio" do
     url "https://files.pythonhosted.org/packages/96/f0/5eb65b2bb0d09ac6776f2eb54adee6abe8228ea05b20a5ad0e4945de8aac/anyio-4.12.1.tar.gz"
@@ -124,8 +125,8 @@ class Mycli < Formula
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/56/87/eb0abb4ef88ddb95b3c13149384c4c288f584f3be17d6a4f63f8c3e3c226/openai-2.28.0.tar.gz"
-    sha256 "bb7fdff384d2a787fa82e8822d1dd3c02e8cf901d60f1df523b7da03cbb6d48d"
+    url "https://files.pythonhosted.org/packages/b4/15/203d537e58986b5673e7f232453a2a2f110f22757b15921cbdeea392e520/openai-2.29.0.tar.gz"
+    sha256 "32d09eb2f661b38d3edd7d7e1a2943d1633f572596febe64c0cd370c86d52bec"
   end
 
   resource "pluggy" do
@@ -254,7 +255,8 @@ class Mycli < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    without = %w[jeepney secretstorage] unless OS.linux?
+    virtualenv_install_with_resources(without:)
 
     generate_completions_from_executable(bin/"mycli", shell_parameter_format: :click)
   end
