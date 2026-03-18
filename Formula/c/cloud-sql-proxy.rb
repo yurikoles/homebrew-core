@@ -7,12 +7,12 @@ class CloudSqlProxy < Formula
   head "https://github.com/GoogleCloudPlatform/cloud-sql-proxy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2c8b63a8a61963c1541ed5fc5b0a303e1efa5a8ac5fa4c2f6ff9a03c2c536733"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2c8b63a8a61963c1541ed5fc5b0a303e1efa5a8ac5fa4c2f6ff9a03c2c536733"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2c8b63a8a61963c1541ed5fc5b0a303e1efa5a8ac5fa4c2f6ff9a03c2c536733"
-    sha256 cellar: :any_skip_relocation, sonoma:        "68ba83dd7f95ae76f0f6752d6e109b95cab0b8098c5ee090c0246fe0f670ecb2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ddf2095a959096686b626c7e86e9df861205ea258e0d3f73a99c6e92946f61ac"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ab17f20903f1aeae843b0161deaae45d54cb45284b8d9e59fbca3e443735f83a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "22267840659ea92799e75ddc3b33365b3949f1f155e0fcf8a7ef8c688413a289"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fa31498b042ac235aa33d95721a78ab94940164e188a95b67e55ab167e379f2f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5f84e9c6cbf9217b4663c38d2c15be324d3148c4d014f427b5fb112ef502dd95"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3756ec89094b922ba8ac2461068071fce521149eccf4dca9a2e5ac0c6644269f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "508e6a3ab21116cc9997aa9c7ae9a6f5f724d78639f51bbd7a7dc983cc1843c7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "57267a439e6ba81b514a56761436baf0512fc066de2fd7f6288b7bca3d6d45e8"
   end
 
   depends_on "go" => :build
