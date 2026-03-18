@@ -10,7 +10,7 @@ class Gsan < Formula
   head "https://github.com/franccesco/getaltname.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "5c3a869b6d930fe146d85e7d9394d53aefacc41e13aff1756c25f5b216932d2c"
+    sha256 cellar: :any_skip_relocation, all: "4f4a523defbda42e8a69246d1d43ab8599b69604e09233b95ff5fcbe52d86e2c"
   end
 
   depends_on "cryptography" => :no_linkage
