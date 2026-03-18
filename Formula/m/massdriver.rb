@@ -1,8 +1,8 @@
 class Massdriver < Formula
   desc "Manage applications and infrastructure on Massdriver Cloud"
   homepage "https://www.massdriver.cloud/"
-  url "https://github.com/massdriver-cloud/mass/archive/refs/tags/1.14.2.tar.gz"
-  sha256 "1dce3c3af75e6836e1475f11b23f340b3c6deba4a9691e95b2332f803ee5c1e4"
+  url "https://github.com/massdriver-cloud/mass/archive/refs/tags/1.14.3.tar.gz"
+  sha256 "d07f81e0dc0aa08dae22db9de2ac38b76b13afad84e1beefaa91694178f4c153"
   license "Apache-2.0"
   head "https://github.com/massdriver-cloud/mass.git", branch: "main"
 
@@ -28,8 +28,8 @@ class Massdriver < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/massdriver-cloud/mass/pkg/version.version=#{version}
-      -X github.com/massdriver-cloud/mass/pkg/version.gitSHA=#{tap.user}
+      -X github.com/massdriver-cloud/mass/internal/version.version=#{version}
+      -X github.com/massdriver-cloud/mass/internal/version.gitSHA=#{tap.user}
     ]
     system "go", "build", *std_go_args(ldflags:, output: bin/"mass")
 
