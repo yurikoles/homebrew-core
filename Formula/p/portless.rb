@@ -5,6 +5,10 @@ class Portless < Formula
   sha256 "02947195b1f01d55fbbce9c549362c2498c168702d256007dba3e8791d814d17"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "b0fddfe664f58da2dbc0245a4e54e7d566ea431021d879a81985fdac9f026f03"
+  end
+
   depends_on "node"
 
   def install
