@@ -6,14 +6,12 @@ class Libde265 < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "7fc887ff6de361861449c51bd6cfb8a31ab93a91f1d4d76e41332f9e44627afe"
-    sha256 cellar: :any,                 arm64_sequoia: "3ae5875dd16e86734c59ff156ef6f03f0cc11f972193e678241ec10ac19dbf48"
-    sha256 cellar: :any,                 arm64_sonoma:  "08a3fd4a3e01254f12590f292157a8b92a898d9b4d31659f3e25d34a164f9cd6"
-    sha256 cellar: :any,                 arm64_ventura: "2837e8b323ed255ca2efb59a266cd5da0740524758df2d51e5a9834da79720f8"
-    sha256 cellar: :any,                 sonoma:        "dcee9a83c604fc27ccb54af849fe45124e12dbf66b63c53d5775aa0c1a49e34c"
-    sha256 cellar: :any,                 ventura:       "55f13980c54642c830932f317c1e458882daca74f80118cff8e4bb204ac1b0cb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "650fa2c9ab2bd73545addb81842bb9442d929b25af4eef7fedfb34a4f93cfe87"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1bca710186d841ef99740adb1bdd747ae4b0bebb4ffcfa4bc4024199b26c0a5d"
+    sha256 cellar: :any,                 arm64_tahoe:   "fe4d87cc31754c2b6978c0e8a0b09d45d5cea0549e9073632bd30f8b7c19fa56"
+    sha256 cellar: :any,                 arm64_sequoia: "fe3f4a0cc875c061b603f24d39eba50858d505be689853e4eb395336f2bd3911"
+    sha256 cellar: :any,                 arm64_sonoma:  "1751024b00250804a845f96c4f8baac2eeb5e307097539fabb0817a8441d5ee1"
+    sha256 cellar: :any,                 sonoma:        "6e056da3e680edf885dc1366b4b6dc58499e5de3293efb36cf7de83e0c473d53"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f9b66c01335c2fcc2800d8fff52353203ef78b1e5b565d8af5f343636358a8dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d9897f5e9c4124737a45b051e970d7da80901f6f6b61ce0d78345405f4bec20d"
   end
 
   depends_on "cmake" => :build
