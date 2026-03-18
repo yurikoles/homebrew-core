@@ -9,12 +9,12 @@ class OciCli < Formula
   head "https://github.com/oracle/oci-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9334f7b8682528c6788c0e7323e2c3b81f013e61649bcd985f0c3b2b4cbc8d04"
-    sha256 cellar: :any,                 arm64_sequoia: "ae419dedad29af9be7099e6a27edef9256e449f705ad048afe6deafca84657ee"
-    sha256 cellar: :any,                 arm64_sonoma:  "df293824aed5327e9b729ac4a55c9d40c1e7e9325becd0a8bed65f7819ca3421"
-    sha256 cellar: :any,                 sonoma:        "1e9baec1dec34096977380facb2b171beca7d6d8a966b651b03138fbec17e077"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "58d97f83862105ff0d077d6e71dc477b12b5acd87118246ed09c801dda3f2ecf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ec19bc711250bf132f8c61e76a72ac8df2b085e6e139c91e0089c91c87787ad7"
+    sha256 cellar: :any,                 arm64_tahoe:   "c362a2a5005f4155c4545ef26a17dfa2f887b29384bf95cc343f5cf3008e4638"
+    sha256 cellar: :any,                 arm64_sequoia: "cd6a1423f05f719b05f3946da013e145824ae1c2a9c47cc8bfaa091ed6e7ea9e"
+    sha256 cellar: :any,                 arm64_sonoma:  "b7d8b8c1e13eb5945c45a240873d7c7df7f6978edb135678a996382522715e54"
+    sha256 cellar: :any,                 sonoma:        "3837fd50d159fbd544ed9ffd53d2f1592f1da5c5f298d527b4b7e6b495f13727"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "626cd630343be55109c05d0de86af24c54114e396faff3d55c8a8dc102beb2a2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f42892b29fb391749e33605118d1b75e29436db60272e6d0ba8f4e8184c3d08"
   end
 
   depends_on "certifi"
