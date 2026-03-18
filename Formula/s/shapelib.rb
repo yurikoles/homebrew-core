@@ -1,8 +1,8 @@
 class Shapelib < Formula
   desc "Library for reading and writing ArcView Shapefiles"
   homepage "http://shapelib.maptools.org/"
-  url "https://download.osgeo.org/shapelib/shapelib-1.6.2.tar.gz"
-  sha256 "4b74a36ced94e9a7bea401157e664addcc5be251e7df7f88d4674361da012c21"
+  url "https://download.osgeo.org/shapelib/shapelib-1.6.3.tar.gz"
+  sha256 "3ff5ead18ca6d2fe249f0e80b361e1ad6782165115268ed4a58c780a60c1e0eb"
   license any_of: ["LGPL-2.0-or-later", "MIT"]
 
   livecheck do
