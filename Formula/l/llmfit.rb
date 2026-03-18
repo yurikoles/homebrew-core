@@ -1,8 +1,8 @@
 class Llmfit < Formula
   desc "Find what models run on your hardware"
   homepage "https://github.com/AlexsJones/llmfit"
-  url "https://github.com/AlexsJones/llmfit/archive/refs/tags/v0.7.4.tar.gz"
-  sha256 "87f868eece56e155b75403638a2fc3d3981be6efb567f63d3ea881c7806731fd"
+  url "https://github.com/AlexsJones/llmfit/archive/refs/tags/v0.7.5.tar.gz"
+  sha256 "6750999382149e62f06c0dd7f8eb6ab2b4c4f6dd5ace28638bbfecbf81aa5415"
   license "MIT"
   head "https://github.com/AlexsJones/llmfit.git", branch: "main"
 
@@ -23,6 +23,6 @@ class Llmfit < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/llmfit --version")
-    assert_match "Multiple models found", shell_output("#{bin}/llmfit info llama")
+    assert_match "Multiple models match", shell_output("#{bin}/llmfit info llama")
   end
 end
