@@ -1,8 +1,8 @@
 class Topicctl < Formula
   desc "Declarative Kafka topic management"
   homepage "https://github.com/segmentio/topicctl"
-  url "https://github.com/segmentio/topicctl/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "ac57bed1c6c387d050b8a7cd43c8b82457d7f34ac4bc4630ac8a6d989c8b0e69"
+  url "https://github.com/segmentio/topicctl/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "fb97094222529c018917a0ac29cfd139b6991a168634eb067f7eb4b26b8424b5"
   license "MIT"
   head "https://github.com/segmentio/topicctl.git", branch: "master"
 
