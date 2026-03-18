@@ -1,8 +1,8 @@
 class Witr < Formula
   desc "Why is this running?"
   homepage "https://github.com/pranshuparmar/witr"
-  url "https://github.com/pranshuparmar/witr/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "dce5f0fe15a6de590f44b6c2d09e282300e30cb52eaff3e44c6643c960203cee"
+  url "https://github.com/pranshuparmar/witr/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "3e28aa5082b7e83e35e2e8d2b0be30732ac454ac261eb8f315ae8eb30810e6a5"
   license "Apache-2.0"
 
   bottle do
@@ -24,6 +24,6 @@ class Witr < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/witr --version")
-    assert_match "Error: no process ancestry found", shell_output("#{bin}/witr --pid 99999999 2>&1", 1)
+    assert_match "no process ancestry found", shell_output("#{bin}/witr --pid 99999999 2>&1", 2)
   end
 end
