@@ -7,12 +7,12 @@ class Fastp < Formula
   head "https://github.com/OpenGene/fastp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "d50c5de41c6df81a8e4a0a9dc3885f2c13f69fa1652753e43d24ea0b90776f15"
-    sha256 cellar: :any,                 arm64_sequoia: "d7cfcc49f9ae330fa3b3b160018503f9d115843f5502b3a19184e8db0e486460"
-    sha256 cellar: :any,                 arm64_sonoma:  "99fefee4068b522aa2c67a235dfb867e6a64b865b769315e764ff5d6961e9773"
-    sha256 cellar: :any,                 sonoma:        "9261d9df59e96ac0eb5c5c2214aa7a9332eb62998d0dd1b0cbb0293cd8a19109"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "43fac09e8bc7110ea1a5f43079ed1eb7081e9078ebc2bf17916a2a5a73ebc0ca"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8dc5af9082ad3cd2e0d778026b02838c2f65677d1fc8d1cbcf09df5f809182ca"
+    sha256 cellar: :any,                 arm64_tahoe:   "b02fa8eb605f94a974f37b89724a6c00761867bb64991febf9e1ade48a978d27"
+    sha256 cellar: :any,                 arm64_sequoia: "a60acfa9d9c2ac218fcf2aa84f95c2b0ab496ba808c692938db33f0780976d14"
+    sha256 cellar: :any,                 arm64_sonoma:  "0c6bfce83397202a958d5d55a85a1162fdcd28fe4fc40ab4286495786da1408b"
+    sha256 cellar: :any,                 sonoma:        "bb3d842ea702ec3abd214bffd5206b7a04bb1ee9f862af60a4db81e06b9591a1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "771b3d74c74f777203e479b5a57bfd5c02555622b34fa22822d441cd64c4953d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01cb3eda27cbfcc940d1499dac5d1a8962b5bca60f3eaa5e0ff47fe3e0ef53ac"
   end
 
   depends_on "highway"
