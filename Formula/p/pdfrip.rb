@@ -1,8 +1,8 @@
 class Pdfrip < Formula
   desc "Multi-threaded PDF password cracking utility"
   homepage "https://github.com/mufeedvh/pdfrip"
-  url "https://github.com/mufeedvh/pdfrip/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "60f284d79bac98c97e6eaa1a2f29d66055de5b3c8a129eb14b24057a7cb31cd3"
+  url "https://github.com/mufeedvh/pdfrip/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "e75bb5bcc2b58f80189dd10ba18e3cb8673935316172b8bd7a63822859cba11b"
   license "MIT"
   head "https://github.com/mufeedvh/pdfrip.git", branch: "main"
 
@@ -19,10 +19,6 @@ class Pdfrip < Formula
   depends_on "cmake" => :build
   depends_on "rust" => :build
 
-  # Fix to build error with `indicatif`
-  # PR ref: https://github.com/mufeedvh/pdfrip/pull/64
-  patch :DATA
-
   def install
     ENV["SDKROOT"] = MacOS.sdk_path if OS.mac?
 
@@ -32,24 +28,7 @@ class Pdfrip < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/pdfrip --version")
 
-    touch testpath/"test.pdf"
-    output = shell_output("#{bin}/pdfrip -f test.pdf range 1 5 2>&1")
-    assert_match "Failed to crack file", output
+    output = shell_output("#{bin}/pdfrip -f #{test_fixtures("test.pdf")} range 1 5 2>&1", 1)
+    assert_match "PDF is not encrypted with the Standard password-based security handler", output
   end
 end
-
-__END__
-diff --git a/Cargo.toml b/Cargo.toml
-index e0db059..6cdba04 100644
---- a/Cargo.toml
-+++ b/Cargo.toml
-@@ -5,7 +5,8 @@ edition = "2021"
- authors = ["Mufeed VH <mufeed@lyminal.space>", "Pommaq"]
- 
- [dependencies]
--indicatif = "0.16.2"
-+console = { version = "0.16.0", features = ["std"] }
-+indicatif = { version = "0.16.2", default-features = false }
- log = "0.4.19"
- anyhow = "1.0.72"
- crossbeam = "0.8.2"
