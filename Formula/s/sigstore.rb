@@ -6,7 +6,7 @@ class Sigstore < Formula
   url "https://files.pythonhosted.org/packages/98/c3/84ec81173ade0dba5613feea577308cde4e69045cc804d02953e3a40922c/sigstore-4.2.0.tar.gz"
   sha256 "bdbb49a42fd5f0ea6765919adb42ccee7254c482330764d0842eec4e11ad78d7"
   license "Apache-2.0"
-  revision 2
+  revision 3
   head "https://github.com/sigstore/sigstore-python.git", branch: "main"
 
   bottle do
@@ -69,8 +69,8 @@ class Sigstore < Formula
   end
 
   resource "pyasn1" do
-    url "https://files.pythonhosted.org/packages/fe/b6/6e630dff89739fcd427e3f72b3d905ce0acb85a45d4ec3e2678718a3487f/pyasn1-0.6.2.tar.gz"
-    sha256 "9b59a2b25ba7e4f8197db7686c09fb33e658b98339fadb826e9512629017833b"
+    url "https://files.pythonhosted.org/packages/5c/5f/6583902b6f79b399c9c40674ac384fd9cd77805f9e6205075f828ef11fb2/pyasn1-0.6.3.tar.gz"
+    sha256 "697a8ecd6d98891189184ca1fa05d1bb00e2f84b5977c481452050549c8a72cf"
   end
 
   resource "pygments" do
