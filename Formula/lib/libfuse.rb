@@ -7,8 +7,8 @@ class Libfuse < Formula
   head "https://github.com/libfuse/libfuse.git", branch: "master"
 
   bottle do
-    sha256 arm64_linux:  "b47b8c0828754ab3ded4262a4c66d4604c7f0a30173c09b5c20b7c93bafa651c"
-    sha256 x86_64_linux: "f01fc1f0d20338e3db75c0736855b20d8cb7e81f4e55ae113f72dee16af988ee"
+    sha256 arm64_linux:  "43415522a85fbbd0e9b8af7437f478c819d9e69b7f30465fb47e5aad72a53ab3"
+    sha256 x86_64_linux: "325ce1e24b8d07eb564ad1e4af18057df95d37bf65f1d718788b721b70379c30"
   end
 
   depends_on "meson" => :build
