@@ -1,8 +1,8 @@
 class Wfa2Lib < Formula
   desc "Wavefront alignment algorithm library v2"
   homepage "https://github.com/smarco/WFA2-lib"
-  url "https://github.com/smarco/WFA2-lib/archive/refs/tags/v2.3.5.tar.gz"
-  sha256 "2609d5f267f4dd91dce1776385b5a24a2f1aa625ac844ce0c3571c69178afe6e"
+  url "https://github.com/smarco/WFA2-lib/archive/refs/tags/v2.3.6.tar.gz"
+  sha256 "fd74c4bfdd5764ae8668cdeee7a80bfa35583b1980e261daa9dbf425bf12bb0b"
   license "MIT"
   head "https://github.com/smarco/WFA2-lib.git", branch: "main"
 
