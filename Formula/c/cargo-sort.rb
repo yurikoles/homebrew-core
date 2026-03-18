@@ -1,8 +1,8 @@
 class CargoSort < Formula
   desc "Tool to check that your Cargo.toml dependencies are sorted alphabetically"
   homepage "https://github.com/devinr528/cargo-sort"
-  url "https://github.com/DevinR528/cargo-sort/archive/refs/tags/v2.1.2.tar.gz"
-  sha256 "7960b1113165f04944566826ac393cc943a4bcc500aa73103d9d00c2d3100f3d"
+  url "https://github.com/DevinR528/cargo-sort/archive/refs/tags/v2.1.3.tar.gz"
+  sha256 "21681504eca0b1e5d53f321d0ca21db1f72ac6ab11a937c1ddc2be20f6e860b8"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/devinr528/cargo-sort.git", branch: "main"
 
