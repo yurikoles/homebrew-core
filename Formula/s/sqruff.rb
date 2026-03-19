@@ -7,12 +7,12 @@ class Sqruff < Formula
   head "https://github.com/quarylabs/sqruff.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "77794312fefc4f2aa0ffea16bcf3f00251912d3423bf08831e7b2ac360ccba02"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b7fb8c31ad9436a6eb87a9877bc6480f9c47a69f9b1c1204f8349d25b05f51fb"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9844421566ed8b1854d7ad2de19f6b99de49179dafadb7b45b7cb1492ddbfa02"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1316d0fb10b5e81ff60bd91a02a73eef4ee03ed24954e775816d22a3ca8cf531"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "41a51dba02f589e13ea1701ca251a22fe8752859de8c890304664eb8fbfaa4ce"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c52d05c25444da9b7956793050332c0f71e1d95fada78536048b2ae7516e753"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6983202fec762a3ef9f8985be1ffd12b4971f3a84a98a5239a5b5c641a002627"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "487c36a0834f8a574cfa07720c9b6ce5fe904f7d63e5d6f1d126c623cb93c7b0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "521c7971a2b4dc575bd97212e71d17c7d1f6078dab375e9fe76690318b92ae52"
+    sha256 cellar: :any_skip_relocation, sonoma:        "71bdd150183026c13a6c80e126030a64fdf44e0cc8283bfd98bb768f7a1e572c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "afe28947e997e652f5983a80f9e603f209de266d1d4ba28e49f69bf0b9ba5b42"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f7d0d9ff70fecd6e21530e549473d59ab9f20b794ac0803ce8af2bdd037d3922"
   end
 
   depends_on "rust" => :build
