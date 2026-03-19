@@ -1,8 +1,8 @@
 class Rtk < Formula
   desc "CLI proxy to minimize LLM token consumption"
   homepage "https://www.rtk-ai.app/"
-  url "https://github.com/rtk-ai/rtk/archive/refs/tags/v0.30.1.tar.gz"
-  sha256 "f063ed2503d5c0e32569897dc3773755b8ddf144da442529cd7e9ae50c3854a9"
+  url "https://github.com/rtk-ai/rtk/archive/refs/tags/v0.31.0.tar.gz"
+  sha256 "3776b066d26199d8932b564c7b919cd0a8a377d0d492dcb9718a1310cb7bf715"
   license "MIT"
   head "https://github.com/rtk-ai/rtk.git", branch: "master"
 
