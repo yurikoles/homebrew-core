@@ -10,12 +10,12 @@ class Maigret < Formula
   head "https://github.com/soxoj/maigret.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "73d780ce97497622422c502f07da3c25ac2fe24eddb188bd6e6d035561fdf2fa"
-    sha256 cellar: :any,                 arm64_sequoia: "3b8c98d97732068900206d8abff48866b1c70166c959a7a158f3872ac99c25ca"
-    sha256 cellar: :any,                 arm64_sonoma:  "e9c9a3f8498e3b8226cec9ca73ab9ff45947780e57b5d59b167c917efc716bfa"
-    sha256 cellar: :any,                 sonoma:        "cf8d49a65fb3b164336b158bd24b4c2b6ba0b5ca7ff6618b471a3b1800dd6937"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4c12f1f996c620f1db696e4e61a880c51bba3f93452ba35b764e4c4a3aef3486"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e26756d519dc8ac9b08b1d4baf11368a6400dd1f6a80e420a9ec35bf99c55eb8"
+    sha256 cellar: :any,                 arm64_tahoe:   "162a89d58d2f7af0eaf362d706923666b8acdad01f9f89118dc326a2d49c81cc"
+    sha256 cellar: :any,                 arm64_sequoia: "ccc6a793a40907842360503b774beec8969200caa93ca829f751ba614dbcd13a"
+    sha256 cellar: :any,                 arm64_sonoma:  "d14eda5d5c9f31f8d6c6bc31aa0e04ee920e589ced5e1da268f532af30cbef82"
+    sha256 cellar: :any,                 sonoma:        "afbefd75bbe13a986c068a3ae8f437f85404a2d1ed4a471f0825b13cd420ba7e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "74663a5d390b3ba49f60ce89dcd3f7e76c050a1006e502cc25500a6dd9f9b3be"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e328e7555f610771e7f8db987d4bcc0e30743b4bf40f025a2f3af8c5443af0b6"
   end
 
   depends_on "rust" => :build
