@@ -1,10 +1,9 @@
 class Valabind < Formula
   desc "Vala bindings for radare, reverse engineering framework"
   homepage "https://github.com/radare/valabind"
-  url "https://github.com/radare/valabind/archive/refs/tags/1.8.0.tar.gz"
-  sha256 "3eba8c36c923eda932a95b8d0c16b7b30e8cdda442252431990436519cf87cdd"
+  url "https://github.com/radare/valabind/archive/refs/tags/1.8.2.tar.gz"
+  sha256 "6c0e9f4e83d9735ad71256f6e0586116fca7ecafaba550f3c21d44768c8cbdbd"
   license "GPL-3.0-or-later"
-  revision 3
   head "https://github.com/radare/valabind.git", branch: "master"
 
   bottle do
