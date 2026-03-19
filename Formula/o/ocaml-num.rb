@@ -4,6 +4,7 @@ class OcamlNum < Formula
   url "https://github.com/ocaml/num/archive/refs/tags/v1.6.tar.gz"
   sha256 "b5cce325449aac746d5ca963d84688a627cca5b38d41e636cf71c68b60495b3e"
   license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "8ee79694c29aed327203abaa275dee7f5e041f318cd137c3a3eceaf487317cf6"
