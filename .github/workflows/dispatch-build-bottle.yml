@@ -54,7 +54,7 @@ jobs:
   prepare:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/homebrew/ubuntu22.04:main
+      image: ghcr.io/homebrew/brew:main
     outputs:
       runners: ${{steps.runner-matrix.outputs.result}}
     steps:
@@ -83,7 +83,7 @@ jobs:
                 return {
                   runner:    s,
                   container: {
-                    image:   "ghcr.io/homebrew/ubuntu22.04:main",
+                    image:   "ghcr.io/homebrew/brew:main",
                     options: "--user=linuxbrew -e GITHUB_ACTIONS_HOMEBREW_SELF_HOSTED"
                   },
                   workdir:   "/github/home",
@@ -201,7 +201,7 @@ jobs:
     needs: bottle
     if: inputs.upload
     container:
-      image: ghcr.io/homebrew/ubuntu22.04:main
+      image: ghcr.io/homebrew/brew:main
     env:
       HOMEBREW_SIMULATE_MACOS_ON_LINUX: 1
       GH_REPO: ${{github.repository}}
