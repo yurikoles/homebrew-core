@@ -1,8 +1,8 @@
 class CargoCyclonedx < Formula
   desc "Creates CycloneDX Software Bill of Materials (SBOM) from Rust (Cargo) projects"
   homepage "https://cyclonedx.org/"
-  url "https://github.com/CycloneDX/cyclonedx-rust-cargo/archive/refs/tags/cargo-cyclonedx-0.5.8.tar.gz"
-  sha256 "101e3592a378c2f8591f5836fb7b235393032bcda84442217c239b4ebd80dba9"
+  url "https://github.com/CycloneDX/cyclonedx-rust-cargo/archive/refs/tags/cargo-cyclonedx-0.5.9.tar.gz"
+  sha256 "36f0dbdd203424cdcb2d73d71093a2795494c776ca5ff9039d5002e4b7785da7"
   license "Apache-2.0"
   head "https://github.com/CycloneDX/cyclonedx-rust-cargo.git", branch: "main"
 
