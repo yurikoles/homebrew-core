@@ -6,12 +6,12 @@ class Gurk < Formula
   license "AGPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "566681166b4ae1baec8fd5bdd3f3e01c8ef68e908b38acb8b5d970c994180d9b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b51330161a12aa73f0167e78b71896e6e7dff35d767718c702b6c4b63c6662b1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8bc59d3fd989fb47825afcfe21dc431589a6c5607725fac91e3fd54bc8d8c354"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2d89c8c3bb300ad30d2e3307d427aa7e6b539a3d9f796ba6c05022f1e07ee2dc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "48a587abb83c9eedd0c95eb70b9682809c4a402dffe194ee8182e7f143bd5d68"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b6028220297161ec4db56f58d7914eee47e37ec2d657307b997f59f4db2026c4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fb13b0ce2df0b87689ce9eb1ef24d53c0f7afbd38ef9bbb18b2b8ac8667402a2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1d6b5443f82ee030b60cfb7a7f1d16136aad597db7dae46de25419787eb4bfdf"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3724671b80098c974edd99588f92c4645c9d7157b49cfbd15d744ea0442cd1b3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e4920cf2ba637f27fd67a2a016847abc90ca000c9763ecb6514c392eb4589c57"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c6f66cb0837deeef53c8f9cef6e93ecc90702512ee12dd65700e82f6e880b858"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "716705c2c7d0635637562df3b714a14a826ce71ec306d8e2d83d1d41b6aa3ea3"
   end
 
   depends_on "pkgconf" => :build
