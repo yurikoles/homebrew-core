@@ -1,15 +1,9 @@
 class Varnish < Formula
   desc "High-performance HTTP accelerator"
   homepage "https://www.varnish-cache.org/"
-  url "https://varnish-cache.org/_downloads/varnish-8.0.1.tgz"
-  mirror "https://fossies.org/linux/www/varnish-8.0.1.tgz"
-  sha256 "9f5a22d58acdbeac371a163debcdd36121be5ee4bc84aa187eb7cd0c318fe682"
+  url "https://github.com/varnish/varnish/releases/download/varnish-9.0.0/varnish-9.0.0.tar.gz"
+  sha256 "c943862cb18c430a0f8fe0688991d581593736063158ca5be76eca178aa7f149"
   license "BSD-2-Clause"
-
-  livecheck do
-    url "https://varnish-cache.org/releases/"
-    regex(/href=.*?varnish[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
 
   bottle do
     sha256 arm64_tahoe:   "637e4801d3fb8308c4ba58d29bb5d23326ed3e5bacfd71e8f87863794c91d6d9"
@@ -24,6 +18,7 @@ class Varnish < Formula
   depends_on "graphviz" => :build
   depends_on "pkgconf" => :build
   depends_on "sphinx-doc" => :build
+  depends_on "openssl@3"
   depends_on "pcre2"
 
   uses_from_macos "python" => :build
@@ -47,7 +42,7 @@ class Varnish < Formula
     (etc/"varnish").install "etc/example.vcl" => "default.vcl"
     (var/"varnish").mkpath
 
-    (pkgshare/"tests").install buildpath.glob("bin/varnishtest/tests/*.vtc")
+    (pkgshare/"tests").install buildpath.glob("bin/vinyltest/tests/*.vtc")
     (pkgshare/"tests/vmod").install buildpath.glob("vmod/tests/*.vtc")
   end
 
