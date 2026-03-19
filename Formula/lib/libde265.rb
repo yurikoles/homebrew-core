@@ -1,8 +1,8 @@
 class Libde265 < Formula
   desc "Open h.265 video codec implementation"
   homepage "https://github.com/strukturag/libde265"
-  url "https://github.com/strukturag/libde265/releases/download/v1.0.17/libde265-1.0.17.tar.gz"
-  sha256 "e919bbe34370fbcfa36c48ecc6efd5c861f7df43b9a58210e68350d43bab71a5"
+  url "https://github.com/strukturag/libde265/releases/download/v1.0.18/libde265-1.0.18.tar.gz"
+  sha256 "800478f3bf35f0621b14928ceb317579f3e8b23de4bd2aac29b6cb8be962bbd8"
   license "LGPL-3.0-or-later"
 
   bottle do
@@ -20,14 +20,9 @@ class Libde265 < Formula
     system "cmake", "-S", ".", "-B", "build",
                     "-DCMAKE_INSTALL_RPATH=#{rpath};#{rpath(source: libexec/"bin")}",
                     "-DENABLE_DECODER=OFF",
-                    "-DENABLE_TOOLS=ON",
                     *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-
-    # Install the test-related executables in libexec.
-    (libexec/"bin").install bin/"block-rate-estim",
-                            bin/"tests"
   end
 
   test do
@@ -65,7 +60,5 @@ class Libde265 < Formula
 
     system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lde265", "-o", "test"
     assert_equal version.to_s, shell_output("./test").strip
-
-    assert_match "list ... passed", shell_output("#{libexec}/bin/tests")
   end
 end
