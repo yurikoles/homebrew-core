@@ -3,8 +3,8 @@ class Borgbackup < Formula
 
   desc "Deduplicating archiver with compression and authenticated encryption"
   homepage "https://www.borgbackup.org/"
-  url "https://files.pythonhosted.org/packages/7a/5a/090ad33133d34d71aba70e40eff030aaa3a07776fa38cc8bd85eb856456b/borgbackup-1.4.3.tar.gz"
-  sha256 "79bbfa745d1901d685973584bd2d16a350686ddd176f6a2244490fb01996441f"
+  url "https://files.pythonhosted.org/packages/eb/38/7fc8c8c7d9dba455f0e29f2ab5b77109313f4e58fe5014d0e1b7855de3cd/borgbackup-1.4.4.tar.gz"
+  sha256 "2716bc124a24908efcac9436df31b716d1f0bbd828ad39b18f73bfdd772a651a"
   license "BSD-3-Clause"
   head "https://github.com/borgbackup/borg.git", branch: "master"
 
@@ -35,8 +35,8 @@ class Borgbackup < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
-    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   def install
