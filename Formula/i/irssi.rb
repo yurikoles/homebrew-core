@@ -35,20 +35,20 @@ class Irssi < Formula
   end
 
   def install
+    perl_vendorarch = Utils.safe_popen_read("perl", "-MConfig", "-e", "print $Config{vendorarch}")
+
     args = %W[
       -Dwith-proxy=yes
       -Dwith-perl=yes
-      -Dwith-perl-lib=#{lib}/perl5/site_perl
+      -Dwith-perl-lib=#{perl_vendorarch.sub(HOMEBREW_PREFIX, prefix)}
     ]
 
     # Add RPATH to Perl modules so Homebrew's audit can find libperl.so.
     # The modules are loaded by Perl (which already has libperl), so this
     # isn't strictly needed at runtime, but satisfies the linkage check.
     if OS.linux?
-      perl = Formula["perl"]
-      perlarch = Hardware::CPU.arm? ? "aarch64" : Hardware::CPU.arch
-      perl_core = perl.opt_lib/"perl5"/perl.version.major_minor/"#{perlarch}-linux-thread-multi/CORE"
-      ENV.append "LDFLAGS", "-Wl,-rpath,#{perl_core}"
+      perl_archlib = Utils.safe_popen_read("perl", "-MConfig", "-e", "print $Config{archlib}")
+      ENV.append "LDFLAGS", "-Wl,-rpath,#{perl_archlib}/CORE"
     end
 
     system "meson", "setup", "build", *args, *std_meson_args
@@ -67,7 +67,6 @@ class Irssi < Formula
     # Verify the Perl module compiled successfully. Upstream treats Perl
     # build failures as non-fatal, so they can go unnoticed. To debug,
     # move this test into the install block to surface build warnings.
-    ENV["PERL5LIB"] = lib/"perl5/site_perl"
     system "perl", "-e", "use Irssi"
   end
 end
