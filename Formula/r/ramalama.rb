@@ -3,8 +3,8 @@ class Ramalama < Formula
 
   desc "Goal of RamaLama is to make working with AI boring"
   homepage "https://github.com/containers/ramalama"
-  url "https://files.pythonhosted.org/packages/54/8b/c62e8f95c6bd166c690fe61f5678f0e821a9ed164449277866db13bc1e9c/ramalama-0.17.1.tar.gz"
-  sha256 "a7afc80c9c5430fa0f984e52d143df04ff0b0311ed72b1166e4e77b38678bb8e"
+  url "https://files.pythonhosted.org/packages/78/00/785b31f9458fbe12b33724e79ca25bb8f537d5c88873b9f1fad4b8f98df2/ramalama-0.18.0.tar.gz"
+  sha256 "18bb2af79d96468e3c306f11ee41e52bd29d5900b20627e3f8d147037801e92e"
   license "MIT"
 
   bottle do
@@ -32,8 +32,8 @@ class Ramalama < Formula
   end
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz"
-    sha256 "16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11"
+    url "https://files.pythonhosted.org/packages/9a/8e/82a0fe20a541c03148528be8cac2408564a6c9a0cc7e9171802bc1d26985/attrs-26.1.0.tar.gz"
+    sha256 "d03ceb89cb322a8fd706d4fb91940737b6642aa36998fe130a9bc96c985eff32"
   end
 
   resource "jinja2" do
