@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/9f/76/3831b3b100483fdf3af9a03cda83d17db2e212480fe8e88e689d5fd65714/schemathesis-4.12.1.tar.gz"
-  sha256 "c004411b8f358c03cf68f3478d195f54e6d69790d6159fd30918b175b2938bc1"
+  url "https://files.pythonhosted.org/packages/0b/f2/24df7e625ffeb52beb55047bff0eee89729482a0d54113bd9859e6f1fa68/schemathesis-4.12.2.tar.gz"
+  sha256 "cf7ba3d2ed26d3df441e8282c05008e6c9fa0c619c8a89ca080a9ff135216f0f"
   license "MIT"
 
   bottle do
@@ -37,8 +37,8 @@ class Schemathesis < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/1d/35/02daf95b9cd686320bb622eb148792655c9412dbb9b67abb5694e5910a24/charset_normalizer-3.4.5.tar.gz"
-    sha256 "95adae7b6c42a6c5b5b559b1a99149f090a57128155daeea91732c8d970d8644"
+    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
+    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
   end
 
   resource "click" do
