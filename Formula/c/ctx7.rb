@@ -5,6 +5,10 @@ class Ctx7 < Formula
   sha256 "b1bdaf20a6b49c00c736f584f2a2e24016f51343b827aca35cb90e6347229bee"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "93f53cf0e250b57d91e74c5bfff56b6b03954fe28b8682ef30366a8fddc09d2c"
+  end
+
   depends_on "node"
 
   def install
