@@ -1,8 +1,8 @@
 class RattlerBuild < Formula
   desc "Universal conda package builder"
   homepage "https://rattler.build"
-  url "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.60.0.tar.gz"
-  sha256 "a64a7de796f07f0e15e6b59234d4987621462bca11ddc6ef5a57377cbd2823eb"
+  url "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.61.0.tar.gz"
+  sha256 "592e4ae8fc3a89b557588670d6e9f92b3c975f03e0d79390c526ba116eabed2a"
   license "BSD-3-Clause"
   head "https://github.com/prefix-dev/rattler-build.git", branch: "main"
 
@@ -35,7 +35,7 @@ class RattlerBuild < Formula
   end
 
   def install
-    system "cargo", "install", *std_cargo_args(features: "tui")
+    system "cargo", "install", *std_cargo_args
 
     generate_completions_from_executable(bin/"rattler-build", "completion", "--shell")
   end
