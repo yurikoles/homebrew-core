@@ -6,12 +6,12 @@ class Tox < Formula
   # FIXME: PyPI source distribution is missing `docs/man/tox.1.rts` file
   # related issue: https://github.com/tox-dev/tox/issues/3885
   url "https://github.com/tox-dev/tox.git",
-      tag:      "4.50.0",
-      revision: "db1362d7ba99776d5e5d40d8f1f71b7dbf5bf149"
+      tag:      "4.50.1",
+      revision: "dcd955238b7f8d76291d99052e6838a76d9fcbd9"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "28d7ecbfa3112fc57491391e7fbf22fd1e2d97bdb9e15cffeb04f2c68e1be414"
+    sha256 cellar: :any_skip_relocation, all: "dd814918f78f10e055320f653ca90235256d29c3d68ac292b364d7cab7f80474"
   end
 
   depends_on "python@3.14"
