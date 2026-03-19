@@ -7,8 +7,8 @@
 class OcamlAT4 < Formula
   desc "General purpose programming language in the ML family"
   homepage "https://ocaml.org/"
-  url "https://caml.inria.fr/pub/distrib/ocaml-4.14/ocaml-4.14.2.tar.xz"
-  sha256 "7819f68693e32946f93358df46a8ea6f517222681fcc6f7cb96214216cfec764"
+  url "https://caml.inria.fr/pub/distrib/ocaml-4.14/ocaml-4.14.3.tar.xz"
+  sha256 "a5d583b8fbab9ea7bf6cf972ef9c38e7fedacbff6db7a34e3105115d343eb069"
   license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
 
   livecheck do
