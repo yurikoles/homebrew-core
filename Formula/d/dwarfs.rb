@@ -1,10 +1,9 @@
 class Dwarfs < Formula
   desc "Fast high compression read-only file system for Linux, Windows, and macOS"
   homepage "https://github.com/mhx/dwarfs"
-  url "https://github.com/mhx/dwarfs/releases/download/v0.14.1/dwarfs-0.14.1.tar.xz"
-  sha256 "620cf27f2e142a5f8fc05552a70704c3bf4df23c3279c6026b3f37954d0529c5"
+  url "https://github.com/mhx/dwarfs/releases/download/v0.15.0/dwarfs-0.15.0.tar.xz"
+  sha256 "790f3bae70f18e9a6b27d821986fcdb72f00f6c821bf7466eb4b228c19ae78d7"
   license "GPL-3.0-or-later"
-  revision 4
 
   livecheck do
     url :stable
@@ -26,15 +25,10 @@ class Dwarfs < Formula
   depends_on "pkgconf" => :build
   depends_on "boost"
   depends_on "brotli"
-  depends_on "double-conversion"
   depends_on "flac"
   depends_on "fmt"
-  depends_on "gflags"
-  depends_on "glog"
   depends_on "howard-hinnant-date"
   depends_on "libarchive"
-  depends_on "libevent"
-  depends_on "libsodium"
   depends_on "lz4"
   depends_on "nlohmann-json"
   depends_on "openssl@3"
@@ -55,12 +49,10 @@ class Dwarfs < Formula
 
   fails_with :clang do
     build 1500
-    cause "Not all required C++20 features are supported"
+    cause "Not all required C++23 features are supported"
   end
 
-  # Workaround for Boost 1.89.0 until upstream Folly fix.
-  # Issue ref: https://github.com/facebook/folly/issues/2489
-  # Fix to Undefined symbols for architecture x86_64: "_XXH3_64bits"
+  # Temporary fix for missing dependency on Boost::program_options
   patch :DATA
 
   def install
@@ -80,16 +72,6 @@ class Dwarfs < Formula
       -DDISABLE_MOLD=ON
       -DPREFER_SYSTEM_GTEST=ON
     ]
-
-    if OS.mac? && DevelopmentTools.clang_build_version <= 1500
-      # No ASAN for folly
-      ENV.append "CXXFLAGS", "-D_LIBCPP_HAS_NO_ASAN"
-
-      # Needed in order to find the C++ standard library
-      # See: https://github.com/Homebrew/homebrew-core/issues/178435
-      ENV.prepend "LDFLAGS", "-L#{Formula["llvm"].opt_lib}/unwind -lunwind"
-      ENV.prepend_path "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib/"c++"
-    end
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
@@ -128,20 +110,26 @@ class Dwarfs < Formula
       }
     CPP
 
-    system ENV.cxx, "-std=c++20", "test.cpp", "-I#{include}", "-L#{lib}", "-o", "test", "-ldwarfs_common"
+    system ENV.cxx, "-std=c++23", "test.cpp", "-I#{include}", "-L#{lib}", "-Wl,-rpath,#{lib}",
+                    "-o", "test", "-ldwarfs_common"
 
     assert_equal version.to_s, shell_output("./test").chomp
   end
 end
 
 __END__
---- a/folly/CMake/folly-config.cmake.in
-+++ b/folly/CMake/folly-config.cmake.in
-@@ -38,7 +38,6 @@ find_dependency(Boost 1.51.0 MODULE
-     filesystem
-     program_options
-     regex
--    system
-     thread
-   REQUIRED
+--- a/cmake/libdwarfs.cmake
++++ b/cmake/libdwarfs.cmake
+@@ -335,6 +335,12 @@ target_link_libraries(
+   dwarfs_fsst
  )
+ 
++target_link_libraries(
++  dwarfs_writer
++  PRIVATE
++  Boost::program_options
++)
++
+ if(TARGET Boost::process)
+   target_link_libraries(dwarfs_common PUBLIC Boost::process)
+ endif()
