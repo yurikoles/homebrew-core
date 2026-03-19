@@ -1,8 +1,8 @@
 class Intermodal < Formula
   desc "Command-line utility for BitTorrent torrent file creation, verification, etc."
   homepage "https://imdl.io"
-  url "https://github.com/casey/intermodal/archive/refs/tags/v0.1.15.tar.gz"
-  sha256 "a01fde996f2e506c7e90a6015a6e130cb4757d21e98063c38672bdccf2e99d9c"
+  url "https://github.com/casey/intermodal/archive/refs/tags/v0.1.16.tar.gz"
+  sha256 "3a072929379ddba929d85a579888ac51cf22e44897b7dc84af7612f49d3874d7"
   license "CC0-1.0"
 
   bottle do
