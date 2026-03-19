@@ -29,6 +29,7 @@ class Gdu < Formula
     ]
 
     system "go", "build", *std_go_args(ldflags:, output: bin/"gdu-go"), "./cmd/gdu"
+    man1.install "gdu.1" => "gdu-go.1"
   end
 
   def caveats
