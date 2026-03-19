@@ -2,8 +2,8 @@ class Quotatool < Formula
   desc "Edit disk quotas from the command-line"
   homepage "https://quotatool.ekenberg.se/"
   url "https://github.com/ekenberg/quotatool.git",
-      tag:      "v1.7.1",
-      revision: "2a697abbc140dea5eff5aea1be8e0865369f5de9"
+      tag:      "v1.8.0",
+      revision: "cae3d2d9407f2115a96b227542930a5a7ec52ace"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -15,9 +15,7 @@ class Quotatool < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "27adf194893ae8236b66f0d7906cedb0081bd85adf2c773973484e02183b1583"
   end
 
-  on_macos do
-    depends_on "coreutils" => :build # make install uses `-D` flag
-  end
+  depends_on :linux
 
   def install
     system "./configure", "--prefix=#{prefix}"
