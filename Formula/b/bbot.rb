@@ -6,6 +6,7 @@ class Bbot < Formula
   url "https://files.pythonhosted.org/packages/6a/83/24a0087894d853703f64ab2044927ef56c831edb379295a873b05f34eb92/bbot-2.8.4.tar.gz"
   sha256 "2ed4d3eda85ddb7261318a48f8a41e8543888b5d9b9eb8876aaff0e813a2429c"
   license "AGPL-3.0-only"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "9edd0966378ce1a3480a8e8fb1c26c970f332d767509fae84dbf80f68f43774c"
@@ -75,8 +76,8 @@ class Bbot < Formula
   end
 
   resource "deepdiff" do
-    url "https://files.pythonhosted.org/packages/19/76/36c9aab3d5c19a94091f7c6c6e784efca50d87b124bf026c36e94719f33c/deepdiff-8.6.1.tar.gz"
-    sha256 "ec56d7a769ca80891b5200ec7bd41eec300ced91ebcc7797b41eb2b3f3ff643a"
+    url "https://files.pythonhosted.org/packages/89/50/767448e792d41bfb6094ee317a355c1cb221dca24b2e178e2203bbea2a77/deepdiff-8.6.2.tar.gz"
+    sha256 "186dcbd181e4d76cef11ab05f802d0056c5d6083c5a6748c1473e9d7481e183e"
   end
 
   resource "dnspython" do
