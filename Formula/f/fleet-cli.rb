@@ -12,12 +12,12 @@ class FleetCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8fe5b9b3a9cd99bba491b6589c0cbbc131138f6265d00ee426f9d4cfb46c5976"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a02a5d0b06e139e760dff29980d40dcc2173339a4ba9d2365fd3b45240af5a0d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2add2a9d0cb5e6d0651b78513e22bc662d441ff4c4f48e5b7c691a65eacc02a8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "42af301c6895557ef3e7a96cedb26710e09b754ae64126b014661265f2c43076"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "526f121f230320dcd7574dea90c0e3fc03204d7a5d1bb40bed7990702e15ac9f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e6acbd21a792fa330fd32b397792c6a51c61e8c19617d81b79301b203c1c3461"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0a640511aa63fd1b2651088429f9a998b52d91cc680181187ed9fe3604b5d084"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0ed3f8d531fc0480ef47beea2245f5fcf51d91097357f0d10678cfc56f3da22a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "45b74df59cfed212af97aa6c166180b95df6804ae250e48b8653a97e08e21210"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5c1e9ad849e78b5832618ec246b389e95b7d217bf7859bf6eb121247510efdab"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "022b26235b461334809ca91cb7f5b1d62a55373f219da1dcdf35066719474d6c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9672094ae1ee2eeb8d2713e583b411cc5ab7403b92115fb281bddc2ef493131b"
   end
 
   depends_on "go" => :build
