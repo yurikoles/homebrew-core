@@ -5,6 +5,15 @@ class Lief < Formula
   sha256 "5fbbd19c85912d417eabbaef2b98e70144496356964685b82e0792d708b9be87"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "09b70e8996ffcb54a272d740a89d97ed804b2439b9a8c4a55c8d514613edf0cd"
+    sha256 cellar: :any,                 arm64_sequoia: "a1f01fc921928ca14f60e761075fe0296b18034ba40290553b10b25aedc8d1ba"
+    sha256 cellar: :any,                 arm64_sonoma:  "3b509ec8bba9a164b64595f8f07dff0e1e6e3803c3aa8794c9b8b64dd465c4b5"
+    sha256 cellar: :any,                 sonoma:        "c79dfac37f44f61e89cc2a94c69dfbf64925041c5cd97f5c04177a0646337a8a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "66bcc570aac9b6d55cd20e301ca946ef96ced4330882c1589defe77a76312f68"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b056ac9b673273c48e531cec4469408ca8c152e92d07864cf2f01093e916c5b9"
+  end
+
   depends_on "cmake" => :build
   depends_on "frozen" => :build
   depends_on "nlohmann-json" => :build
