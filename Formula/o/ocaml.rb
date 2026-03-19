@@ -4,19 +4,17 @@
 #
 # Specific packages to pay attention to include:
 # - camlp5
-# - lablgtk
 #
 # Applications that really shouldn't break on a compiler update are:
-# - coq
 # - coccinelle
 # - unison
 class Ocaml < Formula
   desc "General purpose programming language in the ML family"
   homepage "https://ocaml.org/"
-  url "https://caml.inria.fr/pub/distrib/ocaml-5.4/ocaml-5.4.0.tar.xz"
-  sha256 "dfaa8a2e11c799bc1765d8bef44911406ee5f4803027190382a939f88c912266"
+  url "https://caml.inria.fr/pub/distrib/ocaml-5.4/ocaml-5.4.1.tar.xz"
+  sha256 "b1e297adc186635540758eb064c7fab025598ae4436f3b9767e5025188b4e0ab"
   license "LGPL-2.1-only" => { with: "OCaml-LGPL-linking-exception" }
-  compatibility_version 1
+  compatibility_version 2
   head "https://github.com/ocaml/ocaml.git", branch: "trunk"
 
   livecheck do
