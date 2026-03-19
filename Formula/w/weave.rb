@@ -7,12 +7,12 @@ class Weave < Formula
   head "https://github.com/Ataraxy-Labs/weave.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9ae7100484851a9d595d4b351244fcf189a9908c618f90b5275fc423569e4d2d"
-    sha256 cellar: :any,                 arm64_sequoia: "9ff6516c1e2a1602b926e2474293f1cff5e50f9e7687e4b9ce9746fcd7600b97"
-    sha256 cellar: :any,                 arm64_sonoma:  "a107c2daf43374df30048bdde2d585a5efb2ea2d27def0515d07df99857fca0e"
-    sha256 cellar: :any,                 sonoma:        "a391db25766dd9bdd018abba1cd4ad2967dd35fe0ee6229599ad7413d8eeaf54"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e3ceea7f8494ff1ba9e4dde011dee93654aff5de12d4ff40c2e08bd073d1221e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "993ea39995778ad521a982d681008aa0517ce63b149ef6d13fdaddfd6da3a5a7"
+    sha256 cellar: :any,                 arm64_tahoe:   "904ec617997b7c4838a984435dbfdf8578105599143bb431a3a8e58aeadf452f"
+    sha256 cellar: :any,                 arm64_sequoia: "b759fbf55b29d2d611b51b4810a79ff4865bfff19dace1a5c33da3e773b80a2f"
+    sha256 cellar: :any,                 arm64_sonoma:  "d1238604202329de0a629ec62c2ebeea116f91676a72f6615fe2659331d657be"
+    sha256 cellar: :any,                 sonoma:        "467b7061ff995d5871d558c6613d023f982ea2a170429852db84eb73ef5963f3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "523a718f0dda2edaf9d550d54a7fb0ded125400e3bd3fc2b38dfdb6b7c05a14b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fdc572eaa49b8fa1db2110f008f88a74e971ff27371e7c1db9c9c530f1b6a230"
   end
 
   depends_on "pkgconf" => :build
