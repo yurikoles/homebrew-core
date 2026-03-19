@@ -4,7 +4,7 @@ class OcamlFindlib < Formula
   url "https://github.com/ocaml/ocamlfind/archive/refs/tags/findlib-1.9.8.tar.gz"
   sha256 "d6899935ccabf67f067a9af3f3f88d94e310075d13c648fa03ff498769ce039d"
   license "MIT"
-  revision 2
+  revision 3
 
   livecheck do
     url "https://opam.ocaml.org/packages/ocamlfind/"
@@ -52,5 +52,13 @@ class OcamlFindlib < Formula
   test do
     output = shell_output("#{bin}/ocamlfind query findlib")
     assert_equal "#{HOMEBREW_PREFIX}/lib/ocaml/findlib", output.chomp
+
+    # Check if we need to rebuild ocaml-findlib to be used as a library
+    (testpath/"test.ml").write <<~OCAML
+      open Findlib;;
+      Findlib.init();
+    OCAML
+    system Formula["ocaml"].opt_bin/"ocamlopt", "-I", lib/"ocaml/findlib", "-o", "test", "findlib.cmxa", "test.ml"
+    system "./test"
   end
 end
