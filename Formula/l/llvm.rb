@@ -132,7 +132,7 @@ class Llvm < Formula
       -DCLANG_PYTHON_BINDINGS_VERSIONS=#{python_versions.join(";")}
       -DLLVM_CREATE_XCODE_TOOLCHAIN=OFF
       -DCLANG_FORCE_MATCHING_LIBCLANG_SOVERSION=OFF
-      -DCLANG_CONFIG_FILE_SYSTEM_DIR=#{clang_config_file_dir.relative_path_from(bin)}
+      -DCLANG_CONFIG_FILE_SYSTEM_DIR=../etc/clang
       -DCLANG_CONFIG_FILE_USER_DIR=~/.config/clang
     ]
 
@@ -395,6 +395,10 @@ class Llvm < Formula
       system "cmake", "--build", "."
       system "cmake", "--build", ".", "--target", "install"
     end
+
+    clang_config_file_dir.mkpath
+    touch clang_config_file_dir/".keepme"
+    (prefix/"etc").install_symlink clang_config_file_dir
 
     if OS.mac?
       # Get the version from `llvm-config` to get the correct HEAD or RC version too.
@@ -833,5 +837,11 @@ class Llvm < Formula
         end
       end
     end
+
+    return if OS.linux?
+    return unless clang_config_file_dir.exist? # https://github.com/Homebrew/homebrew-test-bot/issues/805
+
+    assert_match("Configuration file: #{opt_prefix}/etc/clang/",
+                 shell_output("#{opt_bin}/clang --version -no-canonical-prefixes"))
   end
 end
