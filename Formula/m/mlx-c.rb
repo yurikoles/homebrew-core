@@ -4,6 +4,7 @@ class MlxC < Formula
   url "https://github.com/ml-explore/mlx-c/archive/refs/tags/v0.6.0.tar.gz"
   sha256 "6ec2eab86ed3ce661c0d9b834027870651546138b7b4470fa8ef5533498c79aa"
   license "MIT"
+  compatibility_version 1
 
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "99a5c7e3ef0c954f183a4d50b47f80654cfa5befd4f08616f8be47c0c5cb3094"
