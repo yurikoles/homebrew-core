@@ -7,12 +7,12 @@ class Firefoxpwa < Formula
   head "https://github.com/filips123/PWAsForFirefox.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "744c68f9ec2fa9273159c711dee849c7256c16ceaf180b60735becbaa97371d5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "88db2dfcf74daa35a4c653d78620f3a41280bcdb1257e7b1ae2951d5736ccc6a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5be9864b2d68e763cc59a5940cec83a0651f8962837cc0c2747c2ff7124bf0fc"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1cdfd35e1a646506a0dce7c326a8d15a602b682b1fceefce9472a0431e22fe66"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d5473e3582fcedc5542f14c16a8a1c76cfe1ad602147ea003c921a4a4f303f9a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ba3a14e84e2c1823745c8bba97e8d4ba28d444d61bc438010b1bff23df30a9a1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "86e5d3547f940b29a965973b980a24a2a85d06036952259532d0eee2a5932999"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ef43e72206d48c37f805b26dda092ade5d150c579e62cdff4c6400c76644007e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "47d2cd25df696836399017ddafbb37bd50b5470718527e8b8990717f50411c00"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6396b0df425dbe2db17b8278f5bedb98f7a40e4e73e487be7c47f39588a931a3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "98feb86d5b3ec607c7d9151b8a3590b952f9496d76336716b66d85c26ab3d33d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9ac5d086e379b7888b1cb2a9d5f9f32be2033c12c0b966e1c55e27ba3c1fc2e4"
   end
 
   depends_on "pkgconf" => :build
