@@ -1,10 +1,9 @@
 class Cpl < Formula
   desc "ISO-C libraries for developing astronomical data-reduction tasks"
   homepage "https://www.eso.org/sci/software/cpl/"
-  url "https://ftp.eso.org/pub/dfs/pipelines/libraries/cpl/cpl-7.3.2.tar.gz"
-  sha256 "a50c265a8630e61606567d153d3c70025aa958a28473a2411585b96894be7720"
+  url "https://ftp.eso.org/pub/dfs/pipelines/libraries/cpl/cpl-7.3.4.tar.gz"
+  sha256 "f175a4e7a6935264ef49b39fddf45072c955dfe1c8d11923309f8cc774ba1d24"
   license "GPL-2.0-or-later"
-  revision 1
 
   livecheck do
     url "https://ftp.eso.org/pub/dfs/pipelines/libraries/cpl/"
