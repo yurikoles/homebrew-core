@@ -8,12 +8,12 @@ class ApacheArrowAdbc < Formula
   head "https://github.com/apache/arrow-adbc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "09c3326e64b1da083411eebc53b882f2a44d5b8e05f9653c4d1dd9836de9cdba"
-    sha256 cellar: :any,                 arm64_sequoia: "bbdb22e6f017cbea2ffd357d6efeee791699e36f287efc217bbf6ee20c82ba8c"
-    sha256 cellar: :any,                 arm64_sonoma:  "c8fe3ceb6858038992a2980b56cc29d1033e823388866733ef3fc039c49f7624"
-    sha256 cellar: :any,                 sonoma:        "b77060aad307f0da43f47fecb2afc46547e7c91ad8d97ac18fd7e539b4b3484f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4e45987e433d2d9aa581e6ff43241cd13e1907aca8e657d5f2d2064bd5216a79"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "458058601db075f0318d9146f7eb39911ea829ab706c42747a07e0cfd268b59f"
+    sha256 cellar: :any,                 arm64_tahoe:   "a35bdf7912d038c52bbc6c02b9ccc8c0d3daf1745ef2e0be9378d3e47ffd5426"
+    sha256 cellar: :any,                 arm64_sequoia: "a3227f6c0ec168103c6032df45723b2407daef34ea582789042d315001951140"
+    sha256 cellar: :any,                 arm64_sonoma:  "7432d11b911c1434a8594039263fe6bf84b586de64e393d26dcda7870263f315"
+    sha256 cellar: :any,                 sonoma:        "7763bed036f66e8166974ea1c7b0e78bf25dd8a227696ae7b3d5aeaf94ec777b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0f9474b593542cd0e86043999c7d5464bada5705452346aa36527062c7bcfe8e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c86434868438430a0520e751c1f4a4d8040dd45e4bc2fd0185819400fd9b0b9e"
   end
 
   depends_on "cmake" => :build
