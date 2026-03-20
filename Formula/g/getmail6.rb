@@ -3,8 +3,8 @@ class Getmail6 < Formula
 
   desc "Extensible mail retrieval system with POP3, IMAP4, SSL support"
   homepage "https://getmail6.org/"
-  url "https://github.com/getmail6/getmail6/archive/refs/tags/v6.19.10.tar.gz"
-  sha256 "e18c6e56af9ff51ae0f9db88b985102046aa7d91c48f823135874bb78312be8b"
+  url "https://github.com/getmail6/getmail6/archive/refs/tags/v6.19.12.tar.gz"
+  sha256 "85bb39673d5160202e7ab32a02a22d95819ab01d81c3aca349e4617b98f8fb83"
   license "GPL-2.0-only"
 
   # Upstream uses GitHub releases to indicate that a version is released
