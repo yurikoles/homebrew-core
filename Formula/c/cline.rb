@@ -1,8 +1,8 @@
 class Cline < Formula
   desc "AI-powered coding agent for complex work"
   homepage "https://cline.bot"
-  url "https://registry.npmjs.org/cline/-/cline-2.8.2.tgz"
-  sha256 "47cd0fdeed0033df9304e116f43bcfaa576ff901678f796ae8455c5cf54dca7e"
+  url "https://registry.npmjs.org/cline/-/cline-2.9.0.tgz"
+  sha256 "fda97242c4fdc46958192f5d27a773e11a1ea65f21b32fcf9b0b491595530360"
   license "Apache-2.0"
 
   bottle do
