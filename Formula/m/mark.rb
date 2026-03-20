@@ -1,8 +1,8 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages"
   homepage "https://github.com/kovetskiy/mark"
-  url "https://github.com/kovetskiy/mark/archive/refs/tags/v15.4.0.tar.gz"
-  sha256 "dbe2fe89e545a5bb3c958bbfb6f8121eb9a4c073574f6fe7e1cbb252106a2859"
+  url "https://github.com/kovetskiy/mark/archive/refs/tags/v16.0.0.tar.gz"
+  sha256 "9d4d81a0d8acf9c09ae46b4bdb4732d091abd14912574d56bf7f443a591fed52"
   license "Apache-2.0"
   head "https://github.com/kovetskiy/mark.git", branch: "master"
 
@@ -18,7 +18,8 @@ class Mark < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version} -X main.commit=#{tap.user}")
+    ldflags = "-s -w -X main.version=#{version} -X main.commit=#{tap.user}"
+    system "go", "build", *std_go_args(ldflags:), "./cmd/mark"
   end
 
   test do
