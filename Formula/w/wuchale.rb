@@ -1,8 +1,8 @@
 class Wuchale < Formula
   desc "Protobuf-like i18n from plain code"
   homepage "https://wuchale.dev/"
-  url "https://registry.npmjs.org/wuchale/-/wuchale-0.21.2.tgz"
-  sha256 "a46351b52bb179af617b39b3db14b4b66b497409011ad4f4037616a39215a51f"
+  url "https://registry.npmjs.org/wuchale/-/wuchale-0.22.0.tgz"
+  sha256 "d1e4b78b7b176c5d3f010e7221d492d6041e676c58ad2b6568dff2dff7924e0e"
   license "MIT"
 
   bottle do
@@ -23,7 +23,7 @@ class Wuchale < Formula
       };
     EOS
 
-    output = shell_output("#{bin}/wuchale --config #{testpath}/wuchale.config.mjs status")
-    assert_match "Locales: \e[36men (English)\e[0m", output
+    output = shell_output("#{bin}/wuchale --config #{testpath}/wuchale.config.mjs status 2>&1", 1)
+    assert_match "at least one adapter is needed.", output
   end
 end
