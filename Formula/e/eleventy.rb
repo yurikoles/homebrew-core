@@ -6,6 +6,15 @@ class Eleventy < Formula
   license "MIT"
   head "https://github.com/11ty/eleventy.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2af146437081cecba9865461d2e6e1ee4ba12e92683bbb4e130449bebdf8eda5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c83fca618ae253e43b5e2eadeacbf8aacabe9cf992fa121079aae280c3e49b73"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c83fca618ae253e43b5e2eadeacbf8aacabe9cf992fa121079aae280c3e49b73"
+    sha256 cellar: :any_skip_relocation, sonoma:        "905d47811dff6b131df4be72c72447986a391c610d9a8da7388861d95d048bce"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "82175fdcc0139f8c8a2290533a0a8b70016a9a3a231a64efe862e9220d1a56be"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "82175fdcc0139f8c8a2290533a0a8b70016a9a3a231a64efe862e9220d1a56be"
+  end
+
   depends_on "node"
 
   def install
