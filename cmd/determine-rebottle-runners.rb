@@ -22,7 +22,7 @@ module Homebrew
       sig { params(arch: Symbol, timeout: Integer).returns(T::Hash[Symbol, T.any(String, T::Hash[Symbol, String])]) }
       def linux_runner_spec(arch, timeout)
         linux_runner = if arch == :arm64
-          "ubuntu-22.04-arm"
+          OS::LINUX_CI_ARM_RUNNER
         elsif timeout > 360
           "linux-self-hosted-1"
         else
