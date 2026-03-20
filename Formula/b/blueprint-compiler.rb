@@ -10,7 +10,7 @@ class BlueprintCompiler < Formula
   head "https://gitlab.gnome.org/GNOME/blueprint-compiler.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "db1add3fff5a8108f7897e6dbc8efaffcc924a215f614e1f23f957b4b1b2bbf2"
+    sha256 cellar: :any_skip_relocation, all: "33eaaf731a68ba4cd8dd544509b647f4c83ad6054265b7ce2e69403f404fd420"
   end
 
   depends_on "meson" => :build
