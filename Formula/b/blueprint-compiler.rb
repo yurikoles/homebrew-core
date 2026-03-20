@@ -4,8 +4,8 @@ class BlueprintCompiler < Formula
 
   desc "Markup language and compiler for GTK 4 user interfaces"
   homepage "https://gnome.pages.gitlab.gnome.org/blueprint-compiler/"
-  url "https://download.gnome.org/sources/blueprint-compiler/0.20/blueprint-compiler-0.20.3.tar.xz"
-  sha256 "4b28ef6fcf85bdc22657f4add4fb6051d370f85978bf8bbb9ac814514c7b10f9"
+  url "https://download.gnome.org/sources/blueprint-compiler/0.20/blueprint-compiler-0.20.4.tar.xz"
+  sha256 "1f1ecc84bcd698902d422f7de83d39229a209dd3016f6d2c3b0ed0ab123f6891"
   license "LGPL-3.0-or-later"
   head "https://gitlab.gnome.org/GNOME/blueprint-compiler.git", branch: "main"
 
