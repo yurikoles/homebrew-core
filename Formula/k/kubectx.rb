@@ -1,20 +1,17 @@
 class Kubectx < Formula
   desc "Tool that can switch between kubectl contexts easily and create aliases"
   homepage "https://github.com/ahmetb/kubectx"
-  url "https://github.com/ahmetb/kubectx/archive/refs/tags/v0.9.5.tar.gz"
-  sha256 "c94392fba8dfc5c8075161246749ef71c18f45da82759084664eb96027970004"
+  url "https://github.com/ahmetb/kubectx/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "efcedc14a1cb7e4d0c9b0e8b50fbecf5a24b337f8df7b018fb70a50420fcd27a"
   license "Apache-2.0"
   head "https://github.com/ahmetb/kubectx.git", branch: "master"
 
-  bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "6552e91e68ff8abda73be837c80539b47e3aadc73e5f8bab57cbb3bf0356c682"
-  end
-
-  depends_on "kubernetes-cli"
+  depends_on "go" => :build
 
   def install
-    bin.install "kubectx", "kubens"
+    ldflags = "-s -w -X main.version=v#{version}"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"kubectx"), "./cmd/kubectx"
+    system "go", "build", *std_go_args(ldflags:, output: bin/"kubens"), "./cmd/kubens"
 
     ln_s bin/"kubectx", bin/"kubectl-ctx"
     ln_s bin/"kubens", bin/"kubectl-ns"
@@ -29,5 +26,7 @@ class Kubectx < Formula
   test do
     assert_match "USAGE:", shell_output("#{bin}/kubectx -h 2>&1")
     assert_match "USAGE:", shell_output("#{bin}/kubens -h 2>&1")
+    assert_match version.to_s, shell_output("#{bin}/kubectx -V")
+    assert_match version.to_s, shell_output("#{bin}/kubens -V")
   end
 end
