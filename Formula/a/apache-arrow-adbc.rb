@@ -6,6 +6,15 @@ class ApacheArrowAdbc < Formula
   license "Apache-2.0"
   head "https://github.com/apache/arrow-adbc.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "09c3326e64b1da083411eebc53b882f2a44d5b8e05f9653c4d1dd9836de9cdba"
+    sha256 cellar: :any,                 arm64_sequoia: "bbdb22e6f017cbea2ffd357d6efeee791699e36f287efc217bbf6ee20c82ba8c"
+    sha256 cellar: :any,                 arm64_sonoma:  "c8fe3ceb6858038992a2980b56cc29d1033e823388866733ef3fc039c49f7624"
+    sha256 cellar: :any,                 sonoma:        "b77060aad307f0da43f47fecb2afc46547e7c91ad8d97ac18fd7e539b4b3484f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4e45987e433d2d9aa581e6ff43241cd13e1907aca8e657d5f2d2064bd5216a79"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "458058601db075f0318d9146f7eb39911ea829ab706c42747a07e0cfd268b59f"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "libpq"
