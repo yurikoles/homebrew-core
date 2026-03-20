@@ -7,12 +7,12 @@ class GnomeOnlineAccounts < Formula
   head "https://gitlab.gnome.org/GNOME/gnome-online-accounts.git", branch: "master"
 
   bottle do
-    sha256 arm64_tahoe:   "fcff01578e2b85045e52c1b497a0d32a3e6a9fbaa1affe65cd9f7c58fef49e37"
-    sha256 arm64_sequoia: "1dffd09ef1c470b182b5aadf813d5c112ac0f113295159a856168cec83837b84"
-    sha256 arm64_sonoma:  "c6f8875b302995d1a405b0b49839d2a458df8e012ecb95bae546ff9462dc527b"
-    sha256 sonoma:        "a306d8a694a13ffe284a51455667244df35d8b420e7445de1c15978bb924b028"
-    sha256 arm64_linux:   "4d61155bde2872039fa2cf83db69d1649b140e21fb7518b89275f0c3af83062d"
-    sha256 x86_64_linux:  "235cb8c71ebb3a6c451a793d446d6d7ac6394c673aa9af1a2d79870d129367b4"
+    sha256 arm64_tahoe:   "2ff012c67d2a447bbeece45eca78ae3ca378890226918a4c21104bc2a30ae3b1"
+    sha256 arm64_sequoia: "f7b31e9528928f504d637396a69ea88aeb106f385fd912a5b5cf695cc4e2a99d"
+    sha256 arm64_sonoma:  "264166ba82934bf5846ea9ad04faa5dd8bf02eb83a13f8783c3cab7988fc0879"
+    sha256 sonoma:        "7436127fdbccac45c6f63efcde3a0c9d7c4fa24a59b5ae929893074bc3e9e8d0"
+    sha256 arm64_linux:   "bc2a40f73ea524c6811d3c5fa6286ef6b8b2e55b79a34578fc2dc170cd326d2f"
+    sha256 x86_64_linux:  "c1844d6614d2ec4169aa9155c4aab1939f2ec60259a29c5b973c5722b0ccc3fc"
   end
 
   depends_on "dbus" => :build
