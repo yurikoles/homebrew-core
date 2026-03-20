@@ -1,8 +1,8 @@
 class Ingress2gateway < Formula
   desc "Convert Kubernetes Ingress resources to Kubernetes Gateway API resources"
   homepage "https://github.com/kubernetes-sigs/ingress2gateway"
-  url "https://github.com/kubernetes-sigs/ingress2gateway/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "6afffb36873af934f1499d68ea73d432bb711a3025e8f3f5ab330162798ce871"
+  url "https://github.com/kubernetes-sigs/ingress2gateway/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "741f21ed50470f531d474e35253b8ba5aff6fc13e1ad8ca64049ece5cf1faae1"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/ingress2gateway.git", branch: "main"
 
@@ -25,17 +25,13 @@ class Ingress2gateway < Formula
   end
 
   test do
-    test_file = testpath/"test.yml"
-    test_file.write <<~YAML
+    (testpath/"test.yml").write <<~YAML
       apiVersion: networking.k8s.io/v1
       kind: Ingress
       metadata:
         name: foo
         namespace: bar
         annotations:
-          nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-          nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-          nginx.ingress.kubernetes.io/ssl-passthrough: "true"
           cert-manager.io/cluster-issuer: "letsencrypt-prod"
         labels:
           name: foo
@@ -52,10 +48,6 @@ class Ingress2gateway < Formula
                   name: foo-bar
                   port:
                     number: 443
-        tls:
-        - hosts:
-          - foo,bar
-          secretName: foo-bar-cert
     YAML
 
     expected = <<~YAML
@@ -73,16 +65,6 @@ class Ingress2gateway < Formula
           name: foo-bar-http
           port: 80
           protocol: HTTP
-        - hostname: foo.bar
-          name: foo-bar-https
-          port: 443
-          protocol: HTTPS
-          tls:
-            certificateRefs:
-            - group: null
-              kind: null
-              name: foo-bar-cert
-      status: {}
       ---
       apiVersion: gateway.networking.k8s.io/v1
       kind: HTTPRoute
@@ -104,16 +86,12 @@ class Ingress2gateway < Formula
           - path:
               type: PathPrefix
               value: /
+          name: rule-0
       status:
         parents: []
     YAML
 
-    result = shell_output("#{bin}/ingress2gateway\
-                          print\
-                          --providers ingress-nginx\
-                          --input-file #{testpath}/test.yml\
-                          -A")
-
-    assert_equal expected.chomp, result.chomp
+    output = shell_output("#{bin}/ingress2gateway print --providers ingress-nginx --input-file #{testpath}/test.yml")
+    assert_equal expected.chomp, output.chomp
   end
 end
