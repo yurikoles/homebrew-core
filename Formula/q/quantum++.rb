@@ -1,8 +1,8 @@
 class Quantumxx < Formula
   desc "Modern C++ quantum computing library"
   homepage "https://github.com/softwareQinc/qpp"
-  url "https://github.com/softwareQinc/qpp/archive/refs/tags/v7.0.0.tar.gz"
-  sha256 "094452097e84ab0f743cf27e0b91f4797f041c7924b4794f20153a6efed95883"
+  url "https://github.com/softwareQinc/qpp/archive/refs/tags/v7.0.1.tar.gz"
+  sha256 "795c68320115c2110c05642f5cdfa521e5f7a8868c6b446096560b1594eeed6d"
   license "MIT"
   head "https://github.com/softwareQinc/qpp.git", branch: "main"
 
@@ -17,8 +17,6 @@ class Quantumxx < Formula
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build", "--target", "install"
-    # The upstream source hard-codes `/opt/homebrew` in their config file.
-    inreplace lib/"cmake/qpp/qpp_openmp.cmake", "/opt/homebrew", HOMEBREW_PREFIX
   end
 
   test do
