@@ -4,6 +4,7 @@ class ApacheArrowAdbc < Formula
   url "https://www.apache.org/dyn/closer.lua?path=arrow/apache-arrow-adbc-22/apache-arrow-adbc-22.tar.gz"
   sha256 "48b19d70a734e789da99e3c53ebad57389c914b85fdc9c509188e5f50896b07c"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/apache/arrow-adbc.git", branch: "main"
 
   bottle do
@@ -17,16 +18,14 @@ class ApacheArrowAdbc < Formula
 
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
-  depends_on "libpq"
-  depends_on "sqlite" # Needs sqlite3_load_extension
 
   def install
     args = %w[
       -DADBC_BUILD_STATIC=OFF
       -DADBC_BUILD_SHARED=ON
       -DADBC_DRIVER_MANAGER=ON
-      -DADBC_DRIVER_POSTGRESQL=ON
-      -DADBC_DRIVER_SQLITE=ON
+      -DADBC_DRIVER_POSTGRESQL=OFF
+      -DADBC_DRIVER_SQLITE=OFF
     ]
     system "cmake", "-S", "c", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
