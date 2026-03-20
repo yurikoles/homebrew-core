@@ -1,8 +1,8 @@
 class AwsAmplify < Formula
   desc "Build full-stack web and mobile apps in hours. Easy to start, easy to scale"
   homepage "https://aws.amazon.com/amplify/"
-  url "https://registry.npmjs.org/@aws-amplify/cli-internal/-/cli-internal-14.2.5.tgz"
-  sha256 "43785466b4869a5df23fece70587c8362b281a27b24f33d049154cc642e15907"
+  url "https://registry.npmjs.org/@aws-amplify/cli-internal/-/cli-internal-14.3.0.tgz"
+  sha256 "0faac850f382f03be4206fc4400bb872c4b4a11d1b3b367c5890c8a9330c8c3b"
   license "Apache-2.0"
 
   bottle do
@@ -25,8 +25,15 @@ class AwsAmplify < Formula
            "/@aws-amplify/amplify-frontend-ios/resources/amplify-xcode"
     end
 
-    # Remove non-native libsqlite4java files
+    node_modules = libexec/"lib/node_modules/@aws-amplify/cli-internal/node_modules"
+
+    # Remove incompatible pre-built `bare-fs`/`bare-os`/`bare-url` binaries
     os = OS.kernel_name.downcase
+    arch = Hardware::CPU.intel? ? "x64" : Hardware::CPU.arch.to_s
+    node_modules.glob("{bare-fs,bare-os,bare-url}/prebuilds/*")
+                .each { |dir| rm_r(dir) if dir.basename.to_s != "#{os}-#{arch}" }
+
+    # Remove non-native libsqlite4java files
     if Hardware::CPU.intel?
       arch = if OS.mac?
         "x86_64"
@@ -36,7 +43,6 @@ class AwsAmplify < Formula
     elsif OS.mac? # apple silicon
       arch = "aarch64"
     end
-    node_modules = libexec/"lib/node_modules/@aws-amplify/cli-internal/node_modules"
     (node_modules/"amplify-dynamodb-simulator/emulator/DynamoDBLocal_lib").glob("libsqlite4java-*").each do |f|
       rm f if f.basename.to_s != "libsqlite4java-#{os}-#{arch}"
     end
