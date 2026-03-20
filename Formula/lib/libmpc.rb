@@ -5,6 +5,7 @@ class Libmpc < Formula
   mirror "https://ftp.gnu.org/gnu/mpc/mpc-1.4.0.tar.xz"
   sha256 "3210b3a546b1cb00c296ca360891d7740ee6ff06deb02a27a35b20cd3c0bb1a5"
   license "LGPL-3.0-or-later"
+  compatibility_version 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "56560b939d9b0ce395f6327333d9e22881605826bcdb41a8585db8f4615190db"
