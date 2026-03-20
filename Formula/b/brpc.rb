@@ -5,7 +5,7 @@ class Brpc < Formula
   mirror "https://archive.apache.org/dist/brpc/1.16.0/apache-brpc-1.16.0-src.tar.gz"
   sha256 "4d5e84048e12512c008d24e52c9e0baa876b5f3f9b06f0aead38b55ea248fdc3"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/apache/brpc.git", branch: "master"
 
   bottle do
