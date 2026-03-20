@@ -4,8 +4,8 @@ class GitDelta < Formula
   url "https://github.com/dandavison/delta/archive/refs/tags/0.19.0.tar.gz"
   sha256 "cb11c5fb6514f94b6bb3bb6a163ca3653bdd234fcf7aa0c71b0861e77ca44324"
   license "MIT"
+  compatibility_version 1
   head "https://github.com/dandavison/delta.git", branch: "main"
-
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "b7987efaf4b495f82970595b8c7d2db16b3a3ffa05bf7f0427ad0055ea87e270"
     sha256 cellar: :any,                 arm64_sequoia: "a18e310835a64c36a39c98a29199307535ec224c28f2c5121b2313a1c6cf3397"

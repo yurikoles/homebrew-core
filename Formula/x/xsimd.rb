@@ -4,6 +4,7 @@ class Xsimd < Formula
   url "https://github.com/xtensor-stack/xsimd/archive/refs/tags/14.1.0.tar.gz"
   sha256 "8da77b66214e73565f6111ba494322c853552b7b40cff69779b42e2100eed16f"
   license "BSD-3-Clause"
+  compatibility_version 1
 
   bottle do
     sha256 cellar: :any_skip_relocation, all: "fc68cc93b73e54bedb85dd372f18b7f68de97f8bbdcbbd0db8d36b2a3fb3dc9a"

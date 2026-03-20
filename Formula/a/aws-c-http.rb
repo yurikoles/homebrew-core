@@ -4,6 +4,7 @@ class AwsCHttp < Formula
   url "https://github.com/awslabs/aws-c-http/archive/refs/tags/v0.10.11.tar.gz"
   sha256 "b375e9630aa93830f54b544298745fd30a6cb3d09e5ff8473c7455a1599bf2b7"
   license "Apache-2.0"
+  compatibility_version 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "64e5971a0754d25c08c7287032249bf1582adcb989f5a637622aef6d23fbadc2"
