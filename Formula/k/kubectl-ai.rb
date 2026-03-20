@@ -1,9 +1,10 @@
 class KubectlAi < Formula
   desc "AI powered Kubernetes Assistant"
   homepage "https://github.com/GoogleCloudPlatform/kubectl-ai"
-  url "https://github.com/GoogleCloudPlatform/kubectl-ai/archive/refs/tags/v0.0.29.tar.gz"
-  sha256 "1910e96d1d1f3c1180f1f288e2c362c90ecb3f0101e8133a40096368d69eb61c"
+  url "https://github.com/GoogleCloudPlatform/kubectl-ai/archive/refs/tags/v0.0.30.tar.gz"
+  sha256 "fe86ab82fb857207873ad992a77ffec491dbbabe29cf1b64ac1a096ff84cd9b6"
   license "Apache-2.0"
+  head "https://github.com/GoogleCloudPlatform/kubectl-ai"
 
   livecheck do
     url :stable
@@ -37,7 +38,7 @@ class KubectlAi < Formula
       w.puts "test"
       sleep 1
       output = r.read_nonblock(1024)
-      assert_match "Hey there, what can I help you with", output
+      assert_match "API key not valid", output
     rescue Errno::EIO
       # End of input, ignore
     ensure
