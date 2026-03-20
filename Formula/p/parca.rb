@@ -1,8 +1,8 @@
 class Parca < Formula
   desc "Continuous profiling for analysis of CPU and memory usage"
   homepage "https://www.parca.dev/"
-  url "https://github.com/parca-dev/parca/archive/refs/tags/v0.27.0.tar.gz"
-  sha256 "fbc5bae429cd6af3298c56a359a89333bc4616f99f517313531c251faa05a464"
+  url "https://github.com/parca-dev/parca/archive/refs/tags/v0.27.1.tar.gz"
+  sha256 "8db291778d7ef1eed8d69fad6c640970cd5a2b901ecdbd8041f3dc0817d6991e"
   license "Apache-2.0"
   head "https://github.com/parca-dev/parca.git", branch: "main"
 
