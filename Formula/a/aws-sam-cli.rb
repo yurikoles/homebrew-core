@@ -10,12 +10,12 @@ class AwsSamCli < Formula
   no_autobump! because: "contains non-PyPI resources"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3793d1ac771d1b04069829a77a3bde7455ba8a3c66cff0c0028bdf6a9100a2eb"
-    sha256 cellar: :any,                 arm64_sequoia: "ccc3361f7a229783c9006d76c606395ef84021e5e1fc600c22145364a321777f"
-    sha256 cellar: :any,                 arm64_sonoma:  "5350a3fae528012f699e30cfd8689fcba61884bc69b65beb9f38366bf8f43b93"
-    sha256 cellar: :any,                 sonoma:        "45ae45976083658593522f857a7c2ab620b2b7e5715d1c10d7bab2bc64092d07"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "73bee700305927328eaae5e5c3080469a9313ed2fcca61eb318630bf05b5530e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "08d7a2e837879f5b3ffc9c569350abee5f0eb8993391a814897f03aa4963bc6b"
+    sha256 cellar: :any,                 arm64_tahoe:   "884b679cba8e87c90d7a977b222d793afc8e6e6227af73bedc8493cc16e175ba"
+    sha256 cellar: :any,                 arm64_sequoia: "07b18ab0fda2525c460fdeb7c48a60d9861cf96f335ad4d10fcb348e1e6b0286"
+    sha256 cellar: :any,                 arm64_sonoma:  "000510965c2c1251d48490e7f6b36f3b4735f1727386ba488352656548458728"
+    sha256 cellar: :any,                 sonoma:        "1984c8ffbbcec935478d810bbafd07ed29301fb4b8868164df140ea8958dd6fc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bc63a54d67adb8f44d762b51dab4f6bdb380b7e7681087f32a9157c9273f8386"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2573a53a5d56af2d3542b4af039e53836ba74ba5c99576f96e3944630eb9771f"
   end
 
   depends_on "cmake" => :build # for `awscrt`
