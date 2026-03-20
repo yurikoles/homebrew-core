@@ -1,8 +1,8 @@
 class Libfabric < Formula
   desc "OpenFabrics libfabric"
   homepage "https://ofiwg.github.io/libfabric/"
-  url "https://github.com/ofiwg/libfabric/releases/download/v2.4.0/libfabric-2.4.0.tar.bz2"
-  sha256 "13f508e1d770c44f872c4117d9bcbfc102dc9d7532d3292455e0e0e5ef7b3bba"
+  url "https://github.com/ofiwg/libfabric/releases/download/v2.5.0/libfabric-2.5.0.tar.bz2"
+  sha256 "276019edca708dc0569cf3064a412e395ba7b1883299781caed120594f850995"
   license any_of: ["BSD-2-Clause", "GPL-2.0-only"]
   head "https://github.com/ofiwg/libfabric.git", branch: "main"
 
