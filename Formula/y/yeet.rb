@@ -1,8 +1,8 @@
 class Yeet < Formula
   desc "Packaging tool that lets you declare build instructions in JavaScript"
   homepage "https://github.com/TecharoHQ/yeet"
-  url "https://github.com/TecharoHQ/yeet/archive/refs/tags/v0.10.1.tar.gz"
-  sha256 "fc12f4f700d0a87575a7f171b8ccb97a58f8d55695550a11c600b17ac0a6fbd5"
+  url "https://github.com/TecharoHQ/yeet/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "b793d07304071c07dde135c656aa6effd5b3bc1d38623a72a3510e5c611672a8"
   license "MIT"
   head "https://github.com/TecharoHQ/yeet.git", branch: "main"
 
