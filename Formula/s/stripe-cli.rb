@@ -1,8 +1,8 @@
 class StripeCli < Formula
   desc "Command-line tool for Stripe"
   homepage "https://docs.stripe.com/stripe-cli"
-  url "https://github.com/stripe/stripe-cli/archive/refs/tags/v1.37.8.tar.gz"
-  sha256 "9ffb414ce79770252ba0ec78a0a72ebd74a89e1df0400a2292c3a4c2e7fc5b7f"
+  url "https://github.com/stripe/stripe-cli/archive/refs/tags/v1.38.1.tar.gz"
+  sha256 "e48449971fd88e4019a369bed8e09f7ab3454996bf9b4aa4868039f31d5a8b81"
   license "Apache-2.0"
 
   bottle do
@@ -16,19 +16,15 @@ class StripeCli < Formula
 
   depends_on "go" => :build
 
-  # fish completion support patch, upstream pr ref, https://github.com/stripe/stripe-cli/pull/1282
-  patch do
-    url "https://github.com/stripe/stripe-cli/commit/de62a98881671ce83973e1b696d3a7ea820b8d0e.patch?full_index=1"
-    sha256 "2b30ee04680e16b5648495e2fe93db3362931cf7151b1daa1f7e95023b690db8"
-  end
-
   def install
     # See configuration in `.goreleaser` directory
     ENV["CGO_ENABLED"] = OS.mac? ? "1" : "0"
     ldflags = %W[-s -w -X github.com/stripe/stripe-cli/pkg/version.Version=#{version}]
     system "go", "build", *std_go_args(ldflags:, output: bin/"stripe"), "cmd/stripe/main.go"
 
-    generate_completions_from_executable(bin/"stripe", "completion", "--write-to-stdout", "--shell")
+    # TODO: see if fish support is added, ref: https://github.com/stripe/stripe-cli/pull/1282
+    generate_completions_from_executable(bin/"stripe", "completion", "--write-to-stdout", "--shell",
+                                         shells: [:bash, :zsh])
   end
 
   test do
