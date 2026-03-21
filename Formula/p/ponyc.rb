@@ -2,8 +2,8 @@ class Ponyc < Formula
   desc "Object-oriented, actor-model, capabilities-secure programming language"
   homepage "https://www.ponylang.io/"
   url "https://github.com/ponylang/ponyc.git",
-      tag:      "0.61.1",
-      revision: "e976cc216f235bace72e2837879508283fbb2d40"
+      tag:      "0.62.0",
+      revision: "cacb1f5985e0f18573f0533a1dbe949ab21fca36"
   license "BSD-2-Clause"
 
   bottle do
@@ -21,12 +21,6 @@ class Ponyc < Formula
 
   on_linux do
     depends_on "zlib-ng-compat"
-  end
-
-  # Backport zlib libdir propagation for self-hosted tool builds. upstream pr ref, https://github.com/ponylang/ponyc/pull/5039
-  patch do
-    url "https://github.com/ponylang/ponyc/commit/8abfa19aee61a68627488095a2adbd4edfbbb986.patch?full_index=1"
-    sha256 "3d4becd4ee7ea1a49a1ff3f92a7870eb7b314ebf93711bbea70fbf894fb29973"
   end
 
   def install
