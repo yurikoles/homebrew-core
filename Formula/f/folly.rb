@@ -21,12 +21,12 @@ class Folly < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "8b54e5438ec87d18f363a3e3ffdf5bad4c6ad16d0f7e80c5b2e6028fe334f69e"
-    sha256 cellar: :any,                 arm64_sequoia: "a10e3897f7b5195c1eddaa010d4d68c5257880dab42d5eaae2b3a4c915136dc9"
-    sha256 cellar: :any,                 arm64_sonoma:  "52465a4f66ec87c86c88f12d3a1533e9230963640fc38a9c29632d7cfda94944"
-    sha256 cellar: :any,                 sonoma:        "067e92eb5e13ba59b98304874bd926a45c63c7b7dab662bdff145fa171d38d29"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "212a38f06b1781306fcf610dc0bb90f7560d2688e3669ace030bc07a474ef894"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9612bbe1fc8d77a4de19df6695d5da23e8fbcee673d229ddfd1e6e220b5e6910"
+    sha256 cellar: :any,                 arm64_tahoe:   "73226edcf69301fb3b5c4f4e0b52d8350fda48ff55ca537ee7102a89e3330bfb"
+    sha256 cellar: :any,                 arm64_sequoia: "4e9dbe16ff06cd1a5b58d3c5f64f26309b27b06ab6e61179d840fa2135a1a799"
+    sha256 cellar: :any,                 arm64_sonoma:  "70693044600e55fc48741abfe6d719cd8b223aedb3a215cbe2b7d060a498a2e0"
+    sha256 cellar: :any,                 sonoma:        "0c852571552205f52580fffc34a9de312ec97e7b90f2808623c7d89f8b5eab5b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "255c20200701372e16c22ee0d4e866894a84646199bdbcc3063f7dfa24ead2f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d67a1d52edd0b2118f786be26c85c0d9181000256789158bb3c1c8fb8664d891"
   end
 
   depends_on "cmake" => :build
