@@ -1,8 +1,8 @@
 class Youtubedr < Formula
   desc "Download Youtube Video in Golang"
   homepage "https://github.com/kkdai/youtube"
-  url "https://github.com/kkdai/youtube/archive/refs/tags/v2.10.5.tar.gz"
-  sha256 "69dff0cf97039f5364eeed070b3727332b1414b4e26f965bb505eae1fd291c25"
+  url "https://github.com/kkdai/youtube/archive/refs/tags/v2.10.6.tar.gz"
+  sha256 "c334c04c07c3576e911d78b65b068b574e81e33e385f63a86b4862022391240d"
   license "MIT"
 
   bottle do
