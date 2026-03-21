@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/3e/02/f9411c55fcb0bae6af5f02404a324e59663359378ce48c283dff2abda7d7/mycli-1.65.1.tar.gz"
-  sha256 "82f5eee16e13a12a770ad07190c5bb9f0766f22edc77023ee0eca7612fbd6440"
+  url "https://files.pythonhosted.org/packages/30/d7/2f8231038d254af68ba1c10e6138dadd70d1848093536c031c681d8a32b4/mycli-1.66.0.tar.gz"
+  sha256 "73c37361404068f8c7dacef0916947b43b8d0e5baaeb65bb77a9ef5fbfe649e6"
   license "BSD-3-Clause"
 
   bottle do
@@ -35,8 +35,8 @@ class Mycli < Formula
   end
 
   resource "cli-helpers" do
-    url "https://files.pythonhosted.org/packages/eb/26/ef241dc362e415d43a7eefe816ea836702eb373093dd0f4106674ce084c1/cli_helpers-2.11.0.tar.gz"
-    sha256 "19ffdb580c4bee3053285ad5dd052a39fabed08ce7aadf629aceeff81a87ab78"
+    url "https://files.pythonhosted.org/packages/c6/fd/b2ac313fa77176cf784ef27cdfc041c691a2f166b2af28a6f9182e556e5b/cli_helpers-2.12.0.tar.gz"
+    sha256 "599dd10b2bdca3f50e272c3d265eefada78659f22559d2304461ee8ab400d490"
   end
 
   resource "click" do
@@ -90,8 +90,8 @@ class Mycli < Formula
   end
 
   resource "jaraco-context" do
-    url "https://files.pythonhosted.org/packages/27/7b/c3081ff1af947915503121c649f26a778e1a2101fd525f74aef997d75b7e/jaraco_context-6.1.1.tar.gz"
-    sha256 "bc046b2dc94f1e5532bd02402684414575cc11f565d929b6563125deb0a6e581"
+    url "https://files.pythonhosted.org/packages/af/50/4763cd07e722bb6285316d390a164bc7e479db9d90daa769f22578f698b4/jaraco_context-6.1.2.tar.gz"
+    sha256 "f1a6c9d391e661cc5b8d39861ff077a7dc24dc23833ccee564b234b81c82dfe3"
   end
 
   resource "jaraco-functools" do
@@ -210,13 +210,13 @@ class Mycli < Formula
   end
 
   resource "sqlglot" do
-    url "https://files.pythonhosted.org/packages/61/12/c3f7533fde302fcd59bebcd4c2e46d5bf0eef21f183c67995bbb010fb578/sqlglot-29.0.1.tar.gz"
-    sha256 "0010b4f77fb996c8d25dd4b16f3654e6da163ff1866ceabc70b24e791c203048"
+    url "https://files.pythonhosted.org/packages/5b/7a/3b6a8853fc2fa166f785a8ea4fecde46f70588e35471bc7811373da31a49/sqlglot-30.0.3.tar.gz"
+    sha256 "35ba7514c132b54f87fd1732a65a73615efa9fd83f6e1eed0a315bc9ee3e1027"
   end
 
   resource "sqlglotc" do
-    url "https://files.pythonhosted.org/packages/2c/80/cae9e2bcdb6095c498d3eece04f7f8b6f6bc2b5c4b17c5a1bdfd8c14beff/sqlglotc-29.0.1.tar.gz"
-    sha256 "2b3116880e6f44c8cee2f690ae9ac58dfa23ce2921e6f67ea1715d70873a0d51"
+    url "https://files.pythonhosted.org/packages/05/fe/25a3d389834e116d3612e1960b1abedef3dabcc0fe7913a5dcf4541271f5/sqlglotc-30.0.3.tar.gz"
+    sha256 "8e85b401fc3cec09d4341ea14bfe8bac5d28179e348638d00384c41e039ab79b"
   end
 
   resource "sqlite-fts4" do
