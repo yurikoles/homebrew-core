@@ -1,8 +1,8 @@
 class Nono < Formula
   desc "Capability-based sandbox shell for AI agents with OS-enforced isolation"
   homepage "https://github.com/always-further/nono"
-  url "https://github.com/always-further/nono/archive/refs/tags/v0.21.0.tar.gz"
-  sha256 "fd33963389f057ce608e39fa2a57cee42b38bcac400c9cebd1ef134d9d72b0fd"
+  url "https://github.com/always-further/nono/archive/refs/tags/v0.22.0.tar.gz"
+  sha256 "e48ec3d15d74994da67ad4d41dbeb3654ef9e10241c0de621e3a20a5bb9651df"
   license "Apache-2.0"
 
   no_autobump! because: :bumped_by_upstream
