@@ -3,8 +3,8 @@ class Apprise < Formula
 
   desc "Send notifications from the command-line to popular notification services"
   homepage "https://pypi.org/project/apprise/"
-  url "https://files.pythonhosted.org/packages/2a/65/341fce6f9c8848219ee588bed3acfa36314ae32640d79fd5c31bbcf83f04/apprise-1.9.8.tar.gz"
-  sha256 "2e06f9ebad47e67f3f184bb789a7966bec3261a53556c90acb1b1cdb85d84a2c"
+  url "https://files.pythonhosted.org/packages/20/f4/be5c7e39b83a2285ab62ae7c19bb10704836f59c0a5b4c471730f54c9f98/apprise-1.9.9.tar.gz"
+  sha256 "fd622c0df16bdc79ed385539735573488cafe2405d25747e87eebd6b09b26012"
   license "BSD-3-Clause"
 
   bottle do
@@ -23,8 +23,8 @@ class Apprise < Formula
   pypi_packages exclude_packages: "certifi"
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/1d/35/02daf95b9cd686320bb622eb148792655c9412dbb9b67abb5694e5910a24/charset_normalizer-3.4.5.tar.gz"
-    sha256 "95adae7b6c42a6c5b5b559b1a99149f090a57128155daeea91732c8d970d8644"
+    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
+    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
   end
 
   resource "click" do
