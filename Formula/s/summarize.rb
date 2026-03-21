@@ -6,6 +6,10 @@ class Summarize < Formula
   license "MIT"
   head "https://github.com/steipete/summarize.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "cbd04d744fc376d7a49222ce747f9e6966133181f335b1040c075d9b50556892"
+  end
+
   depends_on "ffmpeg"
   depends_on "node"
   depends_on "tesseract"
