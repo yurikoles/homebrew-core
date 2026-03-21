@@ -1,8 +1,8 @@
 class Bde < Formula
   desc "Basic Development Environment: foundational C++ libraries used at Bloomberg"
   homepage "https://github.com/bloomberg/bde"
-  url "https://github.com/bloomberg/bde/archive/refs/tags/4.36.0.0.tar.gz"
-  sha256 "70b5f5a28a8084c5ef551a478a27d165192813b4af77b3c1ed66234b6bc673d1"
+  url "https://github.com/bloomberg/bde/archive/refs/tags/4.37.0.0.tar.gz"
+  sha256 "28dfdf953f3a6864bd7b1fc97cda7ab47ef6949e4c052a1f4adcfa469a4f5021"
   license "Apache-2.0"
 
   livecheck do
@@ -25,8 +25,8 @@ class Bde < Formula
   depends_on "pcre2"
 
   resource "bde-tools" do
-    url "https://github.com/bloomberg/bde-tools/archive/refs/tags/4.36.0.0.tar.gz"
-    sha256 "3467289d98034e874db39040b39ca4c110c275a926b939577b2f18e1ad7d3615"
+    url "https://github.com/bloomberg/bde-tools/archive/refs/tags/4.37.0.0.tar.gz"
+    sha256 "37c0ad6fef5a7f4374005cf7a5310b05380b638b7cec62f4179b6545798ac5f7"
 
     livecheck do
       regex(/^v?(\d+\.\d+\.\d+\.\d+)$/i)
@@ -42,15 +42,10 @@ class Bde < Formula
     inreplace "groups/bdl/group/bdl.dep", "pcre2", "libpcre2-posix"
     inreplace "groups/bdl/bdlpcre/bdlpcre_regex.h", "#include <pcre2/pcre2.h>", "#include <pcre2.h>"
 
-    toolchain_file = "bde-tools/cmake/toolchains/#{OS.kernel_name.downcase}/default.cmake"
     args = %W[
-      -DBUILD_BITNESS=64
-      -DUFID=opt_exc_mt_64_shr
-      -DCMAKE_MODULE_PATH=./bde-tools/cmake
-      -DCMAKE_INSTALL_RPATH=#{rpath}
-      -DCMAKE_TOOLCHAIN_FILE=#{toolchain_file}
-      -DPYTHON_EXECUTABLE=#{which("python3.14")}
       -DBdeBuildSystem_DIR=#{buildpath}/bde-tools/BdeBuildSystem/
+      -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DPython3_EXECUTABLE=#{which("python3.14")}
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
