@@ -6,6 +6,15 @@ class Kubectx < Formula
   license "Apache-2.0"
   head "https://github.com/ahmetb/kubectx.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "95ff800339b3b2676da1f161d3b16152d2a42ff53e8f326386d48ecee2d60f0a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "95ff800339b3b2676da1f161d3b16152d2a42ff53e8f326386d48ecee2d60f0a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "95ff800339b3b2676da1f161d3b16152d2a42ff53e8f326386d48ecee2d60f0a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0a0c0b9585eb033f00a2cc66e83103c04a98f78d75b1ed59c3e7700360e80c38"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5247260e65b79f83ca8e0c99eb957b941429d352229bf1cfc016f39d0631456f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e140d415df2320fb2c039d52e234a53355574b26e0e4dd4c1fa195321c4d9009"
+  end
+
   depends_on "go" => :build
 
   def install
