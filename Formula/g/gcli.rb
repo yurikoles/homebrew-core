@@ -1,10 +1,9 @@
 class Gcli < Formula
   desc "Portable Git(hub|lab|tea)/Forgejo/Bugzilla CLI tool"
   homepage "https://herrhotzenplotz.de/gcli/"
-  url "https://github.com/herrhotzenplotz/gcli/archive/refs/tags/v2.10.0.tar.gz"
-  sha256 "500da41d29fa53ab412a81864624b9e2bcd0785be61234f6cfb6b3b031b83280"
+  url "https://github.com/herrhotzenplotz/gcli/archive/refs/tags/v2.11.0.tar.gz"
+  sha256 "ed6c618d9c67fedfca0fb4da79d8a0d9d27efdd82cc74b372d6fe5cd483d6456"
   license "BSD-2-Clause"
-  revision 1
   head "https://github.com/herrhotzenplotz/gcli.git", branch: "trunk"
 
   bottle do
