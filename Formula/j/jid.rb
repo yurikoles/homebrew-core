@@ -1,8 +1,8 @@
 class Jid < Formula
   desc "Json incremental digger"
   homepage "https://github.com/simeji/jid"
-  url "https://github.com/simeji/jid/archive/refs/tags/v0.7.6.tar.gz"
-  sha256 "0912050b3be3760804afaf7ecd6b42bfe79e7160066587fbc0afa5324b03fb48"
+  url "https://github.com/simeji/jid/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "93eba44a69e570ecfe6c99c311568f446cddfe1ddd99672fc49fc0df3cbcdab7"
   license "MIT"
   head "https://github.com/simeji/jid.git", branch: "master"
 
