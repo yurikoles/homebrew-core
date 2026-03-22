@@ -99,6 +99,8 @@ class Flang < Formula
     configs = ["-resource-dir=#{llvm.opt_prefix/relative_resource_dir}"]
     configs << "-Wl,-lto_library,#{llvm.opt_lib}/libLTO.dylib" if OS.mac?
     (libexec/"flang.cfg").atomic_write "#{configs.join("\n")}\n"
+
+    (prefix/"etc").install_symlink etc/"clang"
   end
 
   test do
@@ -166,7 +168,7 @@ class Flang < Formula
     return if OS.linux?
     return unless (etc/"clang").exist? # https://github.com/Homebrew/homebrew-test-bot/issues/805
 
-    assert_match %r{^Configuration file: #{Regexp.escape(etc)}/clang/.*\.cfg$}i,
+    assert_match %r{^Configuration file: .*/etc/clang/.*\.cfg$}i,
                  shell_output("#{bin}/flang --version")
   end
 end
