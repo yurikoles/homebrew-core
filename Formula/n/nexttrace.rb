@@ -30,9 +30,7 @@ class Nexttrace < Formula
       -X github.com/nxtrace/NTrace-core/config.Version=#{version}
       -X github.com/nxtrace/NTrace-core/config.CommitID=#{tap.user}
       -X github.com/nxtrace/NTrace-core/config.BuildDate=#{time.iso8601}
-      -checklinkname=0
     ]
-    # checklinkname=0 is a workaround for Go >= 1.23, see https://github.com/nxtrace/NTrace-core/issues/247
     system "go", "build", *std_go_args(ldflags:)
   end
 
