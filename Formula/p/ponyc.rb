@@ -7,12 +7,12 @@ class Ponyc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256                               arm64_tahoe:   "94b9f6ca0821827751a52c8dc7d7792d5e1f24d17beb923287a12e59412949ab"
-    sha256                               arm64_sequoia: "3bccf44a9fdc585be496ad425f010f4e5e02509fba3dbf52336f6d275785d979"
-    sha256                               arm64_sonoma:  "fae7af833bf1e1785ca677521c9256f9e377dadec34b02ee5a0d7df6976a6ba3"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b1ac91056f007409b97dc695ba1b8b1f6d5e02dcc9765edaf7445c2bb3df9709"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5d679ed55fcba57e6996ad7422e09abade995aa574beb6657ff4dfea4967697d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f3814b6ebda2e5f76ca12d85bc2d95a392243ff5274fce8312cb2d441c033e0"
+    sha256                               arm64_tahoe:   "58a17793c0d59c6cc2dd33a7d9ba345caeb252e620e8d2d45487f8b27626807e"
+    sha256                               arm64_sequoia: "82d9c664d8a1cfa96f62f71a85314ae597129a40fde52b0a9d8a41643476592c"
+    sha256                               arm64_sonoma:  "3390884c780240e84732b12e47425f09d57dc2cd4795c2418ecae8b123accaf4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c842fc636705a9aaab74b6ec1e094cdfffbb8344eabe6134833295916eea75d4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f3a8ed9ff8db5815d5d2e8e8bbbc5954969a377602bf858cd9e389c726efd9fb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ddb6b911fa42a16d8b71bc6e4680e074d7ba20af733a6592030e5d9b852cbb2c"
   end
 
   depends_on "cmake" => :build
