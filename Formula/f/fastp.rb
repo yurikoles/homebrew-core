@@ -1,8 +1,8 @@
 class Fastp < Formula
   desc "Ultra-fast all-in-one FASTQ preprocessor"
   homepage "https://github.com/OpenGene/fastp"
-  url "https://github.com/OpenGene/fastp/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "fd7e20923e8f748803d54d9e0fabf44a44c748822a65062999e4b7edec6b8da6"
+  url "https://github.com/OpenGene/fastp/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "c55656dfe9c3a40d3da59d680aa4ff4a2a4861bbc3993cb3659cdeb5e23fd858"
   license "MIT"
   head "https://github.com/OpenGene/fastp.git", branch: "master"
 
@@ -18,12 +18,6 @@ class Fastp < Formula
   depends_on "highway"
   depends_on "isa-l"
   depends_on "libdeflate"
-
-  # Remove forced Linux static linking, upstream pr ref, https://github.com/OpenGene/fastp/pull/667
-  patch do
-    url "https://github.com/chenrui333/fastp/commit/b86119e07253b86d161d18cfcd46815a78a328d8.patch?full_index=1"
-    sha256 "3ac491369f4354a895312cddce82ea2b8aa02bb52c4f5b9c040cc3d8cfaeeb58"
-  end
 
   def install
     mkdir prefix/"bin"
