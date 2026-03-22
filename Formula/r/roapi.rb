@@ -1,8 +1,8 @@
 class Roapi < Formula
   desc "Full-fledged APIs for static datasets without writing a single line of code"
   homepage "https://roapi.github.io/docs"
-  url "https://github.com/roapi/roapi/archive/refs/tags/roapi-v0.12.6.tar.gz"
-  sha256 "15b4f7c7b16b1fa87a487569d42e76355acbce9ecdaaa34bf1203326d77e7b57"
+  url "https://github.com/roapi/roapi/archive/refs/tags/roapi-v0.12.7.tar.gz"
+  sha256 "97d30e5f8d8ea9292a05ab67925ca71246c96cdc82d690a95242b186d656c714"
   license "Apache-2.0"
 
   bottle do
@@ -16,17 +16,6 @@ class Roapi < Formula
   end
 
   depends_on "rust" => :build
-
-  # Fix to error: hiding a lifetime that's elided elsewhere is confusing
-  # Should remove on next release
-  patch do
-    url "https://github.com/roapi/roapi/commit/f01f6b4d9e08638052afbde907316052bb241856.patch?full_index=1"
-    sha256 "ad02d21a2327d18b0d60b59a56c8d2019b76627be793ed3ab330be95a4e1b79b"
-  end
-  patch do
-    url "https://github.com/roapi/roapi/commit/162dbfe5ad1b6815691b33fc9cc096e37773d767.patch?full_index=1"
-    sha256 "00786352042683d2c7951d41a72fe69bd67f04bab1420016f758f0ddae8bb88b"
-  end
 
   def install
     # skip default features like snmalloc which errs on ubuntu 16.04
