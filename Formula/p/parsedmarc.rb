@@ -3,8 +3,8 @@ class Parsedmarc < Formula
 
   desc "DMARC report analyzer and visualizer"
   homepage "https://domainaware.github.io/parsedmarc/"
-  url "https://files.pythonhosted.org/packages/19/ae/ab3ca937e2ab57967081b0c23b06dfe9422e8c5cd435ea8368e0b12e64f4/parsedmarc-9.3.0.tar.gz"
-  sha256 "f50d7cd50963d7062e1895ac72dafc1054e9151f0348755b6df3aff12500f83e"
+  url "https://files.pythonhosted.org/packages/77/98/7ab8491c721c1c1d0bf66a063097a9764a485ce92dc1dada75a821e2b752/parsedmarc-9.3.1.tar.gz"
+  sha256 "2ce021e585436acb2411a0c8c62ea70237854a7d20476090574fc063e4e79388"
   license "Apache-2.0"
   head "https://github.com/domainaware/parsedmarc.git", branch: "master"
 
