@@ -1,10 +1,9 @@
 class IncludeWhatYouUse < Formula
   desc "Tool to analyze #includes in C and C++ source files"
   homepage "https://include-what-you-use.org/"
-  url "https://include-what-you-use.org/downloads/include-what-you-use-0.25.src.tar.gz"
-  sha256 "be81f9d5498881462465060ddc28b587c01254255c706d397d1a494d69eb5efd"
+  url "https://include-what-you-use.org/downloads/include-what-you-use-0.26.src.tar.gz"
+  sha256 "5247c0c9a59df9d14e8aa7408ffec4134c6a4aef12f590929111fbfeac930a08"
   license "NCSA"
-  revision 2
   head "https://github.com/include-what-you-use/include-what-you-use.git", branch: "master"
 
   # This omits the 3.3, 3.4, and 3.5 versions, which come from the older
@@ -26,7 +25,7 @@ class IncludeWhatYouUse < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "llvm@21"
+  depends_on "llvm"
   uses_from_macos "ncurses"
 
   on_linux do
