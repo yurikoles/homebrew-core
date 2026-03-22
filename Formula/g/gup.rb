@@ -1,8 +1,8 @@
 class Gup < Formula
   desc "Update binaries installed by go install"
   homepage "https://github.com/nao1215/gup"
-  url "https://github.com/nao1215/gup/archive/refs/tags/v1.1.3.tar.gz"
-  sha256 "64845b14b5974e5a314e056c16404fad08cec1a34ffd7d531b4e032b4cebd996"
+  url "https://github.com/nao1215/gup/archive/refs/tags/v1.1.4.tar.gz"
+  sha256 "1ee4963e602925237f540ee11c2114dae2ab21bbd816ccecb70f700cfb9813b9"
   license "Apache-2.0"
   head "https://github.com/nao1215/gup.git", branch: "main"
 
