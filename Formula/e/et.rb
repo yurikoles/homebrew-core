@@ -5,6 +5,15 @@ class Et < Formula
   sha256 "e8e80800babc026be610d50d402a8ecbdfbd39e130d1cfeb51fb102c1ad63b0f"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "c14ad953bcc4571ce51e889d15557bad0a15ddb203d8b73bf0ccac823f5f1405"
+    sha256 cellar: :any,                 arm64_sequoia: "161e483009fa29de8ef1db8e0fd6d3a7d63e97d0814e170a702daf224590af12"
+    sha256 cellar: :any,                 arm64_sonoma:  "4e223a932b062e0eac5f6147def2b4cac109b23f772d96b381ba34706b623fe4"
+    sha256 cellar: :any,                 sonoma:        "acdda6aa6132c0e9652c901c806acd5f3d2a05b71a1f73c8ab182b8dea643dc2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "776af490681d4b07a0ab51a5dd3bd1164b7db1d7064d0195c36d8ebcb3ba76df"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0cc0303a8c6dd42fddfc899880ee2f60d3264817837a628bcd2e6595005f8e3b"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
 
