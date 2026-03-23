@@ -11,13 +11,12 @@ class Oclgrind < Formula
   end
 
   bottle do
-    rebuild 3
-    sha256 cellar: :any,                 arm64_tahoe:   "5125b9afb6956eca58806399252680b2e90a085bdffb3fa4549245f3549be711"
-    sha256 cellar: :any,                 arm64_sequoia: "c01a0c14afb634bcd2ccd552bb958484b447101e106bcbe13f86b2d7c207e69c"
-    sha256 cellar: :any,                 arm64_sonoma:  "8f2733e4d37f63d59c26e494e777cf2ac0b4c7d70282c86a7c1715e6a0f94e0b"
-    sha256 cellar: :any,                 sonoma:        "925f7da504e7ea5a8778d2074c75f6931ff435e528643c25f165212587233a63"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "15e5413070e0711c302d2493d34b3c37d03ed3ab84eedc212099e4fcaa5fbde4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "70b8d27cfcae4a9a284637525781d1c6c7b61b7236bfb94142341453af3f3fa5"
+    sha256 cellar: :any,                 arm64_tahoe:   "aae02edae15b83a6def6ea7eeb6f3704fb0a00d4c41f584f76a77dcdbd65ce65"
+    sha256 cellar: :any,                 arm64_sequoia: "f6c1c97a416c86005e139526b71ee15c4a69f1034c0a866e005a8a6456b4f162"
+    sha256 cellar: :any,                 arm64_sonoma:  "a09b5cd362971cd593b09073addab6934e8a722a5560f126c97f410749ae6cf3"
+    sha256 cellar: :any,                 sonoma:        "c031c0023646178f4f0cf6c5e24bf82a399832d942c00e227f1dab0adcb657dc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "20b53a0ed9e7a6fbc94bbf1e5d5daf0b7d80df2bbb3e83411f5deba007f0dd1d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ddc0208b7338e109df4c48e5a97980d87ff0e47dc0e84f089f35dc7002b6be2"
   end
 
   depends_on "cmake" => :build
