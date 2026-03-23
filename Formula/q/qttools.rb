@@ -10,10 +10,10 @@ class Qttools < Formula
   head "https://code.qt.io/qt/qttools.git", branch: "dev"
 
   stable do
-    url "https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qttools-everywhere-src-6.10.2.tar.xz"
-    mirror "https://qt.mirror.constant.com/archive/qt/6.10/6.10.2/submodules/qttools-everywhere-src-6.10.2.tar.xz"
-    mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.10/6.10.2/submodules/qttools-everywhere-src-6.10.2.tar.xz"
-    sha256 "1e3d2c07c1fd76d2425c6eaeeaa62ffaff5f79210c4e1a5bc2a6a9db668d5b24"
+    url "https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qttools-everywhere-src-6.11.0.tar.xz"
+    mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.0/submodules/qttools-everywhere-src-6.11.0.tar.xz"
+    mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.0/submodules/qttools-everywhere-src-6.11.0.tar.xz"
+    sha256 "cfb1993d7a10848965b01b9cf33a54b8a4ba4e5e3a6d28d59483e73f10d9fc76"
 
     # Backport fix for build on Linux
     patch do
@@ -54,11 +54,7 @@ class Qttools < Formula
     # Modify Assistant path as we manually move `*.app` bundles from `bin` to `prefix`.
     # This fixes invocation of Assistant via the Help menu of apps like Designer and
     # Linguist as they originally relied on Assistant.app being in `bin`.
-    assistant_files = %w[
-      src/designer/src/designer/assistantclient.cpp
-      src/linguist/linguist/mainwindow.cpp
-    ]
-    inreplace assistant_files, '"Assistant.app/Contents/MacOS/Assistant"', '"Assistant"'
+    inreplace "src/shared/helpclient/assistantclient.cpp", '"Assistant.app/Contents/MacOS/Assistant"', '"Assistant"'
 
     # We disable clang feature to avoid linkage to `llvm`. This is how we have always
     # built on macOS and it prevents complicating `llvm` version bumps on Linux.
