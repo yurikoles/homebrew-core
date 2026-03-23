@@ -196,9 +196,8 @@ class Node < Formula
     ln_s libexec/"lib/node_modules/npm/bin/npm-cli.js", bin/"npm"
     ln_s libexec/"lib/node_modules/npm/bin/npx-cli.js", bin/"npx"
 
-    generate_completions_from_executable(bin/"npm", "completion",
-                                         shells:                 [:bash, :zsh],
-                                         shell_parameter_format: :none)
+    # Use the _npm completion included in Zsh rather than generating broken completion
+    generate_completions_from_executable(bin/"npm", "completion", shells: [:bash], shell_parameter_format: :none)
   end
 
   def post_install
