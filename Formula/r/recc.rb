@@ -1,10 +1,9 @@
 class Recc < Formula
   desc "Remote Execution Caching Compiler"
   homepage "https://buildgrid.gitlab.io/recc"
-  url "https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.0/buildbox-1.4.0.tar.gz"
-  sha256 "002e84e2dadc90a4784dac9bb997eab3f150dc801b091f78c84bf4e892439a25"
+  url "https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.1/buildbox-1.4.1.tar.gz"
+  sha256 "3463e6ed7100dc8ae601cfa38badc3fd9e771873980defc5a583fd8d251f9118"
   license "Apache-2.0"
-  revision 1
   head "https://gitlab.com/BuildGrid/buildbox/buildbox.git", branch: "master"
 
   bottle do
@@ -40,12 +39,6 @@ class Recc < Formula
     depends_on "pkgconf" => :build
     depends_on "util-linux"
     depends_on "zlib-ng-compat"
-  end
-
-  # Fix macOS libc++ build, upstream pr ref, https://gitlab.com/BuildGrid/buildbox/buildbox/-/merge_requests/1129
-  patch do
-    url "https://gitlab.com/BuildGrid/buildbox/buildbox/-/commit/63aca98a79778242057f40a25f8cbceda4849265.diff?full_index=1"
-    sha256 "2dd44e6bebaca37d78b2d26cdf96ebbb6b269cd21031a17907e986da29548b6d"
   end
 
   def install
