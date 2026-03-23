@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/9e/da/c94259c9cdb05ac6860015ea3438ab6eed2b29fa4dd2d55bfa11b4562cd9/flexget-3.19.3.tar.gz"
-  sha256 "b723b6635083ae2af4433de7640eeb35d29e14ae54ca9d7c680917106917f331"
+  url "https://files.pythonhosted.org/packages/59/c5/dfefbc4fc469e26ba3ce186356e3d85e3a681f27754b9daeb9cdbd3b4c62/flexget-3.19.4.tar.gz"
+  sha256 "217039d5c30688c300d2140ec79e50c2d020bcea53a910d255b67de3e7f7bfef"
   license "MIT"
 
   bottle do
@@ -41,8 +41,8 @@ class Flexget < Formula
   end
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz"
-    sha256 "16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11"
+    url "https://files.pythonhosted.org/packages/9a/8e/82a0fe20a541c03148528be8cac2408564a6c9a0cc7e9171802bc1d26985/attrs-26.1.0.tar.gz"
+    sha256 "d03ceb89cb322a8fd706d4fb91940737b6642aa36998fe130a9bc96c985eff32"
   end
 
   resource "babelfish" do
@@ -165,8 +165,8 @@ class Flexget < Formula
   end
 
   resource "jaraco-context" do
-    url "https://files.pythonhosted.org/packages/27/7b/c3081ff1af947915503121c649f26a778e1a2101fd525f74aef997d75b7e/jaraco_context-6.1.1.tar.gz"
-    sha256 "bc046b2dc94f1e5532bd02402684414575cc11f565d929b6563125deb0a6e581"
+    url "https://files.pythonhosted.org/packages/af/50/4763cd07e722bb6285316d390a164bc7e479db9d90daa769f22578f698b4/jaraco_context-6.1.2.tar.gz"
+    sha256 "f1a6c9d391e661cc5b8d39861ff077a7dc24dc23833ccee564b234b81c82dfe3"
   end
 
   resource "jaraco-functools" do
