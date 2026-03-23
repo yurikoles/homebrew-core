@@ -1,10 +1,10 @@
 class Qtquick3d < Formula
   desc "Provides a high-level API for creating 3D content or UIs based on Qt Quick"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qtquick3d-everywhere-src-6.10.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.10/6.10.2/submodules/qtquick3d-everywhere-src-6.10.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.10/6.10.2/submodules/qtquick3d-everywhere-src-6.10.2.tar.xz"
-  sha256 "b95439f31d1e580c379e9828b48b03b932b0bdade4ff09f4dd639eff9da2cd75"
+  url "https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtquick3d-everywhere-src-6.11.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.0/submodules/qtquick3d-everywhere-src-6.11.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.0/submodules/qtquick3d-everywhere-src-6.11.0.tar.xz"
+  sha256 "b42000bb33e55b6c642657eb7022ee1f74f9e19cf64d52e85d41763f567b8994"
   license all_of: [
     "GPL-3.0-only",
     { "GPL-3.0-only" => { with: "Qt-GPL-exception-1.0" } },
@@ -47,8 +47,8 @@ class Qtquick3d < Formula
   # Apply Arch Linux patches for assimp 6 support
   # Issue ref: https://bugreports.qt.io/browse/QTBUG-137996
   patch do
-    url "https://gitlab.archlinux.org/archlinux/packaging/packages/qt6-quick3d/-/raw/2c6f918ee81adb61290cf56453c2d67e5dce259f/assimp-6.patch"
-    sha256 "573f00cdad90d77786fba80066d61d5ee97fc56a8b11d0896949acd16bda8e91"
+    url "https://gitlab.archlinux.org/archlinux/packaging/packages/qt6-quick3d/-/raw/547cb929d0a03fdf817fdf2655629bcb9b75505d/assimp-6.patch"
+    sha256 "394b5f26877477c4ceba252c06a6a2101f5e99e3dddc01cc8831e7fa7d70f797"
   end
 
   def install
