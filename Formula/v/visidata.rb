@@ -14,6 +14,18 @@ class Visidata < Formula
 
   depends_on "python@3.14"
 
+  pypi_packages extra_packages: "openpyxl"
+
+  resource "et-xmlfile" do
+    url "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz"
+    sha256 "dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54"
+  end
+
+  resource "openpyxl" do
+    url "https://files.pythonhosted.org/packages/3d/f9/88d94a75de065ea32619465d2f77b29a0469500e99012523b91cc4141cd1/openpyxl-3.1.5.tar.gz"
+    sha256 "cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050"
+  end
+
   resource "python-dateutil" do
     url "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz"
     sha256 "37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"
@@ -47,5 +59,8 @@ class Visidata < Formula
     CSV
 
     assert_match "age", shell_output("#{bin}/vd -b -f csv test.csv")
+
+    # Verify xlsx support (openpyxl) is available
+    system libexec/"bin/python", "-c", "import openpyxl"
   end
 end
