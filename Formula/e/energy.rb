@@ -6,6 +6,11 @@ class Energy < Formula
   license "Apache-2.0"
   head "https://github.com/energye/energy.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3f1c4d8d7329b810db0084e6fc69404fabc13ceda82d4b309406d15af639a9ca"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "7694c978d9ff392a86dad2767ab0b69516522c03797e04b995268b51b1d772a6"
