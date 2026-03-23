@@ -1,10 +1,10 @@
 class Qtwayland < Formula
   desc "Wayland platform plugin and QtWaylandCompositor API"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qtwayland-everywhere-src-6.10.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.10/6.10.2/submodules/qtwayland-everywhere-src-6.10.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.10/6.10.2/submodules/qtwayland-everywhere-src-6.10.2.tar.xz"
-  sha256 "391998eb432719df26a6a67d8efdc67f8bf2afdd76c1ee3381ebff4fe7527ee2"
+  url "https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtwayland-everywhere-src-6.11.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.0/submodules/qtwayland-everywhere-src-6.11.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.0/submodules/qtwayland-everywhere-src-6.11.0.tar.xz"
+  sha256 "e710e6e760f92922b86e4dd68f6bbe94ef6510919519d1b0068e874b5ad84d37"
   license all_of: [
     "GPL-3.0-only", # WaylandCompositor
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] }, # WaylandClient
