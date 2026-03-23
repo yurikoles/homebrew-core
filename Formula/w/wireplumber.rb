@@ -5,6 +5,11 @@ class Wireplumber < Formula
   sha256 "056033cd4fa551b947eebd697bbf78fa9e6baf8f7f12cb5395656aa619de4946"
   license "MIT"
 
+  bottle do
+    sha256 arm64_linux:  "865827696fad49a5efaa7d323ae681c07e8a55aaad8afaac2870a9a41139b707"
+    sha256 x86_64_linux: "9f51222ae212186d054843dd2e7f3557fe56c80f10bb8c8b234d85b9a088a24d"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
