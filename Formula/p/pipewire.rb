@@ -3,7 +3,11 @@ class Pipewire < Formula
   homepage "https://pipewire.org"
   url "https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.2/pipewire-1.6.2.tar.gz"
   sha256 "2014c187fccdd6d245585be4eda7dabd781dcddd921604c40ab015bba6cb042d"
-  license all_of: ["GPL-2.0-only", "LGPL-2.1-or-later", "MIT"]
+  license all_of: [
+    "MIT",
+    "GPL-2.0-only",      # libjackserver.so
+    "LGPL-2.1-or-later", # libspa-alsa.so
+  ]
   head "https://gitlab.freedesktop.org/pipewire/pipewire.git", branch: "master"
 
   # We restrict matching to versions with an even-numbered minor version number,
@@ -15,9 +19,9 @@ class Pipewire < Formula
   end
 
   bottle do
-    rebuild 2
-    sha256 arm64_linux:  "4a0a676f56fbad5390b6b1c64223702fff09ef776b1ff02b6c9e819c672f6941"
-    sha256 x86_64_linux: "c7db79b782d57497febeeb84c7a8c3e733a17cda3312ccab4bba09ff879ffd67"
+    rebuild 3
+    sha256 arm64_linux:  "572d431263ce7c0eabb028b14b223ede107c4b4cb0c57636211233cb2e9579e2"
+    sha256 x86_64_linux: "b720368f7ef595d040cd68d8ae3631933fcca03ea1b06e51ee791042c7202159"
   end
 
   depends_on "meson" => :build
@@ -27,7 +31,6 @@ class Pipewire < Formula
   depends_on "dbus"
   depends_on "fftw"
   depends_on "glib"
-  depends_on "gstreamer"
   depends_on "libsndfile"
   depends_on :linux
   depends_on "ncurses"
@@ -40,6 +43,8 @@ class Pipewire < Formula
   def install
     args = %W[
       -Dexamples=disabled
+      -Dgstreamer=disabled
+      -Dgstreamer-device-provider=disabled
       -Dsession-managers=[]
       -Dsysconfdir=#{etc}
       -Dtests=disabled
