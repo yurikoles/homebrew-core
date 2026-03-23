@@ -1,10 +1,10 @@
 class Qtlocation < Formula
   desc "Provides C++ interfaces to retrieve location and navigational information"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qtlocation-everywhere-src-6.10.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.10/6.10.2/submodules/qtlocation-everywhere-src-6.10.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.10/6.10.2/submodules/qtlocation-everywhere-src-6.10.2.tar.xz"
-  sha256 "d313f05dedc593517c47d0fa3eb131a2597c01db23de263fe89fea561be50f3c"
+  url "https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtlocation-everywhere-src-6.11.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.0/submodules/qtlocation-everywhere-src-6.11.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.0/submodules/qtlocation-everywhere-src-6.11.0.tar.xz"
+  sha256 "89b8386a8ae9e0b40a43fad398ac344f93a3b0d22f09bec4631f25d79135abef"
   license all_of: [
     { any_of: ["LGPL-3.0-only", "GPL-2.0-only", "GPL-3.0-only"] },
     "BSD-3-Clause", # *.cmake
