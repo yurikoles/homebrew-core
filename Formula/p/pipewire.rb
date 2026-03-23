@@ -30,7 +30,6 @@ class Pipewire < Formula
   depends_on "gstreamer"
   depends_on "libsndfile"
   depends_on :linux
-  depends_on "lua"
   depends_on "ncurses"
   depends_on "openssl@3"
   depends_on "opus"
@@ -41,9 +40,10 @@ class Pipewire < Formula
   def install
     args = %W[
       -Dexamples=disabled
+      -Dsession-managers=[]
+      -Dsysconfdir=#{etc}
       -Dtests=disabled
       -Dudevrulesdir=#{lib}/udev/rules.d
-      -Dwireplumber:system-lua=true
     ]
 
     system "meson", "setup", "build", *args, *std_meson_args
