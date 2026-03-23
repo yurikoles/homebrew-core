@@ -1,8 +1,8 @@
 class PiCodingAgent < Formula
   desc "AI agent toolkit"
   homepage "https://pi.dev/"
-  url "https://registry.npmjs.org/@mariozechner/pi-coding-agent/-/pi-coding-agent-0.61.1.tgz"
-  sha256 "bea9e2dee91ce03b07d669f31090d8c1bf60f9b2252ae1cb53bd499c37068203"
+  url "https://registry.npmjs.org/@mariozechner/pi-coding-agent/-/pi-coding-agent-0.62.0.tgz"
+  sha256 "60e07c4a7cab63e8a066dab4397244df7ec0971371b8ffbf45b624b7a3b30d30"
   license "MIT"
 
   bottle do
@@ -32,7 +32,7 @@ class PiCodingAgent < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/pi --version")
+    assert_match version.to_s, shell_output("#{bin}/pi --version 2>&1")
 
     ENV["GEMINI_API_KEY"] = "invalid_key"
     output = shell_output("#{bin}/pi -p 'foobar' 2>&1", 1)
