@@ -15,9 +15,9 @@ class Pipewire < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_linux:  "b95f6d975e3b592509118a9d80764e7f0a423ecca22349ca33019f1f0a1cda17"
-    sha256 x86_64_linux: "bfe9e2897ff11be6884c59ad00a1f7cd3a13099dd6f94776c1ecbf32e89ecae8"
+    rebuild 2
+    sha256 arm64_linux:  "4a0a676f56fbad5390b6b1c64223702fff09ef776b1ff02b6c9e819c672f6941"
+    sha256 x86_64_linux: "c7db79b782d57497febeeb84c7a8c3e733a17cda3312ccab4bba09ff879ffd67"
   end
 
   depends_on "meson" => :build
@@ -30,7 +30,6 @@ class Pipewire < Formula
   depends_on "gstreamer"
   depends_on "libsndfile"
   depends_on :linux
-  depends_on "lua"
   depends_on "ncurses"
   depends_on "openssl@3"
   depends_on "opus"
@@ -41,9 +40,10 @@ class Pipewire < Formula
   def install
     args = %W[
       -Dexamples=disabled
+      -Dsession-managers=[]
+      -Dsysconfdir=#{etc}
       -Dtests=disabled
       -Dudevrulesdir=#{lib}/udev/rules.d
-      -Dwireplumber:system-lua=true
     ]
 
     system "meson", "setup", "build", *args, *std_meson_args
