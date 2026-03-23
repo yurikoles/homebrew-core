@@ -4,6 +4,7 @@ class Stgit < Formula
   url "https://github.com/stacked-git/stgit/releases/download/v2.5.5/stgit-2.5.5.tar.gz"
   sha256 "9d84329c84bbb3e84b97b57aa29a79aa69f13c896f05842cd3a0f46fff3afe57"
   license "GPL-2.0-only"
+  revision 1
   head "https://github.com/stacked-git/stgit.git", branch: "master"
 
   bottle do
@@ -23,10 +24,6 @@ class Stgit < Formula
   depends_on "git"
 
   uses_from_macos "curl"
-
-  on_macos do
-    depends_on "libiconv"
-  end
 
   on_linux do
     depends_on "zlib-ng-compat"
