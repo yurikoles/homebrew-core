@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/c2/80/abe8f715c45c311661aef3918163630f96dd8c2e71526439df879f99ce62/esphome-2026.3.0.tar.gz"
-  sha256 "bcb4e574aa113635bdc24dc1b5c3d9a13f7a8d280190ec263914f98ef6bf8938"
+  url "https://files.pythonhosted.org/packages/59/1d/2b65d610882e26182a663c1a4ddfa7a284ec34c069a4e277068791533981/esphome-2026.3.1.tar.gz"
+  sha256 "68d24638e3d2ae813fdf170584804f668ab82c6cc3d0fb2a6c55a68e1a891647"
   license "MIT"
   head "https://github.com/esphome/esphome.git", branch: "dev"
 
@@ -41,8 +41,8 @@ class Esphome < Formula
                 extra_packages:   %w[chardet dbus-fast pyobjc-framework-corebluetooth pyobjc-framework-libdispatch]
 
   resource "aioesphomeapi" do
-    url "https://files.pythonhosted.org/packages/02/12/6f0436da20bb307e96cc17c4863c77566c3edcf3917359e75f9dbf473053/aioesphomeapi-44.5.2.tar.gz"
-    sha256 "b4fdc28e4c229aced1102ef8228b967b488da5b00abeaa3ba6c68cf4cc9e710e"
+    url "https://files.pythonhosted.org/packages/53/a7/d94818fa0f33a82f064a33c6dc213b6aff8619263ac8d4a2b6fe9323c657/aioesphomeapi-44.6.2.tar.gz"
+    sha256 "f6dd99343f592c6404c4f9636176fceaff8ad4758db944edabe0a9575a1d55ef"
   end
 
   resource "aiohappyeyeballs" do
@@ -91,8 +91,8 @@ class Esphome < Formula
   end
 
   resource "cbor2" do
-    url "https://files.pythonhosted.org/packages/d9/8e/8b4fdde28e42ffcd741a37f4ffa9fb59cd4fe01625b544dfcfd9ccb54f01/cbor2-5.8.0.tar.gz"
-    sha256 "b19c35fcae9688ac01ef75bad5db27300c2537eb4ee00ed07e05d8456a0d4931"
+    url "https://files.pythonhosted.org/packages/bd/cb/09939728be094d155b5d4ac262e39877875f5f7e36eea66beb359f647bd0/cbor2-5.9.0.tar.gz"
+    sha256 "85c7a46279ac8f226e1059275221e6b3d0e370d2bb6bd0500f9780781615bcea"
   end
 
   resource "chacha20poly1305-reuseable" do
@@ -221,8 +221,8 @@ class Esphome < Formula
   end
 
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/f2/00/04a2ab36b70a52d0356852979e08b44edde0435f2115dc66e25f2100f3ab/protobuf-7.34.0.tar.gz"
-    sha256 "3871a3df67c710aaf7bb8d214cc997342e63ceebd940c8c7fc65c9b3d697591a"
+    url "https://files.pythonhosted.org/packages/6b/6b/a0e95cad1ad7cc3f2c6821fcab91671bd5b78bd42afb357bb4765f29bc41/protobuf-7.34.1.tar.gz"
+    sha256 "9ce42245e704cc5027be797c1db1eb93184d44d1cdd71811fb2d9b25ad541280"
   end
 
   resource "puremagic" do
