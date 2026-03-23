@@ -7,12 +7,12 @@ class Models < Formula
   head "https://github.com/arimxyer/models.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3f2051ebae1aee081bec53e5c244cc4b4e2a9ebdf8378a4894bcd1806cac64be"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "43b8c3d36f7497c1b6aa4d77030468e663fe044310ee1ffda0635397419d2bb1"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6faee0b3e71844f2c42c4986c0a35e705429c66affb52b37eb750ac85fefe05f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1c24121086231e4e0fc1aae1e785894483491f81e7f094d6756909508bd2943b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b55efd2b2aabd86cc21fa25fd6927c966f30b59e238a4301c76ac416d82f25fe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cb4995fa9e7ea3b874dbfe42c0d893ac313a7592121c7f3f570abdb45a59cfc"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "27135b33e03d3ccedd8f3dce355fb376583a8091d6f1e4c0b45322bda829b91e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6d36da836bfcc4df244656dac479ec668e71c139fcc14c15985ef2dc4397a761"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d4c34848587f333d8ef19d9eaeba0a37544791c05ffda1f4e9081fc8a81bfa08"
+    sha256 cellar: :any_skip_relocation, sonoma:        "27c0be1d3f9450cc23beefe381b613f4af8814a10f2ce6b4086a8f3032eb651d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "463649619857e6fda1f520f592f134b93c2a09e42ecd7771bc5d495620a283f5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bc8ce01919baf34ad2a16d1171408f2cd803fe7c756534c1f0e4b7ff05970b96"
   end
 
   depends_on "rust" => :build
