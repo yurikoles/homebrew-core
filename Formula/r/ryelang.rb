@@ -1,8 +1,8 @@
 class Ryelang < Formula
   desc "Rye is a homoiconic programming language focused on fluid expressions"
   homepage "https://ryelang.org/"
-  url "https://github.com/refaktor/rye/archive/refs/tags/v0.2.4.tar.gz"
-  sha256 "e7dc24cd60c3f23ffad0f357ed143bc7c96a02fe244a3a9d535f3b9d0b97be33"
+  url "https://github.com/refaktor/rye/archive/refs/tags/v0.2.5.tar.gz"
+  sha256 "545bacf885ffb407e39c7f121dba59429b721921e1213fdc61ed79c0f531caf0"
   license "BSD-3-Clause"
   head "https://github.com/refaktor/rye.git", branch: "main"
 
