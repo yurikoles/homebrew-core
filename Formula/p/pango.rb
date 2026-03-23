@@ -16,12 +16,12 @@ class Pango < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "666e399270228506a57d243de5c340c42de149abc9c3a75b01044417f8db6222"
-    sha256 cellar: :any, arm64_sequoia: "e5e1310e53ccc4258f523df667f092dcf694f01e9a700883f15121ca23fb1714"
-    sha256 cellar: :any, arm64_sonoma:  "e346d0be5c3608d82e370e02cac4e0b8112a925cafe733d5f8219f593c02cf92"
-    sha256 cellar: :any, sonoma:        "0da3e9d5b786f46857fa9372b8644da690f3902421f5996e9bb058525cdf6d67"
-    sha256               arm64_linux:   "c3e8f72ff6a5385bd5f24ec2bf7ec1f656c11bdb6ad57cc912a35d21db6ee3cd"
-    sha256               x86_64_linux:  "da9d2d48f51a6364f7e3edac502478231ccffab76ad8775ca3555ce87d39f524"
+    sha256 cellar: :any, arm64_tahoe:   "5b77d8e0844bbfd23f6942aee1a1ad6caa380b5b49f01cddbb3240565f955c8a"
+    sha256 cellar: :any, arm64_sequoia: "f079f30f49b58e5be5932904e3bf303c3394d2029bd87cb44189cb816eb1b3a6"
+    sha256 cellar: :any, arm64_sonoma:  "1025ba606d675f9421b8b9faa6f32a6ef7e25e199cb53014a06a936e79202381"
+    sha256 cellar: :any, sonoma:        "65de49a9b1973a600d0c273da3a557b91d166e4d721f31a7a03bca4967b85fc4"
+    sha256               arm64_linux:   "7890c0f7859c0a9ac1c3de79f2d34b59159117f1d7ba2a638e0ada8636ff6f20"
+    sha256               x86_64_linux:  "b2261ea43e6c3e1716dbfdad810cc34e6ac60ab0eb8b57959fd80f4097db3dc2"
   end
 
   depends_on "gobject-introspection" => :build
