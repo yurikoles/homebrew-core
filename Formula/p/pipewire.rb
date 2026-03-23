@@ -3,7 +3,11 @@ class Pipewire < Formula
   homepage "https://pipewire.org"
   url "https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.2/pipewire-1.6.2.tar.gz"
   sha256 "2014c187fccdd6d245585be4eda7dabd781dcddd921604c40ab015bba6cb042d"
-  license all_of: ["GPL-2.0-only", "LGPL-2.1-or-later", "MIT"]
+  license all_of: [
+    "MIT",
+    "GPL-2.0-only",      # libjackserver.so
+    "LGPL-2.1-or-later", # libspa-alsa.so
+  ]
   head "https://gitlab.freedesktop.org/pipewire/pipewire.git", branch: "master"
 
   # We restrict matching to versions with an even-numbered minor version number,
@@ -27,7 +31,6 @@ class Pipewire < Formula
   depends_on "dbus"
   depends_on "fftw"
   depends_on "glib"
-  depends_on "gstreamer"
   depends_on "libsndfile"
   depends_on :linux
   depends_on "ncurses"
@@ -40,6 +43,8 @@ class Pipewire < Formula
   def install
     args = %W[
       -Dexamples=disabled
+      -Dgstreamer=disabled
+      -Dgstreamer-device-provider=disabled
       -Dsession-managers=[]
       -Dsysconfdir=#{etc}
       -Dtests=disabled
