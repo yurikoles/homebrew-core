@@ -8,12 +8,12 @@ class Flexget < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "af77d473204a4a58ce8f08952df0c43cba2a74384cb0458a07d151dd0c2683fc"
-    sha256 cellar: :any,                 arm64_sequoia: "726c31027e3e5e0bec16f3dbdb95480bf60d15bdc8c1ae27c1d2a85898bfecec"
-    sha256 cellar: :any,                 arm64_sonoma:  "41d26ae62e3ecd3af5dcc64d3d4db6a08fafe5d4160b50c0688ce170b368304d"
-    sha256 cellar: :any,                 sonoma:        "cdf7ba2b6d79d567a14a0eb040d4d682f673b47db512f4bb0bcb3a8853067971"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "144a6f98b5a6b60ca0a15f2a070d0c1f927a1157e921d39f1de3fdda757ba3e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e480a1dae1b1db40fbc64d8646270a1bb6eee684b62e3af344312c936fe91095"
+    sha256 cellar: :any,                 arm64_tahoe:   "ad2fdd93fca7c31e5ca787cb648f4e4f145e213b76948fb5affe95aa1344cef9"
+    sha256 cellar: :any,                 arm64_sequoia: "77c1ae9346967b0ffeec64f63f269c77ad8a7f352fce3259df247e09841e138c"
+    sha256 cellar: :any,                 arm64_sonoma:  "420e820f1afa6e4d381f7e5e86cfcb10c6ba1ae4514bd05949954a1dc6cf4ab7"
+    sha256 cellar: :any,                 sonoma:        "e36aa8c7cf32b0b16c628f768246e3412c1b674f8788ea45c5f64e8912080838"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ad74b3fe3a6d0b0ea833db6391c23bfd7adecdd4e086887732db9831ab588da0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7a3a9c428bfdfa1f52295825a8683e8c9d3ff85af62a4aa3080e3b0d21c6a95c"
   end
 
   depends_on "rust" => :build
