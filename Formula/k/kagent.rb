@@ -1,8 +1,8 @@
 class Kagent < Formula
   desc "Kubernetes native framework for building AI agents"
   homepage "https://kagent.dev"
-  url "https://github.com/kagent-dev/kagent/archive/refs/tags/v0.7.23.tar.gz"
-  sha256 "67c2aff4d69b3de3cd57b11d530af2d1a4f64c57cf0a769f71732cd1773fe330"
+  url "https://github.com/kagent-dev/kagent/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "aa1f321ed176f2d236268054f84449a5e414e323c7a01e1591385f7b07f51071"
   license "Apache-2.0"
   head "https://github.com/kagent-dev/kagent.git", branch: "main"
 
@@ -21,11 +21,11 @@ class Kagent < Formula
   def install
     cd "go" do
       ldflags = %W[
-        -X github.com/kagent-dev/kagent/go/internal/version.Version=#{version}
-        -X github.com/kagent-dev/kagent/go/internal/version.GitCommit=#{tap.user}
-        -X github.com/kagent-dev/kagent/go/internal/version.BuildDate=#{Time.now.strftime("%Y-%m-%d")}
+        -X github.com/kagent-dev/kagent/go/core/internal/version.Version=#{version}
+        -X github.com/kagent-dev/kagent/go/core/internal/version.GitCommit=#{tap.user}
+        -X github.com/kagent-dev/kagent/go/core/internal/version.BuildDate=#{Time.now.strftime("%Y-%m-%d")}
       ]
-      system "go", "build", *std_go_args(ldflags:), "./cli/cmd/kagent"
+      system "go", "build", *std_go_args(ldflags:), "./core/cli/cmd/kagent"
     end
 
     generate_completions_from_executable(bin/"kagent", shell_parameter_format: :cobra)
