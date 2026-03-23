@@ -3,10 +3,10 @@ class Dotdrop < Formula
 
   desc "Save your dotfiles once, deploy them everywhere"
   homepage "https://github.com/deadc0de6/dotdrop"
-  url "https://files.pythonhosted.org/packages/66/a7/8c8f1d7268bcb0ae3f7e43d8b0da03ad0c1336baabbd4b9ce88a4b1d7b36/dotdrop-1.15.0.tar.gz"
-  sha256 "7e7b5558a66ac514c3861e0bb31262d5972bc15fc97c1402aef8cccffd0bde61"
+  # TODO: check if source is available on pypi distribution: https://pypi.org/project/dotdrop/#files
+  url "https://github.com/deadc0de6/dotdrop/archive/refs/tags/v1.16.0.tar.gz"
+  sha256 "2b2f87214e3f12ea83a7b297558e55c628bc3a1d86a8e63bd16a9793a45fb418"
   license "GPL-3.0-or-later"
-  revision 6
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7d919b35517a87294b333d3724b7220faa43cebfa9e818709866eae9e8f4c6c5"
@@ -24,8 +24,8 @@ class Dotdrop < Formula
   pypi_packages exclude_packages: "certifi"
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz"
-    sha256 "94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a"
+    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
+    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
   end
 
   resource "distro" do
@@ -54,8 +54,8 @@ class Dotdrop < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
-    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   resource "python-magic" do
