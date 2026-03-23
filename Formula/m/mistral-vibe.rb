@@ -3,8 +3,8 @@ class MistralVibe < Formula
 
   desc "Minimal CLI coding agent"
   homepage "https://github.com/mistralai/mistral-vibe"
-  url "https://files.pythonhosted.org/packages/29/28/cc30b86131addbe579db7d8099237524559b75ec4f70b0a2f476d2c3afad/mistral_vibe-2.6.1.tar.gz"
-  sha256 "150990a009557ee243f430e5158185fdd01881b58038f3094aa094a547254a98"
+  url "https://files.pythonhosted.org/packages/82/06/567cba2840e4474ab2ddbc48e7f6dbc0eb7921638b6f12c51c2fbf58419d/mistral_vibe-2.6.2.tar.gz"
+  sha256 "36a8590202081a9691994f3515e80f6e89af9e3fc98f0a60eeeb32a9ef03ef95"
   license "Apache-2.0"
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
@@ -28,8 +28,8 @@ class MistralVibe < Formula
   pypi_packages exclude_packages: %w[certifi cryptography pydantic rpds-py]
 
   resource "agent-client-protocol" do
-    url "https://files.pythonhosted.org/packages/1b/dc/1ec56897b461fbdb844c9bff3abbbe225bfe8cda020dc2449101a6d76592/agent_client_protocol-0.9.0a1.tar.gz"
-    sha256 "9e6fc8b72df465279470920d679c871e0c658f69212e345563cc69b17906b606"
+    url "https://files.pythonhosted.org/packages/1b/7b/7cdac86db388809d9e3bc58cac88cc7dfa49b7615b98fab304a828cd7f8a/agent_client_protocol-0.8.1.tar.gz"
+    sha256 "1bbf15663bf51f64942597f638e32a6284c5da918055d9672d3510e965143dbd"
   end
 
   resource "anyio" do
