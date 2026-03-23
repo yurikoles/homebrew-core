@@ -1,10 +1,10 @@
 class Qtcharts < Formula
   desc "UI Components for displaying visually pleasing charts"
   homepage "https://www.qt.io/"
-  url "https://download.qt.io/official_releases/qt/6.10/6.10.2/submodules/qtcharts-everywhere-src-6.10.2.tar.xz"
-  mirror "https://qt.mirror.constant.com/archive/qt/6.10/6.10.2/submodules/qtcharts-everywhere-src-6.10.2.tar.xz"
-  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.10/6.10.2/submodules/qtcharts-everywhere-src-6.10.2.tar.xz"
-  sha256 "405116b4c5eded981484c4c154eb392d44b69b587342f1193181175e309f2c00"
+  url "https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtcharts-everywhere-src-6.11.0.tar.xz"
+  mirror "https://qt.mirror.constant.com/archive/qt/6.11/6.11.0/submodules/qtcharts-everywhere-src-6.11.0.tar.xz"
+  mirror "https://mirrors.ukfast.co.uk/sites/qt.io/archive/qt/6.11/6.11.0/submodules/qtcharts-everywhere-src-6.11.0.tar.xz"
+  sha256 "ac409bd4085772f7f091438cce05213b2a88a6edbab16e3dd7a96122386d94b5"
   license all_of: [
     "GPL-3.0-only",
     "BSD-3-Clause", # *.cmake
