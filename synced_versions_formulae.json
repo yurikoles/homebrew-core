@@ -54,6 +54,7 @@
   ["notmuch", "notmuch-mutt"],
   ["openssh", "ssh-copy-id"],
   ["petsc", "petsc-complex"],
+  ["pipewire", "pipewire-gstreamer"],
   ["poppler", "poppler-qt5"],
   ["python-tk@3.10", "python@3.10"],
   ["python-gdbm@3.11", "python-tk@3.11", "python@3.11"],
