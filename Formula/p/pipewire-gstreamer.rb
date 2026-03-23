@@ -10,6 +10,11 @@ class PipewireGstreamer < Formula
     formula "pipewire"
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "ee4e435ed86521beb4b421b9e6781a00982dae23a6de7747fdb55ab1639a5530"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "154f32dce5a913be0bfac715017398d15fe38f97db96bad129dbd6d941be280b"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
