@@ -1,26 +1,11 @@
 class Scalapack < Formula
   desc "High-performance linear algebra for distributed memory machines"
   homepage "https://netlib.org/scalapack/"
+  url "https://github.com/Reference-ScaLAPACK/scalapack/archive/refs/tags/v2.2.3.tar.gz"
+  sha256 "5d93701eca663925e98010dd8d0f45fd79b2191d74e5afa5711d587370a8b9dd"
   license "BSD-3-Clause"
   compatibility_version 1
   head "https://github.com/Reference-ScaLAPACK/scalapack.git", branch: "master"
-
-  stable do
-    url "https://github.com/Reference-ScaLAPACK/scalapack/archive/refs/tags/v2.2.2.tar.gz"
-    sha256 "a2f0c9180a210bf7ffe126c9cb81099cf337da1a7120ddb4cbe4894eb7b7d022"
-
-    # Backport commit for correct version number
-    patch do
-      url "https://github.com/Reference-ScaLAPACK/scalapack/commit/a23c2cdc6586c427686f6097ae66bb54ef693571.patch?full_index=1"
-      sha256 "1a2c187595234c4c15007c4b1b847337a94c0a55bd807165743404942e6c5634"
-    end
-
-    # Backport support for CMake 4
-    patch do
-      url "https://github.com/Reference-ScaLAPACK/scalapack/commit/41ac62c28fab33cd9ccc1b010c9c215b5f05201b.patch?full_index=1"
-      sha256 "930429e8fb118e58955a56f5f6bb82e797927cb31a83a8bb0190b7324f2d26f5"
-    end
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "95c2d6bfcad2cde73d0fab3e497efca73490469397f2c4e7961e7e2a34c76168"
