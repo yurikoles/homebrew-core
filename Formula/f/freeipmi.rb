@@ -7,12 +7,12 @@ class Freeipmi < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 arm64_tahoe:   "088038494ab5a3519fb61478cb8e5e70c82e267c4f05a718b2e7e59f93866dd1"
-    sha256 arm64_sequoia: "59ef8ad0e134e1f8d63f7f363aa642af16d891998f0e88d7df3bbd9f5f5c5325"
-    sha256 arm64_sonoma:  "a2a68d7e33c51537280537e68f20fa5f5f3daf472ed98a5c0b3ca7d1aa73e136"
-    sha256 sonoma:        "bbab50242b9e092985c723e7e60f103a3237ea2124ac00df9b160a4f05d47e97"
-    sha256 arm64_linux:   "17c67de9391aa8f42c54e1e99e14005940227b37a3ef466c98f81729db6b6827"
-    sha256 x86_64_linux:  "f1b6706610f1b25cb10de66ab9963fdbe13d51e7bc2f7668fef2167649a2716a"
+    sha256 arm64_tahoe:   "8c9647d3bedfc8a9fc4cd609502036da7a78a087c3ab56b0ab371aa1dd83bb24"
+    sha256 arm64_sequoia: "b99597f1175f068d29f4865527e55c6d6dfa491dd2efa788d0362ce3d79efe78"
+    sha256 arm64_sonoma:  "e91664b3e01da15001dcc80a597314518a855f5bb2c021175734ae36beafa83e"
+    sha256 sonoma:        "5379ce9470e4c8da88a26a8ebdc95d58b9eca974284b1f217464c55db169c305"
+    sha256 arm64_linux:   "363a2a4daa1faca593df8ef801fd46d2906df95ea72d580a81eec828079b51e4"
+    sha256 x86_64_linux:  "520654b8bdb7cf948034704cc4206f33fc1e70bf82f7d400dba639df4bc9f51e"
   end
 
   depends_on "texinfo" => :build
