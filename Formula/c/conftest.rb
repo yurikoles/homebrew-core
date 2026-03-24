@@ -7,12 +7,12 @@ class Conftest < Formula
   head "https://github.com/open-policy-agent/conftest.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3071d37692107ba5e0bf17b7e40a55aba465dd60c042fdcf33b44fcca449080d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3071d37692107ba5e0bf17b7e40a55aba465dd60c042fdcf33b44fcca449080d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3071d37692107ba5e0bf17b7e40a55aba465dd60c042fdcf33b44fcca449080d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "921422caeb0485ba3f090d534cec8eb28fb2f92131513092fa24eb97fb402dcf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8f0b673533dfddc6b30ced8cdb763c433a85e9c0d89f29aa4036d97ac0f46f83"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eb88fef50e43e096d86f68839ccd00cab643cae4e8e7b152fef62ba771a073d8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d788fd0d4d81db107141dd65864ede6f75edb53796eb0b7a6a4a3b0b9feedeb8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d788fd0d4d81db107141dd65864ede6f75edb53796eb0b7a6a4a3b0b9feedeb8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d788fd0d4d81db107141dd65864ede6f75edb53796eb0b7a6a4a3b0b9feedeb8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a600f10a0d81a7d8dfb8135adac17e3d62c45d6714d0a7277afdd7ec27e68c85"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b1e38912c38581df42d7a6690f445ed5312212ca821d76be351a5251cd2268e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f722203bad99d3adec2872d0496e29bab25d36ea7277bd4f245d44bf0268f55"
   end
 
   depends_on "go" => :build
