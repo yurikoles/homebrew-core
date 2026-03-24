@@ -9,7 +9,7 @@ class Sip < Formula
   head "https://github.com/Python-SIP/sip.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "0e1b6a3db157a1b37bef1e4904dc52bb8ed0ac2d6d1d45c733399d83293c56e5"
+    sha256 cellar: :any_skip_relocation, all: "45b3408f75b00c082f77836c19426004f329f511bb916e39d0e568a3d3c0d1fa"
   end
 
   depends_on "python@3.14"
