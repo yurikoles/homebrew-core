@@ -1,8 +1,8 @@
 class KubectlTree < Formula
   desc "Kubectl plugin to browse Kubernetes object hierarchies as a tree"
   homepage "https://github.com/ahmetb/kubectl-tree"
-  url "https://github.com/ahmetb/kubectl-tree/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "480c71b07f27e5c824367e328c7c1818b76766a990a3a786189b698a7f923922"
+  url "https://github.com/ahmetb/kubectl-tree/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "a2c62e887be6bd66c920edb26f9e8ad40d483d4d257e31641fbbef8f0ab1a6ce"
   license "Apache-2.0"
   head "https://github.com/ahmetb/kubectl-tree.git", branch: "master"
 
