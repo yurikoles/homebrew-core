@@ -3,8 +3,8 @@ class Snakemake < Formula
 
   desc "Pythonic workflow system"
   homepage "https://snakemake.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/8d/b3/869ad8abcc651a1f44332b87215cd67e322e5b4f0f5871f6b2842567fc83/snakemake-9.17.2.tar.gz"
-  sha256 "956a342b57ea76974ed21d048c374f1417410b57b50be3c6fb3b7ea7b9192d8c"
+  url "https://files.pythonhosted.org/packages/3c/10/686939c33a8da0db62a034cdc8077e2c8d829c58c9a89feb63da72090eba/snakemake-9.17.3.tar.gz"
+  sha256 "b07a541e851d38cf880f4d9c9c1acaf4b1560f1f405edeb1b54adf212b6ea119"
   license "MIT"
   head "https://github.com/snakemake/snakemake.git", branch: "main"
 
@@ -38,8 +38,8 @@ class Snakemake < Formula
   end
 
   resource "attrs" do
-    url "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz"
-    sha256 "16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11"
+    url "https://files.pythonhosted.org/packages/9a/8e/82a0fe20a541c03148528be8cac2408564a6c9a0cc7e9171802bc1d26985/attrs-26.1.0.tar.gz"
+    sha256 "d03ceb89cb322a8fd706d4fb91940737b6642aa36998fe130a9bc96c985eff32"
   end
 
   resource "charset-normalizer" do
@@ -193,8 +193,8 @@ class Snakemake < Formula
   end
 
   resource "snakemake-interface-logger-plugins" do
-    url "https://files.pythonhosted.org/packages/c0/92/2fe4fa879a5d4408cad6db5330cd4ebd352e47529cb0fdfdf8ebf73f2920/snakemake_interface_logger_plugins-2.0.0.tar.gz"
-    sha256 "0e8ff2af4c55ca140d6ea1c1540e733a4b3944abae48fe0eaf6a707e5797cd17"
+    url "https://files.pythonhosted.org/packages/39/1d/a489e36b4444573cc5c2c4345ed61827be5d6480ff29c489a0b43dc9749a/snakemake_interface_logger_plugins-2.0.1.tar.gz"
+    sha256 "d639cc6b3c18993d52255d8edc59ef21b17b4e4dc6ff8777f04018fbf0b430e1"
   end
 
   resource "snakemake-interface-report-plugins" do
