@@ -1,8 +1,8 @@
 class TkeySshAgent < Formula
   desc "SSH agent for use with the TKey security stick"
   homepage "https://tillitis.se/"
-  url "https://github.com/tillitis/tkey-ssh-agent/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "de9cec8f637378f67b48edc6f8b99301038c07c4f6ce953afa10a5bf78f4f93b"
+  url "https://github.com/tillitis/tkey-ssh-agent/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "cdd91008020d1c68778c8bc9869e77f230a314cb389621e3fa0aa1034283faea"
   license "GPL-2.0-only"
 
   livecheck do
