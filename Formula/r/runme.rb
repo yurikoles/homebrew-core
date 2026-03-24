@@ -1,18 +1,18 @@
 class Runme < Formula
   desc "Execute commands inside your runbooks, docs, and READMEs"
   homepage "https://runme.dev/"
-  url "https://github.com/runmedev/runme/archive/refs/tags/v3.16.9.tar.gz"
-  sha256 "5836b0156f7f57d8f41626bf2f0500ca274505ead9fe17f508ef3e7bc5e63a26"
+  url "https://github.com/runmedev/runme/archive/refs/tags/v3.16.10.tar.gz"
+  sha256 "0c10eedcab51bba78c230feb3f567acd53d2b45e0ef444e666b10d751e2ea88f"
   license "Apache-2.0"
   head "https://github.com/runmedev/runme.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "035bb780d2cc3133b1208391948b1baafc5cc5d9a73c88f8dc563666fc33281c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "79c8d06ef897d74d60baf6ceccfdc875e0ad6ecb88a7bbf38a6a85ae20b34c5b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a2612ac7882f0a09e589add037d1204552c1814e8a35f6da3410f9fe07d70847"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4703f2469047b59cec38efc7118f4255309fbec1aeee78b7e330399e79339c8e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "41cc103b2fcac44751aad52aaa6e2e94512d807ef04e3b55a83cb29779e2e387"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0a393d07cef01a8842fea002c79d08c736900b5359591db75d9b4be4c51089b8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "98e25af55ec344cb364176e886302232a53d2da8ea8f1eb8980e85a2fed4796a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0dbfbe46d9e6d169823c68708752b53c7e85210a2da01ed7d88c5af64e4bb18d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "751bf9db24733bfcdc22cdd6fb9af537ae63556040a97715db9b24a94bc12f8e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "254e56c65009edb884952f0ca280deb350d119d74dd46004f44cd8490e51748e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4ba57a10b6d33cd202b662b974669d30a9946e61b2e2072d780484cfb1fa0749"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2e6890841537891fe37824049a6d13d2a3ebdb3d4ad4c59ade1a4613c89ffa80"
   end
 
   depends_on "go" => :build
