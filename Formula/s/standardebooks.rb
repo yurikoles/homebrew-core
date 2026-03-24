@@ -9,12 +9,12 @@ class Standardebooks < Formula
   head "https://github.com/standardebooks/tools.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9f622b0a88c609dd14212eaa5e85bfc4c03c45a5cea747cda1399a49636d144e"
-    sha256 cellar: :any,                 arm64_sequoia: "691112a5b682d26465ffab356cda1a8706a32772be0ff7784541d904f0cade14"
-    sha256 cellar: :any,                 arm64_sonoma:  "b5ade2cbcf35278956f277425be1cc99c82298300e50d88f68c6599984a27faf"
-    sha256 cellar: :any,                 sonoma:        "37f24e2eac16a8854619c1daa4f576f15c58f969d7f5c6576ff635d5abd071f3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "15f147774408556c3446f5f3f83e19fa9a371579a983a94b81e651acaf0e3bd4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b158b46d2bedc03aa956ebaa3ba98f8bacefec566851d7f436e2c38b8d8679db"
+    sha256 cellar: :any,                 arm64_tahoe:   "ca7039271f446f6ddc2457b8a62ad45387effe9d36c25796053486440722958b"
+    sha256 cellar: :any,                 arm64_sequoia: "34e7693b434d409db9f76a66417c8d635179343debd3bc16657ffee3c0c957c3"
+    sha256 cellar: :any,                 arm64_sonoma:  "dbfa53aa9178a504d30fc5ec9f5e38bbc8925b54022a48bd700ed5cfae63254b"
+    sha256 cellar: :any,                 sonoma:        "522653fd7c9f89c7cbb4968cc8c63b1710f1fc465ded8f824efed46649e94acc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a3c994499f561e440d03442c8b0f3580d8ec0d6e4acbd01651d5c7a3d895dcc3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d75b5218c69c5b61be6e3263e4541c1e03cda88298a1a6dc420f97927a6e6641"
   end
 
   depends_on "rust" => :build # for selenium
