@@ -12,12 +12,12 @@ class Hdf5Mpi < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "36140cb8bb4db4a6a05656eabc3a216cc97085952ba8310e1eaf42519c60409e"
-    sha256 cellar: :any,                 arm64_sequoia: "0349531e9e56d74f9e11b18ba075a3023bb4890ed8626854da393261ded6d621"
-    sha256 cellar: :any,                 arm64_sonoma:  "bdd44591f56fcbe61047ab61a22d0656c12290741e9228c0508a951f36eb9e16"
-    sha256 cellar: :any,                 sonoma:        "fae2af5337df5f36a9b88f21060bc01384f5905612f9c36303179d46e04b6edc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "75663ef3635622dc2882b99012535edcdf0a684d6a15cbd503edd2f4ae48dba5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5581f10dfc0966ac5a6c386140debb38f3642cc982ab0c36647e34ab2f408abd"
+    sha256 cellar: :any,                 arm64_tahoe:   "be826b39d4bae3f28fcb17eff9b1e1eb7d943dfe9032ddf87d61a23b57d78f4d"
+    sha256 cellar: :any,                 arm64_sequoia: "2c75d9f0921baeddc4a86bb616bc31f3a99c9fea78b3d6a8370fdcab70c617c8"
+    sha256 cellar: :any,                 arm64_sonoma:  "bd79c2dc5fdd0875830eaf3ed7bd4a02ff25c0592d0dade5e6b9e450e9bb463a"
+    sha256 cellar: :any,                 sonoma:        "2745926da93d021d27287fbbefab8053f1fbfef4d990058ea0684dff955c6341"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b0f1ef56161bcb8235bd9b65b78c61aca298cf6d4c49b7de52c8547450eb292a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1fed39da8c3d3e958bfbf7bb9423b2a7aeb961d7a0bc481f3403ddbbede297b1"
   end
 
   depends_on "cmake" => :build
