@@ -7,12 +7,12 @@ class Zeptoclaw < Formula
   head "https://github.com/qhkm/zeptoclaw.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "50064b94cd37213efcf71841967c86be5c8f899eef930be7b3634ba4f68b3fec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d1ea7ca98eaea2f7da59a2df0a78ce26f03d6682b473316737159ba990629272"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bb2cbb3499a66705737d550379c13bc84173defce35c962a7ba1dd4117cc4067"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f7ed6162b59cc703ba01d48b6c25a1905894630eb62110787ee22fbf4265c6a7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "07967a0b76b687f482596ebce11c5dfd569f32b14dce9d47eb76f47bffc3b834"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "88329872817e94175b7d23455138f13eef79a80165422de7c875802087d5e035"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8aa173acda40177cb0a014c5e5c591d65f90b67df0b430032bdf303ce65a1c85"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3759c32907dfb8734f68e0f7383c6bbdbb5a7a7867b41cd4981ef7e09201f35e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "17dabd4796b1274417da071da686da3f2c6e187e662c913d0a60d0db11ef2695"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2cf36f3335a9126b68a49599ff8dfc8e31d2e0ad4b4d9da66bd85503d1b0a62d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "16838112c181ea226d94e833958bde040932a135e869e9ac47100d9489803478"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e01c3f2852b2576e3ff3b3ae8a4a30935669ac23e8dd5a4a7346d1e38eb4aba"
   end
 
   depends_on "rust" => :build
