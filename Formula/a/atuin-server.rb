@@ -1,8 +1,8 @@
 class AtuinServer < Formula
   desc "Sync server for atuin - Improved shell history for zsh, bash, fish and nushell"
   homepage "https://atuin.sh"
-  url "https://github.com/atuinsh/atuin/releases/download/v18.13.3/source.tar.gz"
-  sha256 "71e9fa1bcabe1f312b1063b66bd23aeff4c04e7a77d4f763351eb088c20939f5"
+  url "https://github.com/atuinsh/atuin/releases/download/v18.13.4/source.tar.gz"
+  sha256 "2c664d6fb5206c7e07041ee77206eed052b152f616421a6dc887d4e13396f820"
   license "MIT"
   head "https://github.com/atuinsh/atuin.git", branch: "main"
 
