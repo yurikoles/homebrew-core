@@ -1,10 +1,9 @@
 class Lanraragi < Formula
   desc "Web application for archival and reading of manga/doujinshi"
   homepage "https://github.com/Difegue/LANraragi"
-  url "https://github.com/Difegue/LANraragi/archive/refs/tags/v.0.9.60.tar.gz"
-  sha256 "27889a0b32b70ddfd2781b0c55d8924953baf879a55cf3bd54759902ea3fea49"
+  url "https://github.com/Difegue/LANraragi/archive/refs/tags/v.0.9.70.tar.gz"
+  sha256 "bc89ae47873a35145a0db5a4d93d274b89e7f546deaa396d389fe7975693f7a6"
   license "MIT"
-  revision 1
   head "https://github.com/Difegue/LANraragi.git", branch: "dev"
 
   bottle do
@@ -31,8 +30,8 @@ class Lanraragi < Formula
   uses_from_macos "libffi"
 
   resource "Image::Magick" do
-    url "https://cpan.metacpan.org/authors/id/J/JC/JCRISTY/Image-Magick-7.1.1-28.tar.gz"
-    sha256 "bc54137346c1d45626e7075015f7d1dae813394af885457499f54878cfc19e0b"
+    url "https://cpan.metacpan.org/authors/id/J/JC/JCRISTY/Image-Magick-7.1.2-3.tar.gz"
+    sha256 "dc6ee21aed560d36f36be608909344bd2e25d63ab5d959553401e02f5df28a6b"
 
     livecheck do
       url :url
