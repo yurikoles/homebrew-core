@@ -1,8 +1,8 @@
 class Roapi < Formula
   desc "Full-fledged APIs for static datasets without writing a single line of code"
   homepage "https://roapi.github.io/docs"
-  url "https://github.com/roapi/roapi/archive/refs/tags/roapi-v0.12.7.tar.gz"
-  sha256 "97d30e5f8d8ea9292a05ab67925ca71246c96cdc82d690a95242b186d656c714"
+  url "https://github.com/roapi/roapi/archive/refs/tags/roapi-v0.13.0.tar.gz"
+  sha256 "f1941e528efac4c610cc042bff7f03a613d7d7b59e2a7f8c10cea8c478d915ee"
   license "Apache-2.0"
 
   bottle do
@@ -15,6 +15,12 @@ class Roapi < Formula
   end
 
   depends_on "rust" => :build
+
+  # Patch to fix build error, remove in next release
+  patch do
+    url "https://github.com/roapi/roapi/commit/c53bfa489011038cb934735451d88dcd9f39dbe2.patch?full_index=1"
+    sha256 "0bdb9950c1f9e69670283f4fb491f2d71ce0f18248345c38869b4a6615ac823e"
+  end
 
   def install
     # skip default features like snmalloc which errs on ubuntu 16.04
