@@ -21,7 +21,7 @@ class Parsedmarc < Formula
   depends_on "certifi"
   depends_on "cryptography"
   depends_on "libyaml"
-  depends_on "python@3.13" # `mailsuite` refuses to build on 3.14, https://github.com/seanthegeek/mailsuite/issues/15
+  depends_on "python@3.14"
 
   uses_from_macos "libxml2", since: :ventura
   uses_from_macos "libxslt"
