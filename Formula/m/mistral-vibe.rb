@@ -3,18 +3,18 @@ class MistralVibe < Formula
 
   desc "Minimal CLI coding agent"
   homepage "https://github.com/mistralai/mistral-vibe"
-  url "https://files.pythonhosted.org/packages/29/28/cc30b86131addbe579db7d8099237524559b75ec4f70b0a2f476d2c3afad/mistral_vibe-2.6.1.tar.gz"
-  sha256 "150990a009557ee243f430e5158185fdd01881b58038f3094aa094a547254a98"
+  url "https://files.pythonhosted.org/packages/82/06/567cba2840e4474ab2ddbc48e7f6dbc0eb7921638b6f12c51c2fbf58419d/mistral_vibe-2.6.2.tar.gz"
+  sha256 "36a8590202081a9691994f3515e80f6e89af9e3fc98f0a60eeeb32a9ef03ef95"
   license "Apache-2.0"
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c26a91f5b29e349b02ef5ebf61caaf3a7182a670bebde6af2e60766466978b34"
-    sha256 cellar: :any,                 arm64_sequoia: "812ad61bd36b5724de3bfc5f7ec8fb1b151b38d6a2f5d617e2de0594163b3d84"
-    sha256 cellar: :any,                 arm64_sonoma:  "13628a6883dae940a6325d7279131600efac65bec63f81836b7f8d73a3b3b032"
-    sha256 cellar: :any,                 sonoma:        "6053eb5d898f476d35f144e04fa68ff2096d3b820fcb32ec661fe469831601aa"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "509a4a97b58434a8849ce2568a800a79c29c053f56e093e07a49d5342fb84a67"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dd7b50ea3c380c91a1d117406ad90cd3bd4df59fcc7612791926de1c93be9e61"
+    sha256 cellar: :any,                 arm64_tahoe:   "aa79af7c2c886d8fe870ef4aec1043ddbc55df7dc1c3a5b809abe2a5ec9d17c1"
+    sha256 cellar: :any,                 arm64_sequoia: "0da4b58899c214242fa7299f99e7fffbe190013a5ba9ae6bcdcc56dbd094fef6"
+    sha256 cellar: :any,                 arm64_sonoma:  "78457d0533557ec5c57cfd957df785a1ba6b045d1e055cb2c0944ccdf1e2fccc"
+    sha256 cellar: :any,                 sonoma:        "b5c977924b8693ac99e1c19c684442972be8327ea15abfcad8fbcc353c9023ed"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d42199da02228590bcbf2df3b2833b320656a426783f09df40064e1f134b4bfc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "725ab8875c554451efa6a97ed8f6866a12c41b1a5f02362b978c6d407952f6e1"
   end
 
   depends_on "rust" => :build
@@ -28,8 +28,8 @@ class MistralVibe < Formula
   pypi_packages exclude_packages: %w[certifi cryptography pydantic rpds-py]
 
   resource "agent-client-protocol" do
-    url "https://files.pythonhosted.org/packages/1b/dc/1ec56897b461fbdb844c9bff3abbbe225bfe8cda020dc2449101a6d76592/agent_client_protocol-0.9.0a1.tar.gz"
-    sha256 "9e6fc8b72df465279470920d679c871e0c658f69212e345563cc69b17906b606"
+    url "https://files.pythonhosted.org/packages/1b/7b/7cdac86db388809d9e3bc58cac88cc7dfa49b7615b98fab304a828cd7f8a/agent_client_protocol-0.8.1.tar.gz"
+    sha256 "1bbf15663bf51f64942597f638e32a6284c5da918055d9672d3510e965143dbd"
   end
 
   resource "anyio" do
