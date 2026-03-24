@@ -2,8 +2,8 @@ class Nexus < Formula
   desc "Repository manager for binary software components"
   homepage "https://www.sonatype.com/"
   url "https://github.com/sonatype/nexus-public.git",
-      tag:      "release-3.89.1-02",
-      revision: "a9c397255e85bac773bd97f00a13d7c9ab3fa99d"
+      tag:      "release-3.90.2-06",
+      revision: "cf364dd80954e724d1ad2c9b4413c27b8ac1502d"
   license "EPL-1.0"
 
   # As of writing, upstream is publishing both v2 and v3 releases. The "latest"
@@ -30,8 +30,9 @@ class Nexus < Formula
 
   uses_from_macos "unzip" => :build
 
-  # Avoid downloading copies of node and yarn
-  # To avoid non-FIPS provider loads bc-fips classes, use isolated classloader.
+  # 1. Avoid downloading copies of node and yarn
+  # 2. To avoid non-FIPS provider loads bc-fips classes, use isolated classloader.
+  # 3. Add NoopRecoveryModeService to avoid recovery mode that is implemented by private module.
   patch :DATA
 
   def install
@@ -139,3 +140,35 @@ index dfeb6f0..38e067c 100644
    }
  
    private static void loadFipsProvider() {
+diff --git a/public/common/components/nexus-scheduling/src/main/java/org/sonatype/nexus/scheduling/internal/NoopRecoveryModeService.java b/public/common/components/nexus-scheduling/src/main/java/org/sonatype/nexus/scheduling/internal/NoopRecoveryModeService.java
+new file mode 100644
+index 0000000..9279594
+--- /dev/null
++++ b/public/common/components/nexus-scheduling/src/main/java/org/sonatype/nexus/scheduling/internal/NoopRecoveryModeService.java
+@@ -0,0 +1,26 @@
++package org.sonatype.nexus.scheduling.internal;
++
++import org.sonatype.nexus.scheduling.RecoveryModeService;
++import org.springframework.stereotype.Component;
++
++@Component
++public class NoopRecoveryModeService
++    implements RecoveryModeService
++{
++  @Override
++  public boolean isRecoveryMode() {
++    return false;
++  }
++
++  @Override
++  public void enableRecoveryMode() {
++  }
++
++  @Override
++  public void disableRecoveryMode() {
++  }
++
++  @Override
++  public void ensureNotInRecoveryMode(final String taskName) {
++  }
++}
