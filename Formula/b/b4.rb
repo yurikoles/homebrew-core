@@ -3,8 +3,8 @@ class B4 < Formula
 
   desc "Tool to work with public-inbox and patch archives"
   homepage "https://b4.docs.kernel.org/en/latest/"
-  url "https://files.pythonhosted.org/packages/06/d1/42613f85525c9551afc391017183eca1940fbbdf263ef15e2f5a79c3c580/b4-0.15.0.tar.gz"
-  sha256 "4cfd99a27af9cabe319fe21ba20af695f68c65904c63731c4fc5a30ea38da7c8"
+  url "https://files.pythonhosted.org/packages/d4/99/dea75130e9d8c34e583735d263614728f3b63fde895607da8edbfcc3650a/b4-0.15.1.tar.gz"
+  sha256 "e48c44bb579fadabb1fc3f15bf1874afd721bc1a63fba10c96f568bc1f47ccb3"
   license "GPL-2.0-or-later"
 
   bottle do
