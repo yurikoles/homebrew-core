@@ -5,37 +5,30 @@ class Redex < Formula
   desc "Bytecode optimizer for Android apps"
   homepage "https://fbredex.com/"
   license "MIT"
-  revision 21
   head "https://github.com/facebook/redex.git", branch: "main"
 
   stable do
-    url "https://github.com/facebook/redex/archive/refs/tags/v2017.10.31.tar.gz"
-    sha256 "18a840e4db0fc51f79e17dfd749b2ffcce65a28e7ef9c2b3c255c5ad89f6fd6f"
+    url "https://github.com/facebook/redex/archive/refs/tags/v2025.09.18.tar.gz"
+    sha256 "49be286761fb89a223a9609d58faa141e584a0c6866bf083d8408357302ee2f8"
 
-    # Fix for automake 1.16.5
+    # Patch to fix build with Python 3.14.
+    # TODO: Remove in the next release.
     patch do
-      url "https://github.com/facebook/redex/commit/4696e1882cf88707bf7560a2994a4207a8b7c7a3.patch?full_index=1"
-      sha256 "dccc41146688448ea2d99dd04d4d41fdaf7e174ae1888d3abb10eb2dfa6ed1da"
-    end
-
-    # Apply upstream fixes for GCC 11
-    patch do
-      url "https://github.com/facebook/redex/commit/70a82b873da269e7dd46611c73cfcdf7f84efa1a.patch?full_index=1"
-      sha256 "44ce35ca93922f59fb4d0fd1885d24cce8a08d73b509e1fd2675557948464f1d"
-    end
-    patch do
-      url "https://github.com/facebook/redex/commit/e81dda3f26144a9c94816c12237698ef2addf864.patch?full_index=1"
-      sha256 "523ad3d7841a6716ac973b467be3ea8b6b7e332089f23e4788e1f679fd6f53f5"
-    end
-    patch do
-      url "https://github.com/facebook/redex/commit/253b77159d6783786c8814168d1ff2b783d3a531.patch?full_index=1"
-      sha256 "ed69a6230506704ca4cc7a52418b3af70a6182bd96abdb5874fab02f6b1a7c99"
+      url "https://github.com/facebook/redex/commit/b9c7d5abf922eea7e38bc6031607eb30e8482f38.patch?full_index=1"
+      sha256 "6e644764d2e2b3a7b8e69c8887e738fc6c6099f5f4a3bb6738eae6fd5677da6a"
     end
 
-    # Fix compilation on High Sierra
-    # Fix boost issue (https://github.com/facebook/redex/pull/564)
-    # Remove for next release
-    patch :DATA
+    # Patch to remove stub_resource_optimizations
+    patch do
+      url "https://github.com/facebook/redex/commit/f2cc84464a7392fdb266136e9c0b4b37d26a0801.patch?full_index=1"
+      sha256 "043f6b77e91033b64244734d92534de3aaae05b828436cd3cb19af7af1338ec4"
+    end
+
+    # Patch FindZlib.cmake to handle macOS SDK zlib via ZLIB_HOME.
+    patch do
+      url "https://github.com/facebook/redex/commit/a885d52ce6121ed96b78c511d1920116de10ff86.patch?full_index=1"
+      sha256 "ca1321b1fb500203110f5da701106eaab89f61ecbdc62182e94f8747b17cfc65"
+    end
   end
 
   bottle do
@@ -47,29 +40,39 @@ class Redex < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
+  depends_on "cmake" => :build
   depends_on "libevent" => :build
   depends_on "libtool" => :build
   depends_on "boost"
   depends_on "jsoncpp"
   depends_on "python@3.14"
 
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
+
   resource "setuptools" do
     url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
     sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
   end
 
+  resource "packaging" do
+    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
+    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
+  end
+
+  # Patch to allow redex.py to detect redex-binary
+  # PR: https://github.com/facebook/redex/pull/982
+  patch do
+    url "https://github.com/facebook/redex/commit/f1d9211256ac03d92a4176bea36fb97bee581f41.patch?full_index=1"
+    sha256 "d3ce5c0b758ae7f61c30ca7ebea115d782abe43af61672454874be9810201ce1"
+  end
+
   def install
-    if build.stable?
-      # https://github.com/facebook/redex/issues/457
-      inreplace "Makefile.am", "/usr/include/jsoncpp", Formula["jsoncpp"].opt_include
-      # Work around missing include. Fixed upstream but code has been refactored
-      # Ref: https://github.com/facebook/redex/commit/3f4cde379da4657068a0dbe85c03df558854c31c
-      ENV.append "CXXFLAGS", "-include set"
-      # Help detect Boost::Filesystem and Boost::System during ./configure.
-      # TODO: Remove in the next release.
-      ENV.cxx11
+    zlib_home = if OS.linux?
+      Formula["zlib-ng-compat"].opt_prefix
+    else
+      MacOS.sdk_for_formula(self).path/"usr"
     end
 
     venv = virtualenv_create(libexec, "python3.14")
@@ -78,6 +81,7 @@ class Redex < Formula
     python_scripts = %w[
       apkutil
       redex.py
+      gen_packed_apilevels.py
       tools/python/dex.py
       tools/python/dict_utils.py
       tools/python/file_extract.py
@@ -85,14 +89,23 @@ class Redex < Formula
       tools/redex-tool/DexSqlQuery.py
       tools/redexdump-apk
     ]
+
     rewrite_shebang python_shebang_rewrite_info(venv.root/"bin/python"), *python_scripts
 
-    system "autoreconf", "--force", "--install", "--verbose"
-    system "./configure", "--disable-silent-rules",
-                          "--with-boost=#{Formula["boost"].opt_prefix}",
-                          *std_configure_args
-    system "make"
-    system "make", "install"
+    args = %W[
+      -DBUILD_TYPE=Shared
+      -DENABLE_STATIC=OFF
+      -DBUILD_SHARED_LIBS=ON
+      -DZLIB_HOME=#{zlib_home}
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+
+    libexec.install bin.glob("*")
+    chmod "+x", libexec/"redex.py"
+    bin.write_exec_script libexec/"redex.py"
   end
 
   test do
@@ -101,41 +114,46 @@ class Redex < Formula
       sha256 "7851cf2a15230ea6ff076639c2273bc4ca4c3d81917d2e13c05edcc4d537cc04"
     end
 
+    (testpath/"homebrew-default.config").write <<~JSON
+      {
+        "redex": {
+          "passes": [
+            "ReBindRefsPass",
+            "ResultPropagationPass",
+            "BridgeSynthInlinePass",
+            "FinalInlinePassV2",
+            "DelSuperPass",
+            "CommonSubexpressionEliminationPass",
+            "MethodInlinePass",
+            "PeepholePass",
+            "ConstantPropagationPass",
+            "LocalDcePass",
+            "RemoveUnreachablePass",
+            "DedupBlocksPass",
+            "UpCodeMotionPass",
+            "SingleImplPass",
+            "ReorderInterfacesDeclPass",
+            "ShortenSrcStringsPass",
+            "CommonSubexpressionEliminationPass",
+            "RegAllocPass",
+            "CopyPropagationPass",
+            "LocalDcePass",
+            "ReduceGotosPass"
+          ]
+        },
+        "compute_xml_reachability": false,
+        "analyze_native_lib_reachability": false
+      }
+    JSON
+    (testpath/"homebrew-default.pro").write "-keep class * { *; }\n"
+
     testpath.install resource("homebrew-test_apk")
-    system bin/"redex", "--ignore-zipalign", "redex-test.apk", "-o", "redex-test-out.apk"
-    assert_path_exists testpath/"redex-test-out.apk"
+    config = %W[
+      --config #{testpath}/homebrew-default.config
+      --proguard-config #{testpath}/homebrew-default.pro
+    ]
+    system bin/"redex.py", *config, "-u", "--ignore-zipalign", "--unpack-dest", "redex-test", "redex-test.apk"
+    assert_path_exists testpath/"redex-test.redex_extracted_apk"
+    assert_path_exists testpath/"redex-test.redex_dexen"
   end
 end
-
-__END__
-diff --git a/libresource/RedexResources.cpp b/libresource/RedexResources.cpp
-index 525601ec..a359f49f 100644
---- a/libresource/RedexResources.cpp
-+++ b/libresource/RedexResources.cpp
-@@ -16,6 +16,7 @@
- #include <map>
- #include <boost/regex.hpp>
- #include <sstream>
-+#include <stack>
- #include <string>
- #include <unordered_set>
- #include <vector>
-diff --git a/libredex/Show.cpp b/libredex/Show.cpp
-index b042070f..5e492e3f 100644
---- a/libredex/Show.cpp
-+++ b/libredex/Show.cpp
-@@ -9,7 +9,14 @@
-
- #include "Show.h"
-
-+#include <boost/version.hpp>
-+// Quoted was accepted into public components as of 1.73. The `detail`
-+// header was removed in 1.74.
-+#if BOOST_VERSION < 107400
- #include <boost/io/detail/quoted_manip.hpp>
-+#else
-+#include <boost/io/quoted.hpp>
-+#endif
- #include <sstream>
-
- #include "ControlFlow.h"
