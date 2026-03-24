@@ -7,12 +7,12 @@ class Runme < Formula
   head "https://github.com/runmedev/runme.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6dfa694dc0d6cb46fc6380f0ade6c306319d3cdf0a653f0d7b35e4d0c5c65893"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f49c532a163752919fb03ab7efcdae4139e8849db25a4ed0c27e51472d4db7d4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2c8e76419d7146ba4621d284fece8e2b289fbb29e161926a4dcd7124ee28219b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8a59c71ee0e755b3ad8d864106af952953118bef7e94d7216135a2ad3d19a29c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "227bb52bb796dd5383955abde0e89eeb861bde23e7eabc240e7d96feb1129209"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e1e763e57b613f79ff8564d7a1791cd8b2c7a0b3f0510c04495d6fdc73f8b664"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "035bb780d2cc3133b1208391948b1baafc5cc5d9a73c88f8dc563666fc33281c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "79c8d06ef897d74d60baf6ceccfdc875e0ad6ecb88a7bbf38a6a85ae20b34c5b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a2612ac7882f0a09e589add037d1204552c1814e8a35f6da3410f9fe07d70847"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4703f2469047b59cec38efc7118f4255309fbec1aeee78b7e330399e79339c8e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "41cc103b2fcac44751aad52aaa6e2e94512d807ef04e3b55a83cb29779e2e387"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0a393d07cef01a8842fea002c79d08c736900b5359591db75d9b4be4c51089b8"
   end
 
   depends_on "go" => :build
