@@ -18,12 +18,12 @@ class Openblas < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "86be8c9ee5070d3b4e940ab72cd89998dcf59ece4691d7b3bc2a9549f3999d31"
-    sha256 cellar: :any,                 arm64_sequoia: "fcde181971556b1ef2febf3051c4365c2138e5be4b81c44b14ebf642a7aa0bd2"
-    sha256 cellar: :any,                 arm64_sonoma:  "a29ae64872e453f299745202b9cdcad7d9479b00af47528d80d3ce068b0bb80d"
-    sha256 cellar: :any,                 sonoma:        "b44311b4806a899fb976c6e7f9369ef1a8f913324f32b2b631dd7bcac2dd93fe"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "dcaadf5e964f6c0de691cf40697b9a0981926396a8fd5a2253db7fe4dd006a3c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "df4ff7c931ea08422354e0d8dcd1efb84144b91393ec58572434483a154f6bbf"
+    sha256 cellar: :any,                 arm64_tahoe:   "29eb2c60bfb1f91c2dac337388d129eace6c2524719596ec147049341c4b41b7"
+    sha256 cellar: :any,                 arm64_sequoia: "df3b3824787ae0c7ec29dd7c2c296be806b32288c9e473af5a53c3bb05df5f46"
+    sha256 cellar: :any,                 arm64_sonoma:  "e101655759fa93327500c3957a20b92786b0723bf3100473cc552652b03bb39a"
+    sha256 cellar: :any,                 sonoma:        "f9c7ab040f30722b194ffce84f60d76440b2483f2d758af4d75bf67cc4685aa7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b209d541ac5ebe6b380514a4d27fdb9400ff1a11b85cb0d396b70a6dd0af0691"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8750692a5e3a4e469c028c1edb2ac050ae42f66ddcc86d0a8c81443362eec67c"
   end
 
   keg_only :shadowed_by_macos, "macOS provides BLAS in Accelerate.framework"
