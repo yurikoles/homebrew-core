@@ -7,12 +7,12 @@ class Atuin < Formula
   head "https://github.com/atuinsh/atuin.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "34d2b6e1798a198e8896bdb132abd8c9e14b74a94c5a9f2a091123993fccb5bd"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5ec9c03937ad7c7bd97f5f31619d380966acb45a714ba8e3a0882543d09362af"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2eae2caaf408fa10d84b70214e29acc8d782e846c1b7b1fafc28dc249f9ac18f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1ede45c02c068bf1d8bf79958af4283a3c73f5b8af369fc7ebe9edc73ba1f5a2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bb0224627dd05eb4633c2381ef829f3ef53aadf153015d9cd129e11aa12ecfbc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f20e32e0622ad7f043db867be4f9c0c0ff5431c8b0acdd1203a3f0e95178d33b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6e9dc5806383550c5d65dd02895fd9c28ac40b1d286306675244c0ef7125f71f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "11f47d62dec4893249031c80572bc9d621e87c23029bbdf429eed0eb922135af"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c47fc117c2e72c46faa733e65f7df1b30e6b9e74ba2af65d00c44d82cd550e05"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1b3025a7dacbf2ff119fb61f65c2c8c1c6772d5dcc84be191d9afef615af7a6d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2592adeb65a77b7924ac6212f0840550b5cb10703c5f5dbcbde40a19fc0feff8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ddfe9a8d47e29a3af3c6a7e14f593620542d4d5f045fe76725f05bc10a683f13"
   end
 
   depends_on "protobuf" => :build
