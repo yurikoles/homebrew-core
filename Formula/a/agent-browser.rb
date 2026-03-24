@@ -1,8 +1,8 @@
 class AgentBrowser < Formula
   desc "Browser automation CLI for AI agents"
   homepage "https://agent-browser.dev/"
-  url "https://registry.npmjs.org/agent-browser/-/agent-browser-0.22.1.tgz"
-  sha256 "2de7bfb46ee94c10a3852fdd11f1da393feb091eb46b4fedc120b727092a9ef7"
+  url "https://registry.npmjs.org/agent-browser/-/agent-browser-0.22.2.tgz"
+  sha256 "bbdf08a19bdf817055d119b41e0b6e79096c632d3638fc79972f7668f71bb391"
   license "Apache-2.0"
 
   bottle do
