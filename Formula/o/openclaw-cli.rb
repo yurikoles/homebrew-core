@@ -1,8 +1,8 @@
 class OpenclawCli < Formula
   desc "Your own personal AI assistant"
   homepage "https://openclaw.ai/"
-  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.3.13.tgz"
-  sha256 "6711d9f8c4f12bdbdcd5090e6865e2ee141b8cda3eaa8f20259304406a20e96a"
+  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.3.24.tgz"
+  sha256 "e4079634e040f0f098eb1963360975645a8954c87161c531f0c1d52a2f5f5429"
   license "MIT"
 
   bottle do
@@ -23,24 +23,32 @@ class OpenclawCli < Formula
     node_modules = libexec/"lib/node_modules/openclaw/node_modules/"
     deuniversalize_machos node_modules/"@mariozechner/clipboard-darwin-universal/clipboard.darwin-universal.node"
 
+    # sqlite-vec falls back cleanly when the native extension is unavailable.
+    # Remove macOS pre-built dylibs that fail Homebrew bottle linkage fixups.
+    node_modules.glob("sqlite-vec-darwin-*").each { |dir| rm_r(dir) } if OS.mac?
+
+    # Remove x86_64 Linux pre-built binaries on incompatible platforms.
+    if !OS.linux? || !Hardware::CPU.intel?
+      rm libexec/"lib/node_modules/openclaw/dist/assets/matrix-sdk-crypto.linux-x64-gnu-W0MyW8nQ.node"
+      rm_r libexec/"lib/node_modules/openclaw/dist/extensions/discord/node_modules/@snazzah/davey-linux-x64-gnu"
+    end
+
     # Remove incompatible pre-built @node-llama-cpp binaries (non-native
     # architectures and GPU variants requiring CUDA/Vulkan)
-    os = OS.linux? ? "linux" : "mac"
     arch = Hardware::CPU.arm? ? "arm64" : "x64"
-
+    llama_target = "#{OS.linux? ? "linux" : "mac"}-#{arch}"
     node_modules.glob("@node-llama-cpp/*").each do |dir|
       basename = dir.basename.to_s
-      next if basename.start_with?("#{os}-#{arch}") &&
+      next if basename.start_with?(llama_target) &&
               basename.exclude?("cuda") &&
               basename.exclude?("vulkan")
 
       rm_r(dir)
     end
 
-    os = OS.linux? ? "linux" : "darwin"
+    koffi_target = "#{OS.kernel_name.downcase}_#{arch}"
     node_modules.glob("koffi/build/koffi/*").each do |dir|
-      basename = dir.basename.to_s
-      rm_r(dir) if basename != "#{os}_#{arch}"
+      rm_r(dir) if dir.basename.to_s != koffi_target
     end
   end
 
