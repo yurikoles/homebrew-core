@@ -1,8 +1,8 @@
 class Nagios < Formula
   desc "Network monitoring and management system"
   homepage "https://www.nagios.org/"
-  url "https://github.com/NagiosEnterprises/nagioscore/releases/download/nagios-4.5.11/nagios-4.5.11.tar.gz"
-  sha256 "1bf85d6704a75e6b89a09844836f68b1cfc61ab1ef005574041e36e73fdb797a"
+  url "https://github.com/NagiosEnterprises/nagioscore/releases/download/nagios-4.5.12/nagios-4.5.12.tar.gz"
+  sha256 "9a9fd281ea6ab3d55611efda036ffb9fe76c98423083440900e28012248d5961"
   license "GPL-2.0-only"
   head "https://github.com/NagiosEnterprises/nagioscore.git", branch: "master"
 
@@ -24,12 +24,6 @@ class Nagios < Formula
 
   on_macos do
     depends_on "jpeg-turbo"
-  end
-
-  # Fix compilation error on in lib/runcmd.c; https://github.com/NagiosEnterprises/nagioscore/pull/1048
-  patch do
-    url "https://github.com/NagiosEnterprises/nagioscore/commit/874a7688fca646f14eef17abf744d8561c60c0c2.patch?full_index=1"
-    sha256 "c7d3a4a6d5f918a67a7b49f9cd30af45234510ad1697745313dbcfa4ff767ad0"
   end
 
   def nagios_sbin
