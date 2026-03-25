@@ -3,9 +3,9 @@ class Kea < Formula
   homepage "https://www.isc.org/kea/"
   # NOTE: the livecheck block is a best guess at excluding development versions.
   #       Check https://www.isc.org/download/#Kea to make sure we're using a stable version.
-  url "https://ftp.isc.org/isc/kea/3.0.2/kea-3.0.2.tar.xz"
-  mirror "https://dl.cloudsmith.io/public/isc/kea-3-0/raw/versions/3.0.2/kea-3.0.2.tar.xz"
-  sha256 "29f4e44fa48f62fe15158d17411e003496203250db7b3459c2c79c09f379a541"
+  url "https://ftp.isc.org/isc/kea/3.0.3/kea-3.0.3.tar.xz"
+  mirror "https://dl.cloudsmith.io/public/isc/kea-3-0/raw/versions/3.0.3/kea-3.0.3.tar.xz"
+  sha256 "09702ddb078b637e85de9236cbedd3fb9d7af7c6e797026c538b45748ad4d631"
   license "MPL-2.0"
   head "https://gitlab.isc.org/isc-projects/kea.git", branch: "master"
 
@@ -94,3 +94,15 @@ index a33c56f2d4..e1ae6e06f6 100644
  #endif
  
  #endif // ASIO_WRAPPER_H
+diff --git a/src/lib/log/logger_level_impl.cc b/src/lib/log/logger_level_impl.cc
+index a4aba73..c2e4ee5 100644
+--- a/src/lib/log/logger_level_impl.cc
++++ b/src/lib/log/logger_level_impl.cc
+@@ -10,6 +10,7 @@
+ #include <string.h>
+ #include <iostream>
+ #include <boost/lexical_cast.hpp>
++#include <boost/static_assert.hpp>
+ 
+ #include <log4cplus/logger.h>
+ 
