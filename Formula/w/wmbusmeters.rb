@@ -35,6 +35,7 @@ class Wmbusmeters < Formula
   service do
     run [opt_bin/"wmbusmeters", "--useconfig=#{etc}/wmbusmeters"]
     keep_alive true
+    environment_variables PATH: std_service_path_env
   end
 
   test do
