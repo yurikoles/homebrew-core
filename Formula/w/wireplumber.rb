@@ -1,8 +1,8 @@
 class Wireplumber < Formula
   desc "Session / policy manager implementation for PipeWire"
   homepage "https://pipewire.pages.freedesktop.org/wireplumber/"
-  url "https://gitlab.freedesktop.org/pipewire/wireplumber/-/archive/0.5.13/wireplumber-0.5.13.tar.bz2"
-  sha256 "056033cd4fa551b947eebd697bbf78fa9e6baf8f7f12cb5395656aa619de4946"
+  url "https://gitlab.freedesktop.org/pipewire/wireplumber/-/archive/0.5.14/wireplumber-0.5.14.tar.bz2"
+  sha256 "2807a9d1e97075ba10f8b7b8156e31175817d620fa7fc84442b5474123eff5db"
   license "MIT"
 
   bottle do
