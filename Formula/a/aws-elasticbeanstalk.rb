@@ -3,8 +3,8 @@ class AwsElasticbeanstalk < Formula
 
   desc "Client for Amazon Elastic Beanstalk web service"
   homepage "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html"
-  url "https://files.pythonhosted.org/packages/7b/e2/4690277ef0478c6f702529b4d90d31ae43c274b04967078cdc7a4525e3e2/awsebcli-3.27.tar.gz"
-  sha256 "6ba8abcf5dd26a0629f6319aed7cd5173544647a63442bba6cce9a99cd194b75"
+  url "https://files.pythonhosted.org/packages/fd/9d/9c36f5f3eb9cae3827c0c9a36f740e4200c189cf06f7d09af1a5081049ba/awsebcli-3.27.1.tar.gz"
+  sha256 "83bcb4e5de2ce9659d07246ac32eb4a8e109d8627c045a55c2c142e9a7ed5683"
   license "Apache-2.0"
 
   bottle do
@@ -38,8 +38,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/42/d1/81a6e39c7d5419ba34bad8a1ac2c5360c26f21af698a481a8397d79134d1/botocore-1.42.69.tar.gz"
-    sha256 "0934f2d90403c5c8c2cba83e754a39d77edcad5885d04a79363edff3e814f55e"
+    url "https://files.pythonhosted.org/packages/9d/05/b16d6ac5eea465d42e65941436eab7d2e6f6ebef01ba4d70b6f5d0b992ce/botocore-1.42.75.tar.gz"
+    sha256 "95c8e716b6be903ee1601531caa4f50217400aa877c18fe9a2c3047d2945d477"
   end
 
   resource "cement" do
@@ -88,8 +88,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/d0/63/68dbb6eb2de9cb10ee4c9c14a0148804425e13c4fb20d61cce69f53106da/packaging-24.2.tar.gz"
-    sha256 "c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
+    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
+    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
   end
 
   resource "paramiko" do
@@ -118,8 +118,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "semantic-version" do
@@ -143,8 +143,8 @@ class AwsElasticbeanstalk < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/e4/e8/6ff5e6bc22095cfc59b6ea711b687e2b7ed4bdb373f7eeec370a97d7392f/urllib3-1.26.20.tar.gz"
-    sha256 "40c2dc0c681e47eb8f90e7e27bf6ff7df2e677421fd46756da1161c39ca70d32"
+    url "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz"
+    sha256 "1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed"
   end
 
   resource "wcwidth" do
