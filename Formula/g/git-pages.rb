@@ -1,8 +1,8 @@
 class GitPages < Formula
   desc "Scalable static site server for Git forges"
   homepage "https://codeberg.org/git-pages/git-pages"
-  url "https://codeberg.org/git-pages/git-pages/archive/v0.6.1.tar.gz"
-  sha256 "ccbca448e7802f0872c069262a2e6a3e3151bab75db50ce938e67bfbc24bc99c"
+  url "https://codeberg.org/git-pages/git-pages/archive/v0.6.2.tar.gz"
+  sha256 "a3b04558760e531ac4b80e0c7eccad374ce67689d385b86010e3b34632ffe077"
   license "0BSD"
 
   bottle do
