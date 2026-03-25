@@ -1,8 +1,8 @@
 class Pygobject3 < Formula
   desc "GNOME Python bindings (based on GObject Introspection)"
   homepage "https://pygobject.gnome.org"
-  url "https://download.gnome.org/sources/pygobject/3.56/pygobject-3.56.1.tar.gz"
-  sha256 "2ec1cc8c55c7ffeebb97e58a9bba7aa1e74611f1173628084685446804a8881a"
+  url "https://download.gnome.org/sources/pygobject/3.56/pygobject-3.56.2.tar.gz"
+  sha256 "b816098969544081de9eecedb94ad6ac59c77e4d571fe7051f18bebcec074313"
   license "LGPL-2.1-or-later"
   compatibility_version 1
 
