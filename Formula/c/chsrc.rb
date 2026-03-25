@@ -1,8 +1,8 @@
 class Chsrc < Formula
   desc "Change Source for every software on every platform from the command-line"
   homepage "https://github.com/RubyMetric/chsrc"
-  url "https://github.com/RubyMetric/chsrc/archive/refs/tags/v0.2.4.tar.gz"
-  sha256 "da4f5bb6b1a60e4b1dc31c72f24ede3f5b5c3072193c3fe419b713dc047a5b38"
+  url "https://github.com/RubyMetric/chsrc/archive/refs/tags/v0.2.5.tar.gz"
+  sha256 "4fc7ccbdea9c18aaa06b1efc80cc8a1941e38060b8495c67c947a09d2a0dfeac"
   license "GPL-3.0-or-later"
   head "https://github.com/RubyMetric/chsrc.git", branch: "main"
 
