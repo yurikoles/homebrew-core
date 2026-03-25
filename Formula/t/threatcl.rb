@@ -1,8 +1,8 @@
 class Threatcl < Formula
   desc "Documenting your Threat Models with HCL"
   homepage "https://github.com/threatcl/threatcl"
-  url "https://github.com/threatcl/threatcl/archive/refs/tags/v0.4.3.tar.gz"
-  sha256 "3f556b33fee8f2c16076e26a6573651599126349b48373e2ca87e74bcff7a2f7"
+  url "https://github.com/threatcl/threatcl/archive/refs/tags/v0.4.4.tar.gz"
+  sha256 "cb0908acde4e70324b2ba7c50e4bfcbd9ee1b394feba20cb58b808cfcd632ebb"
   license "MIT"
   head "https://github.com/threatcl/threatcl.git", branch: "main"
 
