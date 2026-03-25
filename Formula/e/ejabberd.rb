@@ -1,8 +1,8 @@
 class Ejabberd < Formula
   desc "XMPP application server"
   homepage "https://www.ejabberd.im"
-  url "https://github.com/processone/ejabberd/archive/refs/tags/26.02.tar.gz"
-  sha256 "676feea9ee8aeb3c1bc3c1844308a783941548d9befc3b252cd1ff0b7532842f"
+  url "https://github.com/processone/ejabberd/archive/refs/tags/26.03.tar.gz"
+  sha256 "584b9d43a1f67e929fdb08fa7429f359fabc022923aca311666b1073ed709a52"
   license "GPL-2.0-only"
   head "https://github.com/processone/ejabberd.git", branch: "master"
 
@@ -25,6 +25,7 @@ class Ejabberd < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "elixir" => :build
   depends_on "erlang"
   depends_on "gd"
   depends_on "libyaml"
@@ -32,8 +33,13 @@ class Ejabberd < Formula
 
   uses_from_macos "expat"
 
+  on_sonoma :or_older do
+    depends_on "coreutils" => :build # for sha256sum
+  end
+
   on_linux do
     depends_on "linux-pam"
+    depends_on "zlib-ng-compat"
   end
 
   conflicts_with "couchdb", because: "both install `jiffy` lib"
@@ -43,22 +49,29 @@ class Ejabberd < Formula
     ENV["MAN_DIR"] = man
     ENV["SBIN_DIR"] = sbin
 
-    args = ["--prefix=#{prefix}",
-            "--sysconfdir=#{etc}",
-            "--localstatedir=#{var}",
-            "--enable-pgsql",
-            "--enable-mysql",
-            "--enable-odbc",
-            "--enable-pam"]
+    args = %W[
+      --prefix=#{prefix}
+      --sysconfdir=#{etc}
+      --localstatedir=#{var}
+      --disable-debug
+      --enable-pgsql
+      --enable-mysql
+      --enable-odbc
+      --enable-pam
+      --enable-system-deps
+    ]
 
     system "./autogen.sh"
     system "./configure", *args
+
+    # 26.03 Makefile runs `invites-deps` targets in parallel, which can race
+    # on bootstrap zip extraction in non-interactive environments.
+    ENV.deparallelize
 
     # Set CPP to work around cpp shim issue:
     # https://github.com/Homebrew/brew/issues/5153
     system "make", "CPP=#{ENV.cc} -E"
 
-    ENV.deparallelize
     system "make", "install"
 
     (etc/"ejabberd").mkpath
