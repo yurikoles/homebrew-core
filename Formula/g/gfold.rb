@@ -1,8 +1,8 @@
 class Gfold < Formula
   desc "Help keep track of your Git repositories, written in Rust"
   homepage "https://github.com/nickgerace/gfold"
-  url "https://github.com/nickgerace/gfold/archive/refs/tags/2025.12.0.tar.gz"
-  sha256 "cead84f83c6bd333f5c11a714db2f187150c5d7b5d1b29cd6441172195728f45"
+  url "https://github.com/nickgerace/gfold/archive/refs/tags/2026.3.0.tar.gz"
+  sha256 "e8e0667c324658c0c816c909e880879f606ca7d874b7cbf4820ef47ba517d558"
   license "Apache-2.0"
   head "https://github.com/nickgerace/gfold.git", branch: "main"
 
