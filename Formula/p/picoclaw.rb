@@ -1,8 +1,8 @@
 class Picoclaw < Formula
   desc "Ultra-efficient personal AI assistant in Go"
   homepage "https://picoclaw.io/"
-  url "https://github.com/sipeed/picoclaw/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "05e06f9db2a7900f37519108f55957a41374e72e9ab2440fb787e923b0a303fd"
+  url "https://github.com/sipeed/picoclaw/archive/refs/tags/v0.2.4.tar.gz"
+  sha256 "6bf882f514ca1e040203dc461f1f54f02ba39a511dee050043cf7866ee1faf0b"
   license "MIT"
   head "https://github.com/sipeed/picoclaw.git", branch: "main"
 
@@ -23,10 +23,13 @@ class Picoclaw < Formula
   depends_on "go" => :build
 
   def install
+    ENV["CGO_ENABLED"] = "0"
+
     system "go", "generate", "./cmd/picoclaw/internal/onboard"
 
     ldflags = "-s -w -X github.com/sipeed/picoclaw/pkg/config.Version=#{version}"
-    system "go", "build", *std_go_args(ldflags:), "./cmd/picoclaw"
+    tags = "goolm,stdjson"
+    system "go", "build", *std_go_args(ldflags:, tags:), "./cmd/picoclaw"
   end
 
   service do
@@ -40,7 +43,7 @@ class Picoclaw < Formula
 
     system bin/"picoclaw", "onboard"
     assert_path_exists testpath/".picoclaw/config.json"
-    assert_path_exists testpath/".picoclaw/workspace/AGENTS.md"
+    assert_path_exists testpath/".picoclaw/workspace/AGENT.md"
 
     assert_match "picoclaw Status", shell_output("#{bin}/picoclaw status")
   end
