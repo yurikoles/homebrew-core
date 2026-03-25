@@ -63,7 +63,8 @@ class PortableRuby < PortableFormula
     # - irb
     #   - reline
     #   - rdoc
-    allowed_gems = %w[debug fiddle irb reline rdoc]
+    # - rake
+    allowed_gems = %w[debug fiddle irb rake reline rdoc]
     bundled_gems = File.foreach("gems/bundled_gems").select do |line|
       line.blank? || line.start_with?("#") || allowed_gems.any? { |gem| line.match?(/\A#{Regexp.escape(gem)}\s/) }
     end
@@ -201,6 +202,7 @@ class PortableRuby < PortableFormula
       require "fiddle"
       require "bootsnap"
     EOS
+    system testpath/"bin/rake", "--version"
     system testpath/"bin/irb", "--version"
     system testpath/"bin/gem", "environment"
     system testpath/"bin/bundle", "init"
