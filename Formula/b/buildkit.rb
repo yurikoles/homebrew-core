@@ -1,10 +1,9 @@
 class Buildkit < Formula
   desc "Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit"
   homepage "https://github.com/moby/buildkit"
-  url "https://github.com/moby/buildkit/archive/refs/tags/v0.28.0.tar.gz"
-  sha256 "2307112b30593fb8fc4d479ce4547862fa101fa2ecd50a852330a1117a988bbc"
+  url "https://github.com/moby/buildkit/archive/refs/tags/v0.28.1.tar.gz"
+  sha256 "1e7a0c031c038a7399eacf52655c3511ce5f0d83f1d7c821fb44821387a76e2c"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/moby/buildkit.git", branch: "master"
 
   # There can be a notable gap between when a version is tagged and a
