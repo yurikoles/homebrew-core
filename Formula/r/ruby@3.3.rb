@@ -1,8 +1,8 @@
 class RubyAT33 < Formula
   desc "Powerful, clean, object-oriented scripting language"
   homepage "https://www.ruby-lang.org/"
-  url "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.10.tar.gz"
-  sha256 "b555baa467a306cfc8e6c6ed24d0d27b27e9a1bed1d91d95509859eac6b0e928"
+  url "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.11.tar.gz"
+  sha256 "59f0fafb1a59a05dc3765117af3fa68e153eb48254708549f321c1e9e078d7a0"
   license "Ruby"
 
   livecheck do
@@ -40,8 +40,8 @@ class RubyAT33 < Formula
   # The exception is Rubygem security fixes, which mandate updating this
   # formula & the versioned equivalents and bumping the revisions.
   resource "rubygems" do
-    url "https://rubygems.org/rubygems/rubygems-3.7.1.tgz"
-    sha256 "750c8c771180d41ed2358344e5461edee83158c0a81b779969a1339961bc1163"
+    url "https://rubygems.org/rubygems/rubygems-4.0.9.tgz"
+    sha256 "39b1e2c878946e420116c3c26e4e708c0ddbdf7cd4a13c48dd0fc0774c7add8d"
 
     livecheck do
       url "https://rubygems.org/pages/download"
