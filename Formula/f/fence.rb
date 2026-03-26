@@ -7,12 +7,12 @@ class Fence < Formula
   head "https://github.com/Use-Tusk/fence.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a3c885a6ab489c3be558b9c12bed9e85aed986094652096c7ff1c5a0bdf1203c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a3c885a6ab489c3be558b9c12bed9e85aed986094652096c7ff1c5a0bdf1203c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a3c885a6ab489c3be558b9c12bed9e85aed986094652096c7ff1c5a0bdf1203c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "59264cb64316f91690dde4556454c858ef6605eef64337eac06cca102a1562a5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "338d65b51d6390757ccb97af43afcb1275d2900d564d1a8966fdb391920fb2be"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c72d4aab4a79ffe3ed9f27e07f28531ccd8b597ce6a9daabe03080b0b62bf20d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "62123f7ac2126d0f32c88d5841d954ac470b42f5657002658b44a276db0a2608"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "62123f7ac2126d0f32c88d5841d954ac470b42f5657002658b44a276db0a2608"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "62123f7ac2126d0f32c88d5841d954ac470b42f5657002658b44a276db0a2608"
+    sha256 cellar: :any_skip_relocation, sonoma:        "eb2fc3bae1c65a3a98e902b06f9e9bf6dd0f4cf04a64fed2b0663c8053b029d4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "eff1cb028ef31450d8e743feca4fef26433ea1fdc45fc411ef92b258408be86e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3c6380e3de6bdaecf4b51e0b7196f1501fee5a3f38ce629c18e3388469230cd6"
   end
 
   depends_on "go" => :build
