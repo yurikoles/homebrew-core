@@ -1,8 +1,8 @@
 class PerlXmlParser < Formula
   desc "Perl module for parsing XML documents"
   homepage "https://github.com/cpan-authors/XML-Parser"
-  url "https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.52.tar.gz"
-  sha256 "b06c78fe79afb959d020e4c66b930efcf4327b78df95e1afa13662ee8ba3d5cd"
+  url "https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.53.tar.gz"
+  sha256 "991506b14600ae5b6188319509d36e7451d840f34c24cf507d1dc4392cb08487"
   license "Artistic-2.0"
   head "https://github.com/cpan-authors/XML-Parser.git", branch: "main"
 
