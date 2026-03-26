@@ -6,12 +6,7 @@ class Repomix < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cdecf26e38c3eb19974d4d421fdff5854192de66f99bcb1c7d3c9c1838b935ca"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cdecf26e38c3eb19974d4d421fdff5854192de66f99bcb1c7d3c9c1838b935ca"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cdecf26e38c3eb19974d4d421fdff5854192de66f99bcb1c7d3c9c1838b935ca"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cdecf26e38c3eb19974d4d421fdff5854192de66f99bcb1c7d3c9c1838b935ca"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f91b47ff480cbd9387ce4081149b59f7f10eb32e0b52f95c6007fc1c7496b348"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f91b47ff480cbd9387ce4081149b59f7f10eb32e0b52f95c6007fc1c7496b348"
+    sha256 cellar: :any_skip_relocation, all: "e4c0a0b9da23da6280c888d19c99f983c06ea4934179513593d97a68bf2a5c57"
   end
 
   depends_on "node"
