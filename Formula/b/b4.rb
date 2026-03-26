@@ -6,6 +6,7 @@ class B4 < Formula
   url "https://files.pythonhosted.org/packages/d4/99/dea75130e9d8c34e583735d263614728f3b63fde895607da8edbfcc3650a/b4-0.15.1.tar.gz"
   sha256 "e48c44bb579fadabb1fc3f15bf1874afd721bc1a63fba10c96f568bc1f47ccb3"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "5369b5e235fac64693b34d3229b41fa91c2697ddb64250710e4896a3e3a68d4f"
@@ -59,8 +60,8 @@ class B4 < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "urllib3" do
