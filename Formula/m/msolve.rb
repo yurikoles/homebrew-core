@@ -1,8 +1,8 @@
 class Msolve < Formula
   desc "Library for Polynomial System Solving through Algebraic Methods"
   homepage "https://msolve.lip6.fr"
-  url "https://github.com/algebraic-solving/msolve/archive/refs/tags/v0.9.4.tar.gz"
-  sha256 "02572df81596ff1d06b5d841e3fa7652f7d7976ef021c80728bcf0b08824e30c"
+  url "https://github.com/algebraic-solving/msolve/archive/refs/tags/v0.9.5.tar.gz"
+  sha256 "92b94775cd5a046de307e2ad0fc576d2631e43fbd0eb7749517a033d7e77ddf4"
   license "GPL-2.0-or-later"
   head "https://github.com/algebraic-solving/msolve.git", branch: "master"
 
