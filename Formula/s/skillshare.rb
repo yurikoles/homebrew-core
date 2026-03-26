@@ -7,12 +7,12 @@ class Skillshare < Formula
   head "https://github.com/runkids/skillshare.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "203576f867d92baf1773944ae3b8eb88c91349777d5c722d6a078b153243e4be"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "203576f867d92baf1773944ae3b8eb88c91349777d5c722d6a078b153243e4be"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "203576f867d92baf1773944ae3b8eb88c91349777d5c722d6a078b153243e4be"
-    sha256 cellar: :any_skip_relocation, sonoma:        "73817fe627af5f635c12baf3c8ad7be3d5cd98502316764588659d08e8e8f188"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c87fa5735eef69b76538865426fab072b8e667cf29473e51f52befc4c3c627ff"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ef4c140490c66c6ace4c6b89b317a8b7effc90e0f55ead9f4ea87c6cf6e3ed16"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c5f8cc2624fc7a6e5dd2a519929519776f7597415b46c7f8dc95999503ff656f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c5f8cc2624fc7a6e5dd2a519929519776f7597415b46c7f8dc95999503ff656f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c5f8cc2624fc7a6e5dd2a519929519776f7597415b46c7f8dc95999503ff656f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ac2ad3dc383972755548bc4cdd32e9c2740f57ab6204ce9e252feb548efb1587"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ee210a55d9dcd304564c573fa7769eb1d7196ccdf779ae4738acd385c0c2f33c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "75b4892abe4ba3f1ce7b53e2225e6de11217043c9913360e85e3135d87104b9a"
   end
 
   depends_on "go" => :build
