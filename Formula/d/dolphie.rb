@@ -6,6 +6,7 @@ class Dolphie < Formula
   url "https://files.pythonhosted.org/packages/46/36/19ba18fc576c8228272f683c15bbfc518453728a4b79a6355cf9135c11b2/dolphie-6.14.0.tar.gz"
   sha256 "6ca09e85f182fc53f02ad9d4102d98ff7826fb87baa312c17801be6f50eba882"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "9f2bc96aae49f387cef9aa97d7787c7f3a0e1987195bb6830f2f9d4ec4f9dcbc"
@@ -99,8 +100,8 @@ class Dolphie < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "rich" do
