@@ -1,8 +1,8 @@
 class TryRs < Formula
   desc "Temporary workspace manager for fast experimentation in the terminal"
   homepage "https://try-rs.org/"
-  url "https://github.com/tassiovirginio/try-rs/archive/refs/tags/v1.6.3.tar.gz"
-  sha256 "6cafac8b9c719a35030e29421ad3c6bad8d5f1d20f131af5d7cb54479909a8ea"
+  url "https://github.com/tassiovirginio/try-rs/archive/refs/tags/v1.7.0.tar.gz"
+  sha256 "b8af5a460dcfc7382b4584d74347321687e83546341742a9e5c9676305ce190b"
   license "MIT"
   head "https://github.com/tassiovirginio/try-rs.git", branch: "main"
 
