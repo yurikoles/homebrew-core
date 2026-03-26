@@ -1,8 +1,9 @@
 class Picoruby < Formula
   desc "Smallest Ruby implementation for microcontrollers"
   homepage "https://picoruby.org"
-  url "https://github.com/picoruby/picoruby/archive/refs/tags/3.0.2.tar.gz"
-  sha256 "33b951be8969570726bc34632fa5e0f332ee6e8ed782b5ec0f8fd5629a6be959"
+  url "https://github.com/picoruby/picoruby.git",
+      tag:      "3.4.1",
+      revision: "d437873d68a6ce0f8ff6256702ac149b8e94a05a"
   license "MIT"
   head "https://github.com/picoruby/picoruby.git", branch: "master"
 
@@ -15,7 +16,8 @@ class Picoruby < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "cd416f436c2843b824f346ae05d591ce6e5ad02ed00948c23f1f66f3e1f4029b"
   end
 
-  uses_from_macos "ruby" => :build
+  depends_on "ruby" => :build # for numbered block parameter `_1'
+  depends_on "openssl@3"
 
   def install
     ENV["MRUBY_CONFIG"] = buildpath/"build_config/default.rb"
