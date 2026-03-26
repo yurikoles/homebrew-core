@@ -1,8 +1,8 @@
 class PolicyEngine < Formula
   desc "Unified Policy Engine"
   homepage "https://github.com/snyk/policy-engine"
-  url "https://github.com/snyk/policy-engine/archive/refs/tags/v1.1.3.tar.gz"
-  sha256 "b90e6cd1c4acca844a73cb376fabd698d3c06536346d9e4067abe4782edc58b9"
+  url "https://github.com/snyk/policy-engine/archive/refs/tags/v1.1.4.tar.gz"
+  sha256 "fbb133fc5eeec783f147b6abc7658faab4e3f697df5c49d0ecbf77ecb42f92f8"
   license "Apache-2.0"
   head "https://github.com/snyk/policy-engine.git", branch: "main"
 
