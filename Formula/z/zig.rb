@@ -13,12 +13,12 @@ class Zig < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "dd70b8ff8c60139a550cf147c62385db650f0a78f6a0886d64e5d3a23300fedf"
-    sha256 cellar: :any,                 arm64_sequoia: "57cef8bf8e91f4883be988370fbe8e48c301ded0e578907d73ace9c325f17448"
-    sha256 cellar: :any,                 arm64_sonoma:  "1f4b7e532d85d0b552fbc7c6434e2dc3da4322630823989ee07665b11f1a3fa9"
-    sha256 cellar: :any,                 sonoma:        "a6214bdefd13c3f08072d2104480c977925ecb4160b3528b097761d8a2f0fe10"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "cd03697749a4dbeec55258d7fd5170b2dd73ca29b1510a001a021d5469287197"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "87d7f340a2db08d1274e7d7915252db7880705426fc0b592147cde1f0009935e"
+    sha256 cellar: :any,                 arm64_tahoe:   "e0119519d861dfaf85536ac222e22b92b3bcbbc8f9c2225c3dc484b1aea42292"
+    sha256 cellar: :any,                 arm64_sequoia: "7990f1e0cf9f960beb0211717d174e3e78dffdb6b85bdce0e1c8dd5e1c223f0d"
+    sha256 cellar: :any,                 arm64_sonoma:  "e789bcc9a1f3c1ea7e2b9393fc43574c43ff8772ab721adfa77f5dfd85e47e30"
+    sha256 cellar: :any,                 sonoma:        "eab67e48ec351ac9749386366f9f4e79c0371ba804c8373f59ccebc813740c29"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "36a8af04a9896b574d61bca4f8258fdc46f6ece0c64b92463620cc6b2d72b8fb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4e8a34b67e7fb82e0dd73a2899b1926b1881b74eef829cf531af0b88ca320f9a"
   end
 
   depends_on "cmake" => :build
