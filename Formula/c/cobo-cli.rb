@@ -6,6 +6,7 @@ class CoboCli < Formula
   url "https://files.pythonhosted.org/packages/c6/7e/f6a593e8b22f4eb1558df3281d926f1db7a639f2bc45c6cbd720837e5e18/cobo_cli-0.1.6.tar.gz"
   sha256 "70c1438e04d4e1549a51e45c6b7c69a94a2040afed559e318531999dc426c347"
   license "MIT"
+  revision 1
   head "https://github.com/CoboGlobal/cobo-cli.git", branch: "master"
 
   bottle do
@@ -104,8 +105,8 @@ class CoboCli < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "smmap" do
@@ -114,8 +115,8 @@ class CoboCli < Formula
   end
 
   resource "tomli" do
-    url "https://files.pythonhosted.org/packages/82/30/31573e9457673ab10aa432461bee537ce6cef177667deca369efb79df071/tomli-2.4.0.tar.gz"
-    sha256 "aa89c3f6c277dd275d8e243ad24f3b5e701491a860d5121f2cdd399fbb31fc9c"
+    url "https://files.pythonhosted.org/packages/22/de/48c59722572767841493b26183a0d1cc411d54fd759c5607c4590b6563a6/tomli-2.4.1.tar.gz"
+    sha256 "7c7e1a961a0b2f2472c1ac5b69affa0ae1132c39adcb67aba98568702b9cc23f"
   end
 
   resource "tomli-w" do
