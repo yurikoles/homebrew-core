@@ -1,8 +1,8 @@
 class Openexr < Formula
   desc "High dynamic-range image file format"
   homepage "https://www.openexr.com/"
-  url "https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v3.4.7.tar.gz"
-  sha256 "6f57641fb12b019867a766e602252ed4ccb26d7354e3a15688fe9c85a391716e"
+  url "https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v3.4.8.tar.gz"
+  sha256 "0dd8d50e7f04219f3f925702564e994f9acdc6133ba537ec75eb6208119bec33"
   license "BSD-3-Clause"
   compatibility_version 1
 
