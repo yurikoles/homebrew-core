@@ -1,8 +1,8 @@
 class Hut < Formula
   desc "CLI tool for sr.ht"
   homepage "https://sr.ht/~xenrox/hut"
-  url "https://git.sr.ht/~xenrox/hut/archive/v0.7.0.tar.gz"
-  sha256 "5975f940740dd816057ab3cf20cebde3ece3250891952a566f8555f73fb67b21"
+  url "https://git.sr.ht/~xenrox/hut/archive/v0.8.0.tar.gz"
+  sha256 "f7994375673f253705ed7499f44b712b2d9fcec8a5a42f1d0408002552b7d0e7"
   license "AGPL-3.0-or-later"
   head "https://git.sr.ht/~xenrox/hut", branch: "master"
 
