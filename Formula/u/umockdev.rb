@@ -7,8 +7,8 @@ class Umockdev < Formula
   head "https://github.com/martinpitt/umockdev.git", branch: "main"
 
   bottle do
-    sha256 arm64_linux:  "cd6df63d785e99beb17464839d6020c37736e985a95f06dd094af968263cf45d"
-    sha256 x86_64_linux: "195d4fa929fc8aef94dd486d50696dc1e336a94eb1f7527640590b75cb02dd51"
+    sha256 arm64_linux:  "e812c29307b01e90cb76730116b6ca199e407445f9d2eb0ddbf8220e5a34c8a7"
+    sha256 x86_64_linux: "e946e73f77df1361a1868c2956f636a3f7199705ab6ee13f701e8d43d2f867fc"
   end
 
   depends_on "gobject-introspection" => :build
