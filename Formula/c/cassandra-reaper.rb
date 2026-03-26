@@ -11,7 +11,7 @@ class CassandraReaper < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c852b97d0a9ef1d93f60b2b1f389f4ec56e65d9383628bac84417d437706fabf"
+    sha256 cellar: :any_skip_relocation, all: "5ab84b8bf47c86bced3471334993f0e24f3ef4aec87eb60181ef7ee2617ea262"
   end
 
   depends_on "openjdk"
