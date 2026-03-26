@@ -15,12 +15,12 @@ class Ejabberd < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "d36ff4816c0888a12396d6d190abfbc8cde13ffbe35ca5465deefd5d54a1d1b2"
-    sha256 cellar: :any,                 arm64_sequoia: "989ccf6f8062daab2f2a2567e803e26fd574cc23dbe306f716b042057f9627ef"
-    sha256 cellar: :any,                 arm64_sonoma:  "ba6b3be9f974635f7abde2dca78bb4104e58c654fcedbd14a8eac5154177e4c4"
-    sha256 cellar: :any,                 sonoma:        "c9d81c546e568d4f9cfc4bb4fa31dd6370de5bc6fdfc9b2139380f77b9cebf69"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c59a6280e58d3113b8d251402ebfe8b2c981e72eb2c329385c4a8442f2b04482"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f7f145f5f49e92586079a8ecc7d6d8aef62d8942459a2f9d4925e1057f8493bd"
+    sha256 cellar: :any,                 arm64_tahoe:   "b440c79f05b5cfa0bc7d6d855716cba0c2ae2a3605ac0ec2814d364a6aac7ded"
+    sha256 cellar: :any,                 arm64_sequoia: "8f224288b9a94c60615169c46fe162d2e6804831ba5f68ec5ba7e015abe91dd5"
+    sha256 cellar: :any,                 arm64_sonoma:  "bce339940797be51a1f1b0b94acc0e4205103870930f3a1417d54276fe30ca62"
+    sha256 cellar: :any,                 sonoma:        "6335a60927919311572936b8ac7b374a4545f9a3b734573fadd9b0278a132758"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ebf0f8934a281d5ea9eac7cda328af2cd7f7fc5a503d2ba14bad156a12f94e6f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7edfd5b829a9e4db6d611eedb3e43e14b63d67f81019b1ce8b8b927a872bc3b3"
   end
 
   depends_on "autoconf" => :build
