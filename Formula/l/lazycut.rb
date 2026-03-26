@@ -13,11 +13,8 @@ class Lazycut < Formula
   end
 
   depends_on "go" => :build
-  depends_on "pkgconf" => :build
   depends_on "chafa"
   depends_on "ffmpeg"
-  depends_on "gettext"
-  depends_on "glib"
   depends_on :macos
 
   def install
