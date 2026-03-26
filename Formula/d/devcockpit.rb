@@ -1,8 +1,8 @@
 class Devcockpit < Formula
   desc "TUI system monitor for Apple Silicon"
   homepage "https://devcockpit.app/"
-  url "https://github.com/caioricciuti/dev-cockpit/archive/refs/tags/v1.0.9.tar.gz"
-  sha256 "3709ae1ef05d5581756a15179aee6af8a4f3ec9ba72ce96dd39ab059493223b4"
+  url "https://github.com/caioricciuti/dev-cockpit/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "c839630c5ef7aa29c9ee90af63fb504a540dcd7f1f32142921b31e37a0b46597"
   license "GPL-3.0-only"
   head "https://github.com/caioricciuti/dev-cockpit.git", branch: "main"
 
@@ -14,7 +14,9 @@ class Devcockpit < Formula
   end
 
   depends_on "go" => :build
-  depends_on arch: :arm64
+  on_macos do
+    depends_on arch: :arm64
+  end
 
   def install
     ENV["CGO_ENABLED"] = "1"
