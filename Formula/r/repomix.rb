@@ -1,8 +1,8 @@
 class Repomix < Formula
   desc "Pack repository contents into a single AI-friendly file"
   homepage "https://github.com/yamadashy/repomix"
-  url "https://registry.npmjs.org/repomix/-/repomix-1.13.0.tgz"
-  sha256 "0db3240241ca7d4a293bfd89f6d2ebdecf38f583dbfe712e7840c2a1dce8da54"
+  url "https://registry.npmjs.org/repomix/-/repomix-1.13.1.tgz"
+  sha256 "6cf55ff94ceff076def10159561933be8830f886d058cc7908f3a8951630006f"
   license "MIT"
 
   bottle do
@@ -16,22 +16,9 @@ class Repomix < Formula
 
   depends_on "node"
 
-  on_linux do
-    depends_on "xsel"
-  end
-
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
-
-    clipboardy_fallbacks_dir = libexec/"lib/node_modules/#{name}/node_modules/clipboardy/fallbacks"
-    rm_r(clipboardy_fallbacks_dir) # remove pre-built binaries
-    if OS.linux?
-      linux_dir = clipboardy_fallbacks_dir/"linux"
-      linux_dir.mkpath
-      # Replace the vendored pre-built xsel with one we build ourselves
-      ln_sf (Formula["xsel"].opt_bin/"xsel").relative_path_from(linux_dir), linux_dir
-    end
   end
 
   test do
