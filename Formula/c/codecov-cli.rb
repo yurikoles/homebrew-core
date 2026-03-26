@@ -3,8 +3,8 @@ class CodecovCli < Formula
 
   desc "Codecov's command-line interface"
   homepage "https://cli.codecov.io/"
-  url "https://files.pythonhosted.org/packages/d9/6a/49acd54e67271b2e628f9df109f17ca92e274ba6563c58968badda353578/codecov_cli-11.2.7.tar.gz"
-  sha256 "dc8309d785ceecdd8f10c06958d2727936e500411f3d80e3b90c05c604cde584"
+  url "https://files.pythonhosted.org/packages/5d/a6/7de4ab8ac19a3ab83b1844173c5dc4a819c55f7fa6c2dc7aa7c47ada6075/codecov_cli-11.2.8.tar.gz"
+  sha256 "39daded2fe9f618fdd7e249891d5cb1e4fb413c203b8a83d5d0f79c18b674ac4"
   license "Apache-2.0"
 
   bottle do
@@ -49,18 +49,13 @@ class CodecovCli < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
-  end
-
-  resource "responses" do
-    url "https://files.pythonhosted.org/packages/6d/db/b949a6bf2a75c64caea0a6b39d05e433aa2e51bea78ae9d5dda1110b31a5/responses-0.21.0.tar.gz"
-    sha256 "b82502eb5f09a0289d8e209e7bad71ef3978334f56d09b444253d5ad67bf5253"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "sentry-sdk" do
-    url "https://files.pythonhosted.org/packages/e9/b8/285293dc60fc198fffc3fcdbc7c6d4e646e0f74e61461c355d40faa64ceb/sentry_sdk-2.55.0.tar.gz"
-    sha256 "3774c4d8820720ca4101548131b9c162f4c9426eb7f4d24aca453012a7470f69"
+    url "https://files.pythonhosted.org/packages/de/df/5008954f5466085966468612a7d1638487596ee6d2fd7fb51783a85351bf/sentry_sdk-2.56.0.tar.gz"
+    sha256 "fdab72030b69625665b2eeb9738bdde748ad254e8073085a0ce95382678e8168"
   end
 
   resource "test-results-parser" do
@@ -96,6 +91,6 @@ class CodecovCli < Formula
 
     output = shell_output("#{bin}/codecovcli do-upload --commit-sha=mocksha --dry-run 2>&1")
     assert_match "Found 1 coverage files to report", output
-    assert_match "Process Upload complete", output
+    assert_match "Upload queued for processing complete", output
   end
 end
