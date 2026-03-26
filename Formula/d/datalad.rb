@@ -6,6 +6,7 @@ class Datalad < Formula
   url "https://files.pythonhosted.org/packages/59/32/9c8b33931d6c6a72b94dad3087833f61abb546197f4f14cfd0caaaf0206e/datalad-1.3.4.tar.gz"
   sha256 "891db31bfc4680bba3e24355886582016bdac85e8fde4e756f84b785a0b79ea4"
   license "MIT"
+  revision 1
   head "https://github.com/datalad/datalad.git", branch: "maint"
 
   bottle do
@@ -38,18 +39,18 @@ class Datalad < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/1f/f3/26d800e4efe85e7d59c63ac11d02ab2fafed371bede567af7258eb7e4c1c/boto3-1.42.69.tar.gz"
-    sha256 "e59846f4ff467b23bae4751948298db554dbdda0d72b09028d2cacbeff27e1ad"
+    url "https://files.pythonhosted.org/packages/f1/13/33c8b8704d677fcaf5555ba8c6cc39468fc7b9a0c6b6c496e008cd5557fc/boto3-1.42.76.tar.gz"
+    sha256 "aa2b1973eee8973a9475d24bb579b1dee7176595338d4e4f7880b5c6189b8814"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/42/d1/81a6e39c7d5419ba34bad8a1ac2c5360c26f21af698a481a8397d79134d1/botocore-1.42.69.tar.gz"
-    sha256 "0934f2d90403c5c8c2cba83e754a39d77edcad5885d04a79363edff3e814f55e"
+    url "https://files.pythonhosted.org/packages/70/62/a982acb81c5e0312f90f841b790abad65622c08aad356eed7008ea3d475b/botocore-1.42.76.tar.gz"
+    sha256 "c553fa0ae29e36a5c407f74da78b78404b81b74b15fb62bf640a3cd9385f0874"
   end
 
   resource "chardet" do
-    url "https://files.pythonhosted.org/packages/0d/84/e72ea5c06e687db591283474b8442ab95665fc6bae7b06043b2a6f0eaf6c/chardet-7.1.0.tar.gz"
-    sha256 "8f47bc4accac17bd9accbb4acc1d563acc024a783806c0a43c3a583f5285690b"
+    url "https://files.pythonhosted.org/packages/3e/af/8d6ad988a6a4b9830c4e39e4c2e390e3037465b76a5e32e92273df27a973/chardet-7.3.0.tar.gz"
+    sha256 "e6bf602bb8a070524a19bac1cff2a10d62c71b09606f066251282870fa1466e5"
   end
 
   resource "charset-normalizer" do
@@ -88,8 +89,8 @@ class Datalad < Formula
   end
 
   resource "jaraco-context" do
-    url "https://files.pythonhosted.org/packages/27/7b/c3081ff1af947915503121c649f26a778e1a2101fd525f74aef997d75b7e/jaraco_context-6.1.1.tar.gz"
-    sha256 "bc046b2dc94f1e5532bd02402684414575cc11f565d929b6563125deb0a6e581"
+    url "https://files.pythonhosted.org/packages/af/50/4763cd07e722bb6285316d390a164bc7e479db9d90daa769f22578f698b4/jaraco_context-6.1.2.tar.gz"
+    sha256 "f1a6c9d391e661cc5b8d39861ff077a7dc24dc23833ccee564b234b81c82dfe3"
   end
 
   resource "jaraco-functools" do
@@ -163,8 +164,8 @@ class Datalad < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "requests-toolbelt" do
