@@ -6,7 +6,7 @@ class Flyway < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "158728287bfba538e04eba488334953e65fb87b29928fc4aff332387be72be5d"
+    sha256 cellar: :any_skip_relocation, all: "bc7f224e7e035177d6e4f1fd1d89f18e3d358333182c56ad791db33eb07209b5"
   end
 
   depends_on "openjdk"
