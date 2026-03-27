@@ -81,19 +81,10 @@ class Ruby < Formula
   end
 
   def install
-    # otherwise `gem` command breaks
-    ENV.delete("SDKROOT")
-
-    # Prevent `make` from trying to install headers into the SDK
-    # TODO: Remove this workaround when the following PR is merged/resolved:
-    #       https://github.com/Homebrew/brew/pull/12508
-    inreplace "tool/mkconfig.rb", /^(\s+val = )'"\$\(SDKROOT\)"'\+/, "\\1"
-
-    system "./autogen.sh" if build.head?
-
     paths = %w[libyaml openssl@3].map { |f| Formula[f].opt_prefix }
     # Add versioned Ruby RPATH so user-installed gems can work when user is switched to versioned Ruby
     paths << versioned_opt_prefix if OS.linux? && !versioned_formula?
+
     args = %W[
       --prefix=#{prefix}
       --enable-shared
@@ -106,14 +97,9 @@ class Ruby < Formula
     args << "--with-baseruby=#{RbConfig.ruby}" if build.head?
     args << "--disable-dtrace" if OS.mac? && !MacOS::CLT.installed?
 
-    # Correct MJIT_CC to not use superenv shim
-    args << "MJIT_CC=/usr/bin/#{DevelopmentTools.default_compiler}"
-
     # Avoid stdckdint.h on macOS 15 as it's not available in Xcode 16.0-16.2,
     # and if the build system picks it up it'll use it for runtime builds too.
     args << "ac_cv_header_stdckdint_h=no" if OS.mac? && MacOS.version == :sequoia
-
-    system "./configure", *args
 
     # Ruby has been configured to look in the HOMEBREW_PREFIX for the
     # sitedir and vendordir directories; however we don't actually want to create
@@ -128,6 +114,8 @@ class Ruby < Formula
       s.gsub! 'prepare "extension objects", vendorarchlibdir', ""
     end
 
+    system "./autogen.sh" if build.head?
+    system "./configure", *args
     system "make"
     system "make", "install"
 
