@@ -6,7 +6,7 @@ class Onionprobe < Formula
   url "https://files.pythonhosted.org/packages/30/d0/6441b228ce174481ace50dec6a19ce6298eebdb35d06f40f7b1de66f51c4/onionprobe-1.4.1.tar.gz"
   sha256 "45c12c89829e344422974aa9d56cc653d1e20a2f225e73ee18aeb995ca47a2be"
   license "GPL-3.0-or-later"
-  revision 2
+  revision 3
   head "https://gitlab.torproject.org/tpo/onion-services/onionprobe.git", branch: "main"
 
   bottle do
@@ -27,8 +27,8 @@ class Onionprobe < Formula
   pypi_packages exclude_packages: %w[certifi cryptography]
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz"
-    sha256 "94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a"
+    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
+    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
   end
 
   resource "idna" do
@@ -37,8 +37,8 @@ class Onionprobe < Formula
   end
 
   resource "prometheus-client" do
-    url "https://files.pythonhosted.org/packages/23/53/3edb5d68ecf6b38fcbcc1ad28391117d2a322d9a1a3eff04bfdb184d8c3b/prometheus_client-0.23.1.tar.gz"
-    sha256 "6ae8f9081eaaaf153a2e959d2e6c4f4fb57b12ef76c8c7980202f1e57b48b2ce"
+    url "https://files.pythonhosted.org/packages/f0/58/a794d23feb6b00fc0c72787d7e87d872a6730dd9ed7c7b3e954637d8f280/prometheus_client-0.24.1.tar.gz"
+    sha256 "7e0ced7fbbd40f7b84962d5d2ab6f17ef88a72504dcf7c0b40737b43b2a461f9"
   end
 
   resource "pysocks" do
@@ -52,8 +52,8 @@ class Onionprobe < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "stem" do
