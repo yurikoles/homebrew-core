@@ -1,8 +1,8 @@
 class MingwW64 < Formula
   desc "Minimalist GNU for Windows and GCC cross-compilers"
   homepage "https://sourceforge.net/projects/mingw-w64/"
-  url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v13.0.0.tar.bz2"
-  sha256 "5afe822af5c4edbf67daaf45eec61d538f49eef6b19524de64897c6b95828caf"
+  url "https://downloads.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v14.0.0.tar.bz2"
+  sha256 "6eaf921d9eb987d3820b364ea9775bc19b965ec81490b6fdd716526c28e1995c"
   license all_of: [
     # mingw-w64
     "ZPL-2.1",
@@ -11,7 +11,6 @@ class MingwW64 < Formula
     # gcc
     "GPL-3.0-or-later" => { with: "GCC-exception-3.1" },
   ]
-  revision 2
 
   livecheck do
     url :stable
@@ -44,9 +43,9 @@ class MingwW64 < Formula
   end
 
   resource "binutils" do
-    url "https://ftpmirror.gnu.org/gnu/binutils/binutils-2.45.tar.bz2"
-    mirror "https://ftp.gnu.org/gnu/binutils/binutils-2.45.tar.bz2"
-    sha256 "1393f90db70c2ebd785fb434d6127f8888c559d5eeb9c006c354b203bab3473e"
+    url "https://ftpmirror.gnu.org/gnu/binutils/binutils-2.46.0.tar.bz2"
+    mirror "https://ftp.gnu.org/gnu/binutils/binutils-2.46.0.tar.bz2"
+    sha256 "0f3152632a2a9ce066f20963e9bb40af7cf85b9b6c409ed892fd0676e84ecd12"
   end
 
   resource "gcc" do
