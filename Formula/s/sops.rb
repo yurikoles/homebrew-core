@@ -21,6 +21,8 @@ class Sops < Formula
     ldflags = "-s -w -X github.com/getsops/sops/v3/version.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:), "./cmd/sops"
     pkgshare.install "example.yaml"
+
+    generate_completions_from_executable(bin/"sops", shell_parameter_format: :cobra, shells: [:bash, :zsh])
   end
 
   test do
