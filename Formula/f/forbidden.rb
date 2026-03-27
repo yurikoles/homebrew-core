@@ -6,7 +6,7 @@ class Forbidden < Formula
   url "https://files.pythonhosted.org/packages/9b/aa/98fc3ee28aac41cae341a197858ff6af5d79e40dcd45c8a6e37b1fdbfd19/forbidden-13.4.tar.gz"
   sha256 "dc987150b71515810d7ae252895b3ca6e077a8d9b3cbb0d09dfc9797c933a14d"
   license "MIT"
-  revision 3
+  revision 4
   head "https://github.com/ivan-sincek/forbidden.git", branch: "main"
 
   bottle do
@@ -39,13 +39,13 @@ class Forbidden < Formula
   end
 
   resource "bot-safe-agents" do
-    url "https://files.pythonhosted.org/packages/44/8e/fd72545a981a5133b51802852bdb6d5a313a330b61cec952b3455456b9fd/bot_safe_agents-1.1.tar.gz"
-    sha256 "ba3405bc92de1301fdd19b48e80ba7f26a8661ebbba2ab010e80e15267075ba6"
+    url "https://files.pythonhosted.org/packages/12/67/b5659b1ad6d8fd4ba319f014e05a1c157ed5004bd82e30861919772426e7/bot_safe_agents-1.2.tar.gz"
+    sha256 "d61bd82b69f56314ad45ad6bba7e044aac23c78659a552e4ae1482f17cb94eda"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/1d/35/02daf95b9cd686320bb622eb148792655c9412dbb9b67abb5694e5910a24/charset_normalizer-3.4.5.tar.gz"
-    sha256 "95adae7b6c42a6c5b5b559b1a99149f090a57128155daeea91732c8d970d8644"
+    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
+    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
   end
 
   resource "colorama" do
@@ -79,8 +79,8 @@ class Forbidden < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "tabulate" do
