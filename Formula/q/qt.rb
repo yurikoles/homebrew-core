@@ -19,12 +19,12 @@ class Qt < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2d3329fa20b8937612d7a46d53c8072d149a3b3647bd25ef2b50c034efab357d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2d3329fa20b8937612d7a46d53c8072d149a3b3647bd25ef2b50c034efab357d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2d3329fa20b8937612d7a46d53c8072d149a3b3647bd25ef2b50c034efab357d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2d3329fa20b8937612d7a46d53c8072d149a3b3647bd25ef2b50c034efab357d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7bdd7a873a7356ec9f51fac69ccb3c52ed7e4d69e4b379792497649895234e04"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3a5cde97696f618ef2c5d20f8b0557425aff7cc4ba68abf81c3c0e11f5bcebcd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e08b531a07a1fc95a913a6612bc4281ae53d2391feae18601a1559b7c25a8b42"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e08b531a07a1fc95a913a6612bc4281ae53d2391feae18601a1559b7c25a8b42"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e08b531a07a1fc95a913a6612bc4281ae53d2391feae18601a1559b7c25a8b42"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e08b531a07a1fc95a913a6612bc4281ae53d2391feae18601a1559b7c25a8b42"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cc71d0ffe04525fc78d6970df93baef6aff5e232969e41e84a94b76abc793828"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "22278fe7e298c80570d8570fb5d6bd0da7184576f80b54e6185d9db4d53d9f52"
   end
 
   depends_on "cmake" => :test
