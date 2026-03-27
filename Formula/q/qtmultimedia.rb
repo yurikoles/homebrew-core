@@ -21,12 +21,12 @@ class Qtmultimedia < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "573997b9213c6569c8b6d84e99efcea71761ec9b8e4cd5f3b9885fe17f56fd1c"
-    sha256 cellar: :any,                 arm64_sequoia: "4a7b55496b3e9a76e4302be6608c5714925bb36816e20d32a7a28fe7c4509d2e"
-    sha256 cellar: :any,                 arm64_sonoma:  "db172a13148042522b6f3861df0bee3f5342110e5ca1911f1762913fc9d90a8f"
-    sha256 cellar: :any,                 sonoma:        "3d9dd79b1198932bf20b86edababb6683326544bafc48e78d5cecd43b85407dd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fa73bd3ad4c203d3911e332e87fda147120065b51bed09e816cbad62ec60e28c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "10cc4d15f2a41d94c8cdeb726240fede279732dc76bd5ce66eb1228af4792af4"
+    sha256 cellar: :any,                 arm64_tahoe:   "4c40c2fb0499a8bd9621895ab405927566bfeea240e0c13793c82ffa28da9d0a"
+    sha256 cellar: :any,                 arm64_sequoia: "2cba32c8ea75972df60f58c894a7bf3c28b17d9ad6205d1a693b73691d0e1a9b"
+    sha256 cellar: :any,                 arm64_sonoma:  "aa0e63af3f93f62daf1b0ad1ce4abc9f98314655d6a2d520152dcc5a8b8db66d"
+    sha256 cellar: :any,                 sonoma:        "c40ec66fa9e10164085ce23d528ab8a3fba5fd36d4f248b679080071825aa80c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "268b006e6705001e41a4012f6b51bc2da7955704577d9ee2812d36497bd2ea35"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8883140f1efb21a3cb29a705af51d8550f91fa961649168f308badebf0221278"
   end
 
   depends_on "cmake" => [:build, :test]
