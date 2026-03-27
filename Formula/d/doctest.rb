@@ -1,8 +1,8 @@
 class Doctest < Formula
   desc "Feature-rich C++11/14/17/20/23 single-header testing framework"
   homepage "https://github.com/doctest/doctest"
-  url "https://github.com/doctest/doctest/archive/refs/tags/v2.4.12.tar.gz"
-  sha256 "73381c7aa4dee704bd935609668cf41880ea7f19fa0504a200e13b74999c2d70"
+  url "https://github.com/doctest/doctest/archive/refs/tags/v2.5.0.tar.gz"
+  sha256 "eb917c80bef7aceb9eca59d9328142351facdcdabe90b5242632b93c34b9e345"
   license "MIT"
 
   bottle do
