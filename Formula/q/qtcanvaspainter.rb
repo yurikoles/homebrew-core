@@ -17,6 +17,15 @@ class Qtcanvaspainter < Formula
     formula "qtbase"
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "a937f03524a8e365ba26075fd08cedc2723a3b9c6482d8182f34ff771537967c"
+    sha256 cellar: :any,                 arm64_sequoia: "0c410361c0597f648d6f3bc9bfa91aac9fdfbe0999290dd855ed61f0e5567237"
+    sha256 cellar: :any,                 arm64_sonoma:  "7aa4f21f4c35be9c1c3107473878ce0d1908c8948975784f08560e11d04857cc"
+    sha256 cellar: :any,                 sonoma:        "a7233f2bccbaa52adb56267ab3d50ab4f85ad5edd9daee98aafea0a521c5c0a7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a2dd1d8de3a650ec6668ad307a6ef23fc4f28861eefbae186ad376b5bed1fcda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35a1b801ba96ea75c5379bdc2c7e95f4f7c89332fd37bbd28507c26ac2af5065"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "ninja" => :build
   depends_on "qtshadertools" => :build
