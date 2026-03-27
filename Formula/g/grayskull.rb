@@ -10,12 +10,12 @@ class Grayskull < Formula
   head "https://github.com/conda/grayskull.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0bea4584f95992631872492944f970fd8b6838029272e482f0af91ff4ec49fab"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "98e6bff6dd3f70ca04329de31140a49a6feb923f33bca6da7d10277300953f3b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d672938ecfee9c49fe85bd635b7f5148e868130d619d03045e7f842cf0b439f5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "455ecffa8668b228f7c533e17171c8e4652cad0777f5326fc8ef685cb34258e6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9946d2b6317b89568ce26e827e1474468225b0176fc6a4b8622dbf6ead0f9664"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e5299e0fa8d78b94e14d85746dfa9c48897bdf6e88d533aa7d134e756e20e95d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1b1dc52007a1f23748fb0445fdaa7137b00eaac4ac673a77126d99ffe46dd608"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7b85834d89bfb00cfc3a88f2cb7c087042cc6e9a8b559a694b00483566849c07"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "14a2fef9027eea16a6b37e479297cc8d5c4286440f85daf129b2f3bd74a7ca5e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "71dda93a5d3d386b608094e7cf59230548b82343d1080d0cabf47823cb69339d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7309b0adabe2552358cf8a59edc31ecacb7ca2a0cfb4bb8ed967f84415d8353f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "43c0e4d3908d9b110101e77e6137cd856d1b41dbfe6fe38957b59b506d8a1f53"
   end
 
   depends_on "cmake" => :build
