@@ -1,10 +1,9 @@
 class Pivy < Formula
   desc "Python bindings to coin3d"
   homepage "https://github.com/coin3d/pivy"
-  url "https://github.com/coin3d/pivy/archive/refs/tags/0.6.10.tar.gz"
-  sha256 "7b409816c9fad84cf94f93659281f9dd2501d285eb2fc609e9401a3d004ce723"
+  url "https://github.com/coin3d/pivy/archive/refs/tags/0.6.11.tar.gz"
+  sha256 "78f79bd7d1ce7e8140ceba4b1220136ea1f14b4403b1e463c59fa892feed961e"
   license "ISC"
-  revision 1
   head "https://github.com/coin3d/pivy.git", branch: "master"
 
   bottle do
