@@ -1,8 +1,8 @@
 class Zsv < Formula
   desc "Tabular data swiss-army knife CLI"
   homepage "https://github.com/liquidaty/zsv"
-  url "https://github.com/liquidaty/zsv/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "251b1f61e8c2371382e9b612f1877c9f1f7ff71d47029ee04f45db89c5f0caab"
+  url "https://github.com/liquidaty/zsv/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "939fb66d4885260ebe52cc280d131a3973886a37b9ac5db0fe8be18e27c4c31c"
   license "MIT"
   head "https://github.com/liquidaty/zsv.git", branch: "main"
 
