@@ -1,8 +1,8 @@
 class Difi < Formula
   desc "Pixel-perfect terminal diff viewer"
   homepage "https://github.com/oug-t/difi"
-  url "https://github.com/oug-t/difi/archive/refs/tags/v0.1.9.tar.gz"
-  sha256 "1bfe57f791cb8436122e84f5cc4cd786e2e2c453345b0b92a94b50054cf51af4"
+  url "https://github.com/oug-t/difi/archive/refs/tags/v0.1.10.tar.gz"
+  sha256 "042ec3261e39d117c36dff2b94e0f473ba2d9e9b1e8df85846c25be502ee5964"
   license "MIT"
   head "https://github.com/oug-t/difi.git", branch: "main"
 
