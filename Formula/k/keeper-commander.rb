@@ -6,7 +6,7 @@ class KeeperCommander < Formula
   url "https://files.pythonhosted.org/packages/32/da/0de4649a73c0e59ed4a61f723ca51528e204a8803c003d0706a09dd17a75/keepercommander-17.2.10.tar.gz"
   sha256 "7770ce74cf93a0260e094c0ef66a055b3c9d7e19fa3564cb3acd2790502bdf33"
   license "MIT"
-  revision 1
+  revision 2
   head "https://github.com/Keeper-Security/Commander.git", branch: "master"
 
   no_autobump! because: "macOS resources cannot be updated on linux CI"
@@ -143,8 +143,8 @@ class KeeperCommander < Formula
   end
 
   resource "keeper-pam-webrtc-rs" do
-    url "https://files.pythonhosted.org/packages/92/e4/fc116c85112485744f341ca6760066af949f692974c328adf19fc91c93f8/keeper_pam_webrtc_rs-2.1.7.tar.gz"
-    sha256 "a522edbdcc028d18c4d7f09495c97e36eec27d153b11485bcb0a9d76e4ea3586"
+    url "https://files.pythonhosted.org/packages/b1/fa/54774a4487d68db05bcc9ae85ccb08441c1062f51d95e760149a0bb225ef/keeper_pam_webrtc_rs-2.1.10.tar.gz"
+    sha256 "4fa2257ab25312193e1e3c45222f8e793a016ecd9a2651db0182f74341bd7318"
   end
 
   resource "keeper-secrets-manager-core" do
@@ -263,8 +263,8 @@ class KeeperCommander < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "rich" do
