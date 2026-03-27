@@ -1,8 +1,8 @@
 class Grokj2k < Formula
   desc "JPEG 2000 Library"
   homepage "https://github.com/GrokImageCompression/grok"
-  url "https://github.com/GrokImageCompression/grok/releases/download/v20.2.1/source-full.tar.gz"
-  sha256 "522852759fb7ae7632f97643c5e05ee4e5798db9088186c6bcdb5c4ca30c427f"
+  url "https://github.com/GrokImageCompression/grok/releases/download/v20.2.3/source-full.tar.gz"
+  sha256 "32f92dec5c3c81f06b5c1a6d2d9a0f28d0f2395b2ddda235e57c2b1a6ab7d7dd"
   license "AGPL-3.0-or-later"
   head "https://github.com/GrokImageCompression/grok.git", branch: "master"
 
@@ -24,6 +24,7 @@ class Grokj2k < Formula
   depends_on "doxygen" => :build
   depends_on "pkgconf" => :build
   depends_on "exiftool"
+  depends_on "fmt"
   depends_on "jpeg-turbo"
   depends_on "libpng"
   depends_on "libtiff"
@@ -68,6 +69,7 @@ class Grokj2k < Formula
       -DGRK_BUILD_LIBPNG=OFF
       -DGRK_BUILD_LIBTIFF=OFF
       -DPERL_EXECUTABLE=#{perl}
+      -DSPDLOG_FMT_EXTERNAL=ON
     ]
 
     if OS.mac?
