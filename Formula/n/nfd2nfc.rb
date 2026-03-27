@@ -1,8 +1,8 @@
 class Nfd2nfc < Formula
   desc "Convert filesystem entry names from NFD to NFC for cross-platform compatibility"
   homepage "https://github.com/elgar328/nfd2nfc"
-  url "https://github.com/elgar328/nfd2nfc/archive/refs/tags/v2.0.7.tar.gz"
-  sha256 "ea53755802bbd85aa52e4d56d251c20bbf490bce39c28551852b2f7f02e042cf"
+  url "https://github.com/elgar328/nfd2nfc/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "76ba19c0d93fb0e1020f6758cde0c9fc3308ee682afab524b6f1f1fdc084c4a0"
   license "MIT"
   head "https://github.com/elgar328/nfd2nfc.git", branch: "main"
 
