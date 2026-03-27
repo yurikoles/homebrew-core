@@ -10,7 +10,7 @@ class Dnsgen < Formula
   head "https://github.com/AlephNullSK/dnsgen.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "64866d936e60c1aca1bffdcd1537291c9ca99d0a09d3a4d7722818bbbc442630"
+    sha256 cellar: :any_skip_relocation, all: "088c52e15cc90c305a84007eec63da4a794a0564b6fb6524070fbc19a21f58e7"
   end
 
   depends_on "certifi"
