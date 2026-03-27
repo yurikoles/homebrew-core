@@ -1,18 +1,18 @@
 class WhodbCli < Formula
   desc "Database management CLI with TUI interface, MCP server support, AI, and more"
   homepage "https://whodb.com/"
-  url "https://github.com/clidey/whodb/archive/refs/tags/0.101.0.tar.gz"
-  sha256 "72d6090f07e3c06379befc2fa5057948ad5d8ed7c83013386b381e7b3088863f"
+  url "https://github.com/clidey/whodb/archive/refs/tags/0.102.0.tar.gz"
+  sha256 "500da971371ef3e387bac52e06235826350d6441975234bcec88f8c5b2609b97"
   license "Apache-2.0"
   head "https://github.com/clidey/whodb.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d848eeeabb0a77287add1f7731ffce7d65be56b2b058de87acc7bccbc34c65b4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "81eee40934676fd1a1a09a2fd5559813513836a96a6c7c55d943b8b459d722a3"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "46501265b92b34b8b20c39052a063f17cb4c6e00b7bf72b68ef6baf522876d4e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1a281c3e886017d9a04198751940b150fb9370608861c988dbd27c3b505e1d93"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6d0a9a1c87f5c0062a86efba7e24107126a7b74ff2b62335dc431ac47d8597b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "89f420ed0c4eff361619fcb86065ec3ed87349e87959ccebe11f0f5898d2b055"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3547f3760b95270a2bcc18879edf345a4558275a522c67157c5a5f2a0df881a3"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1187df23cbbe24a64e1102ac53de495940adcca318ca675d80fc33b8509015ac"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8e683c44ba70a3b9bc150217921ec2f4d66ee4dc5cb812dc893bbb2d3f4f12d2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7d8daa4e306e209d52bff62de471db4f74a7646cfaade389349545340b32c40b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a2dd191fbb283d865b8a48d49c86e707c16941b6f9ca0a2daf9ec320e18fe75c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f4d6c459664dfcbdd0d8a8f61d1eac3c9724a09c049329d293fad6f7948dfab9"
   end
 
   depends_on "go" => :build
