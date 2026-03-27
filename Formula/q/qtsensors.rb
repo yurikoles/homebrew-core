@@ -17,12 +17,12 @@ class Qtsensors < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c2a0b942e7acc0355f1886e0c571a86d1e1ae7309b5ba878bdfe440598e35c6d"
-    sha256 cellar: :any,                 arm64_sequoia: "42fab0920eab80ce70443e9c031dbbe25bc50e58c54247bf8cffaf383877509e"
-    sha256 cellar: :any,                 arm64_sonoma:  "b440f79e4e50b54dcc57b5a756a29edf4e4e10d06e69d84f4c87762a9c567c2b"
-    sha256 cellar: :any,                 sonoma:        "854b42a45707ac3f35fac35ee08cd145701bf8226f5b55fe69ebd466e98d427c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "856995a08b739ee8d535a4ff3643797086436fdbca7defdee1632da0319536a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "59f8c14abdf6bfedb4eab8028f7e30aa746acc9f0fb455ed7857664fce02b76e"
+    sha256 cellar: :any,                 arm64_tahoe:   "4ea2463f8474d8e777927138c3319d13dc288057618c3f8481bcec1da9636f70"
+    sha256 cellar: :any,                 arm64_sequoia: "afe7493f7c9078fa51f3e51842bd8115d5baa64854afb285ff8bdb0b141bb7f0"
+    sha256 cellar: :any,                 arm64_sonoma:  "3f5ca5f47de1f3c5c0e82c701e9a0da481bae4f0ab179ae387e647b94f6386d5"
+    sha256 cellar: :any,                 sonoma:        "d2ce95fdeeaec00e92d06fd9e8b08e061d62a1cdbf7efa4b5e8ac1239085baa7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4ed2843ec56d976a0f7936a325d3324d5f391d2e48a45797f0c2e2de38d9458e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "509ed7f5f2e03ca5d2fa51ea0775d2b3ebe06ce4defd327d3b0228d622cfa3fe"
   end
 
   depends_on "cmake" => [:build, :test]
