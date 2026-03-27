@@ -1,10 +1,9 @@
 class Dovecot < Formula
   desc "IMAP/POP3 server"
   homepage "https://dovecot.org/"
-  url "https://dovecot.org/releases/2.4/dovecot-2.4.2.tar.gz"
-  sha256 "2cd62e4d22b9fc1c80bd38649739950f0dbda34fbc3e62624fb6842264e93c6e"
+  url "https://dovecot.org/releases/2.4/dovecot-2.4.3.tar.gz"
+  sha256 "e0b30330fe51e47ecfcf641bc16041184d91bdd0ac3db789b7cef54e3a75ac9b"
   license all_of: ["BSD-3-Clause", "LGPL-2.1-or-later", "MIT", "Unicode-DFS-2016", :public_domain]
-  revision 1
 
   livecheck do
     url "https://dovecot.org/releases/"
@@ -34,26 +33,15 @@ class Dovecot < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "lua@5.4"
   depends_on "openldap"
   depends_on "openssl@3"
 
+  uses_from_macos "python" => :build
   uses_from_macos "netcat" => :test
   uses_from_macos "bzip2"
   uses_from_macos "libxcrypt"
   uses_from_macos "sqlite"
-
-  on_macos do
-    # TODO: Remove dependencies with patches
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-
-    # Backport fix for macOS build
-    patch do
-      url "https://github.com/dovecot/core/commit/0f3bd7404a5e09f087450255083a672a5f231a8a.patch?full_index=1"
-      sha256 "b78cdee49eff5f18858fe1a32c33c8f58bba63b0824546c2d8b7f1b9c2f50e25"
-    end
-  end
 
   on_linux do
     depends_on "libtirpc"
@@ -65,8 +53,8 @@ class Dovecot < Formula
   end
 
   resource "pigeonhole" do
-    url "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.2.tar.gz"
-    sha256 "c2f90cf2a0154f94842ce0d8cafc81f282d0f98dfc3b51c3b7c2385c53316f97"
+    url "https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.3.tar.gz"
+    sha256 "219c472a5fa3e6f7a6cb76ff5118bcbead73e14cd4157d3701425245756cb5f8"
 
     livecheck do
       formula :parent
@@ -78,17 +66,14 @@ class Dovecot < Formula
     url "https://github.com/dovecot/core/commit/bbfab4976afdf38a7fa966752de33481f9d2c2e5.patch?full_index=1"
     sha256 "f5a77eeaf5978b75a6c7d1d9d4b7623679aec047c3dae63516105774ae6c04de"
   end
+  # `plugins/var-expand-crypt` and `lib-storage-lua` missing `lib-var-expand` in LIBADD
   patch :DATA
 
   def install
     # Re-generate file as only Linux has inotify support for imap-hibernate
     rm "src/config/all-settings.c" unless OS.linux?
 
-    if OS.mac?
-      odie "Remove workaround and autoreconf dependencies!" if version > "2.4.2"
-      system "autoreconf", "--force", "--install", "--verbose"
-      ENV.append "LIBS", "-liconv"
-    end
+    ENV.append "LIBS", "-liconv" if OS.mac?
 
     args = %W[
       --libexecdir=#{libexec}
@@ -96,6 +81,7 @@ class Dovecot < Formula
       --localstatedir=#{var}
       --with-bzlib
       --with-ldap
+      --with-lua=yes
       --with-pam
       --with-sqlite
       --without-icu
@@ -189,3 +175,23 @@ index 6c8b1ad..b721ad5 100644
  am_var_expand_crypt_la_OBJECTS = var-expand-crypt.lo
  var_expand_crypt_la_OBJECTS = $(am_var_expand_crypt_la_OBJECTS)
  AM_V_lt = $(am__v_lt_@AM_V@)
+diff --git a/src/lib-storage-lua/Makefile.in b/src/lib-storage-lua/Makefile.in
+--- a/src/lib-storage-lua/Makefile.in
++++ b/src/lib-storage-lua/Makefile.in
+@@ -521,11 +521,14 @@
+ 
+ libdovecot_storage_lua_la_LIBADD = \
+ 	../lib-dovecot-storage/libdovecot-storage.la \
+-	../lib-lua/libdovecot-lua.la
++	../lib-lua/libdovecot-lua.la \
++	$(LIBDOVECOT) \
++	$(LUA_LIBS)
+ 
+ libdovecot_storage_lua_la_DEPENDENCIES = \
+ 	../lib-dovecot-storage/libdovecot-storage.la \
+-	../lib-lua/libdovecot-lua.la
++	../lib-lua/libdovecot-lua.la \
++	$(LIBDOVECOT_DEPS)
+ 
+ libdovecot_storage_lua_la_LDFLAGS = -export-dynamic
+ headers = \
