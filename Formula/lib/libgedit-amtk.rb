@@ -8,12 +8,12 @@ class LibgeditAmtk < Formula
   head "https://gitlab.gnome.org/World/gedit/libgedit-amtk.git", branch: "main"
 
   bottle do
-    sha256 arm64_tahoe:   "4d014e2db6cf450d3c95535fe6cd5e23e13867e8c3fc8d3654cc316dc365cca0"
-    sha256 arm64_sequoia: "5e8381bb9eaee60ce832afe5ebb36f59d06ba09bd9886c9390315978d2ec5c54"
-    sha256 arm64_sonoma:  "d20d36510f9ea433a88645f47b52e1f7c712dfed1df82e10fe36892d767e0724"
-    sha256 sonoma:        "ba784b6440e0790e8ca925ac6dd2b495fcbdb834b6ce7c897b0a45c436b87308"
-    sha256 arm64_linux:   "dcbd37d870e5eca41e066a432a049e6b4fd2233e21aa58bae8aad5d16bca950a"
-    sha256 x86_64_linux:  "b4d7422e0e1950783ce2fa54756c8e9b997ffb3f3493395f1a7c5857c98cc80a"
+    sha256 arm64_tahoe:   "9a97a6da9b9869ccfc4eeb45c527d579b6a5f646f719aac95a275f94d9d2ff3f"
+    sha256 arm64_sequoia: "837a3adf99f31de0f7fa314998c19f34917b532c1ec0d0b7cf15078ebb0af7f1"
+    sha256 arm64_sonoma:  "ef199b96da45bca35ce0c6a54ca34987ca57811ecc83cc8926d3afb29c37d44b"
+    sha256 sonoma:        "bec5bc8941347e1bc91a024876beea8ef801a335c0ef4b8aa1aa42f59a0d7942"
+    sha256 arm64_linux:   "ba79ceb4612e7a04b6e4a246e8890eb8d0240d7d3c55601b41fefa26b704002b"
+    sha256 x86_64_linux:  "f682994518431437323aeec6e87a29dba13750c68bb291e4f97ba05b574aeabf"
   end
 
   depends_on "gobject-introspection" => :build
