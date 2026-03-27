@@ -6,6 +6,7 @@ class GalleryDl < Formula
   url "https://files.pythonhosted.org/packages/a3/ba/7e4c7d37c54e2b4e10698a23e9c7338671b81d14cc7cbba8f5aa53f3101c/gallery_dl-1.31.10.tar.gz"
   sha256 "d387c41429e14c2646eeb10285bf4777cf0ed3da68ee3f2edcba505f3e137bb7"
   license "GPL-2.0-only"
+  revision 1
   head "https://github.com/mikf/gallery-dl.git", branch: "master"
 
   bottle do
@@ -78,8 +79,8 @@ class GalleryDl < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "secretstorage" do
