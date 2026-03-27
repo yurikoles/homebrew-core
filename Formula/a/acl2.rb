@@ -1,10 +1,9 @@
 class Acl2 < Formula
   desc "Logic and programming language in which you can model computer systems"
   homepage "https://www.cs.utexas.edu/~moore/acl2/"
-  url "https://github.com/acl2/acl2/archive/refs/tags/8.6.tar.gz"
-  sha256 "c2d73e66422901b3cc2a6f5a9ab50f5f3b1b4060cf9dc9148d076f3a8b957cf9"
+  url "https://github.com/acl2/acl2/archive/refs/tags/8.7.tar.gz"
+  sha256 "d6013c22e190cbd702870d296b5370a068c14625bf7f9d305d2d87292b594d52"
   license "BSD-3-Clause"
-  revision 16
 
   livecheck do
     url :stable
@@ -30,6 +29,7 @@ class Acl2 < Formula
       "books/kestrel/axe/x86/examples/tea/tea.elf64",
       "books/kestrel/axe/x86/examples/add/add.elf64",
     ])
+    rm_r buildpath.glob("books/kestrel/axe/*/{examples,tests}")
 
     # Move files and then build to avoid saving build directory in files
     libexec.install Dir["*"]
