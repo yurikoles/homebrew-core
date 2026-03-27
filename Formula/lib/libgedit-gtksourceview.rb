@@ -1,10 +1,10 @@
 class LibgeditGtksourceview < Formula
   desc "Text editor widget for code editing"
   homepage "https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview"
-  url "https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview/-/archive/299.6.0/libgedit-gtksourceview-299.6.0.tar.bz2"
-  sha256 "e0c79788f548dbc94f932faaab91ef823a9e9d336ef6f1f049623116121d2e75"
+  url "https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview/-/archive/299.7.0/libgedit-gtksourceview-299.7.0.tar.bz2"
+  sha256 "c0baf7fcf756ad0b47150ea17e5de2cacb0833bbda13c6a625f57f3d00aee0bf"
   license "LGPL-2.1-only"
-  compatibility_version 1
+  compatibility_version 2
   head "https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview.git", branch: "main"
 
   bottle do
@@ -25,6 +25,8 @@ class LibgeditGtksourceview < Formula
   depends_on "gdk-pixbuf"
   depends_on "glib"
   depends_on "gtk+3"
+  depends_on "libgedit-amtk"
+  depends_on "libgedit-gfls"
   depends_on "libxml2" # Dependent `gedit` uses Homebrew `libxml2`
   depends_on "pango"
 
