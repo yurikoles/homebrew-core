@@ -1,8 +1,8 @@
 class Lume < Formula
   desc "Create and manage Apple Silicon-native virtual machines"
   homepage "https://github.com/trycua/cua"
-  url "https://github.com/trycua/cua/archive/refs/tags/lume-v0.3.8.tar.gz"
-  sha256 "e6db31aca1e3c1c719bff55fbba6ffd12e4bb270d1b6e01d1690968a2760aaf3"
+  url "https://github.com/trycua/cua/archive/refs/tags/lume-v0.3.9.tar.gz"
+  sha256 "c52e156e94e223a35ff82d78724453a8f343edba4f6c54530430825a6d68e723"
   license "MIT"
   head "https://github.com/trycua/cua.git", branch: "main"
 
@@ -19,7 +19,7 @@ class Lume < Formula
 
   depends_on xcode: ["16.0", :build]
   depends_on arch: :arm64 # For Swift 6.0
-  depends_on :macos
+  depends_on macos: :sequoia # Swift 6 actor isolation requires macOS 15 SDK
 
   def install
     cd "libs/lume" do
