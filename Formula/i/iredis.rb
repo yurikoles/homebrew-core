@@ -9,7 +9,7 @@ class Iredis < Formula
   head "https://github.com/laixintao/iredis.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6096e7b0c6334db98e88a0efb7f01aad962d360d90b1f7e92dbd31bc949c76cd"
+    sha256 cellar: :any_skip_relocation, all: "e086975c63dbb2b08cf8f1423ec0c6ce256922ec27404dd98ce5dc4c475c82b2"
   end
 
   depends_on "python@3.14"
