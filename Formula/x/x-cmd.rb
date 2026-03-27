@@ -1,8 +1,8 @@
 class XCmd < Formula
   desc "Bootstrap 1000+ command-line tools in seconds"
   homepage "https://x-cmd.com"
-  url "https://github.com/x-cmd/x-cmd/archive/refs/tags/v0.8.10.tar.gz"
-  sha256 "bb6ca20b4e16c472cf86fdfbf6ae55f9b24de84d30f0d2458b7752fde9e0ff0f"
+  url "https://github.com/x-cmd/x-cmd/archive/refs/tags/v0.8.11.tar.gz"
+  sha256 "e8873f8cac34c35466a077cf55691b8e50dd95a6b02b05b8920dae3edb791e85"
   license all_of: ["Apache-2.0", "MIT", "BSD-3-Clause"]
   head "https://github.com/x-cmd/x-cmd.git", branch: "X"
 
@@ -12,12 +12,12 @@ class XCmd < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "297bd1af171c01fe19d253a03514b2c8a33d7a985883320debe0c86eadfdff26"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "297bd1af171c01fe19d253a03514b2c8a33d7a985883320debe0c86eadfdff26"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "297bd1af171c01fe19d253a03514b2c8a33d7a985883320debe0c86eadfdff26"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7734bd602cef9e81b8cf0b0929c4a1aa6021e3fefcb7c2a03c2ae68b6bed1d6e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fee252cf74c5ee95f73ad240ee32e4952b2a7dda1f58e3be6288d59a29ba9924"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fee252cf74c5ee95f73ad240ee32e4952b2a7dda1f58e3be6288d59a29ba9924"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e4b6dbf2a29dae947ff41d3676b78c8a26adfbd1f335cceac928903b57aac4ef"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e4b6dbf2a29dae947ff41d3676b78c8a26adfbd1f335cceac928903b57aac4ef"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e4b6dbf2a29dae947ff41d3676b78c8a26adfbd1f335cceac928903b57aac4ef"
+    sha256 cellar: :any_skip_relocation, sonoma:        "64e9a0481039f50593bcc31c8fb7437755737d8961b59cd10e6b9dacb4678d93"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c7c92d8f22bb8f576fd83aea820b04c9d3cc34a29c848330b7f09522a88959b5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c7c92d8f22bb8f576fd83aea820b04c9d3cc34a29c848330b7f09522a88959b5"
   end
 
   conflicts_with "xorg-server", "x-cli", because: "both provide an `x` binary"
