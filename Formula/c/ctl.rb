@@ -1,10 +1,9 @@
 class Ctl < Formula
   desc "Programming language for digital color management"
   homepage "https://github.com/ampas/CTL"
-  url "https://github.com/ampas/CTL/archive/refs/tags/ctl-1.5.4.tar.gz"
-  sha256 "fb84925320d053827fce965d7aeea5bb8690d7093bb083c8e3915d7a600e25fc"
+  url "https://github.com/ampas/CTL/archive/refs/tags/ctl-1.5.5.tar.gz"
+  sha256 "b6a36ac31e0a79224216e4fc41b56982939cec7a1afd4e80165cec3f1c37d265"
   license "AMPAS"
-  revision 2
   head "https://github.com/ampas/CTL.git", branch: "master"
 
   bottle do
