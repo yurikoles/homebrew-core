@@ -6,7 +6,7 @@ class Locust < Formula
   url "https://files.pythonhosted.org/packages/9d/c5/7d7bd50ac744bc209a4bcbeb74660d7ae450a44441737efe92ee9d8ea6a7/locust-2.43.3.tar.gz"
   sha256 "b5d2c48f8f7d443e3abdfdd6ec2f7aebff5cd74fab986bcf1e95b375b5c5a54b"
   license "MIT"
-  revision 1
+  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "ce7dbb22d73f67cafd95d355663dfedd816072e33fe8c1b512000a3b9e6146c4"
@@ -41,8 +41,8 @@ class Locust < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz"
-    sha256 "94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a"
+    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
+    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
   end
 
   resource "click" do
@@ -51,8 +51,8 @@ class Locust < Formula
   end
 
   resource "configargparse" do
-    url "https://files.pythonhosted.org/packages/85/4d/6c9ef746dfcc2a32e26f3860bb4a011c008c392b83eabdfb598d1a8bbe5d/configargparse-1.7.1.tar.gz"
-    sha256 "79c2ddae836a1e5914b71d58e4b9adbd9f7779d4e6351a637b7d2d9b6c46d3d9"
+    url "https://files.pythonhosted.org/packages/3f/0b/30328302903c55218ffc5199646d0e9d28348ff26c02ba77b2ffc58d294a/configargparse-1.7.5.tar.gz"
+    sha256 "e3f9a7bb6be34d66b2e3c4a2f58e3045f8dfae47b0dc039f87bcfaa0f193fb0f"
   end
 
   resource "flask" do
@@ -76,8 +76,8 @@ class Locust < Formula
   end
 
   resource "geventhttpclient" do
-    url "https://files.pythonhosted.org/packages/90/0b/925ddadaa6e34e06511a25353b1032b728d3bcdf147a9f4be944a00850bd/geventhttpclient-2.3.8.tar.gz"
-    sha256 "92d8c8b14aa6f62467b28fc45e4a9cd661d96b176f88b515920bda31a9bf8cb1"
+    url "https://files.pythonhosted.org/packages/d7/ff/cb3db11fca4223b2753ae170d1a09c9d32bfbfa3e8d4a6181324db686830/geventhttpclient-2.3.9.tar.gz"
+    sha256 "16807578dc4a175e8d97e6e39d65a10b04b5237a8c55f7a5ef39044e869baeb8"
   end
 
   resource "greenlet" do
@@ -161,8 +161,8 @@ class Locust < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "simple-websocket" do
@@ -181,8 +181,8 @@ class Locust < Formula
   end
 
   resource "werkzeug" do
-    url "https://files.pythonhosted.org/packages/61/f1/ee81806690a87dab5f5653c1f146c92bc066d7f4cebc603ef88eb9e13957/werkzeug-3.1.6.tar.gz"
-    sha256 "210c6bede5a420a913956b4791a7f4d6843a43b6fcee4dfa08a65e93007d0d25"
+    url "https://files.pythonhosted.org/packages/b5/43/76ded108b296a49f52de6bac5192ca1c4be84e886f9b5c9ba8427d9694fd/werkzeug-3.1.7.tar.gz"
+    sha256 "fb8c01fe6ab13b9b7cdb46892b99b1d66754e1d7ab8e542e865ec13f526b5351"
   end
 
   resource "wsproto" do
