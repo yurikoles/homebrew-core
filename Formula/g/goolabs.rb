@@ -9,7 +9,7 @@ class Goolabs < Formula
   revision 16
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a4f94bcb523466d05c72491d63505b3fc4942961a82cf1c5cb4d0e8befd0c2f2"
+    sha256 cellar: :any_skip_relocation, all: "7b5f6459b7b4bd36606c7e88a1d87f8c41c35bea3a15cda4b20d6f233e285c37"
   end
 
   depends_on "certifi"
