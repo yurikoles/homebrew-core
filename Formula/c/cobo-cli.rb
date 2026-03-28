@@ -10,12 +10,12 @@ class CoboCli < Formula
   head "https://github.com/CoboGlobal/cobo-cli.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3c1b1b5217102710b3cd9f0512bfcb37ffb00b292c573c8129d87a74448f2630"
-    sha256 cellar: :any,                 arm64_sequoia: "76efd98f0b47360598feb5602e4b9378a28dec6cd983273e07b260bacf2a5137"
-    sha256 cellar: :any,                 arm64_sonoma:  "9f36a62cab22357d621d54084677ce57ecbefc416e7db332a5e91b969e8a54f3"
-    sha256 cellar: :any,                 sonoma:        "85c87ad8e92466313df2b518c69b2e60c7af93815a4a3b7c4c5d2aa505d7fcf3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6a044ee87f1b961a8f05d30810c325922930e12115b6f05102eaead6bae3fa6f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ee850da2a2c049b8d0a468e4e1e0efc2cc1e539d2d5eff6fa02ba2994de55485"
+    sha256 cellar: :any,                 arm64_tahoe:   "ae5289c3d0f6e17d64a76c54f060d5c27701e572f3f83213f8fca2af2ac1dd30"
+    sha256 cellar: :any,                 arm64_sequoia: "644ccfcb8e7ddcd02387e3631b8989b021716b668090239af367247316623f1f"
+    sha256 cellar: :any,                 arm64_sonoma:  "fbb82a5822dc28e96f9a22f1de7ac0006ab7f2401ea64a297a6f4059021a5434"
+    sha256 cellar: :any,                 sonoma:        "b875242fea79902f653565d855032dd6f2cfe67e141fd824b3508a149031073a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e991f6d05bee3ed164d6e189ed6e723aed5703192049a71554548d28abbda7d0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9ae953a100183439f321c4e195be704b2d5f6b10d2b5b48ec65386ab3ea4607"
   end
 
   depends_on "certifi" => :no_linkage
