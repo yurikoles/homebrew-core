@@ -1,8 +1,8 @@
 class Jsongrep < Formula
   desc "Path query language over JSON documents"
   homepage "https://github.com/micahkepe/jsongrep"
-  url "https://github.com/micahkepe/jsongrep/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "2db5efbe33cdaba5b93d8a884baa12049b17174d839dce25480551a5fb358375"
+  url "https://github.com/micahkepe/jsongrep/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "5c6d42f5a76e880242c42ffad2f078872d5bb7f4a9e98eb3e3bda92089a682b4"
   license "MIT"
   head "https://github.com/micahkepe/jsongrep.git", branch: "main"
 
