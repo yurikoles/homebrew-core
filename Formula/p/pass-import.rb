@@ -10,12 +10,12 @@ class PassImport < Formula
   head "https://github.com/roddhjav/pass-import.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "27bd7cd3e6fec863f922b1148d2f9ab87056f5f9508a37d15055f23e3934bf7a"
-    sha256 cellar: :any,                 arm64_sequoia: "432d5082644edc2630bdf4094ab0bdf6984b29ba404119989f70abd79c5174a6"
-    sha256 cellar: :any,                 arm64_sonoma:  "98dba1334b3b10ddb5b8566889fd3dfeeed1d9a310077b9bb02a71dd500efc25"
-    sha256 cellar: :any,                 sonoma:        "6eaf95e64f75a96138db851dce93e796e26225a4a35b17984d8c5252f92927cd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "39c068df8ae97fe0cd9be17d72252e8f05df5bdf797f8394ea7d6fdb40215453"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "58511f4c1c484f7a81eb7a3c4994f0313c4539404ca44e3242231f2483dd34cc"
+    sha256 cellar: :any,                 arm64_tahoe:   "e4e0d99609fc5c82ee38a69be32d0b9e494168878e1dbbda4b114f042b4f1cbd"
+    sha256 cellar: :any,                 arm64_sequoia: "b1703b8981fa706cf927fe08958341ba7d02ebc6d219c7de989a8e440ceba70a"
+    sha256 cellar: :any,                 arm64_sonoma:  "e2186191f0a6799e4eb5b2293d7e2f464423bf9595db6d566fd2ae237546e442"
+    sha256 cellar: :any,                 sonoma:        "15f35c20d21df5a22fc52298a99ba10dc1219a5c5cac7e6b5649c03c1b3f2fc9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a7c1682028c7f5a42a919443f13e113677c68be78c9c3a3ba557c4d505e759d1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c58dfcc3f6cdb255f74378335712b24a3212a690333f519125c9d35d254bf1e3"
   end
 
   depends_on "certifi"
