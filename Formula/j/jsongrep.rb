@@ -7,12 +7,13 @@ class Jsongrep < Formula
   head "https://github.com/micahkepe/jsongrep.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0e358bcbebe2789405403e465b06b6c31decebfd8eee13d232869d9de0cfb4d3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "37c37d1e14a4f885c1da5fdc8162f191346ce1d5ae530cba813423754aba639c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8f88ae005e90595f5d6d497818c77706d27cfc00e07b24016437bc05885b435a"
-    sha256 cellar: :any_skip_relocation, sonoma:        "99fa2ebc797b8cb22d63b2b2f28ce1b1e8634e2b5d9dec78cebb80d664669f87"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3444cf329271e28f2d5d9bfc71fa38e054e637ce8f58b9ba5ae337c49a40be58"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "860b522358d10a57843349ae98513d1000d8b306a5465b3ea8c3e3fd7be0aea5"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bba02a4fd363dcdfba0a4344641700736f01af22e4c1712b84b26aae6408770c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b0e9ff382e4ecc552ca7291f0584640c22d254349ae2e3e07025015f215cdc85"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b109c2f1d54cd1c9aad9d043627c8fddfbb12a05db6c7fa5676a7287738be6ab"
+    sha256 cellar: :any_skip_relocation, sonoma:        "270f1a9a6fe88487635329c247d05bbea4d2910446840f4c7370ffb003be730b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5a3647cee9ff9e213ab400e94d4f200b98a9a8101258f4b5842c67f8ea0ad7a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5737015d93e6af318b563d176e1ecb7347d92cd02869f745f13d89e55aaee9bc"
   end
 
   depends_on "rust" => :build
