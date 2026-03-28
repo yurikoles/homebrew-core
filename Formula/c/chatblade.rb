@@ -17,6 +17,10 @@ class Chatblade < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "05d905e3130745bcad29a34942565c9a2753dbfd27ad7f81f8019eb3578c5dca"
   end
 
+  # https://github.com/npiv/chatblade/commit/30bbeb48d392b177e74b4df919a6b1b0d3500d8b
+  deprecate! date: "2026-03-28", because: :unmaintained
+  disable! date: "2027-03-28", because: :unmaintained
+
   depends_on "rust" => :build # for tiktoken
   depends_on "certifi" => :no_linkage
   depends_on "libyaml"
