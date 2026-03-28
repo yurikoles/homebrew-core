@@ -1,8 +1,8 @@
 class Bear < Formula
   desc "Generate compilation database for clang tooling"
   homepage "https://github.com/rizsotto/Bear"
-  url "https://github.com/rizsotto/Bear/archive/refs/tags/4.0.4.tar.gz"
-  sha256 "373007f2d7b322d5e1d3dd4c4759b181f0e9b045151f2f5c629537341b9d2167"
+  url "https://github.com/rizsotto/Bear/archive/refs/tags/4.1.0.tar.gz"
+  sha256 "c5f90fdcf7e0003a345993f3b69981db20715050a43ff984aad1b1bd5a1b02ea"
   license "GPL-3.0-or-later"
   head "https://github.com/rizsotto/Bear.git", branch: "master"
 
@@ -24,19 +24,16 @@ class Bear < Formula
   end
 
   def install
-    # Patch build.rs to use Homebrew's libexec path instead of /usr/local/libexec
-    inreplace "bear/build.rs" do |s|
-      s.gsub! "/usr/local/libexec/bear/$LIB", "#{libexec}/$LIB"
-      s.gsub! "/usr/local/libexec/bear", libexec/"bin"
-    end
-
-    system "cargo", "install", *std_cargo_args(path: "intercept-wrapper", root: libexec)
     system "cargo", "install", *std_cargo_args(path: "bear")
 
     if OS.linux?
       ENV.append_to_rustflags "-C link-arg=-fuse-ld=lld"
       system "cargo", "build", "--release", "--lib", "--manifest-path=intercept-preload/Cargo.toml"
       (libexec/"lib").install "target/release/libexec.so"
+    end
+
+    with_env(PREFIX: prefix) do
+      system "scripts/install.sh"
     end
   end
 
