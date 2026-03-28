@@ -9,12 +9,12 @@ class Codelimit < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "de65fb9f85f38054d30ce66eaadbcfe5ef6ba075c46948ebf99bd112b43e383c"
-    sha256 cellar: :any,                 arm64_sequoia: "eb4983504c146385ebaeb5762640b327bb5b86cb7d71f227c458a16fa3f59d8a"
-    sha256 cellar: :any,                 arm64_sonoma:  "9febe5fa1744491f99e5bbc2c9aa7f73ac0482e9ae8e945f19d4ff1bd82ae02c"
-    sha256 cellar: :any,                 sonoma:        "ba08062e856c430f4b3fd1fa5aa42212934a214a652fd6572d817dd801fa268b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "818507befbc7eb2ae1d1794905d0f79001b853cfa807734c3ec5709bca8ca9d3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a9fea9adbd1e85370595eb41d018b9c8a726c7dfc8dd24039bf52b850b4fb5a4"
+    sha256 cellar: :any,                 arm64_tahoe:   "2cdc9ef0a8b4dbc47cb45408d4722628076723dd4c529bfc69a18a2ff1ce2d2d"
+    sha256 cellar: :any,                 arm64_sequoia: "5a7dd88e9142f5702d15cfbbb9dc22ae615bc7ed42b50caf9f785bd8902915a1"
+    sha256 cellar: :any,                 arm64_sonoma:  "fbf128bfa216c1d14c5de0d45da3d30f9103fb1e7e719c6e2092a1f5a26862ef"
+    sha256 cellar: :any,                 sonoma:        "1a6a8680b0892ef32a28a8e192a403cbd0a0576c9491837857927ce330cd4fd5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c4997034993fae1c7934c84fbc3a430e66509bd9114904da38e8be1696dde528"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ea609b92bbc77d298b93b3111ff3df8eb32d1d0b42c8c7ef51634dbb4c0a5ba6"
   end
 
   depends_on "certifi" => :no_linkage
