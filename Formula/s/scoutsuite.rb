@@ -6,7 +6,7 @@ class Scoutsuite < Formula
   url "https://files.pythonhosted.org/packages/a9/41/4f375fac81c66e1475c3ae18753a86191f253cdf24c29f28c8861d6bb984/scoutsuite-5.14.0.tar.gz"
   sha256 "b021ad340196865093fb5d6e247f2596ec856e24cb39eb6e3e886923befd1208"
   license "GPL-2.0-only"
-  revision 9
+  revision 10
   head "https://github.com/nccgroup/ScoutSuite.git", branch: "master"
 
   bottle do
@@ -86,8 +86,8 @@ class Scoutsuite < Formula
   end
 
   resource "azure-core" do
-    url "https://files.pythonhosted.org/packages/c8/29/9641b73248745774a52c7ce7f965ed1febbdea787ec21caad3ae6891d18a/azure_core-1.38.3.tar.gz"
-    sha256 "a7931fd445cb4af8802c6f39c6a326bbd1e34b115846550a8245fa656ead6f8e"
+    url "https://files.pythonhosted.org/packages/34/83/bbde3faa84ddcb8eb0eca4b3ffb3221252281db4ce351300fe248c5c70b1/azure_core-1.39.0.tar.gz"
+    sha256 "8a90a562998dd44ce84597590fff6249701b98c0e8797c95fcdd695b54c35d74"
   end
 
   resource "azure-identity" do
@@ -161,13 +161,13 @@ class Scoutsuite < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/04/7c/d7a533916d1afc9e17f8594203a85799d42f7c5751464fbdb25ead8db9d2/boto3-1.42.70.tar.gz"
-    sha256 "d060b0d83d2832e403671b9a895e73c3b025df8bb5896d89e401b0678705aac4"
+    url "https://files.pythonhosted.org/packages/a8/2b/ebdad075934cf6bb78bf81fe31d83339bcd804ad6c856f7341376cbc88b6/boto3-1.42.78.tar.gz"
+    sha256 "cef2ebdb9be5c0e96822f8d3941ac4b816c90a5737a7ffb901d664c808964b63"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/66/54/b80e1fcee4f732e0e9314bbb8679be9d5690caa1566c4a4cd14e9724d2dd/botocore-1.42.70.tar.gz"
-    sha256 "9ee17553b7febd1a0c1253b3b62ab5d79607eb6163c8fb943470a8893c31d4fa"
+    url "https://files.pythonhosted.org/packages/67/8e/cdb34c8ca71216d214e049ada2148ee08bcda12b1ac72af3a720dea300ff/botocore-1.42.78.tar.gz"
+    sha256 "61cbd49728e23f68cfd945406ab40044d49abed143362f7ffa4a4f4bd4311791"
   end
 
   resource "charset-normalizer" do
@@ -356,8 +356,8 @@ class Scoutsuite < Formula
   end
 
   resource "jaraco-context" do
-    url "https://files.pythonhosted.org/packages/27/7b/c3081ff1af947915503121c649f26a778e1a2101fd525f74aef997d75b7e/jaraco_context-6.1.1.tar.gz"
-    sha256 "bc046b2dc94f1e5532bd02402684414575cc11f565d929b6563125deb0a6e581"
+    url "https://files.pythonhosted.org/packages/af/50/4763cd07e722bb6285316d390a164bc7e479db9d90daa769f22578f698b4/jaraco_context-6.1.2.tar.gz"
+    sha256 "f1a6c9d391e661cc5b8d39861ff077a7dc24dc23833ccee564b234b81c82dfe3"
   end
 
   resource "jaraco-functools" do
@@ -431,8 +431,8 @@ class Scoutsuite < Formula
   end
 
   resource "oci" do
-    url "https://files.pythonhosted.org/packages/3b/aa/0632d094b788ba676c37a65baa53365751402e59b4d05b3ef71da6db19f7/oci-2.168.2.tar.gz"
-    sha256 "1b0bc7be5eca58fc3ba482f56419710ea3cf09f515e6c0224c3118495684008e"
+    url "https://files.pythonhosted.org/packages/0b/d1/f7ad612e43390af57427150efe3b93d3f852983d4ba65fa4cb09898f8c9b/oci-2.168.3.tar.gz"
+    sha256 "098c7729a5e97e2bbd67dfb2218da355fbaff79a3e1c20cdbf137c79e97e1e1c"
   end
 
   resource "opentelemetry-api" do
@@ -486,8 +486,8 @@ class Scoutsuite < Formula
   end
 
   resource "pydo" do
-    url "https://files.pythonhosted.org/packages/58/d6/a04ccb832d9bd2fc92a4c59d5df2b2920c239cdbeba134f191741679f4c9/pydo-0.28.0.tar.gz"
-    sha256 "853bd83cb9f12fb489d5fb05f21e86e158e4d562de54764b00f6cd7695173822"
+    url "https://files.pythonhosted.org/packages/f3/1c/5372fc63aab88a49a939ab14b2d58a584e70a5d37d6695f6d6caf8b81baf/pydo-0.29.0.tar.gz"
+    sha256 "fb207a92d2e08a4b7241f915d20c5c37e6a437acb72740a7eaf1d1d74a914ec8"
   end
 
   resource "pygments" do
@@ -526,8 +526,8 @@ class Scoutsuite < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "requests-oauthlib" do
