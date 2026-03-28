@@ -18,13 +18,12 @@ class MingwW64 < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_tahoe:   "687705e89853f818c4750c2e254eba8ff42a6e4383776e29ad4202f54f9be2c2"
-    sha256 arm64_sequoia: "20e35713fd05a9dac2fcda9e0c56468c539526825b19dee23f1f5625992cb28c"
-    sha256 arm64_sonoma:  "a891e793e7b40feed8fcf1aac63e2386d754efcbf2df927b6bd526a2d6ddaf13"
-    sha256 sonoma:        "07abc35bcfcf64297df6a8bb50a587148921b2618f94aec95ba9da370fa17222"
-    sha256 arm64_linux:   "d51e6d1a3acc70fe646a710fe8d9a0a4d672ddf0f23087c0ca5b25e5a176480b"
-    sha256 x86_64_linux:  "b483173565e227feb70a894630749d8538de3067672ac00786c2612d0c8824cd"
+    sha256 arm64_tahoe:   "298d5ca67d497f70b61351ff954b3b3a6384d10d7e23fc35948f227821d730c2"
+    sha256 arm64_sequoia: "07eebaebcae187932b41573b59f3f8e33a92a892608d05ed07cb53930636b129"
+    sha256 arm64_sonoma:  "1add0b74a4cb2cc4980adfdde03e6fda0f9eda143c46ca510f5de8df2176e650"
+    sha256 sonoma:        "fb9719a502355193cf828cb626131890c9e148d3985099d3b0abe6815876a0df"
+    sha256 arm64_linux:   "26f0d10101da67e975b32656345e0bd63affcca8f33f088dd8f3078d66046217"
+    sha256 x86_64_linux:  "27bc6a705a7b8ac8e82b83746dd330d98917bf6741ec3dff8a343558f41f2572"
   end
 
   # binutils searches for zstd using pkg-config
