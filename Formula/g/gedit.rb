@@ -4,6 +4,7 @@ class Gedit < Formula
   url "https://gitlab.gnome.org/World/gedit/gedit/-/archive/50.0/gedit-50.0.tar.bz2"
   sha256 "c2d064001b95196f046a6f9705245e3a02dc427265f4e24af9bd2d5f3cb619ee"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     sha256 arm64_tahoe:   "a9086d4b1ae809e6a7300752c1d25a7989dba26c4534a4fd1af019b2f7e1cfff"
