@@ -8,8 +8,8 @@ class Neovim < Formula
   stable do
     # TODO: Bump to use tree-sitter 0.26+ when new Neovim release supports it
     # TODO: remove `head` block when stable supports tree-sitter 0.26+.
-    url "https://github.com/neovim/neovim/archive/refs/tags/v0.11.6.tar.gz"
-    sha256 "d1c8e3f484ed1e231fd5f48f53b7345b628e52263d5eef489bb8b73ca8d90fca"
+    url "https://github.com/neovim/neovim/archive/refs/tags/v0.11.7.tar.gz"
+    sha256 "b550b0e4cd2a0f9558bc6b278d27e47b528f7684efa2a46def438fcd64ee9822"
 
     # TODO: Consider backporting for compatibility with 0.26
     # https://github.com/neovim/neovim/commit/f4fc769c81af6f8d9235d59aec75cfe7c104b3ce
