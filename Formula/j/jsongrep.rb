@@ -7,13 +7,13 @@ class Jsongrep < Formula
   head "https://github.com/micahkepe/jsongrep.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bba02a4fd363dcdfba0a4344641700736f01af22e4c1712b84b26aae6408770c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b0e9ff382e4ecc552ca7291f0584640c22d254349ae2e3e07025015f215cdc85"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b109c2f1d54cd1c9aad9d043627c8fddfbb12a05db6c7fa5676a7287738be6ab"
-    sha256 cellar: :any_skip_relocation, sonoma:        "270f1a9a6fe88487635329c247d05bbea4d2910446840f4c7370ffb003be730b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5a3647cee9ff9e213ab400e94d4f200b98a9a8101258f4b5842c67f8ea0ad7a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5737015d93e6af318b563d176e1ecb7347d92cd02869f745f13d89e55aaee9bc"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "80c76baf0eb0141905b0fbae46c721a535fe5d0061b62570d9180b8bd1464a0b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "acb5a826acffc7e47e210e010b92b5db0bdf16dc3f5b98ea28ad2dc5754e68f9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "28f0bfe95e6e0f7dab749c2f057f227cb9201b0fb211f5c4ebc849e38646c1a6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "bad192c143b156ab23a39d29879ab638f4d3afe309311e293336ff4c37a239ce"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1f7186f420e913d6137da1e5a08a4824919a226cff9b0a69ae531cce7fe6ca9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30714c44b681f30e75a82a9a84d192e7ff5f7a2b386fa05363ae62e7edae5201"
   end
 
   depends_on "rust" => :build
@@ -22,6 +22,7 @@ class Jsongrep < Formula
     system "cargo", "install", *std_cargo_args
 
     generate_completions_from_executable(bin/"jg", "generate", "shell", shells: [:bash, :zsh, :fish, :pwsh])
+    system bin/"jg", "generate", "man", "--output-dir", man1
   end
 
   test do
