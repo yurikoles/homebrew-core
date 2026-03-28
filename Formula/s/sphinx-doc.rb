@@ -9,12 +9,12 @@ class SphinxDoc < Formula
   revision 2
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f41e5b35971deda76209697b50a9ab72e66789643b6d80d659894c1a74d9674e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d699be88b8b9f051e8afd4d22a3fa2c28e085dd60ef4fed6f4982b0b5d2ddf60"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fd0567c653af4b2fbf2597c42f8dda24a917e8c609526c634384918ea3406b94"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b148af00d76427bb9e02db6b58186bfed25f9d3d83d9f8831b0d9934587d37f8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4d4b5e72711c3f2eae0dca1dd83d4188d6e0eb0818dce89fd63c77419939237d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "174b95f3bfc24fc36bb8ec821238fcb52745d2a1b5cffaa9b8390c0f19a365df"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f10ad66e5242b7abd7cbbf60bea15ce6e4fa31b2901a553209988febe0912c09"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "db6d86c22b83a2e27a6a7c4a5694f34238adf5f3a89d1123d70ca63ada558df3"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a433f28c5bd5c9b1257cb5f4ea3aaa5de16a72d0bde0fac7a67b49c7b9df1779"
+    sha256 cellar: :any_skip_relocation, sonoma:        "792ba93a2a42bc46b281e653b2d53fceef2d0673c0811b7abd1099f0f2f093f8"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "27e003e906c56b0f2536e66d4919cdbebe9bcfbbbad5c852741727f49f7d7b83"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f928816d83b90f1255db723571fddf5bdc02ac888bbcd9fcb3504bb4ed674f0"
   end
 
   depends_on "certifi"
