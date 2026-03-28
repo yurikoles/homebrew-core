@@ -7,12 +7,12 @@ class Dagu < Formula
   head "https://github.com/dagu-org/dagu.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "27aadbe70a75eafed5ae4260b932cecdec69511d20a7183354b04ed53c5c7f49"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0b0d1f927e8006e1162690791af4619023b1b6689bc1d8ee1780a6eadc1b90c0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0ec5691e09700c7df5c354d823ad887ff2116193877c7de415bf581026338821"
-    sha256 cellar: :any_skip_relocation, sonoma:        "13709ab6a59a214f18cf6d5ed6e8cf07405e49b8f7482ffab1ccf300108d2ea0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ecbedc9adf1fd6145a1516e01010d8897fe3c25d10f9959d42f8d63cba621afa"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9be0873f567770dd465f569d1dc6324638a876257dc0db08ee953bf8239b51f0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cf87b0b79191a66e14799a5d06a2d8ed028ed051db8a43db9e1da5f566630eed"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "32b0b6bac01a12574b546a4bf2c1298d982e32fc043661b0caf9c5c206b3a351"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "55c51cb473d19838093c6c02ba540522dd3f25ecc12f0522f0407822813d8864"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5bd3272e5d55cdc9e92465b0a415fa0f2672829936282839c860f46d400f7700"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7c7537a73829435f56681e7f4063bde1f938e2e914d18c1443f4612b171ef341"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e2868772cf091675dcc0e13db56950203eb12f40f80c1c854ce71272b76318e"
   end
 
   depends_on "go" => :build
