@@ -10,13 +10,12 @@ class Pwntools < Formula
   head "https://github.com/Gallopsled/pwntools.git", branch: "dev"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "173963053778f57f1cb1061a1b0eb425f32d4a986135dcb909cd79f56c3ba2bc"
-    sha256 cellar: :any,                 arm64_sequoia: "4d4e3fd121e820cad7d7110885aefb82a3553b4030adb487224021e7876bffe5"
-    sha256 cellar: :any,                 arm64_sonoma:  "fce7e058b56ea4ac74b9ec1a9bba9493e1a1c3d51c219b63127d87001d234c1a"
-    sha256 cellar: :any,                 sonoma:        "187722c690ddc9cf14c0384c6072c3af594ff72c548959a25c865bcc325a7a4b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2cd3a8f47cfb0a966cfd17139469f38f3e79becd201b61cc20beea0a25d34bb3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7cf87eb86532b4347492b3ab03a52cced0e21b7ecc0471c4f92f217fb96d6deb"
+    sha256 cellar: :any,                 arm64_tahoe:   "ef7cb7bdb63af1253942ebb51eca6a5354606859e59f633b3f6f400798a22636"
+    sha256 cellar: :any,                 arm64_sequoia: "598cfb545347299f28d57e9c3000961c78e3a9f5b5c9911a64d007a96c3f9c36"
+    sha256 cellar: :any,                 arm64_sonoma:  "a01b46e2e3ceababcea01d2fd561572acf84e1c9ca6654bb04a6fae664d47408"
+    sha256 cellar: :any,                 sonoma:        "f1f72ee3a2f7b4e8df5f6e227be5cc8f4a47cf79e46821609f12b9a240e5f268"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8959d216b121988a51fa3040d61e9dd51b7ca215028f156d88c25db3488a9518"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e7c933566a6fcd07aa5558cbd54166b72c0fec30f321c68d4cd1c2d3d95dfd17"
   end
 
   depends_on "rust" => :build # for bcrypt
