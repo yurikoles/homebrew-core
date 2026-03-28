@@ -6,7 +6,7 @@ class Pocsuite3 < Formula
   url "https://files.pythonhosted.org/packages/12/33/a9f77b222075f034c04c615de19c9ef0f93457d9b627e95cc40d07949e70/pocsuite3-2.1.0.tar.gz"
   sha256 "4107396b5fbbeeb65b27b574c6fb5a40831d1983ad4fd2f9a83c87006bed98e6"
   license "GPL-2.0-only"
-  revision 7
+  revision 8
   head "https://github.com/knownsec/pocsuite3.git", branch: "master"
 
   bottle do
@@ -32,8 +32,8 @@ class Pocsuite3 < Formula
                 exclude_packages: %w[certifi cryptography]
 
   resource "chardet" do
-    url "https://files.pythonhosted.org/packages/0d/84/e72ea5c06e687db591283474b8442ab95665fc6bae7b06043b2a6f0eaf6c/chardet-7.1.0.tar.gz"
-    sha256 "8f47bc4accac17bd9accbb4acc1d563acc024a783806c0a43c3a583f5285690b"
+    url "https://files.pythonhosted.org/packages/91/d7/47988d40231b41376f5a66346ef3b322c81091dfd4c0f84df5a1e3bb06b5/chardet-7.4.0.post1-py3-none-any.whl"
+    sha256 "57a62ef50f69bc2fb3a3ea1ffffec6d10f3d2112d3b05d6e3cb15c2c9b55f6cc"
   end
 
   resource "charset-normalizer" do
@@ -62,8 +62,8 @@ class Pocsuite3 < Formula
   end
 
   resource "faker" do
-    url "https://files.pythonhosted.org/packages/94/dc/b68e5378e5a7db0ab776efcdd53b6fe374b29d703e156fd5bb4c5437069e/faker-40.11.0.tar.gz"
-    sha256 "7c419299103b13126bd02ec14bd2b47b946edb5a5eedf305e66a193b25f9a734"
+    url "https://files.pythonhosted.org/packages/fa/e5/b16bf568a2f20fe7423282db4a4059dbcadef70e9029c1c106836f8edd84/faker-40.11.1.tar.gz"
+    sha256 "61965046e79e8cfde4337d243eac04c0d31481a7c010033141103b43f603100c"
   end
 
   resource "idna" do
@@ -117,8 +117,8 @@ class Pocsuite3 < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
+    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
   end
 
   resource "requests-toolbelt" do
