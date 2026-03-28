@@ -1,8 +1,8 @@
 class Wifitui < Formula
   desc "Fast featureful friendly wifi terminal UI"
   homepage "https://github.com/shazow/wifitui"
-  url "https://github.com/shazow/wifitui/archive/refs/tags/v0.11.0.tar.gz"
-  sha256 "f3fb64564fd5cd896a16aa36b8214733c88344e6154a63d37357dd9ecbeebece"
+  url "https://github.com/shazow/wifitui/archive/refs/tags/v0.12.0.tar.gz"
+  sha256 "9d049ddba951d226648ae5778b8609102298aec085eb85aa60f712ef37cb1116"
   license "MIT"
   head "https://github.com/shazow/wifitui.git", branch: "main"
 
