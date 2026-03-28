@@ -9,7 +9,7 @@ class B2Tools < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "47bfbfc15b09ea3a10e93b30250dd7084a000b8024c53b7796ee933b44c29041"
+    sha256 cellar: :any_skip_relocation, all: "39628b9fa922b0ca3b16d9dc9bccdade33ff513cdc644506403921426b8817c3"
   end
 
   depends_on "certifi"
