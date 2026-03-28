@@ -22,6 +22,7 @@ class Jsongrep < Formula
     system "cargo", "install", *std_cargo_args
 
     generate_completions_from_executable(bin/"jg", "generate", "shell", shells: [:bash, :zsh, :fish, :pwsh])
+    system bin/"jg", "generate", "man", "--output-dir", man1
   end
 
   test do
