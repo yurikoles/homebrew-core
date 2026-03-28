@@ -1,8 +1,8 @@
 class Granted < Formula
   desc "Easiest way to access your cloud"
   homepage "https://granted.dev/"
-  url "https://github.com/fwdcloudsec/granted/archive/refs/tags/v0.38.0.tar.gz"
-  sha256 "b6e2bc8fda38f55ee4673cc0f3f762e076d2029df1d9a8552681a2aacce88721"
+  url "https://github.com/fwdcloudsec/granted/archive/refs/tags/v0.39.0.tar.gz"
+  sha256 "6f9a4b38ffac2da32d7f6c5d225aca2f799d1f74aadd3783a873ff5d98b94144"
   license "MIT"
   head "https://github.com/fwdcloudsec/granted.git", branch: "main"
 
@@ -21,8 +21,8 @@ class Granted < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/common-fate/granted/internal/build.Version=#{version}
-      -X github.com/common-fate/granted/internal/build.ConfigFolderName=.granted
+      -X github.com/fwdcloudsec/granted/internal/build.Version=#{version}
+      -X github.com/fwdcloudsec/granted/internal/build.ConfigFolderName=.granted
     ]
 
     system "go", "build", *std_go_args(ldflags:), "./cmd/granted"
@@ -35,8 +35,8 @@ class Granted < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/granted --version")
 
-    output = shell_output("#{bin}/granted auth configure 2>&1", 1)
-    assert_match "[✘] please provide a url argument", output
+    output = shell_output("#{bin}/granted registry add 2>&1", 1)
+    assert_match "[✘] Required flags \"name, url\" not set", output
 
     ENV["GRANTED_ALIAS_CONFIGURED"] = "true"
     assert_match version.to_s, shell_output("#{bin}/assume --version")
