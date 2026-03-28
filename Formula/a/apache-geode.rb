@@ -8,7 +8,7 @@ class ApacheGeode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "8a0b8cb1ec42b12799db4b388cf1e82b3adcb43b92dd4be77ff331516bd9d1f7"
+    sha256 cellar: :any_skip_relocation, all: "31ed9e5e1d0354ae49bb366bd19a35a060572422d83380030fcb96c8d6e1beb8"
   end
 
   depends_on "openjdk"
