@@ -1,8 +1,8 @@
 class Dlib < Formula
   desc "C++ library for machine learning"
   homepage "https://dlib.net/"
-  url "https://github.com/davisking/dlib/archive/refs/tags/v20.0.tar.gz"
-  sha256 "705749801c7896f5c19c253b6be639f4cef2c1831a9606955f01b600b3d86d80"
+  url "https://github.com/davisking/dlib/archive/refs/tags/v20.0.1.tar.gz"
+  sha256 "dab5b4ec4b68bd7dc128a1fb7900723f89d2da107e44cd5def7d38fc57252a9d"
   license "BSL-1.0"
   head "https://github.com/davisking/dlib.git", branch: "master"
 
