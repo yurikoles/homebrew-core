@@ -11,13 +11,12 @@ class Jiratui < Formula
   no_autobump! because: "has non-PyPI resources"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "92294a5ceeed6fbbba103f8ccb4d1810ce14105f6092a48e940ef5bdf2c65d1b"
-    sha256 cellar: :any,                 arm64_sequoia: "ae350c96caf457c0522fafd9d6889985f82c9c21144f1ce298fdb0b270018907"
-    sha256 cellar: :any,                 arm64_sonoma:  "336e22f128254ea8b2f1fa3926f2c1b9e2482883c0cd8fbab1e5f7630bc89101"
-    sha256 cellar: :any,                 sonoma:        "cb0ea246afba848824fe38adbee77175adb0a4f597bb2f973f3fb94062aa5ac1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8f8097f865ec0b6a6e26ba767a596c5e718367ca74db9142271a38eea9e75614"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0f704ab5cc3caaf3d350876c897bb3ab0a4719d9607ece076fb2be675074b9d1"
+    sha256 cellar: :any,                 arm64_tahoe:   "c48bbb3a9cfc4631922e6627d6ad1390b0a19a6e0574bd89445649354f93ace9"
+    sha256 cellar: :any,                 arm64_sequoia: "34f87cb24edc56d5af3135814c7d5f12d25315868e24589a93919456d95abf27"
+    sha256 cellar: :any,                 arm64_sonoma:  "1a9a91faeac72acfd16f4b8016513fc153703f8dcbd9ebc3e79109f57cb4be2f"
+    sha256 cellar: :any,                 sonoma:        "22dd790c4ed2bfa8d5811eb4b5d45916de45ed58cf4b623b4d5317a84657550f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "418ef290e9f22ee844d2d6b5ddb5926034a3d6c947439c6bf98b539bc7d15a97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cd81d0b66af8dc8542912602bbd5c082da3bd5de39f1755d6cc10eaf92527cd"
   end
 
   depends_on "rust" => :build
