@@ -3,19 +3,14 @@ class Libcaca < Formula
   homepage "http://caca.zoy.org/wiki/libcaca"
   url "https://github.com/cacalabs/libcaca/releases/download/v0.99.beta20/libcaca-0.99.beta20.tar.bz2"
   mirror "https://fossies.org/linux/privat/libcaca-0.99.beta20.tar.bz2"
-  version "0.99b20"
   sha256 "ff9aa641af180a59acedc7fc9e663543fb397ff758b5122093158fd628125ac1"
   license "WTFPL"
   compatibility_version 1
 
+  # Need an explicit livecheck as only beta versions are available
   livecheck do
     url :stable
-    strategy :git do |tags, regex|
-      tags.map { |tag| tag[regex, 1]&.gsub(/\.?beta/, "b") }
-    end
   end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "d84c3e4996866fd306f6ee465d2b26248af532f726187327b08fbc2c1fbae48d"
@@ -43,6 +38,10 @@ class Libcaca < Formula
 
   depends_on "pkgconf" => :build
   depends_on "imlib2"
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   def install
     system "./bootstrap" if build.head?
