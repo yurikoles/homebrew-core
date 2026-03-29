@@ -1,8 +1,8 @@
 class OpenclawCli < Formula
   desc "Your own personal AI assistant"
   homepage "https://openclaw.ai/"
-  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.3.24.tgz"
-  sha256 "e4079634e040f0f098eb1963360975645a8954c87161c531f0c1d52a2f5f5429"
+  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.3.28.tgz"
+  sha256 "fd709a39f5d14c02f773f37e18aabc0f5180c3737b26f71efa90b06dafc3edc2"
   license "MIT"
 
   bottle do
@@ -29,7 +29,6 @@ class OpenclawCli < Formula
 
     # Remove x86_64 Linux pre-built binaries on incompatible platforms.
     if !OS.linux? || !Hardware::CPU.intel?
-      rm libexec/"lib/node_modules/openclaw/dist/assets/matrix-sdk-crypto.linux-x64-gnu-W0MyW8nQ.node"
       rm_r libexec/"lib/node_modules/openclaw/dist/extensions/discord/node_modules/@snazzah/davey-linux-x64-gnu"
     end
 
