@@ -1,8 +1,8 @@
 class Dry < Formula
   desc "Terminal application to manage Docker and Docker Swarm"
   homepage "https://moncho.github.io/dry/"
-  url "https://github.com/moncho/dry/archive/refs/tags/v0.12.2.tar.gz"
-  sha256 "0fe1a152f318f63e99816b444e8317e3d35749e84ee050530651fa62b863efca"
+  url "https://github.com/moncho/dry/archive/refs/tags/v0.13.0.tar.gz"
+  sha256 "636d6b371bf329443849d19d574e8b493d77528d18167b52381df12755ba2ae7"
   license "MIT"
   head "https://github.com/moncho/dry.git", branch: "master"
 
