@@ -11,12 +11,12 @@ class Rakudo < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "0896f81ef97b3f4959055743aa12b76f84f9099df6f8c3441fe0d2e9939ace0e"
-    sha256 arm64_sequoia: "4643cf787291adcc64517e2236988c6bf5c083ab28aae85a744673a59ee450b6"
-    sha256 arm64_sonoma:  "a031506e30af798fdc6b171fbce85b2731d65bcc02efccaf1bf356602a1e9c58"
-    sha256 sonoma:        "0fc84597767bd6715085d1675a1b18865dfdf7f5dd4a22beb933041d51758d7b"
-    sha256 arm64_linux:   "ebc97ea5a9f51c58ee7b39a5c0da568c588a195d7ff58f0885bc3f32fd572281"
-    sha256 x86_64_linux:  "30530a76dd51197bbe8769f986a33e41b677b59f0339fa08131ca5161f4bfdd6"
+    sha256 arm64_tahoe:   "1537034eb489ba8ebb74ba45c8890da0a0ff9450d149bc6abcf323cd93bbca11"
+    sha256 arm64_sequoia: "5b57074ccf0be1cca9dba340cbe51cb0a321f63700e40d69df491859cf10ea2d"
+    sha256 arm64_sonoma:  "597abf80c2823bb9fa6df7152842b49383a138ebc5bfeaca330b6c554cfab439"
+    sha256 sonoma:        "59e8f047a57ff54b6c217c30f34737456d9b0ca72a0274b554ccdc42374818f6"
+    sha256 arm64_linux:   "b155b472072ad7eeb2aef3ef728178d51b7581e7aae69d3f684e00ea336fc505"
+    sha256 x86_64_linux:  "287e74e237cdfefc3eaca5ec5f45910fba3258e92a5e1372d1532c471bb2a779"
   end
 
   depends_on "moarvm"
