@@ -1,8 +1,8 @@
 class Vacuum < Formula
   desc "World's fastest OpenAPI & Swagger linter"
   homepage "https://quobix.com/vacuum/"
-  url "https://github.com/daveshanley/vacuum/archive/refs/tags/v0.25.2.tar.gz"
-  sha256 "272fd544536d9ed41806b15bae65a74cae1bac931a6af5a356e94b71d9ed4298"
+  url "https://github.com/daveshanley/vacuum/archive/refs/tags/v0.25.3.tar.gz"
+  sha256 "8478b09546c0f261089455b7c60d77682ba0f86359c149ca062f9590ae28c21d"
   license "MIT"
   head "https://github.com/daveshanley/vacuum.git", branch: "main"
 
@@ -16,8 +16,15 @@ class Vacuum < Formula
   end
 
   depends_on "go" => :build
+  depends_on "node" => :build
+  depends_on "yarn" => :build
 
   def install
+    cd "html-report/ui" do
+      system "yarn", "install", "--frozen-lockfile"
+      system "yarn", "build"
+    end
+
     ldflags = "-s -w -X main.version=#{version} -X main.commit=#{tap.user} -X main.date=#{time.iso8601}"
     system "go", "build", *std_go_args(ldflags:)
 
