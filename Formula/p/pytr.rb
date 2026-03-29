@@ -8,12 +8,12 @@ class Pytr < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3c7b4d2c397f423bc28e2be98795fa2ab587ebcd20720a4f06a45be94dc27524"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bb9102a2376ca3db0ce3fce3e5620b0bc827fab93c42f18363e050524527ef01"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fe774571a720d92db32f6570ab1c9da20b07086c28eb588604e499ecb9c86c48"
-    sha256 cellar: :any_skip_relocation, sonoma:        "175931d734198f181f35ab6a3017664af84b306910cdb4328f60d8bd93bb37bc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "e48a5ae37a9299725b68b918361ca6c7bd52450bc85f3dea9539f335808d2904"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bce354acff62a70a06a4948ab2f443fefdfb8e9903948efab36a4cb79504da0b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "56c4f938e4b7fbaa9a63514f948535ecb9f24d4672760d4df39adefc3d09f3c9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "77d1f027ac4e76f5a988f673b97210b4cebbaa3170c24af6eb1741a8bdd4db88"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e7e08f720be81953dc8f6ee268a769480b94bd4f865404e12e517a5f74f2935c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c7c9874e4bb97b67c195a1aabbf6314ece074e12a89ee679603d7ed3bb3ee20b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2b70721f04f1fbd576b21913f8b38d34828aee542991f697678ba1003360487e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8c0f89a1969a1ac5d0701ac4b787123e5de202783d788ee9e48ba0cd1891d599"
   end
 
   depends_on "certifi" => :no_linkage
