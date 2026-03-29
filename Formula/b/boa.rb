@@ -1,8 +1,8 @@
 class Boa < Formula
   desc "Embeddable and experimental Javascript engine written in Rust"
   homepage "https://github.com/boa-dev/boa"
-  url "https://github.com/boa-dev/boa/archive/refs/tags/v0.21.tar.gz"
-  sha256 "aa6eb743cd6037e6b5efa6ba01ee8c5695b1406d141697ddd4578b047e8028bf"
+  url "https://github.com/boa-dev/boa/archive/refs/tags/v0.21.1.tar.gz"
+  sha256 "fd0a45ff94673120f010d19dc44c411bc8fc5dcd3e5986e6f1dd5f005f918f22"
   license any_of: ["MIT", "Unlicense"]
   head "https://github.com/boa-dev/boa.git", branch: "main"
 
