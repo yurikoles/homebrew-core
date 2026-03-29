@@ -83,12 +83,12 @@ class Neovim < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "976b95a8c247860dcf27ba91833636a3726db6dd3c223affe52d4c3bcecec57f"
-    sha256 arm64_sequoia: "0c9d83d3e6af3752859f0e323a061f8038624cf32670cb4aa6f98226efb6db87"
-    sha256 arm64_sonoma:  "13506df491d979a4269586fc05ddababa378ae5d7b7dfbf3ce86e1c2773dfa94"
-    sha256 sonoma:        "ff464e5276ee4eef60c0c2f9350df38754bab9947e70b2e612d60ad2b50e87ca"
-    sha256 arm64_linux:   "03d9f1a9c333bd65ff226a9a83490e24bcef11d47eafdb80b641c58c2ae30d34"
-    sha256 x86_64_linux:  "99e3bdc31f68f33578f782a5ec354a99e69c270e0d3581b49cf2e62ad2755339"
+    sha256 arm64_tahoe:   "338ca638e4e060c9a5bd03d4f5138cb8eb304a4771c0cfd7908512522097906b"
+    sha256 arm64_sequoia: "e035b2e3a129daddf4c43c04bd719496fc8e89d667bfc884c685f265647cf66e"
+    sha256 arm64_sonoma:  "a7ff5619a0e99a9c0a6a5e9cd904fba85235a20b7947bd53341c3d0a4078292f"
+    sha256 sonoma:        "776b29c87fbb0f0c67bce7891ede0a5673aff7e9e72d28cfece92ac5a0865f8d"
+    sha256 arm64_linux:   "d04a8b03150c6093bdd693ce9fe87a27e6fbcc49a5e7f5edd2e77ba27d566e04"
+    sha256 x86_64_linux:  "8b0dbd7d77ce0ff647478c4c36f81e305e06f589f4aca05c6c5e1d1762fb9239"
   end
 
   depends_on "cmake" => :build
