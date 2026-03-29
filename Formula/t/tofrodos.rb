@@ -1,8 +1,8 @@
 class Tofrodos < Formula
   desc "Converts DOS <-> UNIX text files, alias tofromdos"
   homepage "https://github.com/ChristopherHeng/tofrodos"
-  url "https://github.com/ChristopherHeng/tofrodos/archive/refs/tags/2.0.0.tar.gz"
-  sha256 "9bac37ec72323fa0a98218e457c31d93c8fad5ba2e4f953e5c82bdcbc0aafaab"
+  url "https://github.com/ChristopherHeng/tofrodos/archive/refs/tags/2.1.0.tar.gz"
+  sha256 "e28d52bee39b8da61d5149bd4c3af59e7b19d936172d86f3d314aa956291faf0"
   license "GPL-2.0-only"
 
   bottle do
