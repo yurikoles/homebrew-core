@@ -8,22 +8,16 @@ class Nyx < Formula
   license "GPL-3.0-only"
   revision 3
 
-  no_autobump! because: "`update-python-resources` cannot update resource blocks"
-
   bottle do
-    rebuild 5
-    sha256 cellar: :any_skip_relocation, all: "900a2690900306640aeaaa863c7caddc2e217f690356e3ccada2ff531d7a78fa"
+    rebuild 6
+    sha256 cellar: :any_skip_relocation, all: "923f5f72eee8bd8f5ed40fb9010489dabe5b954f7bf10edf09634104458e63ad"
   end
 
   depends_on "python@3.14"
 
   resource "stem" do
-    url "https://files.pythonhosted.org/packages/b2/66/c5515de764bffae1347e671819711268da5c02bfab8406223526822fe5f6/stem-1.8.1.tar.gz"
-    sha256 "81d43a7c668ba9d7bc1103b2e7a911e9d148294b373d27a59ae8da79ef7a3e2f"
-
-    # Support python 3.11
-    # Fixed upstream in https://github.com/torproject/stem/commit/b8063b3b23af95e02b27848f6ab5c82edd644609
-    patch :DATA
+    url "https://files.pythonhosted.org/packages/94/c6/b2258155546f966744e78b9862f62bd2b8671b422bb9951a1330e4c8fd73/stem-1.8.2.tar.gz"
+    sha256 "83fb19ffd4c9f82207c006051480389f80af221a7e4783000aedec4e384eb582"
   end
 
   # Support python 3.11
