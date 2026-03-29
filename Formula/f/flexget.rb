@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/bc/21/07c864b3060d4d30beaa2515145937c935398077cfb0eb8c5333d6138c69/flexget-3.19.6.tar.gz"
-  sha256 "5a8c2a3182f61d0139648d4ab510bbe1ca2f17d54460d3a1e7c5171ab8ada198"
+  url "https://files.pythonhosted.org/packages/04/ad/dd8f0e7e4d9836507c92fd03b8b1807802a0a8e20c67b801c5676811cbbf/flexget-3.19.7.tar.gz"
+  sha256 "7f854a496ca483502a6843f67fc74e31bf2c25fd5a38689ecb323289e12bd23d"
   license "MIT"
 
   bottle do
@@ -245,8 +245,8 @@ class Flexget < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
-    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
+    url "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz"
+    sha256 "6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f"
   end
 
   resource "pynzb" do
