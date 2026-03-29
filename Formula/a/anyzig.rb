@@ -1,8 +1,8 @@
 class Anyzig < Formula
   desc "Universal zig executable that runs any version of zig"
   homepage "https://github.com/marler8997/anyzig"
-  url "https://github.com/marler8997/anyzig/archive/refs/tags/v2025_10_15.tar.gz"
-  sha256 "65ebdeca9e20ac347d094b504c3198eab25f130638e91554f517eef1c0275c2c"
+  url "https://github.com/marler8997/anyzig/archive/refs/tags/v2026_03_26.tar.gz"
+  sha256 "bad066c1d98a4ac469cf1d9a0203a3be65425d4cd0bc1f1a3dbf042ebb9c1c62"
   license "MIT"
 
   no_autobump! because: :incompatible_version_format
