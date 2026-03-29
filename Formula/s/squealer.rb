@@ -23,6 +23,7 @@ class Squealer < Formula
       -X github.com/owenrumney/squealer/version.Version=#{version}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/squealer"
+    generate_completions_from_executable(bin/"squealer", shell_parameter_format: :cobra)
   end
 
   test do
