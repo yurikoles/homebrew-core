@@ -9,12 +9,12 @@ class Btcli < Formula
   head "https://github.com/opentensor/btcli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "38c64562df7865d2b8795b44080891a95183e2fa5910762c6cd29a631706936a"
-    sha256 cellar: :any,                 arm64_sequoia: "fe54973a0b0f981c8a9b7729cd2ac05fa297a40bbb364cf349958a95e080859c"
-    sha256 cellar: :any,                 arm64_sonoma:  "295375b35c89f3b4c961065e8a2cb3f44c8e775b5b0991e372db2305de71439e"
-    sha256 cellar: :any,                 sonoma:        "e17ad49e71109319a22ddb42e97d7c18772ac372897c7c8a484f8c31f76e35a1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d2e4217c4d2e89f38e3d9ea11de37be4672f0dc2bb9c9184727abd7169a5158f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "96af5b6971dc46e3b287568c1e3512e00c9bba130ee0ed54c21ca129b4f22726"
+    sha256 cellar: :any,                 arm64_tahoe:   "1391b5fc5da7574e5671ec796fe8f928923d8c1970d7c3f8e51ecc2fb6274cfb"
+    sha256 cellar: :any,                 arm64_sequoia: "0bd4e9bb6cc416bd9904733f0ce544e8fc9aae6c1570e4af63d6c69bb6d6a6f3"
+    sha256 cellar: :any,                 arm64_sonoma:  "1d0d85df460a0796e01b30623d324379071f7e550b95fd8fe59bf0876125d073"
+    sha256 cellar: :any,                 sonoma:        "119d7eee2bd2fae6b28e32ef7fb23c7a8b9eded4e8f0737ad9a3d8ffc838aee1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7f2e04cc917280859d0775f4ed546632a0a9076f02858e433a15a250c813173c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "95bab61ac321f7673c7ca74bb0c247786e4318693d8638fd833eb1cb3fb27203"
   end
 
   depends_on "rust" => :build # for bittensor-wallet, plotly
