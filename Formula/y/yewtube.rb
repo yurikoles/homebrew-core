@@ -10,7 +10,7 @@ class Yewtube < Formula
   head "https://github.com/mps-youtube/yewtube.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "69aa6429f5fb977d20ef38d79bd6eeed2e1573bc5d7c20cfade94ef357e4764e"
+    sha256 cellar: :any_skip_relocation, all: "7d4a42641c7db0d520898078acbf6bad06e34e0482fb98fa50ff7fa46f72b4b8"
   end
 
   depends_on "certifi"
