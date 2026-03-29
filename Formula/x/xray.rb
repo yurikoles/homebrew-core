@@ -23,13 +23,13 @@ class Xray < Formula
   depends_on "go" => :build
 
   resource "geoip" do
-    url "https://github.com/v2fly/geoip/releases/download/202601220433/geoip.dat"
-    sha256 "ed2de9add79623e2e5dbc5930ee39cc7037a7c6e0ecd58ba528b6f73d61457b5"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202603282222/geoip.dat"
+    sha256 "744c97b74c52bae2ac8664fef6ac481d7765cb8432a0df54f0368a88b9b4a354"
   end
 
   resource "geosite" do
-    url "https://github.com/v2fly/domain-list-community/releases/download/20260203145437/dlc.dat"
-    sha256 "158e0e3052238dcdd09d58857032c67da49b933b3a9fd74fedf2c684e21d4f87"
+    url "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202603282222/geosite.dat"
+    sha256 "c202e5ed36a591ddd6d7b0164453d36c7c91a32be45e4d26256fd19d24c70b71"
   end
 
   resource "example_config" do
@@ -51,7 +51,7 @@ class Xray < Formula
 
     pkgshare.install resource("geoip")
     resource("geosite").stage do
-      pkgshare.install "dlc.dat" => "geosite.dat"
+      pkgshare.install "geosite.dat"
     end
     pkgetc.install resource("example_config")
   end
