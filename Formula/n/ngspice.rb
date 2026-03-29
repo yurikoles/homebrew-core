@@ -1,8 +1,8 @@
 class Ngspice < Formula
   desc "Spice circuit simulator"
   homepage "https://ngspice.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/45.2/ngspice-45.2.tar.gz"
-  sha256 "ba8345f4c3774714c10f33d7da850d361cec7d14b3a295d0dc9fd96f7423812d"
+  url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/46/ngspice-46.tar.gz"
+  sha256 "a0d1699af1940b06649276dcd6ff5a566c8c0cad01b2f7b5e99dedbb4d64c19b"
   license :cannot_represent
   head "https://git.code.sf.net/p/ngspice/ngspice.git", branch: "master"
 
@@ -22,9 +22,6 @@ class Ngspice < Formula
     sha256 x86_64_linux:  "4825e30255d2c0fdb9d41e374ddf3984eb38f5eaae5e9e1a0439abd425c35eb7"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
   depends_on "fftw"
   depends_on "freetype"
   depends_on "libngspice"
@@ -44,10 +41,6 @@ class Ngspice < Formula
   end
 
   def install
-    odie "check if autoreconf line can be removed" if version > "45.2"
-    # regenerate since the files were generated using automake 1.16
-    system "autoreconf", "--install", "--force", "--verbose"
-
     # Xft #includes <ft2build.h>, not <freetype2/ft2build.h>, hence freetype2
     # must be put into the search path.
     ENV.append "CFLAGS", "-I#{Formula["freetype"].opt_include}/freetype2"
