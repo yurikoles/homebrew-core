@@ -1,8 +1,8 @@
 class Beads < Formula
   desc "Memory upgrade for your coding agent"
   homepage "https://github.com/steveyegge/beads"
-  url "https://github.com/steveyegge/beads/archive/refs/tags/v0.62.0.tar.gz"
-  sha256 "b3a1564608eb23626c097bb7efa751543b3ed50d49379a38dabd14727e6550e6"
+  url "https://github.com/steveyegge/beads/archive/refs/tags/v0.63.1.tar.gz"
+  sha256 "93b407eb33a1456e5a6091aa3f0b0e7429aa4c1119e6e7630167b5907898ee99"
   license "MIT"
   compatibility_version 1
   head "https://github.com/steveyegge/beads.git", branch: "main"
@@ -46,9 +46,10 @@ class Beads < Formula
 
     shell_output("#{bin}/bd init -p homebrew-beads < /dev/null")
     assert_path_exists testpath/"AGENTS.md"
+    assert_path_exists testpath/".beads/config.yaml"
 
-    output = shell_output("#{bin}/bd info")
+    output = shell_output("#{bin}/bd --db #{testpath}/.beads/dolt info")
     assert_match "Beads Database Information", output
-    assert_match "Mode: direct", output
+    assert_match "Issue Count: 0", output
   end
 end
