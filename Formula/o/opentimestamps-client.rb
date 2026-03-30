@@ -7,6 +7,15 @@ class OpentimestampsClient < Formula
   sha256 "083a08f59c3123682d6742cc57d3e229ed7b3397807638836efe3a949517accb"
   license "LGPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c7a4ea7d4c50de56eb5b243ece12732be5c41e40450269cc00f82ba66edea07d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bc6e8883f5055220cb29cc1e06700474a3d9dcf47884ac0b70b89bc939e9e746"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e269c6af289504256392e19d7dfc0311d986ec91be7b936e98a96037c2032ec3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4f4989f916090aa16783625da289ffb8f6da31db6d8125424d3a0222ee168510"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1907425c8be0abf1c6b785ce0338653583684e680a6c1d13753e311dcdf50447"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4869269984ae365c2488dbb438afd8fd7498196d3d756e786cc39f19cffcfad1"
+  end
+
   depends_on "certifi" => :no_linkage
   depends_on "python@3.14"
 
