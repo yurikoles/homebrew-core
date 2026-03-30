@@ -9,7 +9,7 @@ class Fobis < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "2e19a55353ac914b9549578aefdb08ef9d57f4892efb926e3cbf48652e6015d3"
+    sha256 cellar: :any_skip_relocation, all: "aede4ee9ebb9cf55c47ce4d2d6650d9a8507c77f3ff5c9b0cd5c438ac77f7f2a"
   end
 
   depends_on "gcc" # for gfortran
