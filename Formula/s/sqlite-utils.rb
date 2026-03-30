@@ -8,12 +8,8 @@ class SqliteUtils < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "101286c6739f5cc0bfd502ad4a2c68767f917adfae4410b5fa7324ca8502ded4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "101286c6739f5cc0bfd502ad4a2c68767f917adfae4410b5fa7324ca8502ded4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "101286c6739f5cc0bfd502ad4a2c68767f917adfae4410b5fa7324ca8502ded4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "90d9defe35dffeee6ef36ca08c0ce5b7f7de8042ffb0b14c9af6e0a8a1150e3a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "90d9defe35dffeee6ef36ca08c0ce5b7f7de8042ffb0b14c9af6e0a8a1150e3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "90d9defe35dffeee6ef36ca08c0ce5b7f7de8042ffb0b14c9af6e0a8a1150e3a"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "c0e99d36e603786d51605e4d9ff62d9ef8de3c71322e7635c4c4b50dda79d163"
   end
 
   depends_on "python@3.14"
