@@ -12,12 +12,12 @@ class MenderArtifact < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3567bec3746023c8ed817443f890cfc10861ae5e458d975bc23911fe16435953"
-    sha256 cellar: :any,                 arm64_sequoia: "9dc83efe348be8c6fcc0f0cd4a9c673f2f433a3a36c4bd13a4c4bb29a6d70dd3"
-    sha256 cellar: :any,                 arm64_sonoma:  "eae5331deb3080625a42c7b401b678bb647ec9ad9158156357bdd0a59c4e983c"
-    sha256 cellar: :any,                 sonoma:        "12ef6ce4e6ed7c6bf0d80ed67fa0b9333d7f0559b0cd1f14c37b45769c59800a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "dbcd872397e2ea799bb7f84692fb3ec49970fdac6c89af548d101c0eb49e21ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "323bfc97ecbe583bb71a076ec11e339f6c2c4d8fb519556be51ba2a5a606d85f"
+    sha256 cellar: :any,                 arm64_tahoe:   "fab320846f550f1656c35899d2727faa68ccfddf99bece775aac993c089dbb93"
+    sha256 cellar: :any,                 arm64_sequoia: "780e955fe45744511e6800ebf0c759664c28bbd3f932b8e007b557349a93f079"
+    sha256 cellar: :any,                 arm64_sonoma:  "311862da0de84c407fc706e7f52fe91da506595431475c9e4928d6631ff92098"
+    sha256 cellar: :any,                 sonoma:        "aae1cbc9056459a8dd9a1cca9027adf283083e960811ae9630fab95c44205f2d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a112a4ab7d9b6d717f7bc2515cc7f7a6e8f8b98cfdf30f52bffed713427f3bc7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8ae819c2308d01379abfabb3099ffc7843b1a2b3e1257542e89767f404f256f6"
   end
 
   depends_on "go" => :build
