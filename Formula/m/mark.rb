@@ -1,8 +1,8 @@
 class Mark < Formula
   desc "Sync your markdown files with Confluence pages"
   homepage "https://github.com/kovetskiy/mark"
-  url "https://github.com/kovetskiy/mark/archive/refs/tags/v16.0.2.tar.gz"
-  sha256 "80a23335f30135a0fa0fa3cae74295f56fe1e6ee6474f64cc0c7b6145573f4e3"
+  url "https://github.com/kovetskiy/mark/archive/refs/tags/v16.1.0.tar.gz"
+  sha256 "eb92e265d1a92af4f0f6f552fdcf33a88bfa637238147a67fc699e5be96b47f5"
   license "Apache-2.0"
   head "https://github.com/kovetskiy/mark.git", branch: "master"
 
@@ -30,6 +30,6 @@ class Mark < Formula
     MARKDOWN
 
     output = shell_output("#{bin}/mark --config nonexistent.yaml sync 2>&1", 1)
-    assert_match "FATAL confluence password should be specified", output
+    assert_match "confluence password should be specified", output
   end
 end
