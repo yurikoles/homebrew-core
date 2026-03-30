@@ -6,6 +6,7 @@ class Hapless < Formula
   url "https://files.pythonhosted.org/packages/2c/ab/a5c875f00927421371c9c36849030ba84dc171e7157575fd85126e893064/hapless-0.15.1.tar.gz"
   sha256 "b54707a5f77ac8e779bfd0c8c49344333e9d40a5c9479f0da1c303ffa237077d"
   license "MIT"
+  revision 1
   head "https://github.com/bmwant/hapless.git", branch: "main"
 
   bottle do
@@ -25,8 +26,8 @@ class Hapless < Formula
   end
 
   resource "django-environ" do
-    url "https://files.pythonhosted.org/packages/d6/04/65d2521842c42f4716225f20d8443a50804920606aec018188bbee30a6b0/django_environ-0.12.0.tar.gz"
-    sha256 "227dc891453dd5bde769c3449cf4a74b6f2ee8f7ab2361c93a07068f4179041a"
+    url "https://files.pythonhosted.org/packages/d4/3c/b2de27581c28929e3b33c5797e3d075c93541b4a8499ddc84dfd659d550f/django_environ-0.12.1.tar.gz"
+    sha256 "22859c6e905ab7637fa3348d1787543bb4492f38d761104a3ce0519b7b752845"
   end
 
   resource "humanize" do
@@ -50,8 +51,8 @@ class Hapless < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
-    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
+    url "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz"
+    sha256 "6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f"
   end
 
   resource "rich" do
