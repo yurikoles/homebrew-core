@@ -16,12 +16,12 @@ class GtkDoc < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "aa4545c0ed0e71de8cbe8111a291f999bc475f9e06a4a296e0ad29ca582793e7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "870df07ab7d1912d6341c2c9d1d966b68097ddbf5b6d850db22b614ed6758779"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "127d1017a9d1f754fc4da80ca9c8a1ac63305510255057d461bff1e8762af00f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3a6a6940b7af87fa5348ab9822a2ca0f9ad662e6e934623218c5d76f3b7c1761"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "45a6ff0c8d8cce8cec896c6c095915ae1e0b63443b4bd3b0d5f046c4f4bcc421"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "baf787ae2f1dd3833a27d9d3ea41ce8363ff9f7ce7f9b09493b784c81382d363"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bda10d6a7806c4a3b900203c0ebc0f450d1c07d22b6d42ebc498a05a7b488cf1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7786664f1459fd909ce570c0db2e2fb609b74f2a7455407d49750848a530b1d8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9e96303cfc6156115bd58e7fb591cc2366d19d917021c3f0e06b4c12286661ea"
+    sha256 cellar: :any_skip_relocation, sonoma:        "34cd092117725bb031c2c67ad8fde6a199058e8dc2b5e768e166df2bd4264d85"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "21626866a4655a070d0a14c02c41c7216ad9580e2f6bd60a5a351ac448546046"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6d92a564d508bc96a26399e8885f52ce849df7f336de73bb2be8e6fb6d59eb09"
   end
 
   depends_on "meson" => :build
