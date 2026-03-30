@@ -8,7 +8,7 @@ class Pipenv < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "627f12a2858fc6b8a08a7631fa40e4cef2149323cf2be0133b6bee6767e639c4"
+    sha256 cellar: :any_skip_relocation, all: "960486cfef9ab3cee301a63918251d101c45c00e600004675df8f8ba99234331"
   end
 
   depends_on "certifi" => :no_linkage
