@@ -1,8 +1,8 @@
 class Clblast < Formula
   desc "Tuned OpenCL BLAS library"
   homepage "https://github.com/CNugteren/CLBlast"
-  url "https://github.com/CNugteren/CLBlast/archive/refs/tags/1.6.3.tar.gz"
-  sha256 "c05668c7461e8440fce48c9f7a8966a6f9e0923421acd7c0357ece9b1d83f20e"
+  url "https://github.com/CNugteren/CLBlast/archive/refs/tags/1.7.0.tar.gz"
+  sha256 "cac83330a6110214f2b7efc8e46062536f40ba96122f3b2a074a51497d8ca9e7"
   license "Apache-2.0"
 
   bottle do
@@ -27,9 +27,6 @@ class Clblast < Formula
   end
 
   def install
-    # Backport support for CMake 4, remove in next release
-    inreplace "CMakeLists.txt", "cmake_minimum_required(VERSION 2.8.11)", "cmake_minimum_required(VERSION 3.10)"
-
     system "cmake", "-S", ".", "-B", "build", "-DCMAKE_INSTALL_RPATH=#{rpath}", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
