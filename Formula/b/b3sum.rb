@@ -1,8 +1,8 @@
 class B3sum < Formula
   desc "Command-line implementation of the BLAKE3 cryptographic hash function"
   homepage "https://github.com/BLAKE3-team/BLAKE3"
-  url "https://github.com/BLAKE3-team/BLAKE3/archive/refs/tags/1.8.3.tar.gz"
-  sha256 "5a11e3f834719b6c1cae7aced1e848a37013f6f10f97272e7849aa0da769f295"
+  url "https://github.com/BLAKE3-team/BLAKE3/archive/refs/tags/1.8.4.tar.gz"
+  sha256 "b5ee5f5c5e025eb2733ae3af8d4c0e53bb66dff35095decfd377f1083e8ac9be"
   license any_of: [
     "CC0-1.0",
     "Apache-2.0",
