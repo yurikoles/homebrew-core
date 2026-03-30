@@ -6,6 +6,7 @@ class Iredis < Formula
   url "https://files.pythonhosted.org/packages/24/3c/9d26458a7e1a064f417fbdca8e9c0656c3c1a0afda225bf6ad76c3ff4f70/iredis-1.16.1.tar.gz"
   sha256 "862a67a59e05710cb6547bdff55e3b6801298578f78d39e7fa953424f68793df"
   license "BSD-3-Clause"
+  revision 1
   head "https://github.com/laixintao/iredis.git", branch: "master"
 
   bottle do
@@ -40,8 +41,8 @@ class Iredis < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
-    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
+    url "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz"
+    sha256 "6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f"
   end
 
   resource "python-dateutil" do
