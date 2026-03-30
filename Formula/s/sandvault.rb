@@ -19,19 +19,6 @@ class Sandvault < Formula
   def install
     prefix.install "guest", "sv"
     bin.write_exec_script "#{prefix}/sv"
-    guest_home_user.mkpath
-    ln_sf guest_home_user, prefix/"guest/home/user"
-  end
-
-  def guest_home_user
-    pkgetc/"guest_home_user"
-  end
-
-  def caveats
-    <<~EOS
-      sandvault's guest user home directory is #{guest_home_user}.
-      These files will be copied to the sandvault home directory during setup or rebuild.
-    EOS
   end
 
   test do
