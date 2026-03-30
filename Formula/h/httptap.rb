@@ -9,7 +9,7 @@ class Httptap < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "60808978deec1b611cf217f36ccb8a37414dba5b9d7bfb75902ee9791bfcd87d"
+    sha256 cellar: :any_skip_relocation, all: "b655ecc652ee321efc8cb96326daebc61169534bdddd59cae91b033eafbe2411"
   end
 
   depends_on "rust" => :build
