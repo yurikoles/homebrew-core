@@ -7,12 +7,12 @@ class Roadrunner < Formula
   head "https://github.com/roadrunner-server/roadrunner.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cae0ecc7d396439e9be3842f1211e4fd49f5e30459f3f582f4ec8dd99fbced97"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f1f0dea8e1a8a672d31ccb905f3563fb2eaa4f425f5915b4aef7e4f0f95e5077"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "16d3fb543ff7a7a4052429e9e7c78275851cffff6871809d4aa16b4c3002a6dd"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a9f2166f9030963d9c63cf752bc84a12d3f6b367f6a8e45d2bfed5b004d5923d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "238c0b3c443245b9f6e9570fb90f3586282bc0924dbe3ba73a1b5830bd672c6b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4aa94ee7f65739698599b27cf82c5c651d5f74db47a86b4ee077b71a458c2930"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bbd25fd88df1db9fd18880e50bd6a002d9f4819ec6ea58926e8b5d811e8193bd"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a2e2ecb4f7cc5e4b766bfab7c92bbbf647afadfb36c7bf69dbcf0136f4b6d393"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6518aaddbdc7a911798794013b58f44c4366b3816f35c999007360f137355549"
+    sha256 cellar: :any_skip_relocation, sonoma:        "29ad015227c84485fd4c61c7d8328410be0dd00b69d2b57a8c6e787e657fc7db"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c319dbb90655ce2cdf92aa30fe6d389bb9ccc0de221d92645a738064ac796657"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "34244543a4e4eef55eebaa904a5257b6a23026cecfed6c42cbcaaddac3d199b8"
   end
 
   depends_on "go" => :build
