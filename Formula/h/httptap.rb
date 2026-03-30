@@ -6,9 +6,10 @@ class Httptap < Formula
   url "https://files.pythonhosted.org/packages/c9/71/2e754d6f10fc1ea3966b09073ded8318d4a174a7292d566934b481697ec9/httptap-0.4.6.tar.gz"
   sha256 "9d9735a223b72c926b79496faff85196401b26417d6469b8fe741381d9fb2637"
   license "Apache-2.0"
+  revision 1
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "60808978deec1b611cf217f36ccb8a37414dba5b9d7bfb75902ee9791bfcd87d"
+    sha256 cellar: :any_skip_relocation, all: "b655ecc652ee321efc8cb96326daebc61169534bdddd59cae91b033eafbe2411"
   end
 
   depends_on "rust" => :build
@@ -19,8 +20,8 @@ class Httptap < Formula
                 exclude_packages: "certifi"
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/96/f0/5eb65b2bb0d09ac6776f2eb54adee6abe8228ea05b20a5ad0e4945de8aac/anyio-4.12.1.tar.gz"
-    sha256 "41cfcc3a4c85d3f05c932da7c26d0201ac36f72abd4435ba90d0464a3ffed703"
+    url "https://files.pythonhosted.org/packages/19/14/2c5dd9f512b66549ae92767a9c7b330ae88e1932ca57876909410251fe13/anyio-4.13.0.tar.gz"
+    sha256 "334b70e641fd2221c1505b3890c69882fe4a2df910cba14d97019b90b24439dc"
   end
 
   resource "argcomplete" do
@@ -79,8 +80,8 @@ class Httptap < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
-    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
+    url "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz"
+    sha256 "6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f"
   end
 
   resource "rich" do
