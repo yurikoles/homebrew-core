@@ -9,12 +9,12 @@ class Bagels < Formula
   revision 9
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "adbee35a0c368929b9e7ccaa4335da16eb8bdfb1362f1d950ee2453a5791fcef"
-    sha256 cellar: :any,                 arm64_sequoia: "6adc1ec659ec4373530d2d4eadf37757a7b58f104d8d6f8632b6b81fdc55fb05"
-    sha256 cellar: :any,                 arm64_sonoma:  "c87f589ff20ff4c86026d2640b95d65f7adf91524b02cb85c64258766c714d24"
-    sha256 cellar: :any,                 sonoma:        "fbacc4378c8cbdf4837d8d5dce74d09832378636faa709402efbfbe218b6e1e9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c5e15eb34e98c03bcd9905ca3343e2e7d4c12a68cf9cabccbd409476b7218bed"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9d3530360d6350254be1f214bacdb0066c2f16dd648e297b35479d9f693b95c9"
+    sha256 cellar: :any,                 arm64_tahoe:   "4c8e15f972401d5676d8b50e6b51fea1694557ad2ef56b865b70035698914149"
+    sha256 cellar: :any,                 arm64_sequoia: "e12061abde0a99057f215892a52254d0026ba3383c5790d6964af1844c28101c"
+    sha256 cellar: :any,                 arm64_sonoma:  "fc88ca8a46bb3db2b638c8d163ddcd94ae6fd07b695e3f1469d1ffc333c9631c"
+    sha256 cellar: :any,                 sonoma:        "5357f6398aa156bd7f9f72b5db4e0af49fa2bdb895ed85cbab2045e540bab1db"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3ecabf818d85bc9fa547d4ab10a565f06bf704785050c7e42de8236f0548e0bd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0cd5a7a75e975eff1c38bd3ade624e011b74992b8c8f312d1e511e1e2ab5e6fd"
   end
 
   depends_on "certifi" => :no_linkage
