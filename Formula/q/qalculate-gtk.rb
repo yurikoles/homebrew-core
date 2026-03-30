@@ -1,8 +1,8 @@
 class QalculateGtk < Formula
   desc "Multi-purpose desktop calculator"
   homepage "https://qalculate.github.io/"
-  url "https://github.com/Qalculate/qalculate-gtk/releases/download/v5.9.0/qalculate-gtk-5.9.0.tar.gz"
-  sha256 "39cd0bc5abe26edfc04a3064d4412d5af9f7197eafa0762a18a0cb6996f1021b"
+  url "https://github.com/Qalculate/qalculate-gtk/releases/download/v5.10.0/qalculate-gtk-5.10.0.tar.gz"
+  sha256 "310875ae42d4af3bef46bb5f0405496c26e8e8abe218caeb1270cde176c02691"
   license "GPL-2.0-or-later"
 
   bottle do
@@ -31,6 +31,7 @@ class QalculateGtk < Formula
   on_macos do
     depends_on "at-spi2-core"
     depends_on "gettext"
+    depends_on "gtk-mac-integration"
     depends_on "harfbuzz"
   end
 
@@ -39,6 +40,10 @@ class QalculateGtk < Formula
   end
 
   def install
+    if OS.mac?
+      ENV.append_to_cflags "-I#{Formula["gtk-mac-integration"].opt_include/"gtkmacintegration"}"
+      ENV.append "LDFLAGS", "-L#{Formula["gtk-mac-integration"].opt_lib} -lgtkmacintegration-gtk3"
+    end
     ENV.prepend_path "PERL5LIB", Formula["perl-xml-parser"].libexec/"lib/perl5" unless OS.mac?
 
     system "./configure", *std_configure_args
