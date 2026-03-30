@@ -9,12 +9,12 @@ class Cronboard < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3e5e6bfffd6f71684b2c14d1266473592e43b0a838a8adde8d38de6b56f2a48f"
-    sha256 cellar: :any,                 arm64_sequoia: "ef905ce3834c314650767e003a1ed4ab0fbea09f537a0d0d0ab13b6a106b6960"
-    sha256 cellar: :any,                 arm64_sonoma:  "c41543a007f615fbb45fedf105869515112a897d38929126323a2d03ab130834"
-    sha256 cellar: :any,                 sonoma:        "c19728db04b2951ba06943ee70a58a1cc46e5936746a30071331d2ef755afcab"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "989a75d6e17412df103c5a66dec43def4e3c891a0fb46baa9029b1ff9595954b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "975bc685c909e4da37016d68e5e50145592cc9f8c9c7f6861c099ae58adadd5d"
+    sha256 cellar: :any,                 arm64_tahoe:   "effa3e41ccfef8185dcc2532094f63f1066a6f57ff7c9c3b7819cd8e9ddb7e96"
+    sha256 cellar: :any,                 arm64_sequoia: "5eb30afd3166a95ecdc3e95fbf4f16f4be881fb78c9bd2c956bf9b947d9ee2be"
+    sha256 cellar: :any,                 arm64_sonoma:  "474e79116cc4323d18e897ff6494544eedf36461bed4e12092ed51744526024b"
+    sha256 cellar: :any,                 sonoma:        "6caa2fbef31df4bf5e22cba1da72b3de7f2940a2dbd9fb5f14b3ccdf0c6a52bb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8023ff05282c902d4fa09b31174071bcdf6498935803d4a0a990195b90eca1c6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ae16e08b27324a24749418e1d5276ad41be026263cd06607fa601972125c2f11"
   end
 
   depends_on "rust" => :build
