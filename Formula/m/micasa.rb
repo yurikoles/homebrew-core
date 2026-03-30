@@ -1,8 +1,8 @@
 class Micasa < Formula
   desc "TUI for tracking home projects, maintenance schedules, appliances and quotes"
   homepage "https://micasa.dev"
-  url "https://github.com/cpcloud/micasa/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "decacb824cd7feae17608fafbde0976d49dc48d202f4ce438a45da3078bebfb6"
+  url "https://github.com/cpcloud/micasa/archive/refs/tags/v2.4.0.tar.gz"
+  sha256 "8baeaf5a155a02356a8fc60e1f0bf2cdec7fede328dc04590b42acd1dec5f1fb"
   license "Apache-2.0"
 
   bottle do
@@ -23,12 +23,7 @@ class Micasa < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/micasa --version")
 
-    # The program is a TUI so we need to spawn it and close the process after it creates the database file.
-    pid = spawn(bin/"micasa", "--demo", testpath/"demo.db")
-    sleep 3
-    Process.kill("TERM", pid)
-    Process.wait(pid)
-
+    system bin/"micasa", "demo", "--seed-only", testpath/"demo.db"
     assert_path_exists testpath/"demo.db"
   end
 end
