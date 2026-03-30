@@ -1,8 +1,8 @@
 class AwsCrtCpp < Formula
   desc "C++ wrapper around the aws-c-* libraries"
   homepage "https://github.com/awslabs/aws-crt-cpp"
-  url "https://github.com/awslabs/aws-crt-cpp/archive/refs/tags/v0.38.2.tar.gz"
-  sha256 "b8cd19c22cfe861dd3d393891d3569818b40dff10bf899a5c6627b12d3e6376e"
+  url "https://github.com/awslabs/aws-crt-cpp/archive/refs/tags/v0.38.3.tar.gz"
+  sha256 "9e8922d2a900f7a18644892f5c6aec8cc8f3046d1ee3fdd96714f792c310ea8b"
   license "Apache-2.0"
   compatibility_version 1
 
