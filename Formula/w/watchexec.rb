@@ -1,8 +1,8 @@
 class Watchexec < Formula
   desc "Execute commands when watched files change"
   homepage "https://watchexec.github.io/"
-  url "https://github.com/watchexec/watchexec/archive/refs/tags/v2.5.0.tar.gz"
-  sha256 "c03e5060f832069f3e32e61e8fb3600e6b9c18fc68829176d5fcfd53a86481a8"
+  url "https://github.com/watchexec/watchexec/archive/refs/tags/v2.5.1.tar.gz"
+  sha256 "e54683eae585c7d3e47054eba9ff9e1e2327cdb3b705df0f96a9e66a0781ec5f"
   license "Apache-2.0"
   head "https://github.com/watchexec/watchexec.git", branch: "main"
 
