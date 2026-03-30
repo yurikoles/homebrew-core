@@ -9,12 +9,12 @@ class Esptool < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "f4e3862d7a541f356022ae1d13fc3e265a7b1012f340f0b3fe05020ba9b409a3"
-    sha256 cellar: :any,                 arm64_sequoia: "19c614e1639c2745e6ef432ad24c790867d55fc647bf36f4d597ba2591f0a0e5"
-    sha256 cellar: :any,                 arm64_sonoma:  "8ab22f5d4eaca0831868a0815df1abf82e19bc00411ff5a9b7c0bfd184d7b147"
-    sha256 cellar: :any,                 sonoma:        "e0f8a0069f5367a3bf0aa3143e672e77dbcb6d2e2b2bb24133622902b70e48ca"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "523c738dfbe95279c7e720e907f53caf6145cbfab4ab4e1b0dfa3c17fc15825b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ebe7a5dd621f2734185448daee0b0a86435f65776994dd267c8db786d3caa0ee"
+    sha256 cellar: :any,                 arm64_tahoe:   "e4fde24b5b7d942e3f091675e1c133f6b2619aec4ea51cbb05d4702405807bf8"
+    sha256 cellar: :any,                 arm64_sequoia: "f52f68f89a2c8b2effae29cb2a4f335bd1908c9dddb7e53c3dfe9ec505951395"
+    sha256 cellar: :any,                 arm64_sonoma:  "26d7cfaef912a8bc6fa669548ec304f5606cf3a9173240e6c4866992a0fdf144"
+    sha256 cellar: :any,                 sonoma:        "9b49016881ac03f695a8efde30413c2d3dc6486ef679f8d9bd3858c27db5e170"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dacfbb30327d9c1402bf2c34abec27a1424f03c4de0d9028175c6d7eefdb4cd4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb2c8f82ff5aa62b609205149baff17f0b0633cda09aec6122de254a5095aff1"
   end
 
   depends_on "rust" => :build # for tibs
