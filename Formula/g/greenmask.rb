@@ -12,12 +12,12 @@ class Greenmask < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b24a8d3a68fbb30c9d7abe222ec0e04e5d75ac02f04d4a1e193e955736b0240b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b24a8d3a68fbb30c9d7abe222ec0e04e5d75ac02f04d4a1e193e955736b0240b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b24a8d3a68fbb30c9d7abe222ec0e04e5d75ac02f04d4a1e193e955736b0240b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7ad91a3029717c4d9c388249531fca3261e7cf64e83ca34d303497b5125dacea"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "af22a74f1c6896a6479d22fef6d8f6cfdd148510c6ed3e52ca372b280cbf3d11"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e847e621a19c4a1831411e12cc41755d3ec6b69be0a220144d2d422159fbcd3a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "265c2450b88a010a1aabef43470525409ff3a53852efbb12a22ee25ec0398e72"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "265c2450b88a010a1aabef43470525409ff3a53852efbb12a22ee25ec0398e72"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "265c2450b88a010a1aabef43470525409ff3a53852efbb12a22ee25ec0398e72"
+    sha256 cellar: :any_skip_relocation, sonoma:        "7ff8fd84e94aca95b38204e22d1eb8dfe794802662a66aa401fa292a63f6e7e2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "07ccc213d53e3fb9ac111fe877ca670b93af0b7df9c991971c288e08290af55f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1792fe2c18802dc9ee067d4cbc3460b5909662859c1aeb26e645efc1e4fdef9b"
   end
 
   depends_on "go" => :build
