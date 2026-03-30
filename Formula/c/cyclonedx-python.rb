@@ -9,12 +9,12 @@ class CyclonedxPython < Formula
   head "https://github.com/CycloneDX/cyclonedx-python.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "03101e546a677ab28102a723d0bc9ce2f170ae967c0d5b580ca4fdfc612ddffb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "43ef952ba88e6263ac58a3e363d32b9daadf1ff2eb49bf0fbc91c9996722accc"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "588eb021db6b2718275def8a8e1d51f4c128763d01b7c6f58c925b4ad8a9512e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "88cf4ff9c5aa27b23b61dd58f8748e118ea5fd4203c951374a4526e6d5bcf2c0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "00576aeb1ce474573a6de55a1d51243080baa6b4ceec9b421095488ab5a8bb02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f737773c701f27e17251bd49f9aa5d99b2c48abcaaea1a0151b96b9c23ff67f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c1cc3941372a0a75fe24da647134fa93e5a050b009a0d40e680884476cae45ca"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e5489cdfa243df43c23a94615addc682841ff56a358b2047a36289924b72c1d0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cc62b0d6b228e99f6030174896620191b45d614f418c165200a4d49f4825c817"
+    sha256 cellar: :any_skip_relocation, sonoma:        "96a57826d2c16a34d8bc9726ae3336cb3b17846ba548575922971be3b1e00dbb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "178e71748f55e761acfe0c1808d4334d296bfcb86da1eac1eb56c29b7c5bc6e4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "13a99e42826eed59ea3d184b49596d1203ccd04fdb99dc598f851caab4a8f0a4"
   end
 
   depends_on "python@3.14"
