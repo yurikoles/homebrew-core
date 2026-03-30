@@ -1,8 +1,8 @@
 class TaskwarriorTui < Formula
   desc "Terminal user interface for taskwarrior"
   homepage "https://kdheepak.com/taskwarrior-tui/"
-  url "https://github.com/kdheepak/taskwarrior-tui/archive/refs/tags/v0.26.7.tar.gz"
-  sha256 "d0bf2b9c5563165565db7941c7806f58c1c54f8bcb5f8d1430b0d35f1da7678d"
+  url "https://github.com/kdheepak/taskwarrior-tui/archive/refs/tags/v0.26.8.tar.gz"
+  sha256 "fb75c8c88141d49db25d4bab62f78efdf8087a76ae9d2f0cdd06ec22e2ea7ea0"
   license "MIT"
   head "https://github.com/kdheepak/taskwarrior-tui.git", branch: "main"
 
@@ -20,12 +20,21 @@ class TaskwarriorTui < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4c356889f388183649e73df39bf254ca64bc8e9719073dc42cb3aa5dac43efdf"
   end
 
+  depends_on "pandoc" => :build
   depends_on "rust" => :build
   depends_on "task"
 
   def install
     system "cargo", "install", *std_cargo_args
-    man1.install "docs/taskwarrior-tui.1"
+
+    args = %w[
+      --standalone
+      --from=markdown
+      --to=man
+    ]
+    system "pandoc", *args, "packaging/man/taskwarrior-tui.1.md", "-o", "taskwarrior-tui.1"
+    man1.install "taskwarrior-tui.1"
+
     bash_completion.install "completions/taskwarrior-tui.bash" => "taskwarrior-tui"
     fish_completion.install "completions/taskwarrior-tui.fish"
     zsh_completion.install "completions/_taskwarrior-tui"
