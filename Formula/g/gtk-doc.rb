@@ -6,6 +6,7 @@ class GtkDoc < Formula
   url "https://download.gnome.org/sources/gtk-doc/1.36/gtk-doc-1.36.0.tar.xz"
   sha256 "3b84bac36efbe59017469040dfee58f17cf0853b5f54dfae26347daf55b6d337"
   license "GPL-2.0-or-later"
+  revision 1
 
   # We use a common regex because gtk-doc doesn't use GNOME's
   # "even-numbered minor is stable" version scheme.
@@ -42,8 +43,8 @@ class GtkDoc < Formula
   end
 
   resource "pygments" do
-    url "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz"
-    sha256 "636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"
+    url "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz"
+    sha256 "6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f"
   end
 
   def install
