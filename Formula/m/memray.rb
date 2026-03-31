@@ -9,12 +9,12 @@ class Memray < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "d2b8be477afa8dd1e3725a17c9b996e7b9c0ae89ad85af9a63cc7174842d187a"
-    sha256 cellar: :any,                 arm64_sequoia: "70b5d903a69cc55f60a65b6f585356e14c80704d68b4ff07303771373511d088"
-    sha256 cellar: :any,                 arm64_sonoma:  "9f4f637bd8a853a70c6b9c1c9925335d083e11774a573d31fb1bf8d4fdd79ce4"
-    sha256 cellar: :any,                 sonoma:        "5c242be80135748ad4b4938cd7d38754327f76cbf2a7e87555033995cdae94ea"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f68832bdcfc91e10951673c6ec7f68ba07dc081e43a3d72ac483540701e48dcd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0f95d1edfeface09b7133e4bc6d0f16a44dda8c3b55351c9f9fc91331772717a"
+    sha256 cellar: :any,                 arm64_tahoe:   "136378bb9ba726226f28bead4c8087ed89c2cbea6b935d6d175b5b2bf2bfeb16"
+    sha256 cellar: :any,                 arm64_sequoia: "cd6971299bf713e0609b03e56182d6d35c5e9410f88cd21b086ccbeeb2b964e4"
+    sha256 cellar: :any,                 arm64_sonoma:  "7161dbf7229b58675c170df8452f70306360b6ac9205e80f2b366a7f8b921ece"
+    sha256 cellar: :any,                 sonoma:        "6c28bd7b9e34626bf663822beb0631666104404606a96cb11f51aa1e898f6ce0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d3b1c0d63db3a032703ee4297e7e33e696b13067f57060c6a53cd930b2043115"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ef307ea9ad10a24a2217d15abda7ef026ad6cff1d5938364d354d1dd9d5d62c"
   end
 
   depends_on "lz4"
