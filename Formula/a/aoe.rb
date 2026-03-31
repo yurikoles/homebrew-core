@@ -1,8 +1,8 @@
 class Aoe < Formula
   desc "Terminal session manager for AI coding agents"
   homepage "https://github.com/njbrake/agent-of-empires"
-  url "https://github.com/njbrake/agent-of-empires/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "f2bedbf0849a797aa5591d3938b4cea38371cf4274a753b15b1b779997799ace"
+  url "https://github.com/njbrake/agent-of-empires/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "f6a9356f180dc43f17791045e2fee352b55d318466918d2634e51c94d627df32"
   license "MIT"
   head "https://github.com/njbrake/agent-of-empires.git", branch: "main"
 
@@ -33,7 +33,7 @@ class Aoe < Formula
     assert_match version.to_s, shell_output("#{bin}/aoe --version")
 
     system bin/"aoe", "init", testpath
-    assert_match "Agent of Empires", (testpath/".aoe/config.toml").read
+    assert_match "Agent of Empires", (testpath/".agent-of-empires/config.toml").read
 
     output = shell_output("#{bin}/aoe init #{testpath} 2>&1", 1)
     assert_match "already exists", output
