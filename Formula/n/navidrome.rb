@@ -1,8 +1,8 @@
 class Navidrome < Formula
   desc "Modern Music Server and Streamer compatible with Subsonic/Airsonic"
   homepage "https://www.navidrome.org"
-  url "https://github.com/navidrome/navidrome/archive/refs/tags/v0.60.3.tar.gz"
-  sha256 "afb07417b2d38ee6d757bc4e1ea1ff635f2666e149c44a883560a5bcda2d8556"
+  url "https://github.com/navidrome/navidrome/archive/refs/tags/v0.61.0.tar.gz"
+  sha256 "818e2e80845b18cf17f4b3afff7d889f51abd814212ff672a1587c6f62fd4e4a"
   license "GPL-3.0-only"
   head "https://github.com/navidrome/navidrome.git", branch: "master"
 
@@ -37,7 +37,7 @@ class Navidrome < Formula
 
     system "make", "setup"
     system "make", "buildjs"
-    system "go", "build", *std_go_args(ldflags:, tags: "netgo"), "-buildvcs=false"
+    system "go", "build", *std_go_args(ldflags:, tags: "netgo,sqlite_fts5"), "-buildvcs=false"
 
     generate_completions_from_executable(bin/"navidrome", shell_parameter_format: :cobra)
   end
