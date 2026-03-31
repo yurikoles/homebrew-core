@@ -6,12 +6,12 @@ class Graphqlite < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "ba1b4b291b9b71db4a1f04038e84f472aa0d0378c9dcdb578f27d262b7dc6b2b"
-    sha256 cellar: :any,                 arm64_sequoia: "ae4393e4d5ce3c3734658a23898a9a50fd7c51de11b50d1cad1e73caf7aa54da"
-    sha256 cellar: :any,                 arm64_sonoma:  "139620989026f757b01f4d979389c795fe0c6fcdef82f238d8a16619bbbbb6d1"
-    sha256 cellar: :any,                 sonoma:        "5f79e9da55cd18e68e27145278f0a712b617edc6e4183d5f342b44e54d1a118c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0a629fa45ab3b3c30740225895914df9db15a267e5c3d94e2b8b938b0b1ec061"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "332f7d557e18a5caec08e9209a0efbac6d07554d893c34e1bdede51492fe7f2e"
+    sha256 cellar: :any,                 arm64_tahoe:   "8d899627e611b6068586864e38e5ff96f20f06fe2b8dca9ddb37090ac37588d3"
+    sha256 cellar: :any,                 arm64_sequoia: "4eea3effee0a6bce6e27a05f1fd47d36bf74fce2b77f245b4b3d28dbb475663a"
+    sha256 cellar: :any,                 arm64_sonoma:  "3d4a0f026aabc6c406326655c7ca94827cc3024eeeff8ccede9f1cd0e6508bfd"
+    sha256 cellar: :any,                 sonoma:        "9bc322491a4b2c5d3876d266f5a23a48da276ad177b59d14e49dc74bae9a74c1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "9dcbf3ff9df60ca12444acddef5a3e9bfbb54ddb86aa307fc8f6239e1cd0a542"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "68a212ce7f3707ffb24e07cbf752180dc0e859760b70e6db5ffaddc816b50654"
   end
 
   depends_on "bison" => :build # macOS bison is too old
