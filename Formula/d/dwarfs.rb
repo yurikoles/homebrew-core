@@ -52,9 +52,6 @@ class Dwarfs < Formula
     cause "Not all required C++23 features are supported"
   end
 
-  # Temporary fix for missing dependency on Boost::program_options
-  patch :DATA
-
   def install
     args = %W[
       -DBUILD_SHARED_LIBS=ON
@@ -116,20 +113,3 @@ class Dwarfs < Formula
     assert_equal version.to_s, shell_output("./test").chomp
   end
 end
-
-__END__
---- a/cmake/libdwarfs.cmake
-+++ b/cmake/libdwarfs.cmake
-@@ -335,6 +335,12 @@ target_link_libraries(
-   dwarfs_fsst
- )
- 
-+target_link_libraries(
-+  dwarfs_writer
-+  PRIVATE
-+  Boost::program_options
-+)
-+
- if(TARGET Boost::process)
-   target_link_libraries(dwarfs_common PUBLIC Boost::process)
- endif()
