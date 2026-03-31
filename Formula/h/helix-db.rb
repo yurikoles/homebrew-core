@@ -1,8 +1,8 @@
 class HelixDb < Formula
   desc "Open-source graph-vector database built from scratch in Rust"
   homepage "https://helix-db.com"
-  url "https://github.com/HelixDB/helix-db/archive/refs/tags/v2.3.3.tar.gz"
-  sha256 "21511da7f2c163b121c2b7dc9f0ae27b8f75179b366710c376a67cb7d36b8d75"
+  url "https://github.com/HelixDB/helix-db/archive/refs/tags/v2.3.4.tar.gz"
+  sha256 "9e18fca307763d13798332507adbb19d2fc1ef77d2fc022f3be01769d4ad47c3"
   license "AGPL-3.0-only"
 
   bottle do
