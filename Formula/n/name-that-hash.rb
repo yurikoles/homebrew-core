@@ -10,8 +10,7 @@ class NameThatHash < Formula
   head "https://github.com/HashPals/Name-That-Hash.git", branch: "main"
 
   bottle do
-    rebuild 6
-    sha256 cellar: :any_skip_relocation, all: "6cd397ec67920e83a4e742ada35c486fee1d62345bbd4cce01f7811cae71de8f"
+    sha256 cellar: :any_skip_relocation, all: "1faeb200cbf30f8d864631b94005f26196d59323b34676c368b275ad846eda56"
   end
 
   depends_on "python@3.14"
