@@ -1,8 +1,8 @@
 class Appwrite < Formula
   desc "Command-line tool for Appwrite"
   homepage "https://appwrite.io"
-  url "https://registry.npmjs.org/appwrite-cli/-/appwrite-cli-17.1.0.tgz"
-  sha256 "943c82c3eb3043cc0ea8546c4d945ba40127a81ed467428325d236aff46140c0"
+  url "https://registry.npmjs.org/appwrite-cli/-/appwrite-cli-17.2.1.tgz"
+  sha256 "9a3e3e9025bf6957bce55773fa4ccf2db9cfb36e27bb92325a511eaba1dc0e95"
   license "BSD-3-Clause"
 
   bottle do
