@@ -10,7 +10,7 @@ class Recoverpy < Formula
   head "https://github.com/PabloLec/recoverpy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "4b5bf6fec7c583ec230400636c79e4f3c44c593db2dfcff322486bc7efc46060"
+    sha256 cellar: :any_skip_relocation, all: "0523109c1179d7d4260ea6471464388ea95dbb13554568e8985116629abf4ef9"
   end
 
   depends_on :linux
