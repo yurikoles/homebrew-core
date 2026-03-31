@@ -1,8 +1,8 @@
 class Mx < Formula
   desc "Command-line tool used for the development of Graal projects"
   homepage "https://github.com/graalvm/mx"
-  url "https://github.com/graalvm/mx/archive/refs/tags/7.78.2.tar.gz"
-  sha256 "c2d51f771a8661fd44aaf30f597ff1533e4acfd3cbecf31d7641ec0326103630"
+  url "https://github.com/graalvm/mx/archive/refs/tags/7.78.3.tar.gz"
+  sha256 "fa88564e46e23b72debd9757eb23a7a89cff947c72457d09804b67bee17c5167"
   license "GPL-2.0-only"
 
   livecheck do
@@ -31,8 +31,8 @@ class Mx < Formula
 
   test do
     resource "homebrew-testdata" do
-      url "https://github.com/oracle/graal/archive/refs/tags/vm-22.3.2.tar.gz"
-      sha256 "77c7801038f0568b3c2ef65924546ae849bd3bf2175e2d248c35ba27fd9d4967"
+      url "https://github.com/oracle/graal/archive/refs/tags/vm-25.0.2.tar.gz"
+      sha256 "129261a9c43d43ca8cad235b65ee9cf8bfa9a2e2d51e90ac188e3cf5174323a0"
     end
 
     ENV["JAVA_HOME"] = Language::Java.java_home
