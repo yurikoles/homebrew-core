@@ -6,7 +6,7 @@ class Opencode < Formula
   license "MIT"
 
   livecheck do
-    throttle 10
+    throttle 10, days: 1
   end
 
   bottle do
