@@ -9,13 +9,12 @@ class MysqlToSqlite3 < Formula
   head "https://github.com/techouse/mysql-to-sqlite3.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b341a36e832fc3a46a48a90060eb508c1fe73cc1c1a2f23dbe1d0748025817c2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a44f7964a1ebb3b68c8c9fb20787a20fa13efc0a624dce9a646d2278f4062a7a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dedcdbb2b119696b200b4b997628c50e902659ceb5100a66f39167a637b638e2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b7a222a6237cf63689051d1954dfe95418590d1047d028081d17f3a6358700d2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "600d1b46fcde356958a1c552e03567b9c24d9eee87671ce8f0bca602c8559d84"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "90bf6fe2cf156aff2a21d603652bad5e0e89145887c090844ca9d4d7ca831eeb"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bdb0d813141aff75fd42857d899e5081d7294754f8a3c4f62e69ba4f1ad4ce89"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "92c85ab67d9cba7c8509ee97d3a8b33bb32a4e40a77cb7a07f422e150e0565fa"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cb1e52afa8b16905c6b4dfe51776faa8498298de491bcddd9a2fe930f531bb58"
+    sha256 cellar: :any_skip_relocation, sonoma:        "925f32f08e50b67695f8f08b9933d19bc53d08ebd24d3c60f069fc810d953f4b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0982f4eb2fb936dc48b9a25bd3f09b875fb799eea8f145d05a6cb8c9df632003"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9e7296cb7a477e35100f43fdd2771b1cb709c565001355a9c99ceff4d7e2f697"
   end
 
   depends_on "python@3.14"
