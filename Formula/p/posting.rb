@@ -7,8 +7,6 @@ class Posting < Formula
   sha256 "e97015308e80e07064f5f8ef90c6819c5a0ffeb6cbce094e55dd5a9f86e382b8"
   license "Apache-2.0"
 
-  no_autobump! because: "contains non-PyPI resources"
-
   bottle do
     rebuild 2
     sha256 cellar: :any,                 arm64_tahoe:   "949881575f16d1a15bfa6079750a3043db64dab31e2c935e6753825e3ffec787"
