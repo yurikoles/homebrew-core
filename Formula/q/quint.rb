@@ -6,8 +6,7 @@ class Quint < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "e5d55a85d44caa8787c4eae2469dde0a21bee2746ae7e746985b06f4489e586c"
+    sha256 cellar: :any_skip_relocation, all: "fa6ed9e38ff62eb0886c5a879f79e25c1c2d98d949ba4cf43d0d10b0d5184416"
   end
 
   depends_on "node"
