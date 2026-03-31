@@ -4,6 +4,7 @@ class Ngspice < Formula
   url "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/46/ngspice-46.tar.gz"
   sha256 "a0d1699af1940b06649276dcd6ff5a566c8c0cad01b2f7b5e99dedbb4d64c19b"
   license :cannot_represent
+  revision 1
   head "https://git.code.sf.net/p/ngspice/ngspice.git", branch: "master"
 
   livecheck do
@@ -37,6 +38,9 @@ class Ngspice < Formula
     depends_on "libxext"
     depends_on "libxmu"
   end
+
+  # Disable the broken macOS memory check. upstream commit ref, https://sourceforge.net/p/ngspice/ngspice/ci/96404e993984065f9104d724672bcdcafd7f356f/
+  patch :DATA
 
   def install
     # Xft #includes <ft2build.h>, not <freetype2/ft2build.h>, hence freetype2
@@ -84,3 +88,24 @@ class Ngspice < Formula
     system bin/"ngspice", "test.cir"
   end
 end
+
+__END__
+diff --git a/src/frontend/outitf.c b/src/frontend/outitf.c
+index a9e47df..56883b0 100644
+--- a/src/frontend/outitf.c
++++ b/src/frontend/outitf.c
+@@ -556,6 +556,7 @@ OUTpD_memory(runDesc *run, IFvalue *refValue, IFvalue *valuePtr)
+ {
+     int i, n = run->numData;
+ 
++#ifndef __APPLE__
+     if (!cp_getvar("no_mem_check", CP_BOOL, NULL, 0)) {
+         /* Estimate the required memory */
+         size_t memrequ = (size_t)n * vlength2delta(0) * sizeof(double);
+@@ -569,6 +570,7 @@ OUTpD_memory(runDesc *run, IFvalue *refValue, IFvalue *valuePtr)
+             controlled_exit(1);
+         }
+     }
++#endif
+ 
+     for (i = 0; i < n; i++) {
