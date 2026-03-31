@@ -5,6 +5,7 @@ class Powershell < Formula
       tag:      "v7.6.0",
       revision: "767990ba06f8579d69f99eec46057541374aa892"
   license "MIT"
+  revision 1
 
   livecheck do
     url :stable
@@ -128,6 +129,11 @@ class Powershell < Formula
     clear_native_dependencies(publish_path, runtime, dotnet)
 
     libexec.install publish_path.glob("*")
+
+    ref_pack_path = (dotnet.opt_libexec/"packs/Microsoft.NETCore.App.Ref").children.select(&:directory?)
+                    .max_by { |path| Version.new(path.basename.to_s) }
+    (libexec/"ref").install_symlink (ref_pack_path/"ref/#{target_framework}/").glob("*")
+
     (bin/"pwsh").write_env_script libexec/"pwsh",
                                   DOTNET_ROOT: "${DOTNET_ROOT:-#{dotnet.opt_libexec}}"
 
@@ -177,8 +183,12 @@ class Powershell < Formula
 
     assert_equal libexec.to_s, local_module_output
 
-    module_cmd = "Import-Module PowerShellGet; [bool](Get-Command Install-Module )"
-    module_output = shell_output("#{bin}/pwsh -NoLogo -NoProfile -c '#{module_cmd}'").lines.last.chomp
+    module_cmd = "Import-Module PowerShellGet; [bool](Get-Command Install-Module)"
+    module_output = shell_output("#{bin}/pwsh -NoLogo -NoProfile -c '#{module_cmd}' 2>&1")
+
+    # If this produces an error try compiling powershell from source and increment revision
+    refute_match(/InternalWebProxy/, module_output)
+    module_output = module_output.lines.last.chomp
     assert_equal "True", module_output
   end
 end
