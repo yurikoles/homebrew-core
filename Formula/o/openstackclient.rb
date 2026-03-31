@@ -9,12 +9,12 @@ class Openstackclient < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "465476405ebfcd96a8ab9a9250b880033999b570e376866690de14e2185d9a50"
-    sha256 cellar: :any,                 arm64_sequoia: "d4069ec495a445adffc849c5e4987b49f5d44f2f4913b1c5ecab43334a8be705"
-    sha256 cellar: :any,                 arm64_sonoma:  "509d2f527f4e2cf533d42a63e504d9dfc2810c7c7cdcda6b6d8f57373ef86743"
-    sha256 cellar: :any,                 sonoma:        "f61430e12d2e67d387f116e13cd02013a502050b6348d753f45cecc03b2b2b5a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2a783c94986b7356ae0fd21e382e685cc227e78e028c514602c124a80a49206a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d5322e40be64a355d2d663c86eba67f32a142b8b6008e57b9424e12643386472"
+    sha256 cellar: :any,                 arm64_tahoe:   "dab0184bda693f2da1063e2325eee418d50136e32618091c85fa5f4a70698f9a"
+    sha256 cellar: :any,                 arm64_sequoia: "a03a627ec0ad03679e5292bb31d86c01297d806587e72962ccbb0d31a7f7eccb"
+    sha256 cellar: :any,                 arm64_sonoma:  "f5de67cbbcf9ee0c110932e8e36210ff4b26eed975ab85f6b5a1d5b2cd1749fc"
+    sha256 cellar: :any,                 sonoma:        "b526eb6e7bc1216f2dc2a81e8794ced40d38b168c8ccc91ce9979c606f9b3349"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "58017ba1cd92851c8ea8a636db6e69fca07a2bfe14f4c5d4a359f3e48d2ca768"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6f4a00cec9d1d0c9c29fad910d562641be439e7d66df98cc198594fad49337ff"
   end
 
   depends_on "certifi" => :no_linkage
