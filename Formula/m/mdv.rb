@@ -9,13 +9,12 @@ class Mdv < Formula
   revision 1
 
   bottle do
-    rebuild 5
-    sha256 cellar: :any,                 arm64_tahoe:   "cb111a674b82866651a2cc13f11fac8fe37cc68e4559963f04c40ccb0cdcb06e"
-    sha256 cellar: :any,                 arm64_sequoia: "5efc023a46590290af7b23c53b9dc48e76888e52182ab4630b213a61e24e7060"
-    sha256 cellar: :any,                 arm64_sonoma:  "f8e0835cdd4cee5c281008aaeecd1b1bc306106f3b76cd2b7f28e58f9bc2a4ef"
-    sha256 cellar: :any,                 sonoma:        "aa784301843d3bdd4ae5badde5a1336575b337fea7dcd7efc181e299134f3397"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1f8dd2691dfae52301c4ddf31f5e89a76b38b8cbb19025e89392a83830d62795"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c891c0e81a3f78060d0d7e4df72d477d0f3dd04017b425b6b7400a8aef24d8d3"
+    sha256 cellar: :any,                 arm64_tahoe:   "7e3f993dff2c2285c95d307052eb788af49064b39416a4af601f1b6c8ccff2ed"
+    sha256 cellar: :any,                 arm64_sequoia: "2b2066297ec9e9fe3a49ebab06160e6a8c40b13e70ae5c2afe1e67a2066923b9"
+    sha256 cellar: :any,                 arm64_sonoma:  "4948a815dfb995aafe81414e4c8ff8cedf80654574d8521bb71c2aff69e9955c"
+    sha256 cellar: :any,                 sonoma:        "182702c80f2feeb950166ccff5f33825d02207948503d3a540c808836b749cd6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "bcae45fe0cd6e612aa92fce775f120a8414c2937005f0d1821712abd29f1820e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6db5f55e163a5bcdfcc3e2cb15ac45717470850c7c980145ba9fc5e0ff54813e"
   end
 
   depends_on "libyaml"
