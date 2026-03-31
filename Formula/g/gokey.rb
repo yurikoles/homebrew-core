@@ -7,12 +7,12 @@ class Gokey < Formula
   head "https://github.com/cloudflare/gokey.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "81186a07e4187a1051296ae90494b6f4cb291083ff08076902033454ab018608"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "81186a07e4187a1051296ae90494b6f4cb291083ff08076902033454ab018608"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "81186a07e4187a1051296ae90494b6f4cb291083ff08076902033454ab018608"
-    sha256 cellar: :any_skip_relocation, sonoma:        "759c0ca21f9300b638995e96c41218aa4c03284a61acca87c3fb84f1e5da1e06"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f0b3f59fe04d5c7c0696e1605a56fa4ddd99d3e563dfec934d087538a6851156"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b5159a7d0e167e26ba1ce8b29cebc9e48e019627c99326e394df8b08e66d958d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "39fa37a4675d286bd98d0ccbe73dd401fa1e15cbdcd81c09f639f507121cf96c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "39fa37a4675d286bd98d0ccbe73dd401fa1e15cbdcd81c09f639f507121cf96c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "39fa37a4675d286bd98d0ccbe73dd401fa1e15cbdcd81c09f639f507121cf96c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e4568a3de9d8509a084de977254004036adea7bf78a54246bb750d83950d428b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b087aae267d83a4f2b12521f0d07ddff361e4102f4799d12c4ad24dd77d93b03"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3f5693ea85dd8715215833d03fd95d54cabbdecb1c41242f194109fb59d3882b"
   end
 
   depends_on "go" => :build
