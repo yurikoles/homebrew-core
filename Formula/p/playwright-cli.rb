@@ -1,8 +1,8 @@
 class PlaywrightCli < Formula
   desc "CLI for Playwright: record/generate code, inspect selectors, take screenshots"
   homepage "https://playwright.dev"
-  url "https://registry.npmjs.org/@playwright/cli/-/cli-0.1.1.tgz"
-  sha256 "8dc10eca24accbe5cab280d8949c771888aedaf8aca6a3748f218be98df240df"
+  url "https://registry.npmjs.org/@playwright/cli/-/cli-0.1.2.tgz"
+  sha256 "ff1c0e12c78981d12e95b10dd8f60246ab4772de8e15a40452b2dfbdc0b60e38"
   license "Apache-2.0"
 
   bottle do
@@ -15,9 +15,6 @@ class PlaywrightCli < Formula
   end
 
   depends_on "node"
-
-  # Backport upstream install-browser fix from https://github.com/microsoft/playwright/pull/39280.
-  patch :DATA
 
   def install
     system "npm", "install", *std_npm_args
@@ -32,28 +29,3 @@ class PlaywrightCli < Formula
     assert_match "no browsers", shell_output("#{bin}/playwright-cli list")
   end
 end
-
-__END__
-diff --git a/playwright-cli.js b/playwright-cli.js
-index 65f7a28..e40c780 100755
---- a/playwright-cli.js
-+++ b/playwright-cli.js
-@@ -16,4 +16,17 @@
-  * limitations under the License.
-  */
- 
--require('playwright/lib/cli/client/program');
-+const args = process.argv.slice(2);
-+
-+if (args[0] === '--version' || args[0] === '-V') {
-+  process.stdout.write(`${require('./package.json').version}\n`);
-+  process.exit(0);
-+}
-+
-+if (args[0] === 'install-browser') {
-+  const { program } = require('playwright-core/lib/cli/program');
-+  const argv = process.argv.map(arg => arg === 'install-browser' ? 'install' : arg);
-+  program.parse(argv);
-+} else {
-+  require('playwright/lib/cli/client/program');
-+}
