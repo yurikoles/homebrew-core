@@ -6,10 +6,10 @@ class Clippy < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3b1239f4dd96a2178d22cc207d304cf78f7fd8b1733e8b7a15fa72f0cfbcf408"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "805dc2884f1dd0fce6312add976502bca7d0e0b21857df6cbd84c9d58d73a005"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1a8dfb2a9ede5f4a0b80f9d0e0c159097c1abdb29c158e20740685eda6cc5b35"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1262eebdd66411ec6c168e7d07d3ae06746aa43453e6ed24b81aaed79038b92d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6757815978af472f965b1b7e5799b05745defdebabf9b4ffad149671744912ab"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "954d984f9438b90d3e0bcc2d019ddecdc9a812b1c4d18a29f7b28c0e11947cc7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ab48aff0298a15707d6ffd9b60be8a4674985d640b478ee3c13dec55461b9042"
+    sha256 cellar: :any_skip_relocation, sonoma:        "34ee60100e0d8de5401014339a4da106259a3bfc69af507bdd5d611d7f056fc1"
   end
 
   depends_on "go" => :build
