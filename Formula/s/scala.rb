@@ -11,8 +11,7 @@ class Scala < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "c0e0c4e6c31c063f563984245f7d0e32ff33f3bd1b0d969192f497aa3ad4d0b9"
+    sha256 cellar: :any_skip_relocation, all: "9c0aa8286ed3acd4d7e20a953806c5d794bb662f74131b4c8a14046be0ff5340"
   end
 
   # JDK Compatibility: https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html
