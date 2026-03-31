@@ -9,12 +9,12 @@ class Molecule < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9ff347286c242325dd7d11cd3d14b929134328d453ff2dfd9107556b4fa0468d"
-    sha256 cellar: :any,                 arm64_sequoia: "bb1e73cef817593504266f4c8a30f33ad66ce1bd382e2544ffd04362373eb915"
-    sha256 cellar: :any,                 arm64_sonoma:  "2ee6297a5d4f4a9fb27dc353f7f9361e8dcab75fe81fbc40a9f4c1530bfceb9a"
-    sha256 cellar: :any,                 sonoma:        "1fba05ecb2e435981b8c8f95afe196d89f7b388e0831a6ea484d065ccbd2ed7b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c344e32cbad8f4c99b1b002439bcaaf603bbfefb1bee556bb37cf9e27cceb342"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f5da18d5d0a8a4edc6042083fc1f19f9f27b4701606a5a8dd2c8d5a677e8cc5e"
+    sha256 cellar: :any,                 arm64_tahoe:   "c4cf642d35896bbbb9c0025793b8177b3f6881cc1bc7731065acf8f29f008efd"
+    sha256 cellar: :any,                 arm64_sequoia: "d631bb127ad42dea9f0f7f4f86078f3a648e59eb58320d971156662393415dac"
+    sha256 cellar: :any,                 arm64_sonoma:  "aea3078b9392729da4f3f45517ae367fb3f14ca334645af5928a7fbc6aab56e8"
+    sha256 cellar: :any,                 sonoma:        "986b197c1e21cae5a4c636cc3f8d2849f3163e08fb63eb0a9a1fd170b9ef8837"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3a945dad6a43ad35c2af53c24ba4a5229bb380c25b2e1496f91e811a74f0c0ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eef19dd1fd3e19d69eb4b7c8f9cf993a9b58a168f643ae667b6284697294da01"
   end
 
   depends_on "ansible"
