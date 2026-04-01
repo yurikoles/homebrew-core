@@ -3,8 +3,8 @@ class SnykAgentScan < Formula
 
   desc "Constrain, log and scan your MCP connections for security vulnerabilities"
   homepage "https://github.com/snyk/agent-scan"
-  url "https://files.pythonhosted.org/packages/a6/62/9d3ac0c753417b71b1075db9ef5f8229080827f28ad09660187eda0e978d/snyk_agent_scan-0.4.11.tar.gz"
-  sha256 "eb808855be909d31314f0f6f75b18ede70c7e05c385be2c887a3f2ab4a82187e"
+  url "https://files.pythonhosted.org/packages/25/0a/48c636af19be281adc51fff02c8db48085c564e7ae07dd71c16cd17893d2/snyk_agent_scan-0.4.13.tar.gz"
+  sha256 "d5e1a1659d9612ca8a3d5b0543fb6fcb64e9055a7e7fe1964aedf088624a74e6"
   license "Apache-2.0"
 
   bottle do
@@ -31,8 +31,8 @@ class SnykAgentScan < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/45/4a/064321452809dae953c1ed6e017504e72551a26b6f5708a5a80e4bf556ff/aiohttp-3.13.4.tar.gz"
-    sha256 "d97a6d09c66087890c2ab5d49069e1e570583f7ac0314ecf98294c1b6aaebd38"
+    url "https://files.pythonhosted.org/packages/77/9a/152096d4808df8e4268befa55fba462f440f14beab85e8ad9bf990516918/aiohttp-3.13.5.tar.gz"
+    sha256 "9d98cc980ecc96be6eb4c1994ce35d28d8b1f5e5208a23b421187d1209dbb7d1"
   end
 
   resource "aiosignal" do
