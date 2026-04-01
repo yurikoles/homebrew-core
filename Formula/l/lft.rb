@@ -1,8 +1,8 @@
 class Lft < Formula
   desc "Layer Four Traceroute (LFT), an advanced traceroute tool"
   homepage "https://pwhois.org/lft/"
-  url "https://pwhois.org/dl/index.who?file=lft-3.93.tar.gz"
-  sha256 "132d74c1a8cf56023a16ddd39d10c89b4dfa0acdbd7c472e45ccc8521d8aaddd"
+  url "https://pwhois.org/dl/index.who?file=lft-3.94.tar.gz"
+  sha256 "30f0231077a52a354a2863f27b941cf4652a475a5e0684dab335a575b3b191a8"
   license "VOSTROM"
 
   livecheck do
@@ -31,6 +31,7 @@ class Lft < Formula
   end
 
   test do
-    assert_match "isn't available to LFT", shell_output("#{bin}/lft -S -d 443 brew.sh 2>&1")
+    expected = "LFT: Failed to activate capture on device"
+    assert_match expected, shell_output("#{bin}/lft -S -d 443 brew.sh 2>&1")
   end
 end
