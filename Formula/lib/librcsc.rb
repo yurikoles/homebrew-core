@@ -4,7 +4,7 @@ class Librcsc < Formula
   url "https://github.com/helios-base/librcsc/archive/refs/tags/rc2024.tar.gz"
   sha256 "81a3f86c9727420178dd936deb2994d764c7cd4888a2150627812ab1b813531b"
   license "LGPL-3.0-or-later"
-  revision 5
+  revision 6
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "74ea73f6b0d78ec266f4016283e606eea8c53d895b6232c4bbf1d7d24ed70615"
@@ -45,6 +45,7 @@ class Librcsc < Formula
 
     # Strip linkage to `boost`
     ENV.append "LDFLAGS", "-Wl,-dead_strip_dylibs" if OS.mac?
+    ENV.append "CFLAGS", "-std=gnu11"
 
     system "./bootstrap"
     system "./configure", "--disable-silent-rules",
