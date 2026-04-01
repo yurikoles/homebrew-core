@@ -1,8 +1,8 @@
 class Solhint < Formula
   desc "Linter for Solidity code"
   homepage "https://protofire.github.io/solhint/"
-  url "https://registry.npmjs.org/solhint/-/solhint-6.2.0.tgz"
-  sha256 "2414e763d84da244d0726749698f9fd1268983170233a6743f4c3d8fc910efa0"
+  url "https://registry.npmjs.org/solhint/-/solhint-6.2.1.tgz"
+  sha256 "c03af35a767db998ffd042c72d679909ae043372f5ff27e50e5de8390af55ec7"
   license "MIT"
 
   bottle do
