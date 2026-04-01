@@ -9,12 +9,12 @@ class Specify < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "84b64be9b1599aa08ff40a09bb4ee81bd9662c5340aba2495dcbf2dabd9cd47a"
-    sha256 cellar: :any,                 arm64_sequoia: "092be9ecd4f8c25634fb8c20872287a060338e2f963759f105c29991874ca1fa"
-    sha256 cellar: :any,                 arm64_sonoma:  "9a4e030d3c6f78e216a7f0ec6647244cb9b534257e2075da9ad90bbd54fa3533"
-    sha256 cellar: :any,                 sonoma:        "31f4c69d4da4efa812b5b5a06962014ae8b5e042822b3c38c2db56d2c58a3c71"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2fc121bd1c3af338adf1d78bd99dbfc26e0e4aec34f79755706f11839aeb81d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "64d63315f873fbb16503d2acbb71824f07a3c58914e722ba00b7580c0f149c0b"
+    sha256 cellar: :any,                 arm64_tahoe:   "669ac25b31951c7dcbefc482dc5d52b5b99c2dcfd9a66007ea62af98351ea267"
+    sha256 cellar: :any,                 arm64_sequoia: "e3c56b5fb8de673b0f678cb84034b58ba6d35c9b77b22ae47830077b774a706b"
+    sha256 cellar: :any,                 arm64_sonoma:  "07f0885cc386d10bc35a4446a259edacee081cd8e4dd53715bb530ea090beb86"
+    sha256 cellar: :any,                 sonoma:        "98df97d1b174abd86b50f8db6fc5c80b4f39dfdc72c98522ecc1ef909d48e25f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "670de30ce1f17e2f01dc5f49050693bcbab7f28825d71ea147678756735abfae"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "132c6f18e64a7cbb6547bcda3656a7d2c3bda5a2ae3af766223439279ac8098c"
   end
 
   depends_on "certifi" => :no_linkage
