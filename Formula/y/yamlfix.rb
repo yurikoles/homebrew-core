@@ -9,8 +9,7 @@ class Yamlfix < Formula
   revision 1
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, all: "2d045588a0278d68fc8602394f5550e848c93d1c4aa9952fb9d3cd81514bb4a4"
+    sha256 cellar: :any_skip_relocation, all: "8352d3055dfabda0ee6066853f28fd4a4b75c17ed9cece8373c51cd97d6906e4"
   end
 
   depends_on "pydantic" => :no_linkage
