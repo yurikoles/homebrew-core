@@ -7,12 +7,12 @@ class PerlXmlParser < Formula
   head "https://github.com/cpan-authors/XML-Parser.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fed975436e3f75a1406be6d168b01269b239223f64288173e42a260ba35f7a59"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "57ae032f0a8269dc6969f027b447c8f77c2c4c8e5d1d501b8e8ba911be5b1f67"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f4082033a3e09a5c50b9d7aee71d20b7b13ca76e0f2afc1f250de9a45d9709b9"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7ef18fe65521b3c7d0c7d521e7261d08d84ffdd0e4e2d3224e370a0a180700b7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b74afab4e83849f433cbcc97ae67e13d47bfe5bdb23ce7cd8b21aa19bbfab0cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ee22c529583f7d5b66cafd9ffb3f097cd206187337591bbfab79458be868745"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e8aa24ffa82436a39b8da35b161e0743a321227b50c7ea8003bc384c92e4b994"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "99b51b949f590e5b5df596e95e2f36f5895aa3fdfeb28d947238c2e3ac8a2f29"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0ae60f9340f59ca29ebdad5c6661339d4d90096d44e71716e663cea7f3f59c8e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "61286ba9ef8b5f5796f0ff66240a908195d541618fb44d56c9082b540fff33d6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "49c71ae2ef58dcd6fbdf573d3bf23034c47d946da782be36b4245464e2776c9d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "39c076a3b2cf19e9104c86525c0b74822f16b2431fe4884b97d0ebb093b4a9f2"
   end
 
   depends_on "perl" # macOS Perl already has the XML::Parser module
