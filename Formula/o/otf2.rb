@@ -20,15 +20,9 @@ class Otf2 < Formula
     sha256 x86_64_linux:  "966abf2c53bb4dd7f566b972e2b1c7defb27e37bdd0b5771b6acec6fc8752fe4"
   end
 
-  depends_on "python-setuptools" => :build
   depends_on "sphinx-doc" => :build
   depends_on "open-mpi"
   depends_on "python@3.14"
-
-  resource "six" do
-    url "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz"
-    sha256 "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
-  end
 
   # Fix -flat_namespace being used on Big Sur and later.
   patch do
@@ -47,11 +41,6 @@ class Otf2 < Formula
   end
 
   def install
-    resource("six").stage do
-      system python3, "-m", "pip", "install", *std_pip_args(prefix: libexec), "."
-    end
-
-    ENV.prepend_path "PYTHONPATH", libexec/Language::Python.site_packages(python3)
     ENV["PYTHON"] = which(python3)
     ENV["SPHINX"] = Formula["sphinx-doc"].opt_bin/"sphinx-build"
 
@@ -60,14 +49,6 @@ class Otf2 < Formula
     system "make", "install"
 
     inreplace pkgshare/"otf2.summary", "#{Superenv.shims_path}/", ""
-  end
-
-  def caveats
-    <<~EOS
-      To use the Python bindings, you will need to have the six library.
-      One option is to use the bundled copy through your PYTHONPATH, e.g.
-        export PYTHONPATH=#{opt_libexec/Language::Python.site_packages(python3)}
-    EOS
   end
 
   test do
