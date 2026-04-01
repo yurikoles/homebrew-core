@@ -1,8 +1,8 @@
 class CopilotLanguageServer < Formula
   desc "Language Server Protocol server for GitHub Copilot"
   homepage "https://github.com/github/copilot-language-server-release"
-  url "https://registry.npmjs.org/@github/copilot-language-server/-/copilot-language-server-1.460.0.tgz"
-  sha256 "de1d6e2b2a1128e3590d46352ee3734196a84ff3e4cca180322c1c5cf7f829b9"
+  url "https://registry.npmjs.org/@github/copilot-language-server/-/copilot-language-server-1.461.0.tgz"
+  sha256 "ace151315e49b148d1c62df8be853056833b7287cf93ffef45f1deb408b345f3"
   license "MIT"
 
   bottle do
