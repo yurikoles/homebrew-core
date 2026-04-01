@@ -1,8 +1,8 @@
 class ChainloopCli < Formula
   desc "CLI for interacting with Chainloop"
   homepage "https://docs.chainloop.dev"
-  url "https://github.com/chainloop-dev/chainloop/archive/refs/tags/v1.89.6.tar.gz"
-  sha256 "9b81222b0c0b975164445d0dc70a571cb3e9e1918e4e6db6a0538fcd59434e7b"
+  url "https://github.com/chainloop-dev/chainloop/archive/refs/tags/v1.89.7.tar.gz"
+  sha256 "73042828d60aa2ba01c66cd7a3e793fc89b88328b9b7d6efdadbc5412c40605e"
   license "Apache-2.0"
   head "https://github.com/chainloop-dev/chainloop.git", branch: "main"
 
@@ -36,6 +36,6 @@ class ChainloopCli < Formula
     assert_match version.to_s, shell_output("#{bin}/chainloop version 2>&1")
 
     output = shell_output("#{bin}/chainloop artifact download 2>&1", 1)
-    assert_match "run chainloop auth login", output
+    assert_match "chainloop auth login", output
   end
 end
