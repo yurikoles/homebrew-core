@@ -1,8 +1,8 @@
 class Astgen < Formula
   desc "Generate AST in json format for JS/TS"
   homepage "https://github.com/joernio/astgen"
-  url "https://github.com/joernio/astgen/archive/refs/tags/v3.39.0.tar.gz"
-  sha256 "6344cc29deefee97a9d5e3a2d151cdd03bc315eaa97b6d61f733f4bb96f90b1c"
+  url "https://github.com/joernio/astgen/archive/refs/tags/v3.40.0.tar.gz"
+  sha256 "e46f93cb7abd3a6ecdd150e096f52bbf5425aef14110ebb6dd7aa38fb7adcc22"
   license "Apache-2.0"
   head "https://github.com/joernio/astgen.git", branch: "main"
 
