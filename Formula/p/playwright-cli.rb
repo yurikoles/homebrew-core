@@ -1,8 +1,8 @@
 class PlaywrightCli < Formula
   desc "CLI for Playwright: record/generate code, inspect selectors, take screenshots"
   homepage "https://playwright.dev"
-  url "https://registry.npmjs.org/@playwright/cli/-/cli-0.1.3.tgz"
-  sha256 "28ba2603b4495b71dadea7c6d39636c6d0a2c1414b3ea7d4f91fffd53343e3e4"
+  url "https://registry.npmjs.org/@playwright/cli/-/cli-0.1.4.tgz"
+  sha256 "2355d1e33796e29162e3eac2bdee950b9f48abe64831b57bd79bed3b9f327f62"
   license "Apache-2.0"
 
   bottle do
