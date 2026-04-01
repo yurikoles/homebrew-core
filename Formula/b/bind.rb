@@ -6,8 +6,8 @@ class Bind < Formula
   # or buggy. They are not suitable for general deployment. We have to use
   # "version_scheme" because someone upgraded to 9.15.0, and required a
   # downgrade.
-  url "https://downloads.isc.org/isc/bind9/9.20.21/bind-9.20.21.tar.xz"
-  sha256 "15e1b5a227d2890f7c4e823a6ea018de70ee2f3a0e859cbff3d82aad8590de03"
+  url "https://downloads.isc.org/isc/bind9/9.20.22/bind-9.20.22.tar.xz"
+  sha256 "cba92ff631b949655f475fe4b54290f6860fd0070d399f2279f6437c0d383ec6"
   license "MPL-2.0"
   version_scheme 1
   head "https://gitlab.isc.org/isc-projects/bind9.git", branch: "main"
