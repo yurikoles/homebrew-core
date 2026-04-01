@@ -73,18 +73,6 @@ class Pipenv < Formula
     inreplace file, "/opt/homebrew/bin/bash", "$HOMEBREW_PREFIX/bin/bash"
   end
 
-  # Avoid relative paths
-  def post_install
-    lib_python_path = Pathname.glob(libexec/"lib/python*").first
-    lib_python_path.each_child do |f|
-      next unless f.symlink?
-
-      realpath = f.realpath
-      rm f
-      ln_s realpath, f
-    end
-  end
-
   test do
     ENV["LC_ALL"] = "en_US.UTF-8"
     system bin/"pipenv", "--python", which(python3)
