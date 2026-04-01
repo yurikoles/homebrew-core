@@ -9,12 +9,12 @@ class Sqlfluff < Formula
   revision 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "8b72f03c40eaefc8342d3ade8c801c7e4986bba0fb94df93357b547b309c6ae6"
-    sha256 cellar: :any,                 arm64_sequoia: "96fc5efca70627445b43aa395b2bca06837f33450e4b76362a6fa421ed16f42f"
-    sha256 cellar: :any,                 arm64_sonoma:  "fb6d07c667c72429cc21b07464acd1e40f60d1cb0b92858be42b1439341f86fa"
-    sha256 cellar: :any,                 sonoma:        "750a12f3b874ba49863d0e6f0b82d9c7481d948147cfaf25693c186f8494afed"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7647698e1014ad18f411a30f450ed180b31931ab57ac1bf093916c5a61a96506"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "195954ca3b323bf8a0ca1f7768ac241b4211094893fa74dd9e93be3e37825bd6"
+    sha256 cellar: :any,                 arm64_tahoe:   "5f8604fc3964321585d6c2bcb5ba8af5b532d743d37d00c5faf47f64f56371d0"
+    sha256 cellar: :any,                 arm64_sequoia: "93668c34bf02b64e52437645df2dc3a4f5c80ba7617e897ed3125d06def62942"
+    sha256 cellar: :any,                 arm64_sonoma:  "38636d0bffbee05f4e522c34a54d326b95d220ac46c57bc42aef3b3311cf6048"
+    sha256 cellar: :any,                 sonoma:        "abdef0b816649599c097ebb19d396f61a04fbdcf303cac9ba8d4bf5d9e77eddd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0c03f0951fe8c10b757932a4f8e086cc01f2f074fc6abac6dc3b71e03e799d83"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9994a780649afb39ebe45025473c980327efbee4a5a3178d6e7f08cf09227e37"
   end
 
   depends_on "libyaml"
