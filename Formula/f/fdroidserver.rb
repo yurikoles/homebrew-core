@@ -11,13 +11,12 @@ class Fdroidserver < Formula
   no_autobump! because: "has non-PyPI resources"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "5dc7abb22636b07a7926a220b8c9bce86a4090bae6e33d069643fc06c4017a46"
-    sha256 cellar: :any,                 arm64_sequoia: "ce32b34e1e62b87d5ce516c2fe594059bc642f558b3d620f2e84c2f2091ef1ef"
-    sha256 cellar: :any,                 arm64_sonoma:  "1462ec1af43bab1605dad703c3a8f0840de914422f0955d23b565d9603c2bdb3"
-    sha256 cellar: :any,                 sonoma:        "0a9598cbf1ca50bf33c3ace820aa45825ee3d67076a0e2c487ef7ecf21b75f66"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "624c8875c40119b5b3d6456dd6b312640b9775b11992c147168b6c8d23f45ec5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c54d147c1b38780c1f834d5e59a045cdfc07aaebe498b14f1a4cd63339d53b6c"
+    sha256 cellar: :any,                 arm64_tahoe:   "ea223263c8574faed38adee3900d6dd41de33c90922c0439afa2feeb4836873e"
+    sha256 cellar: :any,                 arm64_sequoia: "ffd18faf3805f45a0f3914f3d476c27127477f85c5b0e618e3a1a916d78cfc00"
+    sha256 cellar: :any,                 arm64_sonoma:  "713be7301b34c949f2708eeac0eaff37e9892dde866d0352feac8c3895698097"
+    sha256 cellar: :any,                 sonoma:        "79149a99cdefb3d91e2362b73897e5ef9874e5ec4797c17c70e0a85323fb8c30"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "adc2aeb1ed04ac570e045aa64191ce197c68a555b98964cd52391015b0fe3990"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8672cebc042cfde683446de5dacc40b36c10e22a06eee450dfbcb816c9e7b541"
   end
 
   depends_on "cmake" => :build # for contourpy
