@@ -6,8 +6,7 @@ class Libosmium < Formula
   license "BSL-1.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "cb25dc7303f0d4351ae7929fe2290e908bcd514ff1856ad3a32a34de52fd558a"
+    sha256 cellar: :any_skip_relocation, all: "fd58fa48dfc0c19e696e717b13215cc2bf965667f018b708e6f2264f1fc4f1c0"
   end
 
   depends_on "boost" => :build
