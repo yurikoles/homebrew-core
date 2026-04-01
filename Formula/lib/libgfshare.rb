@@ -1,14 +1,9 @@
 class Libgfshare < Formula
   desc "Library for sharing secrets"
-  homepage "https://www.digital-scurf.org/software/libgfshare"
-  url "https://www.digital-scurf.org/files/libgfshare/libgfshare-2.0.0.tar.bz2"
-  sha256 "86f602860133c828356b7cf7b8c319ba9b27adf70a624fe32275ba1ed268331f"
+  homepage "https://github.com/kinnison/libgfshare"
+  url "https://github.com/kinnison/libgfshare/archive/refs/tags/2.0.0.tar.gz"
+  sha256 "91d7ea7f3e5ddb3854a38827a3f6ea7c597db03067735dc953bd31c5b90f9930"
   license "MIT"
-
-  livecheck do
-    url "https://www.digital-scurf.org/files/libgfshare/"
-    regex(/href=.*?libgfshare[._-]v?(\d+(?:\.\d+)+)\.t/i)
-  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "03c3d5940533347a32f937380585a7d501783d97ff8161a3b8b72a41d4ec8ce7"
@@ -26,13 +21,12 @@ class Libgfshare < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "4439a61e14f81e80009ad0e85a4e2a8183c106161d29e232176faa061ba380ba"
   end
 
-  # Fix -flat_namespace being used on Big Sur and later.
-  patch do
-    url "https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/libtool/configure-pre-0.4.2.418-big_sur.diff"
-    sha256 "83af02f2aa2b746bb7225872cab29a253264be49db0ecebb12f841562d9a2923"
-  end
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
 
   def install
+    system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
