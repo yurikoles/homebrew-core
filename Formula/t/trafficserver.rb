@@ -4,9 +4,9 @@ class Trafficserver < Formula
   license "Apache-2.0"
 
   stable do
-    url "https://www.apache.org/dyn/closer.lua?path=trafficserver/trafficserver-10.1.1.tar.bz2"
-    mirror "https://archive.apache.org/dist/trafficserver/trafficserver-10.1.1.tar.bz2"
-    sha256 "793af06a5e45f1c53245c227a7af17a19a6cf18f04d366866e7ac62c5a28d292"
+    url "https://www.apache.org/dyn/closer.lua?path=trafficserver/trafficserver-10.1.2.tar.bz2"
+    mirror "https://archive.apache.org/dist/trafficserver/trafficserver-10.1.2.tar.bz2"
+    sha256 "39d4882a00f9b0c31ce9e435a11812f10948fc06fa3c16126221e6cc937a4a2b"
 
     depends_on "pcre" # PCRE2 issue: https://github.com/apache/trafficserver/issues/8780
   end
