@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/8a/d2/9957f585bd64fe56caadf4ad5a7580ed7e89a784f3455e6528e08cb0d59b/flexget-3.19.8.tar.gz"
-  sha256 "c8b89ecb36bba524298e56566e571ea3602fa49eff566e5828d99faa73d23437"
+  url "https://files.pythonhosted.org/packages/44/cd/1594dde428fd8c663f40b9193b66406f746adde066f0cc8019bce70a6172/flexget-3.19.9.tar.gz"
+  sha256 "5f80990cd9fb9f27fb34bac4105603eedef7d05e90ea2807b13790aba684745d"
   license "MIT"
 
   bottle do
@@ -96,8 +96,8 @@ class Flexget < Formula
   end
 
   resource "flask-compress" do
-    url "https://files.pythonhosted.org/packages/5d/e4/2b54da5cf8ae5d38a495ca20154aa40d6d2ee6dc1756429a82856181aa2c/flask_compress-1.23.tar.gz"
-    sha256 "5580935b422e3f136b9a90909e4b1015ac2b29c9aebe0f8733b790fde461c545"
+    url "https://files.pythonhosted.org/packages/c2/de/2ae0118051b38ab53437328074a696f3ee7d61e15bf7454b78a3088e5bc3/flask_compress-1.24.tar.gz"
+    sha256 "14097cefe59ecb3e466d52a6aeb62f34f125a9f7dadf1f33a53e430ce4a50f31"
   end
 
   resource "flask-cors" do
@@ -215,8 +215,8 @@ class Flexget < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/ea/5d/38b681d3fce7a266dd9ab73c66959406d565b3e85f21d5e66e1181d93721/more_itertools-10.8.0.tar.gz"
-    sha256 "f638ddf8a1a0d134181275fb5d58b086ead7c6a72429ad725c67503f13ba30bd"
+    url "https://files.pythonhosted.org/packages/24/24/e0acc4bf54cba50c1d432c70a72a3df96db4a321b2c4c68432a60759044f/more_itertools-11.0.1.tar.gz"
+    sha256 "fefaf25b7ab08f0b45fa9f1892cae93b9fc0089ef034d39213bce15f1cc9e199"
   end
 
   resource "packaging" do
