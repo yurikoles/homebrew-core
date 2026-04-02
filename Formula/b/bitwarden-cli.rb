@@ -12,7 +12,7 @@ class BitwardenCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6a7a476352ef77de2af3c4ddc171ab8781ece15f90fa34dfb99fbd0b348ac1ee"
+    sha256 cellar: :any_skip_relocation, all: "73ba71f0d4ba1fb5b2e3f37e7f7b0ab27875049cad6ea34c44b52c8e6244e28d"
   end
 
   depends_on "node"
