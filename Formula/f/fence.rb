@@ -1,8 +1,8 @@
 class Fence < Formula
   desc "Lightweight sandbox for commands with network and filesystem restrictions"
   homepage "https://github.com/Use-Tusk/fence"
-  url "https://github.com/Use-Tusk/fence/archive/refs/tags/v0.1.40.tar.gz"
-  sha256 "81e9bfcaf23750c6fd67e8abddad56559309d851d02637e0233bdf546af71bbe"
+  url "https://github.com/Use-Tusk/fence/archive/refs/tags/v0.1.41.tar.gz"
+  sha256 "a949d3d11eef02a030b82ad07d14ed62f02ee1717be2ef6317e729c90942c867"
   license "Apache-2.0"
   head "https://github.com/Use-Tusk/fence.git", branch: "main"
 
