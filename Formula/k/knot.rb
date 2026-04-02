@@ -1,8 +1,8 @@
 class Knot < Formula
   desc "High-performance authoritative-only DNS server"
   homepage "https://www.knot-dns.cz/"
-  url "https://knot-dns.nic.cz/release/knot-3.5.3.tar.xz"
-  sha256 "e003ad1eef229c4e65a6cac876ee773e25a06177ecdc83795a26617a6eebe471"
+  url "https://knot-dns.nic.cz/release/knot-3.5.4.tar.xz"
+  sha256 "4a0bc892dfaa5a150ff2855f0a88f2267124bc271818eae9a2b1f6da487c34e4"
   license all_of: ["GPL-3.0-or-later", "0BSD", "BSD-3-Clause", "LGPL-2.0-or-later", "MIT"]
 
   livecheck do
