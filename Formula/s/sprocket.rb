@@ -1,10 +1,8 @@
 class Sprocket < Formula
   desc "Bioinformatics workflow engine built on the Workflow Description Language (WDL)"
   homepage "https://sprocket.bio"
-  # pull from git tag to get submodules
-  url "https://github.com/stjude-rust-labs/sprocket.git",
-      tag:      "v0.22.0",
-      revision: "d022d74d39cb8c3e537d99e0dd4980c75a2e6a99"
+  url "https://github.com/stjude-rust-labs/sprocket/archive/refs/tags/v0.23.0.tar.gz"
+  sha256 "2600daf8e240028044e66312c0950efd7bab49b929b3e437643bd2c8d6240de2"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/stjude-rust-labs/sprocket.git", branch: "main"
 
@@ -39,6 +37,7 @@ class Sprocket < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/sprocket --version")
+
     (testpath/"hello.wdl").write <<~WDL
       version 1.2
 
@@ -62,13 +61,12 @@ class Sprocket < Formula
       }
     WDL
 
-    expected = <<~JSON.strip
+    output = shell_output("#{bin}/sprocket inputs --target say_hello #{testpath}/hello.wdl")
+    assert_match <<~JSON.strip, output
       {
         "say_hello.greeting": "String <REQUIRED>",
         "say_hello.name": "String <REQUIRED>"
       }
     JSON
-
-    assert_match expected, shell_output("#{bin}/sprocket inputs --name say_hello #{testpath}/hello.wdl")
   end
 end
