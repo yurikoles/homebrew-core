@@ -6,6 +6,10 @@ class YelpXsl < Formula
   license all_of: ["GPL-2.0-or-later", "LGPL-2.1-or-later", "MIT", "BSD-3-Clause"]
   head "https://gitlab.gnome.org/GNOME/yelp-xsl.git", branch: "master"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e62b397f4153ee39a9ca982273b5d5e83e78d9271445be9883cdc69d1c8a29de"
+  end
+
   depends_on "gettext" => :build
   depends_on "itstool" => :build
   depends_on "meson" => :build
