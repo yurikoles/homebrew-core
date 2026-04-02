@@ -1,8 +1,8 @@
 class Counterfeiter < Formula
   desc "Tool for generating self-contained, type-safe test doubles in go"
   homepage "https://github.com/maxbrunsfeld/counterfeiter"
-  url "https://github.com/maxbrunsfeld/counterfeiter/archive/refs/tags/v6.12.1.tar.gz"
-  sha256 "b01c714fd789e389f9361a7f1f07acccb02614e702bd7af5d5157ddd4519fc48"
+  url "https://github.com/maxbrunsfeld/counterfeiter/archive/refs/tags/v6.12.2.tar.gz"
+  sha256 "094811ab5e8f9e64aa7f7cdf832b3a7c9042ada2f60ba79d7d3cadff6e65565d"
   license "MIT"
   head "https://github.com/maxbrunsfeld/counterfeiter.git", branch: "main"
 
