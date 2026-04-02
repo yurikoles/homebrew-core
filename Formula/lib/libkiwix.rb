@@ -5,6 +5,15 @@ class Libkiwix < Formula
   sha256 "244b69120d132de3079774ee439f9adfb7b556e88b9ef6ce5300f37dfc3737bc"
   license "GPL-3.0-or-later"
 
+  bottle do
+    sha256 cellar: :any, arm64_tahoe:   "132be22c4c38d0a38bb9abd44f55819a2bf224d12b632c375147d0b5f5ddf5eb"
+    sha256 cellar: :any, arm64_sequoia: "9dd1e2695e741fe45f53cc39a182aec9eb6c7dd560e1617d6271c3d81e73cb37"
+    sha256 cellar: :any, arm64_sonoma:  "6e4e61c755de76c0f9fd34f30a3b5a1e5d3695f84229bdbac673bdcf0f0a6188"
+    sha256 cellar: :any, sonoma:        "0327b82809f8cfdd81c877c47d232e8a123055650f73bf8f5cc00f5b02cfb4e9"
+    sha256               arm64_linux:   "6d3ac88f2d9da9fb5e0efa7a7eee3898b2e1dcc6ff7ecd4e55adae1667eb8744"
+    sha256               x86_64_linux:  "b286d91977b93151dbc7277b31b803b7577d8e19f5d76a05ef25e8bf61a3dfb5"
+  end
+
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
