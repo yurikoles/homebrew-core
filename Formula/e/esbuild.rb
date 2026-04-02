@@ -7,12 +7,12 @@ class Esbuild < Formula
   head "https://github.com/evanw/esbuild.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a9b4e5c601768b0bb5d3c528d2bdd4e678db2bce5eec65beaec2e9b4f4559b16"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a9b4e5c601768b0bb5d3c528d2bdd4e678db2bce5eec65beaec2e9b4f4559b16"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a9b4e5c601768b0bb5d3c528d2bdd4e678db2bce5eec65beaec2e9b4f4559b16"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8538361af21bd175720fdb8f5926dd391c8928bff346d9d5fcd5883479f76a19"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d0b8820be229d3b1e3a611039896c6176616824ae4972d9e61c1c9b09386a90f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3404dc0f06311c10a94c5e9f249388d6f7cc2133e6966248ac8bea69097f4506"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "66150b8a614f270391771e2293bedaa98c6481d7187aa8374d5be2cec3e666f5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "66150b8a614f270391771e2293bedaa98c6481d7187aa8374d5be2cec3e666f5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "66150b8a614f270391771e2293bedaa98c6481d7187aa8374d5be2cec3e666f5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2b3267efa6cd1d8f6a2d6960448ef92ee3ebc635d39a6d09c51ffd30c4e7d3d2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b95f8ec4289698d32f2229e01aa3f3c7758b080b6082ff881d2aade5ad4d9180"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b85ea56f2c333004806458e59947890f8efa27d99ade93c9de58da2959ecd6a"
   end
 
   depends_on "go" => :build
