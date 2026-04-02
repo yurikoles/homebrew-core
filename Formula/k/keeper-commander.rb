@@ -3,10 +3,9 @@ class KeeperCommander < Formula
 
   desc "Command-line and SDK interface to Keeper Password Manager"
   homepage "https://docs.keeper.io/en/privileged-access-manager/commander-cli/overview"
-  url "https://files.pythonhosted.org/packages/32/da/0de4649a73c0e59ed4a61f723ca51528e204a8803c003d0706a09dd17a75/keepercommander-17.2.10.tar.gz"
-  sha256 "7770ce74cf93a0260e094c0ef66a055b3c9d7e19fa3564cb3acd2790502bdf33"
+  url "https://files.pythonhosted.org/packages/f4/fe/8b272a0dfca0b1049ff49335979fd22f3a5dced759e9dfb62ae059768c49/keepercommander-17.2.11.tar.gz"
+  sha256 "984d5f9996735163be8b66a734a7496ea9d03b0097dd30c75bbf6caba9a2dc21"
   license "MIT"
-  revision 3
   head "https://github.com/Keeper-Security/Commander.git", branch: "master"
 
   no_autobump! because: "macOS resources cannot be updated on linux CI"
@@ -223,8 +222,8 @@ class KeeperCommander < Formula
   end
 
   resource "pyngrok" do
-    url "https://files.pythonhosted.org/packages/9e/8b/a254d57f6d5ec8797daa57510abd8e82eb7f7992fc1c455677f28e805893/pyngrok-7.5.1.tar.gz"
-    sha256 "934ec8a899ace8ec61c39120a27a8212aeb40293cad2f4ffc8a3d1a4bb6a8d6c"
+    url "https://files.pythonhosted.org/packages/ec/7a/6f9b08044be356d228533f6a8454377e2d31dd1309adf13209906019762d/pyngrok-8.0.0.tar.gz"
+    sha256 "6e7aaf90b43086ad25508a1122423608003f712d9988319ddf7be50431028101"
   end
 
   resource "pyobjc-core" do
