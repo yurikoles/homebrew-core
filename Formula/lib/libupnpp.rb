@@ -7,12 +7,12 @@ class Libupnpp < Formula
   head "https://framagit.org/medoc92/libupnpp.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe:   "fe7ac3cf9bb208dd79f7b71de0e47c0c536604b6878280d281ebc0d0ab92fc5d"
-    sha256 cellar: :any, arm64_sequoia: "3af04395d956b3c754c5f95c0c7ae63e2177cc9ff9113b16eaff4b2536613046"
-    sha256 cellar: :any, arm64_sonoma:  "7d4684c90b54ef7c2df0c49c030adb726580aa8d833e92e11a9e8c2e9c5fda80"
-    sha256 cellar: :any, sonoma:        "077d55290db1c66da57b9bb6e46ae09eeb244a718927844609d0265b49257c3d"
-    sha256               arm64_linux:   "3ea1d55a675da80f8b4fe995981c23e99c0dc4ed0f011b24558096c58c6e3c90"
-    sha256               x86_64_linux:  "27ff2c93ece22ce524c998da3bfd86666979944821fee422b8973ddaa67b2482"
+    sha256 cellar: :any, arm64_tahoe:   "85c47c5801796e4737a029ab321194f24dd0aa0bbf4bf593eba870a3f4649b8f"
+    sha256 cellar: :any, arm64_sequoia: "fabd8de54a9455badfff09e2a871fd6205afc1077846c927667e0286f44acad8"
+    sha256 cellar: :any, arm64_sonoma:  "b6738d36760f826f6befd01d9233ff64e34c96b65c7225067892ec54ecf50555"
+    sha256 cellar: :any, sonoma:        "e58803076ea50f5046010dc8c4041f7cee6234f12a670f3354556acec8f57b32"
+    sha256               arm64_linux:   "cf15fd96a718f69dc4fb2af3370f87e20b851d613ebef1be13d8370c8adf6f4d"
+    sha256               x86_64_linux:  "1666386133c38c3b3bcf68b4af57ff5c57b43f5683d3f7767cc4d7aae7ddd05f"
   end
 
   depends_on "meson" => :build
