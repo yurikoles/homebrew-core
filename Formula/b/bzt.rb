@@ -6,7 +6,7 @@ class Bzt < Formula
   url "https://files.pythonhosted.org/packages/e1/5d/4372f76a9a483247538138d84ad21e303f88c35c630b9745c1c69bec05f1/bzt-1.16.49.tar.gz"
   sha256 "827408e83f8ae07a42982bf7541fd5b1f8f9162a09cfc342ba8f0d4bfd8f65e2"
   license "Apache-2.0"
-  revision 1
+  revision 2
   head "https://github.com/Blazemeter/taurus.git", branch: "master"
 
   bottle do
@@ -28,7 +28,8 @@ class Bzt < Formula
   uses_from_macos "libxml2", since: :ventura
   uses_from_macos "libxslt"
 
-  pypi_packages exclude_packages: ["certifi", "numpy"]
+  pypi_packages exclude_packages: ["certifi", "numpy"],
+                extra_packages:   "urwid<4" # issue ref: https://github.com/Blazemeter/taurus/issues/1972
 
   resource "aiodogstatsd" do
     url "https://files.pythonhosted.org/packages/8d/ea/d2d79661f213f09df0e9f56d25dbae41501880822e5c85a0a6d6857baa55/aiodogstatsd-0.16.0.post0.tar.gz"
@@ -41,8 +42,8 @@ class Bzt < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/50/42/32cf8e7704ceb4481406eb87161349abb46a57fee3f008ba9cb610968646/aiohttp-3.13.3.tar.gz"
-    sha256 "a949eee43d3782f2daae4f4a2819b2cb9b0c5d3b7f7a927067cc84dafdbb9f88"
+    url "https://files.pythonhosted.org/packages/77/9a/152096d4808df8e4268befa55fba462f440f14beab85e8ad9bf990516918/aiohttp-3.13.5.tar.gz"
+    sha256 "9d98cc980ecc96be6eb4c1994ce35d28d8b1f5e5208a23b421187d1209dbb7d1"
   end
 
   resource "aiosignal" do
@@ -211,8 +212,8 @@ class Bzt < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
-    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
+    url "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz"
+    sha256 "18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517"
   end
 
   resource "setuptools" do
