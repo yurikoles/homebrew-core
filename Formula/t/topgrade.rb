@@ -14,12 +14,12 @@ class Topgrade < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7bdf2245a575cc091f91ef09db42321f01c80a8d68ed0b514a3135753e505e2b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "adf5f0ce842c1f7aebd9bca15c9b4a93533a1b957e408667e6fa995fec481e58"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b0a30abb8a3152fb9a0becf5a2f641416b79ac932c113973dfa2d6f904aebd5b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8e7d949dcdbc2b0d25b6ef72254bea0e9e35a112c3c9b5e5a42bf350721b75c1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "524134e8a6dbb31152150fc8897ffe0f438651ad2d7050d91e6383b5b10ceafb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2992fdd104cef2de657ae779a50fe2854defb9b030307f30a5f7ba918a345848"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "249de0ea689c658fc06602c0c8072e61ae3374f96c16bb4ca884196c0ac02174"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f253ea20382ce74b7b5439c36fedfed0c4de74ce5eac10acdb29e3938a87564e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "842b1f9122892dbde4191a010e275c15b34e506ba5c43746243ccd3867da1440"
+    sha256 cellar: :any_skip_relocation, sonoma:        "93f5261e145598ce3ea381073e3b2d09a1a8788f03073d846685eef156a183df"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6179941355158448baabd7b9cefeb503a30e68e88654276d3b653a9911f6c6a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2cb7a31caf7c3fd4262a46b5e8d459d4b614bc2033fdbb841a2c2c85422c5b96"
   end
 
   depends_on "rust" => :build
