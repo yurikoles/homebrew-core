@@ -30,14 +30,10 @@ class FalcosecurityLibs < Formula
   depends_on "jsoncpp"
   depends_on "re2"
   depends_on "tbb"
-  depends_on "uthash" # headers needed for libscap/uthash_ext.h
+  depends_on "uthash" => :no_linkage # headers needed for libscap/uthash_ext.h
 
   on_linux do
-    depends_on "abseil"
-    depends_on "curl"
     depends_on "elfutils"
-    depends_on "grpc"
-    depends_on "protobuf"
     depends_on "zlib-ng-compat"
   end
 
