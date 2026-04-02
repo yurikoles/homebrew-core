@@ -1,8 +1,8 @@
 class Spoofdpi < Formula
   desc "Simple and fast anti-censorship tool written in Go"
   homepage "https://spoofdpi.xvzc.dev"
-  url "https://github.com/xvzc/SpoofDPI/releases/download/v1.3.0/spoofdpi-1.3.0.tar.gz"
-  sha256 "3483303ba31311c3245f7b5c767a6b4d8c294a633c15b15d3547a4728d342b1a"
+  url "https://github.com/xvzc/SpoofDPI/releases/download/v1.3.1/spoofdpi-1.3.1.tar.gz"
+  sha256 "124f4848c2b095538618071700780b506930d033e8a32ae9ba9b606ad66dd6b5"
   license "Apache-2.0"
   head "https://github.com/xvzc/SpoofDPI.git", branch: "main"
 
@@ -23,9 +23,7 @@ class Spoofdpi < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "6eb362bea7f9b7f13448dd7cd360aed7a6ea5030edef878e9120f0c674189047"
   end
 
-  # One of dependency `gvisor.dev/gvisor` needs to be updated, but still go v1.26 is not supported well.
-  # Issue ref: https://github.com/xvzc/SpoofDPI/issues/365
-  depends_on "go@1.25" => :build
+  depends_on "go" => :build
 
   def install
     # Disable CGO for Linux builds
