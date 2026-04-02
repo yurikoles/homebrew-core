@@ -1,8 +1,8 @@
 class Periphery < Formula
   desc "Identify unused code in Swift projects"
   homepage "https://github.com/peripheryapp/periphery"
-  url "https://github.com/peripheryapp/periphery/archive/refs/tags/3.6.0.tar.gz"
-  sha256 "c922f700df77a199fabe3f671b424c5f0177c8760cf778e45061e9ac18a4ba48"
+  url "https://github.com/peripheryapp/periphery/archive/refs/tags/3.7.2.tar.gz"
+  sha256 "1825891157144c2d61bedeeb6f4058c1ca071156a485fe07368d14aa98091011"
   license "MIT"
   head "https://github.com/peripheryapp/periphery.git", branch: "master"
 
@@ -19,6 +19,12 @@ class Periphery < Formula
   uses_from_macos "curl"
   uses_from_macos "libxml2"
 
+  on_linux do
+    depends_on "patchelf" => :build
+    depends_on "zlib-ng-compat"
+    depends_on "zstd"
+  end
+
   def install
     args = if OS.mac?
       ["--disable-sandbox"]
@@ -27,17 +33,65 @@ class Periphery < Formula
     end
     system "swift", "build", *args, "--configuration", "release", "--product", "periphery"
     bin.install ".build/release/periphery"
+
+    if OS.mac?
+      toolchain_lib = Pathname(
+        Utils.safe_popen_read("/usr/bin/xcode-select", "-p").strip,
+      )/"Toolchains/XcodeDefault.xctoolchain/usr/lib"
+      indexstore = toolchain_lib/"libIndexStore.dylib"
+      odie "Missing libIndexStore in #{toolchain_lib}" unless indexstore.exist?
+      lib.mkpath
+      cp indexstore, lib/"libIndexStore.dylib"
+
+      # The binary inherits an absolute Xcode toolchain rpath from the build environment.
+      # Replace it with a loader-relative path so the bundled lib is used instead.
+      toolchain_rpaths = []
+      inside_rpath_command = false
+      Utils.safe_popen_read("/usr/bin/otool", "-l", bin/"periphery").each_line do |line|
+        if line.include?("cmd LC_RPATH")
+          inside_rpath_command = true
+          next
+        end
+
+        next unless inside_rpath_command
+        next unless line.lstrip.start_with?("path ")
+
+        path = line.split[1]
+        toolchain_rpaths << path if path == toolchain_lib.to_s || path.start_with?("#{toolchain_lib}/")
+        inside_rpath_command = false
+      end
+      system "/usr/bin/install_name_tool", "-add_rpath", "@loader_path/../lib", bin/"periphery"
+      toolchain_rpaths.uniq.each do |path|
+        system "/usr/bin/install_name_tool", "-delete_rpath", path, bin/"periphery"
+      end
+    else
+      swift_libexec_lib = Formula["swift"].opt_libexec/"lib"
+      indexstore = Dir[swift_libexec_lib/"libIndexStore.so*"].map { |path| Pathname(path) }
+      odie "Missing libIndexStore in #{swift_libexec_lib}" if indexstore.empty?
+      indexstore.each do |path|
+        lib.install path
+      end
+
+      # The binary inherits an absolute Swift toolchain rpath from the build environment.
+      # Replace it with a loader-relative path so the bundled lib is used instead.
+      swift_cellar_libexec_lib = Formula["swift"].libexec/"lib"
+      swift_toolchain_rpaths = [swift_libexec_lib, swift_cellar_libexec_lib]
+      swift_toolchain_rpaths << swift_libexec_lib.realpath if swift_libexec_lib.exist?
+      swift_toolchain_rpaths << swift_cellar_libexec_lib.realpath if swift_cellar_libexec_lib.exist?
+      existing_rpath = Utils.safe_popen_read(
+        Formula["patchelf"].opt_bin/"patchelf", "--print-rpath", bin/"periphery"
+      ).strip
+      rpaths = existing_rpath.split(":").reject do |path|
+        path == lib.to_s || swift_toolchain_rpaths.map(&:to_s).include?(path)
+      end
+      rpaths.unshift("$ORIGIN/../lib")
+      system Formula["patchelf"].opt_bin/"patchelf", "--set-rpath", rpaths.uniq.join(":"), bin/"periphery"
+    end
+
     generate_completions_from_executable(bin/"periphery", "--generate-completion-script")
   end
 
   test do
-    # Periphery dynamically loads 'libIndexStore' at runtime and must find its location depending on the host OS.
-    # On macOS, the library is bundled within Xcode at a consistent location. On Linux, the library path is assumed
-    # to be at 'lib/libIndexStore.so' relative to the path of the 'swift' binary, which is a reasonable assumption for
-    # most installations. However, this is not the case on the Homebrew Linux test container, and the shared libraries
-    # do not appear to be present.
-    ENV.prepend_path "PATH", Formula["swift"].opt_libexec/"bin" if OS.linux?
-
     system "swift", "package", "init", "--name", "test", "--type", "executable"
     system "swift", "build", "--disable-sandbox"
     manifest = shell_output "swift package --disable-sandbox describe --type json"
