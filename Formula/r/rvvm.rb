@@ -5,6 +5,11 @@ class Rvvm < Formula
   sha256 "97e98c95d8785438758b81fb5c695b8eafb564502c6af7f52555b056e3bb7d7a"
   license "GPL-3.0-or-later"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "c2d1713f3ce9b6982d67db642cac2283c31edc0c0fbbb751a3827ba623678595"
     sha256 cellar: :any,                 arm64_sequoia: "665ef767abe8d4a20498730877e1668e824d4aa6cdf3a10c498a89ee255a32c2"
