@@ -6,8 +6,8 @@ class Avahi < Formula
   # CVE-2021-3468, CVE-2021-3502, CVE-2021-36217, CVE-2021-26720, CVE-2023-1981,
   # CVE-2023-38469, CVE-2023-38470, CVE-2023-38471, CVE-2023-38472, CVE-2023-38473,
   # CVE-2025-59529, CVE-2025-68276, CVE-2025-68468, CVE-2025-68471, CVE-2026-24401
-  url "https://github.com/avahi/avahi/archive/refs/tags/v0.9-rc3.tar.gz"
-  sha256 "9f2ff92864c56364d711eb2acec4c0455d1375d8c3266e420611730a2c9ccba5"
+  url "https://github.com/avahi/avahi/archive/refs/tags/v0.9-rc4.tar.gz"
+  sha256 "08fcc57377ed05416ec4b3d8a179da716a7a9376821551a5ae16f8276a1ef0b5"
   license "LGPL-2.1-or-later"
 
   # Remove livecheck after 0.9 release
