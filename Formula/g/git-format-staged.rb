@@ -8,6 +8,10 @@ class GitFormatStaged < Formula
   license "MIT"
   head "https://github.com/hallettj/git-format-staged.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "7b2a54a5139e51ae7bf954ea8714a6cf8b62b72be5c5f3e81d05724582743979"
+  end
+
   uses_from_macos "python"
 
   def install
