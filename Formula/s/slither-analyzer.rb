@@ -6,7 +6,7 @@ class SlitherAnalyzer < Formula
   url "https://files.pythonhosted.org/packages/b0/e8/bf6efe567dffbab0d850bd2395a7a1db68fe1a95bfb507854be00571832c/slither_analyzer-0.11.5.tar.gz"
   sha256 "d90af76b86bdf7ced56fc4c8eea8792cde1ec2c375372d5e70298c2ff998d5e1"
   license "AGPL-3.0-only"
-  revision 2
+  revision 3
   head "https://github.com/crytic/slither.git", branch: "master"
 
   bottle do
@@ -30,8 +30,8 @@ class SlitherAnalyzer < Formula
   end
 
   resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/50/42/32cf8e7704ceb4481406eb87161349abb46a57fee3f008ba9cb610968646/aiohttp-3.13.3.tar.gz"
-    sha256 "a949eee43d3782f2daae4f4a2819b2cb9b0c5d3b7f7a927067cc84dafdbb9f88"
+    url "https://files.pythonhosted.org/packages/77/9a/152096d4808df8e4268befa55fba462f440f14beab85e8ad9bf990516918/aiohttp-3.13.5.tar.gz"
+    sha256 "9d98cc980ecc96be6eb4c1994ce35d28d8b1f5e5208a23b421187d1209dbb7d1"
   end
 
   resource "aiosignal" do
@@ -165,13 +165,13 @@ class SlitherAnalyzer < Formula
   end
 
   resource "regex" do
-    url "https://files.pythonhosted.org/packages/8b/71/41455aa99a5a5ac1eaf311f5d8efd9ce6433c03ac1e0962de163350d0d97/regex-2026.2.28.tar.gz"
-    sha256 "a729e47d418ea11d03469f321aaf67cdee8954cde3ff2cf8403ab87951ad10f2"
+    url "https://files.pythonhosted.org/packages/81/93/5ab3e899c47fa7994e524447135a71cd121685a35c8fe35029005f8b236f/regex-2026.3.32.tar.gz"
+    sha256 "f1574566457161678297a116fa5d1556c5a4159d64c5ff7c760e7c564bf66f16"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
-    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
+    url "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz"
+    sha256 "18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517"
   end
 
   resource "rlp" do
@@ -190,8 +190,8 @@ class SlitherAnalyzer < Formula
   end
 
   resource "types-requests" do
-    url "https://files.pythonhosted.org/packages/02/5f/2e3dbae6e21be6ae026563bad96cbf76602d73aa85ea09f13419ddbdabb4/types_requests-2.33.0.20260327.tar.gz"
-    sha256 "f4f74f0b44f059e3db420ff17bd1966e3587cdd34062fe38a23cda97868f8dd8"
+    url "https://files.pythonhosted.org/packages/c1/7b/a06527d20af1441d813360b8e0ce152a75b7d8e4aab7c7d0a156f405d7ec/types_requests-2.33.0.20260402.tar.gz"
+    sha256 "1bdd3ada9b869741c5c4b887d2c8b4e38284a1449751823b5ebbccba3eefd9da"
   end
 
   resource "urllib3" do
