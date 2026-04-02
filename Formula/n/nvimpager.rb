@@ -1,8 +1,8 @@
 class Nvimpager < Formula
   desc "Use NeoVim as a pager to view manpages, diffs, etc."
   homepage "https://github.com/lucc/nvimpager"
-  url "https://github.com/lucc/nvimpager/archive/refs/tags/v0.13.0.tar.gz"
-  sha256 "8255c39697b213cb34dfd573d90c27db7f61180d4a12f640ef6e7f313e525241"
+  url "https://github.com/lucc/nvimpager/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "001c49098690e4baa6857557b9edc564433825a1947ec368a1e52d63aa1715a3"
   license "BSD-2-Clause"
   head "https://github.com/lucc/nvimpager.git", branch: "main"
 
