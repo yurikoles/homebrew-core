@@ -1,8 +1,8 @@
 class Pay < Formula
   desc "HTTP client that automatically handles 402 Payment Required"
   homepage "https://github.com/solana-foundation/pay"
-  url "https://github.com/solana-foundation/pay/archive/refs/tags/pay-v0.1.0.tar.gz"
-  sha256 "d2287646252fd8f24d628963b2c8b36ede2203d1d107aa2283c8dc98c1c65567"
+  url "https://github.com/solana-foundation/pay/archive/refs/tags/pay-v0.2.0.tar.gz"
+  sha256 "486277c69cebe234a271d98e4c1063e2479154acf0013989b0cdd9b92caaf328"
   license "Apache-2.0"
   head "https://github.com/solana-foundation/pay.git", branch: "main"
 
