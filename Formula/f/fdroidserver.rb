@@ -413,7 +413,6 @@ class Fdroidserver < Formula
     sha256 "a33c95d03e4a5ee24704d332afc55637d5fc9b68c40d04d12b49fe3880344b89"
 
     livecheck do
-      url :stable
       strategy :github_latest
     end
   end
