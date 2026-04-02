@@ -1,8 +1,8 @@
 class Libnpupnp < Formula
   desc "C++ base UPnP library, derived from Portable UPnP, a.k.a libupnp"
   homepage "https://www.lesbonscomptes.com/upmpdcli/npupnp-doc/libnpupnp.html"
-  url "https://www.lesbonscomptes.com/upmpdcli/downloads/libnpupnp-6.2.3.tar.gz"
-  sha256 "563d2a9e4afe603717343dc4667c0b89c6a017008ac6b52262da17a1e4f6bb96"
+  url "https://www.lesbonscomptes.com/upmpdcli/downloads/libnpupnp-6.3.0.tar.gz"
+  sha256 "082d999178291ed45ae24c3fd9e781120d3ec94d61d11121e5bac90c69365cda"
   license "BSD-3-Clause"
   head "https://framagit.org/medoc92/npupnp.git", branch: "master"
 
