@@ -10,6 +10,12 @@ class Avahi < Formula
   sha256 "9f2ff92864c56364d711eb2acec4c0455d1375d8c3266e420611730a2c9ccba5"
   license "LGPL-2.1-or-later"
 
+  # Remove livecheck after 0.9 release
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+|0\.9-rc\d+)$/i)
+  end
+
   bottle do
     sha256 arm64_linux:  "69106be7b282ddec41efb0024110a07704b19069ff804620ef64e9d2d7c84bac"
     sha256 x86_64_linux: "ff3e50d92ac159dcd9640611bd76e8a5ba6a1a01a57de122152d3f79de75d459"
