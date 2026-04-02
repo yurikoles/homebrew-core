@@ -18,10 +18,12 @@ class Mkbrr < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version={version} -X main.buildTime=#{time.iso8601}")
+    system "go", "build", *std_go_args(ldflags: "-s -w -X main.version=#{version} -X main.buildTime=#{time.iso8601}")
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/mkbrr version")
+
     (testpath/"hello.txt").write "Hello, World!"
     system bin/"mkbrr", "create", (testpath/"hello.txt"), "-o", (testpath/"hello.torrent")
 
