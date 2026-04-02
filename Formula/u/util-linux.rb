@@ -1,8 +1,8 @@
 class UtilLinux < Formula
   desc "Collection of Linux utilities"
   homepage "https://github.com/util-linux/util-linux"
-  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.41/util-linux-2.41.3.tar.xz"
-  sha256 "3330d873f0fceb5560b89a7dc14e4f3288bbd880e96903ed9b50ec2b5799e58b"
+  url "https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.tar.xz"
+  sha256 "3452b260bbaa775d6e749ac3bb22111785003fc1f444970025c8da26dfa758e9"
   license all_of: [
     "BSD-3-Clause",
     "BSD-4-Clause-UC",
@@ -12,7 +12,6 @@ class UtilLinux < Formula
     "LGPL-2.1-or-later",
     :public_domain,
   ]
-  revision 1
   compatibility_version 1
 
   # The directory listing where the `stable` archive is found uses major/minor
@@ -36,11 +35,6 @@ class UtilLinux < Formula
 
   keg_only :shadowed_by_macos, "macOS provides the uuid.h header"
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "gettext" => :build
-  depends_on "gtk-doc" => :build
-  depends_on "libtool" => :build
   depends_on "pkgconf" => :build
 
   uses_from_macos "libxcrypt"
@@ -61,18 +55,14 @@ class UtilLinux < Formula
     conflicts_with "rename", because: "both install `rename` binaries"
   end
 
-  # bits: only build when cpu_set_t is available. Needed for `--disable-bits`.
-  # Remove when included in a stable release; when doing so, also remove
-  # `autoconf`, `automake`, `gettext`, `gtk-doc`, and `libtool` build deps and
-  # the `autoreconf` call in the `install` method.
+  # Fix macOS builds
+  # https://github.com/util-linux/util-linux/pull/4173
   patch do
-    url "https://github.com/util-linux/util-linux/commit/45f943a4b36f59814cf5a735e4975f2252afac26.patch?full_index=1"
-    sha256 "b372a7578ff397787f37e1aa1c03c8299c9b3e3f7ab8620c4af68c93ab2103b5"
+    url "https://github.com/util-linux/util-linux/commit/d22edc2f100eb8dd83d3515758565cb73b0d2eed.patch?full_index=1"
+    sha256 "2fb01154faa3fd8b0fce27eb88049ed9c8f839e706e412399c19c087f7f3b5e1"
   end
 
   def install
-    system "autoreconf", "--force", "--install", "--verbose"
-
     args = %W[--disable-silent-rules --disable-asciidoc --with-bashcompletiondir=#{bash_completion}]
 
     if OS.mac?
