@@ -1,8 +1,8 @@
 class Futhark < Formula
   desc "Data-parallel functional programming language"
   homepage "https://futhark-lang.org/"
-  url "https://github.com/diku-dk/futhark/archive/refs/tags/v0.25.36.tar.gz"
-  sha256 "f2d07e4551db4f8c688a543f8f0609a575121f36f4034a44d6b907c39a3b5607"
+  url "https://github.com/diku-dk/futhark/archive/refs/tags/v0.25.37.tar.gz"
+  sha256 "2b793dcfa6273d0a42449ad3777ebcd54abfe2b756afcc322d95849b8d6b57c9"
   license "ISC"
   head "https://github.com/diku-dk/futhark.git", branch: "master"
 
