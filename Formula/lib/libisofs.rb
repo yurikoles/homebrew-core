@@ -4,9 +4,8 @@ class Libisofs < Formula
   license "GPL-2.0-or-later"
 
   stable do
-    url "https://files.libburnia-project.org/releases/libisofs-1.5.6.pl01.tar.gz"
-    version "1.5.6.pl01"
-    sha256 "ac1fd338d641744ca1fb1567917188b79bc8c2506832dd56885fec98656b9f25"
+    url "https://files.libburnia-project.org/releases/libisofs-1.5.8.tar.gz"
+    sha256 "910532653e6a56b5e4c2ef8717500d913debd5fd29f616fed15134b7522059a6"
 
     # Fix -flat_namespace being used on Big Sur and later.
     patch do
