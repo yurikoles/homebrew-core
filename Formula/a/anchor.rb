@@ -1,8 +1,8 @@
 class Anchor < Formula
   desc "Solana Program Framework"
   homepage "https://anchor-lang.com"
-  url "https://github.com/solana-foundation/anchor/archive/refs/tags/v0.32.1.tar.gz"
-  sha256 "e45fec416a1a13dd20112f3f52855b91180448b3298808d7e42c6cd57ad4ae48"
+  url "https://github.com/solana-foundation/anchor/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "1cce1e7765543ca2503842230aa54eef2fead7b2f533cdd540a79a99b560f59b"
   license "Apache-2.0"
 
   bottle do
@@ -26,6 +26,9 @@ class Anchor < Formula
   end
 
   def install
+    # FIXME: "Unknown attribute kind (102) (Producer: 'LLVM21.1.8' Reader: 'LLVM APPLE_1_1600.0.26.6_0')"
+    inreplace "Cargo.toml", "lto = true", "lto = false"
+
     ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
     ENV["OPENSSL_NO_VENDOR"] = "1"
 
