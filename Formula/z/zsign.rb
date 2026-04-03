@@ -1,8 +1,8 @@
 class Zsign < Formula
   desc "Cross-platform codesigning tool for iOS apps"
   homepage "https://github.com/zhlynn/zsign"
-  url "https://github.com/zhlynn/zsign/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "5268e946c654bdc3ece16905ea93f2b961c1235adc07127553a8b335d17ee393"
+  url "https://github.com/zhlynn/zsign/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "3ea97b5ff96b5e115757dfca969378c38682507282d30e2a4583b2a2264e65e7"
   license "MIT"
   head "https://github.com/zhlynn/zsign.git", branch: "master"
 
@@ -16,20 +16,18 @@ class Zsign < Formula
   end
 
   depends_on "pkgconf" => :build
-  depends_on "minizip"
+  depends_on "minizip-ng"
   depends_on "openssl@3"
+
+  # Use minizip-ng in Linux Makefile, upstream PR: https://github.com/zhlynn/zsign/pull/386
+  patch do
+    url "https://github.com/zhlynn/zsign/commit/d4c32a6c877a62cf4b0b39dcefcd37e898f940b8.patch?full_index=1"
+    sha256 "0d7e25f328016f2b5d21f67db07d300a0ff928a1d9aba213e8b9336b10013905"
+  end
 
   def install
     build_dir = OS.mac? ? "build/macos" : "build/linux"
-    # Makefile hardcodes CXX=g++
-    args = ["-C", build_dir, "CXX=#{ENV.cxx}"]
-
-    if OS.linux?
-      # zsign messes up the zip include path on Linux
-      args << "CXXFLAGS=-std=c++11 -O3 -Wno-unused-result -I#{Formula["minizip"].opt_include}/minizip"
-    end
-
-    system "make", *args
+    system "make", "-C", build_dir, "CXX=#{ENV.cxx}"
     bin.install "bin/zsign"
   end
 
