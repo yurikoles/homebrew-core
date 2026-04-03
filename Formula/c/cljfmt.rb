@@ -14,16 +14,21 @@ class Cljfmt < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "37dc11b9b454cc8d8293fc74194dd07c89066b6913237eb8d6bf1fac006448f1"
   end
 
+  depends_on "graalvm" => :build
   depends_on "leiningen" => :build
-  depends_on "openjdk"
+
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   def install
-    cd "cljfmt" do
-      system "lein", "uberjar"
-      libexec.install "target/cljfmt-#{version}-standalone.jar" => "cljfmt.jar"
-    end
+    native_image_env = ENV.keys.grep(/^HOMEBREW_/).map { |key| "-E#{key}" }
+    ENV.prepend "NATIVE_IMAGE_OPTIONS", native_image_env.join(" ")
 
-    bin.write_jar_script libexec/"cljfmt.jar", "cljfmt"
+    cd "cljfmt" do
+      system "lein", "native-image"
+      bin.install "target/cljfmt"
+    end
   end
 
   test do
