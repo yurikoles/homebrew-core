@@ -7,14 +7,12 @@ class ParallelDiskUsage < Formula
   head "https://github.com/KSXGitHub/parallel-disk-usage.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "087a9b44fb17f904a0e64a630d18731f378938a06c1d4e1db97c313ba2df0208"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ff8961cca5f1555d8e00546b937331b5195d1cdddd15146067534f444a630e11"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "52f6a3b9fb2cd8271f2bb0d62b08a0f997172591b2776147d6af15ee1bea2086"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "34c0d90115cfb290f25cdecc1daab6cb57295d54891383ab404cac4fc61a9ccb"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9fa92ee454fc377cdd4e9b62c575a7662476f65c7cb931ef228b3881510e4950"
-    sha256 cellar: :any_skip_relocation, ventura:       "9171d44725889e7c12744474a8a751fca879ca1f110ab00482007f6e983694e7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "678ffd25de3bec4c4ecc1a0b6cbed1abaf106f45e4c51f0bdb1f5a13ba01c7c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f7813849ca8a1207d5cea8be2fa5d8ec038ccab966a81efc39ec19c4a24cebdd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "96e1af400bf5ee16bc817f7255bccf6fef48c969a0b03dd08c55355c54ae6c49"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "707a8f9583cf1fe2f56580483274f38eaeea6ffaa4e6bf44ac192b68b1ee4a54"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "af0e37f6caf00e453d4d5cbce806445c34d87538c807c2683395d82213a2821e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "fc179d070637fa07b93da82b7cf9de78ac1ad60f635f0d72c7571b2b2d2ef9c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d33f3c0463798613bbc228fb439993641d050c9ef3d80ae7f5abed9d588a7609"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "86f8f233b0fbc50aa4e8bdd33aac0bc2fdbe3ae4284a3cf1f5c019ef1513ec66"
   end
 
   depends_on "rust" => :build
