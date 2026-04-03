@@ -5,6 +5,7 @@ class DockerEngine < Formula
       tag:      "docker-v29.3.1",
       revision: "f78c987ad3710cacffe47fce696975ecb337148d"
   license "Apache-2.0"
+  revision 1
   head "https://github.com/moby/moby.git", branch: "master"
 
   livecheck do
@@ -24,6 +25,7 @@ class DockerEngine < Formula
   depends_on :linux
   depends_on "nftables"
   depends_on "runc"
+  depends_on "tini"
 
   def install
     ldflags = %W[
