@@ -3,8 +3,8 @@ class KimiCli < Formula
 
   desc "CLI agent for MoonshotAI Kimi platform"
   homepage "https://github.com/MoonshotAI/kimi-cli"
-  url "https://files.pythonhosted.org/packages/3e/34/08ef4a0d173c66837b5b1be9416033553561ebee3c7a59d4af89ae745b97/kimi_cli-1.29.0.tar.gz"
-  sha256 "cbf958a8ac6e23abdafb407a111c6ca929542286d184061284396634b9de43b7"
+  url "https://files.pythonhosted.org/packages/4f/5c/3a94ecc162ee38574cb4642f7d6c0320f6c4009f85d8059276b9d98919d5/kimi_cli-1.30.0.tar.gz"
+  sha256 "8171f83c324674dda18c759b958bcc3f10807f8a716b30cb975ab705cd3972f5"
   license "Apache-2.0"
   head "https://github.com/MoonshotAI/kimi-cli.git", branch: "main"
 
@@ -123,8 +123,8 @@ class KimiCli < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
-    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
+    url "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz"
+    sha256 "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
   end
 
   resource "click" do
@@ -313,8 +313,8 @@ class KimiCli < Formula
   end
 
   resource "kosong" do
-    url "https://files.pythonhosted.org/packages/05/04/450ff8d8147592041e40dbf493342e262097cbbcbbdd5bee9ba4a5127698/kosong-0.47.0.tar.gz"
-    sha256 "f9df6ee1de92835011059d837dfba12fb7467a8e9f53c5a3b1ef7c0187a3566d"
+    url "https://files.pythonhosted.org/packages/f0/9d/84d2010ca20f1f45d4a878e34bc39f929b766daa4e22acbf0100e970296c/kosong-0.48.0.tar.gz"
+    sha256 "6f66042081e97190037de6ea26aba0f80b5dfcf3c7f239bf896f44106e25bcd1"
   end
 
   resource "lazy-object-proxy" do
@@ -368,8 +368,8 @@ class KimiCli < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/ea/5d/38b681d3fce7a266dd9ab73c66959406d565b3e85f21d5e66e1181d93721/more_itertools-10.8.0.tar.gz"
-    sha256 "f638ddf8a1a0d134181275fb5d58b086ead7c6a72429ad725c67503f13ba30bd"
+    url "https://files.pythonhosted.org/packages/24/24/e0acc4bf54cba50c1d432c70a72a3df96db4a321b2c4c68432a60759044f/more_itertools-11.0.1.tar.gz"
+    sha256 "fefaf25b7ab08f0b45fa9f1892cae93b9fc0089ef034d39213bce15f1cc9e199"
   end
 
   resource "multidict" do
@@ -458,8 +458,8 @@ class KimiCli < Formula
   end
 
   resource "pykaos" do
-    url "https://files.pythonhosted.org/packages/96/45/a7821b29ac4189988934f2c7b8b9a1b7310085cae5944b419ee8ddfb88f7/pykaos-0.8.0.tar.gz"
-    sha256 "2b648daf2a3b0ef6b205dfbe2eb0f34b128a87d62d93097da081fb605d9dfd83"
+    url "https://files.pythonhosted.org/packages/ea/53/5fac4795ceaf01027726bcfc25308e67cefc994638236683e0c1327107c9/pykaos-0.9.0.tar.gz"
+    sha256 "9a81a2e0548ec6f8051fe3d1021fdb70360c606dc08dfacf4fee65e8ae39d035"
   end
 
   resource "pyobjc-core" do
@@ -604,8 +604,8 @@ class KimiCli < Formula
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/4f/07/766ad19cf2b15cae2d79e0db46a1b783b62316e9ff3e058e7424b2a4398b/textual-8.2.1.tar.gz"
-    sha256 "4176890e9cd5c95dcdd206541b2956b0808e74c8c36381c88db53dcb45237451"
+    url "https://files.pythonhosted.org/packages/69/b0/a9aedf13af1bfb1bf01cbc645ea5d5a4151b5d77ac1748b85c4f0d777d7d/textual-8.2.2.tar.gz"
+    sha256 "94e85267650cf679ac16ade5ac929055e836dc00798a0e6e3925926a5beee303"
   end
 
   resource "textual-serve" do
@@ -774,8 +774,8 @@ class KimiCli < Formula
   end
 
   resource "werkzeug" do
-    url "https://files.pythonhosted.org/packages/b5/43/76ded108b296a49f52de6bac5192ca1c4be84e886f9b5c9ba8427d9694fd/werkzeug-3.1.7.tar.gz"
-    sha256 "fb8c01fe6ab13b9b7cdb46892b99b1d66754e1d7ab8e542e865ec13f526b5351"
+    url "https://files.pythonhosted.org/packages/dd/b2/381be8cfdee792dd117872481b6e378f85c957dd7c5bca38897b08f765fd/werkzeug-3.1.8.tar.gz"
+    sha256 "9bad61a4268dac112f1c5cd4630a56ede601b6ed420300677a869083d70a4c44"
   end
 
   resource "xdg-base-dirs" do
