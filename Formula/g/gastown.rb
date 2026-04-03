@@ -1,8 +1,8 @@
 class Gastown < Formula
   desc "Multi-agent workspace manager"
   homepage "https://github.com/steveyegge/gastown"
-  url "https://github.com/steveyegge/gastown/archive/refs/tags/v0.13.0.tar.gz"
-  sha256 "9309da26f05cdea79218a0842356905132404d0c67503d578b89f304e05db617"
+  url "https://github.com/steveyegge/gastown/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "6fccaa887e93a84bfe7daba6cac276ff1e2c0f786a8d12254160e15c7fe8bd4b"
   license "MIT"
   head "https://github.com/steveyegge/gastown.git", branch: "main"
 
