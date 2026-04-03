@@ -1,9 +1,9 @@
 class Mac < Formula
   desc "Monkey's Audio lossless codec"
   homepage "https://www.monkeysaudio.com"
-  url "https://monkeysaudio.com/files/MAC_1260_SDK.zip"
-  version "12.60"
-  sha256 "0bdbc0abbb2663b7911eb04a566351335ed76dabeae8156af40d264ebbb2e0d6"
+  url "https://monkeysaudio.com/files/MAC_1262_SDK.zip"
+  version "12.62"
+  sha256 "9e15fb5360651ed7f8ea30de538f6ace9a01dd773ebbe887a4ae9fe4b7545f6d"
   license "BSD-3-Clause"
 
   livecheck do
