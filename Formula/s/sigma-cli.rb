@@ -3,10 +3,9 @@ class SigmaCli < Formula
 
   desc "CLI based on pySigma"
   homepage "https://github.com/SigmaHQ/sigma-cli"
-  url "https://files.pythonhosted.org/packages/68/0b/15ac402f81a252baf60040ede4704983e37301011c62d487741b6a7cb3cd/sigma_cli-2.0.1.tar.gz"
-  sha256 "b507993dd6418bd2a0b5a9efac27101c75d0f90ccae59c604e771a5d55bc5375"
+  url "https://files.pythonhosted.org/packages/29/5c/0e3d1b34f85519f8afc5ffdb63f2cc13b7f7ca128d5020ebb2783cc75e4c/sigma_cli-2.0.2.tar.gz"
+  sha256 "07af8acfaff61b557155d11b73c067909f5f75fdd2a02c5f953fed5b718d13e3"
   license "LGPL-2.1-or-later"
-  revision 1
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
   bottle do
@@ -29,8 +28,8 @@ class SigmaCli < Formula
   pypi_packages exclude_packages: "certifi"
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
-    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
+    url "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz"
+    sha256 "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
   end
 
   resource "click" do
@@ -94,8 +93,8 @@ class SigmaCli < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
-    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
+    url "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz"
+    sha256 "18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517"
   end
 
   resource "types-pyyaml" do
