@@ -1,8 +1,8 @@
 class Openfga < Formula
   desc "High performance and flexible authorization/permission engine"
   homepage "https://openfga.dev/"
-  url "https://github.com/openfga/openfga/archive/refs/tags/v1.13.1.tar.gz"
-  sha256 "1cc28117a5d032dcd3e8ec629ee25e6dc1e293e0192626b10d550c30dc42e768"
+  url "https://github.com/openfga/openfga/archive/refs/tags/v1.14.0.tar.gz"
+  sha256 "10dcc5c9dee4a61f53157390326727d5f63580ab096369b146dd54bbaa8abeb5"
   license "Apache-2.0"
   head "https://github.com/openfga/openfga.git", branch: "main"
 
@@ -33,7 +33,7 @@ class Openfga < Formula
     assert_match version.to_s, shell_output("#{bin}/openfga version 2>&1")
 
     port = free_port
-    pid = spawn bin/"openfga", "run", "--playground-port", port.to_s
+    pid = spawn bin/"openfga", "run", "--playground-enabled", "--playground-port", port.to_s
     sleep 3
     output = shell_output("curl -s http://localhost:#{port}/playground")
     assert_match "title=\"Embedded Playground\"", output
