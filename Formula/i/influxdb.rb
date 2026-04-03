@@ -2,8 +2,8 @@ class Influxdb < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
   url "https://github.com/influxdata/influxdb.git",
-      tag:      "v3.8.3",
-      revision: "73f689bb31d5ca13c4f950fefb40d5f6e6163019"
+      tag:      "v3.9.0",
+      revision: "0f1816e0690bbf547ebfefd13d939cfa1de71cb2"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/influxdata/influxdb.git", branch: "main"
 
@@ -30,19 +30,13 @@ class Influxdb < Formula
 
   uses_from_macos "bzip2"
 
-  on_linux do
-    on_intel do
-      depends_on "lld" => :build
-    end
-  end
-
   def install
     python3 = which("python3.14")
     ENV["PYO3_PYTHON"] = python3
     ENV["PYTHON_SYS_EXECUTABLE"] = python3
 
-    # Avoid upstream's default of Haswell and instead let superenv set this
-    inreplace ".cargo/config.toml", '"-C", "target-cpu=haswell",', ""
+    # Remove local development overrides which isn't used in upstream CI
+    rm ".cargo/config.toml"
 
     # Work around SIGKILL on arm64 linux runner from fat LTO
     github_arm64_linux = OS.linux? && Hardware::CPU.arm? &&
