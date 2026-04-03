@@ -1,10 +1,9 @@
 class Xorriso < Formula
   desc "ISO9660+RR manipulation tool"
   homepage "https://www.gnu.org/software/xorriso/"
-  url "https://ftpmirror.gnu.org/gnu/xorriso/xorriso-1.5.6.pl02.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/xorriso/xorriso-1.5.6.pl02.tar.gz"
-  version "1.5.6.pl02"
-  sha256 "786f9f5df9865cc5b0c1fecee3d2c0f5e04cab8c9a859bd1c9c7ccd4964fdae1"
+  url "https://ftpmirror.gnu.org/gnu/xorriso/xorriso-1.5.8.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/xorriso/xorriso-1.5.8.tar.gz"
+  sha256 "319e3675cd7d986bf71d36596ca7b03dac172a758462bedcbbd298a7f86f36cc"
   license "GPL-2.0-or-later"
 
   livecheck do
