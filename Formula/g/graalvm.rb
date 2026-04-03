@@ -10,6 +10,14 @@ class Graalvm < Formula
     strategy :github_latest
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_tahoe:   "24913577cbc92f27f5594bfc6f816e3e3843179d5b330240fc17ea1561e9a094"
+    sha256 cellar: :any, arm64_sequoia: "35ba49eb4a599e0765571de5f64f5beba3e550829567b41291c978b979bc2fdd"
+    sha256 cellar: :any, arm64_sonoma:  "27e59e86ce7b7941634411792a262ec7873d3086efaeccb49c74ad8954ff9483"
+    sha256               arm64_linux:   "2e8c285bb3d885127838b23c0cc88011e5c90a9ae0b8249dc8f3d946311f4b55"
+    sha256               x86_64_linux:  "28fad873c9b0099708c9a92ecbd0fee6a9ab6606bef36d0c5519e0dda00cbf2d"
+  end
+
   keg_only "installs a JDK which shadows openjdk"
 
   depends_on "autoconf" => :build
