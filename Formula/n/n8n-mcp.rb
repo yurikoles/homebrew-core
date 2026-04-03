@@ -6,7 +6,7 @@ class N8nMcp < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ead17c61ea4259b24c57c37210b13eefb53e0a809d18b9abd9eae51cd311b054"
+    sha256 cellar: :any_skip_relocation, all: "6ba557c837809bf60927dab049fd84952d5a12aa5ac8767a82e70a0c0eea81ab"
   end
 
   depends_on "node"
