@@ -1,8 +1,8 @@
 class Victorialogs < Formula
   desc "Open source user-friendly database for logs from VictoriaMetrics"
   homepage "https://docs.victoriametrics.com/victorialogs/"
-  url "https://github.com/VictoriaMetrics/VictoriaLogs/archive/refs/tags/v1.48.0.tar.gz"
-  sha256 "9b8c3250a1dd4c336753392baa9884301b741b3c37cab536cc4639b6117ad207"
+  url "https://github.com/VictoriaMetrics/VictoriaLogs/archive/refs/tags/v1.49.0.tar.gz"
+  sha256 "750fd3a08ce229b20977229c83ac47af28fac94d577ff94f0df6cf61c02a0617"
   license "Apache-2.0"
 
   # The Git tags are interspersed with higher versions like 1.118.0, so we check
@@ -47,7 +47,7 @@ class Victorialogs < Formula
                 "-httpListenAddr=127.0.0.1:#{http_port}",
                 "-storageDataPath=#{testpath}/victorialogs-data"
     sleep 5
-    assert_match "Single-node VictoriaLogs", shell_output("curl -s 127.0.0.1:#{http_port}")
+    assert_match "VictoriaLogs", shell_output("curl -s 127.0.0.1:#{http_port}")
 
     assert_match version.to_s, shell_output("#{bin}/victoria-logs --version")
   ensure
