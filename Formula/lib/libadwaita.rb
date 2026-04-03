@@ -24,12 +24,12 @@ class Libadwaita < Formula
     sha256 x86_64_linux:  "a117edaf5c71c53a95ceafe9e025c4690ca7bbaa321210bf560d66121fc41dff"
   end
 
+  depends_on "dart-sass" => :build
   depends_on "gettext" => :build
   depends_on "gobject-introspection" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
-  depends_on "sassc" => :build
   depends_on "vala" => :build
 
   depends_on "appstream"
@@ -37,7 +37,6 @@ class Libadwaita < Formula
   depends_on "glib"
   depends_on "graphene"
   depends_on "gtk4"
-  depends_on "libsass"
   depends_on "pango"
 
   uses_from_macos "python" => :build
@@ -46,7 +45,19 @@ class Libadwaita < Formula
     depends_on "gettext"
   end
 
+  # Fix style without closed parentheses
+  patch do
+    url "https://gitlab.gnome.org/GNOME/libadwaita/-/commit/ad0214cd1f6fb79d743b252d35f2657f875480e8.diff"
+    sha256 "b7d8c4920805bf62253738e4d2a7e56bd8c9f4468f082b7c7f8819132a333ea5"
+  end
+
   def install
+    # Replace deprecated `sassc` with `sass` in the meson build file
+    inreplace "src/stylesheet/meson.build" do |s|
+      s.gsub! "'sassc'", "'sass'"
+      s.gsub! "'-a', '-M', '-t', 'compact'", "'--style', 'compressed'"
+    end
+
     system "meson", "setup", "build", "-Dtests=false", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
