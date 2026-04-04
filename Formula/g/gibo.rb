@@ -7,12 +7,12 @@ class Gibo < Formula
   head "https://github.com/simonwhitaker/gibo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "33a652feedc4cd54e5b8847a0b34aeddee8227225658ee6fd6492d7551ce3e97"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "33a652feedc4cd54e5b8847a0b34aeddee8227225658ee6fd6492d7551ce3e97"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "33a652feedc4cd54e5b8847a0b34aeddee8227225658ee6fd6492d7551ce3e97"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d84a337bf86423020a091ee64abef100c3432245f007c79aec073a3afb2a858f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bf386bbf974a853d19aa9df9bc26e3685329f67b3688842a0b80f9d76d19028d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "84f293c8c4f50bc4b4aad6dfe97593aca5c83c0b656e58c9602d68a56eb096e1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "efd799aee3f1f9db69f25f8dfc389e40bcf2985705593d31593b576e49be93f1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "efd799aee3f1f9db69f25f8dfc389e40bcf2985705593d31593b576e49be93f1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "efd799aee3f1f9db69f25f8dfc389e40bcf2985705593d31593b576e49be93f1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "25db33f4f269291e3d440bfc699ff0c02f45d808252e5ed6ed11870bfe14c76f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a5a953a02849c4b714e7be8ac456d889ed52037e0669dc0ae2c15da1894d8350"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "317bbb6430fc5a7653b29b91f9ca7d213bac5c59e46dfb296f41d89c53f896b2"
   end
 
   depends_on "go" => :build
