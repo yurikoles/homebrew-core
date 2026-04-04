@@ -34,6 +34,7 @@ class Ffmpeg < Formula
   # negligible and has all moved to e.g. x265 instead.
   depends_on "dav1d"
   depends_on "lame"
+  depends_on "libvmaf" # dependent: ab-av1
   depends_on "libvpx"
   depends_on "openssl@3"
   depends_on "opus"
@@ -76,6 +77,7 @@ class Ffmpeg < Formula
       --enable-libx264
       --enable-libmp3lame
       --enable-libdav1d
+      --enable-libvmaf
       --enable-libvpx
       --enable-libx265
       --enable-openssl
