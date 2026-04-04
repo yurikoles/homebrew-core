@@ -1,8 +1,8 @@
 class Ludusavi < Formula
   desc "Backup tool for PC game saves"
   homepage "https://github.com/mtkennerly/ludusavi"
-  url "https://github.com/mtkennerly/ludusavi/archive/refs/tags/v0.30.0.tar.gz"
-  sha256 "3e819da8d6c6b2e673fb0dab2c64524d448e45b66b009ced7cb2a324f201dc6a"
+  url "https://github.com/mtkennerly/ludusavi/archive/refs/tags/v0.31.0.tar.gz"
+  sha256 "e7dcfa4fb17fcd2be9ef34d55fe0ca0d3f79fdf570107aeaa5b4e76910e2f8a1"
   license "MIT"
 
   bottle do
