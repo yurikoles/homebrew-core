@@ -1,8 +1,8 @@
 class Docmd < Formula
   desc "Minimal Markdown documentation generator"
   homepage "https://docmd.mgks.dev/"
-  url "https://registry.npmjs.org/@docmd/core/-/core-0.6.5.tgz"
-  sha256 "e54a49cc725c528f761187851b18bfd554b69d078c808d35c5a006835d4d8c12"
+  url "https://registry.npmjs.org/@docmd/core/-/core-0.6.6.tgz"
+  sha256 "38cb4bf240e2f884595d120829eaa2b963a4bf1f5e99cc719bdf304898dd07c4"
   license "MIT"
 
   bottle do
@@ -24,9 +24,6 @@ class Docmd < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
-
-    node_modules = libexec/"lib/node_modules/@docmd/core/node_modules"
-    deuniversalize_machos node_modules/"fsevents/fsevents.node" if OS.mac?
 
     # Remove pre-built binaries
     rm_r(libexec/"lib/node_modules/@docmd/core/node_modules/@esbuild")
