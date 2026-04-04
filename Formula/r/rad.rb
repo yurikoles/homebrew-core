@@ -1,6 +1,6 @@
 class Rad < Formula
   desc "Modern CLI scripts made easy"
-  homepage "https://amterp.github.io/rad/"
+  homepage "https://amterp.dev/rad/"
   url "https://github.com/amterp/rad/archive/refs/tags/v0.9.2.tar.gz"
   sha256 "7d2215d596fdb6d380761411bf868b7cd451a436efa6dd2153265a7b981e14d2"
   license "Apache-2.0"
@@ -21,6 +21,7 @@ class Rad < Formula
     ENV["CGO_ENABLED"] = "1" if OS.linux? && Hardware::CPU.arm?
 
     system "go", "build", *std_go_args(ldflags: "-s -w")
+    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"radls"), "./radls"
   end
 
   test do
@@ -38,5 +39,13 @@ class Rad < Formula
     chmod "+x", testpath/"test"
 
     assert_match "Hello, Homebrew!\nHello, Homebrew!", shell_output("#{testpath}/test 2")
+
+    output_log = testpath/"output.log"
+    pid = spawn bin/"radls", [:out, :err] => output_log.to_s
+    sleep 2
+    assert_match "Spinning up Rad LSP server", output_log.read
+  ensure
+    Process.kill("TERM", pid)
+    Process.wait(pid)
   end
 end
