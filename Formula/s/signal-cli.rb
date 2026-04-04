@@ -1,8 +1,8 @@
 class SignalCli < Formula
   desc "CLI and dbus interface for WhisperSystems/libsignal-service-java"
   homepage "https://github.com/AsamK/signal-cli"
-  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.14.1.tar.gz"
-  sha256 "8d8d3a5bffcde757b8a9cb5f5e544525e8a7fd85aaa554a1fce06300b3ab27a4"
+  url "https://github.com/AsamK/signal-cli/archive/refs/tags/v0.14.2.tar.gz"
+  sha256 "b9df4f8be106e7ee69902fc4eb944b87c5c3117fe5bcd2306246130d86749dbf"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -24,19 +24,13 @@ class SignalCli < Formula
   uses_from_macos "llvm" => :build # For `libclang`, used by `boring-sys` crate
   uses_from_macos "zip" => :build
 
-  # https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal#determine-the-required-libsignal-client-version
-  # To check the version of `libsignal-client`, run:
-  # url=https://github.com/AsamK/signal-cli/releases/download/v$version/signal-cli-$version.tar.gz
-  # curl -fsSL $url | tar -tz | grep libsignal-client
   resource "libsignal-client" do
-    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.87.4.tar.gz"
-    sha256 "76b7e851475846e33c1dd0a95d60806a7db001c0911f28ff8903843a22ea8adf"
+    url "https://github.com/signalapp/libsignal/archive/refs/tags/v0.90.0.tar.gz"
+    sha256 "8b09956cbd6a58a1aafe96e5681b4d49c59c1c2ee03839d9b5ad25d5f347f520"
 
-    # Workaround for gradle 9.x
-    # PR ref: https://github.com/signalapp/libsignal/pull/653
-    patch do
-      url "https://github.com/signalapp/libsignal/commit/88cd7aa21e1d8db12188c8126f87d47182ae4d6c.patch?full_index=1"
-      sha256 "2c37d16b01cfc4bb62a56c6e8c3ba762c47affdcfc983bb33f5510eb99124d72"
+    livecheck do
+      url "https://raw.githubusercontent.com/AsamK/signal-cli/refs/tags/v#{LATEST_VERSION}/libsignal-version"
+      regex(/^v?(\d+(?:\.\d+)+)$/i)
     end
   end
 
@@ -44,18 +38,10 @@ class SignalCli < Formula
     java_version = "25"
     ENV["JAVA_HOME"] = Language::Java.java_home(java_version)
 
-    # TODO: Update if upstream start using machine-readable dependency versioning,
-    # see https://github.com/AsamK/signal-cli/issues/1964
-    changelog = File.read("CHANGELOG.md")
-    current_version_pos = changelog.index(/^## \[#{Regexp.escape(version.to_s)}\]/)
-    odie "Could not find version #{version} in CHANGELOG.md" if current_version_pos.nil?
-    # Search from the current version header forward; the requirement may appear in a prior release section
-    regexp = /^Requires libsignal-client version (\d+(?:\.\d+)+)/i
-    libsignal_client_version = changelog[current_version_pos..].match(regexp)&.captures&.first
-    odie "Could not find libsignal-client version in CHANGELOG.md" if libsignal_client_version.blank?
-
+    # https://github.com/AsamK/signal-cli/wiki/Provide-native-lib-for-libsignal
     resource("libsignal-client").stage do |r|
-      odie "#{r.name} needs to be updated to #{libsignal_client_version}!" if libsignal_client_version != r.version
+      libsignal_version = (buildpath/"libsignal-version").read.strip
+      odie "libsignal-client needs to be updated to #{libsignal_version}!" if r.version != libsignal_version
       system "gradle", "--no-daemon", "--project-dir=java", "-PskipAndroid", ":client:jar"
       buildpath.install Pathname.glob("java/client/build/libs/libsignal-client-*.jar")
     end
