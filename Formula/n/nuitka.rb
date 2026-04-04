@@ -9,12 +9,13 @@ class Nuitka < Formula
   head "https://github.com/Nuitka/Nuitka.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "446a6c056e9ee1dbe150a3baecebb7f56710424006a6e45d8ddec6430ae6ea4e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f8cb422d3ac4735a57b129e3e2ffd9d0d5e48da629f866b327e1b6cb377717f0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1f9b2e79a92e4fffb9f1d36f6b7af766ad8c9863249dc285b7448db9845111db"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6e7a727c8d2d516df1d443b6bc3c29b0f988edc2131e58a1e1ffd277ae67198d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8821e787630c9f5d2eb241712640f09b3191ccdb7662daeaee2f32ec64f5766f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26b28b3abf449981e79bafe755d6dbe63ae24574ec255f88c37957c240597f80"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "96bfcc3de90d3485afb92ebbfb6896e1721f2935ad1b0e29b242247e82b9140c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "065857cc5116eb682af9321275ebe8567609782bc4e14e471dd426e8f477650a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b0d061d1a02c582b52767a40e2a80eac30e16dff3fe887b9ece03a69acd691cb"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ddf715eafcebf140aacb2db1ff403be4d9d39c93860fa0b44c1c3bec05dc5bcb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "22b5886a56dff76aa00355af9b04801352092570c0884bda0f4872c524399988"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "75c898bedfde1072f1a0bacef64b831828a700fdd19b5fe79a33a40d77d69d1c"
   end
 
   depends_on "ccache"
