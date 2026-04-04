@@ -7,12 +7,12 @@ class Dnspyre < Formula
   head "https://github.com/Tantalor93/dnspyre.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e1251ad74a454ec67f49d35d5e8c15e87fcf251ffde88fe0f98c0080dee0ecb2"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e202f047c5229f5e1c40f971ac81c78623102689cb85b98bb8aafc3208be492d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c5b4f8fd5d25b2ba65b44a9ec5938d50e720ba187febc222514e67701edd59c0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3fd3a24742cbf1c7f0ae68780f1df3ec274110d92f99adf8e8031f3fb2fa5e5f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7274ba1f4135285a7b02cad40a530733160599f1b3f46a6164a0a6f3b31a6cfe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "555af82b5cb6787fba1a8914a1c4c94c98454b8badf2fc99da70b670d39af114"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "dfc3316fb5efca91707889859ade829e6b979ed7ac1f8dafdd9f8d0cf15b790d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ae7dde165905b2aa44fa82b49c259d972ec3908850fe5dd7aaf94c7487cdbdff"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "58ce6ca840aa64b073760b90864f574a41886434fc5530ac1e12d4ca1a45da86"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e80db98a04bacc0eed625b1203d461f0a51928c6f73a598824e947ed05e6f380"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5eb7ba7e94a3802395b73e854af2d2b42c3558478a0907936eee93bc561b27e1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fb071dd5a615f8951c2883526604fe2f435f2242a3b851eceb99a98d1bcaf778"
   end
 
   depends_on "go" => :build
