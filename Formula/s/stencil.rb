@@ -25,6 +25,9 @@ class Stencil < Formula
     ]
 
     system "go", "build", *std_go_args(ldflags:), "./cmd/stencil"
+    generate_completions_from_executable(bin/"stencil", "completion",
+                                          shell_parameter_format: "",
+                                          shells:                 [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
