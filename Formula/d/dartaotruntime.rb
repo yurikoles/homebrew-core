@@ -10,6 +10,15 @@ class Dartaotruntime < Formula
     formula "dart-sdk"
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "43c342c42220efb0e8f2f77ea1aebbfaa9db2a8aef692eb98bd6280b7885420d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1de265c3c99ac612f79f26a5556527f0ffb7ec32df63a99440fc0e74f27f5b62"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "650f0ae31f16d10e9b691d5c9a44d05837c79d7b724737d811d789c8a5035a94"
+    sha256 cellar: :any_skip_relocation, sonoma:        "48d7fe226d8879076400eb199f9c6db7c071f4ed7168893b0e66c5bdb0b65e0e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1a7908bae85fea2c0b12ff4629c24114638363a1bf2f9adfb89adfb0a7c913a5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26fb9b632354bf75343bf07bddba74caf23dc2ea27411fd6eeb4d63fd55d0e3e"
+  end
+
   depends_on "ninja" => :build
   depends_on xcode: :build # for xcodebuild
   depends_on "dart-sdk" => :test
