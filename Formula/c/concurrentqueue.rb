@@ -9,7 +9,7 @@ class Concurrentqueue < Formula
   ]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "64a380746e2547d26f64b5ce8945cc4af4e0169a2dffdc89ebbb534dc5e0061e"
+    sha256 cellar: :any_skip_relocation, all: "627800ae0b728b9f2064ac6ff8ffe1cd7c26d094a0bac6be9459ce48ebf666ca"
   end
 
   depends_on "cmake" => :build
