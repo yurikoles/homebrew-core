@@ -5,6 +5,15 @@ class Merve < Formula
   sha256 "8f19c2132447b9113545ffd399cb2bc1e61c6166743921b04883f8e1d778d69e"
   license "Apache-2.0"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "0b41d6a9b45460e7fd65eb26833e136ffc7f33f5d2362db2f3d78e1bb2deb073"
+    sha256 cellar: :any,                 arm64_sequoia: "b75e744bcc229153ed43e9c272f79133d44161f39f2b0e3d54de157b0084a20d"
+    sha256 cellar: :any,                 arm64_sonoma:  "0d89c962210d30ca7573f0283ecc3ea306eed2c3f77976dbea84598aa5381fec"
+    sha256 cellar: :any,                 sonoma:        "14087e337f17b1facee97520fa4494ace436474aab683dd65ec993d9f9e594e2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "46c11758a8a95905c18d5f5972eb1e243c3fe9c01e3649fb545ab32af96a5d48"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bbc11fc91bd7d6562fe496c2cb1b9fb6dc4c6f5e6d1d18eade0cb7f45f348981"
+  end
+
   depends_on "cmake" => :build
   depends_on "simdutf"
 
