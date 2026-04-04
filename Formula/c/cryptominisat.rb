@@ -1,8 +1,8 @@
 class Cryptominisat < Formula
   desc "Advanced SAT solver"
   homepage "https://www.msoos.org/cryptominisat5/"
-  url "https://github.com/msoos/cryptominisat/archive/refs/tags/release/v5.14.3.tar.gz"
-  sha256 "0ed3b7ec51ae44a9c58858459552b58783b6ab5663b11b79a8289de4b9ed6cab"
+  url "https://github.com/msoos/cryptominisat/archive/refs/tags/release/v5.14.4.tar.gz"
+  sha256 "cc8ff7bd6aa72cf0ba1d4cb6aa0f430f4fc6155af4e9d29008acc06b2583087e"
   # Everything that's needed to run/build/install/link the system is MIT licensed. This allows
   # easy distribution and running of the system everywhere.
   license "MIT"
@@ -23,6 +23,7 @@ class Cryptominisat < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "pkgconf" => :build
   depends_on "python@3.14" => [:build, :test]
   depends_on "gmp"
 
@@ -32,9 +33,9 @@ class Cryptominisat < Formula
 
   # Currently using revision in flake.lock
   resource "cadical" do
-    url "https://github.com/meelgroup/cadical/archive/25c12aac83fd2f8627ca5c9a82cd864feea8783f.tar.gz"
-    version "25c12aac83fd2f8627ca5c9a82cd864feea8783f"
-    sha256 "d36995e5bac5feb6503ae76f201a618da26cbca414284a6caf33c71a9a835f54"
+    url "https://github.com/meelgroup/cadical/archive/1652f668becc717eb14c184a727864c1937082d6.tar.gz"
+    version "1652f668becc717eb14c184a727864c1937082d6"
+    sha256 "d8abdf8a846ced6964da08118900d841d55471c2cb808b6c81cb6b8671b5671e"
 
     livecheck do
       url "https://raw.githubusercontent.com/msoos/cryptominisat/refs/tags/release/v#{LATEST_VERSION}/flake.lock"
@@ -46,9 +47,9 @@ class Cryptominisat < Formula
 
   # Currently using revision in flake.lock
   resource "cadiback" do
-    url "https://github.com/meelgroup/cadiback.git",
-        revision: "798d069b99e030ddb4e612fb6ef7ccaaa2d3a5e5"
-    version "798d069b99e030ddb4e612fb6ef7ccaaa2d3a5e5"
+    url "https://github.com/meelgroup/cadiback/archive/300818c10cac0053dd27650a7d9cd58dfe08b3fe.tar.gz"
+    version "300818c10cac0053dd27650a7d9cd58dfe08b3fe"
+    sha256 "07e1c2a891e0f0d8732392bb4e8c3279b1dc7947a4854d14ac3448c52530d95c"
 
     livecheck do
       url "https://raw.githubusercontent.com/msoos/cryptominisat/refs/tags/release/v#{LATEST_VERSION}/flake.lock"
@@ -66,20 +67,19 @@ class Cryptominisat < Formula
     # fix audit failure with `lib/libcryptominisat5.5.7.dylib`
     inreplace "src/GitSHA1.cpp.in", "@CMAKE_CXX_COMPILER@", ENV.cxx
 
-    (buildpath/name).install buildpath.children
-    (buildpath/"cadical").install resource("cadical")
-    (buildpath/"cadiback").install resource("cadiback")
-
-    ENV.append_to_cflags "-fPIC" if OS.linux?
-
-    cd "cadical" do
-      system "./configure"
-      system "make", "-C", "build", "libcadical.a"
+    resource("cadical").stage do
+      system "cmake", "-S", ".", "-B", "build", *std_cmake_args(install_prefix: buildpath/"cadical")
+      system "cmake", "--build", "build"
+      system "cmake", "--install", "build"
     end
 
-    cd "cadiback" do
-      system "./configure"
-      system "make", "libcadiback.a"
+    resource("cadiback").stage do
+      inreplace "CMakeLists.txt", 'set(CADIBACK_BUILD "${CMAKE_CXX_COMPILER}")', "set(CADIBACK_BUILD \"#{ENV.cxx}\")"
+
+      args = ["-Dcadical_DIR=#{buildpath}/cadical"]
+      system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args(install_prefix: buildpath/"cadiback")
+      system "cmake", "--build", "build"
+      system "cmake", "--install", "build"
     end
 
     site_packages = prefix/Language::Python.site_packages(python3)
@@ -87,11 +87,11 @@ class Cryptominisat < Formula
       -DBUILD_PYTHON_EXTENSION=ON
       -DCMAKE_INSTALL_RPATH=#{rpath};#{rpath(source: site_packages)}
       -DMIT=ON
+      -Dcadical_DIR=#{buildpath}/cadical
       -Dcadiback_DIR=#{buildpath}/cadiback
-      -Dcadical_DIR=#{buildpath}/cadical/build
     ]
 
-    system "cmake", "-S", name, "-B", "build", *args, *std_cmake_args
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
     site_packages.install prefix.glob("pycryptosat.*.so")
