@@ -5,6 +5,7 @@ class Flume < Formula
   mirror "https://archive.apache.org/dist/flume/1.11.0/apache-flume-1.11.0-bin.tar.gz"
   sha256 "6eb7806076bdc3dcadb728275eeee7ba5cb12b63a2d981de3da9063008dba678"
   license "Apache-2.0"
+  revision 1
 
   bottle do
     rebuild 1
@@ -12,14 +13,14 @@ class Flume < Formula
   end
 
   depends_on "hadoop"
-  depends_on "openjdk@11"
+  depends_on "openjdk@17"
 
   def install
     rm(Dir["bin/*.cmd", "bin/*.ps1"])
     libexec.install %w[conf docs lib tools]
     prefix.install "bin"
 
-    flume_env = Language::Java.java_home_env("11")
+    flume_env = Language::Java.java_home_env("17")
     flume_env[:FLUME_HOME] = libexec
     bin.env_script_all_files libexec/"bin", flume_env
   end
