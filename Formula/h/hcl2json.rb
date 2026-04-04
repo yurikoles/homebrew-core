@@ -1,8 +1,8 @@
 class Hcl2json < Formula
   desc "Convert HCL2 to JSON"
   homepage "https://github.com/tmccombs/hcl2json"
-  url "https://github.com/tmccombs/hcl2json/archive/refs/tags/v0.6.8.tar.gz"
-  sha256 "681ef77f32b86a065158575997c48420be148dd4308c4e0bea9c3e617b0f4047"
+  url "https://github.com/tmccombs/hcl2json/archive/refs/tags/v0.6.9.tar.gz"
+  sha256 "df7361e4ea5f34de02a81afa06f515bc6379efeb5ab86c154c6a31def6bcb3dc"
   license "Apache-2.0"
   head "https://github.com/tmccombs/hcl2json.git", branch: "main"
 
