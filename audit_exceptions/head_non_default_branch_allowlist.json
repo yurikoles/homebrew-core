@@ -2,7 +2,6 @@
   "awscli": "v2",
   "cabal-install": "3.16",
   "flarectl": "v0",
-  "garage": "main-v2",
   "libngspice": "master",
   "libpng": "libpng16",
   "lmdb": "mdb.master",
