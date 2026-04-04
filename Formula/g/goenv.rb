@@ -4,6 +4,7 @@ class Goenv < Formula
   url "https://github.com/go-nv/goenv/archive/refs/tags/2.2.38.tar.gz"
   sha256 "ec22b8ca7f869f67e657fe6a2155e3fd1407a364429bdbaf04bb3daf33e12aeb"
   license "MIT"
+  revision 1
   version_scheme 1
   head "https://github.com/go-nv/goenv.git", branch: "master"
 
@@ -27,6 +28,7 @@ class Goenv < Formula
       "plugins/go-build/install.sh",
       "test/goenv.bats",
       "test/test_helper.bash",
+      "plugins/go-build/test/test_helper.bash",
     ]
     inreplace inreplace_files, "/usr/local", HOMEBREW_PREFIX
 
