@@ -3,8 +3,8 @@ class MysqlToSqlite3 < Formula
 
   desc "Transfer data from MySQL to SQLite"
   homepage "https://github.com/techouse/mysql-to-sqlite3"
-  url "https://files.pythonhosted.org/packages/e9/a3/86a1d09b7fa439fb8b0ae2366a193f71a5abe47904f8da7e110923fd83a0/mysql_to_sqlite3-2.5.6.tar.gz"
-  sha256 "d0d0e3cc6d8749eff0a0fcbd955d55b980f689baa20d5690849036ac8b7ca3ac"
+  url "https://files.pythonhosted.org/packages/e6/53/df9ea59dfcfe883f4778527fbb8746f7583e702a9fa0415aff3870b4771e/mysql_to_sqlite3-2.5.7.tar.gz"
+  sha256 "ed749ad621bdf6246670ebf181d715a2ab1092efebe8cee0f9ac9e4b277dbebc"
   license "MIT"
   head "https://github.com/techouse/mysql-to-sqlite3.git", branch: "master"
 
@@ -22,8 +22,8 @@ class MysqlToSqlite3 < Formula
   uses_from_macos "sqlite"
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
-    sha256 "12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"
+    url "https://files.pythonhosted.org/packages/57/75/31212c6bf2503fdf920d87fee5d7a86a2e3bcf444984126f13d8e4016804/click-8.3.2.tar.gz"
+    sha256 "14162b8b3b3550a7d479eafa77dfd3c38d9dc8951f6f69c78913a8f9a7540fd5"
   end
 
   resource "mysql-connector-python" do
@@ -57,8 +57,8 @@ class MysqlToSqlite3 < Formula
   end
 
   resource "sqlglot" do
-    url "https://files.pythonhosted.org/packages/d7/ae/afee950eff42a9c8ceab4a2e25abfeaa8278c578f967201824287cf530ce/sqlglot-30.1.0.tar.gz"
-    sha256 "7593aea85349c577b269d540ba245024f91464afdcf61c6ef7765f4691c46ef8"
+    url "https://files.pythonhosted.org/packages/ff/5a/b8149963cd479a7e5b71f43d11d678f5e4b8633ab4de5b25e7a5d6eefa20/sqlglot-30.2.1.tar.gz"
+    sha256 "ef4a67cc6f66a8043085eb8ea95fa9541c1625dffa9145ad4e9815a7ba60a199"
   end
 
   resource "tabulate" do
