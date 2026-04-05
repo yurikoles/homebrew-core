@@ -1,8 +1,8 @@
 class Qxmpp < Formula
   desc "Cross-platform C++ XMPP client and server library"
   homepage "https://invent.kde.org/libraries/qxmpp"
-  url "https://invent.kde.org/libraries/qxmpp/-/archive/v1.14.6/qxmpp-v1.14.6.tar.bz2"
-  sha256 "4de36733f43c1b65a27c6803ea631d4bbfc84793b6d7c73fd0b97d39179e33df"
+  url "https://invent.kde.org/libraries/qxmpp/-/archive/v1.15.0/qxmpp-v1.15.0.tar.bz2"
+  sha256 "61daa487682854374566c7997ad92fd429d2f09ccc673c8fe9cd0b1fbe134439"
   license "LGPL-2.1-or-later"
 
   bottle do
@@ -17,6 +17,7 @@ class Qxmpp < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on xcode: :build
+  depends_on "openssl@3"
   depends_on "qtbase"
 
   on_macos do
