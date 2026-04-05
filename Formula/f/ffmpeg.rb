@@ -28,8 +28,7 @@ class Ffmpeg < Formula
 
   # Only add dependencies required for dependents in homebrew-core
   # or INCREDIBLY widely used and light codecs in the current year (2026).
-  # Add other dependencies to ffmpeg-full formula or consider making
-  # formulae dependent on ffmpeg-full.
+  # Add other dependencies to ffmpeg-full formula.
   # We should expect to remove e.g. x264 eventually (>=2027) when usage of it is
   # negligible and has all moved to e.g. x265 instead.
   depends_on "dav1d"
