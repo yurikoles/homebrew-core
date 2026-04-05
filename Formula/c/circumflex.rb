@@ -1,9 +1,9 @@
 class Circumflex < Formula
   desc "Hacker News in your terminal"
   homepage "https://github.com/bensadeh/circumflex"
-  url "https://github.com/bensadeh/circumflex/archive/refs/tags/3.9.tar.gz"
-  sha256 "1169377621ccc4e552c7a55f12f03bf7bee0df28a1cf60a1609017723018e4bb"
-  license "AGPL-3.0-only"
+  url "https://github.com/bensadeh/circumflex/archive/refs/tags/4.0.tar.gz"
+  sha256 "48799d929afb0b4d0b2bca57ce7919eebd5ff11227f49fd851adf20a1689113a"
+  license "MIT"
   head "https://github.com/bensadeh/circumflex.git", branch: "main"
 
   bottle do
@@ -19,23 +19,19 @@ class Circumflex < Formula
   depends_on "less"
 
   def install
-    system "go", "build", *std_go_args(output: bin/"clx", ldflags: "-s -w")
+    system "go", "build", *std_go_args(output: bin/"clx", ldflags: "-s -w"), "./cmd/clx"
     man1.install "share/man/clx.1"
   end
 
   test do
-    assert_match "List of visited IDs cleared", shell_output("#{bin}/clx clear 2>&1")
-
-    cmd = "#{bin}/clx article 1"
-    assert_match "Y Combinator", if OS.mac?
-      shell_output(cmd)
+    ENV["XDG_CONFIG_HOME"] = testpath/".config"
+    config_home = if OS.mac?
+      testpath/"Library/Application Support"
     else
-      require "pty"
-      r, w, pid = PTY.spawn(cmd)
-      r.winsize = [80, 43]
-      w.write " q"
-      Process.wait(pid)
-      r.read_nonblock(1024)
+      testpath/".config"
     end
+
+    assert_match "Item added to favorites", shell_output("#{bin}/clx add 1")
+    assert_path_exists config_home/"circumflex/favorites.json"
   end
 end
