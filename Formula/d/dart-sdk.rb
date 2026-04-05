@@ -42,6 +42,20 @@ class DartSdk < Formula
     system "gclient", "config", "--name", "sdk", "https://dart.googlesource.com/sdk.git@#{version}"
     system "gclient", "sync", "--no-history"
 
+    # Workaround for error: 'readdir_r' is deprecated
+    # Issue ref: https://github.com/dart-lang/sdk/issues/63089
+    inreplace "sdk/build/config/compiler/BUILD.gn",
+              "\"-Wno-tautological-constant-compare\",",
+              "\\0\n      \"-Wno-deprecated-declarations\","
+
+    # Workaround for dependants audit failure: Libraries were compiled with a flat namespace.
+    # Issue ref: https://github.com/dart-lang/sdk/issues/63115
+    # PR ref: https://github.com/dart-lang/sdk/pull/63116
+    inreplace "sdk/runtime/platform/mach_o.h",
+              "MH_NO_REEXPORTED_DYLIBS = 0x100000;",
+              "\\0\nstatic constexpr uint32_t MH_TWOLEVEL = 0x80;"
+    inreplace "sdk/runtime/vm/mach_o.cc", "MH_NO_REEXPORTED_DYLIBS", "\\0 | mach_o::MH_TWOLEVEL"
+
     chdir "sdk" do
       arch = Hardware::CPU.arm? ? "arm64" : "x64"
       system "./tools/build.py", "--mode=release", "--arch=#{arch}", "create_sdk"
