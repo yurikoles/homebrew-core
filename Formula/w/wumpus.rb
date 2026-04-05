@@ -1,8 +1,8 @@
 class Wumpus < Formula
   desc "Exact clone of the ancient BASIC Hunt the Wumpus game"
   homepage "http://www.catb.org/~esr/wumpus/"
-  url "https://gitlab.com/esr/wumpus/-/archive/1.11/wumpus-1.11.tar.bz2"
-  sha256 "6b60884df963d785759ecde67382cacae2989f666be7b6269af511a51fde5458"
+  url "https://gitlab.com/esr/wumpus/-/archive/1.12/wumpus-1.12.tar.bz2"
+  sha256 "0963a7690e0e739f757d59dc1df07083fa96d3a27d800d571a1977a6d0fa48ef"
   license "BSD-2-Clause"
   head "https://gitlab.com/esr/wumpus.git", branch: "master"
 
