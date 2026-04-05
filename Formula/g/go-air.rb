@@ -7,12 +7,12 @@ class GoAir < Formula
   head "https://github.com/air-verse/air.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "12f3bc2d4b5e5fdcbd76612520f2906ee79c4fb0f768ce29eb0d3147d8cd92c6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "12f3bc2d4b5e5fdcbd76612520f2906ee79c4fb0f768ce29eb0d3147d8cd92c6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "12f3bc2d4b5e5fdcbd76612520f2906ee79c4fb0f768ce29eb0d3147d8cd92c6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b28c28519a3700172e21c7f4d30990c30433a39a28bf2759b22f79197229fe9b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "970f3b4df1c5a7bcd28eeab5f1e3f6f0ab1f412ebba43f253a082b0ec9ef9627"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "42c93ec8eeda78f5fa45f843478cbf42feaa3764656888dfccee773348e4a2c2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6b475f93b371203e0d49a35998482f5ad82ec0890f4a09df7d0cb1641270b28d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6b475f93b371203e0d49a35998482f5ad82ec0890f4a09df7d0cb1641270b28d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6b475f93b371203e0d49a35998482f5ad82ec0890f4a09df7d0cb1641270b28d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "33c7ea4186e5762a2d27443b105125232cff3935b2856792842de20623b321a0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f54390402dfa4b24043cb4bb6e91d9f1f63469be496ae1dce2a0b56c606ac375"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "067f61597a529e66b8a62b05f9a2c853304791da56aa203649b26c558b6c181d"
   end
 
   depends_on "go"
