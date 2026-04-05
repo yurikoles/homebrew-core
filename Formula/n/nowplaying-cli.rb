@@ -1,8 +1,8 @@
 class NowplayingCli < Formula
   desc "Retrieves currently playing media, and simulates media actions"
   homepage "https://github.com/kirtan-shah/nowplaying-cli"
-  url "https://github.com/kirtan-shah/nowplaying-cli/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "bb49123c66282b6495c245589313afc94875a7b0e82c9ae9f79d6f25e7503db4"
+  url "https://github.com/kirtan-shah/nowplaying-cli/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "a495a4f6dfc75326d4ab8843c82f8b0e42ac83d88c397461ea6b7968973da01d"
   license "GPL-3.0-or-later"
 
   bottle do
@@ -16,9 +16,6 @@ class NowplayingCli < Formula
     sha256 cellar: :any_skip_relocation, monterey:       "4a6d9fdc2681a4912562186b4ee2c0965e56c0ec2c9189314afb505424745bb3"
   end
 
-  # see upstream discussion, https://github.com/kirtan-shah/nowplaying-cli/issues/28
-  deprecate! date: "2026-04-17", because: :unmaintained
-
   depends_on :macos
 
   def install
@@ -27,6 +24,6 @@ class NowplayingCli < Formula
   end
 
   test do
-    assert_equal "(null)", shell_output("#{bin}/nowplaying-cli get-raw").strip
+    assert_match "{", shell_output("#{bin}/nowplaying-cli get-raw")
   end
 end
