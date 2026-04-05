@@ -19,7 +19,7 @@ class Ski < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "14141d2ba391efd4932d5c119c2429abb66f8ef243bc0b22fcf9b71f717be9aa"
+    sha256 cellar: :any_skip_relocation, all: "98a857570a3b6256fa5c54a790c7f688c0283df59cef730b59409d3ede94fa65"
   end
 
   depends_on "asciidoctor" => :build
