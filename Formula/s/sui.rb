@@ -32,6 +32,7 @@ class Sui < Formula
   def install
     ENV["GIT_REVISION"] = "homebrew"
     system "cargo", "install", *std_cargo_args(path: "crates/sui", features: "tracing")
+    generate_completions_from_executable(bin/"sui", "completion", "--generate", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
