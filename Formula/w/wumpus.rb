@@ -14,12 +14,12 @@ class Wumpus < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ca80b761f2f03f3dc6edf792c87aec2c1cc25a99a4c27706bdf8720047cbe141"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "735a371a20ddb23cea467834a5244743aa2d9924721eea96b68865b325ac2099"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "778ce27ccdb418011b0a7514e4427f96d19d3d203554bfacc058fdc63b2de4d8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "37e7079f488ea57258b203ed2a4ce83a23c1919dc86bac68a97c92114f11ebcc"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bb85d9dd188dfc4842b6816e0696322c99a00e7b2722faeca5f891112dec9437"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "21f6da1c1f436b41491e88e68bd184dad53852f0aa1dd95c6d34f433c5109471"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f3ca0c0886c0dd3868abbfe1c24f7b83c6dec9dc0e9663ef929a509021942345"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5fbd39673cc697191825c2cc198468300c1d12fcbbbbbf7d9354b9aa4e9fcd45"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9efb224977eb417f92b209544e3e2d6c0a84da9a0aee8f73b4578f5f30ba07e3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "447dad64b5fb4879962d5e2d7092fc647e55e35aa368ed181f9d8a38883b50cf"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a13fbe27595a623425ab6efffcc1341d85597359c32f13695af61b5f81c6ebdf"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6189ea20b9332332f7c1b7e5615cd8dcd561ce9a096ed86e0ed08d2b07561dc6"
   end
 
   depends_on "asciidoctor" => :build
