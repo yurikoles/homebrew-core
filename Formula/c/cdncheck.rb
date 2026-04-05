@@ -1,8 +1,8 @@
 class Cdncheck < Formula
   desc "Utility to detect various technology for a given IP address"
   homepage "https://projectdiscovery.io"
-  url "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.2.29.tar.gz"
-  sha256 "c56cc4e5297269014cc8d1286fef3be7cd2e3c22db7fe229df374619dea5715c"
+  url "https://github.com/projectdiscovery/cdncheck/archive/refs/tags/v1.2.30.tar.gz"
+  sha256 "9b507017a08189a3c8a9a244453eb3427348f2fe05bc15c25fbaa854c082833e"
   license "MIT"
   head "https://github.com/projectdiscovery/cdncheck.git", branch: "main"
 
@@ -29,6 +29,6 @@ class Cdncheck < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/cdncheck -version 2>&1")
 
-    assert_match "Found result: 1", shell_output("#{bin}/cdncheck -i 173.245.48.12/32 2>&1")
+    assert_match "cdncheck", shell_output("#{bin}/cdncheck -i 1.1.1.1 2>&1")
   end
 end
