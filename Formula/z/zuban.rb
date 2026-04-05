@@ -3,8 +3,8 @@ class Zuban < Formula
   homepage "https://zubanls.com/"
   # pull from git tag to get submodules
   url "https://github.com/zubanls/zuban.git",
-    tag:      "v0.6.2",
-    revision: "8d0e851312a7507dfd917bc5473dfced5d52e5c1"
+    tag:      "v0.7.0",
+    revision: "a0858192cd86b25de2e29b1ec399047225d1cef5"
   license "AGPL-3.0-only"
   head "https://github.com/zubanls/zuban.git", branch: "master"
 
@@ -26,7 +26,7 @@ class Zuban < Formula
   end
 
   test do
-    %w[zmypy zuban zubanls].each do |cmd|
+    %w[zmypy zuban].each do |cmd|
       assert_match version.to_s, shell_output("#{bin}/#{cmd} --version")
     end
 
