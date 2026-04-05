@@ -1,8 +1,8 @@
 class Samurai < Formula
   desc "Ninja-compatible build tool written in C"
   homepage "https://github.com/michaelforney/samurai"
-  url "https://github.com/michaelforney/samurai/releases/download/1.2/samurai-1.2.tar.gz"
-  sha256 "3b8cf51548dfc49b7efe035e191ff5e1963ebc4fe8f6064a5eefc5343eaf78a5"
+  url "https://github.com/michaelforney/samurai/releases/download/1.3/samurai-1.3.tar.gz"
+  sha256 "1bc020a9e133432df51911ac71cc34322f828934d9a2282ba2916d88c15976af"
   license "Apache-2.0"
   head "https://github.com/michaelforney/samurai.git", branch: "master"
 
@@ -20,6 +20,12 @@ class Samurai < Formula
     sha256 cellar: :any_skip_relocation, catalina:       "35e183246e80cfe5a6f9b11b12cd2e0c3a754da15b8fb7550b5716de9e219e8d"
     sha256 cellar: :any_skip_relocation, arm64_linux:    "2a544e5af4acbc661a25ff6f15fd2e0fce9164055734a033e0347c55daa760d2"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "e89f00f8f16b67e01a287801b7c442e5dafe0923304fa649612610e26f4c4540"
+  end
+
+  # Only link librt on Linux, upstream PR ref, https://github.com/michaelforney/samurai/pull/121
+  patch do
+    url "https://github.com/michaelforney/samurai/commit/d17ee9ae9448731e7707b4af5824453298ce69d9.patch?full_index=1"
+    sha256 "16d65b7857f982085a76d9594ad8899a2b6a2743cb9b8379747cded6facc8dd3"
   end
 
   def install
