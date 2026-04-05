@@ -27,6 +27,7 @@ class Neovide < Formula
   end
 
   on_linux do
+    depends_on "xorg-server" => :test
     depends_on "expat"
     depends_on "fontconfig"
     depends_on "freetype"
@@ -71,11 +72,11 @@ class Neovide < Formula
     bin.write_exec_script prefix/"Neovide.app/Contents/MacOS/neovide"
   end
 
-  def nvim_connected_clients_count(socket)
+  def nvim_ui_count(socket)
     Utils.safe_popen_read(
       "nvim", "--headless",
               "--server", socket,
-              "--remote-expr", 'luaeval("vim.tbl_count(vim.api.nvim_list_chans()) - 1")'
+              "--remote-expr", 'luaeval("vim.tbl_count(vim.api.nvim_list_uis())")'
     ).chomp.to_i
   end
 
@@ -88,10 +89,11 @@ class Neovide < Formula
     sleep 1 until socket.exist? && socket.socket?
 
     neovide_cmd = [bin/"neovide", "--no-fork", "--server=#{socket}"]
+    neovide_cmd.unshift(Formula["xorg-server"].bin/"xvfb-run") if OS.linux? && ENV.exclude?("DISPLAY")
     ohai neovide_cmd.join(" ")
     neovide_pid = spawn(*neovide_cmd)
 
-    sleep 1 until nvim_connected_clients_count(socket).positive?
+    sleep 1 until nvim_ui_count(socket).positive?
     system "nvim", "--server", socket, "--remote-send", ":q<CR>"
 
     Process.wait nvim_pid
