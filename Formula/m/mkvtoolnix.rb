@@ -1,9 +1,9 @@
 class Mkvtoolnix < Formula
   desc "Matroska media files manipulation tools"
   homepage "https://mkvtoolnix.download/"
-  url "https://mkvtoolnix.download/sources/mkvtoolnix-97.0.tar.xz"
-  mirror "https://fossies.org/linux/misc/mkvtoolnix-97.0.tar.xz"
-  sha256 "5d43bf66e011ff5af09516a2dba2fb717b1631791a3a7498fcf74849a86929d3"
+  url "https://mkvtoolnix.download/sources/mkvtoolnix-98.0.tar.xz"
+  mirror "https://fossies.org/linux/misc/mkvtoolnix-98.0.tar.xz"
+  sha256 "1600f4a768ede6356e70785393f02f34dd54fbb5f661ffe6e7e8bc0f40229b79"
   license "GPL-2.0-or-later"
   compatibility_version 1
 
