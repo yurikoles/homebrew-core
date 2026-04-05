@@ -26,12 +26,26 @@ class Xvid < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "93bd40f313f5a6656ce1ca70cfeacf67deacd647beaf204ab3fd610a2d92c5a7"
   end
 
+  # Remove -flat_namespace based on MacPorts patch (which needs autoreconf).
+  # https://github.com/macports/macports-ports/blob/master/multimedia/XviD/files/configure-flat_namespace.patch
+  # They reported issue via email: https://trac.macports.org/ticket/69855#comment:10
+  on_macos do
+    patch :DATA
+  end
+
   def install
     cd "build/generic" do
       system "./configure", "--disable-assembly", "--prefix=#{prefix}"
       ENV.deparallelize # Work around error: install: mkdir =build: File exists
       system "make"
       system "make", "install"
+    end
+
+    # Create unversioned symlink to use shared library
+    if OS.mac?
+      libxvidcore = shared_library("libxvidcore")
+      odie "Remove manual symlink!" if (lib/libxvidcore).exist?
+      lib.install_symlink lib.glob(shared_library("libxvidcore", "*")).first => libxvidcore
     end
   end
 
@@ -49,3 +63,16 @@ class Xvid < Formula
     system "./test"
   end
 end
+
+__END__
+--- a/build/generic/configure
++++ b/build/generic/configure
+@@ -4404,7 +4404,7 @@ $as_echo "ok" >&6; }
+ 	   { $as_echo "$as_me:${as_lineno-$LINENO}: result: dylib options" >&5
+ $as_echo "dylib options" >&6; }
+ 	   SHARED_LIB="libxvidcore.\$(API_MAJOR).\$(SHARED_EXTENSION)"
+-	   SPECIFIC_LDFLAGS="-Wl,-read_only_relocs,suppress -dynamiclib -flat_namespace -compatibility_version \$(API_MAJOR) -current_version \$(API_MAJOR).\$(API_MINOR) -install_name \$(libdir)/\$(SHARED_LIB)"
++	   SPECIFIC_LDFLAGS="-Wl,-read_only_relocs,suppress -dynamiclib -compatibility_version \$(API_MAJOR) -current_version \$(API_MAJOR).\$(API_MINOR) -install_name \$(libdir)/\$(SHARED_LIB)"
+ 	else
+ 	   { $as_echo "$as_me:${as_lineno-$LINENO}: result: module options" >&5
+ $as_echo "module options" >&6; }
