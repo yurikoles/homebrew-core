@@ -1,8 +1,8 @@
 class Mailpit < Formula
   desc "Web and API based SMTP testing"
   homepage "https://mailpit.axllent.org/"
-  url "https://github.com/axllent/mailpit/archive/refs/tags/v1.29.5.tar.gz"
-  sha256 "4fbd01c8675edcbab7354ec564ecb537ebec0f74f28ce174f4652310b7505aa6"
+  url "https://github.com/axllent/mailpit/archive/refs/tags/v1.29.6.tar.gz"
+  sha256 "fa8bfc5a70ee20212f3bbfa1333d4a7b99f8e706f26d83a73143c4db1f0a45fd"
   license "MIT"
 
   bottle do
@@ -40,6 +40,6 @@ class Mailpit < Formula
     output = shell_output("#{bin}/mailpit sendmail < #{testpath}/test_email.txt 2>&1", 11)
     assert_match "error parsing message body: malformed header line", output
 
-    assert_match "mailpit v#{version}", shell_output("#{bin}/mailpit version", 1)
+    assert_match "mailpit v#{version}", shell_output("#{bin}/mailpit version")
   end
 end
