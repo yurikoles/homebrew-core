@@ -8,8 +8,7 @@ class Flume < Formula
   revision 1
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "b212fda0b5caa76fc7ad1fa8004d263e96cd3ca19284cc2cdce2f3cd54dc4511"
+    sha256 cellar: :any_skip_relocation, all: "48db8221f283446a57987c14a36acd4cc21848c24ca31b00f45b59ed12bf3710"
   end
 
   depends_on "hadoop"
