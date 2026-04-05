@@ -36,11 +36,13 @@ class UBootTools < Formula
     system "make", "tools-only", "NO_SDL=1"
     bin.install "tools/mkimage"
     bin.install "tools/dumpimage"
+    bin.install "tools/mkenvimage"
     man1.install "doc/mkimage.1"
   end
 
   test do
     system bin/"mkimage", "-V"
     system bin/"dumpimage", "-V"
+    system bin/"mkenvimage", "-V"
   end
 end
