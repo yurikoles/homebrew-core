@@ -14,12 +14,7 @@ class Goenv < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d21c7170f8e183cfe24327e6c1439d20ca5faaf4dfbb26e12af4e6b6986c448f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d21c7170f8e183cfe24327e6c1439d20ca5faaf4dfbb26e12af4e6b6986c448f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d21c7170f8e183cfe24327e6c1439d20ca5faaf4dfbb26e12af4e6b6986c448f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f4c4c6446bde9d0afb8a348c6af67d4f6848eb1b0aeaf4bfda78342f31ec77bf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d21c7170f8e183cfe24327e6c1439d20ca5faaf4dfbb26e12af4e6b6986c448f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d21c7170f8e183cfe24327e6c1439d20ca5faaf4dfbb26e12af4e6b6986c448f"
+    sha256 cellar: :any_skip_relocation, all: "b8bc908bc6c60b183035d20dbc709b4a6e42793ae1f29c55976431d520583d63"
   end
 
   def install
