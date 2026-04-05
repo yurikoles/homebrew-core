@@ -1,8 +1,8 @@
 class Kingfisher < Formula
   desc "MongoDB's blazingly fast secret scanning and validation tool"
   homepage "https://github.com/mongodb/kingfisher"
-  url "https://github.com/mongodb/kingfisher/archive/refs/tags/v1.93.0.tar.gz"
-  sha256 "32fe5df07c5202160225dee78edc2d6efaf5e395d971a1e8f4940f3a964caccc"
+  url "https://github.com/mongodb/kingfisher/archive/refs/tags/v1.94.0.tar.gz"
+  sha256 "80510c426a7f94aa1e9e1f5051170272be16ea0889d20ffd2012e3ad3c35501f"
   license "Apache-2.0"
 
   bottle do
@@ -22,7 +22,9 @@ class Kingfisher < Formula
   uses_from_macos "bzip2"
 
   def install
-    system "cargo", "install", *std_cargo_args(features: "system-alloc")
+    args = std_cargo_args
+    args << "--features=system-alloc" if OS.mac?
+    system "cargo", "install", *args
   end
 
   test do
