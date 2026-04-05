@@ -1,8 +1,8 @@
 class GoAir < Formula
   desc "Live reload for Go apps"
   homepage "https://github.com/air-verse/air"
-  url "https://github.com/air-verse/air/archive/refs/tags/v1.64.5.tar.gz"
-  sha256 "344202da98e4497825feb7459a6728ea113fffcf661215cf1ee4f313f3324a86"
+  url "https://github.com/air-verse/air/archive/refs/tags/v1.65.0.tar.gz"
+  sha256 "4322f6f331b2f8e62c7b2afb4b94c903d09cfbb710098cb2020ebdcfb162ccc1"
   license "GPL-3.0-or-later"
   head "https://github.com/air-verse/air.git", branch: "master"
 
@@ -20,18 +20,17 @@ class GoAir < Formula
   conflicts_with "air", because: "both install binaries with the same name"
 
   def install
-    ldflags = [
-      "-s", "-w",
-      "-X", "'main.BuildTimestamp=#{time.iso8601}'",
-      "-X", "'main.airVersion=v#{version}'",
-      "-X", "'main.goVersion=#{Formula["go"].version}'"
+    ldflags = %W[
+      -s -w
+      -X main.BuildTimestamp=#{time.iso8601}
+      -X main.airVersion=v#{version}
+      -X main.goVersion=#{Formula["go"].version}
     ]
-
     system "go", "build", *std_go_args(ldflags: ldflags.join(" "), output: bin/"air")
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/air -v")
+    assert_match version.to_s, shell_output("#{bin}/air -v 2>&1")
     (testpath/"air-test").mkpath
     cd testpath/"air-test" do
       system "go", "mod", "init", "air-test"
