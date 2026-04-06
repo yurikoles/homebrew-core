@@ -11,12 +11,13 @@ class UBootTools < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "88479294771ca0eb46089a2d4c8f587ab4aae4c6d9bb3d36873862148beb6837"
-    sha256 cellar: :any,                 arm64_sequoia: "278278c783544f5edca4bff2862499af8a0ec500f7a6ffc495b5c6765cedec5e"
-    sha256 cellar: :any,                 arm64_sonoma:  "85267b211db10cdb89d2afd4b098f43501beb921da8fcbf0755b28aaf2cbad38"
-    sha256 cellar: :any,                 sonoma:        "f38775bf05bd5991b1d1bf5c0b105cf276ea782037e11b1e091badacc1777842"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "06daa7f7fa4fd38bd3f7d4f587e49ad3539c769d7b00586be1cd0f4086fa451c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "999e0af3ac7448b1c8d8eb2c36afb58985e27b9f4057b4aab2151c7e952a7bdc"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "c10457ea0b85206900f4f13fb26a2d849f7515ba196fdea3824cd748b8c1abb8"
+    sha256 cellar: :any,                 arm64_sequoia: "23d9bfd4e25d14b36653de63d348dbce494abcf8d2678ee19c26091f160fcbf6"
+    sha256 cellar: :any,                 arm64_sonoma:  "9a4b46a4529ed0a972f947b1ffdaf1f551f985f0233f27b854577d2531d65509"
+    sha256 cellar: :any,                 sonoma:        "4e8a2e26723044930803c88a92dc78311b304d59d4141fa0af511db7afca3f27"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cab804bdf8d0ac94a1f66e23f2348dd93c1bbeb27cb68f0d7666378687108ebc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cf55d572e176b78f7db2b095da1e5354049628ea26fed798c36f9482bf6669f8"
   end
 
   depends_on "coreutils" => :build # Makefile needs $(gdate)
