@@ -1,8 +1,8 @@
 class UmkaLang < Formula
   desc "Statically typed embeddable scripting language"
   homepage "https://github.com/vtereshkov/umka-lang"
-  url "https://github.com/vtereshkov/umka-lang/archive/refs/tags/v1.5.5.tar.gz"
-  sha256 "b7673a445ee2ffbd161c89cb076452d8e04c4d842babf6c5bca963e52b75adfd"
+  url "https://github.com/vtereshkov/umka-lang/archive/refs/tags/v1.5.6.tar.gz"
+  sha256 "cf82ad85745339371172a0785fb44aeb60b7a78142ff55d6b3518d77abaa46ba"
   license "BSD-2-Clause"
   head "https://github.com/vtereshkov/umka-lang.git", branch: "master"
 
