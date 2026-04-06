@@ -1,8 +1,8 @@
 class GitSpice < Formula
   desc "Manage stacked Git branches"
   homepage "https://abhinav.github.io/git-spice/"
-  url "https://github.com/abhinav/git-spice/archive/refs/tags/v0.24.2.tar.gz"
-  sha256 "6605166dc47b179af0d3e9714dba83254b633e78d6b0bc2189592c5067b0ccf2"
+  url "https://github.com/abhinav/git-spice/archive/refs/tags/v0.25.0.tar.gz"
+  sha256 "b00cc82627ae71cdba3890db2179b19a563f26d24d0ed9ee41de18cace3d3d67"
   license "GPL-3.0-or-later"
   head "https://github.com/abhinav/git-spice.git", branch: "main"
 
@@ -24,17 +24,13 @@ class GitSpice < Formula
   def install
     ldflags = "-s -w -X main._version=#{version}"
     system "go", "build", *std_go_args(ldflags:, output: bin/"git-spice")
-    bin.install_symlink "git-spice" => "gs"
 
-    generate_completions_from_executable(bin/"gs", "shell", "completion")
     generate_completions_from_executable(bin/"git-spice", "shell", "completion")
   end
 
   def caveats
     <<~EOS
-      The executable has been renamed to 'git-spice'.
-      To ease the transition, this release also symlinks 'gs' to 'git-spice'.
-      The symlink will be dropped in a future release.
+      The 'gs' executable has been renamed to 'git-spice'.
       If you prefer to use 'gs', add an alias to your shell configuration:
 
         alias gs='git-spice'
