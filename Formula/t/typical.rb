@@ -1,8 +1,8 @@
 class Typical < Formula
   desc "Data interchange with algebraic data types"
   homepage "https://github.com/stepchowfun/typical"
-  url "https://github.com/stepchowfun/typical/archive/refs/tags/v0.12.1.tar.gz"
-  sha256 "d7759bc05f011c915b54b359bcd9563d4b371703ccc57ea005142be6cd219e86"
+  url "https://github.com/stepchowfun/typical/archive/refs/tags/v0.13.0.tar.gz"
+  sha256 "fe6bf0c7eb5d8f58055cfdfc18559dd953aaf16d78957729f21f9c3854bbb9aa"
   license "MIT"
 
   bottle do
@@ -19,9 +19,6 @@ class Typical < Formula
   end
 
   depends_on "rust" => :build
-
-  # eliminate needless lifetimes, upstream pr ref, https://github.com/stepchowfun/typical/pull/501
-  patch :DATA
 
   def install
     system "cargo", "install", *std_cargo_args
@@ -58,18 +55,3 @@ class Typical < Formula
     assert_match "export type SendEmailResponseOut", generated_typescript_code
   end
 end
-
-__END__
-diff --git a/src/error.rs b/src/error.rs
-index 4563e1e..213faf9 100644
---- a/src/error.rs
-+++ b/src/error.rs
-@@ -34,7 +34,7 @@ impl fmt::Display for Error {
- }
-
- impl error::Error for Error {
--    fn source<'a>(&'a self) -> Option<&(dyn error::Error + 'static)> {
-+    fn source(&self) -> Option<&(dyn error::Error + 'static)> {
-         self.reason.as_deref()
-     }
- }
