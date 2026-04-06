@@ -1,8 +1,8 @@
 class Feh < Formula
   desc "X11 image viewer"
   homepage "https://feh.finalrewind.org/"
-  url "https://feh.finalrewind.org/feh-3.12.tar.bz2"
-  sha256 "d35e88671f668d28ab21ff868c9703f8e83d5b0f60712708311b2ae3ba2ad993"
+  url "https://feh.finalrewind.org/feh-3.12.1.tar.bz2"
+  sha256 "6772f48e7956a16736e4c165a8367f357efc413b895f5b04133366e01438f95d"
   license "MIT-feh"
 
   livecheck do
