@@ -13,7 +13,7 @@ class Skip < Formula
     sha256 x86_64_linux:  "f6e01984983460e07ca3c524922fb423cdb466ec09d104477f38183a2648a2ae"
   end
 
-  depends_on xcode: ["16.4", :build]
+  depends_on xcode: :build
   depends_on "gradle"
   depends_on "openjdk"
   depends_on "swiftly"
