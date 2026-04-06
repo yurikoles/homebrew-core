@@ -1,8 +1,8 @@
 class Gitnr < Formula
   desc "Create `.gitignore` using templates from TopTal, GitHub or your own collection"
   homepage "https://github.com/reemus-dev/gitnr"
-  url "https://github.com/reemus-dev/gitnr/archive/refs/tags/v0.2.2.tar.gz"
-  sha256 "835f56863b043d39f572d63914af07bbc9e0a7814de404ebc0e147d460e10cdc"
+  url "https://github.com/reemus-dev/gitnr/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "b8e15c00465b20df576bcb68a13cdb9e9afbfc908208c47cd51d3d3a62164b27"
   license "MIT"
   head "https://github.com/reemus-dev/gitnr.git", branch: "main"
 
