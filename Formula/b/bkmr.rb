@@ -1,8 +1,8 @@
 class Bkmr < Formula
   desc "Unified CLI Tool for Bookmark, Snippet, and Knowledge Management"
   homepage "https://github.com/sysid/bkmr"
-  url "https://github.com/sysid/bkmr/archive/refs/tags/v6.7.0.tar.gz"
-  sha256 "155373f4eafa21cf7b4d02b9463b2ed105ca42b65983d426ebf417457f0ce085"
+  url "https://github.com/sysid/bkmr/archive/refs/tags/v7.5.0.tar.gz"
+  sha256 "1830546367001a5714ab8e068dc137932700b42cd1e6ea9c8c0e80f255edbe0d"
   license "BSD-3-Clause"
   head "https://github.com/sysid/bkmr.git", branch: "main"
 
@@ -21,6 +21,7 @@ class Bkmr < Formula
   end
 
   depends_on "rust" => :build
+  depends_on "onnxruntime"
   depends_on "openssl@3"
 
   uses_from_macos "python"
@@ -31,7 +32,8 @@ class Bkmr < Formula
       # https://docs.rs/openssl/latest/openssl/#manual
       ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
 
-      system "cargo", "install", *std_cargo_args
+      system "cargo", "install", *std_cargo_args(features: "system-ort"),
+             "--no-default-features"
     end
 
     generate_completions_from_executable(bin/"bkmr", "completion")
