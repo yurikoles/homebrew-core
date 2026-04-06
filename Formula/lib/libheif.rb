@@ -3,7 +3,8 @@ class Libheif < Formula
   homepage "https://www.libde265.org/"
   url "https://github.com/strukturag/libheif/releases/download/v1.21.2/libheif-1.21.2.tar.gz"
   sha256 "75f530b7154bc93e7ecf846edfc0416bf5f490612de8c45983c36385aa742b42"
-  license "LGPL-3.0-only"
+  license "LGPL-3.0-or-later"
+  revision 1
   compatibility_version 1
 
   bottle do
@@ -30,10 +31,15 @@ class Libheif < Formula
   def install
     args = %W[
       -DCMAKE_INSTALL_RPATH=#{rpath}
+      -DPLUGIN_DIRECTORY=#{HOMEBREW_PREFIX}/lib/libheif
+      -DPLUGIN_INSTALL_DIRECTORY=#{lib}/libheif
       -DWITH_DAV1D=OFF
+      -DWITH_EXAMPLE_HEIF_VIEW=OFF
       -DWITH_GDK_PIXBUF=OFF
+      -DWITH_OpenH264_DECODER=OFF
       -DWITH_RAV1E=OFF
       -DWITH_SvtEnc=OFF
+      -DWITH_X264=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
