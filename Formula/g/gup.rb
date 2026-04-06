@@ -21,8 +21,7 @@ class Gup < Formula
     ldflags = "-s -w -X github.com/nao1215/gup/internal/cmdinfo.Version=v#{version}"
     system "go", "build", *std_go_args(ldflags:)
 
-    # upstream bug report on powershell completion support, https://github.com/nao1215/gup/issues/233
-    generate_completions_from_executable(bin/"gup", shell_parameter_format: :cobra, shells: [:bash, :zsh, :fish])
+    generate_completions_from_executable(bin/"gup", shell_parameter_format: :cobra)
 
     ENV["MANPATH"] = man1.mkpath
     system bin/"gup", "man"
