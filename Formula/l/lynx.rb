@@ -4,7 +4,7 @@ class Lynx < Formula
   url "https://invisible-mirror.net/archives/lynx/tarballs/lynx2.9.2.tar.bz2"
   mirror "https://fossies.org/linux/www/lynx2.9.2.tar.bz2"
   sha256 "7374b89936d991669e101f4e97f2c9592036e1e8cdaa7bafc259a77ab6fb07ce"
-  license "GPL-2.0-only"
+  license "GPL-2.0-only" # with non-SPDX exception in COPYHEADER to use OpenSSL and other libs
 
   livecheck do
     url "https://invisible-mirror.net/archives/lynx/tarballs/?C=M&O=D"
@@ -49,6 +49,7 @@ class Lynx < Formula
                           "--enable-externs",
                           "--disable-config-info"
     system "make", "install"
+    prefix.install "COPYHEADER"
   end
 
   test do
