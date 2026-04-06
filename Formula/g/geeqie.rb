@@ -4,6 +4,7 @@ class Geeqie < Formula
   url "https://github.com/BestImageViewer/geeqie/releases/download/v2.7/geeqie-2.7.tar.xz"
   sha256 "9b5f342d3cc47782716711e56c3c7a045b4bbeaa653e192d49ce2d5e87ac8106"
   license "GPL-2.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
