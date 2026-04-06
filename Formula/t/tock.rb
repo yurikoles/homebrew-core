@@ -7,12 +7,12 @@ class Tock < Formula
   head "https://github.com/kriuchkov/tock.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "470fc91bb5bdd2433a81ce86dab5e80c6baa7aed38a5ca7571cc604ed03a338c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "35744982d8be71ea9ac60968ed078e1428a2d368aabc2f8992eab3cf4c587105"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ce21abdf0ae42ad61f63afdf56c6edfb0646ee867139a4ff2882bb1777752f96"
-    sha256 cellar: :any_skip_relocation, sonoma:        "adc8d98aa6eb06ad164175c4344b38d02109dbd924965f4b33f93a6151c75b30"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a98d637d05893dce6b6351fce0a48186d077d75bea9376d271ac70e3b8d7b38e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "637b0c07e0efd641b27658d4db517bf0eafaffe43c2c1147b3ec343d31a579a9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "13bb8161c219557c605521e1a83be9eda8e15416f1d15808c0bfd05342cbea6b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "75bf8207061c801d0d98a6a52d49eb564568d92c128b61c0b3a2e458a3dde642"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f1ef200abfaa7a6107af8a9288842d8621e8ed728587c761785357f8df5503a3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "81d119734a9d7d3be0a1cf2d98b3906b0ef9e87f84896b8733dd60d06cb14cce"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b00379df86c042194a79d73975c1be261f7f768705fba6c0453bc8e40656c520"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "feb4d950f7da38036889e0fd7daf63a769318bbd763a991029581cccb3f67784"
   end
 
   depends_on "go" => :build
