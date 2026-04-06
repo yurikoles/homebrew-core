@@ -7,12 +7,12 @@ class BoshCli < Formula
   head "https://github.com/cloudfoundry/bosh-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e68bf9ea73768cf8379dfdad51bd5faadbf195057dc7194edd25051482b3f951"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e68bf9ea73768cf8379dfdad51bd5faadbf195057dc7194edd25051482b3f951"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e68bf9ea73768cf8379dfdad51bd5faadbf195057dc7194edd25051482b3f951"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a33581a869ae3eeb297b8776ee2b01c79c32f14aa9f0cce014359e64b5135ca5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "40ace130026ead730ff33f4ada6b09d171a74ae064375ca4e5153c9523b1ff9a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "86c76be2bbcb81b873f33410cf5bfbe0595f11e34c8056601e5bfaadf258e49d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9503d7b70f2a9a7ed8d3a3fb954ed989d7cd97a0a18bf5985ed841efa8febdad"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9503d7b70f2a9a7ed8d3a3fb954ed989d7cd97a0a18bf5985ed841efa8febdad"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9503d7b70f2a9a7ed8d3a3fb954ed989d7cd97a0a18bf5985ed841efa8febdad"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ab640d86ff364fd39101fa6000c18f7b504d67ee0bb3d3e9d89e454f6be5c534"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ee400a9d8ad69254d7cfc1975b479e615cee0270ce6a8d7629ad4f3aa62fa892"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "05bf669e107f8154590c50c90d5b795fd458ebf5d2476bdee0a1a39c1b115ab4"
   end
 
   depends_on "go" => :build
