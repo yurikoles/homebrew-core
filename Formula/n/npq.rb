@@ -1,8 +1,8 @@
 class Npq < Formula
   desc "Audit npm packages before you install them"
   homepage "https://github.com/lirantal/npq"
-  url "https://registry.npmjs.org/npq/-/npq-3.16.2.tgz"
-  sha256 "1e35f2dc64f4b375c27d784a132c03c57087281512eeefff238423ae5475d74c"
+  url "https://registry.npmjs.org/npq/-/npq-3.16.4.tgz"
+  sha256 "1521818148c518e9628acd0b64498211e722c415f6af822055fb09929ccd1562"
   license "Apache-2.0"
 
   bottle do
