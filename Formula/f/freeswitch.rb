@@ -1,7 +1,10 @@
 class Freeswitch < Formula
   desc "Telephony platform to route various communication protocols"
   homepage "https://freeswitch.org"
-  license "MPL-1.1"
+  license all_of: [
+    "MPL-1.1",
+    "LGPL-2.1-only", # spandsp
+  ]
   revision 1
   head "https://github.com/signalwire/freeswitch.git", branch: "master"
 
@@ -11,24 +14,6 @@ class Freeswitch < Formula
     url "https://github.com/signalwire/freeswitch.git",
         tag:      "v1.10.12",
         revision: "a88d069d6ffb74df797bcaf001f7e63181c07a09"
-
-    # Backport support for FFmpeg 7.1
-    patch do
-      url "https://github.com/signalwire/freeswitch/commit/9dccd0b6e6761434d54d75d6385cdc7a7b3fa39c.patch?full_index=1"
-      sha256 "b08adbb5507d655fe0f6f6b2338a724a97413eb2323b6804ae453c86be1fed84"
-    end
-    patch do
-      url "https://github.com/signalwire/freeswitch/commit/58776f3eed03951e3a712c5124a12616f5aa735f.patch?full_index=1"
-      sha256 "30248f603ff433bf1a4e1e45c3b2dd0779604bac7546c522ed77f49e2240ff7a"
-    end
-    patch do
-      url "https://github.com/signalwire/freeswitch/commit/1fd9ac9dd1bdae6e1bd794119f8e5328fe4c7f6c.patch?full_index=1"
-      sha256 "38774910ce5fd337fc6dd1ae44d6693facb8aa3f387568b870755f836c29aef9"
-    end
-    patch do
-      url "https://github.com/signalwire/freeswitch/commit/066b92c5894b07a4879a26a9f6a1cdcf59e016ea.patch?full_index=1"
-      sha256 "e3b17c6d3f8b084b981398fc913b260c7b3085c1baa6842cf702ba10b1c8b4c5"
-    end
 
     # Backport commits to cleanly apply PCRE 2 patches
     patch do
@@ -83,7 +68,6 @@ class Freeswitch < Formula
   depends_on "libtool" => :build
   depends_on "pkgconf" => :build
 
-  depends_on "ffmpeg@7"
   depends_on "freetype"
   depends_on "jpeg-turbo"
   depends_on "ldns"
@@ -111,7 +95,7 @@ class Freeswitch < Formula
   end
 
   on_intel do
-    depends_on "yasm" => :build
+    depends_on "nasm" => :build
   end
 
   #----------------------- Begin sound file resources -------------------------
@@ -234,6 +218,18 @@ class Freeswitch < Formula
       ENV.append_path "PKG_CONFIG_PATH", libexec/"lib/pkgconfig"
     end
 
+    system "./bootstrap.sh", "-j" # TODO: if build.head?
+
+    # Reject FFmpeg dependency due to MPL-1.1 incompatibility with GPL
+    # Ref: https://www.gnu.org/licenses/license-list.html#MPL
+    # Ref: https://www.mozilla.org/en-US/MPL/1.1/FAQ/
+    # Ref: https://github.com/signalwire/freeswitch/blob/master/src/mod/applications/mod_av/mod_av.c#L5
+    odie "MPL-1.1 is incompatible with FFmpeg's GPL license" if deps.any? { |dep| dep.name.start_with? "ffmpeg" }
+    inreplace "modules.conf", %r{^applications/mod_av$}, "#\\0"
+
+    # Workaround for opus_parse.h using true/false which are keywords in C23
+    ENV.append "CFLAGS", "-std=gnu17" if DevelopmentTools.clang_build_version >= 1700
+
     args = %W[
       --enable-shared
       --enable-static
@@ -242,7 +238,6 @@ class Freeswitch < Formula
     # Fails on ARM: https://github.com/signalwire/freeswitch/issues/1450
     args << "--disable-libvpx" if Hardware::CPU.arm?
 
-    system "./bootstrap.sh", "-j" # TODO: if build.head?
     system "./configure", *args, *std_configure_args
     system "make", "all"
     system "make", "install"
