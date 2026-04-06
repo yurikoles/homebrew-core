@@ -1,8 +1,8 @@
 class Libzim < Formula
   desc "Reference implementation of the ZIM specification"
   homepage "https://github.com/openzim/libzim"
-  url "https://github.com/openzim/libzim/archive/refs/tags/9.5.1.tar.gz"
-  sha256 "5f4ac87887b05a6eaa408b4f03d3486262c8a5c13e488024822b293cdefe8c0e"
+  url "https://github.com/openzim/libzim/archive/refs/tags/9.6.0.tar.gz"
+  sha256 "a4211000de19df0a36dd48180b295be63adfbdaba3ef75545b32087c0bd8189d"
   license "GPL-2.0-or-later"
 
   bottle do
