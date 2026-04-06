@@ -6,6 +6,13 @@ class Skip < Formula
   license "AGPL-3.0-only"
   head "https://github.com/skiptools/skipstone.git", branch: "main"
 
+  bottle do
+    sha256 arm64_tahoe:   "6521c7936af33ce020b1b0bbfe441b2df5d7cea5c02964ccc44dfb4f4bf62d13"
+    sha256 arm64_sequoia: "ee7f037c4fdfb104b770d51a882ee7fd24b6a776143d11cf347ff9b6a909909a"
+    sha256 arm64_linux:   "73616dba3e5081a837d6298981c752510a62508d441ee13272a59c48c7983f75"
+    sha256 x86_64_linux:  "f6e01984983460e07ca3c524922fb423cdb466ec09d104477f38183a2648a2ae"
+  end
+
   depends_on xcode: ["16.4", :build]
   depends_on "gradle"
   depends_on "openjdk"
