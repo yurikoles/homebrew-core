@@ -11,12 +11,12 @@ class Feh < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "acd6946f531bbe923078fbb4d0dd3ca298bb074bd78ab853e9adf4c69087b6e7"
-    sha256 arm64_sequoia: "823cac9c826de44b2413df78d3399cf781525b5189bc6d55003097c20607b087"
-    sha256 arm64_sonoma:  "bbbfdbe90db4b0354f51cc90e046495876fce6e3122a792ddd4e09a4be3a67e4"
-    sha256 sonoma:        "03ff660534bc9a35c309f0755bd263d805e68e6a93f15016bdf4136761cdf0c3"
-    sha256 arm64_linux:   "7e494188e34225311fb3ae5e9ba167a1d2ae1600a90d9eda680677097577b42b"
-    sha256 x86_64_linux:  "3c91917785f8097674d4a6dc658b16d7305e2ff8b9a09e77c84a70436030a6cf"
+    sha256 arm64_tahoe:   "d125fcc727286d6f936a304c25b9aaea87190a9c1610a5ea61d4b69600db57d9"
+    sha256 arm64_sequoia: "c2c3feb79abb0904ce88f4448c4e9f2e9505d474cf97c255ec3be0cbceb08b6c"
+    sha256 arm64_sonoma:  "ea3fb1a1c4bb0a98bb0398df78aa0b4dee45162de111ec18b58b48edeec54e00"
+    sha256 sonoma:        "e439ec50cecd61bf2f5fbdd8ff52116b3f6ba70ea17dddd0eb1005ac7d7d1a94"
+    sha256 arm64_linux:   "3a45c29c3294ef9e5a0046ddbaed2d10b8763ed7e24cf2672a8f538a3ed44823"
+    sha256 x86_64_linux:  "979d35e8be0131e6b7cbd508a91692ccfbc93f555921204fba4a178294f75bd9"
   end
 
   depends_on "imlib2"
