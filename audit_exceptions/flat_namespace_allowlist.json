@@ -14,6 +14,5 @@
   "pypy3.9",
   "soapysdr",
   "tcl-tk@8",
-  "uhd",
-  "xvid"
+  "uhd"
 ]
