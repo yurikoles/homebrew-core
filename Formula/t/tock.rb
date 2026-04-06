@@ -1,8 +1,8 @@
 class Tock < Formula
   desc "Powerful time tracking tool for the command-line"
   homepage "https://github.com/kriuchkov/tock"
-  url "https://github.com/kriuchkov/tock/archive/refs/tags/v1.8.2.tar.gz"
-  sha256 "99d6292d12bda04dbcb43d35455ba56e233cac1921792ff68a4ca3b9bfe9734c"
+  url "https://github.com/kriuchkov/tock/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "26cdedf4162ac82d21dd3e627dc1c5e5fd880e857727b2586719dd6006cfeb21"
   license "GPL-3.0-or-later"
   head "https://github.com/kriuchkov/tock.git", branch: "master"
 
@@ -20,9 +20,9 @@ class Tock < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/kriuchkov/tock/internal/adapters/cli.version=#{version}
-      -X github.com/kriuchkov/tock/internal/adapters/cli.commit=#{tap.user}
-      -X github.com/kriuchkov/tock/internal/adapters/cli.date=#{Date.today}
+      -X github.com/kriuchkov/tock/internal/app/commands.version=#{version}
+      -X github.com/kriuchkov/tock/internal/app/commands.commit=#{tap.user}
+      -X github.com/kriuchkov/tock/internal/app/commands.date=#{Date.today}
     ]
 
     system "go", "build", *std_go_args(ldflags:), "./cmd/tock"
