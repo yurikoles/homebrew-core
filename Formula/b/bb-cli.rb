@@ -6,7 +6,7 @@ class BbCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "67252628d98b2e2d08c318ea8ca28f4adec75f14a5da360b03cd4c5c34513ec8"
+    sha256 cellar: :any_skip_relocation, all: "9103b2f8975990a2d66486c6e1e0b7432393dfdee1477393f5b8e8d2f28471c8"
   end
 
   depends_on "php"
