@@ -1,8 +1,8 @@
 class NetlifyCli < Formula
   desc "Netlify command-line tool"
   homepage "https://www.netlify.com/docs/cli"
-  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-24.9.0.tgz"
-  sha256 "ade1db6e65401a8bb73423c9143890d840b5ab2422c65f1d171791d9cf865c2d"
+  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-24.10.0.tgz"
+  sha256 "38ab4113724bc58f9490ffee124f336f352856a4cf3624a32d40c0f5f0dcd1df"
   license "MIT"
 
   bottle do
@@ -46,7 +46,7 @@ class NetlifyCli < Formula
     rm_r(node_modules.glob("@parcel/watcher-{darwin,linux}*"))
 
     clipboardy_fallbacks_dir = node_modules/"clipboardy/fallbacks"
-    rm_r(clipboardy_fallbacks_dir) # remove pre-built binaries
+    rm_r(clipboardy_fallbacks_dir, force: true) # remove pre-built binaries
     if OS.linux?
       linux_dir = clipboardy_fallbacks_dir/"linux"
       linux_dir.mkpath
