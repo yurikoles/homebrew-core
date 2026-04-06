@@ -1,8 +1,8 @@
 class UutilsCoreutils < Formula
   desc "Cross-platform Rust rewrite of the GNU coreutils"
   homepage "https://uutils.github.io/coreutils/"
-  url "https://github.com/uutils/coreutils/archive/refs/tags/0.7.0.tar.gz"
-  sha256 "dc56a3c4632742357d170d60a7dcecb9693de710daeaafa3ad925750b1905522"
+  url "https://github.com/uutils/coreutils/archive/refs/tags/0.8.0.tar.gz"
+  sha256 "03f765fd23e9cc66f8789edc6928644d8eae5e5a7962d83795739d0a8a85eaef"
   license "MIT"
   head "https://github.com/uutils/coreutils.git", branch: "main"
 
@@ -23,9 +23,6 @@ class UutilsCoreutils < Formula
   depends_on "rust" => :build
   depends_on "sphinx-doc" => :build
 
-  # TODO: remove in follow-up to 0.8.0 bump PR
-  conflicts_with "unp", because: "both install `ucat` binaries"
-
   def install
     man1.mkpath
 
@@ -43,16 +40,6 @@ class UutilsCoreutils < Formula
     coreutils_filenames(bin).each do |cmd|
       uu_cmd = bin/"uu-#{cmd}"
       (libexec/"uubin").install_symlink uu_cmd.realpath => cmd
-
-      # Create a temporary compatibility executable for previous 'u' prefix.
-      # All users should get the warning in 0.6.0. Similar to brew's odeprecate
-      # timeframe, the removal can be done after 2 minor releases, i.e. 0.8.0.
-      odie "Remove compatibility exec scripts!" if build.stable? && version >= "0.8.0"
-      (bin/"u#{cmd}").write <<~SHELL
-        #!/bin/bash
-        echo "WARNING: u#{cmd} has been renamed to uu-#{cmd} and will be removed in 0.8.0" >&2
-        exec "#{uu_cmd}" "$@"
-      SHELL
     end
 
     # Symlink all man(1) pages into libexec/uuman without the 'uu-' prefix
@@ -85,7 +72,6 @@ class UutilsCoreutils < Formula
   test do
     (testpath/"test").write("test")
     (testpath/"test.sha1").write("a94a8fe5ccb19ba61c4c0873d391e987982fbbd3 test")
-    system bin/"usha1sum", "-c", "test.sha1" # TODO: remove in 0.8.0
     system bin/"uu-sha1sum", "-c", "test.sha1"
     system bin/"uu-ln", "-f", "test", "test.sha1"
   end
