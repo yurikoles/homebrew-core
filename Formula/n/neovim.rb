@@ -6,8 +6,8 @@ class Neovim < Formula
   head "https://github.com/neovim/neovim.git", branch: "master"
 
   stable do
-    url "https://github.com/neovim/neovim/archive/refs/tags/v0.12.0.tar.gz"
-    sha256 "76b4875fc1a4805a807a9fa53ff0c8fb081620137a40fb879b32436e375aeb65"
+    url "https://github.com/neovim/neovim/archive/refs/tags/v0.12.1.tar.gz"
+    sha256 "41898a5073631bc8fd9ac43476b811c05fb3b88ffb043d4fbb9e75e478457336"
 
     # Keep resources updated according to:
     # https://github.com/neovim/neovim/blob/v#{version}/cmake.deps/deps.txt
