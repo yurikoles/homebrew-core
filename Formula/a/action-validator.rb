@@ -2,8 +2,8 @@ class ActionValidator < Formula
   desc "Tool to validate GitHub Action and Workflow YAML files"
   homepage "https://github.com/mpalmer/action-validator"
   # Using crates.io source as it includes schemastore submodule code
-  url "https://static.crates.io/crates/action-validator/action-validator-0.8.0.crate"
-  sha256 "775af1141ba0d546fd6dcd3b9f648e0ec340ea06b585e303b585b728bc236d86"
+  url "https://static.crates.io/crates/action-validator/action-validator-0.9.0.crate"
+  sha256 "e379b5be9a8a4659aaec855a3321e40d98c5216d6191bc362a24d5b605a2cbcb"
   license "GPL-3.0-only"
   head "https://github.com/mpalmer/action-validator.git", branch: "main"
 
