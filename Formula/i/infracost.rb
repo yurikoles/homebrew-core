@@ -9,12 +9,12 @@ class Infracost < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "45592f4284a4afe029e485aecaa415fbeaf0a831eb801f24f622a1a67e29a52d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "45592f4284a4afe029e485aecaa415fbeaf0a831eb801f24f622a1a67e29a52d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "45592f4284a4afe029e485aecaa415fbeaf0a831eb801f24f622a1a67e29a52d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e1c476e5b68acc3f437d0a2304cc7ad3700762a6fc128e16637d723eaa060fd9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f7e1f629c6c0862f18865f910d3fa043ad5236d54ab69b8087adae83b923d25a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "66dead16524f33f4e7dede778dcaab0f20e5f91b5f08f5cff4c83b9c1f45e1c4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "12a68a6ec410dd1883c8cf5a63b594631678cead882d7af914f0a5a08d3df06f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "12a68a6ec410dd1883c8cf5a63b594631678cead882d7af914f0a5a08d3df06f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "12a68a6ec410dd1883c8cf5a63b594631678cead882d7af914f0a5a08d3df06f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e86f96207d558bac70c4a3dda6961cffdb918d33a415fef56cb29fdd77d60cdf"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "177cd3e7ebf2c55adc1e241e0df892e02e8607b0cba1ef8914825fa97255f155"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0a31d56b9fc59a944c1f56dc2afb2edf9d56cc491f46a02e42d72bd3d9ce7558"
   end
 
   depends_on "go" => :build
