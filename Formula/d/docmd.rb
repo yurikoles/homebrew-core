@@ -6,12 +6,7 @@ class Docmd < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5654fddb2a9a8b030201e830ac90511a300b58e86227fc9e56438641530cb780"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "3ebccec43de01538c7ea5ce2ffa145628a9bd2d6c410af9f4e51242eb6a4fb5b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3ebccec43de01538c7ea5ce2ffa145628a9bd2d6c410af9f4e51242eb6a4fb5b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "53f085db2926573892b8e22d0fac36a6d45f45f62364bb1cb3509810b83c810a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "69d843682b59d636c4bbc746a9cfb3dc4716c706c5516268b21763c3a5ff5f12"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69d843682b59d636c4bbc746a9cfb3dc4716c706c5516268b21763c3a5ff5f12"
+    sha256 cellar: :any_skip_relocation, all: "1ff331c9388e5fcb4056d4439c2f76560ea3a523768306ca18bb84b4973c05d9"
   end
 
   depends_on "esbuild" # for prebuilt binaries
