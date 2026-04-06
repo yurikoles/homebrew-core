@@ -25,14 +25,27 @@ class Libgit2 < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "libssh2"
+  depends_on "llhttp"
 
   on_linux do
     depends_on "openssl@3" # Uses SecureTransport on macOS
+    depends_on "pcre2" # Uses regcomp_l on macOS which needs xlocale.h
     depends_on "zlib-ng-compat"
   end
 
   def install
-    args = %w[-DBUILD_EXAMPLES=OFF -DBUILD_TESTS=OFF -DUSE_SSH=ON -DUSE_BUNDLED_ZLIB=OFF]
+    # Remove bundled libraries
+    rm_r(Dir["deps/*"] - ["deps/ntlmclient", "deps/xdiff"])
+
+    args = %w[
+      -DBUILD_EXAMPLES=OFF
+      -DBUILD_TESTS=OFF
+      -DUSE_BUNDLED_ZLIB=OFF
+      -DUSE_HTTP_PARSER=llhttp
+      -DUSE_SSH=ON
+    ]
+    # TODO: Switch to USE_REGEX in 1.10
+    args << "-DREGEX_BACKEND=pcre2" if OS.linux?
 
     system "cmake", "-S", ".", "-B", "build", "-DBUILD_SHARED_LIBS=ON", *args, *std_cmake_args
     system "cmake", "--build", "build"
