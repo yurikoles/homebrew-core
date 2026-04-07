@@ -10,6 +10,15 @@ class Unitycatalog < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ee881ebb4140d889e7f410720bc914ba18103102b30be7e63cebd06ef69f5629"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "32924b5b58778dcdfd46578afbb6304c0ded6ab5d720549cde3fed78fa3070b5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "32924b5b58778dcdfd46578afbb6304c0ded6ab5d720549cde3fed78fa3070b5"
+  end
+
   depends_on "sbt" => :build
   depends_on "openjdk@21"
 
