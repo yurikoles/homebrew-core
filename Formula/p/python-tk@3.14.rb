@@ -1,8 +1,8 @@
 class PythonTkAT314 < Formula
   desc "Python interface to Tcl/Tk"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.14.3/Python-3.14.3.tgz"
-  sha256 "d7fe130d0501ae047ca318fa92aa642603ab6f217901015a1df6ce650d5470cd"
+  url "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz"
+  sha256 "b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b"
   license "Python-2.0"
 
   livecheck do
@@ -33,27 +33,27 @@ class PythonTkAT314 < Formula
       Formula["python@#{xy}"].opt_include/"python#{xy}"
     end
 
-    cd "Modules" do
-      tcltk_version = Formula["tcl-tk"].any_installed_version.major_minor
-      Pathname("setup.py").write <<~PYTHON
-        from setuptools import setup, Extension
+    tcltk_version = Formula["tcl-tk"].any_installed_version.major_minor
+    (buildpath/"Modules/pyproject.toml").write <<~TOML
+      [project]
+      name = "tkinter"
+      version = "#{version}"
+      description = "#{desc}"
 
-        setup(name="tkinter",
-              description="#{desc}",
-              version="#{version}",
-              ext_modules = [
-                Extension("_tkinter", ["_tkinter.c", "tkappinit.c"],
-                          define_macros=[("WITH_APPINIT", 1), ("TCL_WITH_EXTERNAL_TOMMATH", 1)],
-                          include_dirs=["#{python_include}/internal", "#{Formula["tcl-tk"].opt_include/"tcl-tk"}"],
-                          libraries=["tcl#{tcltk_version}", "tcl#{tcltk_version.major}tk#{tcltk_version}"],
-                          library_dirs=["#{Formula["tcl-tk"].opt_lib}"])
-              ]
-        )
-      PYTHON
-      system python3, "-m", "pip", "install", *std_pip_args(prefix: false, build_isolation: true),
-                                              "--target=#{libexec}", "."
-      rm_r libexec.glob("*.dist-info")
-    end
+      [tool.setuptools]
+      packages = []
+
+      [[tool.setuptools.ext-modules]]
+      name = "_tkinter"
+      sources = ["_tkinter.c", "tkappinit.c"]
+      define-macros = [["WITH_APPINIT", "1"], ["TCL_WITH_EXTERNAL_TOMMATH", "1"]]
+      include-dirs = ["#{python_include}/internal", "#{Formula["tcl-tk"].opt_include/"tcl-tk"}"]
+      libraries = ["tcl#{tcltk_version}", "tcl#{tcltk_version.major}tk#{tcltk_version}"]
+      library-dirs = ["#{Formula["tcl-tk"].opt_lib}"]
+    TOML
+    system python3, "-m", "pip", "install", *std_pip_args(prefix: false, build_isolation: true),
+                                            "--target=#{libexec}", "./Modules"
+    rm_r libexec.glob("*.dist-info")
   end
 
   test do
