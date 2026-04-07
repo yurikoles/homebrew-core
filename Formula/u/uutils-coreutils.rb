@@ -4,6 +4,7 @@ class UutilsCoreutils < Formula
   url "https://github.com/uutils/coreutils/archive/refs/tags/0.8.0.tar.gz"
   sha256 "03f765fd23e9cc66f8789edc6928644d8eae5e5a7962d83795739d0a8a85eaef"
   license "MIT"
+  revision 1
   head "https://github.com/uutils/coreutils.git", branch: "main"
 
   livecheck do
@@ -26,13 +27,12 @@ class UutilsCoreutils < Formula
   def install
     man1.mkpath
 
-    # Prevent to add a feature for `selinux`
-    inreplace "GNUmakefile", "$(SELINUX_PROGS)", ""
-
-    args = %W[
-      PROG_PREFIX=uu-
-      PREFIX=#{prefix}
-      SPHINXBUILD=#{Formula["sphinx-doc"].opt_bin}/sphinx-build
+    args = [
+      "PROG_PREFIX=uu-",
+      "PREFIX=#{prefix}",
+      "SPHINXBUILD=#{Formula["sphinx-doc"].opt_bin}/sphinx-build",
+      "MULTICALL=y",
+      "LN=ln -sf",
     ]
     system "make", "install", *args
 
