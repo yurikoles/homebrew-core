@@ -44,6 +44,15 @@ class Aptos < Formula
     inreplace ".cargo/config.toml", /,\s*"-C",\s*"target-cpu=x86-64-v3"/, ""
 
     system "cargo", "install", *std_cargo_args(path: "crates/aptos"), "--profile=cli"
+
+    # stdout is not supported, so install manually
+    %w[bash zsh fish powershell].each do |shell|
+      system bin/"aptos", "config", "generate-shell-completions", "--shell", shell, "--output-file", "aptos.#{shell}"
+    end
+    bash_completion.install "aptos.bash" => "aptos"
+    zsh_completion.install "aptos.zsh" => "_aptos"
+    fish_completion.install "aptos.fish"
+    pwsh_completion.install "aptos.powershell" => "_aptos.ps1"
   end
 
   test do
