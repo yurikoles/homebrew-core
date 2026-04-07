@@ -20,6 +20,8 @@ class Air < Formula
 
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/air")
+
+    generate_completions_from_executable(bin/"air", "generate-shell-completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
