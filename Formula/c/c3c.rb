@@ -24,14 +24,14 @@ class C3c < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "lld@21"
-  depends_on "llvm@21"
+  depends_on "lld"
+  depends_on "llvm"
 
   uses_from_macos "curl"
 
   def install
-    lld = Formula["lld@21"]
-    llvm = Formula["llvm@21"]
+    lld = Formula["lld"]
+    llvm = Formula["llvm"]
 
     args = [
       "-DC3_LINK_DYNAMIC=ON",
