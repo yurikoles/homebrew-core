@@ -37,6 +37,7 @@ class Bottom < Formula
     bash_completion.install "#{out_dir}/completion/btm.bash" => "btm"
     fish_completion.install "#{out_dir}/completion/btm.fish"
     zsh_completion.install "#{out_dir}/completion/_btm"
+    pwsh_completion.install "#{out_dir}/completion/_btm.ps1"
     man1.install "#{out_dir}/manpage/btm.1"
   end
 
