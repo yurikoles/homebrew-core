@@ -1,8 +1,8 @@
 class Marked < Formula
   desc "Markdown parser and compiler built for speed"
   homepage "https://marked.js.org/"
-  url "https://registry.npmjs.org/marked/-/marked-17.0.5.tgz"
-  sha256 "1aebca0400d160cb1bedca2e271daad0e324503b7e0d0b4b23781ca3293bacce"
+  url "https://registry.npmjs.org/marked/-/marked-18.0.0.tgz"
+  sha256 "9a4feb7d1643a6dca3ca62fab9c883d18d2838c1c717a000088d7a991fa3cc41"
   license "MIT"
 
   bottle do
@@ -17,6 +17,6 @@ class Marked < Formula
   end
 
   test do
-    assert_equal "<p>hello <em>world</em></p>", pipe_output(bin/"marked", "hello *world*").strip
+    assert_equal "<p>hello <em>world</em></p>", shell_output("#{bin}/marked -s 'hello *world*'").strip
   end
 end
