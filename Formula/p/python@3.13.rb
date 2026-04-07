@@ -1,10 +1,9 @@
 class PythonAT313 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.13.12/Python-3.13.12.tgz"
-  sha256 "12e7cb170ad2d1a69aee96a1cc7fc8de5b1e97a2bdac51683a3db016ec9a2996"
+  url "https://www.python.org/ftp/python/3.13.13/Python-3.13.13.tgz"
+  sha256 "f9cde7b0e2ec8165d7326e2a0f59ea2686ce9d0c617dbbb3d66a7e54d31b74b9"
   license "Python-2.0"
-  revision 1
   compatibility_version 1
 
   livecheck do
@@ -58,8 +57,8 @@ class PythonAT313 < Formula
   end
 
   resource "pip" do
-    url "https://files.pythonhosted.org/packages/44/c2/65686a7783a7c27a329706207147e82f23c41221ee9ae33128fc331670a0/pip-26.0.tar.gz"
-    sha256 "3ce220a0a17915972fbf1ab451baae1521c4539e778b28127efa79b974aff0fa"
+    url "https://files.pythonhosted.org/packages/48/83/0d7d4e9efe3344b8e2fe25d93be44f64b65364d3c8d7bc6dc90198d5422e/pip-26.0.1.tar.gz"
+    sha256 "c4037d8a277c89b320abe636d59f91e6d0922d08a05b60e85e53b296613346d8"
   end
 
   resource "wheel" do
