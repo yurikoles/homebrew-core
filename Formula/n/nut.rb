@@ -1,8 +1,8 @@
 class Nut < Formula
   desc "Network UPS Tools: Support for various power devices"
   homepage "https://networkupstools.org/"
-  url "https://github.com/networkupstools/nut/releases/download/v2.8.4/nut-2.8.4.tar.gz"
-  sha256 "0130ba82ea79f04ba4f34c5249a85943977efd984ed7df6aec1a518d5a3594f8"
+  url "https://github.com/networkupstools/nut/releases/download/v2.8.5/nut-2.8.5.tar.gz"
+  sha256 "18bf32e59eb764b13da3c4fa70384926d7fa584cb31d2fe7f137a570633eeec1"
   license "GPL-2.0-or-later"
 
   livecheck do
@@ -34,6 +34,7 @@ class Nut < Formula
   depends_on "openssl@3"
 
   on_linux do
+    depends_on "glib"
     depends_on "systemd"
   end
 
