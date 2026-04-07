@@ -18,8 +18,8 @@ class Odin < Formula
   end
 
   depends_on "glfw" => :no_linkage
-  depends_on "lld@21"
-  depends_on "llvm@21"
+  depends_on "lld"
+  depends_on "llvm"
   depends_on "raylib"
 
   fails_with :gcc do
