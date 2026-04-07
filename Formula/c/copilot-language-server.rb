@@ -6,12 +6,12 @@ class CopilotLanguageServer < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a79530ed16f063bc28a0e01ffb7ac8ca35e7334521804651fa47b87faf9470aa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e32bcb64632f2800de2470a8f8f8eca0d488faad5a9f322c76a7a7b9d23b909c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "23fc8e90384f1a84cddec2463e27d52b0b494150d157ac17ba277e380f827a45"
-    sha256 cellar: :any_skip_relocation, sonoma:        "77b5d02fe03b4aff143b922a372a36e1ea3a2197ae6762654b229842787c9a20"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d83831a359fb43117be4bdc6e38b7d272011c5f23176b0155075e44f1411a18d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "eadc030f185de81072e6261ebdf0989a2060adce4d5561ff8949f8e7bcad65dd"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f5140f66e078f164469fde2d9139bb89d00f5efb7d33d6ad5e398420d721dd54"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "089b3d5c70c08111ee54033d21ab599e1f2a487faa7b4158452f733061684530"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "269a5806fb17c57998d892ed3922d8a558ae9addbe53f080638ac8230a1c1a9e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e22875f043e7f2b74cf1fc2962afcdb77d3513a296ae4589b48d80f7c4e130f6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c549dc84d3264ec361a305acbd06c945c30db9b50390e6518d61a8d1e7384966"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ebdd354a14a5d1acd43685a4c679230c2b8c72b0d3bdba9e86e53bd858996c9c"
   end
 
   depends_on "node"
