@@ -1,8 +1,8 @@
 class Amass < Formula
   desc "In-depth attack surface mapping and asset discovery"
   homepage "https://owasp.org/www-project-amass/"
-  url "https://github.com/owasp-amass/amass/archive/refs/tags/v5.0.1.tar.gz"
-  sha256 "975b23891423a29767d9d83c4d4d501e5ae524288be424b0052e61a9fe8a2869"
+  url "https://github.com/owasp-amass/amass/archive/refs/tags/v5.1.1.tar.gz"
+  sha256 "5aeb5fa23070fbd3aa365757e2bc9bd294f78456c4d391bc077769adbd1dbe0a"
   license "Apache-2.0"
   head "https://github.com/owasp-amass/amass.git", branch: "main"
 
@@ -17,14 +17,7 @@ class Amass < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "af6fec44a8e37e2acf94f169a8f888551fcfdd33a1d22b4d742204fc02ac85e6"
   end
 
-  # Unpin Go when amass supports Go 1.26, ref: https://github.com/owasp-amass/amass/issues/1100
-  depends_on "go@1.25" => :build
-
-  # version patch, upstream pr ref, https://github.com/owasp-amass/amass/pull/1083
-  patch do
-    url "https://github.com/owasp-amass/amass/commit/fbdb97b6884e0ac01526c9c555a1e4a37533fa95.patch?full_index=1"
-    sha256 "188412fb8e1663bacfd222828974a792a40c3e795dee62133244e27a45772883"
-  end
+  depends_on "go" => :build
 
   def install
     ENV["CGO_ENABLED"] = "0"
