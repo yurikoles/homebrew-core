@@ -3,8 +3,8 @@ class OpensearchDashboards < Formula
   homepage "https://docs.opensearch.org/latest/dashboards/"
   # Build fails if not a git repository
   url "https://github.com/opensearch-project/OpenSearch-Dashboards.git",
-      tag:      "3.5.0",
-      revision: "7e86cf810d6e616a3453dd93062d7e22fa16c477"
+      tag:      "3.6.0",
+      revision: "47091b2bb937be28e29cde7c3d2c3c9ee6803c27"
   license "Apache-2.0"
 
   livecheck do
@@ -133,7 +133,7 @@ diff --git a/src/dev/build/tasks/create_archives_sources_task.ts b/src/dev/build
 index 5ba01ad129..b4ecbb0d3d 100644
 --- a/src/dev/build/tasks/create_archives_sources_task.ts
 +++ b/src/dev/build/tasks/create_archives_sources_task.ts
-@@ -41,38 +41,6 @@ export const CreateArchivesSources: Task = {
+@@ -41,20 +41,6 @@ export const CreateArchivesSources: Task = {
            source: build.resolvePath(),
            destination: build.resolvePathForPlatform(platform),
          });
@@ -149,24 +149,6 @@ index 5ba01ad129..b4ecbb0d3d 100644
 -          source: (await getNodeDownloadInfo(config, platform)).extractDir,
 -          destination: build.resolvePathForPlatform(platform, 'node'),
 -        });
--
--        // ToDo [NODE14]: Remove this Node.js 14 fallback download
--        // Copy the Node.js 14 binaries into node/fallback to be used by `use_node`
--        if (platform.getBuildName() === 'darwin-arm64') {
--          log.warning(`There are no fallback Node.js versions released for darwin-arm64.`);
--        } else {
--          await scanCopy({
--            source: (
--              await getNodeVersionDownloadInfo(
--                NODE14_FALLBACK_VERSION,
--                platform.getNodeArch(),
--                platform.isWindows(),
--                config.resolveFromRepo()
--              )
--            ).extractDir,
--            destination: build.resolvePathForPlatform(platform, 'node', 'fallback'),
--          });
--        }
 -
 -        log.debug('Node.js copied into', platform.getNodeArch(), 'specific build directory');
        })
