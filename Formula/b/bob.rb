@@ -18,7 +18,10 @@ class Bob < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
     generate_completions_from_executable(bin/"bob", "complete")
+    # For powershell, `power-shell` is required
+    (pwsh_completion/"_bob.ps1").write Utils.safe_popen_read(bin/"bob", "complete", "power-shell")
   end
 
   test do
