@@ -24,7 +24,8 @@ class Bindgen < Formula
   def install
     system "cargo", "install", *std_cargo_args(path: "bindgen-cli")
 
-    generate_completions_from_executable(bin/"bindgen", "--generate-shell-completions")
+    generate_completions_from_executable(bin/"bindgen", "--generate-shell-completions",
+                                                        shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
