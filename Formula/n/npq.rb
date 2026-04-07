@@ -6,7 +6,7 @@ class Npq < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "79f5a35ac35ab28c0b32952257a044159d23d48eb1c9822877579d8e7be0276e"
+    sha256 cellar: :any_skip_relocation, all: "c2b1f2035d85dddb8312e327a6b018e7283421afe406061ee83e1f95843ec087"
   end
 
   depends_on "node"
