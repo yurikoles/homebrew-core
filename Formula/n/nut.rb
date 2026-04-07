@@ -12,13 +12,12 @@ class Nut < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 arm64_tahoe:   "7a95f6f8b57362fe1a44db874c3e153df30cc6d6d7a1a12b1a8e4c67cda1a7e0"
-    sha256 arm64_sequoia: "3b1657b49d343f9be32b00c0a3058ce1c67723cf9b342462f7004cc0d15d5649"
-    sha256 arm64_sonoma:  "dc00713e9a21615addbb2b1d97a3769947c584cabab38f9325b83a7b4317f375"
-    sha256 sonoma:        "4865b9977f2d21a810a111e7d3d72f210f8081be30b19c1fe91be9dd8dc89303"
-    sha256 arm64_linux:   "ad0050eafb34fdd77245bbc97e046c37f83c01e42e300c63e897adbd97ed9e05"
-    sha256 x86_64_linux:  "2667c1b9ef3f1e6b2e3717f2241fd9b64a8cf0987274d49af7a4bc04d6804b9e"
+    sha256 arm64_tahoe:   "3fe4c8bea0483722456da80d1565be5954b382243d0ca7daa19038d0705f1be9"
+    sha256 arm64_sequoia: "d4a4e3998d26057e7bcb24a61469a3dd55e2fe9b102bfa6d6fcb1759b7e28bbe"
+    sha256 arm64_sonoma:  "615cc285fc354971ba7b6252e109707ecb7a045a505dca0eb03d4f6cf5fe79aa"
+    sha256 sonoma:        "e6b77ad2036fab7be4aa3054ed14112db9b6a4f27d500242b5f989a41982528b"
+    sha256 arm64_linux:   "8f5ff079a039c0bd20bf1fb9db3286a82ef5f021e470c8ef30464a225c9b4d5c"
+    sha256 x86_64_linux:  "0648f8942e42afe5625ce26a6653fc263de93d5f8c402649b4af60eba88495f6"
   end
 
   head do
