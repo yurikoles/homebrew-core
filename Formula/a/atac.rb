@@ -27,12 +27,13 @@ class Atac < Formula
     system "cargo", "install", *std_cargo_args
 
     # stdout is not supported, so install manually
-    [:bash, :zsh, :fish].each do |shell|
+    %w[bash zsh fish powershell].each do |shell|
       system bin/"atac", "completions", shell
     end
     bash_completion.install "atac.bash" => "atac"
     zsh_completion.install "_atac"
     fish_completion.install "atac.fish"
+    pwsh_completion.install "_atac.ps1"
 
     system bin/"atac", "man"
     man1.install "atac.1"
