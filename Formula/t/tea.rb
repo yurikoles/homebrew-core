@@ -1,8 +1,8 @@
 class Tea < Formula
   desc "Command-line tool to interact with Gitea servers"
   homepage "https://gitea.com/gitea/tea"
-  url "https://gitea.com/gitea/tea/archive/v0.12.0.tar.gz"
-  sha256 "db2f442c3ff8038f41a1745e70f9f17257368e9c6dd7b6706dd096778b06dee5"
+  url "https://gitea.com/gitea/tea/archive/v0.13.0.tar.gz"
+  sha256 "c08f1ffd1318461a80bdee800a35515b07f0d305333af4e06e66b3a518d54f46"
   license "MIT"
   head "https://gitea.com/gitea/tea.git", branch: "main"
 
@@ -23,10 +23,6 @@ class Tea < Formula
   end
 
   test do
-    assert_equal <<~EOS, shell_output("#{bin}/tea pulls", 1)
-      No gitea login configured. To start using tea, first run
-        tea login add
-      and then run your command again.
-    EOS
+    assert_match "no gitea login configured.", shell_output("#{bin}/tea pulls 2>&1", 1)
   end
 end
