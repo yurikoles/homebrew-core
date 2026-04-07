@@ -3,10 +3,9 @@ class Ocrmypdf < Formula
 
   desc "Adds an OCR text layer to scanned PDF files"
   homepage "https://ocrmypdf.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/88/b9/01f5cbd062f680af8a3f8f883f8e71de8be7979c3256f509661c1e2e2065/ocrmypdf-17.4.0.tar.gz"
-  sha256 "4bbc53249f3981599565f670c5de774d6440832eede87c515e6608880fa02a34"
+  url "https://files.pythonhosted.org/packages/88/8a/a26624198afad38847dfb6c01bf157858eb545f00316d62f8db95572837d/ocrmypdf-17.4.1.tar.gz"
+  sha256 "f4013df8ce5e6a6670e942999de304f2f0d671a8131bc7e6a1779c071041a587"
   license "MPL-2.0"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "009226b45fd571aff7a98f560a546df45e6f8b2c736ed7ab763328662208699c"
@@ -42,8 +41,8 @@ class Ocrmypdf < Formula
   pypi_packages exclude_packages: %w[cryptography pillow pydantic]
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
-    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
+    url "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz"
+    sha256 "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
   end
 
   resource "defusedxml" do
@@ -132,8 +131,8 @@ class Ocrmypdf < Formula
   end
 
   resource "uharfbuzz" do
-    url "https://files.pythonhosted.org/packages/1c/8d/7c82298bfa5c96f018541661bc2ccdf90dfe397bb2724db46725bf495466/uharfbuzz-0.53.3.tar.gz"
-    sha256 "9a87175c14d1361322ce2a3504e63c6b66062934a5edf47266aed5b33416806c"
+    url "https://files.pythonhosted.org/packages/4a/c2/25b61744d726809f313070d0e2b83ae1c80f891072b341b6926bc048d9a3/uharfbuzz-0.53.6.tar.gz"
+    sha256 "d5bbf33ea5bcb0bfda5436e2ada91b39d4a63cc29fa81022932209aafefba28e"
   end
 
   resource "wrapt" do
