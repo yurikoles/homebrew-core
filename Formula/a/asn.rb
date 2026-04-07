@@ -1,8 +1,8 @@
 class Asn < Formula
   desc "Organization lookup and server tool (ASN / IPv4 / IPv6 / Prefix / AS Path)"
   homepage "https://github.com/nitefood/asn"
-  url "https://github.com/nitefood/asn/archive/refs/tags/v0.80.5.tar.gz"
-  sha256 "e783d2c7837fca9ff60812975f9d98717493eea12dea5ed4e9036074542966a1"
+  url "https://github.com/nitefood/asn/archive/refs/tags/v0.81.0.tar.gz"
+  sha256 "b17aafcff2e4763002c352ccbaa85b9d3ac3c45770e7062e82e9ad18fa1798df"
   license "MIT"
   head "https://github.com/nitefood/asn.git", branch: "master"
 
