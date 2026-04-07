@@ -1,10 +1,9 @@
 class ApacheArrowAdbc < Formula
   desc "Cross-language, Arrow-native database access"
   homepage "https://arrow.apache.org/adbc"
-  url "https://www.apache.org/dyn/closer.lua?path=arrow/apache-arrow-adbc-22/apache-arrow-adbc-22.tar.gz"
-  sha256 "48b19d70a734e789da99e3c53ebad57389c914b85fdc9c509188e5f50896b07c"
+  url "https://www.apache.org/dyn/closer.lua?path=arrow/apache-arrow-adbc-23/apache-arrow-adbc-23.tar.gz"
+  sha256 "c74059448355681bf306008e559238ade40af01658d6a8f230b8da34d9a40de9"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/apache/arrow-adbc.git", branch: "main"
 
   bottle do
