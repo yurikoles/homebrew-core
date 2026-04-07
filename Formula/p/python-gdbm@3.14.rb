@@ -1,8 +1,8 @@
 class PythonGdbmAT314 < Formula
   desc "Python interface to gdbm"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/3.14.3/Python-3.14.3.tgz"
-  sha256 "d7fe130d0501ae047ca318fa92aa642603ab6f217901015a1df6ce650d5470cd"
+  url "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz"
+  sha256 "b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b"
   license "Python-2.0"
 
   livecheck do
@@ -33,25 +33,26 @@ class PythonGdbmAT314 < Formula
       Formula["python@#{xy}"].opt_include/"python#{xy}"
     end
 
-    cd "Modules" do
-      (Pathname.pwd/"setup.py").write <<~PYTHON
-        from setuptools import setup, Extension
+    (buildpath/"Modules/pyproject.toml").write <<~TOML
+      [project]
+      name = "gdbm"
+      version = "#{version}"
+      description = "#{desc}"
 
-        setup(name="gdbm",
-              description="#{desc}",
-              version="#{version}",
-              ext_modules = [
-                Extension("_gdbm", ["_gdbmmodule.c"],
-                          include_dirs=["#{Formula["gdbm"].opt_include}", "#{python_include}/internal"],
-                          libraries=["gdbm"],
-                          library_dirs=["#{Formula["gdbm"].opt_lib}"])
-              ]
-        )
-      PYTHON
-      system python3, "-m", "pip", "install", *std_pip_args(prefix: false, build_isolation: true),
-                                              "--target=#{libexec}", "."
-      rm_r libexec.glob("*.dist-info")
-    end
+      [tool.setuptools]
+      packages = []
+
+      [[tool.setuptools.ext-modules]]
+      name = "_gdbm"
+      sources = ["_gdbmmodule.c"]
+      include-dirs = ["#{Formula["gdbm"].opt_include}", "#{python_include}/internal"]
+      libraries = ["gdbm"]
+      library-dirs = ["#{Formula["gdbm"].opt_lib}"]
+    TOML
+
+    system python3, "-m", "pip", "install", *std_pip_args(prefix: false, build_isolation: true),
+                                            "--target=#{libexec}", "./Modules"
+    rm_r libexec.glob("*.dist-info")
   end
 
   test do
