@@ -3,9 +3,9 @@ class Exiftool < Formula
   homepage "https://exiftool.org"
   # Ensure release is tagged production before submitting.
   # https://exiftool.org/history.html
-  url "https://exiftool.org/Image-ExifTool-13.50.tar.gz"
-  mirror "https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-13.50.tar.gz"
-  sha256 "27e2d66eb21568cc0d59520f89afcaaa50735e1ad9fa4b36d0a4ccf916c70d31"
+  url "https://exiftool.org/Image-ExifTool-13.55.tar.gz"
+  mirror "https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-13.55.tar.gz"
+  sha256 "5f4c81d34ad406538c2871ad72dbfceb5d9b412b2f16cbbeb4d712d270846667"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
   compatibility_version 1
 
@@ -69,6 +69,7 @@ class Exiftool < Formula
     sha256 "bf5f3307406ebe2581237f025982e8c84f6f6625dd774e457c03f8994efd2eaa"
   end
 
+  # 0.10 rejects Homebrew's cmake 4 and falls back to bundled binaries that fail audit/linkage checks.
   resource "Alien::cmake3" do
     url "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-cmake3-0.08.tar.gz"
     sha256 "93dfb1146f0053ec1ed59558f5f6d8f85d87b822a8433c6485d419c4f0182f1f"
