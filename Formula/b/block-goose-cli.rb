@@ -37,6 +37,8 @@ class BlockGooseCli < Formula
 
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/goose-cli")
+
+    generate_completions_from_executable(bin/"goose", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
