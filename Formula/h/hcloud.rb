@@ -7,12 +7,12 @@ class Hcloud < Formula
   head "https://github.com/hetznercloud/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ed2a1123adc4885eeb25b9a536062e3bf4674f6f915463563377319774d4c5f4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d7d9e1ff61000938e267e4af27ae8849c5412240a23611f12ae1d4ac1571b0cd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "b6f5a1eb8df2cdabe8900c127c1bd502bcdd42cbd029f1413a13f9c5bc6ca68b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5d229e6fc039c9ed1cbc9fb70ee63c7e05600175df765c01ee2da1f876d04d2a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f41a7c28b8498b914deb19c9cb710338273d48c59a1a8451453eb12c4d05fd17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "721c01a21dc3c00cfe4497d0995c6386ac9c2e24ee76339051d2741826ab377c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "36c6d8a92634b47518c08ebd461d086f26494a4bb16bd8cfb2a257705a79ee83"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0d298ace443c6eb5c004a78328e9cf7effe6b5c2acf0d40aeb0d1b46c3b926b4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8932cd5f1d186457d31d0c3f3917ff75c58247c2d668735338d6ae3deb4b0b63"
+    sha256 cellar: :any_skip_relocation, sonoma:        "6908e98319b36f7e9222fd652252a6f539f8eca3eb4380a8e762cd9864ab3264"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c37a573b610c6dfa2a1abe380a2afbfc79eb23d96c6136b37015f065e1c914ee"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "bb6e14411262259f4748a2fd950fc452748659c13aa8609c3fe1a387a85ad2b5"
   end
 
   depends_on "go" => :build
