@@ -43,6 +43,8 @@ class Broot < Formula
     zsh_completion.install "#{out_dir}/_br"
     bash_completion.install "#{out_dir}/broot.bash" => "broot"
     bash_completion.install "#{out_dir}/br.bash" => "br"
+    pwsh_completion.install "#{out_dir}/_broot.ps1"
+    pwsh_completion.install "#{out_dir}/_br.ps1"
   end
 
   test do
