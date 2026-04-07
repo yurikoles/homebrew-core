@@ -26,6 +26,7 @@ class Bandwhich < Formula
     bash_completion.install "#{out_dir}/bandwhich.bash" => "bandwhich"
     fish_completion.install "#{out_dir}/bandwhich.fish"
     zsh_completion.install "#{out_dir}/_bandwhich"
+    pwsh_completion.install "#{out_dir}/_bandwhich.ps1"
 
     man1.install "#{out_dir}/bandwhich.1"
   end
