@@ -6,22 +6,16 @@ class Gstreamer < Formula
   compatibility_version 1
 
   stable do
-    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.1/gstreamer-1.28.1.tar.bz2"
-    sha256 "86ec0179104664a1ca6de57d7c886d3a8aa0491d1a243d02514b306885272b91"
+    url "https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/1.28.2/gstreamer-1.28.2.tar.bz2"
+    sha256 "3eb15429a2721b91fe8339c321867462eb87b98cdad2109292a0aa42cdd6e2c3"
 
     # When updating this resource, use the tag that matches the GStreamer version.
     resource "rs" do
-      url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.28.1/gst-plugins-rs-gstreamer-1.28.1.tar.bz2"
-      sha256 "5488965db0fbb491810188ff144ec5a43055a6a5fc3412bef6b7a81cb504e60d"
+      url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.28.2/gst-plugins-rs-gstreamer-1.28.2.tar.bz2"
+      sha256 "f736a9e3cad1c71a736ffc6749a076bb0939274bbe6f2635a3c4ea65bae7e910"
 
       livecheck do
         formula :parent
-      end
-
-      # Backport whisper-rs update to build with LLVM 22
-      patch do
-        url "https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/commit/a69aa05e92cf4ae6bbe17bdc1f19b741d1c34ed8.diff"
-        sha256 "90ee916968c8cc764813f2b380a483292e2949d0fa303cb48250a825db0e13d9"
       end
     end
   end
