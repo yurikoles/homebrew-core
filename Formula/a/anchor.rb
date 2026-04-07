@@ -6,13 +6,12 @@ class Anchor < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "5c42d288ffcb5ce0e5de2a3e623ace63a6401fefb6d9d0549ea27a6e89ec9f45"
-    sha256 cellar: :any,                 arm64_sequoia: "999f1fb89d761dd51989f1f97fd5a6508fdfc03f2e39aba8e61bee328635f016"
-    sha256 cellar: :any,                 arm64_sonoma:  "3805433758f3398f5490ff2f412063a66ca278c70bd5ee7d7632b32dd278a031"
-    sha256 cellar: :any,                 sonoma:        "f01ce12914e4c50c25a5584320ae4b10a7d5b7522268f81ac248543a5431722d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5caca9952baaa452ab5c21538cf1e388887df6af5f0272872d43b0745347ae5f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c0f0b6dfb3a31ade18458dc13ec92ec5c91a553a1c5785f4c8432e9e153491a5"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b8dc41ce4d13003d37fa347ad5f8c7dbbeaaf5a4dffe0e8d0330ab4d6acfe0cb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "bb78bdb7d5ea97341f6f8261e6934f85a866fba9078f2763f745dd3b5c1b3740"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5d36e71597e79519681b4cc1b3a44ac8b4330b2007b20106532bad6e69e125d7"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ac0c0703d8a45514a1021c5c3fcead0faa69eeb621f5f0eb93bf863c1b916b39"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7195c91457ce8a7f38d47b7c29c97e5f3a76f2d4a7e18d157367f3ea8ecadc92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b970138b57cc4159b18861d07e14f1d3155719c1d9d985e2e94e0c3c0dbd8d75"
   end
 
   depends_on "pkgconf" => :build
