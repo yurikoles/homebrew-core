@@ -21,7 +21,8 @@ class Atuin < Formula
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/atuin")
 
-    generate_completions_from_executable(bin/"atuin", "gen-completion", "--shell")
+    generate_completions_from_executable(bin/"atuin", "gen-completion", "--shell",
+                                                      shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   service do
