@@ -34,6 +34,7 @@ class Haproxy < Formula
       USE_PCRE2_JIT=1
       USE_OPENSSL=1
       USE_PROMEX=1
+      USE_QUIC=1
       USE_ZLIB=1
     ]
 
