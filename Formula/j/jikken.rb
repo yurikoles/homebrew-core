@@ -1,8 +1,8 @@
 class Jikken < Formula
   desc "Powerful, source control friendly REST API testing toolkit"
   homepage "https://jikken.io/"
-  url "https://github.com/jikkenio/jikken/archive/refs/tags/v0.8.2.tar.gz"
-  sha256 "c1e8080c238d4aed349bf30a54ee8181661cb4cc846ad9bf16118ede5bd7939c"
+  url "https://github.com/jikkenio/jikken/archive/refs/tags/v0.8.4.tar.gz"
+  sha256 "fe43cac1ddc90b3b4b39205b2c66b8f405984d121fc3fdb9fd29ab915e13abe5"
   license "MIT"
   head "https://github.com/jikkenio/jikken.git", branch: "main"
 
