@@ -1,17 +1,13 @@
 class Unitycatalog < Formula
   desc "Open, Multi-modal Catalog for Data & AI"
   homepage "https://unitycatalog.io/"
-  url "https://github.com/unitycatalog/unitycatalog/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "b06447f18ca411662070b928b6a294d4ab6c237545f0acca88dfa2fa1b4b6404"
+  url "https://github.com/unitycatalog/unitycatalog/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "176961234b38ec784660c2804ccb59df79feec1fb1dd5829b6f97e8ba3412605"
   license "Apache-2.0"
 
   livecheck do
     url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "5bb29544d5d9cd7b35507be2156ebd230a8e4065bd56c2fe384c0d510362b899"
   end
 
   depends_on "sbt" => :build
