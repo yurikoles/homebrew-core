@@ -6,12 +6,12 @@ class RushParallel < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3a95b45daad014523cc5d24557039ae9e76878624b9ca1db39d0397f1c22f588"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "11c38081a63b62ca8b58dd0f46c6e60700f8800aef74845acf226a2ee10e1b08"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b29095d93173c2b8236cb62f5b5ac83505de9a7c1d11afc817c5b32927eb5d5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6b194b7f20e7a5cf8e967490e9ee619611f4d2a56cf281c54bd6c3430e505e62"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "307400fb0aaf2b833959f4dbff23ff0b4927da8d638bcc1bf7a8e6c329627561"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7f6e1ab80fc6a811226669df1b36e299d92c3482c042f816f33286227d1642d2"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ee11479dc282afbda33efbafb324069938d3472caa592f59a25ec22455247f53"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "173674fadc307344730628de968eff11143ce4c85ef48ef1e3d037e1fca77340"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cd8653c1b7e8e3baf830c08ee7019b112535aab3143d700dffff6afc50ad48a2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "3bc8f88a147545f463b1245413901ce45047e4c0b6424d781bade7342d15bc9c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "88379e8991cfa8f171455f9deec6e4f924274ebda99aae0d83200f2a94986c9b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "449e7441ebc29bbd5d2274bb74746603f8c61c739755824eedf6f7db0ac99601"
   end
 
   depends_on "go" => :build
