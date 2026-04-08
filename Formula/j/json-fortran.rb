@@ -1,8 +1,8 @@
 class JsonFortran < Formula
   desc "Fortran 2008 JSON API"
   homepage "https://github.com/jacobwilliams/json-fortran"
-  url "https://github.com/jacobwilliams/json-fortran/archive/refs/tags/9.2.1.tar.gz"
-  sha256 "f1158a684a5328f6e5e970009ddb75284ef1fc4b85d6726e8cbfc6291a4e47a3"
+  url "https://github.com/jacobwilliams/json-fortran/archive/refs/tags/9.3.0.tar.gz"
+  sha256 "7f29ded5283ba62b0ee9829ffe860326a17bef207ee9d6cbe68bb7cc3ecf1cfc"
   license "BSD-3-Clause"
   head "https://github.com/jacobwilliams/json-fortran.git", branch: "master"
 
@@ -18,6 +18,12 @@ class JsonFortran < Formula
   depends_on "cmake" => :build
   depends_on "ford" => :build
   depends_on "gcc" # for gfortran
+
+  # Fix bad Unicode introspection source path, upstream PR ref, https://github.com/jacobwilliams/json-fortran/pull/630
+  patch do
+    url "https://github.com/jacobwilliams/json-fortran/commit/5182811edf258c85a405dfad76985885bd0159ab.patch?full_index=1"
+    sha256 "94688e5718dc2bad696521a3a1ad38503af4c37edab38ebb7c5a6f07ff7f648d"
+  end
 
   def install
     args = %w[
