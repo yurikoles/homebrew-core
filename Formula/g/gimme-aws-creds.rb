@@ -6,7 +6,7 @@ class GimmeAwsCreds < Formula
   url "https://files.pythonhosted.org/packages/63/73/9e508d37d4d301f6a3811fdc0b0a076696de87f82ad8a81ec28c3e6befb5/gimme_aws_creds-2.8.2.tar.gz"
   sha256 "12784f4b749617d7391bf2056373990277858dc9886328832b545e9e334f24d3"
   license "Apache-2.0"
-  revision 10
+  revision 11
   head "https://github.com/Nike-Inc/gimme-aws-creds.git", branch: "master"
 
   bottle do
@@ -80,18 +80,18 @@ class GimmeAwsCreds < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/9d/4d/40029c26b535c41333a0b11573127cfc548fdcb1cbcd1798ea7046c56bab/boto3-1.42.81.tar.gz"
-    sha256 "e5c0d57229763007151be6d388319514a040ccdc922fbb27e37c3100a7fbc01a"
+    url "https://files.pythonhosted.org/packages/88/89/2d647bd717da55a8cc68602b197f53a5fa36fb95a2f9e76c4aff11a9cfd1/boto3-1.42.84.tar.gz"
+    sha256 "6a84b3293a5d8b3adf827a54588e7dcffcf0a85410d7dadca615544f97d27579"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/fa/5f/b0bb9a8768398fb131e1fe722c9cc5b18f74d21ca1970efe8576912b2c6e/botocore-1.42.81.tar.gz"
-    sha256 "48e6f6f52de1cc107a34810309b8ca998ea9bb719a3fe4c06f903a604b3138cb"
+    url "https://files.pythonhosted.org/packages/b4/b7/1c03423843fb0d1795b686511c00ee63fed1234c2400f469aeedfd42212f/botocore-1.42.84.tar.gz"
+    sha256 "234064604c80d9272a5e9f6b3566d260bcaa053a5e05246db90d7eca1c2cf44b"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
-    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
+    url "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz"
+    sha256 "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
   end
 
   resource "ctap-keyring-device" do
@@ -169,8 +169,8 @@ class GimmeAwsCreds < Formula
   end
 
   resource "jwcrypto" do
-    url "https://files.pythonhosted.org/packages/e1/db/870e5d5fb311b0bcf049630b5ba3abca2d339fd5e13ba175b4c13b456d08/jwcrypto-1.5.6.tar.gz"
-    sha256 "771a87762a0c081ae6166958a954f80848820b2ab066937dc8b8379d65b1b039"
+    url "https://files.pythonhosted.org/packages/8c/90/f065668004d22715c1940d6e88e4c3afc8ee16d5664e4478d2c8fd23a250/jwcrypto-1.5.7.tar.gz"
+    sha256 "70204d7cca406eda8c82352e3c41ba2d946610dafd19e54403f0a1f4f18633c6"
   end
 
   resource "keyring" do
@@ -179,8 +179,8 @@ class GimmeAwsCreds < Formula
   end
 
   resource "more-itertools" do
-    url "https://files.pythonhosted.org/packages/ea/5d/38b681d3fce7a266dd9ab73c66959406d565b3e85f21d5e66e1181d93721/more_itertools-10.8.0.tar.gz"
-    sha256 "f638ddf8a1a0d134181275fb5d58b086ead7c6a72429ad725c67503f13ba30bd"
+    url "https://files.pythonhosted.org/packages/24/24/e0acc4bf54cba50c1d432c70a72a3df96db4a321b2c4c68432a60759044f/more_itertools-11.0.1.tar.gz"
+    sha256 "fefaf25b7ab08f0b45fa9f1892cae93b9fc0089ef034d39213bce15f1cc9e199"
   end
 
   resource "multidict" do
