@@ -1,8 +1,8 @@
 class StripeCli < Formula
   desc "Command-line tool for Stripe"
   homepage "https://docs.stripe.com/stripe-cli"
-  url "https://github.com/stripe/stripe-cli/archive/refs/tags/v1.40.2.tar.gz"
-  sha256 "0ebac58f0e0ef1e0e4ba995e36d004cc3d4b2633ce689833597531fe3990768c"
+  url "https://github.com/stripe/stripe-cli/archive/refs/tags/v1.40.3.tar.gz"
+  sha256 "4289392dc9444d1e7899bea6e4f387d7d24ade75523a301ace7e26d1603b5477"
   license "Apache-2.0"
 
   bottle do
@@ -30,7 +30,7 @@ class StripeCli < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/stripe version")
     assert_match "secret or restricted key",
-                 shell_output("#{bin}/stripe --api-key=not_real_key get ch_1EGYgUByst5pquEtjb0EkYha", 1)
+                 shell_output("#{bin}/stripe --api-key=not_real_key get ch_1EGYgUByst5pquEtjb0EkYha 2>&1", 1)
     assert_match "-F __start_stripe",
                  shell_output("bash -c 'source #{bash_completion}/stripe && complete -p stripe'")
   end
