@@ -1,8 +1,8 @@
 class Libunicode < Formula
   desc "Modern C++20 Unicode library"
   homepage "https://github.com/contour-terminal/libunicode"
-  url "https://github.com/contour-terminal/libunicode/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "1cea0180dd75a46132505330218efc102152fc4eb52462e470ea2bebf836cc58"
+  url "https://github.com/contour-terminal/libunicode/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "65affc5decf38e5c3e104b021e6d696c2f5bf305f20b475604901682f137e02a"
   license "Apache-2.0"
 
   bottle do
