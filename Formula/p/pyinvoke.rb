@@ -9,8 +9,7 @@ class Pyinvoke < Formula
   head "https://github.com/pyinvoke/invoke.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "e0fd28c483546b397e1c2f3c95091200b89d1eb0ddd4970178c8e944f91095ab"
+    sha256 cellar: :any_skip_relocation, all: "f46e5217b0e3117c9baea206c276c7b87fb6b1f02ce17940cd3c4789b0f3d54b"
   end
 
   depends_on "python@3.14" # Do not remove runtime dependency https://github.com/Homebrew/homebrew-core/issues/151248
