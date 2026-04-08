@@ -1,8 +1,8 @@
 class Observerward < Formula
   desc "Web application and service fingerprint identification tool"
   homepage "https://blog.kali-team.cn/projects/observer_ward/"
-  url "https://github.com/emo-crab/observer_ward/archive/refs/tags/v2026.1.13.tar.gz"
-  sha256 "7f15a48928617b9acd08ec189b20e9dd796830328c27f7bdea8369a5605f30de"
+  url "https://github.com/emo-crab/observer_ward/archive/refs/tags/v2026.4.8.tar.gz"
+  sha256 "18135c9f93023b09efa078bb0e354ad9a31a261afbbafba17dc90dbb1a06c525"
   license "GPL-3.0-only"
 
   bottle do
@@ -14,8 +14,13 @@ class Observerward < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "2996035aa9b94a3a89a82f5fc45758a3cf1cb30fea55c7a5967e6fd7c3bd3924"
   end
 
+  depends_on "pkgconf" => :build
   depends_on "protobuf" => :build
   depends_on "rust" => :build
+
+  on_linux do
+    depends_on "openssl@3"
+  end
 
   def install
     rm ".cargo/config.toml" # disable `+crc-static`
