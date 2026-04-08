@@ -1,8 +1,8 @@
 class Joe < Formula
   desc "Full featured terminal-based screen editor"
   homepage "https://joe-editor.sourceforge.io/"
-  url "https://downloads.sourceforge.net/project/joe-editor/JOE%20sources/joe-4.6/joe-4.6.tar.gz"
-  sha256 "495a0a61f26404070fe8a719d80406dc7f337623788e445b92a9f6de512ab9de"
+  url "https://downloads.sourceforge.net/project/joe-editor/JOE%20sources/joe-4.7/joe-4.7.tar.gz"
+  sha256 "712b23a83a3757a93d2b4a76325b9dabba554c182b209d2675537c272867fcba"
   license "GPL-1.0-or-later"
 
   livecheck do
