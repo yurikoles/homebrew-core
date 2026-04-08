@@ -1,8 +1,8 @@
 class Vivid < Formula
   desc "Generator for LS_COLORS with support for multiple color themes"
   homepage "https://github.com/sharkdp/vivid"
-  url "https://github.com/sharkdp/vivid/archive/refs/tags/v0.10.1.tar.gz"
-  sha256 "88db6158dad60aba66ae16f2cd1b09f515625940a33bada65da5562a03538e49"
+  url "https://github.com/sharkdp/vivid/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "2d31f72ac9df81ddc8b5ecb9e5e539c754c22863ada3e76e4c1a88ee53c99a21"
   license any_of: ["MIT", "Apache-2.0"]
 
   bottle do
