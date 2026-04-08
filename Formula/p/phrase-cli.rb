@@ -1,8 +1,8 @@
 class PhraseCli < Formula
   desc "Tool to interact with the Phrase API"
   homepage "https://phrase.com/"
-  url "https://github.com/phrase/phrase-cli/archive/refs/tags/2.58.0.tar.gz"
-  sha256 "0d125a8d2eb2203b03ba59d0cbd57db519ee177390d1554f573cc0318db27337"
+  url "https://github.com/phrase/phrase-cli/archive/refs/tags/2.59.0.tar.gz"
+  sha256 "19678e24a271e7f7a9596f64dcc8286abc715b0bdbe0df478963dbab8c49f0d8"
   license "MIT"
 
   no_autobump! because: :bumped_by_upstream
