@@ -30,7 +30,6 @@ class Yaf < Formula
 
   on_macos do
     depends_on "gettext"
-    depends_on "openssl@3"
   end
 
   on_linux do
@@ -38,7 +37,9 @@ class Yaf < Formula
   end
 
   def install
-    system "./configure", *std_configure_args
+    # OpenSSL is disabled as Apache-2.0 is not compatible with GPL-2.0-only
+    # Ref: https://www.gnu.org/licenses/license-list.html#apache2
+    system "./configure", "--without-openssl", *std_configure_args
     system "make"
     system "make", "install"
   end
