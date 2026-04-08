@@ -311,7 +311,7 @@ class Glibc < Formula
 
     # Get all extra installed locales from the system, except C locales
     locales = ENV.filter_map do |k, v|
-      v if k[/^LANG$|^LC_/] && v != "C" && !v.start_with?("C.")
+      v if k[/^HOMEBREW_LANG$|^LANG$|^LC_/] && v != "C" && !v.start_with?("C.")
     end
 
     # en_US.UTF-8 is required by gawk make check
