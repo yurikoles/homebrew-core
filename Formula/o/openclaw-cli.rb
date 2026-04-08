@@ -1,8 +1,8 @@
 class OpenclawCli < Formula
   desc "Your own personal AI assistant"
   homepage "https://openclaw.ai/"
-  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.4.7.tgz"
-  sha256 "0eb1856cf473eb3f95b50bb20b0c10953203de68fb07e4f7bd23b6b85c3d0b42"
+  url "https://registry.npmjs.org/openclaw/-/openclaw-2026.4.8.tgz"
+  sha256 "b242bd1200d63a8b133136503af159f3d97d9e390234550f768159b0ab783011"
   license "MIT"
 
   bottle do
@@ -27,10 +27,9 @@ class OpenclawCli < Formula
     # Remove macOS pre-built dylibs that fail Homebrew bottle linkage fixups.
     node_modules.glob("sqlite-vec-darwin-*").each { |dir| rm_r(dir) } if OS.mac?
 
-    # Remove x86_64 Linux pre-built binaries on incompatible platforms.
-    if !OS.linux? || !Hardware::CPU.intel?
-      rm_r libexec/"lib/node_modules/openclaw/dist/extensions/discord/node_modules/@snazzah/davey-linux-x64-gnu"
-    end
+    # The bundled Discord plugin ships unresolved nested dependencies and a
+    # prebuilt macOS arm64 module that fails Homebrew linkage fixups.
+    rm_r libexec/"lib/node_modules/openclaw/dist/extensions/discord"
 
     # Remove incompatible pre-built @node-llama-cpp binaries (non-native
     # architectures and GPU variants requiring CUDA/Vulkan)
