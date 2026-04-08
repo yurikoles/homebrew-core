@@ -1,8 +1,8 @@
 class Vals < Formula
   desc "Helm-like configuration values loader with support for various sources"
   homepage "https://github.com/helmfile/vals"
-  url "https://github.com/helmfile/vals/archive/refs/tags/v0.43.7.tar.gz"
-  sha256 "49a546ea19113fd08745720ab9a231eff9adec26868c2fed53dc0a761b3ed196"
+  url "https://github.com/helmfile/vals/archive/refs/tags/v0.43.8.tar.gz"
+  sha256 "a05fdfb08a065cca20d399df1d79cba665e2a9a9abe26ba9cd82d253dc9d4197"
   license "Apache-2.0"
   head "https://github.com/helmfile/vals.git", branch: "main"
 
