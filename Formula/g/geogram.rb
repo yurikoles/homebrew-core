@@ -1,8 +1,8 @@
 class Geogram < Formula
   desc "Programming library of geometric algorithms"
   homepage "https://github.com/BrunoLevy/geogram/wiki"
-  url "https://github.com/BrunoLevy/geogram/releases/download/v1.9.8/geogram_1.9.8.tar.gz"
-  sha256 "6df1186d8e7ed5a7ee02cf486f823cbc74400199822709b2b3faa9b7d6596c96"
+  url "https://github.com/BrunoLevy/geogram/releases/download/v1.9.9/geogram_1.9.9.tar.gz"
+  sha256 "65402f3ce4b40efab178874c4ec1a8852f0ca1ab4567d72000d53efcaff52214"
   license all_of: ["BSD-3-Clause", :public_domain, "LGPL-3.0-or-later", "MIT"]
   head "https://github.com/BrunoLevy/geogram.git", branch: "main"
 
@@ -25,6 +25,7 @@ class Geogram < Formula
 
   on_linux do
     depends_on "doxygen" => :build
+    depends_on "libx11"
   end
 
   def install
