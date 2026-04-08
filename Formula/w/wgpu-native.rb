@@ -2,8 +2,8 @@ class WgpuNative < Formula
   desc "Native WebGPU implementation based on wgpu-core"
   homepage "https://github.com/gfx-rs/wgpu-native"
   url "https://github.com/gfx-rs/wgpu-native.git",
-      tag:      "v27.0.4.0",
-      revision: "768f15f6ace8e4ec8e8720d5732b29e0b34250a8"
+      tag:      "v27.0.4.1",
+      revision: "f16f716698899ebfcc3f703722fabd85543318a7"
   license "Apache-2.0"
   head "https://github.com/gfx-rs/wgpu-native.git", branch: "trunk"
 
