@@ -32,6 +32,7 @@ class Taplo < Formula
 
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/taplo-cli", features: "lsp")
+    generate_completions_from_executable(bin/"taplo", "completions", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
