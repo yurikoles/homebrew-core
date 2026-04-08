@@ -7,12 +7,12 @@ class Resterm < Formula
   head "https://github.com/unkn0wn-root/resterm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "167b90678494084c5936fe7eb3535bb3dc28508b11608bcb1d3158cc98857579"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "167b90678494084c5936fe7eb3535bb3dc28508b11608bcb1d3158cc98857579"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "167b90678494084c5936fe7eb3535bb3dc28508b11608bcb1d3158cc98857579"
-    sha256 cellar: :any_skip_relocation, sonoma:        "835bad13a501da056578f8c93a93b8d44eb4ed6f4a16ec3145143b82398886f1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3fc50a2be0fab78583c42f7fec0fe1a12acc8ded696050a0ce7d3aca4f0945c7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "249337ffecba02bed247e4a3b50d60544d557a27b0f93c5af16eeb287441c864"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "418c5ff035b33c7d6df56981befbe68f9c68c49f83c700e85d1fcbdca8b32593"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "418c5ff035b33c7d6df56981befbe68f9c68c49f83c700e85d1fcbdca8b32593"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "418c5ff035b33c7d6df56981befbe68f9c68c49f83c700e85d1fcbdca8b32593"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c8a660abb5ed9e1695276c803e1a8138c8b99ae079d6593799783204336fb6fe"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "66a53356f9af348663b519b85aa819899aefed450a34d1f8134856357370d1fe"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4b29a85893f43cbe1054cea01c07e5fa3f9a5465cd2c99d458b7423df5653347"
   end
 
   depends_on "go" => :build
