@@ -6,6 +6,7 @@ class Conan < Formula
   url "https://files.pythonhosted.org/packages/5e/ba/119878141be5e92b0db8a8a05270a277a68222527c28b87107e0c992a680/conan-2.27.0.tar.gz"
   sha256 "41a403c68f2990ffed8b3135769dcd393748f266991f42f048c0fb267bc9d205"
   license "MIT"
+  revision 1
   head "https://github.com/conan-io/conan.git", branch: "develop2"
 
   bottle do
@@ -89,6 +90,12 @@ class Conan < Formula
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz"
     sha256 "1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed"
+  end
+
+  # Add Apple Clang 21 and Apple 26.4 settings support, upstream PR ref, https://github.com/conan-io/conan/pull/19795
+  patch do
+    url "https://github.com/conan-io/conan/commit/99ace5c1fc86d47c64e5770901954867e6c12e22.patch?full_index=1"
+    sha256 "9ee4a285beb925009e129a803d7b8d1571cc5cadb0369e89a797cd948a26ad31"
   end
 
   def install
