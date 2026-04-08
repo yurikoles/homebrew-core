@@ -1,8 +1,8 @@
 class Chezmoi < Formula
   desc "Manage your dotfiles across multiple diverse machines, securely"
   homepage "https://chezmoi.io/"
-  url "https://github.com/twpayne/chezmoi/releases/download/v2.70.0/chezmoi-2.70.0.tar.gz"
-  sha256 "59d6e999c4abcf667eab3edce8965b4ba56097afc04405b0ca4b95145428296c"
+  url "https://github.com/twpayne/chezmoi/releases/download/v2.70.1/chezmoi-2.70.1.tar.gz"
+  sha256 "2def7f49076770934ebc04a62d47fa51b678b2f588ad870fc25a3229fa573e68"
   license "MIT"
   head "https://github.com/twpayne/chezmoi.git", branch: "master"
 
