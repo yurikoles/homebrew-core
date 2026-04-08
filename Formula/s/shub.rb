@@ -3,10 +3,9 @@ class Shub < Formula
 
   desc "Scrapinghub command-line client"
   homepage "https://shub.readthedocs.io/en/latest/"
-  url "https://files.pythonhosted.org/packages/11/a4/91a0d8c3dccf5dedb7e75a65ecd0bb2a1d789ef34e1630642864b62dea75/shub-2.16.0.tar.gz"
-  sha256 "776283a538b6cd1749f4bf6a94db9d39da208383e37558603b0cf2ed64acbd08"
+  url "https://files.pythonhosted.org/packages/4c/d0/da308a4f334e1532d3c32a38336fd83bcbeb1db617e40296cd609a690680/shub-2.17.0.tar.gz"
+  sha256 "11c5c0e0cd439b526e28901358f6a2e82c4a63b96171f71a0d4eec695183e602"
   license "BSD-3-Clause"
-  revision 3
   head "https://github.com/scrapinghub/shub.git", branch: "master"
 
   bottle do
@@ -25,13 +24,13 @@ class Shub < Formula
   pypi_packages exclude_packages: "certifi"
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
-    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
+    url "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz"
+    sha256 "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
-    sha256 "12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"
+    url "https://files.pythonhosted.org/packages/57/75/31212c6bf2503fdf920d87fee5d7a86a2e3bcf444984126f13d8e4016804/click-8.3.2.tar.gz"
+    sha256 "14162b8b3b3550a7d479eafa77dfd3c38d9dc8951f6f69c78913a8f9a7540fd5"
   end
 
   resource "docker" do
@@ -55,8 +54,8 @@ class Shub < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
-    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
+    url "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz"
+    sha256 "18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517"
   end
 
   resource "retrying" do
@@ -65,8 +64,8 @@ class Shub < Formula
   end
 
   resource "scrapinghub" do
-    url "https://files.pythonhosted.org/packages/7a/e9/8b3f7bcd7a3809051e11cb07d0d02e376097f4d4d1bebb6418916d7a5546/scrapinghub-2.6.0.tar.gz"
-    sha256 "a84b313406f12590dc78dcfb4ab9d2f5fe0dda5b511a5f7177c24d1e3ce13126"
+    url "https://files.pythonhosted.org/packages/9a/76/7c82eee31f76f4c52ae632566bb49875e8fb63c19168f928f9ea2cb0a9c5/scrapinghub-2.7.0.tar.gz"
+    sha256 "df9b98481d1f6ca7ad8b56fdd05699ed4365c1d44718e226484cd32c0586ee89"
   end
 
   resource "setuptools" do
