@@ -1,8 +1,8 @@
 class Harper < Formula
   desc "Grammar Checker for Developers"
   homepage "https://github.com/Automattic/harper"
-  url "https://github.com/Automattic/harper/archive/refs/tags/v1.12.0.tar.gz"
-  sha256 "d8c45e958e3f7d61b798f6f77243a21c6f31e411920a4fce26bcb6eaa6d61114"
+  url "https://github.com/Automattic/harper/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "c9ebde7b159c7491ca3350f7e1706eb7e5c105d0b790e3d2119c31e589c16f20"
   license "Apache-2.0"
   head "https://github.com/Automattic/harper.git", branch: "master"
 
@@ -36,7 +36,7 @@ class Harper < Formula
     MARKDOWN
 
     # Dialect in https://github.com/Automattic/harper/blob/833b212e8665567fa2912e6c07d7c83d394dd449/harper-core/src/word_metadata.rs#L357-L362
-    lint_output = shell_output("#{bin}/harper-cli lint --dialect American test.md 2>&1", 1)
+    lint_output = shell_output("#{bin}/harper-cli lint --dialect American test.md 2>&1")
     assert_match "test.md: No lints found", lint_output
 
     output = shell_output("#{bin}/harper-cli parse test.md")
