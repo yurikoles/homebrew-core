@@ -1,8 +1,8 @@
 class Lft < Formula
   desc "Layer Four Traceroute (LFT), an advanced traceroute tool"
   homepage "https://pwhois.org/lft/"
-  url "https://pwhois.org/dl/index.who?file=lft-3.94.tar.gz"
-  sha256 "30f0231077a52a354a2863f27b941cf4652a475a5e0684dab335a575b3b191a8"
+  url "https://pwhois.org/dl/index.who?file=lft-3.96.tar.gz"
+  sha256 "abeaf2c8fd607f2c45816a4ddd34f2d0a10d49e1f41f52929b8e67a0cdc24368"
   license "VOSTROM"
 
   livecheck do
@@ -31,7 +31,7 @@ class Lft < Formula
   end
 
   test do
-    expected = "LFT: Failed to activate capture on device"
-    assert_match expected, shell_output("#{bin}/lft -S -d 443 brew.sh 2>&1")
+    output = shell_output("#{bin}/lft -S -d 443 brew.sh 2>&1", 1)
+    assert_match(/LFT: (insufficient privileges|Failed to activate capture on device)/, output)
   end
 end
