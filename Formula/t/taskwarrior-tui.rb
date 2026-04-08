@@ -12,12 +12,12 @@ class TaskwarriorTui < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d649d8c61a193ae10e1b68336749fbcb175ba42d799c47b353781cf9102e304d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b8b5b71ec50a5d34404bc7bf7dcae84e7e209d9a14fd912b639ee2203815b955"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "db38f768300c00ab5dcdca6ed5efaccedea3828933d6a4da6e20d26bfcc97328"
-    sha256 cellar: :any_skip_relocation, sonoma:        "147c7ab6eb4ad98c90c4108d10cf8e8c81fde440c67410232bd6bf596fced61a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8682011cd00327c669230119547e3fa3a97235d718be9472c4e9abaa5c54e55e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c33283c96e8f2c7402fe9939b0e3600c3107b01629c5728b6e1d454b99d0c896"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fd0ad946e09a506e30c423f062fe61804e6bdbbce8765169e0f72fb097a9c3ed"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "50682400a81c2a8291e94b5f5e6aa0b615b6c38aa424eef94a38d49be5b74903"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9ff54303aa034718d909c25f4415b97e316395c80adc74bcd6cb0c7da0c23042"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b39dc4966dba810b9fed3e0bb6ed291b4de84a935f6b48e43e4bd7104b8b55b4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "39e9b4976b98f171cb2f0e2439c06639240be494db6968cf2faadd19f4261a71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b9394b54537a8201a13925abb5b89289b93f1e4c050f9f5b6c20ec26e5bfee1e"
   end
 
   depends_on "pandoc" => :build
