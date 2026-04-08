@@ -4,6 +4,7 @@ class Solana < Formula
   url "https://github.com/anza-xyz/agave/archive/refs/tags/v3.1.12.tar.gz"
   sha256 "5d0e0ab87b2f1b504e9c6b15e438bc9f3fd705b9427bb0bcbcaa9e135d6c23e2"
   license "Apache-2.0"
+  revision 1
   version_scheme 1
 
   livecheck do
