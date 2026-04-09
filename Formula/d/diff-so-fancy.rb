@@ -7,7 +7,7 @@ class DiffSoFancy < Formula
   head "https://github.com/so-fancy/diff-so-fancy.git", branch: "next"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "cfa8c3797df0307c06776a65aa1c92a3000b505a589571ddcbf0dad057873081"
+    sha256 cellar: :any_skip_relocation, all: "9981ccb3542f9b0044e1719a3a9b0d32d947a53e63f0a34e25caada4889861a9"
   end
 
   def install
