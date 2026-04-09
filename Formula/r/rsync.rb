@@ -24,6 +24,7 @@ class Rsync < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
+  depends_on "cmark-gfm" => :build
   depends_on "lz4"
   depends_on "openssl@3"
   depends_on "popt"
@@ -44,10 +45,14 @@ class Rsync < Formula
   end
 
   def install
+    # build rrsync.1 which is not included in the source tarball
+    (buildpath/"support/rrsync.1").write Utils.safe_popen_read("cmark-gfm", "support/rrsync.1.md", "--to", "man")
+
     args = %W[
       --with-rsyncd-conf=#{etc}/rsyncd.conf
       --with-included-popt=no
       --with-included-zlib=no
+      --with-rrsync=yes
       --enable-ipv6
     ]
 
