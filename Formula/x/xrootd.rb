@@ -1,10 +1,11 @@
 class Xrootd < Formula
   desc "High performance, scalable, fault-tolerant access to data"
   homepage "https://xrootd.slac.stanford.edu/"
-  url "https://github.com/xrootd/xrootd/releases/download/v5.9.2/xrootd-5.9.2.tar.gz"
-  mirror "https://xrootd.slac.stanford.edu/download/v5.9.2/xrootd-5.9.2.tar.gz"
-  sha256 "e29edb755d5f728eff0c74f7bd8cec35c954239ea747975eebd9c1e2bd61edb5"
+  url "https://github.com/xrootd/xrootd/releases/download/v6.0.0/xrootd-6.0.0.tar.gz"
+  mirror "https://xrootd.slac.stanford.edu/download/v6.0.0/xrootd-6.0.0.tar.gz"
+  sha256 "bc8d00b6c0b48f9186e3ad09e8e4e6eedf1067fad68f6d6a4f4e939bcf87007c"
   license "LGPL-3.0-or-later"
+  compatibility_version 1
   head "https://github.com/xrootd/xrootd.git", branch: "master"
 
   bottle do
@@ -21,6 +22,7 @@ class Xrootd < Formula
   depends_on "python@3.14" => [:build, :test]
   depends_on "davix"
   depends_on "krb5"
+  depends_on "libzip"
   depends_on "openssl@3"
   depends_on "readline"
 
