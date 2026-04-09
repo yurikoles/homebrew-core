@@ -8,7 +8,7 @@ class PassGitHelper < Formula
   license "LGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d1c0d31502a991e46fb58de83984459333114b609b2ff2e579fa9156d7a06fb5"
+    sha256 cellar: :any_skip_relocation, all: "1f7188059adc3a66ae4e370fa2b5c0085005b4386d9413000d986a1917d0a5d6"
   end
 
   depends_on "gnupg" => :test
