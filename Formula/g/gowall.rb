@@ -1,10 +1,9 @@
 class Gowall < Formula
   desc "Tool to convert a Wallpaper's color scheme / palette"
   homepage "https://achno.github.io/gowall-docs/"
-  url "https://github.com/Achno/gowall/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "ff5289250cd1bfe7adef728c85c4c97aed906330e9bd79760be540eb49343d51"
+  url "https://github.com/Achno/gowall/archive/refs/tags/v0.2.4.tar.gz"
+  sha256 "df19d8a7f4d138cfa233415ad71250c788aa1a3d310b4b19ca952fb0750c0c36"
   license "MIT"
-  revision 2
   head "https://github.com/Achno/gowall.git", branch: "main"
 
   bottle do
