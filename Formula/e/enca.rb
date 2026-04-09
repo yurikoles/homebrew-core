@@ -1,8 +1,8 @@
 class Enca < Formula
   desc "Charset analyzer and converter"
   homepage "https://cihar.com/software/enca/"
-  url "https://github.com/Project-OSS-Revival/enca/releases/download/1.21/enca-1.21.tar.xz"
-  sha256 "8b24e8a3a84288733b78addd24afdea1a3a5e6c61dc0ca8ca1d3702e481bc5ed"
+  url "https://github.com/Project-OSS-Revival/enca/releases/download/1.22/enca-1.22.tar.xz"
+  sha256 "95a70dd21198e6427d77a1d79721f4f87dd8bd07fdefe71a2062c6f41eee39da"
   license "GPL-2.0-only"
   head "https://github.com/Project-OSS-Revival/enca.git", branch: "master"
 
