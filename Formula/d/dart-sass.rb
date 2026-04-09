@@ -5,6 +5,15 @@ class DartSass < Formula
   sha256 "5f969b2eedf86384d90a9a339824b6652a4600e9e5f32784a7e48e453e145016"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "04b68917e5fa15257e4015a7464bd866627c4676c48f0c9c4f42cbdff47c8f10"
+    sha256 cellar: :any,                 arm64_sequoia: "504e7c9ab687facfd63978bb335f3bc3cddaedb5c0494093e13b503a0f055d21"
+    sha256 cellar: :any,                 arm64_sonoma:  "d0ea9ce1bd01db3b76a7c64edb75da8716883d1eca1e7d9e62a11ebcb4e28b6b"
+    sha256 cellar: :any,                 sonoma:        "74939be86282ef7692b4d0460af6a819aebe8de9efa2ca53d4bff5641bbeb485"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c1452e98b3a7c6bfd511cb657a9e91e709bfc60da565c18b77b6ef8f17c70858"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cedfbfb2a3ac93d3a27c965fe8b235ad56d5b17e3a5396660dac891a01e99ec6"
+  end
+
   depends_on "buf" => :build
   depends_on "dart-sdk" => :build
   depends_on "dartaotruntime"
