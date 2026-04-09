@@ -1,8 +1,8 @@
 class Mvtools < Formula
   desc "Filters for motion estimation and compensation"
   homepage "https://github.com/dubhater/vapoursynth-mvtools"
-  url "https://github.com/dubhater/vapoursynth-mvtools/archive/refs/tags/v24.tar.gz"
-  sha256 "ccff47f4ea25aa13b13fabd5cf38dd0be1ceda10d9ad6b52bd42ecf9d6eb24ad"
+  url "https://github.com/dubhater/vapoursynth-mvtools/archive/refs/tags/v25.tar.gz"
+  sha256 "378c94e1b742a55b272c69cef52e88c999e840365a1e96ac3856dd23e738121c"
   license "GPL-2.0-or-later"
   head "https://github.com/dubhater/vapoursynth-mvtools.git", branch: "master"
 
@@ -19,19 +19,21 @@ class Mvtools < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "b1e2a5e84ec6842466bca0a44a572a45c491e7fd3c30ea5e4125f02d664f04fa"
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
+  depends_on "meson" => :build
   depends_on "nasm" => :build
+  depends_on "ninja" => :build
   depends_on "pkgconf" => :build
 
   depends_on "fftw"
   depends_on "vapoursynth"
 
   def install
-    system "./autogen.sh"
-    system "./configure", *std_configure_args
-    system "make", "install"
+    # Replace vendored path to homebrew formula path
+    inreplace "meson.build", "'vapoursynth/include'", "'#{Formula["vapoursynth"].opt_include}/vapoursynth'"
+
+    system "meson", "setup", "build", *std_meson_args
+    system "meson", "compile", "-C", "build", "--verbose"
+    system "meson", "install", "-C", "build"
   end
 
   def caveats
