@@ -7,8 +7,8 @@ class LibcapNg < Formula
   head "https://github.com/stevegrubb/libcap-ng.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_linux:  "2406b612f7cd52a073608b4cf819260270d50a491ae1dd4d47f7d901f6076155"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "28c4e76257163080c73ed6a432e2e392abdfd293349333f0836545dfbc87d29b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:  "6dd678906bd60a3abd618109a3bf6e0968c2ba1983251a5345192f88336603ab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "50b33e8da4ed5daf4ed149254786fe602c5f33cdb8700148ad64c5421633eada"
   end
 
   depends_on "autoconf" => :build
