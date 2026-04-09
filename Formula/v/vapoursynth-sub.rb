@@ -1,10 +1,9 @@
 class VapoursynthSub < Formula
   desc "VapourSynth filters - Subtitling filter"
   homepage "https://www.vapoursynth.com"
-  url "https://github.com/vapoursynth/subtext/archive/refs/tags/R5.tar.gz"
-  sha256 "d1e4649c5417e671679753840ae0931cdbd353a862333129d7bd600770fd3db8"
+  url "https://github.com/vapoursynth/subtext/archive/refs/tags/R6.tar.gz"
+  sha256 "536e2f056c7b318b0104b8b9050bb17c00d8ca60b0e5fdecf1ee92879c5f9165"
   license "MIT"
-  revision 2
   version_scheme 1
   head "https://github.com/vapoursynth/subtext.git", branch: "master"
 
@@ -27,19 +26,14 @@ class VapoursynthSub < Formula
   depends_on "libass"
   depends_on "vapoursynth"
 
-  # Apply open PR to support FFmpeg 8
-  # PR ref: https://github.com/vapoursynth/subtext/pull/17
-  patch do
-    url "https://github.com/vapoursynth/subtext/commit/09c9e2bb87a635cdc5377c70983f8ceb7fae5841.patch?full_index=1"
-    sha256 "362498e7e97d5039dcf6bed4b146e6f3995dda321ceb4c78545e44dbe5062255"
-  end
-
   def install
     # Upstream build system wants to install directly into vapoursynth's libdir and does not respect
     # prefix, but we want it in a Cellar location instead.
-    inreplace "meson.build",
-              "install_dir : join_paths(vapoursynth_dep.get_pkgconfig_variable('libdir'), 'vapoursynth')",
-              "install_dir : '#{lib}/vapoursynth'"
+    inreplace "meson.build" do |s|
+      s.gsub!(/^incdir = include_directories\(.*?^\)/m,
+              "incdir = include_directories('#{Formula["vapoursynth"].opt_include}/vapoursynth')")
+      s.gsub! "install_dir: py.get_install_dir() / 'vapoursynth/plugins'", "install_dir: '#{lib}/vapoursynth'"
+    end
 
     system "meson", "setup", "build", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
