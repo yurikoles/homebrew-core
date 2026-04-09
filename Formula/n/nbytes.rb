@@ -1,8 +1,8 @@
 class Nbytes < Formula
   desc "Library of byte handling functions extracted from Node.js core"
   homepage "https://github.com/nodejs/nbytes"
-  url "https://github.com/nodejs/nbytes/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "556b4bbe3ed747cea1d4466133f7abb82595f38c8f808be1d248b0bf8682e509"
+  url "https://github.com/nodejs/nbytes/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "67f4b8363f12abb64c07a0cecf2bf2dce7ab47b5f8b9fd2efdb852ea254c2d40"
   license "MIT"
 
   bottle do
@@ -17,13 +17,6 @@ class Nbytes < Formula
   depends_on "cmake" => :build
 
   def install
-    # Remove buildtime tests
-    inreplace "CMakeLists.txt" do |s|
-      s.gsub! "FetchContent_MakeAvailable(googletest)", ""
-      s.gsub! "enable_testing()", ""
-      s.gsub! "add_subdirectory(tests)", ""
-    end
-
     args = %w[
       -DBUILD_SHARED_LIBS=ON
       -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON
