@@ -2,8 +2,9 @@ class Lv < Formula
   desc "Powerful multi-lingual file viewer/grep"
   # The upstream homepage was "https://web.archive.org/web/20160310122517/www.ff.iij4u.or.jp/~nrt/lv/"
   homepage "https://salsa.debian.org/debian/lv"
-  url "https://salsa.debian.org/debian/lv/-/archive/debian/4.51-10/lv-debian-4.51-10.tar.gz"
-  sha256 "c935150583df6f2cea596fdd116d82ec634d96e99f2f7e4dc5b7b1a6f638aba1"
+  url "https://salsa.debian.org/debian/lv/-/archive/debian/4.51-10.1/lv-debian-4.51-10.1.tar.gz"
+  version "4.51-10.1"
+  sha256 "64c1efb7d66301625d3a46dd4b3abed45942b2686de335860bf24a37b01ea858"
   license "GPL-2.0-or-later"
   head "https://salsa.debian.org/debian/lv.git", branch: "master"
 
