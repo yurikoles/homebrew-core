@@ -4,6 +4,7 @@ class Libass < Formula
   url "https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz"
   sha256 "78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a"
   license "ISC"
+  revision 1
   compatibility_version 1
 
   bottle do
