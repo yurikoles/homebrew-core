@@ -1,18 +1,18 @@
 class Fence < Formula
   desc "Lightweight sandbox for commands with network and filesystem restrictions"
   homepage "https://github.com/Use-Tusk/fence"
-  url "https://github.com/Use-Tusk/fence/archive/refs/tags/v0.1.42.tar.gz"
-  sha256 "cbdee87045b3ea623036a698d5a38a11f11e3e73e192ab8bfd7a8f1b8269c5f7"
+  url "https://github.com/Use-Tusk/fence/archive/refs/tags/v0.1.43.tar.gz"
+  sha256 "aa3ba1e3607fac529191b34849c4840b268c87330c0cced06dc3a7ee9aa2d9a7"
   license "Apache-2.0"
   head "https://github.com/Use-Tusk/fence.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "49a9843dba97e21b760b2df36d52f3283ad00a201f71ec724f73304464046621"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "49a9843dba97e21b760b2df36d52f3283ad00a201f71ec724f73304464046621"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "49a9843dba97e21b760b2df36d52f3283ad00a201f71ec724f73304464046621"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a80615017e8e9e06d5ca575e63b1d8b1529727c322034d7f13b6bbeb8d9c0aac"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a78023d4d1d3e15d55501dd1818cab0b2c75c18f9372090d91baea0e2d5a10f8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "67b8d8e2ae02380a9d60a2d4b1ef77ecd1c4be79753f7b5070978c439d613a42"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "629b7647819bbfa0dc4cfd21fa379db80d612d2f1c85a5b8616f2c737e71a551"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "629b7647819bbfa0dc4cfd21fa379db80d612d2f1c85a5b8616f2c737e71a551"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "629b7647819bbfa0dc4cfd21fa379db80d612d2f1c85a5b8616f2c737e71a551"
+    sha256 cellar: :any_skip_relocation, sonoma:        "268307ac60749be1cb0685bed1bd346709ae49c41093423b78fff271d45f02dc"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c8a0f5355844dd1f9dc5597eb827f16e9a53c0aaf90894c255e6f1d5dba55dd9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3faa29ea1f8d1fde9373c80ac27494aa5a6358be6995ea453c6a745efe6cc875"
   end
 
   depends_on "go" => :build
