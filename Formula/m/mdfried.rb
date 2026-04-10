@@ -7,12 +7,12 @@ class Mdfried < Formula
   head "https://github.com/benjajaja/mdfried.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "b2b7a4e77482b847503470a887bc34f52894ca06a13f22b09c4378650113bfe8"
-    sha256 cellar: :any,                 arm64_sequoia: "f2964a8e3a5f9fbdd62099ff6f32b018e11b933d8d92363d5fdbe40c83b8c6eb"
-    sha256 cellar: :any,                 arm64_sonoma:  "710cb27eefcbeb691b8fbba5d2a30480124ceae2bcbe977bc6c2c5d06361bf43"
-    sha256 cellar: :any,                 sonoma:        "f06850fb2fa7569eb1ead953469b6aee726c5ed6ecfe85c9025de7c028a91a08"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8ff7a08b0acc4f3a6506f1292708ab646b342d7def4ce86128ae670735a85dc9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c13660668a62da8f3edc8139750d69f403f46824c9f46a8f659e5946ee043ba0"
+    sha256 cellar: :any,                 arm64_tahoe:   "a898e47a9157e5bff6a5e58578cf4cffbad7223da0fbc3c591a2236751d539b5"
+    sha256 cellar: :any,                 arm64_sequoia: "c42a8932eb3f1df396d5c10558881f89928845ed0d0190a2b061b37142973d63"
+    sha256 cellar: :any,                 arm64_sonoma:  "39f84091751928c1107d97d8468c1cfac4afa778d3f026c4ecda29e3db982037"
+    sha256 cellar: :any,                 sonoma:        "b5965721c8ede08a87630a040884e0e24c1cb144f83579356ae9683dd29008a4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f58daa986620a633a7268c4d9ebf5c6e247aac959bd8373d398e30ca3f86ef0f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b290c8a7608dc84a8507d8dcc09f207b0262ebfc6918c6edf320e3813558cab0"
   end
 
   depends_on "pkgconf" => :build
