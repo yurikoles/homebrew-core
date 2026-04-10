@@ -1,8 +1,8 @@
 class Ktexttemplate < Formula
   desc "Libraries for text templating with Qt"
   homepage "https://api.kde.org/ktexttemplate-index.html"
-  url "https://download.kde.org/stable/frameworks/6.24/ktexttemplate-6.24.0.tar.xz"
-  sha256 "85021f69f61d09fe5b1b01075dff4fc90b4d3598f7e83bdd4fee31d4a01488e0"
+  url "https://download.kde.org/stable/frameworks/6.25/ktexttemplate-6.25.0.tar.xz"
+  sha256 "4e9f7583b3dcb37980b99fb2ac2de9e95af8b14fe9a166752bcb83c66ce26e25"
   license "LGPL-2.1-or-later"
   head "https://invent.kde.org/frameworks/ktexttemplate.git", branch: "master"
 
