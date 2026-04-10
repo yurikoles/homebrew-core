@@ -6,12 +6,12 @@ class Snapraid < Formula
   license "GPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ae244c68599c9f836cd7ead50b72aac6bc1ff693c17c78c10884deae913bf424"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "823465ce79d61c2d1f3094e7ec468b75bb0adcb062678d71e4a371d8d93d2821"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a3e3f24ffa52fa6769f13ab164bcca08eb93603544f50331e48aee74181cdc25"
-    sha256 cellar: :any_skip_relocation, sonoma:        "66ea8f86e7d6001e4c4afa93c366792c7adcb440c837d841330835f17568c605"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3dca5fa97366e905beecfb1c0eb9c83a760bd7733419caefce4cf89d5eea34fb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16ff37466314bb669f4b8c9950fabfce60bd39d4303e44d42712fa091d94d555"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6d10794b0ca2b81a7ef269666bdc3951df97133c2ddff0c7dbc09fc0229c9703"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ae1ff335221758dceb6cd7ae388df4b3fb3e10fffdf4a5c3864befeb89ab8ba8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "759562eb7d8616c0ec6dae79d8b8eeecf7d57ac1e49bda497f3238581c96b8ec"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2203cc8b6623ba60fe2f14847bb82dd1736063508c7d3d1778ccbe3a9b89b05d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b730a630546d4d8e608e54ba7de60aa19093a089e3e967ebd2536de6898f5408"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "418c6814165bfc98b1b3b940ba5b2cdc6ad9a37f8d78fad02df87709bea3311f"
   end
 
   head do
