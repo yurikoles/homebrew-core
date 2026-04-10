@@ -3,8 +3,8 @@ class Copier < Formula
 
   desc "Utility for rendering projects templates"
   homepage "https://copier.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/c9/bf/f217410ea074263f6346023fa2fe5aefbf2b1fdc583377dc84a74a8eac61/copier-9.14.1.tar.gz"
-  sha256 "98178638db62807a2d22aac851ab9c09ceaee3054884a693ca9d214c6739efe7"
+  url "https://files.pythonhosted.org/packages/33/68/7ad4e4b7c19ea4881244f04db01c1b5a2a720292673458fe338a2581cf72/copier-9.14.2.tar.gz"
+  sha256 "dc268f94964a6ddd076128a53a5e037932795dbc456991b1d423afcb66deef0f"
   license "MIT"
 
   bottle do
@@ -28,8 +28,8 @@ class Copier < Formula
   end
 
   resource "dunamai" do
-    url "https://files.pythonhosted.org/packages/1c/c4/346cef905782df6152f29f02d9c8ed4acf7ae66b0e66210b7156c5575ccb/dunamai-1.26.0.tar.gz"
-    sha256 "5396ac43aa20ed059040034e9f9798c7464cf4334c6fc3da3732e29273a2f97d"
+    url "https://files.pythonhosted.org/packages/9f/67/d5611975faaa5e4a920f4b19e4caccd5df0facb925687850f1e45f5876f2/dunamai-1.26.1.tar.gz"
+    sha256 "3b46007bd65b00b4824ead0a1aee365fd22d0ec2b9c219497d4fd48f52860c8b"
   end
 
   resource "funcy" do
@@ -63,8 +63,8 @@ class Copier < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/19/56/8d4c30c8a1d07013911a8fdbd8f89440ef9f08d07a1b50ab8ca8be5a20f9/platformdirs-4.9.4.tar.gz"
-    sha256 "1ec356301b7dc906d83f371c8f487070e99d3ccf9e501686456394622a01a934"
+    url "https://files.pythonhosted.org/packages/9f/4a/0883b8e3802965322523f0b200ecf33d31f10991d0401162f4b23c698b42/platformdirs-4.9.6.tar.gz"
+    sha256 "3bfa75b0ad0db84096ae777218481852c0ebc6c727b3168c1b9e0118e458cf0a"
   end
 
   resource "plumbum" do
