@@ -1,8 +1,8 @@
 class Gptscript < Formula
   desc "Develop LLM Apps in Natural Language"
   homepage "https://docs.gptscript.ai/"
-  url "https://github.com/gptscript-ai/gptscript/archive/refs/tags/v0.9.8.tar.gz"
-  sha256 "13666d4cce007c3da8c1a9afdd6ffa0ae9d584aaa5ca57597caf71c5008d490c"
+  url "https://github.com/gptscript-ai/gptscript/archive/refs/tags/v0.9.9.tar.gz"
+  sha256 "1f875ca3da55f1c2d697807a375dba517ad5f49a2b1115d22590b2bcd968548e"
   license "Apache-2.0"
   head "https://github.com/gptscript-ai/gptscript.git", branch: "main"
 
