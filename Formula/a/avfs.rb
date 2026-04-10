@@ -22,7 +22,7 @@ class Avfs < Formula
 
   depends_on "pkgconf" => :build
   depends_on "bzip2"
-  depends_on "libfuse@2"
+  depends_on "libfuse"
   depends_on :linux # on macOS, requires closed-source macFUSE
   depends_on "xz"
 
