@@ -3,10 +3,9 @@ class B4 < Formula
 
   desc "Tool to work with public-inbox and patch archives"
   homepage "https://b4.docs.kernel.org/en/latest/"
-  url "https://files.pythonhosted.org/packages/d4/99/dea75130e9d8c34e583735d263614728f3b63fde895607da8edbfcc3650a/b4-0.15.1.tar.gz"
-  sha256 "e48c44bb579fadabb1fc3f15bf1874afd721bc1a63fba10c96f568bc1f47ccb3"
+  url "https://files.pythonhosted.org/packages/c3/34/7f17fce52acb992d7b70aaa956e6dec4dc432ce8d195a176f232fcd6315c/b4-0.15.2.tar.gz"
+  sha256 "b815f2aed2288718cfe2a14c76421a00bc4f0918ea32b45dd1645c999fdda69d"
   license "GPL-2.0-or-later"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "04df938b9bdb395cc624cd729897721f1532ba3e064f6c13bb558cb82ef7008b"
@@ -25,8 +24,8 @@ class B4 < Formula
   pypi_packages exclude_packages: ["certifi", "cffi"]
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
-    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
+    url "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz"
+    sha256 "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
   end
 
   resource "dkimpy" do
@@ -60,8 +59,8 @@ class B4 < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz"
-    sha256 "c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652"
+    url "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz"
+    sha256 "18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517"
   end
 
   resource "urllib3" do
