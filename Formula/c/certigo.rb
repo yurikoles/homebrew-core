@@ -1,8 +1,8 @@
 class Certigo < Formula
   desc "Utility to examine and validate certificates in a variety of formats"
   homepage "https://github.com/square/certigo"
-  url "https://github.com/square/certigo/archive/refs/tags/v1.17.1.tar.gz"
-  sha256 "4ac183d25d89246519cce0c7d3ed3e3be261ac72f4ed3b15b9e0690c91778ed4"
+  url "https://github.com/square/certigo/archive/refs/tags/v1.18.0.tar.gz"
+  sha256 "f532bc215b8f57af6bd823d16b6ef2d57499a24f949722d06a2d1c8ea64df225"
   license "Apache-2.0"
   head "https://github.com/square/certigo.git", branch: "master"
 
