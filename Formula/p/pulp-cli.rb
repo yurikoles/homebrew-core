@@ -9,12 +9,12 @@ class PulpCli < Formula
   head "https://github.com/pulp/pulp-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "751d958e6244ae4fa50d2e3ff721d29903b128772fea3f6102d027172386db47"
-    sha256 cellar: :any,                 arm64_sequoia: "60bcc9afc3b975cb1bef3b50019408d07f305170aef9c4a71fbe8d609ee017a6"
-    sha256 cellar: :any,                 arm64_sonoma:  "c54ba6a23328ff0c10746539494dd7663e2579f2faadc8736db6c20b1a0b6ee9"
-    sha256 cellar: :any,                 sonoma:        "5df9366fc2695532bb9f912bf42777ea8828a04ed9f25439bba055506454e83e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "658e29539054ccbe145e179f89f67820e7bc52cf279d3f69ca42826249bf47fc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db14685e73d05cfdd4c3805ad59615a9fc049ce511c0ecfe73cbe4ec356af8cd"
+    sha256 cellar: :any,                 arm64_tahoe:   "91206470e3d3f290c225279071db526930139c2521347207966f8a719f46fb59"
+    sha256 cellar: :any,                 arm64_sequoia: "bf913b89a46a8e7784b2415d14fb2d56b780d8c28bff3a10ea49a69ec9970a39"
+    sha256 cellar: :any,                 arm64_sonoma:  "1fd8de34a82934dbbf90e3a7a7ef6649c5bba7ddb415725fae312bf6ea7fe963"
+    sha256 cellar: :any,                 sonoma:        "873bdf61ea96149998b20dacfe53733715ca67b8192aaffd03b5f4d6f916931b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3cd2eadb414fc6bf5e148a3571c8674dbd1d8c9ccb9a0020a981a750d589853c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "447beff1689c1db5cf1aff55dbee18474a5e603a016452ce7c861498aeb6ea8d"
   end
 
   depends_on "certifi" => :no_linkage
