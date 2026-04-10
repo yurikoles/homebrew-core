@@ -1,8 +1,8 @@
 class Profanity < Formula
   desc "Console based XMPP client"
   homepage "https://profanity-im.github.io"
-  url "https://profanity-im.github.io/tarballs/profanity-0.17.0.tar.xz"
-  sha256 "508e18c0e797d46cc38779eb207480fc3e93b814e202a351050f395c1b262804"
+  url "https://profanity-im.github.io/tarballs/profanity-0.18.0.tar.xz"
+  sha256 "a1ad441bf92ba0327e0740a15dfe7885cb14415a934c850b8b98ac2f728d7cf8"
   license "GPL-3.0-or-later"
   head "https://github.com/profanity-im/profanity.git", branch: "master"
 
@@ -42,12 +42,6 @@ class Profanity < Formula
 
   on_linux do
     depends_on "libnotify"
-  end
-
-  # Fix missing imports for libomemo-c support: https://github.com/profanity-im/profanity/pull/2133
-  patch do
-    url "https://github.com/profanity-im/profanity/commit/9a501e6ecdaf65d28362e5888a0529fb734a353e.patch?full_index=1"
-    sha256 "ac0f514496890bbcbed9cee3f6a84387c64f3a299d9b2f700e07ae57bb887447"
   end
 
   def install
