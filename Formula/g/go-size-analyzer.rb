@@ -1,8 +1,8 @@
 class GoSizeAnalyzer < Formula
   desc "Analyzing the dependencies in compiled Golang binaries"
   homepage "https://github.com/Zxilly/go-size-analyzer"
-  url "https://github.com/Zxilly/go-size-analyzer/archive/refs/tags/v1.12.2.tar.gz"
-  sha256 "9758a75d46b0592bf8dfa84148dc249fe7a66d55270513b7b0c5fb79a3a3b851"
+  url "https://github.com/Zxilly/go-size-analyzer/archive/refs/tags/v1.12.3.tar.gz"
+  sha256 "2d5983923b60fe06659d6d380e012105c270edb0d1714a230f8a97ccd48d2fbc"
   license "AGPL-3.0-only"
   head "https://github.com/Zxilly/go-size-analyzer.git", branch: "master"
 
@@ -31,6 +31,9 @@ class GoSizeAnalyzer < Formula
     system "pnpm", "--dir", "ui", "build:ui"
 
     mv "ui/dist/webui/index.html", "internal/webui/index.html"
+
+    # Set experimental feature for go
+    ENV["GOEXPERIMENT"] = "jsonv2"
 
     ldflags = %W[
       -s -w
