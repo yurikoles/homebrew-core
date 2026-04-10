@@ -3,18 +3,18 @@ class Fastmcp < Formula
 
   desc "Fast, Pythonic way to build MCP servers and clients"
   homepage "https://gofastmcp.com/getting-started/welcome"
-  url "https://files.pythonhosted.org/packages/12/0d/56dc2c9fd402b21b850f2c9725f1dc8c257991d2e48a2d2e8a755215ee47/fastmcp-3.2.1.tar.gz"
-  sha256 "6d824463ed8cefb122a9566ddd96b8a994d8a69db413ab3105509b00b0aca1fd"
+  url "https://files.pythonhosted.org/packages/10/61/a4470e2f590d98a1db3d40cb6f424a1353b2b09d4d0dfe01d0b8d3987984/fastmcp-3.2.2.tar.gz"
+  sha256 "a5351ec8c098844a8d508a53e484b362f5357b890596aaf233ac9686a796a62f"
   license "Apache-2.0"
   head "https://github.com/jlowin/fastmcp.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "884453aedb03fa69d180c6967645e45c12745006eb094bb163d58f18838f1b5d"
-    sha256 cellar: :any,                 arm64_sequoia: "f4f7ceccbda4efae50bdeec7de4b4d75a024bb725014af19efaf38bc24eb5948"
-    sha256 cellar: :any,                 arm64_sonoma:  "918937b769491f0232927002682c6e02a0b884c5a0253c51fe8566e9f1b62d9c"
-    sha256 cellar: :any,                 sonoma:        "9772bc5367fd4842bdc7f87b382c1210f218dd5b29e5faf7e7aa19e06953606a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "97e0d8108096683a51fa00045f90d0fc281c5efe9026ec86e0a2c9004bf75802"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "485441c81891512368d1f7570c4ce0b7dd6579a715675a8ef98ec97d717038a7"
+    sha256 cellar: :any,                 arm64_tahoe:   "35f112387ae289aed158997c196a163d2d197735e590f339ddb5a6fdc2b36e99"
+    sha256 cellar: :any,                 arm64_sequoia: "1ab82f46cd87c7842f64c607baad2734cb1a28f72d62037e12008625ec63d43c"
+    sha256 cellar: :any,                 arm64_sonoma:  "4a427657280536a7bcbb778e80274e6b53cf7fe3d9c9bfc6b1410f9bd3d94486"
+    sha256 cellar: :any,                 sonoma:        "fb4dc38480019073267f44ff5dce8d33fddec73e519d03b74f6670c0f336e202"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6ea6755bfadf575a9980e65f03a2ec77d831e840e703a244ee60889fd648ee8f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30bde7973e6f74de5a7f7e81864179e2059129bff56fc4f3cff808f55b70f6ba"
   end
 
   depends_on "rust" => :build # for py_key_value_aio
@@ -70,8 +70,8 @@ class Fastmcp < Formula
   end
 
   resource "cyclopts" do
-    url "https://files.pythonhosted.org/packages/6c/c4/2ce2ca1451487dc7d59f09334c3fa1182c46cfcf0a2d5f19f9b26d53ac74/cyclopts-4.10.1.tar.gz"
-    sha256 "ad4e4bb90576412d32276b14a76f55d43353753d16217f2c3cd5bdceba7f15a0"
+    url "https://files.pythonhosted.org/packages/66/2c/fced34890f6e5a93a4b7afb2c71e8eee2a0719fb26193a0abf159ecb714d/cyclopts-4.10.2.tar.gz"
+    sha256 "d7b950457ef2563596d56331f80cbbbf86a2772535fb8b315c4f03bc7e6127f1"
   end
 
   resource "dnspython" do
@@ -215,8 +215,8 @@ class Fastmcp < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/19/56/8d4c30c8a1d07013911a8fdbd8f89440ef9f08d07a1b50ab8ca8be5a20f9/platformdirs-4.9.4.tar.gz"
-    sha256 "1ec356301b7dc906d83f371c8f487070e99d3ccf9e501686456394622a01a934"
+    url "https://files.pythonhosted.org/packages/9f/4a/0883b8e3802965322523f0b200ecf33d31f10991d0401162f4b23c698b42/platformdirs-4.9.6.tar.gz"
+    sha256 "3bfa75b0ad0db84096ae777218481852c0ebc6c727b3168c1b9e0118e458cf0a"
   end
 
   resource "py-key-value-aio" do
