@@ -1,8 +1,8 @@
 class Aicommit2 < Formula
   desc "Reactive CLI that generates commit messages for Git and Jujutsu with AI"
   homepage "https://github.com/tak-bro/aicommit2"
-  url "https://registry.npmjs.org/aicommit2/-/aicommit2-2.5.8.tgz"
-  sha256 "5eea02e5c26f25517b5bb69d6f136590d516b1965c20152d41bf6096543f388a"
+  url "https://registry.npmjs.org/aicommit2/-/aicommit2-2.5.12.tgz"
+  sha256 "c2b72ffb6819d04eea6508e0b648693a07f28d819b623de92e616705db31f888"
   license "MIT"
 
   bottle do
@@ -12,7 +12,16 @@ class Aicommit2 < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", *std_npm_args
+    # Optional dependencies include `@github/copilot-sdk`
+    # which uses proprietary license
+    (libexec/"aicommit2").install buildpath.glob("*")
+    cd libexec/"aicommit2" do
+      system "npm", "install", "--omit=optional", *std_npm_args(prefix: false)
+      with_env(npm_config_prefix: libexec) do
+        system "npm", "link"
+      end
+    end
+
     bin.install_symlink libexec.glob("bin/*")
   end
 
