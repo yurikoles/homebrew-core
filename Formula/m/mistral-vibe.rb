@@ -9,12 +9,12 @@ class MistralVibe < Formula
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "2c1183f2df751a371ae82c5adac3a70b5c7e5d0bb3a975e6b9b60c79336db431"
-    sha256 cellar: :any,                 arm64_sequoia: "9549d080cc524d8dfb70b20bdc69d80696316c7241232bba2b660bc74abc29a8"
-    sha256 cellar: :any,                 arm64_sonoma:  "1fe11fe4ecdd84d9d9514cc98c5e64646bda1b37fd932887af530ab275338029"
-    sha256 cellar: :any,                 sonoma:        "5102b5581e47a81c61eaa13c525f50bc32b20c4fc5937fcd95bbac2974c4ae9d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "576898d394a805247a722fbf64fc20eef75a36efe5980e8fa4fe4102aae8f0df"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1b5d360178d3b9eb46678208ed7f6ebb6da8d0bcc8015d9b55760de91100a0f6"
+    sha256 cellar: :any,                 arm64_tahoe:   "e3bbbde28523253f723163da916dd177579d2954e65f05475c5fd8d2a3ebe338"
+    sha256 cellar: :any,                 arm64_sequoia: "2df829243b0aaf089cce1ee485853085138b8f7a7205bb5899c52aa426b24019"
+    sha256 cellar: :any,                 arm64_sonoma:  "c17680dc4bb8a503b2b0c905191f38c0c5c407c3456fe29f4eab2459ed5f67b5"
+    sha256 cellar: :any,                 sonoma:        "68c388952ef02e8a24f19e7a0f6963a5e16b36a2d4ab9b1d2d2e3768b7507f0a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7ed489034ed3187594933598e5bc8674d7947b75e2cf352f6cf56ff1324ac5a8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5c3b52ab6fcedcb2756de68137b5350519bf0b6c984c543e39f683a5f4859c24"
   end
 
   depends_on "rust" => :build
