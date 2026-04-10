@@ -1,8 +1,8 @@
 class Mvtools < Formula
   desc "Filters for motion estimation and compensation"
   homepage "https://github.com/dubhater/vapoursynth-mvtools"
-  url "https://github.com/dubhater/vapoursynth-mvtools/archive/refs/tags/v25.tar.gz"
-  sha256 "378c94e1b742a55b272c69cef52e88c999e840365a1e96ac3856dd23e738121c"
+  url "https://github.com/dubhater/vapoursynth-mvtools/archive/refs/tags/v26.tar.gz"
+  sha256 "c39feedaf44e01c89264fa169a68318897b85bd445fb2a11c0125f9729103e54"
   license "GPL-2.0-or-later"
   head "https://github.com/dubhater/vapoursynth-mvtools.git", branch: "master"
 
@@ -25,11 +25,17 @@ class Mvtools < Formula
 
   def install
     # Replace vendored path to homebrew formula path
-    inreplace "meson.build", "'vapoursynth/include'", "'#{Formula["vapoursynth"].opt_include}/vapoursynth'"
+    inreplace "meson.build" do |s|
+      s.gsub! "'vapoursynth/include'", "'#{Formula["vapoursynth"].opt_include}/vapoursynth'"
+      s.gsub! "py.get_install_dir() / 'vapoursynth/plugins'", "'#{lib}'"
+    end
 
     system "meson", "setup", "build", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
+
+    # Create a symlink for the old library name for compatibility
+    ln_sf lib/shared_library("mvtools"), lib/shared_library("libmvtools")
   end
 
   def caveats
