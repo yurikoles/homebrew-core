@@ -1,8 +1,8 @@
 class Neocmakelsp < Formula
   desc "Another cmake lsp"
   homepage "https://neocmakelsp.github.io/"
-  url "https://github.com/neocmakelsp/neocmakelsp/archive/refs/tags/v0.10.1.tar.gz"
-  sha256 "58f4338fef0012858aeec961873948f37e9bc0167d68ae4cc1b5f458e4206610"
+  url "https://github.com/neocmakelsp/neocmakelsp/archive/refs/tags/v0.10.2.tar.gz"
+  sha256 "55ae5a731fa3b7091dc8474420ba76f61a5228067ce71d69cc0d3fcc5d6f83dd"
   license "MIT"
   head "https://github.com/neocmakelsp/neocmakelsp.git", branch: "master"
 
