@@ -1,8 +1,8 @@
 class Gffread < Formula
   desc "GFF/GTF format conversions, region filtering, FASTA sequence extraction"
   homepage "https://github.com/gpertea/gffread"
-  url "https://github.com/gpertea/gffread/releases/download/v0.12.7/gffread-0.12.7.tar.gz"
-  sha256 "bfde1c857495e578f5b3af3c007a9aa40593e69450eafcc6a42c3e8ef08ed1f5"
+  url "https://github.com/gpertea/gffread/releases/download/v0.12.9/gffread-0.12.9.tar.gz"
+  sha256 "3ee1a3a2db938569bcccb1e8d908503392ebf0a3f203ddaff1b967b8ade614d1"
   license "MIT"
 
   bottle do
