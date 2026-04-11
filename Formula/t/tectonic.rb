@@ -1,26 +1,10 @@
 class Tectonic < Formula
   desc "Modernized, complete, self-contained TeX/LaTeX engine"
   homepage "https://tectonic-typesetting.github.io/"
+  url "https://github.com/tectonic-typesetting/tectonic/archive/refs/tags/tectonic@0.16.0.tar.gz"
+  sha256 "b4eda21afa1ccc6a0d32cc3cd970acbedf9fe95bd13c8e5fc44bd6aac1cfe84d"
   license "MIT"
-  revision 5
   head "https://github.com/tectonic-typesetting/tectonic.git", branch: "master"
-
-  stable do
-    url "https://github.com/tectonic-typesetting/tectonic/archive/refs/tags/tectonic@0.15.0.tar.gz"
-    sha256 "3c13de312c4fe39ff905ad17e64a15a3a59d33ab65dacb0a8b9482c57e6bc6aa"
-
-    # Backport `time` update to build on newer Rust
-    patch do
-      url "https://github.com/tectonic-typesetting/tectonic/commit/6b49ca8db40aaca29cb375ce75add3e575558375.patch?full_index=1"
-      sha256 "86e5343d1ce3e725a7dab0227003dddd09dcdd5913eb9e5866612cb77962affb"
-    end
-
-    # Backport fix for icu4c 75
-    patch do
-      url "https://github.com/tectonic-typesetting/tectonic/commit/d260961426b01f7643ba0f35f493bdb671eeaf3f.patch?full_index=1"
-      sha256 "7d2014a1208569a63fca044b8957e2d2256fa169ea2ebe562aed6f490eec17d1"
-    end
-  end
 
   # As of writing, only the tags starting with `tectonic@` are release versions.
   # NOTE: The `GithubLatest` strategy cannot be used here because the "latest"
@@ -56,10 +40,6 @@ class Tectonic < Formula
 
   def install
     ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version.to_s if OS.mac? # needed for CLT-only builds
-
-    # Fix to error: implicit autoref creates a reference to the dereference of a raw pointer
-    # for rust 1.89+, remove with next release
-    inreplace "crates/engine_bibtex/src/xbuf.rs", "(*old).len()", "(&(*old)).len()" if build.stable?
 
     # Ensure that the `openssl` crate picks up the intended library.
     # https://crates.io/crates/openssl#manual-configuration
