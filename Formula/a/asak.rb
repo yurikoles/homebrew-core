@@ -1,8 +1,8 @@
 class Asak < Formula
   desc "Cross-platform audio recording/playback CLI tool with TUI"
   homepage "https://github.com/chaosprint/asak"
-  url "https://github.com/chaosprint/asak/archive/refs/tags/v0.3.7.tar.gz"
-  sha256 "b4d4c99b2e1cf5dba9a9b271815fa12aa8342f1f77587ce5ff1b39098d224be0"
+  url "https://github.com/chaosprint/asak/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "d4df734e87b63cf20f7fa34e15853afa640620043871497d54f78a6818680dd6"
   license "MIT"
   head "https://github.com/chaosprint/asak.git", branch: "main"
 
@@ -33,8 +33,8 @@ class Asak < Formula
   end
 
   test do
-    output = shell_output("#{bin}/asak play")
-    assert_match "No .wav, .ogg, or .mp3 files found in current directory", output
+    output = shell_output("#{bin}/asak play 2>&1", 2)
+    assert_match "unexpected argument 'play' found", output
 
     assert_match version.to_s, shell_output("#{bin}/asak --version")
   end
