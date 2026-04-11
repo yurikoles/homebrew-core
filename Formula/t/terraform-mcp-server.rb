@@ -25,6 +25,7 @@ class TerraformMcpServer < Formula
       -X github.com/hashicorp/terraform-mcp-server/version.Version=#{version}
     ]
     system "go", "build", *std_go_args(ldflags:), "./cmd/terraform-mcp-server"
+    generate_completions_from_executable(bin/"terraform-mcp-server", shell_parameter_format: :cobra)
   end
 
   test do
