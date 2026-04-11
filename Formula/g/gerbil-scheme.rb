@@ -1,8 +1,8 @@
 class GerbilScheme < Formula
   desc "Opinionated dialect of Scheme designed for Systems Programming"
   homepage "https://cons.io"
-  url "https://github.com/mighty-gerbils/gerbil/releases/download/v0.18.1/gerbil-v0.18.1.tar.gz"
-  sha256 "e1827bb88bdb74a01a99f0d94a50a6469ae4e760905be83dd3064ffc1709ceb5"
+  url "https://github.com/mighty-gerbils/gerbil/archive/refs/tags/v0.18.2.tar.gz"
+  sha256 "8e4cdefea8d75feea4d5df33cc90b37dc5e8d6ab03b7b4b7eb749ae7d9ff739e"
   license any_of: ["LGPL-2.1-or-later", "Apache-2.0"]
 
   livecheck do
@@ -41,6 +41,7 @@ class GerbilScheme < Formula
   end
 
   def install
+    ENV["GERBIL_VERSION"] = "v#{version}"
     system "./configure", "--prefix=#{prefix}", "--enable-march="
     ENV.deparallelize
     system "make"
