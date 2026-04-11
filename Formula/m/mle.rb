@@ -1,10 +1,9 @@
 class Mle < Formula
   desc "Flexible terminal-based text editor"
   homepage "https://github.com/adsr/mle"
-  url "https://github.com/adsr/mle/archive/refs/tags/v1.7.2.tar.gz"
-  sha256 "5275fcfc58d3d4890d074077d94497db488b2648287b3e48e67b00ea517b02ba"
+  url "https://github.com/adsr/mle/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "7ee33a695f801024254fc717b64aff6a7a4c274874fc4b83e1a23ccf1a74b9ca"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "aaf1838843db7b6638185bbd393cbc7ab9e3b3984407717ef687428b02ede51b"
