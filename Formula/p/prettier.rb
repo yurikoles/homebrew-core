@@ -1,8 +1,8 @@
 class Prettier < Formula
   desc "Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML"
   homepage "https://prettier.io/"
-  url "https://registry.npmjs.org/prettier/-/prettier-3.8.1.tgz"
-  sha256 "5531dc6006ad06b642d5342438909f85dc53e87c50556753c908229b213fb4f4"
+  url "https://registry.npmjs.org/prettier/-/prettier-3.8.2.tgz"
+  sha256 "917b771c007ff5d11cc96d4fa37df8fac86dd472b74ac0bbdcd70dfafab04c03"
   license "MIT"
   head "https://github.com/prettier/prettier.git", branch: "main"
 
