@@ -3,8 +3,8 @@ class KeeperCommander < Formula
 
   desc "Command-line and SDK interface to Keeper Password Manager"
   homepage "https://docs.keeper.io/en/privileged-access-manager/commander-cli/overview"
-  url "https://files.pythonhosted.org/packages/f4/fe/8b272a0dfca0b1049ff49335979fd22f3a5dced759e9dfb62ae059768c49/keepercommander-17.2.11.tar.gz"
-  sha256 "984d5f9996735163be8b66a734a7496ea9d03b0097dd30c75bbf6caba9a2dc21"
+  url "https://files.pythonhosted.org/packages/78/61/dbdadfb00d9d5aa67760bb07f0c1b87a7aaa25a3e5ba43ab1cd79069180f/keepercommander-17.2.12.tar.gz"
+  sha256 "4f6aae1c0b92d5d2040338e58a8aa0d97aae40dc0c2aaeca2977fe63b5867561"
   license "MIT"
   head "https://github.com/Keeper-Security/Commander.git", branch: "master"
 
@@ -72,13 +72,13 @@ class KeeperCommander < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/7b/60/e3bec1881450851b087e301bedc3daa9377a4d45f1c26aa90b0b235e38aa/charset_normalizer-3.4.6.tar.gz"
-    sha256 "1ae6b62897110aa7c79ea2f5dd38d1abca6db663687c0b1ad9aed6f6bae3d9d6"
+    url "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz"
+    sha256 "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
-    sha256 "12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"
+    url "https://files.pythonhosted.org/packages/57/75/31212c6bf2503fdf920d87fee5d7a86a2e3bcf444984126f13d8e4016804/click-8.3.2.tar.gz"
+    sha256 "14162b8b3b3550a7d479eafa77dfd3c38d9dc8951f6f69c78913a8f9a7540fd5"
   end
 
   resource "colorama" do
@@ -142,8 +142,8 @@ class KeeperCommander < Formula
   end
 
   resource "keeper-pam-webrtc-rs" do
-    url "https://files.pythonhosted.org/packages/b1/fa/54774a4487d68db05bcc9ae85ccb08441c1062f51d95e760149a0bb225ef/keeper_pam_webrtc_rs-2.1.10.tar.gz"
-    sha256 "4fa2257ab25312193e1e3c45222f8e793a016ecd9a2651db0182f74341bd7318"
+    url "https://files.pythonhosted.org/packages/b2/90/239a5bae0045ca11f60b141dd74e31ecbfae815cb14ef7ca7b62c0c36cc6/keeper_pam_webrtc_rs-2.1.12.tar.gz"
+    sha256 "71e576c6d753f5ffa80611693bed8083ae4d7e6d2f47017cc16b3d3efd70e494"
   end
 
   resource "keeper-secrets-manager-core" do
@@ -192,8 +192,8 @@ class KeeperCommander < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/19/56/8d4c30c8a1d07013911a8fdbd8f89440ef9f08d07a1b50ab8ca8be5a20f9/platformdirs-4.9.4.tar.gz"
-    sha256 "1ec356301b7dc906d83f371c8f487070e99d3ccf9e501686456394622a01a934"
+    url "https://files.pythonhosted.org/packages/9f/4a/0883b8e3802965322523f0b200ecf33d31f10991d0401162f4b23c698b42/platformdirs-4.9.6.tar.gz"
+    sha256 "3bfa75b0ad0db84096ae777218481852c0ebc6c727b3168c1b9e0118e458cf0a"
   end
 
   resource "prompt-toolkit" do
@@ -277,8 +277,8 @@ class KeeperCommander < Formula
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/4f/07/766ad19cf2b15cae2d79e0db46a1b783b62316e9ff3e058e7424b2a4398b/textual-8.2.1.tar.gz"
-    sha256 "4176890e9cd5c95dcdd206541b2956b0808e74c8c36381c88db53dcb45237451"
+    url "https://files.pythonhosted.org/packages/cf/2f/d44f0f12b3ddb1f0b88f7775652e99c6b5a43fd733badf4ce064bdbfef4a/textual-8.2.3.tar.gz"
+    sha256 "beea7b86b03b03558a2224f0cc35252e60ef8b0c4353b117b2f40972902d976a"
   end
 
   resource "uc-micro-py" do
@@ -302,8 +302,8 @@ class KeeperCommander < Formula
   end
 
   resource "werkzeug" do
-    url "https://files.pythonhosted.org/packages/b5/43/76ded108b296a49f52de6bac5192ca1c4be84e886f9b5c9ba8427d9694fd/werkzeug-3.1.7.tar.gz"
-    sha256 "fb8c01fe6ab13b9b7cdb46892b99b1d66754e1d7ab8e542e865ec13f526b5351"
+    url "https://files.pythonhosted.org/packages/dd/b2/381be8cfdee792dd117872481b6e378f85c957dd7c5bca38897b08f765fd/werkzeug-3.1.8.tar.gz"
+    sha256 "9bad61a4268dac112f1c5cd4630a56ede601b6ed420300677a869083d70a4c44"
   end
 
   resource "wrapt" do
