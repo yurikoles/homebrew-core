@@ -8,15 +8,12 @@ class VapoursynthSub < Formula
   head "https://github.com/vapoursynth/subtext.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any, arm64_tahoe:   "66be173efb94e72979fb21fd34617d7dbfe31fc1a59a91fd327264303753c0d7"
-    sha256 cellar: :any, arm64_sequoia: "4c5a5ece07feae55fe604f485bf45c3005565a2479ce6cb318f0732bddd529ff"
-    sha256 cellar: :any, arm64_sonoma:  "73845ff92fa1677f86fbbccf84d5e2cd461078f650fe1372edefa4f9e7538b41"
-    sha256 cellar: :any, arm64_ventura: "8d5b3e8589adfc64e774b1b9f717406c56b552aea8f4cdd8ac97750411492e91"
-    sha256 cellar: :any, sonoma:        "c4fa3e6025b1835664760fa97c5971cf31179cddae818de5d18e03655e04bcfc"
-    sha256 cellar: :any, ventura:       "047cfdebb5cf5bee06d1238db056ab7a70896b040bb25c7ffffe0d94f025504a"
-    sha256               arm64_linux:   "2bbe3501f1c999b11558063e691155ead7aaa80b6e68ee9f69e0ec992b3835e4"
-    sha256               x86_64_linux:  "20aa5b0a19e74a404e14a24328ff7de1e07101682c44063d57677d50d7b3007e"
+    sha256 cellar: :any, arm64_tahoe:   "1dd9d606c3dc95220bd01768d3915b93ab012db6948741cf7eec09bdbe3e4a85"
+    sha256 cellar: :any, arm64_sequoia: "3a1306e4e00e4e2631402a144aec9fa28901e7a673cd465506305da5e3a7e139"
+    sha256 cellar: :any, arm64_sonoma:  "499a8f53ac127e63fb8057db07100fdbc2e577feaeb5d281a52b4dea5a3f940a"
+    sha256 cellar: :any, sonoma:        "6431bf13a69ca6b48151dd5acbf301d969f7dba02710f6db9afd502dce711eb9"
+    sha256               arm64_linux:   "6cba3bd1647da2fe3c4784b57a79dd0392f23aba641567ce64f4543ab62f1369"
+    sha256               x86_64_linux:  "d1b277613210ac4fcd61d6f09ef9c5a81feb45001c7569bfef090e3cfd580b49"
   end
 
   depends_on "meson" => :build
