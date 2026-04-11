@@ -1,18 +1,18 @@
 class Vacuum < Formula
   desc "World's fastest OpenAPI & Swagger linter"
   homepage "https://quobix.com/vacuum/"
-  url "https://github.com/daveshanley/vacuum/archive/refs/tags/v0.25.7.tar.gz"
-  sha256 "1c69ff785d2869bad7ef8f0d70eaf4ae300063c3bc6bfa96471d490ef62c0ea3"
+  url "https://github.com/daveshanley/vacuum/archive/refs/tags/v0.25.8.tar.gz"
+  sha256 "b961dbe0e4594af6e29d48ed2eaa26b6d857ebac952d9818fec6de716a89ff59"
   license "MIT"
   head "https://github.com/daveshanley/vacuum.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0f6951d56003b5fc19ea97fee2fcacd1e7083a178684c013a569b2248a8d0314"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c62713da8759975e91d026698851eae425b7ae187822ef42426df0870ff7d49e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "833f8648becc2c9a7385ea266b80426da44a346d0f706069a1929a4fbd88103b"
-    sha256 cellar: :any_skip_relocation, sonoma:        "56de4966765f980b1e87bd90fdcd0bc42ac37a1283e47548acb55682130c09c8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "167336ccea55bd15d3d128099ad784258c30233a4e865124d2ccfd7a3ade1de2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "59671fbfa82f7803df6414c6c37fb1cedf2bea73529d79d028c54d50cc25a6d8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "eaaccc6c4a2b16fa325645a0d12995984d3def961e9c1afa828dd784e4b3bff9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c31ccbd7b46303c7725d6bc55e6e3bcbca625739ade1bffec2721350779d1358"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c5ede424d1581007c780d5998e85d50a78ec64eecdd0f2d347d530c6c8a2a732"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d0bdbe85020b0f6aa8df1e0266f3bc6dc1f65b36861d9b419f8fd09ade0bca3b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c60a7606836c665ed08c41d8e6f727b7bd97e0071814982cee8f4254d35221d6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9f9b3bd713066afb9929c3290f180af6a51814ca5ec66137b3dde2e0071d74f5"
   end
 
   depends_on "go" => :build
