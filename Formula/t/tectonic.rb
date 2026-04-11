@@ -15,12 +15,12 @@ class Tectonic < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "7fbfd97cfb3e84a0959f32472c684487e328825659eaf476c54a596acf682f07"
-    sha256 cellar: :any,                 arm64_sequoia: "1a05713fee4e4c8218d93fb54600382d47504487934192da2648c9c7517da891"
-    sha256 cellar: :any,                 arm64_sonoma:  "20270b77e9d90ad4f5b549731a04ba7bada496dd1d4959e8ea5a50ff91f84189"
-    sha256 cellar: :any,                 sonoma:        "3a4ee303aedb41e5f06d9098ab1f1a7912050aa39b01212200e65a5cdad2b5e6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "25ad71dd8158bba5607f071680dadca10c42f660203d0afafe31bfdedc1b19e6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6ea5920f52be18fafc043942d910708426ee5d09587d4d9a83b3d3c9a1b380e1"
+    sha256 cellar: :any,                 arm64_tahoe:   "c805c0f828bca46ac8e71be8daebf3e932a3925a743cdd07f0bccddd42f82c3e"
+    sha256 cellar: :any,                 arm64_sequoia: "25477183f4c079b5ca33441e9aee381634b3c65631de04b1fa5d3d40deedbace"
+    sha256 cellar: :any,                 arm64_sonoma:  "a0328709d3cf42360be97e9f55819726ff036f592138c13d43cb6433d41bc2d0"
+    sha256 cellar: :any,                 sonoma:        "47d5106f94d0846875392ba2303a113c13bc9db7ac5dd280bd06a5414bf31464"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cad133becfd4addc9132d31a6ff982aa55ad33c9aefa53c89d78975da3962fd2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "43c2d4658d8147b58dfb3bbe0a03d10715192eb1b6fb16ad4b4bbccf63843fce"
   end
 
   depends_on "pkgconf" => :build
