@@ -1,9 +1,14 @@
 class CodeServer < Formula
   desc "Access VS Code through the browser"
   homepage "https://github.com/coder/code-server"
-  url "https://registry.npmjs.org/code-server/-/code-server-4.114.0.tgz"
-  sha256 "0b7b14a267db634b7c3611ee7869998370f88cd668ef0877eef58a7e3d66e401"
+  url "https://registry.npmjs.org/code-server/-/code-server-4.112.0.tgz"
+  sha256 "adca4415d5553e9a70ef755f36f6de944aa2d9180540ff42d899eb9ebe28d8c8"
   license "MIT"
+  revision 1
+
+  livecheck do
+    skip "Newer versions use non-FOSS @github/copilot"
+  end
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "8c942206b830ef64dc0513e0b589fdd1d676daf7430121c73d0530c998d54990"
@@ -13,6 +18,12 @@ class CodeServer < Formula
     sha256 cellar: :any_skip_relocation, arm64_linux:   "12b48c262215a178bc461781fc18d385ba906a6fd8cd58b0d7e30319ef8cad97"
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "49514e85f16edef9f5af5820ffc1896edc5dade9c2405b19d9fa0c5da4271426"
   end
+
+  # https://github.com/microsoft/vscode/commit/98f15b55eaa9ec24b60cad2905d53f721ad67357
+  # https://github.com/github/copilot-cli/blob/main/LICENSE.md
+  # https://github.com/github/copilot-cli/issues/19#issuecomment-3335871033
+  deprecate! date: "2026-04-11", because: "uses non-FOSS @github/copilot since 4.113.0"
+  disable! date: "2027-04-11", because: "uses non-FOSS @github/copilot since 4.113.0"
 
   depends_on "pkgconf" => :build
   depends_on "node@22"
@@ -26,6 +37,8 @@ class CodeServer < Formula
   end
 
   def install
+    odie "Do not upgrade to 4.113.0 or newer!" if version >= "4.113.0"
+
     # Fix broken node-addon-api: https://github.com/nodejs/node/issues/52229
     ENV.append "CXXFLAGS", "-DNODE_API_EXPERIMENTAL_NOGC_ENV_OPT_OUT"
 
@@ -45,9 +58,6 @@ class CodeServer < Formula
     rm_r(vscode_node_modules.glob("@anthropic-ai/sandbox-runtime/vendor/seccomp/#{arch}"))
     rm_r(anthropic_node_modules.glob("@parcel/watcher-{darwin,linux}*"))
     rm_r(vscode_node_modules.glob("@parcel/watcher-{darwin,linux}*"))
-    rm_r(vscode_node_modules.glob("@github/copilot/prebuilds/{darwin,linux}*"))
-    rm_r(vscode_node_modules.glob("@github/copilot/ripgrep/bin/*/rg"))
-    rm_r(vscode_node_modules.glob("@github/copilot/clipboard/node_modules/@teddyzhu/clipboard-*/clipboard.*"))
 
     # Remove pre-built binaries where source in not available to allow compilation
     # https://www.npmjs.com/package/@azure/msal-node-runtime
