@@ -1,8 +1,8 @@
 class Ironclaw < Formula
   desc "Security-first personal AI assistant with WASM sandbox channels"
   homepage "https://github.com/nearai/ironclaw"
-  url "https://github.com/nearai/ironclaw/archive/refs/tags/ironclaw-v0.24.0.tar.gz"
-  sha256 "b920af1ab1d2c4753cd275b0813b958df7db650de2c951339a649f733e9a132b"
+  url "https://github.com/nearai/ironclaw/archive/refs/tags/ironclaw-v0.25.0.tar.gz"
+  sha256 "039da1591c71dee723d987dc785a9927ae5eda86f708f3f7990f95cb98397284"
   license any_of: ["MIT", "Apache-2.0"]
   head "https://github.com/nearai/ironclaw.git", branch: "staging"
 
@@ -19,6 +19,8 @@ class Ironclaw < Formula
   depends_on "rust" => :build
   depends_on "openssl@3"
 
+  uses_from_macos "python" => :build
+
   def install
     system "cargo", "install", *std_cargo_args
   end
@@ -30,6 +32,6 @@ class Ironclaw < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/ironclaw --version")
-    assert_match "Settings", shell_output("#{bin}/ironclaw config list")
+    assert_match "Missing required configuration: DATABASE_URL", shell_output("#{bin}/ironclaw config list 2>&1", 1)
   end
 end
