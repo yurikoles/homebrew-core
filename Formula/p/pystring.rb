@@ -1,8 +1,8 @@
 class Pystring < Formula
   desc "Collection of C++ functions for the interface of Python's string class methods"
   homepage "https://github.com/imageworks/pystring"
-  url "https://github.com/imageworks/pystring/archive/refs/tags/v1.1.4.tar.gz"
-  sha256 "49da0fe2a049340d3c45cce530df63a2278af936003642330287b68cefd788fb"
+  url "https://github.com/imageworks/pystring/archive/refs/tags/v1.1.5.tar.gz"
+  sha256 "63c30c251b8017c897bd923826f400aee1d6e4f1c22ffbbd2104f150522a2040"
   license "BSD-3-Clause"
   head "https://github.com/imageworks/pystring.git", branch: "master"
 
@@ -24,9 +24,6 @@ class Pystring < Formula
   depends_on "cmake" => :build
 
   def install
-    # Fix build with CMake 4.0+. Remove on next release.
-    inreplace "CMakeLists.txt", "cmake_minimum_required(VERSION 3.2)",
-                                "cmake_minimum_required(VERSION 3.10)"
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
@@ -35,7 +32,7 @@ class Pystring < Formula
   end
 
   test do
-    system ENV.cxx, pkgshare/"test.cpp", "-I#{include}", "-I#{pkgshare}", "-L#{lib}",
+    system ENV.cxx, "-std=c++11", pkgshare/"test.cpp", "-I#{include}", "-I#{pkgshare}", "-L#{lib}",
                     "-lpystring", "-o", "test"
     system "./test"
   end
