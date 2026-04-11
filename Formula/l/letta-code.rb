@@ -6,12 +6,12 @@ class LettaCode < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "679cb034b6530ff991d8aec04ca506703bf3b7825d37ece5eef7de9c31cb9e15"
-    sha256 cellar: :any,                 arm64_sequoia: "32e04ab33e88b8b89388366c13d23a444dae1d2c6072d73f36207bfd70a7281c"
-    sha256 cellar: :any,                 arm64_sonoma:  "32e04ab33e88b8b89388366c13d23a444dae1d2c6072d73f36207bfd70a7281c"
-    sha256 cellar: :any,                 sonoma:        "e157faf5f03e23e855e5461774d74e7992c65663661883561db2c16dfc68bb6e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "aaad1852eb190ede000c1ffd1ecbc8b671e48069dd3fb7b8a40ca9bd8d9cb355"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1207e12c14dc32e034701bc1079f93e7e83a90a27329611bac9a1e90509a9b14"
+    sha256 cellar: :any,                 arm64_tahoe:   "6400e9297fdfb38b786f508a7fd321638522047a73c7c14ea8548cfb70aadb74"
+    sha256 cellar: :any,                 arm64_sequoia: "3e2fbe8c262e5c95d059f72176979cc3a420b15f68e15a7c80cec52a5912b839"
+    sha256 cellar: :any,                 arm64_sonoma:  "3e2fbe8c262e5c95d059f72176979cc3a420b15f68e15a7c80cec52a5912b839"
+    sha256 cellar: :any,                 sonoma:        "60c59f32feb9b1b8e05fa6498d33a0e56d5d0f7e2ef28d5a76e22a857e170fc7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4c6a381c14263430708392f0f94e05784e3fc4daa8a592e2d84f1a1356e2015b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7b65f72634eba9ac639d6d06aeb2e31f8e80dff89569b432ae00399b9fc32ad8"
   end
 
   depends_on "node"
