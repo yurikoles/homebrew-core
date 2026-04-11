@@ -3,8 +3,8 @@ class SnykAgentScan < Formula
 
   desc "Constrain, log and scan your MCP connections for security vulnerabilities"
   homepage "https://github.com/snyk/agent-scan"
-  url "https://files.pythonhosted.org/packages/78/ff/1b0032c6b99c4d92a5a81c6a7f7fb007272086147abf813d6c7fa727421d/snyk_agent_scan-0.4.14.tar.gz"
-  sha256 "e9c8210b40df490034095661b213375c4315a8d15aa47e6e116fcb3248386080"
+  url "https://files.pythonhosted.org/packages/85/6b/b3bd85e11c09b32a1e5b1e80a7107b33ce18790c3163ed7e4111935d07f1/snyk_agent_scan-0.4.15.tar.gz"
+  sha256 "e31cf0e2a57e98ca383a9c6188ab420e3c6e346d25e16abb20857406ed44a586"
   license "Apache-2.0"
 
   bottle do
@@ -171,8 +171,8 @@ class SnykAgentScan < Formula
   end
 
   resource "python-multipart" do
-    url "https://files.pythonhosted.org/packages/8a/45/e23b5dc14ddb9918ae4a625379506b17b6f8fc56ca1d82db62462f59aea6/python_multipart-0.0.24.tar.gz"
-    sha256 "9574c97e1c026e00bc30340ef7c7d76739512ab4dfd428fec8c330fa6a5cc3c8"
+    url "https://files.pythonhosted.org/packages/88/71/b145a380824a960ebd60e1014256dbb7d2253f2316ff2d73dfd8928ec2c3/python_multipart-0.0.26.tar.gz"
+    sha256 "08fadc45918cd615e26846437f50c5d6d23304da32c341f289a617127b081f17"
   end
 
   resource "pyyaml" do
