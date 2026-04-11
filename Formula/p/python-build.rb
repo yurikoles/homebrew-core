@@ -3,8 +3,8 @@ class PythonBuild < Formula
 
   desc "Simple, correct PEP 517 build frontend"
   homepage "https://github.com/pypa/build"
-  url "https://files.pythonhosted.org/packages/6c/1d/ab15c8ac57f4ee8778d7633bc6685f808ab414437b8644f555389cdc875e/build-1.4.2.tar.gz"
-  sha256 "35b14e1ee329c186d3f08466003521ed7685ec15ecffc07e68d706090bf161d1"
+  url "https://files.pythonhosted.org/packages/3f/16/4b272700dea44c1d2e8ca963ebb3c684efe22b3eba8cfa31c5fdb60de707/build-1.4.3.tar.gz"
+  sha256 "5aa4231ae0e807efdf1fd0623e07366eca2ab215921345a2e38acdd5d0fa0a74"
   license "MIT"
   head "https://github.com/pypa/build.git", branch: "main"
 
