@@ -1,8 +1,8 @@
 class SafCli < Formula
   desc "CLI for the MITRE Security Automation Framework (SAF)"
   homepage "https://saf-cli.mitre.org"
-  url "https://registry.npmjs.org/@mitre/saf/-/saf-1.5.3.tgz"
-  sha256 "01c1098a8b1ecf5e417ea0fbc148df36c5bc5b57e7c7a8540e47ba54813b96a3"
+  url "https://registry.npmjs.org/@mitre/saf/-/saf-1.6.0.tgz"
+  sha256 "9d176c4c0caff994e70f1a32bebb4d81597cbff5d07b75f4257cdba2a6bd192c"
   license "Apache-2.0"
 
   bottle do
@@ -19,9 +19,6 @@ class SafCli < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
-
-    node_modules = libexec/"lib/node_modules/@mitre/saf/node_modules"
-    deuniversalize_machos node_modules/"fsevents/fsevents.node" if OS.mac?
   end
 
   test do
