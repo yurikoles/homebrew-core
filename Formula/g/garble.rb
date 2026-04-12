@@ -1,10 +1,9 @@
 class Garble < Formula
   desc "Obfuscate Go builds"
   homepage "https://github.com/burrowers/garble"
-  url "https://github.com/burrowers/garble/archive/refs/tags/v0.15.0.tar.gz"
-  sha256 "b429b24dafa851a25bbeca635db33eb4162b8e3109fb234a2c8e7780a837b958"
+  url "https://github.com/burrowers/garble/archive/refs/tags/v0.16.0.tar.gz"
+  sha256 "78b418d98b1d24549bf660a50054263206c3eeccf6820438f10e8568b81a1bfc"
   license "BSD-3-Clause"
-  revision 9
   head "https://github.com/burrowers/garble.git", branch: "master"
 
   bottle do
@@ -16,8 +15,7 @@ class Garble < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "4114023ed6dab4e1f09a70094ff97b8d8375ff1735794f4779aebf94928bedc7"
   end
 
-  # unpin go when the release is supporting Go 1.26, fixing https://github.com/burrowers/garble/issues/990
-  depends_on "go@1.25" => [:build, :test]
+  depends_on "go" => [:build, :test]
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
@@ -33,8 +31,6 @@ class Garble < Formula
           fmt.Println("Hello World")
       }
     GO
-
-    ENV.prepend_path "PATH", Formula["go@1.25"].opt_libexec/"bin" # for keg_only go 1.25 binary
 
     # `garble` breaks our git shim by clearing the environment.
     # Remove once git is no longer needed. See caveats:
