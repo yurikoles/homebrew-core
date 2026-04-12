@@ -9,6 +9,15 @@ class LibheifPlugins < Formula
     formula "libheif"
   end
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "0ccc7b2af34db11f2d26cfeb648aad0eb3b678f578db9214a9705a9e29dd0dc9"
+    sha256 cellar: :any,                 arm64_sequoia: "acbef028864691f20d183f7c8b1341aa620e9a4601961fb8effdf6ebbe83685a"
+    sha256 cellar: :any,                 arm64_sonoma:  "a8b403f15c0463b38fba2ee2108d1304a45d03c084c66264d348d91a64828bdb"
+    sha256 cellar: :any,                 sonoma:        "6f6994b81ff3ff859fc397535cd8ad92038004ab8460844e11bd596679fecec5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "74ca2429f3488300a594dd29d3968ace62a9e9ac2569296f4557e76408550325"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4df5d2565c25cbd0443ea243431a2c3f2bfa13f76114a8573b18d7d90d55c0e"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
 
