@@ -1,8 +1,8 @@
 class Lnav < Formula
   desc "Curses-based tool for viewing and analyzing log files"
   homepage "https://lnav.org/"
-  url "https://github.com/tstack/lnav/releases/download/v0.13.2/lnav-0.13.2.tar.gz"
-  sha256 "2b40158e36aafce780075e05419924faf8dd99d1c0d4ae25a15b00bc944f4d60"
+  url "https://github.com/tstack/lnav/releases/download/v0.14.0/lnav-0.14.0.tar.gz"
+  sha256 "0fd591a2e0488a06b3b44d7b384d3d7c6852d68607efc16ef4dec7a6ed054eea"
   license "BSD-2-Clause"
 
   livecheck do
