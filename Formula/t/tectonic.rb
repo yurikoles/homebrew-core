@@ -1,8 +1,8 @@
 class Tectonic < Formula
   desc "Modernized, complete, self-contained TeX/LaTeX engine"
   homepage "https://tectonic-typesetting.github.io/"
-  url "https://github.com/tectonic-typesetting/tectonic/archive/refs/tags/tectonic@0.16.6.tar.gz"
-  sha256 "fb6dd2c3844df2682bcd8d768e3c8298f0704788d8fc15defe04c74c9e39ebac"
+  url "https://github.com/tectonic-typesetting/tectonic/archive/refs/tags/tectonic@0.16.8.tar.gz"
+  sha256 "7ca10b83b9c48f9b0907db32bb04b44cf778599c23bd2a45836bd39e27630535"
   license "MIT"
   head "https://github.com/tectonic-typesetting/tectonic.git", branch: "master"
 
@@ -15,12 +15,12 @@ class Tectonic < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "59f345c86df6119b84d40b2e1ba0644a0ac6f53c4421eff978ad2afa67d31701"
-    sha256 cellar: :any,                 arm64_sequoia: "ebc34056a7f388d7551120f1ae9160fd607f606daa1a2f0ef6b9185f3e916dae"
-    sha256 cellar: :any,                 arm64_sonoma:  "7eded054aacdda2f440792a078df3ab7de5fe502087030812b2d31f522c676d7"
-    sha256 cellar: :any,                 sonoma:        "e046c31663c18cf64da5723561a7436fa4d10515b6d84863c977929636ad9799"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ac58d93c44c78a90c947b7f92c032bf60fde2cfb4817b19a137fd83139a0215e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "94976092624cca4be95453e9ee3fc664db1685cd3cae2b822a8e609d3e29b236"
+    sha256 cellar: :any,                 arm64_tahoe:   "6b5b6f11551231badfce531e420ee080c235a16a94cea6e148acd8df1e42a94d"
+    sha256 cellar: :any,                 arm64_sequoia: "d24b80f7fc9394a2c1716614db8ff00dea6d6c4011503279311d3d6a297ed40f"
+    sha256 cellar: :any,                 arm64_sonoma:  "2aff9783132f6563fb3006f1dcc6105e68a1ab0482d2257f03052686b8264830"
+    sha256 cellar: :any,                 sonoma:        "493a6ba416c3183e2c4fc73ba4191fd5aebba3778a9acb6959bd6399833e68fd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "695409a79fb50225c634ea2d3021842dcad683df46fa39902b80bbb1dcf3b274"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fa17b1457469827e1a64d694a937f916da035db47596a57f971cba1f6212c7ee"
   end
 
   depends_on "pkgconf" => :build
