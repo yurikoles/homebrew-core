@@ -6,12 +6,12 @@ class Openspec < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0c823c39cb64d2319000d891886d0436db5d0bca35b92c0573c5966f77faa3b5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0c823c39cb64d2319000d891886d0436db5d0bca35b92c0573c5966f77faa3b5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0c823c39cb64d2319000d891886d0436db5d0bca35b92c0573c5966f77faa3b5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f713c729e969bb162def6e0aaa2eac5b4cf13e39860d8841ec978d1c8eb12a02"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f713c729e969bb162def6e0aaa2eac5b4cf13e39860d8841ec978d1c8eb12a02"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f713c729e969bb162def6e0aaa2eac5b4cf13e39860d8841ec978d1c8eb12a02"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ac43475d5e095f0414df462d4349b50316b6fa8f10976e5cfe2e70f60b3ebc57"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ac43475d5e095f0414df462d4349b50316b6fa8f10976e5cfe2e70f60b3ebc57"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ac43475d5e095f0414df462d4349b50316b6fa8f10976e5cfe2e70f60b3ebc57"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0db00bfea938c6d2bb515abbce5cda45e055f66c2588a6833cad6fd85a62d4e7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0db00bfea938c6d2bb515abbce5cda45e055f66c2588a6833cad6fd85a62d4e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0db00bfea938c6d2bb515abbce5cda45e055f66c2588a6833cad6fd85a62d4e7"
   end
 
   depends_on "node"
