@@ -1,8 +1,8 @@
 class Zsign < Formula
   desc "Cross-platform codesigning tool for iOS apps"
   homepage "https://github.com/zhlynn/zsign"
-  url "https://github.com/zhlynn/zsign/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "eb78aa9039b00317ee43859764e60d359faa36e890d8e2f5afc02f1bad848d0e"
+  url "https://github.com/zhlynn/zsign/archive/refs/tags/v1.0.4.tar.gz"
+  sha256 "177bc8ba1524a4970f89ad3cc14585bd322c1bc4ee7a2ac85e1be8f9f2dec2d1"
   license "MIT"
   head "https://github.com/zhlynn/zsign.git", branch: "master"
 
