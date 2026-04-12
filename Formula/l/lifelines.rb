@@ -1,8 +1,8 @@
 class Lifelines < Formula
   desc "Text-based genealogy software"
-  homepage "https://lifelines.sourceforge.net/"
-  url "https://downloads.sourceforge.net/project/lifelines/lifelines/3.0.62/lifelines-3.0.62.tar.gz"
-  sha256 "2f00441ac0ed64aab8f76834c055e2b95600ed4c6f5845b9f6e5284ac58a9a52"
+  homepage "https://lifelines.github.io/lifelines/"
+  url "https://github.com/lifelines/lifelines/releases/download/3.1.1/lifelines-3.1.1.tar.gz"
+  sha256 "083007f81e406fce15931e5a29a7ba0380ef0b3b9c61d5eb5228ad378c7f332d"
   license "MIT"
 
   bottle do
@@ -25,11 +25,7 @@ class Lifelines < Formula
   uses_from_macos "ncurses"
 
   def install
-    args = []
-    # Help old config scripts identify arm64 linux
-    args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-
-    system "./configure", *args, *std_configure_args
+    system "./configure", *std_configure_args
     system "make", "install"
   end
 
