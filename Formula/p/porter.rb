@@ -1,8 +1,8 @@
 class Porter < Formula
   desc "App artifacts, tools, configs, and logic packaged as distributable installer"
   homepage "https://porter.sh"
-  url "https://github.com/getporter/porter/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "1021cbe8a0aa8dc7d8ca82cb37aab8b44e24218fe03a26b3f9f6c7b10e694c51"
+  url "https://github.com/getporter/porter/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "8c9603671bfdcda82b19f0213855f0a66373cff7ba7994e22752233a7f95b1d7"
   license "Apache-2.0"
   head "https://github.com/getporter/porter.git", branch: "main"
 
