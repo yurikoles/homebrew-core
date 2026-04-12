@@ -6,7 +6,7 @@ class Varlock < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "43d0c6a2df49aa8b83a9a687b644b6a7495fb07839a800f77cdc4090f8c68d05"
+    sha256 cellar: :any_skip_relocation, all: "339671113368d1b45e014fc3fff779f6eae52521cd2f5da58df06fd3c08a693a"
   end
 
   depends_on "node"
