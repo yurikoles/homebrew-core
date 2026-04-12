@@ -1,9 +1,9 @@
 class Xterm < Formula
   desc "Terminal emulator for the X Window System"
   homepage "https://invisible-island.net/xterm/"
-  url "https://invisible-mirror.net/archives/xterm/xterm-407.tgz"
-  mirror "https://deb.debian.org/debian/pool/main/x/xterm/xterm_407.orig.tar.gz"
-  sha256 "2136eba530068a1b7565abbf17823274f5cefb7fe3618355cbc89dc55c8b7b6a"
+  url "https://invisible-mirror.net/archives/xterm/xterm-408.tgz"
+  mirror "https://deb.debian.org/debian/pool/main/x/xterm/xterm_408.orig.tar.gz"
+  sha256 "27dc9e770885f98fbd0b5b40bcda959dc11ec9ba21f0a33b12aafffcc7f9b813"
   license "X11"
 
   livecheck do
