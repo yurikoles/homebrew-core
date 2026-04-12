@@ -6,12 +6,12 @@ class Ocicl < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "29d22be6fab7e1ba3d589b49ba2a5074f204dcbdf6f7f6f96d7ab38f0ae8b367"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5af44a2ae18b33f383967779811f0d9151b660a75ff4f5a3910f40311a6bfb9b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c60b1abada776b174c5fb645ed2b5cbaf7d48c9126804403f403346952490964"
-    sha256 cellar: :any_skip_relocation, sonoma:        "70d349807f25014d5ed352e60ea294568bb69ad0bf8ea4981b1c4263b1a7689f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1de8d27e31389c61a624d505ac8037e576bb57499381b77f38b4fd6b6adacbee"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "968efa9a456b2943032232b0a3ca97adac6adfa3dfb625dd39349777ab48692d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0fdc2a9cd33ac2d8a8e51a72ebd879359ad2e29091f12001da72cae38154a03b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b4197f77bbb5f489b60055207cacb8e4ee8e9e2a8faa3c61bde81125e29a3b37"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a343df7ba6c9c44937a778e3bbcad68af7225dc90ae05d87bf11cab6de499240"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0928ace8992144539eda67b9e2ff9894c80dd7241136e87b1e2fc983c3807c9c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c296f1f20869fdfb81ceb0dcfb90af9a4cfe0e0c74273fa322a4ca27499335c1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b669848124848fc39c3ae013516244c497ce9f7a8e40f9b7ab96cc3aedc36ab"
   end
 
   depends_on "sbcl"
