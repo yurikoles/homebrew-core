@@ -6,6 +6,10 @@ class Apfel < Formula
   license "MIT"
   head "https://github.com/Arthur-Ficial/apfel.git", branch: "main"
 
+  bottle do
+    sha256 arm64_tahoe: "02bd1b22d21d801baffb754d58f8f10c8379f0a98cb810d7f801b4d113f6cf10"
+  end
+
   depends_on xcode: ["26.4", :build]
   depends_on arch: :arm64
   depends_on macos: :tahoe
