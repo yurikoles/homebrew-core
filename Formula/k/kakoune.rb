@@ -1,8 +1,8 @@
 class Kakoune < Formula
   desc "Selection-based modal text editor"
   homepage "https://github.com/mawww/kakoune"
-  url "https://github.com/mawww/kakoune/releases/download/v2025.06.03/kakoune-2025.06.03.tar.bz2"
-  sha256 "ced5941f1bdfb8ef6b0265b00bfd7389e392fb41b2bf11990cee9d6e95316499"
+  url "https://github.com/mawww/kakoune/releases/download/v2026.04.12/kakoune-2026.04.12.tar.bz2"
+  sha256 "ce67adc8af7b20550463332c38e389cacfdd80f709e14b9940c127091aab0681"
   license "Unlicense"
   head "https://github.com/mawww/kakoune.git", branch: "master"
 
@@ -39,6 +39,13 @@ class Kakoune < Formula
   fails_with :gcc do
     version "10.2"
     cause "Requires GCC >= 10.3"
+  end
+
+  # Fix to error: no matching function for call to ‘lower_bound`
+  # PR ref: https://github.com/mawww/kakoune/pull/5472
+  patch do
+    url "https://github.com/mawww/kakoune/commit/9d5fb1992e0149130706aa6c9cb3ab474c580597.patch?full_index=1"
+    sha256 "3b777df6d6773daeb23cd5fc59a8732fcfbb62294b37c1108ba7e3d8da9524d1"
   end
 
   def install
