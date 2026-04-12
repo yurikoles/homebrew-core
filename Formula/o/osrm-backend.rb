@@ -1,26 +1,10 @@
 class OsrmBackend < Formula
   desc "High performance routing engine"
   homepage "https://project-osrm.org/"
+  url "https://github.com/Project-OSRM/osrm-backend/archive/refs/tags/v26.4.0.tar.gz"
+  sha256 "e50863f1d73ca31dffd91fa8d3c2425ef69b985c41528a2962726c0001520e78"
   license "BSD-2-Clause"
-  revision 3
   head "https://github.com/Project-OSRM/osrm-backend.git", branch: "master"
-
-  stable do
-    url "https://github.com/Project-OSRM/osrm-backend/archive/refs/tags/v6.0.0.tar.gz"
-    sha256 "369192672c0041600740c623ce961ef856e618878b7d28ae5e80c9f6c2643031"
-
-    # Backport support for Boost 1.89.0
-    patch do
-      url "https://github.com/Project-OSRM/osrm-backend/commit/a2e159d0d4f6b3922ee0cb058a800230cf90642e.patch?full_index=1"
-      sha256 "296e924268436847b941e287f8c46d0b98e829e723b310d96ff587b51940b653"
-    end
-
-    # Backport support for Lua 5.5
-    patch do
-      url "https://github.com/Project-OSRM/osrm-backend/commit/314c566cd63da80b2a9ced6a71bbb36610113fb9.patch?full_index=1"
-      sha256 "5e259e4ff3ab48cff4ce1a947fde14de8bf5f0d99d79ac407804af4637e871ad"
-    end
-  end
 
   livecheck do
     url :stable
