@@ -7,16 +7,12 @@ class Wego < Formula
   head "https://github.com/schachmat/wego.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "2c85e758198c227e569544729dfc874fab8662528cd969a9634deeff13b24438"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "c018b940e572be3adf5d7813f7bef94a36ffe8733bd8afadb53e115de28b7a2c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3a72b006e5227806f20935e88d2f8eb85617f32fe1c56904acb986305157885c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "3a72b006e5227806f20935e88d2f8eb85617f32fe1c56904acb986305157885c"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "3a72b006e5227806f20935e88d2f8eb85617f32fe1c56904acb986305157885c"
-    sha256 cellar: :any_skip_relocation, sonoma:         "b6d7829893896b8576788a0d7df2f95c59c4ca98df57af9a66f87547a14d01a3"
-    sha256 cellar: :any_skip_relocation, ventura:        "b6d7829893896b8576788a0d7df2f95c59c4ca98df57af9a66f87547a14d01a3"
-    sha256 cellar: :any_skip_relocation, monterey:       "b6d7829893896b8576788a0d7df2f95c59c4ca98df57af9a66f87547a14d01a3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "de837fb971e18f6b3763b0be2178b476699c76697e83b83156d857208650bf97"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5028e25c825625552b1788d3ce16572f52eeff6837c983279b1f5c10b44ff74e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "591831e4debaf931b8a40abaa611fc0b694e269a008627a1e672b5c81e31a9c8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "591831e4debaf931b8a40abaa611fc0b694e269a008627a1e672b5c81e31a9c8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "591831e4debaf931b8a40abaa611fc0b694e269a008627a1e672b5c81e31a9c8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "688840f5a042c1c4aae5329e9fefd5c11f294bb2eae10fb90696e520113a92ef"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ae7cca0c98758eac802ac7a5d0123df9b5c9fc3df187057cb6d96441aa83b003"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c7c8c74038135b51fd1058c1c289d9d80e9cf75d0e02d6f6858e046009e4197e"
   end
 
   depends_on "go" => :build
