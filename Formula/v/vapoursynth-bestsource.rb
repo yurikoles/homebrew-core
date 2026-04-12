@@ -2,10 +2,15 @@ class VapoursynthBestsource < Formula
   desc "Audio/video source and FFmpeg wrapper"
   homepage "https://github.com/vapoursynth/bestsource"
   url "https://github.com/vapoursynth/bestsource.git",
-      tag:      "R16",
-      revision: "cbdfd1e215d9a23323fb830c09e45e47b0864bc8"
+      tag:      "R17",
+      revision: "b026135190bdee175417310fa783e8383077193f"
   license "MIT"
   head "https://github.com/vapoursynth/bestsource.git", branch: "master"
+
+  livecheck do
+    url :stable
+    regex(/^R(\d*)$/i)
+  end
 
   bottle do
     sha256 cellar: :any, arm64_tahoe:   "9ca3b444c921c5cb9c383c7efcddc562669872abf3047280d57036bcc54988d9"
@@ -26,9 +31,10 @@ class VapoursynthBestsource < Formula
   def install
     # Upstream build system wants to install directly into vapoursynth's libdir and does not respect
     # prefix, but we want it in a Cellar location instead.
-    inreplace "meson.build",
-              "install_dir = vapoursynth_dep.get_variable('libdir') / 'vapoursynth'",
-              "install_dir = '#{lib}/vapoursynth'"
+    inreplace "meson.build" do |s|
+      s.gsub!("py.get_install_dir() / 'vapoursynth/plugins'", "get_option('libdir') / 'vapoursynth'")
+      s.gsub!("-march=x86-64-v2", "-msse4.1")
+    end
 
     system "meson", "setup", "build", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
