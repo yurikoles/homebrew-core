@@ -1,17 +1,17 @@
 class Tagref < Formula
   desc "Refer to other locations in your codebase"
   homepage "https://github.com/stepchowfun/tagref"
-  url "https://github.com/stepchowfun/tagref/archive/refs/tags/v1.11.0.tar.gz"
-  sha256 "a5172df6b7e3c943d9c805ffd31ec4b00d226c34c989b9c3cefe29eb0499361c"
+  url "https://github.com/stepchowfun/tagref/archive/refs/tags/v1.12.0.tar.gz"
+  sha256 "cbed599298e23ed526c9f6d5463eaf203cb75a88797ac2609e5eb45111451b8d"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4f1c5fd2add90743d9c53c225acd316dad04e486e73576f10d4b18696d24cc6c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "96b4a153bf74f88b345e0b00301c445e6980247ae734f394339fae362a30b996"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cce149fc158f24678b2736d3b82d1cdcfc88dbcdd0d7929730ad21bf6af7d640"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f4ff33ae056da1a427c596d6b2f4471f88a87821965eb968fd8b493a0133ed7e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "58d3b926d2c486a71ad0b37117bddaa4fc6c3742f36868668cc8a3b300e8fb36"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "377d80c5354130daaee0ce3cb649f69b007c73a40cf032983cb9c8775e5e623b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4abdb34c0bd0b022c53572a37da6201efb4db42d92989d4762157280ca0262cc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c67464623ed77a5b0efb05904dd1563383e3a2e21dd8925466d2e3586307328f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f9a82f031abba32c183bd013efdb8d1f405163c53ed2aabef2c2c7b0cc1a002e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "318bc6f7fd71c2c95c956eaad7f56fbd8e604a1966d0ffac75073f21db60bb32"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1cc27f35dfd6a0ceda12820a8841be63968068babbc9d2c48151cfba194536ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3665532ce93d29b609bf31587843400fe1bf40ef5efa0b9fa01400af31ec1215"
   end
 
   depends_on "rust" => :build
