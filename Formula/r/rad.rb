@@ -7,12 +7,13 @@ class Rad < Formula
   head "https://github.com/amterp/rad.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2dc9e35ceee7326e0362ff3ba57263616c34de43d0a03fec36de1a6ec49cbf97"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "01d550b426abceb361865185e7be008a67a9fb0fac141baa95960ecd1b2bfa92"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "077f3f9c45c5060d48fd7747531839b432d613d195e242a86fb46371423da232"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9a9e5b35aeafaeafce5e53572c6bc38247af98520dc04f3c3402a9aa690e162a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "107605a7cfd3a13e4defcd762386cb7aa5670e6c641b2b3149e1c27ec40843da"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "baa5659342010df7ab5f889e3c386f3571875f23be7097f8bf86b4cde2186523"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d2ddfb5f50ca27fc4156adbb4f0471db7fc13e095c89fed1eedff83b73b9d00f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f2540fee7bd9a821e8d7517251bca660e70d45903e5b532006075a117895c529"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "aeabb7881604b0120ea14212ce0f59ed14d683d1eb34ed6e5c96f7c4c42e4916"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d03526abced8126bef2552e41b96b53c94880b6bd98aa51d86cae03c2dc55f43"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2d976118e06481472a02d25be38663c68952ea98bf91b17994e2656df0a1c177"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a6fc540a6569f8ff546413f349981c20655c466a5046af788472f5fde37679bf"
   end
 
   depends_on "go" => :build
