@@ -3,12 +3,12 @@ class Httptap < Formula
 
   desc "HTTP request visualizer with phase-by-phase timing breakdown"
   homepage "https://httptap.dev"
-  url "https://files.pythonhosted.org/packages/7e/1b/0aaf069bd45119468b41a58e162fb3efb9ec5958c536eb66d158588453d3/httptap-0.4.7.tar.gz"
-  sha256 "bd01c34a88869bca458f8f15d7d0659414fde749f8533ce3b555294df0fc3c69"
+  url "https://files.pythonhosted.org/packages/9f/10/c6f3cc40fa4b0012aa9ce1e9813557454953b3667ad15849e428155c2243/httptap-0.4.8.tar.gz"
+  sha256 "40d77ebe1abafa436b48d6f8b1a28be982872816ae0aa944a74fbc328f26c841"
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "52eda6b23d3e3625a97da1bbf472d9e973fb24bd7f96702ac624f38240e0ecc9"
+    sha256 cellar: :any_skip_relocation, all: "1f6439cc649505259d7f79c1f8024af50eae737ffa1cac2fbc2bec146fde6475"
   end
 
   depends_on "rust" => :build
@@ -84,8 +84,8 @@ class Httptap < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/b3/c6/f3b320c27991c46f43ee9d856302c70dc2d0fb2dba4842ff739d5f46b393/rich-14.3.3.tar.gz"
-    sha256 "b8daa0b9e4eef54dd8cf7c86c03713f53241884e814f4e2f5fb342fe520f639b"
+    url "https://files.pythonhosted.org/packages/c0/8f/0722ca900cc807c13a6a0c696dacf35430f72e0ec571c4275d2371fca3e9/rich-15.0.0.tar.gz"
+    sha256 "edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36"
   end
 
   resource "socksio" do
