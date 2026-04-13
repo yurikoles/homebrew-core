@@ -17,6 +17,7 @@ class WasiRuntimes < Formula
     sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2bcf8deb87a0af008e48a731851e3bb302347eb5aaf4a9efb2a5c2f2474dd8c3"
     sha256 cellar: :any_skip_relocation, sonoma:        "5c59c84b2aea8d83eb94726a8d9531f047f2bae5cf8852eeb5f1ca858e42ac23"
     sha256 cellar: :any_skip_relocation, arm64_linux:   "313fbef1e5b73b4cb484086d8f30457ec2e7e6928a275f815e2b56fa2e775291"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5392cacee3a9191f6f62422504806e25749d0b449ca3c02521467e34b0cb8afe"
   end
 
   depends_on "cmake" => :build
