@@ -27,6 +27,7 @@ class Tinymist < Formula
 
   def install
     system "cargo", "install", *std_cargo_args(path: "crates/tinymist-cli")
+    generate_completions_from_executable(bin/"tinymist", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
