@@ -17,6 +17,7 @@ class Flang < Formula
     sha256 cellar: :any,                 arm64_sonoma:  "71503136a8c46454f1d93ea96101270bcf300ffd468f526e7d176fb3b693feda"
     sha256 cellar: :any,                 sonoma:        "dc44d04ce98518efdca642fb684a54bac17d1e9915c185176bf66988a30c4d32"
     sha256 cellar: :any_skip_relocation, arm64_linux:   "d3b9f39e96b08b0d540dd01b61860a443f6e979ed061e7c229da6be26f922225"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "34f8c821decf8555545badba24d213db08b013112d0606f6a3b9ed7efddec812"
   end
 
   depends_on "cmake" => :build
