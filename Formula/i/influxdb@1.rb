@@ -1,8 +1,8 @@
 class InfluxdbAT1 < Formula
   desc "Time series, events, and metrics database"
   homepage "https://influxdata.com/time-series-platform/influxdb/"
-  url "https://github.com/influxdata/influxdb/archive/refs/tags/v1.12.3.tar.gz"
-  sha256 "798fff921c21e916362c00e714119df9d8f9daa97dc4e690823a785ad2b24c5a"
+  url "https://github.com/influxdata/influxdb/archive/refs/tags/v1.12.4.tar.gz"
+  sha256 "72c2d8e49b1e6dc312a4455a8cc1b5d21e3102be2728f02845e65e178e6446ea"
   # 1.x is using MIT license while 1.x and 3.x is using dual license (Apache-2.0/MIT)
   license "MIT"
 
