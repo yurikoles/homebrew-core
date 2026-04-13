@@ -17,19 +17,10 @@ class AutoEditor < Formula
 
   depends_on "nim" => :build
   depends_on "pkgconf" => :build
-  depends_on "dav1d"
   depends_on "ffmpeg"
-  depends_on "lame"
-  depends_on "libvpx"
-  depends_on "opus"
-  depends_on "svt-av1"
-  depends_on "x264"
-  depends_on "x265"
 
   def install
-    ENV["DISABLE_VPL"] = "1"
-    ENV["DISABLE_WHISPER"] = "1"
-    system "nimble", "make"
+    system "nimble", "brewmake"
     bin.install "auto-editor"
     generate_completions_from_executable(bin/"auto-editor", "completion", "-s", shells: [:zsh])
   end
@@ -38,7 +29,7 @@ class AutoEditor < Formula
     mp4in = testpath/"video.mp4"
     mp4out = testpath/"video_ALTERED.mp4"
     system "ffmpeg", "-filter_complex", "testsrc=rate=1:duration=5", mp4in
-    system bin/"auto-editor", mp4in, "--edit", "none", "--no-open"
+    system bin/"auto-editor", mp4in, "--edit", "none"
     assert_match(/Duration: 00:00:05\.00,.*Video: h264/m, shell_output("ffprobe -hide_banner #{mp4out} 2>&1"))
   end
 end
