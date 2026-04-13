@@ -1,8 +1,8 @@
 class Supabase < Formula
   desc "Open source Firebase alternative"
   homepage "https://supabase.com/docs/reference/cli/about"
-  url "https://github.com/supabase/cli/archive/refs/tags/v2.84.2.tar.gz"
-  sha256 "4eefac9d0abd093fa35035013da4abddc0914c1c74c1a3ea46bdd4ac108b12f3"
+  url "https://github.com/supabase/cli/archive/refs/tags/v2.90.0.tar.gz"
+  sha256 "74631c8f0ecd88c92e04055bf6fd96862ce47f9e0561dd630565f7c0d1a46d40"
   license "MIT"
   head "https://github.com/supabase/cli.git", branch: "develop"
 
