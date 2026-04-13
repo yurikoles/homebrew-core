@@ -29,6 +29,7 @@ class Llvm < Formula
     sha256                               arm64_sonoma:  "21532f5edeeee7a3a2556781b550a12d545fffe2641e2e415a8590c32cfde6ac"
     sha256 cellar: :any,                 sonoma:        "a573b019155f0b1a1c6cd46d8214fff0316421f551f9e1beeddbf82de9deb4d8"
     sha256 cellar: :any_skip_relocation, arm64_linux:   "ba3afd265983a3f5f158199fb01ab512005774ceb2ae19b94299e884c0c4b672"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a3789792455f6b93876d8603b8340535ed30c3aa0e646b02fce0c0f63b64cb33"
   end
 
   keg_only :provided_by_macos
