@@ -1,8 +1,8 @@
 class Tagref < Formula
   desc "Refer to other locations in your codebase"
   homepage "https://github.com/stepchowfun/tagref"
-  url "https://github.com/stepchowfun/tagref/archive/refs/tags/v1.11.0.tar.gz"
-  sha256 "a5172df6b7e3c943d9c805ffd31ec4b00d226c34c989b9c3cefe29eb0499361c"
+  url "https://github.com/stepchowfun/tagref/archive/refs/tags/v1.12.0.tar.gz"
+  sha256 "cbed599298e23ed526c9f6d5463eaf203cb75a88797ac2609e5eb45111451b8d"
   license "MIT"
 
   bottle do
