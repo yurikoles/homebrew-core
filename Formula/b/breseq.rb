@@ -1,8 +1,8 @@
 class Breseq < Formula
   desc "Computational pipeline for finding mutations in short-read DNA resequencing data"
   homepage "https://barricklab.org/breseq"
-  url "https://github.com/barricklab/breseq/archive/refs/tags/v0.39.0.tar.gz"
-  sha256 "5aa1bd9af71899e1358cfb9b8440c16cc908f185d9178a401a5a4d3f0c7ee861"
+  url "https://github.com/barricklab/breseq/archive/refs/tags/v0.40.0.tar.gz"
+  sha256 "1728515bea394dd0876ca5dedc78c724b836c370bb201bda1d585cb6fa058a52"
   license all_of: ["GPL-2.0-or-later", "MIT", "BSD-3-Clause"]
   head "https://github.com/barricklab/breseq.git", branch: "master"
 
@@ -25,7 +25,7 @@ class Breseq < Formula
   on_linux do
     depends_on "zlib-ng-compat"
 
-    # Backport of https://github.com/samtools/htslib/commit/515f6df8f7f7dab6c80d0e7aede6e60826ef5374
+    # Backport of https://github.com/samtools/htslib/commit/515f6df8ff7dab6c80d0e7aede6e60826ef5374
     # Currently not possible to easily unbundle htslib: https://github.com/barricklab/breseq/issues/399
     patch do
       url "https://raw.githubusercontent.com/Homebrew/homebrew-core/acbb0d0473a8bbb75ea7fbb471457a2127ef2c2d/Patches/breseq/zlib-ng.patch"
@@ -34,6 +34,9 @@ class Breseq < Formula
   end
 
   def install
+    # Remove hardcoded static zlib option
+    inreplace "configure.ac", "with_static_libz=\"$WITH_STATIC_LIBZ\"", ""
+
     system "./bootstrap.sh"
     system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
