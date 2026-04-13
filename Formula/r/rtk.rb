@@ -7,12 +7,12 @@ class Rtk < Formula
   head "https://github.com/rtk-ai/rtk.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "907091d83178cb6f6ea0370405fedc58a9bf8cc5c25cedcef42058e843be73ec"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2a542753facff3e14d9e17e5cf93d8954439eecd7f8ba7827ea461e4215440f5"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "bb534eb834229ea9652b4ba709b3ea28896ee51d99ecf3428adb44deb3a2230f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c57f16285c3785fbdf80aed015edb03496ac0e196c635756c27857069f541e16"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f8ddc4573fdce4e6c02521190419117e75f7ef48ffcb652d1ea38e4681af8fc6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5d07fe22f8e5a5b98b69f513bca03c0595e172acdf8b13cde8d73b379990ccf8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d8e32099aa2ba3be111eb80050975313409cbb571ac467a3c44e9a7e6c005138"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6b09759da672d33a49799ddf4744140acdfc7ac0a55a565203ade38692f12289"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "da1c850ac37cc1282e649ac8537f63e15750220c434307892147b72756e4a05e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b32b5add7ada4f5e1ca8f95a95d389b890d3b18534dbd233ee0c7ae6b551a327"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "23783acfd57aa4502d94cc5b24456f386a2cae417b4e44accc4600267a18a75b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2568ca1f3db909b11c67c3fd0bcc9f0d64cb389fa712685bceca6ee885d17244"
   end
 
   depends_on "rust" => :build
