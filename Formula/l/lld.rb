@@ -18,6 +18,7 @@ class Lld < Formula
     sha256 cellar: :any,                 arm64_sonoma:  "9b6723b6028418925231ec04b1752832a494f364905f24a342d847719040d79f"
     sha256 cellar: :any,                 sonoma:        "27c933afed68ab3526eb14f43f8dcf5645ec1adcaee1240edce92915b541a6ea"
     sha256 cellar: :any_skip_relocation, arm64_linux:   "7588b3d2327d12313f3e74382f8360d00fb495d8056f7919d527702056a1846e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ab07730e349d3a600c6fe087ba2ab48297e57018a930ff28196af5871a14232"
   end
 
   depends_on "cmake" => :build
