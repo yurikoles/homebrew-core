@@ -1,8 +1,8 @@
 class Stylelint < Formula
   desc "Modern CSS linter"
   homepage "https://stylelint.io/"
-  url "https://registry.npmjs.org/stylelint/-/stylelint-17.6.0.tgz"
-  sha256 "306f50de78b9dea42f52e21fe84a360cd2b23883e9bc093c548e6d37c846997c"
+  url "https://registry.npmjs.org/stylelint/-/stylelint-17.7.0.tgz"
+  sha256 "90f6821ffe9f709046ad6e821e0cd00c2d2f4483f49ac733c372b0dba0363630"
   license "MIT"
 
   bottle do
@@ -31,7 +31,7 @@ class Stylelint < Formula
     CSS
 
     output = shell_output("#{bin}/stylelint test.css 2>&1", 2)
-    assert_match "Unexpected empty block", output
+    assert_match "Empty block", output
 
     assert_match version.to_s, shell_output("#{bin}/stylelint --version")
   end
