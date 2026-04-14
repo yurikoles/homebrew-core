@@ -7,14 +7,16 @@ class Aoe < Formula
   head "https://github.com/njbrake/agent-of-empires.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "ea36a7ecded69e787027a765ccb54130c3aa312e7071369a8fcb06fe3e04411e"
-    sha256 cellar: :any,                 arm64_sequoia: "d11dd61f996be926c95e8bf2f221ea8ecef3849dd4ea73ebfdbf11ee84efd9db"
-    sha256 cellar: :any,                 arm64_sonoma:  "d5c296ed8eaabca0eb203a7d3e418b885f0b6526f8a9eb260e5f471cb1584f75"
-    sha256 cellar: :any,                 sonoma:        "59262c6dc235ae57a5f07d1b108753376a86bb7e740853570a3e56d00557f590"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ad0c40c059ef6159ee6e8bdd8093b5da97f97ed36a32cf846a53e2d6bf259231"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6e3e2b1d2ca32b048c1c535f838238ec598ad2774836149a68a3cc1918621a06"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "e8c94d5a3105c076fe11cebbd6081fa474a4c20945244f7b42e38a99ca5946c0"
+    sha256 cellar: :any,                 arm64_sequoia: "03739e9ff0f4cd2612178a8432acac80d1103dc38bfedd90ae7501b85b3f9d2f"
+    sha256 cellar: :any,                 arm64_sonoma:  "b97d83cc91d1e347a37d8a19e3f49aa6cb778d7ee5dba7d45bc4c727554c949d"
+    sha256 cellar: :any,                 sonoma:        "79773f12fcccad62ee92780627965d595e38f86c71c2df99097858c863811723"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "29a28d417cd532589852901c99253f2f8d0a5b93c4cce94d530c20218520374b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "81283023dba3b2a4dd9b20331f4fc7c518ded6cfb613bdf1a13d25fd7a8bcda5"
   end
 
+  depends_on "node" => :build
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
   depends_on "openssl@3"
@@ -25,7 +27,7 @@ class Aoe < Formula
   end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    system "cargo", "install", *std_cargo_args(features: "serve")
     generate_completions_from_executable(bin/"aoe", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
@@ -40,5 +42,15 @@ class Aoe < Formula
 
     status = JSON.parse(shell_output("#{bin}/aoe status --json"))
     assert_equal 0, status["total"]
+
+    port = free_port
+    pid = fork do
+      exec bin/"aoe", "serve", "--port", port.to_s, "--no-auth"
+    end
+    sleep 2
+    assert_match "Agent of Empires", shell_output("curl -s http://127.0.0.1:#{port}")
+  ensure
+    Process.kill("TERM", pid) if pid
+    Process.wait(pid) if pid
   end
 end
