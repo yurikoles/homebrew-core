@@ -7,6 +7,8 @@ class Cliproxyapi < Formula
   head "https://github.com/router-for-me/CLIProxyAPI.git", branch: "main"
 
   livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
     throttle 5
   end
 
