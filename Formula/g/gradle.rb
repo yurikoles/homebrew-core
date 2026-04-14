@@ -20,7 +20,7 @@ class Gradle < Formula
 
   def install
     rm(Dir["bin/*.bat"])
-    libexec.install %w[bin docs lib src]
+    libexec.install %w[bin lib src] # excluding 300MB+ of docs
     env = Language::Java.overridable_java_home_env
     (bin/"gradle").write_env_script libexec/"bin/gradle", env
   end
