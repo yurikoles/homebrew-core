@@ -3,8 +3,8 @@ class Httptap < Formula
 
   desc "HTTP request visualizer with phase-by-phase timing breakdown"
   homepage "https://httptap.dev"
-  url "https://files.pythonhosted.org/packages/23/f0/4f1c7bae6a344027be5277d0308fb0cb53b0e9e3b09927207dd6960bc73a/httptap-0.5.0.tar.gz"
-  sha256 "385a6bc9a20e7ab8e1954787b5d7460d683d9aabbc28b5d048f0cc319cccc87c"
+  url "https://files.pythonhosted.org/packages/f4/a0/d8bd9a477277c871e2303b50415d8014de047d6c1cd664d2b848e0896610/httptap-0.5.1.tar.gz"
+  sha256 "923b12b57d2e5f8ae0df25f54ab6052a7cd80c71afc31cc3039733a5c1342878"
   license "Apache-2.0"
 
   bottle do
