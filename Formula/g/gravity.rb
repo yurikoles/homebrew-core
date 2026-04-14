@@ -1,8 +1,8 @@
 class Gravity < Formula
   desc "Embeddable programming language"
   homepage "https://www.gravity-lang.org/"
-  url "https://github.com/marcobambini/gravity/archive/refs/tags/v0.9.5.tar.gz"
-  sha256 "a6c8894276d4f1cc3bd4014bfd666a2f1ee715539d4de55db456f8af0db2ee34"
+  url "https://github.com/marcobambini/gravity/archive/refs/tags/0.9.7.tar.gz"
+  sha256 "6f75b995402fa0140e6d9b594c632ef145c1ff7ba80b4e5b65106117fc41984c"
   license "MIT"
   head "https://github.com/marcobambini/gravity.git", branch: "master"
 
@@ -22,11 +22,11 @@ class Gravity < Formula
   end
 
   test do
-    (testpath/"hello.gravity").write <<~EOS
+    (testpath/"hello.gravity").write <<~GRAVITY
       func main() {
           System.print("Hello World!")
       }
-    EOS
+    GRAVITY
     system bin/"gravity", "-c", "hello.gravity", "-o", "out.json"
     assert_equal "Hello World!\n", shell_output("#{bin}/gravity -q -x out.json")
     assert_equal "Hello World!\n", shell_output("#{bin}/gravity -q hello.gravity")
