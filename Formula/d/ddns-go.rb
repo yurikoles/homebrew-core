@@ -7,12 +7,12 @@ class DdnsGo < Formula
   head "https://github.com/jeessy2/ddns-go.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "2bcd7794cd91c4be99ef07940e0d66b5536f4dbe4554e029484f1d9d7aaff74e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2bcd7794cd91c4be99ef07940e0d66b5536f4dbe4554e029484f1d9d7aaff74e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2bcd7794cd91c4be99ef07940e0d66b5536f4dbe4554e029484f1d9d7aaff74e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c8ed510468b944526b655c9441cef74ce8cd489c55aa3ba04f69a090bb6e8de2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bc46734bb34bc1f491bfa0c506735fcd4b1716e017d913bcab862615b696e560"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4ae710f1af4bc7aa9a4c051f9b8135c73ae567384aa9148b34ed97bffd885f77"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d7fc7bc3515296219ef705423c381e1a8d41c1289748c5addf5df6d8b15299a2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d7fc7bc3515296219ef705423c381e1a8d41c1289748c5addf5df6d8b15299a2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d7fc7bc3515296219ef705423c381e1a8d41c1289748c5addf5df6d8b15299a2"
+    sha256 cellar: :any_skip_relocation, sonoma:        "df63eab2a51e0ab2eaf55571a28632075d8c1e0794e00601384c2ffaca082b91"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8084e90f2475aa9556073a131d2d1260238d064f71484b8936c41457660d94c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "60b70ae7b9c259cb19cd13417226a22a1cec09ae8b7ab10dda7dc44b1335df36"
   end
 
   depends_on "go" => :build
