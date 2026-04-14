@@ -1,8 +1,8 @@
 class Counts < Formula
   desc "Tool for ad hoc profiling"
   homepage "https://github.com/nnethercote/counts"
-  url "https://github.com/nnethercote/counts/archive/refs/tags/1.0.6.tar.gz"
-  sha256 "4d3394b32afa98b91fd624a9c4df690d07fa1d6559cd87bb82a4bde6131fbc5f"
+  url "https://github.com/nnethercote/counts/archive/refs/tags/1.0.7.tar.gz"
+  sha256 "a5685538819838ba2fba0b78d11b5d80e37753b9015735f71f0c2065442fe9d8"
   license "Unlicense"
   head "https://github.com/nnethercote/counts.git", branch: "master"
 
@@ -48,6 +48,6 @@ class Counts < Formula
 
     assert_equal expected, output
 
-    assert_match "counts-#{version}", shell_output("#{bin}/counts --version", 1)
+    assert_match "counts-#{version}", shell_output("#{bin}/counts --version")
   end
 end
