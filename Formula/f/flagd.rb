@@ -2,8 +2,8 @@ class Flagd < Formula
   desc "Feature flag daemon with a Unix philosophy"
   homepage "https://github.com/open-feature/flagd"
   url "https://github.com/open-feature/flagd.git",
-      tag:      "flagd/v0.15.2",
-      revision: "4b947f7fb8997ad7891e633624d1ab16fbfaa984"
+      tag:      "flagd/v0.15.3",
+      revision: "330f7c1bb753191653d1f8aa93dd03b722e77f6c"
   license "Apache-2.0"
   head "https://github.com/open-feature/flagd.git", branch: "main"
 
@@ -56,6 +56,7 @@ class Flagd < Formula
     pid = spawn bin/"flagd", "start", "-f", json_url, "-p", port.to_s
     begin
       sleep 3
+      sleep 5 if OS.mac? && Hardware::CPU.intel?
       assert_match(/true/, shell_output(resolve_boolean_command))
     ensure
       Process.kill("TERM", pid)
