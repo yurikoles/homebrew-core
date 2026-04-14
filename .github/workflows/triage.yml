@@ -292,6 +292,7 @@ jobs:
                 graph-tool|\
                 gstreamer|\
                 haskell-language-server|\
+                influxdb|\
                 libtensorflow|\
                 llvm@19|\
                 llvm|\
