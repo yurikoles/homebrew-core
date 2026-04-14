@@ -7,12 +7,12 @@ class Ignite < Formula
   head "https://github.com/ignite/cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "25a4c4ae497fe3896f778ec1cacc16c1234c39b3ba9e1f49352bd1fdd503d499"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5c3178c11154aafdfc4debca557675f12346743e0a3bd8ac2491d121aeecf0f0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4b3399a824c8624496c7dd5a6c7adf737ab68fdc090e1f41a259a9a0a9205a81"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e05cd074dc946b2c7b42e57308d60b7df6dfdcf89a2add14fcc7af7afef04981"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "eba7374b51698c9aec87693961aa9b1b8695f4a41e7fe620d05696df0c209e3a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "39ae0fbc6e4a9887859496fe03dc27b6cb7a29ec3071f8b10e1ce6882d4db7df"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7d7cfa24fa703759099b5b3c6633450deed3948d4b7efb31fd537775a4f3a4b4"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9101f5e6bac265f4885eff791c30d37bb45140a170bcf96f7f1bfdbf926b560a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "749c2e63478fc580597e5d8996e8cc88db0e19bce6466cf0d195aab2be89faff"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a00f105cd465fd963829e3b91aca1e2e9d2d943a9f279e8be2f4831481c43764"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7515bfdf7f8e77019ff9b85c6176742086fe6bc46677b53fa289729cdb6a43e5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "632260e5c804e7848ab43b114ca4afc67795083ea6102a0127884f53c4d32a1d"
   end
 
   depends_on "go"
