@@ -17,6 +17,7 @@ class Aria2 < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "c-ares"
   depends_on "libssh2"
   depends_on "openssl@3"
   depends_on "sqlite"
