@@ -7,13 +7,12 @@ class Breseq < Formula
   head "https://github.com/barricklab/breseq.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "def2a384df5495e166004a40f6a0ca64dc395aeb2cd733a86a8ec104ae313af4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d3f2c4e800dff841d54930aab30ef679f25baecbe55c6c4e78c4bc5c162ddd2a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "85ee61e283d29958259d3e008e1a3b9729f4e1f0223a6a155ac4bcd1128c916f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "95b4eb870ce333f0c30b8af90acd189d2f4183ee062cedb7d099f366d3f3cbf5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b67dff0c121eee03cd1538f700a4329e82d2b9e5c6295a8a5b7d209e8264dcf2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c2ea055967954551fdf4b990211176d6f4ba5fb468d45eeb82a3e1265212f332"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c3d40182dbf71cddc316bd1349d70fa7c2aa5a262324bba93a0090e6225bfc70"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1654a72c4ba499ff47f755911bc21cfa86268b5d825c9099dcf567b1ccad3afd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "247f05cb7334de6abb903f2e9bef85d086c9c11f9e4138b8f4d9fbbdbc3ccf54"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d8b18f44c48e8610c9ba5ab84e6a8954649b2fc8883409fe32088a8f5980f7b9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3c49d20b3be67929b921d1174fb5d2702f786ca6d6563ec63af7110b9a2f9a59"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "61129433de0f2142a2b0c6c8ba4bb7282f2c5da0220d097976c15016f8eb1cce"
   end
 
   depends_on "autoconf" => :build
