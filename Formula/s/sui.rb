@@ -13,12 +13,12 @@ class Sui < Formula
   no_autobump! because: :bumped_by_upstream
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c38d036fb7295ddfe0bd8b93c3b2cc5a81d4309c6c46a1f51df17cd9ff72b27f"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "073d51d35472ace15e9d31dd70764d315f81d53935be505c277ac4a1998b6078"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c56d28e85fca32c76b99e85676fc1f640ab8152dd3b47df18019a04d6d21c445"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cffcb2c42801e44c2d6cc0526b9dfc01f45fcb06ff49d36900f8cecc4a24a8b2"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9411f8a916f94f5a06f268ced7ab32e7ef5ef1c5db30feb2f78bd4b5172d6757"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "521f8b50d121cb4a6c954781c468ffd65b347cc19d9a2762d3d450b2962b8e8a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fea738a499bcbf109874bc376de930f6775a763b7134cfbb0398a0fb8a0fc3a6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c805edfa9badf1e8929fa9cebed05bac41a6333c07dd62581b7829248ab8d1c8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1abbda97b4d89daffd727464499fb256ce85ebe83b1e021a342d047083967e5c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "19d5f18222b709f791e37f46497c6ded4f39d2a93abe1dbaa855a72986cd4a76"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f7b04de120145c4ae54232dc75fa2049441e73233454af7b8350a2465b0db0f6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3ab1d305bb49460ed36b49ec53e03d83607c36aa2c86d4d85a1650722a3ed331"
   end
 
   depends_on "cmake" => :build
