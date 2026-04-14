@@ -1,8 +1,8 @@
 class Coturn < Formula
   desc "Free open source implementation of TURN and STUN Server"
   homepage "https://github.com/coturn/coturn"
-  url "https://github.com/coturn/coturn/archive/refs/tags/4.9.0.tar.gz"
-  sha256 "e01c0701792231d67768e0e314ebad6395501759ea56772dc7e36d3badec5549"
+  url "https://github.com/coturn/coturn/archive/refs/tags/4.10.0.tar.gz"
+  sha256 "b28d0c21535ff27300234a8c11ca08dceef9c33515a5842f362531bd70083083"
   license "BSD-3-Clause"
 
   livecheck do
@@ -24,6 +24,8 @@ class Coturn < Formula
   depends_on "libevent"
   depends_on "libpq"
   depends_on "openssl@3"
+
+  uses_from_macos "sqlite"
 
   def install
     ENV["SSL_CFLAGS"] = "-I#{Formula["openssl@3"].opt_include}"
