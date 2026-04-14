@@ -5,8 +5,8 @@ class Dumpling < Formula
   head "https://github.com/pingcap/tidb.git", branch: "master"
 
   stable do
-    url "https://github.com/pingcap/tidb/archive/refs/tags/v8.5.5.tar.gz"
-    sha256 "2dee41c6e6f1251ef5aa820cbb8c47950069e3e2baeb26072604d6be25498ecd"
+    url "https://github.com/pingcap/tidb/archive/refs/tags/v8.5.6.tar.gz"
+    sha256 "6d06151f0862cc43ae6d591d004924375477dcd89b913233d666b9853c4ac9cd"
 
     # Support Go 1.26: https://github.com/pingcap/tidb/pull/66254
     patch do
