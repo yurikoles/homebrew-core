@@ -1,8 +1,8 @@
 class Reposurgeon < Formula
   desc "Edit version-control repository history"
   homepage "http://www.catb.org/esr/reposurgeon/"
-  url "https://gitlab.com/esr/reposurgeon/-/archive/5.3/reposurgeon-5.3.tar.gz"
-  sha256 "a13e758e6bba5f4d17cdfa0ad8956bb864f336ba248b175353f741c3e5d3b089"
+  url "https://gitlab.com/esr/reposurgeon/-/archive/5.4/reposurgeon-5.4.tar.gz"
+  sha256 "52cc10255b10a160ee07f94d6981b924cf000642a4e2c9c47ff33520b3a7f9b6"
   license "BSD-2-Clause"
   head "https://gitlab.com/esr/reposurgeon.git", branch: "master"
 
@@ -30,7 +30,7 @@ class Reposurgeon < Formula
     ENV.append_path "GEM_PATH", Formula["asciidoctor"].opt_libexec
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
     system "make"
-    system "make", "install", "prefix=#{prefix}"
+    system "make", "install", "PREFIX=#{prefix}"
     elisp.install "reposurgeon-mode.el"
   end
 
