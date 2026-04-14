@@ -1,8 +1,8 @@
 class SpectralCli < Formula
   desc "JSON/YAML linter and support OpenAPI v3.1/v3.0/v2.0, and AsyncAPI v2.x"
   homepage "https://stoplight.io/open-source/spectral"
-  url "https://registry.npmjs.org/@stoplight/spectral-cli/-/spectral-cli-6.15.0.tgz"
-  sha256 "d4e7bd215586ba1619bb495b6d7ecc336431eab9ab0214f0b16ab56a9c145072"
+  url "https://registry.npmjs.org/@stoplight/spectral-cli/-/spectral-cli-6.15.1.tgz"
+  sha256 "ccb0695313d42953260496deb190ab15b74273141b648bbb82b2ab211c2b8381"
   license "MIT"
 
   bottle do
@@ -13,7 +13,7 @@ class SpectralCli < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", *std_npm_args
+    system "npm", "install", *std_npm_args(ignore_scripts: false)
     bin.install_symlink libexec.glob("bin/*")
   end
 
