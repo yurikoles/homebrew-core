@@ -1,8 +1,8 @@
 class Src < Formula
   desc "Simple revision control: RCS reloaded with a modern UI"
   homepage "http://www.catb.org/~esr/src/"
-  url "https://gitlab.com/esr/src/-/archive/1.42/src-1.42.tar.bz2"
-  sha256 "493d23f4d7776bd84a537b7e8f59bcba0ba56c55513a69c117dbdcca2ea000aa"
+  url "https://gitlab.com/esr/src/-/archive/1.43/src-1.43.tar.bz2"
+  sha256 "f9e232c61585c47c81f996ba98dc93479ced1c51ea527b79c420b8384491db0a"
   license "BSD-2-Clause"
   head "https://gitlab.com/esr/src.git", branch: "master"
 
