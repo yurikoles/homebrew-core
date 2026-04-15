@@ -1,8 +1,8 @@
 class Tinysparql < Formula
   desc "Low-footprint RDF triple store with SPARQL 1.1 interface"
   homepage "https://tinysparql.org/"
-  url "https://download.gnome.org/sources/tinysparql/3.11/tinysparql-3.11.0.tar.xz"
-  sha256 "011e758a53f31112a8c45700fd6039ae55617f0dac70119d9eddafc03cf68fe5"
+  url "https://download.gnome.org/sources/tinysparql/3.11/tinysparql-3.11.1.tar.xz"
+  sha256 "cfd46021ee1514ad435e714f7aa1ec7a787c7f516a94f4c7438897ee3d6eca1e"
   license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
   head "https://gitlab.gnome.org/GNOME/tinysparql.git", branch: "main"
 
@@ -41,23 +41,6 @@ class Tinysparql < Formula
 
   on_macos do
     depends_on "gettext"
-  end
-
-  # TODO: Remove patches when fix is in a release.
-  # https://gitlab.gnome.org/GNOME/tinysparql/-/merge_requests/808
-  patch do
-    url "https://gitlab.gnome.org/GNOME/tinysparql/-/commit/1219e5ff4c4ce3afcbc5161baa27ef54153b2a99.diff"
-    sha256 "67f9780f4438906b55c7f295b5f7afde30faef0885f94209e6c52654ea5b75d6"
-  end
-
-  patch do
-    url "https://gitlab.gnome.org/GNOME/tinysparql/-/commit/b139706196da17089dbd0b5ee0f8713d1d50264d.diff"
-    sha256 "16ec2db418b424991fd0c45130ef328ff76d4f21a8e6dbab69bef439fc6d3ab0"
-  end
-
-  patch do
-    url "https://gitlab.gnome.org/GNOME/tinysparql/-/commit/806771f99e42c0ee8c7d9b2f66f5d65241131ce8.diff"
-    sha256 "23b7124ab989e416787d98727f40b291260f786622e4a9d414df403bea7e403d"
   end
 
   def install
