@@ -1,8 +1,8 @@
 class Build2 < Formula
   desc "C/C++ Build Toolchain"
   homepage "https://build2.org"
-  url "https://download.build2.org/0.17.0/build2-toolchain-0.17.0.tar.xz"
-  sha256 "3722a89ea86df742539d0f91bb4429fd46bbf668553a350780a63411b648bf5d"
+  url "https://download.build2.org/0.18.1/build2-toolchain-0.18.1.tar.xz"
+  sha256 "a5f3eab9d4522bc22704899593dd6c7013349a1b8c37278c8b2321073e25ff16"
   license "MIT"
 
   livecheck do
@@ -34,15 +34,13 @@ class Build2 < Formula
     # granular during bootstrap stage 1.
     chdir "build2" do
       system "make", "-f", "./bootstrap.gmake", "CXXFLAGS=-w"
-    end
 
-    chdir "build2" do
-      system "build2/b-boot", "-v",
+      system "b/b-boot", "-v",
              "-j", ENV.make_jobs,
              "config.cxx=#{ENV.cxx}",
              "config.bin.lib=static",
-             "build2/exe{b}"
-      mv "build2/b", "build2/b-boot"
+             "b/exe{b}"
+      mv "b/b", "b/b-boot"
     end
 
     # Note that while Homebrew's clang wrapper will strip any optimization
@@ -50,7 +48,7 @@ class Build2 < Formula
     # into the ~host and ~build2 configurations that will be used to build
     # build-time dependencies and build system modules, respectively, when
     # the user uses actual clang.
-    system "build2/build2/b-boot", "-V",
+    system "build2/b/b-boot", "-V",
            "config.cxx=#{ENV.cxx}",
            "config.cc.coptions=-O3",
            "config.bin.lib=shared",
@@ -58,7 +56,7 @@ class Build2 < Formula
            "config.install.root=#{prefix}",
            "configure"
 
-    system "build2/build2/b-boot", "-v",
+    system "build2/b/b-boot", "-v",
            "-j", ENV.make_jobs,
            "install:", "build2/", "bpkg/", "bdep/"
 
@@ -75,9 +73,9 @@ class Build2 < Formula
     ENV["BPKG_DEF_OPT"] = "0"
     ENV["BDEP_DEF_OPT"] = "0"
 
+    # Only check build2 version as eg bpkg or bdep may not have the same version (intended)
     assert_match "build2 #{version}", shell_output("#{bin}/b --version")
-    assert_match "bpkg #{version}", shell_output("#{bin}/bpkg --version")
-    assert_match "bdep #{version}", shell_output("#{bin}/bdep --version")
+    assert_match "build2 #{version}", shell_output("#{bin}/bx --version")
 
     system bin/"bdep", "new", "--type=lib,no-version", "--lang=c++", "libhello"
     (testpath/"libhello/build/root.build").append_lines("using autoconf")
