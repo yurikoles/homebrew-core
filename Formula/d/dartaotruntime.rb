@@ -2,7 +2,7 @@ class Dartaotruntime < Formula
   desc "Command-line tool for running AOT-compiled snapshots of Dart code"
   homepage "https://dart.dev/tools/dartaotruntime"
   # NOTE: Using a placeholder file because the build source is fetched by gclient
-  url "https://raw.githubusercontent.com/dart-lang/sdk/refs/tags/3.11.4/README.md"
+  url "https://raw.githubusercontent.com/dart-lang/sdk/refs/tags/3.11.5/README.md"
   sha256 "ff4301ec8e5c1259c5778c4abc947e303308cd31af30acd55575f5ca7ed6f405"
   license "BSD-3-Clause"
 
@@ -30,8 +30,8 @@ class Dartaotruntime < Formula
   # always pull the latest commit from https://chromium.googlesource.com/chromium/tools/depot_tools.git/+/refs/heads/main
   resource "depot-tools" do
     url "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
-        revision: "4ce8ba39a3488397a2d1494f167020f21de502f3"
-    version "4ce8ba39a3488397a2d1494f167020f21de502f3"
+        revision: "b9d2b54daea64fa757df5ba737e611b691dc6201"
+    version "b9d2b54daea64fa757df5ba737e611b691dc6201"
 
     livecheck do
       url "https://chromium.googlesource.com/chromium/tools/depot_tools.git/+/refs/heads/main?format=JSON"
