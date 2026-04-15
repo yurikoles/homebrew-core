@@ -4,8 +4,8 @@ class Gwyddion < Formula
   license "GPL-2.0-or-later"
 
   stable do
-    url "https://downloads.sourceforge.net/project/gwyddion/gwyddion/2.70/gwyddion-2.70.tar.xz"
-    sha256 "942f4e041945a850bc32d05193a115ac8a5118a6f841afa6d4dea510f9913f59"
+    url "https://downloads.sourceforge.net/project/gwyddion/gwyddion/2.71/gwyddion-2.71.tar.xz"
+    sha256 "2df721befccbe4d5ee2ba564b32e69341f8ce1de637e2045838a09a2d46b5dba"
 
     depends_on "gtk+"
   end
@@ -53,6 +53,7 @@ class Gwyddion < Formula
   depends_on "libxml2"
   depends_on "libzip"
   depends_on "pango"
+  depends_on "zstd"
 
   uses_from_macos "bzip2"
 
