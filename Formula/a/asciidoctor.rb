@@ -5,10 +5,6 @@ class Asciidoctor < Formula
   sha256 "25c22b934bc0ae2448f2d73d4b2eba0c59e0521cf5e893fb0b0ad54a461bf066"
   license "MIT"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "83482da376e6cbc52582198a08c0a04cd652f0560df93c5c496bed02053cc818"
-  end
-
   # Some gems require >= ruby 2.7
   depends_on "ruby"
 
@@ -137,6 +133,13 @@ class Asciidoctor < Formula
   resource "rouge" do
     url "https://rubygems.org/gems/rouge-4.2.1.gem"
     sha256 "f371732db127913fe10f13b1c25500b927539167a746dc8ee8089ad868bba1fd"
+  end
+
+  # ruby 4.x doens't include logger in the standard library, so we need to add it as a resource
+  # Issue ref: https://github.com/asciidoctor/asciidoctor/issues/4684
+  resource "logger" do
+    url "https://rubygems.org/gems/logger-1.7.0.gem"
+    sha256 "196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203"
   end
 
   def install
