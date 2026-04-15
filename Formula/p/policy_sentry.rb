@@ -9,12 +9,12 @@ class PolicySentry < Formula
   head "https://github.com/salesforce/policy_sentry.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9f797933116bb0662fcdb3d3fd436818ff13ab740216e482a51fb7bab200c16e"
-    sha256 cellar: :any,                 arm64_sequoia: "cc91ed558471ec40f7cb580f8479f8c08fac950aeb04258280756c6a96d3c8ea"
-    sha256 cellar: :any,                 arm64_sonoma:  "e34d809b3e59277dbb723730e2a6e949f30f78970537e37856fa583ced9b71d0"
-    sha256 cellar: :any,                 sonoma:        "db4dbbbaf7c0c79a3ee984c9ca7393147060b4e57c0e3495c78ba8da254d86d3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4ae62658a76c71f891ad3391164abdedfc7cc908377a86891f011b84c2f669bb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2f971061ed656ed061a40da563f9c02c37b96fb33a8bec4eafd411e2ce1d78f9"
+    sha256 cellar: :any,                 arm64_tahoe:   "6a5d74584f70833e1aeab2047f0744e0d23c22dadf091456ff5397c4909b5e3a"
+    sha256 cellar: :any,                 arm64_sequoia: "8aa4786827c6e94e3dfe4dcda0b0e47d0fa56bfc4210304ac429f777ce85663f"
+    sha256 cellar: :any,                 arm64_sonoma:  "4d8759f4bddbcb8f47a560d240f96ba97bac30e5148f0c5647c1ede1dc9ae67e"
+    sha256 cellar: :any,                 sonoma:        "9b0018fa368df731255b732f63081740a73c455d5fb2fd976b3c564256e5181b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ee5fd5189391f3cd433e2148c49dda0602c27409b94b33d0f7e077b5082fca4f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "33b80e36f08b6634aad9d6795940e21fda67d97a9042777cbef21dad9212317a"
   end
 
   depends_on "rust" => :build # for orjson
