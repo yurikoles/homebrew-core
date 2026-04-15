@@ -1,8 +1,8 @@
 class Beads < Formula
   desc "Memory upgrade for your coding agent"
   homepage "https://github.com/steveyegge/beads"
-  url "https://github.com/steveyegge/beads/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "db089aa41a3aa1f68f57ad72b632e2796dd5a045406366a68e001450889f0370"
+  url "https://github.com/steveyegge/beads/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "21f6170bd039ab0fefc7ee686f391a7b0c919690074d056bfb0636d3233b1914"
   license "MIT"
   compatibility_version 1
   head "https://github.com/steveyegge/beads.git", branch: "main"
@@ -42,10 +42,9 @@ class Beads < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/bd --version")
 
-    system "git", "init"
-
-    shell_output("#{bin}/bd init -p homebrew-beads < /dev/null")
-    assert_path_exists testpath/"AGENTS.md"
+    system bin/"bd", "init", "--prefix", "homebrew-beads", "--non-interactive", "--stealth"
+    system bin/"bd", "setup", "claude"
+    assert_path_exists testpath/"CLAUDE.md"
     assert_path_exists testpath/".beads/config.yaml"
 
     output = shell_output("#{bin}/bd --db #{testpath}/.beads/dolt info")
