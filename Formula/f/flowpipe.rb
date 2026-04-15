@@ -1,8 +1,8 @@
 class Flowpipe < Formula
   desc "Cloud scripting engine"
   homepage "https://flowpipe.io"
-  url "https://github.com/turbot/flowpipe/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "21f1f6b0bd484547d94b9bd6db005812968c4c0784fa2228f7cff0da56ccd95e"
+  url "https://github.com/turbot/flowpipe/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "9ef3a35e764764acd9e83ce85b6f6cf126189da83c08d2dcd6ee65d226664c12"
   license "AGPL-3.0-only"
   head "https://github.com/turbot/flowpipe.git", branch: "develop"
 
