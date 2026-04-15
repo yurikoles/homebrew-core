@@ -1,9 +1,9 @@
 class GnuTime < Formula
   desc "GNU implementation of time utility"
   homepage "https://www.gnu.org/software/time/"
-  url "https://ftpmirror.gnu.org/gnu/time/time-1.9.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/time/time-1.9.tar.gz"
-  sha256 "fbacf0c81e62429df3e33bda4cee38756604f18e01d977338e23306a3e3b521e"
+  url "https://ftpmirror.gnu.org/gnu/time/time-1.10.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/time/time-1.10.tar.gz"
+  sha256 "e8c29fb4ab599d8478e41e8618f50db8aede9c90af27d0d2ef28ae50d5de09c3"
   license "GPL-3.0-or-later"
 
   bottle do
