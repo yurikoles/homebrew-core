@@ -1,8 +1,8 @@
 class Dblab < Formula
   desc "Database client every command-line junkie deserves"
   homepage "https://dblab.app/"
-  url "https://github.com/danvergara/dblab/archive/refs/tags/v0.37.1.tar.gz"
-  sha256 "207e33ab265d2e90e1172869dca121a342b656d08b39340372ec783e8ebe1c06"
+  url "https://github.com/danvergara/dblab/archive/refs/tags/v0.38.0.tar.gz"
+  sha256 "41fd691aca6f433f8795ca88a0fdfc5e68d662a00b2e4d6d4ec80537bc71a744"
   license "MIT"
   head "https://github.com/danvergara/dblab.git", branch: "main"
 
