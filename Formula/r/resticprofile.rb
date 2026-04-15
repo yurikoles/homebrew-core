@@ -1,8 +1,8 @@
 class Resticprofile < Formula
   desc "Configuration profiles manager and scheduler for restic backup"
   homepage "https://creativeprojects.github.io/resticprofile/"
-  url "https://github.com/creativeprojects/resticprofile/archive/refs/tags/v0.33.0.tar.gz"
-  sha256 "6f550580877d172965f29398a1fff2a11075d0592f09324b1d33efae6f7bf6fc"
+  url "https://github.com/creativeprojects/resticprofile/archive/refs/tags/v0.33.1.tar.gz"
+  sha256 "3b8a26dbc17ac9268108de59ce0fedf831fe5bc8c41f7b36b8341fa9157b8f5a"
   license "GPL-3.0-only"
   head "https://github.com/creativeprojects/resticprofile.git", branch: "master"
 
