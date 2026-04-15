@@ -3,8 +3,8 @@ class Schemathesis < Formula
 
   desc "Testing tool for web applications with specs"
   homepage "https://schemathesis.readthedocs.io/"
-  url "https://files.pythonhosted.org/packages/46/ba/62b8c92ef916d7af1dd412436319298f55fbce2534499bb8a4f71dda4a71/schemathesis-4.15.1.tar.gz"
-  sha256 "b7885836d77115a1a9cfd3b733edbe8858c89120e7baf496a131a409f425a2e7"
+  url "https://files.pythonhosted.org/packages/ab/a2/cec4166416ff2c08ccf7be71bec708d0b8adacf25f40232992157ff73960/schemathesis-4.15.2.tar.gz"
+  sha256 "66f264f270e2222ffc7ab11c23a5dd2277c93c5a1a329d3d82a0b6ddc05263ef"
   license "MIT"
 
   bottle do
@@ -72,8 +72,8 @@ class Schemathesis < Formula
   end
 
   resource "hypothesis" do
-    url "https://files.pythonhosted.org/packages/ce/ab/67ca321d1ab96fd3828b12142f1c258e2d4a668a025d06cd50ab3409787f/hypothesis-6.151.12.tar.gz"
-    sha256 "be485f503979af4c3dfa19e3fc2b967d0458e7f8c4e28128d7e215e0a55102e0"
+    url "https://files.pythonhosted.org/packages/83/77/3227982784ff12a74fc5b28823f3487f457640e6cc653afe16d090891334/hypothesis-6.151.14.tar.gz"
+    sha256 "14fffdfdb50e816cf114f9946aebbf533d7e0920c07ddc1531889f0a22ffaa20"
   end
 
   resource "hypothesis-graphql" do
@@ -102,8 +102,8 @@ class Schemathesis < Formula
   end
 
   resource "jsonschema-rs" do
-    url "https://files.pythonhosted.org/packages/30/d3/451483aa13247a8725c7d7943784809051e4a19fa33ff647590ce43a0ed6/jsonschema_rs-0.45.1.tar.gz"
-    sha256 "94c725dfc287fd0d3e3c03d5d9556119df227385ba92098057818e5cdc836cd3"
+    url "https://files.pythonhosted.org/packages/7b/89/7dc67b91860924360c12628ca5986902a44e7b42108747ce0b6d3f0ad750/jsonschema_rs-0.46.0.tar.gz"
+    sha256 "4ad96a7fa583fa63abd78d0fd95ffc662cc8e22b8feb06c629c8c314c5e825a1"
   end
 
   resource "jsonschema-specifications" do
@@ -172,8 +172,8 @@ class Schemathesis < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/b3/c6/f3b320c27991c46f43ee9d856302c70dc2d0fb2dba4842ff739d5f46b393/rich-14.3.3.tar.gz"
-    sha256 "b8daa0b9e4eef54dd8cf7c86c03713f53241884e814f4e2f5fb342fe520f639b"
+    url "https://files.pythonhosted.org/packages/c0/8f/0722ca900cc807c13a6a0c696dacf35430f72e0ec571c4275d2371fca3e9/rich-15.0.0.tar.gz"
+    sha256 "edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36"
   end
 
   resource "six" do
