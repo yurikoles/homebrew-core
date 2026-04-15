@@ -1,18 +1,18 @@
 class LivekitCli < Formula
   desc "Command-line interface to LiveKit"
   homepage "https://livekit.io"
-  url "https://github.com/livekit/livekit-cli/archive/refs/tags/v2.16.1.tar.gz"
-  sha256 "fd3a53ff8e94c3b604653e4440112d716cce21403c6b8c925def6fcf60e2d866"
+  url "https://github.com/livekit/livekit-cli/archive/refs/tags/v2.16.2.tar.gz"
+  sha256 "8c4893a34d212f7a294923261ff4bd72a2ec2e64caa85278654ef2a833833f28"
   license "Apache-2.0"
   head "https://github.com/livekit/livekit-cli.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c1974143628830bcdd058607982012efdcf4544299934ca1778537a4843a2b2e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "07f104e911632e18fd33d633ab57d2b80a485bfe886321edbd6752d7147c1956"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "184c021078aac845472eda72930123d85cc2d922f8eb34cc9d2b658a0f03e8ef"
-    sha256 cellar: :any_skip_relocation, sonoma:        "918616c9673fddd93df077377869a4d1cc95b3c08a31cc6966c2e94480b331d6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "34e3f449cdc53152adca122981c062b1fce4d573479d77f8c647a507e904acb0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b46482123ad3597d6d26a3f3b670029ce0554ce6137631d3af03998e936dce18"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3bced2823e81a28a6e0862a585f5ae1d90d48866ac497923d1b8cb44e4461623"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "72de9dc6e417ed40ce71d40edab24347320d2050b17818b7e833feea141bf1d7"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c60affe947ede662de88a327af4d18a265ff9ed88f894e6862c5299e00886fb9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "720c2f74953428ae7143bcae2fdb66e244632ff6dd0a2a27075df9e2a712c392"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "65c1e235a8dc6275e55fe611d258e8ca0df1c6ad5ea7f220b73622f55cbbc748"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2d92d91ae64533344cbe663470a6bc2671c8c5600295556fdac70bbab7d9000b"
   end
 
   depends_on "go" => :build
