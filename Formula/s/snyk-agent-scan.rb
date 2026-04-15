@@ -3,8 +3,8 @@ class SnykAgentScan < Formula
 
   desc "Constrain, log and scan your MCP connections for security vulnerabilities"
   homepage "https://github.com/snyk/agent-scan"
-  url "https://files.pythonhosted.org/packages/85/6b/b3bd85e11c09b32a1e5b1e80a7107b33ce18790c3163ed7e4111935d07f1/snyk_agent_scan-0.4.15.tar.gz"
-  sha256 "e31cf0e2a57e98ca383a9c6188ab420e3c6e346d25e16abb20857406ed44a586"
+  url "https://files.pythonhosted.org/packages/e3/30/6e8909c95f8c81daf41f604161554091aed2ddfd56ab2351ea0d4857469b/snyk_agent_scan-0.4.16.tar.gz"
+  sha256 "0bc23b0b5e685fcd6aa0d8f93db4851ab39185229468b1cc6cd1792b01cb867a"
   license "Apache-2.0"
 
   bottle do
