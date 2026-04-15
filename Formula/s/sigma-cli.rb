@@ -3,8 +3,8 @@ class SigmaCli < Formula
 
   desc "CLI based on pySigma"
   homepage "https://github.com/SigmaHQ/sigma-cli"
-  url "https://files.pythonhosted.org/packages/22/81/d72d567401dc4926fda6872a17353b38c0f177532567c6b2ba4201223508/sigma_cli-3.0.0.tar.gz"
-  sha256 "a76973ca6909a8cdfa695fa620423cc8ae68ee8b235d1a50d5bbd19d0fe0c4ac"
+  url "https://files.pythonhosted.org/packages/00/22/3d58736a7e5f7ae08dd4694ec21b21ce42900df5ffe787b1ca995af3b85c/sigma_cli-3.0.1.tar.gz"
+  sha256 "0e3a10170c6c398e2a156a43af1f137c0e1807c4f02a1773d128a662e309ec3c"
   license "LGPL-2.1-or-later"
   head "https://github.com/SigmaHQ/sigma-cli.git", branch: "main"
 
@@ -83,8 +83,8 @@ class SigmaCli < Formula
   end
 
   resource "pysigma" do
-    url "https://files.pythonhosted.org/packages/d4/64/0ebf1ec9adbdc9aaaa345f75fdc2c600a11058717044dc5fe831bfc7c511/pysigma-1.3.0.tar.gz"
-    sha256 "a9849dba06fb05955bac980d547ef92aab1b52b7517d817be3cb4ae664c6cb27"
+    url "https://files.pythonhosted.org/packages/91/e4/9bcc7d2e6df84411b598eaf32e31798e440a64864e5fb3a4a82c783d8a3a/pysigma-1.3.1.tar.gz"
+    sha256 "a67286cfb4aa915c08f2639922d1b5d28a73ef6aefe01e60fda9430f38d77966"
   end
 
   resource "pyyaml" do
