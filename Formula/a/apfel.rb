@@ -1,8 +1,8 @@
 class Apfel < Formula
   desc "Apple Intelligence from the command-line, with OpenAi-compatible API server"
   homepage "https://apfel.franzai.com"
-  url "https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "8d568e26488bc85c1380cbbf66c10b4b7dd6ccff42da2f153cf90d9e978ed128"
+  url "https://github.com/Arthur-Ficial/apfel/archive/refs/tags/v1.0.4.tar.gz"
+  sha256 "2886835cf40cd2566ef7207e18ec8d0ac8063d9b98711fc1d79112cab7ec48cf"
   license "MIT"
   head "https://github.com/Arthur-Ficial/apfel.git", branch: "main"
 
