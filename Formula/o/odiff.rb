@@ -1,8 +1,8 @@
 class Odiff < Formula
   desc "Very fast SIMD-first image comparison library (with nodejs API)"
   homepage "https://github.com/dmtrKovalenko/odiff"
-  url "https://github.com/dmtrKovalenko/odiff/archive/refs/tags/v4.3.3.tar.gz"
-  sha256 "50c8edb6da90461f218c59ab85e6be21b6a5ad4a9e90f65e91b04134bf30dc47"
+  url "https://github.com/dmtrKovalenko/odiff/archive/refs/tags/v4.3.4.tar.gz"
+  sha256 "72bb5a9a32efa6e02aa3392193194127215fe8e302cb827b7202c028f64afddb"
   license "MIT"
   head "https://github.com/dmtrKovalenko/odiff.git", branch: "main"
 
