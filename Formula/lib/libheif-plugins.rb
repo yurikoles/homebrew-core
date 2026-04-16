@@ -29,11 +29,21 @@ class LibheifPlugins < Formula
   depends_on "openjpeg"
   depends_on "openjph"
   depends_on "rav1e"
+  depends_on "svt-av1"
   depends_on "x264"
+
+  # Backport support for svt-av1 >= 4
+  patch do
+    url "https://github.com/strukturag/libheif/commit/2a7a383ffe90a5d36d7e0c939e6a7ae953e6ba55.patch?full_index=1"
+    sha256 "bd56a238a476713b91448209a0cbe4d9c2c79aeb1965e1226fc9e915851f956b"
+  end
+  patch do
+    url "https://github.com/strukturag/libheif/commit/fa38577416b743346c315d957becc90b269de2ee.patch?full_index=1"
+    sha256 "f3e9fb2a7e5e430f16f49b520b8dca1eb877ab42060d2294e7ce4793813cc149"
+  end
 
   def install
     # Enabling plugins for "popular" formulae
-    # TODO: Add `SvtEnc` (svt-av1) when new release is compatible
     plugins = %w[
       DAV1D
       FFMPEG_DECODER
@@ -43,6 +53,7 @@ class LibheifPlugins < Formula
       OpenJPEG_ENCODER
       OPENJPH_ENCODER
       RAV1E
+      SvtEnc
       X264
     ]
 
