@@ -1,8 +1,8 @@
 class Atuin < Formula
   desc "Improved shell history for zsh, bash, fish and nushell"
   homepage "https://atuin.sh/"
-  url "https://github.com/atuinsh/atuin/releases/download/v18.15.1/source.tar.gz"
-  sha256 "0ce665c5702e2e5a5ad09d2fa8f5c28eb899ebdb4b6e557ab1d0f23fcdcac0bf"
+  url "https://github.com/atuinsh/atuin/releases/download/v18.15.2/source.tar.gz"
+  sha256 "ede9b9640392c8688f22ab0e252de3b2b047dd0824c62d31a32c7462ddcb56aa"
   license "MIT"
   head "https://github.com/atuinsh/atuin.git", branch: "main"
 
