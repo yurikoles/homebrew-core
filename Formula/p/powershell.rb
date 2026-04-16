@@ -5,7 +5,7 @@ class Powershell < Formula
       tag:      "v7.6.0",
       revision: "767990ba06f8579d69f99eec46057541374aa892"
   license "MIT"
-  revision 1
+  revision 2
 
   livecheck do
     url :stable
@@ -44,6 +44,7 @@ class Powershell < Formula
       --disable-build-servers
       --use-current-runtime
       --nologo
+      --property:WarningsNotAsErrors=NU1903
     ]
     dotnet_publish_flags = %W[
       --disable-build-servers
@@ -57,6 +58,7 @@ class Powershell < Formula
       --property:ErrorOnDuplicatePublishOutputFiles=false
       --property:IsWindows=false
       --property:ReleaseTag=#{version}
+      --property:WarningsNotAsErrors=NU1903
     ]
     dotnet_run_flags = %W[
       --framework #{target_framework}
@@ -75,6 +77,7 @@ class Powershell < Formula
       -t:_GetDependencies
       -property:DesignTimeBuild=true;_DependencyFile=#{buildpath}/src/TypeCatalogGen/#{inc_file}
       -nologo
+      -p:WarningsNotAsErrors=NU1903
     ]
     target_file = buildpath/"src/Microsoft.PowerShell.SDK/obj/Microsoft.PowerShell.SDK.csproj.TypeCatalog.targets"
     target_file.dirname.mkpath
