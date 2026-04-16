@@ -1,8 +1,8 @@
 class Moon < Formula
   desc "Task runner and repo management tool for the web ecosystem, written in Rust"
   homepage "https://moonrepo.dev/moon"
-  url "https://github.com/moonrepo/moon/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "db230be91fa6b7bfd34c9b6a4f438fd62862c1c18e8bf089798694ea7badfa82"
+  url "https://github.com/moonrepo/moon/archive/refs/tags/v2.2.1.tar.gz"
+  sha256 "2445bdc80868607f0c31792f914d87d5ae869ad3a4ffc5d1936f6221f44fb00e"
   license "MIT"
   head "https://github.com/moonrepo/moon.git", branch: "master"
 
