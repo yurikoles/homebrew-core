@@ -2,22 +2,15 @@ class Crystal < Formula
   desc "Fast and statically typed, compiled language with Ruby-like syntax"
   homepage "https://crystal-lang.org/"
   license "Apache-2.0"
-  revision 1
   compatibility_version 1
 
   stable do
-    url "https://github.com/crystal-lang/crystal/archive/refs/tags/1.19.1.tar.gz"
-    sha256 "2f9cfaa6bdc872f6e89d483cfe474f35232e5dd4a33dcc05ec69e5fadb2b0257"
+    url "https://github.com/crystal-lang/crystal/archive/refs/tags/1.20.0.tar.gz"
+    sha256 "2eb511167d9545331e472920c1ec89c4ab6807aadc74afddb020b2630843cf2d"
 
     resource "shards" do
       url "https://github.com/crystal-lang/shards/archive/refs/tags/v0.20.0.tar.gz"
       sha256 "8655b87761016409e4411056e350b24e7fe79eae3f227b3354b181a03f14d5da"
-    end
-
-    # Backport support for LLVM 22
-    patch do
-      url "https://github.com/crystal-lang/crystal/commit/710d9a5eabd99a23534aa9c9cfde8e1c119d8730.patch?full_index=1"
-      sha256 "e9a8c66d2de582cf85f4ff713592cd58a2e772cc8764857fab74aa2a57cd44bb"
     end
   end
 
