@@ -1,8 +1,8 @@
 class CloudfoundryCli < Formula
   desc "Official command-line client for Cloud Foundry"
   homepage "https://docs.cloudfoundry.org/cf-cli"
-  url "https://github.com/cloudfoundry/cli/archive/refs/tags/v8.18.2.tar.gz"
-  sha256 "24cc28199b9f86806e67bdeb812840e4221da2fc283cb120eef726f08a38e3b6"
+  url "https://github.com/cloudfoundry/cli/archive/refs/tags/v8.18.3.tar.gz"
+  sha256 "b1d752410595f21838eafe56887e57d31e1dd212db2d77137d606d5a85039bf0"
   license "Apache-2.0"
   head "https://github.com/cloudfoundry/cli.git", branch: "main"
 
