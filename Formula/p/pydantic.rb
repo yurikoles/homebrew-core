@@ -3,8 +3,8 @@ class Pydantic < Formula
 
   desc "Data validation using Python type hints"
   homepage "https://github.com/pydantic/pydantic"
-  url "https://files.pythonhosted.org/packages/84/6b/69fd5c7194b21ebde0f8637e2a4ddc766ada29d472bfa6a5ca533d79549a/pydantic-2.13.0.tar.gz"
-  sha256 "b89b575b6e670ebf6e7448c01b41b244f471edd276cd0b6fe02e7e7aca320070"
+  url "https://files.pythonhosted.org/packages/f3/6b/1353beb3d1cd5cf61cdec5b6f87a9872399de3bc5cae0b7ce07ff4de2ab0/pydantic-2.13.1.tar.gz"
+  sha256 "a0f829b279ddd1e39291133fe2539d2aa46cc6b150c1706a270ff0879e3774d2"
   license "MIT"
   version_scheme 1
   compatibility_version 1
@@ -35,8 +35,8 @@ class Pydantic < Formula
   end
 
   resource "pydantic-core" do
-    url "https://files.pythonhosted.org/packages/6f/0a/9414cddf82eda3976b14048cc0fa8f5b5d1aecb0b22e1dcd2dbfe0e139b1/pydantic_core-2.46.0.tar.gz"
-    sha256 "82d2498c96be47b47e903e1378d1d0f770097ec56ea953322f39936a7cf34977"
+    url "https://files.pythonhosted.org/packages/a1/93/f97a86a7eb28faa1d038af2fd5d6166418b4433659108a4c311b57128b2d/pydantic_core-2.46.1.tar.gz"
+    sha256 "d408153772d9f298098fb5d620f045bdf0f017af0d5cb6e309ef8c205540caa4"
   end
 
   resource "typing-extensions" do
