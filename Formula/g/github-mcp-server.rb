@@ -12,12 +12,12 @@ class GithubMcpServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "15829029e285b7566ba3c8f9c5cc2211c85ee272481f40e27d9cd83a683cb3aa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "15829029e285b7566ba3c8f9c5cc2211c85ee272481f40e27d9cd83a683cb3aa"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "15829029e285b7566ba3c8f9c5cc2211c85ee272481f40e27d9cd83a683cb3aa"
-    sha256 cellar: :any_skip_relocation, sonoma:        "9bf5960eece7f156deb81dbdb6e0858fba0c07ca5eda5972ededfa5320124da5"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "682497ece16b59f42ed657347899446abc36fda87d15202957eabf15e1bff637"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "809544cfde51dce0812ded8828cba7bfdb695c9d71099970de4e3e828e0c6ef3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "95fbce23e4a8258b6cae95c7bec7320f81157ec31c5ed30ea142db8e9a9a773a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "95fbce23e4a8258b6cae95c7bec7320f81157ec31c5ed30ea142db8e9a9a773a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "95fbce23e4a8258b6cae95c7bec7320f81157ec31c5ed30ea142db8e9a9a773a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "34c4985bdd1e02fba46a84c34afc8731300365aba14a9614fcc0b06969ef5e0f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "36b20119f69fc9cd8b774f2fcb1d37f16b318692272a6cdaf0f67e49e4c77dc0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "70e988d731ed035d58db1a749efc35ac15aa09d780380799b1f9301fe2396107"
   end
 
   depends_on "go" => :build
