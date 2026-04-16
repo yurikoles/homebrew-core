@@ -1,8 +1,8 @@
 class FennelLs < Formula
   desc "Language Server for Fennel"
   homepage "https://git.sr.ht/~xerool/fennel-ls/"
-  url "https://git.sr.ht/~xerool/fennel-ls/archive/0.2.3.tar.gz"
-  sha256 "80cba4a35873d0cb112e5aebc62bf616d07ab7c42d49bf032a8c3b04da9a121f"
+  url "https://git.sr.ht/~xerool/fennel-ls/archive/0.2.4.tar.gz"
+  sha256 "d50a48e2c65e84c87694cf7fd142ffcfc3a573567a1610a0b1accb97930ee2d5"
   license "MIT"
 
   bottle do
