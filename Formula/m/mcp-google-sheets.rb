@@ -9,12 +9,12 @@ class McpGoogleSheets < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e2ad66602f8041dd091a75d465595130adacf04fa41d9fc08fcdc4abb2231afe"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4bf39f6e59e5c621ff4ee7ca8cedc36146641e7f7f9a3559d8a41da0bdc88348"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3ca54e9fa0ce3ec284379ce00a79970802bd00c49de7e95850d51329b1636a41"
-    sha256 cellar: :any_skip_relocation, sonoma:        "4468f4268122ef2d04016a02baecb7c186e7cbec01597a2a41d23818f2fc65f9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f20a1a1fbf8704158c0bc198cca0ccb77958df86b46a57f3732a59f3d7c1d707"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "06a75c454a578b3ce499a8a2c13d14a45916801186f73ae194e49064cf0d15d9"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "039b69dd0826cacd308d9c6f06aabbced47e81e37929c36988a4365b838ddf34"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "77b85b37a116380092b9fff639cd031a885923fdac9c36b6ce0709a977a87b23"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a8605e21a4a319e9d9e6bd8c466898892978c06b5c768abbf8bc6444aa06bb1c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0b2d9d5266cc1a3c6f0ce78a30496c59e16477086903ef6077740c745fdad713"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "651bceddf0ac77438c632ba09a4a2374ddaff73bee22484c4452ac3d2009b5a6"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "721f8055791a9a64e9c89f025b012cd4c8eb62ade5af25b95cf70b116d92f9da"
   end
 
   depends_on "certifi" => :no_linkage
