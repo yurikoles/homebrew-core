@@ -1,8 +1,8 @@
 class Appwrite < Formula
   desc "Command-line tool for Appwrite"
   homepage "https://appwrite.io"
-  url "https://registry.npmjs.org/appwrite-cli/-/appwrite-cli-18.0.1.tgz"
-  sha256 "89367bad9dd6bd23359f96ba4368c226dc50e843cb0c8d9f2a8a379b54f6a07a"
+  url "https://registry.npmjs.org/appwrite-cli/-/appwrite-cli-18.1.0.tgz"
+  sha256 "9e5869ec903ed85e40f1cbc732c3f65908bc4bc731e31df76904b77a04bf073c"
   license "BSD-3-Clause"
 
   bottle do
@@ -21,7 +21,8 @@ class Appwrite < Formula
     bin.install_symlink libexec.glob("bin/*")
 
     node_modules = libexec/"lib/node_modules/appwrite-cli/node_modules"
-    deuniversalize_machos node_modules/"fsevents/fsevents.node" if OS.mac?
+    machos = %w[fsevents/fsevents.node app-path/main]
+    machos.each { |macho| deuniversalize_machos node_modules/macho } if OS.mac?
   end
 
   test do
