@@ -1,8 +1,8 @@
 class Garage < Formula
   desc "S3 object store so reliable you can run it outside datacenters"
   homepage "https://garagehq.deuxfleurs.fr/"
-  url "https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v2.2.0.tar.gz"
-  sha256 "e68b05d4358008e8b29a0ac235f73e3a12d97d9c6388c330b87282db774c04dc"
+  url "https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v2.3.0.tar.gz"
+  sha256 "b83a981677676b35400bbbaf20974c396f32da31c7c7630ce55fc3e62c0e2e01"
   license "AGPL-3.0-or-later"
   head "https://git.deuxfleurs.fr/Deuxfleurs/garage.git", branch: "main-v2"
 
