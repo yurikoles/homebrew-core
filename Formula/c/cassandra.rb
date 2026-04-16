@@ -5,9 +5,9 @@ class Cassandra < Formula
   desc "Eventually consistent, distributed key-value store"
   homepage "https://cassandra.apache.org"
   # TODO: Switch to `python@3.13` after https://github.com/apache/cassandra/pull/4628
-  url "https://www.apache.org/dyn/closer.lua?path=cassandra/5.0.7/apache-cassandra-5.0.7-bin.tar.gz"
-  mirror "https://archive.apache.org/dist/cassandra/5.0.7/apache-cassandra-5.0.7-bin.tar.gz"
-  sha256 "556be693f1941aeb8ec1538fe6224cbefdca7bc3729f87ff0e24a0052eb98c33"
+  url "https://www.apache.org/dyn/closer.lua?path=cassandra/5.0.8/apache-cassandra-5.0.8-bin.tar.gz"
+  mirror "https://archive.apache.org/dist/cassandra/5.0.8/apache-cassandra-5.0.8-bin.tar.gz"
+  sha256 "1579d7d3f2d812741a28cd2c2cbe29e83541bb4d25fb21ec2c00c1e4fb3b9a8f"
   license "Apache-2.0"
 
   bottle do
@@ -40,9 +40,21 @@ class Cassandra < Formula
     patch :DATA
   end
 
+  resource "cassandra-driver" do
+    url "https://files.pythonhosted.org/packages/06/47/4e0fbdf02a7a418997f16f59feba26937d9973b979d3f23d79fbd8f6186f/cassandra_driver-3.29.3.tar.gz"
+    sha256 "ff6b82ee4533f6fd4474d833e693b44b984f58337173ee98ed76bce08721a636"
+
+    # Remove `ez_setup.py` to be compatible with setuptools 82+, remove in next release
+    patch do
+      url "https://github.com/apache/cassandra-python-driver/commit/7d8015e3c1cff543a5f64c70cff3e14216e58037.patch?full_index=1"
+      sha256 "66a5a714aed117306e6c0e78b51615b56ca655e12cb9ea5718b0c1ae384ceef6"
+    end
+    patch :DATA
+  end
+
   resource "click" do
-    url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
-    sha256 "12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"
+    url "https://files.pythonhosted.org/packages/57/75/31212c6bf2503fdf920d87fee5d7a86a2e3bcf444984126f13d8e4016804/click-8.3.2.tar.gz"
+    sha256 "14162b8b3b3550a7d479eafa77dfd3c38d9dc8951f6f69c78913a8f9a7540fd5"
   end
 
   resource "geomet" do
