@@ -1,8 +1,8 @@
 class StripeCli < Formula
   desc "Command-line tool for Stripe"
   homepage "https://docs.stripe.com/stripe-cli"
-  url "https://github.com/stripe/stripe-cli/archive/refs/tags/v1.40.5.tar.gz"
-  sha256 "75d24e83acf8958936bc1481832c7fc22c01d33996a18749f70352f7607a9877"
+  url "https://github.com/stripe/stripe-cli/archive/refs/tags/v1.40.6.tar.gz"
+  sha256 "26f72406aefc42b134ca4c908c514c7985ec6a08045a1d0e2cc74c104785a35b"
   license "Apache-2.0"
 
   bottle do
@@ -22,9 +22,7 @@ class StripeCli < Formula
     ldflags = %W[-s -w -X github.com/stripe/stripe-cli/pkg/version.Version=#{version}]
     system "go", "build", *std_go_args(ldflags:, output: bin/"stripe"), "cmd/stripe/main.go"
 
-    # TODO: see if fish support is added, ref: https://github.com/stripe/stripe-cli/pull/1282
-    generate_completions_from_executable(bin/"stripe", "completion", "--write-to-stdout", "--shell",
-                                         shells: [:bash, :zsh])
+    generate_completions_from_executable(bin/"stripe", "completion", "--write-to-stdout", "--shell")
   end
 
   test do
