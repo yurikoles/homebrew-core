@@ -1,8 +1,8 @@
 class Nudoku < Formula
   desc "Ncurses based sudoku game"
   homepage "https://jubalh.github.io/nudoku/"
-  url "https://github.com/jubalh/nudoku/archive/refs/tags/7.0.0.tar.gz"
-  sha256 "91b41874cf5e323ca50a7e1fa15170aa3fb94591842df20ea394cce4a065ef9d"
+  url "https://github.com/jubalh/nudoku/archive/refs/tags/8.0.0.tar.gz"
+  sha256 "061ef63cd4754e22024fbfbc5fc103de9e4a90ffe21790a3433c8af770e6da09"
   license "GPL-3.0-or-later"
   head "https://github.com/jubalh/nudoku.git", branch: "master"
 
