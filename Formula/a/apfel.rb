@@ -7,7 +7,7 @@ class Apfel < Formula
   head "https://github.com/Arthur-Ficial/apfel.git", branch: "main"
 
   bottle do
-    sha256 arm64_tahoe: "5b873fd25aae60824eceffd36a22ed620fd03b4e26c7cf59e83c422c3a74c9b0"
+    sha256 arm64_tahoe: "8086337395182b8ad9b6f3dd3b99b6e5b3a1bbd1a02696330ee6576084a17b6e"
   end
 
   depends_on xcode: ["26.4", :build]
