@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/27/71/08ce7449522d871d444eaac1be9ebd5259dd6f8277e19b8fd8181e1dfb24/esphome-2026.3.3.tar.gz"
-  sha256 "ef8e8894eb705106291e072525bc187243eea201418fd4be447b4544db3a83de"
+  url "https://files.pythonhosted.org/packages/d3/3b/b51d5b3059cce188e6765521ad9c5d23c0b420be3d7316c0258980661885/esphome-2026.4.0.tar.gz"
+  sha256 "bb1a72c4969f2d290074bf4a1aa63c61636d19046cbdba43a98f6ecb018c015a"
   license "MIT"
   head "https://github.com/esphome/esphome.git", branch: "dev"
 
@@ -41,8 +41,8 @@ class Esphome < Formula
                 extra_packages:   %w[chardet dbus-fast pyobjc-framework-corebluetooth pyobjc-framework-libdispatch]
 
   resource "aioesphomeapi" do
-    url "https://files.pythonhosted.org/packages/53/a7/d94818fa0f33a82f064a33c6dc213b6aff8619263ac8d4a2b6fe9323c657/aioesphomeapi-44.6.2.tar.gz"
-    sha256 "f6dd99343f592c6404c4f9636176fceaff8ad4758db944edabe0a9575a1d55ef"
+    url "https://files.pythonhosted.org/packages/81/f0/8129cad8450ae195ed3a3f66f773ce86670a1c8a4e5c52f908bd90de9cba/aioesphomeapi-44.15.0.tar.gz"
+    sha256 "41d3171d9aaf38cc62525fd6b9c610bf5a46c6345fef229d7498836fc5f37e4c"
   end
 
   resource "aiohappyeyeballs" do
@@ -111,8 +111,8 @@ class Esphome < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz"
-    sha256 "12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a"
+    url "https://files.pythonhosted.org/packages/57/75/31212c6bf2503fdf920d87fee5d7a86a2e3bcf444984126f13d8e4016804/click-8.3.2.tar.gz"
+    sha256 "14162b8b3b3550a7d479eafa77dfd3c38d9dc8951f6f69c78913a8f9a7540fd5"
   end
 
   resource "colorama" do
@@ -131,8 +131,8 @@ class Esphome < Formula
   end
 
   resource "esphome-dashboard" do
-    url "https://files.pythonhosted.org/packages/62/36/ae27687b3137097131e445f8d862549ee5be335a05fc1a561230dfe99ca4/esphome_dashboard-20260210.0.tar.gz"
-    sha256 "371adc02349f0cd0d57ed5729cff1847b6aa5558f3cc82471385651cd31caf5d"
+    url "https://files.pythonhosted.org/packages/d2/ae/e627cfe96d9c7801e8c9d80cea4df54477430d5eac00b4e4f761c726d8d6/esphome_dashboard-20260408.1.tar.gz"
+    sha256 "3de34b24ae7cb2845647c09dedc3e0a6aa04c97c735da5e41b8bd06b16ddfb43"
   end
 
   resource "esphome-glyphsets" do
@@ -206,8 +206,8 @@ class Esphome < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
-    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
+    url "https://files.pythonhosted.org/packages/df/de/0d2b39fb4af88a0258f3bac87dfcbb48e73fbdea4a2ed0e2213f9a4c2f9a/packaging-26.1.tar.gz"
+    sha256 "f042152b681c4bfac5cae2742a55e103d27ab2ec0f3d88037136b6bfe7c9c5de"
   end
 
   resource "paho-mqtt" do
@@ -281,8 +281,8 @@ class Esphome < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz"
-    sha256 "dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf"
+    url "https://files.pythonhosted.org/packages/5f/a4/98b9c7c6428a668bf7e42ebb7c79d576a1c3c1e3ae2d47e674b468388871/requests-2.33.1.tar.gz"
+    sha256 "18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517"
   end
 
   resource "resvg-py" do
@@ -291,8 +291,8 @@ class Esphome < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/b3/c6/f3b320c27991c46f43ee9d856302c70dc2d0fb2dba4842ff739d5f46b393/rich-14.3.3.tar.gz"
-    sha256 "b8daa0b9e4eef54dd8cf7c86c03713f53241884e814f4e2f5fb342fe520f639b"
+    url "https://files.pythonhosted.org/packages/c0/8f/0722ca900cc807c13a6a0c696dacf35430f72e0ec571c4275d2371fca3e9/rich-15.0.0.tar.gz"
+    sha256 "edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36"
   end
 
   resource "rich-click" do
