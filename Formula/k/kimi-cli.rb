@@ -3,10 +3,9 @@ class KimiCli < Formula
 
   desc "CLI agent for MoonshotAI Kimi platform"
   homepage "https://github.com/MoonshotAI/kimi-cli"
-  url "https://files.pythonhosted.org/packages/13/ae/ff1b68df2f5dce2822f7f94ab1808e747dfa9f037d8c2cf847baa8e85c0b/kimi_cli-1.33.0.tar.gz"
-  sha256 "bb7730131327b5c040835fb3c60b03c216d068c044f8cd7325d6c3f54a488384"
+  url "https://files.pythonhosted.org/packages/1b/2e/de243e766500f3a650202ab1c0745fe5adbc169e18635505bb3af37df122/kimi_cli-1.35.0.tar.gz"
+  sha256 "71cdeda1d77391701bd71a8fdbe1aa36041559cfbe5c283774f4bb574c97594b"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/MoonshotAI/kimi-cli.git", branch: "main"
 
   no_autobump! because: "macOS resources cannot be updated on linux CI"
@@ -179,8 +178,8 @@ class KimiCli < Formula
   end
 
   resource "fastapi" do
-    url "https://files.pythonhosted.org/packages/f7/e6/7adb4c5fa231e82c35b8f5741a9f2d055f520c29af5546fd70d3e8e1cd2e/fastapi-0.135.3.tar.gz"
-    sha256 "bd6d7caf1a2bdd8d676843cdcd2287729572a1ef524fc4d65c17ae002a1be654"
+    url "https://files.pythonhosted.org/packages/4e/d9/e66315807e41e69e7f6a1b42a162dada2f249c5f06ad3f1a95f84ab336ef/fastapi-0.136.0.tar.gz"
+    sha256 "cf08e067cc66e106e102d9ba659463abfac245200752f8a5b7b1e813de4ff73e"
   end
 
   resource "fastmcp" do
