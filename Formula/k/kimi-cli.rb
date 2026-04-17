@@ -3,21 +3,20 @@ class KimiCli < Formula
 
   desc "CLI agent for MoonshotAI Kimi platform"
   homepage "https://github.com/MoonshotAI/kimi-cli"
-  url "https://files.pythonhosted.org/packages/13/ae/ff1b68df2f5dce2822f7f94ab1808e747dfa9f037d8c2cf847baa8e85c0b/kimi_cli-1.33.0.tar.gz"
-  sha256 "bb7730131327b5c040835fb3c60b03c216d068c044f8cd7325d6c3f54a488384"
+  url "https://files.pythonhosted.org/packages/1b/2e/de243e766500f3a650202ab1c0745fe5adbc169e18635505bb3af37df122/kimi_cli-1.35.0.tar.gz"
+  sha256 "71cdeda1d77391701bd71a8fdbe1aa36041559cfbe5c283774f4bb574c97594b"
   license "Apache-2.0"
-  revision 1
   head "https://github.com/MoonshotAI/kimi-cli.git", branch: "main"
 
   no_autobump! because: "macOS resources cannot be updated on linux CI"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "03072b4187ced7ca055d72d5f1efa6db154bb959e4dd872ad52f08031e97ebfa"
-    sha256 cellar: :any,                 arm64_sequoia: "8ab050124a0bdc35df15decfb7a055f6a59e2b087d2a8556d6f6fdba258e9f55"
-    sha256 cellar: :any,                 arm64_sonoma:  "767d8d71af72cc807e8e91f4b682a5512f335fef245037e9a64cdbb28d430b3b"
-    sha256 cellar: :any,                 sonoma:        "3fe41146eff5be38b43f900954d319bb7293f98134331aa9b03160ed86f57432"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "255e89f4eaf1acf064bf22d3e3201d8d0abe87043e7558a632f94f91323263a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "54ae473ee7ba712fd2897e55809d37cd3e4870abff87f88e4678b6b886bb37b6"
+    sha256 cellar: :any,                 arm64_tahoe:   "eb39569e11562f90d301058468df233c0993145addb8f211476ed76bbf33ae1d"
+    sha256 cellar: :any,                 arm64_sequoia: "06c7b6bd1ffc1a96c9ac10c941319dac26d4b44508c73707638ca9844a0ad839"
+    sha256 cellar: :any,                 arm64_sonoma:  "6056cefefaa1ad0a1199c630b8bbbe5193c981b120d8337f3fd2b89cbd236648"
+    sha256 cellar: :any,                 sonoma:        "c2cc1db541c261f1f32557c616fcd645d81a6af4ddabaf7bd9fe33fdc9a99ff6"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "25f60029372830584c37a217dd2a8ca3d6bf68ef8f56af9f54dfdd1999571645"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b91bf3871ec2aee4fd51c66947de2ecc345a99563747a9d4e1411df2cd35e6d"
   end
 
   depends_on "pkgconf" => :build
@@ -179,8 +178,8 @@ class KimiCli < Formula
   end
 
   resource "fastapi" do
-    url "https://files.pythonhosted.org/packages/f7/e6/7adb4c5fa231e82c35b8f5741a9f2d055f520c29af5546fd70d3e8e1cd2e/fastapi-0.135.3.tar.gz"
-    sha256 "bd6d7caf1a2bdd8d676843cdcd2287729572a1ef524fc4d65c17ae002a1be654"
+    url "https://files.pythonhosted.org/packages/4e/d9/e66315807e41e69e7f6a1b42a162dada2f249c5f06ad3f1a95f84ab336ef/fastapi-0.136.0.tar.gz"
+    sha256 "cf08e067cc66e106e102d9ba659463abfac245200752f8a5b7b1e813de4ff73e"
   end
 
   resource "fastmcp" do
