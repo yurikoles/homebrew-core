@@ -1,8 +1,8 @@
 class AtSpi2Core < Formula
   desc "Protocol definitions and daemon for D-Bus at-spi"
   homepage "https://www.freedesktop.org/wiki/Accessibility/AT-SPI2/"
-  url "https://download.gnome.org/sources/at-spi2-core/2.60/at-spi2-core-2.60.0.tar.xz"
-  sha256 "80e50c1a97d8fd660a3fadb02ca35876df881c266d3d6108fc5b4c113614cb99"
+  url "https://download.gnome.org/sources/at-spi2-core/2.60/at-spi2-core-2.60.1.tar.xz"
+  sha256 "f99b87e3c1674f5fbc417cc9c1d9e261c0f29aab0550ad6369805031d12f6852"
   license "LGPL-2.1-or-later"
   compatibility_version 1
 
@@ -75,6 +75,7 @@ class AtSpi2Core < Formula
 
     pkg_config_cflags = shell_output("pkg-config --cflags --libs atspi-2").chomp.split
     system ENV.cc, "test.c", *pkg_config_cflags, "-lgobject-2.0", "-o", "test"
-    assert_match "AT-SPI", shell_output("#{testpath}/test 2>&1", 133)
+    expected_exit_status = OS.linux? ? 134 : 133
+    assert_match "AT-SPI", shell_output("#{testpath}/test 2>&1", expected_exit_status)
   end
 end
