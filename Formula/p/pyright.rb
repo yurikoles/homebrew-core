@@ -6,7 +6,7 @@ class Pyright < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ca302128b320fd700103d02c9d1b65e0b2bb11e90e7555e064d2b50a644d3ae0"
+    sha256 cellar: :any_skip_relocation, all: "1b82e04aeee5040303a0bdb6ef71a67842787437f12a04c445b69db5a5de12bb"
   end
 
   depends_on "node"
