@@ -1,8 +1,8 @@
 class RioTerminal < Formula
   desc "Hardware-accelerated GPU terminal emulator powered by WebGPU"
   homepage "https://rioterm.com/"
-  url "https://github.com/raphamorim/rio/archive/refs/tags/v0.3.10.tar.gz"
-  sha256 "11e84859757d9872f0c39be8cc9c751d2b8329e222cc5a49dacab43e94627b6d"
+  url "https://github.com/raphamorim/rio/archive/refs/tags/v0.3.11.tar.gz"
+  sha256 "f59abcfb501bb4e98dd13d471ba4ceba9b7dd25bcd2c45865b2aef3d8dce9a19"
   license "MIT"
   head "https://github.com/raphamorim/rio.git", branch: "main"
 
