@@ -10,12 +10,12 @@ class Volk < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "cd42ce70e4c94cb454ab5c6995c2416a96df076fef77da55048cdf885b219cf0"
-    sha256 cellar: :any,                 arm64_sequoia: "06c77739276577e0861100b50473fb56bb841e1a0add89c7b577bc49e956282b"
-    sha256 cellar: :any,                 arm64_sonoma:  "13489b9f19bda76938862073b0d0f5c2393b59dc68d09cb2872430aaeb2a16ab"
-    sha256 cellar: :any,                 sonoma:        "9ca0dab8d3ed4bdf05dcc156699e4915228373aac1341e77ffe7e0a338e331a6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "07a0efa05eaa738bf120a65525ddda81790f5f7cf775aaf597fedcff7d4f914a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4522eba14d4066335b54c627d62cd100b2bd5162dd1b4e86bb562a17ffcaba59"
+    sha256 cellar: :any,                 arm64_tahoe:   "0db5dbe2e6816656f97b2c5503c8639f9cebf3c435cf5d6b1f73630c1ce864e2"
+    sha256 cellar: :any,                 arm64_sequoia: "cd28072e452b4ed37f198071aa7c3197edead09d1955d5024c526ee795e507fd"
+    sha256 cellar: :any,                 arm64_sonoma:  "bf618b64eb9bd8ec9b23f9c5930dbe2761ab21fe83c40951c9e82eae09eb7b5e"
+    sha256 cellar: :any,                 sonoma:        "4e656b6732ab7764eeb9cbe385f8f69f8be0d05953ab1e45d96f36f566e71d96"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "1e61293762a20d138fc41e4fccaa042bc3882e35c904bb76e793fb81bcc52a0d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9da22005602d3dda4775c786a105e3606e98646cdc9af032aa1efb4e647a70dd"
   end
 
   depends_on "cmake" => :build
