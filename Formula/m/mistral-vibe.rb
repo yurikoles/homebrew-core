@@ -3,8 +3,8 @@ class MistralVibe < Formula
 
   desc "Minimal CLI coding agent"
   homepage "https://github.com/mistralai/mistral-vibe"
-  url "https://files.pythonhosted.org/packages/63/2b/47599930ca2db3362537a11779a0122d7e694b0f5accb996dca6d08b65f5/mistral_vibe-2.7.5.tar.gz"
-  sha256 "ff09184b502df5481970d171fd89ee05bc8e5b92b6d095c11e6a810ed1544245"
+  url "https://files.pythonhosted.org/packages/df/fd/5e75d76ac0b56084e0afd6e6d3747852311aa4d445680ecf7829863f8dec/mistral_vibe-2.7.6.tar.gz"
+  sha256 "6dfeec38495c7612acfef533ff1b133db8a0a5670f85a467b80ed1000f24ef31"
   license "Apache-2.0"
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
@@ -203,8 +203,8 @@ class MistralVibe < Formula
   end
 
   resource "mistralai" do
-    url "https://files.pythonhosted.org/packages/7d/98/5fe39d514c19477f06a07e088ce4a44c2e60ac9deebefb9e2c8ed8ef87d2/mistralai-2.1.3.tar.gz"
-    sha256 "0c5de4855b043cd0582406d5c1ddfd91e176f484a158e6ee0b4a0054231be266"
+    url "https://files.pythonhosted.org/packages/5c/08/f8fed64eab35ad1ded82f92bf834160302db19f5bbda5a904df7d4dbf3c4/mistralai-2.3.2.tar.gz"
+    sha256 "a02c7e90ac165e8680c849551ff5fe9788e9fc10b7dbe71817443dc63cc5e9c9"
   end
 
   resource "more-itertools" do
@@ -243,8 +243,8 @@ class MistralVibe < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz"
-    sha256 "00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4"
+    url "https://files.pythonhosted.org/packages/df/de/0d2b39fb4af88a0258f3bac87dfcbb48e73fbdea4a2ed0e2213f9a4c2f9a/packaging-26.1.tar.gz"
+    sha256 "f042152b681c4bfac5cae2742a55e103d27ab2ec0f3d88037136b6bfe7c9c5de"
   end
 
   resource "pexpect" do
