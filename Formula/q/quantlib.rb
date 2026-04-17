@@ -1,8 +1,8 @@
 class Quantlib < Formula
   desc "Library for quantitative finance"
   homepage "https://www.quantlib.org/"
-  url "https://github.com/lballabio/QuantLib/releases/download/v1.42/QuantLib-1.42.tar.gz"
-  sha256 "60319f947b4867194d5b1c5ef7ccbdd11b86fac8670d3f23fbe3057e78447728"
+  url "https://github.com/lballabio/QuantLib/releases/download/v1.42.1/QuantLib-1.42.1.tar.gz"
+  sha256 "125a1eb5364c87a3d9df386608557bda235b31429bf9fd1e8dce734817e2997f"
   license "BSD-3-Clause"
 
   bottle do
