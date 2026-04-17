@@ -3,10 +3,9 @@ class Dstack < Formula
 
   desc "ML workflow orchestration system designed for reproducibility and collaboration"
   homepage "https://dstack.ai/"
-  url "https://files.pythonhosted.org/packages/93/4d/a9b00aa114943a8c64d17258ba5c5129cace086532800bb171b3ca228eee/dstack-0.20.16.tar.gz"
-  sha256 "6e175261b0c4198b8e4db1a44ff90908748890a3975aa124691ff2148af91b07"
+  url "https://files.pythonhosted.org/packages/29/39/e71435c4575e009f44f45d9980fec615eaf5914c84bfe935a130c579624a/dstack-0.20.17.tar.gz"
+  sha256 "c78dc52a2e534a49ce2c841a0b9ac824e18275bff85c75bff2c5d401c8906d05"
   license "MPL-2.0"
-  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "87896a8a9052b225cbfca407d9215993e0694b5150074ecfa67c3fee72d2b298"
@@ -281,8 +280,8 @@ class Dstack < Formula
   end
 
   resource "gpuhunt" do
-    url "https://files.pythonhosted.org/packages/0e/f8/d3d8ac15ea7aa2c5dfbbf6151104bfa5d9fe21bfc106f819b1665196f817/gpuhunt-0.1.19.tar.gz"
-    sha256 "7db86fa1a98c918e9b346ac7e1cb468e291419384318334a0782ae7a2874a199"
+    url "https://files.pythonhosted.org/packages/0b/65/f31234645c6e86acab38ec74374df0caaa3581bb193065e89757ca0da188/gpuhunt-0.1.20.tar.gz"
+    sha256 "ed59e37ecea25e22c8914996d98e5e8e41964ae8e9368dc282f55533f01e2d54"
   end
 
   resource "greenlet" do
