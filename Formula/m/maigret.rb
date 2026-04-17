@@ -6,7 +6,7 @@ class Maigret < Formula
   url "https://files.pythonhosted.org/packages/3d/29/ef75d365917075a72ad88b7b1027bc6f93d6e45f27aec1ee6410607eb5f6/maigret-0.5.0.tar.gz"
   sha256 "d85c7f799cce51b6edf7179dda36019d0081bba528ce77284925499b07a49be7"
   license "MIT"
-  revision 14
+  revision 15
   head "https://github.com/soxoj/maigret.git", branch: "main"
 
   bottle do
@@ -322,8 +322,8 @@ class Maigret < Formula
   end
 
   resource "pypdf" do
-    url "https://files.pythonhosted.org/packages/66/79/f2730c42ec7891a75a2fcea2eb4f356872bcbc671b711418060424796612/pypdf-6.10.1.tar.gz"
-    sha256 "62e6ca7f65aaa28b3d192addb44f97296e4be1748f57ed0f4efb2d4915841880"
+    url "https://files.pythonhosted.org/packages/7b/3f/9f2167401c2e94833ca3b69535bad89e533b5de75fefe4197a2c224baec2/pypdf-6.10.2.tar.gz"
+    sha256 "7d09ce108eff6bf67465d461b6ef352dcb8d84f7a91befc02f904455c6eea11d"
   end
 
   resource "pypdf2" do
