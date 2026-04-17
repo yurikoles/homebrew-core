@@ -1,8 +1,8 @@
 class Frei0r < Formula
   desc "Minimalistic plugin API for video effects"
   homepage "https://frei0r.dyne.org/"
-  url "https://github.com/dyne/frei0r/archive/refs/tags/v3.1.2.tar.gz"
-  sha256 "2c848c6022a0f1b02be0568b99c7c353df82700235e85888f31ca97efded391c"
+  url "https://github.com/dyne/frei0r/archive/refs/tags/v3.1.3.tar.gz"
+  sha256 "dcf290cdfbe583d007c300aa7733c9350ed957a0e30ca897a5c098875b8aa5dc"
   license "GPL-2.0-or-later"
   compatibility_version 1
 
