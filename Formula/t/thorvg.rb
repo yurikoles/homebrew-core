@@ -1,8 +1,8 @@
 class Thorvg < Formula
   desc "Lightweight portable library used for drawing vector-based scenes and animations"
   homepage "https://www.thorvg.org"
-  url "https://github.com/thorvg/thorvg/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "96bd73c9b3f063251404609757301197d63b6a75e22c1527889dcaab3d5827a0"
+  url "https://github.com/thorvg/thorvg/archive/refs/tags/v1.0.4.tar.gz"
+  sha256 "1a60b794eaac5717ad79d0c7e3d189f46e21d469b3a0013d7804f348fbacdf17"
   license "MIT"
   head "https://github.com/thorvg/thorvg.git", branch: "main"
 
@@ -30,7 +30,7 @@ class Thorvg < Formula
 
   def install
     args = %w[
-      -Dengines=sw
+      -Dengines=cpu
       -Dloaders=all
       -Dsavers=all
       -Dbindings=capi
