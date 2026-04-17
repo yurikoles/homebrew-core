@@ -9,12 +9,12 @@ class Pdfly < Formula
   revision 17
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9db3c3ee5a279ee367e176f060b199ba9ee92c02dbcd6a997242f85500ae9bd4"
-    sha256 cellar: :any,                 arm64_sequoia: "160ae61d8e49b5716539641f235a0052b27730aafc4548f1f47c3cc106b4af09"
-    sha256 cellar: :any,                 arm64_sonoma:  "aae8fce0834dc43e330dcf2cc0bb4000001bac186862d97648137815e49c651f"
-    sha256 cellar: :any,                 sonoma:        "248092f1bbb576993434db9024e226ad3614fa3dd71c183d11d3f9aa01f345fd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "abdc8b0aa1cce8a4f8d23d505196cd599e89b10e7f6a5b9f3c70e7b0ce63af8c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e3715e9332014e81e2c9ac71c42fdde518a1d3a852847df973fa3e039b810c0c"
+    sha256 cellar: :any,                 arm64_tahoe:   "1fc95d7185ec7095abd084f3622a42e596eeafcc89b61da9539cf8599cbcd385"
+    sha256 cellar: :any,                 arm64_sequoia: "85b1ee2b241af304318578d265e667f6e4e0c18cedd0179f22bfb7105ba6d141"
+    sha256 cellar: :any,                 arm64_sonoma:  "acb4b03f45e8c580bdd2072ff6f770af2af10dc9fc3b807f60e2081f0c6505db"
+    sha256 cellar: :any,                 sonoma:        "955cfabc0a26e1b28bfe8564fa4b434fa0b541a772932cd896b1e6fdc7f8e617"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cdf09b183b26369a9882dddc4c018f1cba4e24a27579edbf7dc74d5eee51e37d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "547c09d0a4e20b09180402829968b23df3620449f1ad746e183ce2cab18a6c36"
   end
 
   depends_on "pkgconf" => :build
