@@ -1,10 +1,21 @@
 class Envio < Formula
   desc "Modern And Secure CLI Tool For Managing Environment Variables"
-  homepage "https://github.com/envio-cli/envio"
-  url "https://github.com/envio-cli/envio/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "729a02ac8a5e129fa5129de6ee62f7e2c408502dafc25924d65d02558caa5a08"
+  homepage "https://github.com/humblepenguinn/envio"
   license any_of: ["Apache-2.0", "MIT"]
-  head "https://github.com/envio-cli/envio.git", branch: "main"
+  revision 1
+  head "https://github.com/humblepenguinn/envio.git", branch: "main"
+
+  stable do
+    url "https://github.com/humblepenguinn/envio/archive/refs/tags/v0.7.0.tar.gz"
+    sha256 "729a02ac8a5e129fa5129de6ee62f7e2c408502dafc25924d65d02558caa5a08"
+
+    # Fix missing version
+    # TODO: Remove in the next release
+    patch do
+      url "https://github.com/humblepenguinn/envio/commit/37976a3d0327435d631b6ac6eff1ad114472f148.patch?full_index=1"
+      sha256 "da23f201ac3b20d8c6cff09d95496fb6c4e88ca9c737351804b6a84bf3a9293f"
+    end
+  end
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "b18308e8847f096e91c31c563e0e4ca6b0a87a260ac6f3ef680ea8ab477dd9dc"
@@ -26,6 +37,10 @@ class Envio < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
+
+    man1.install "man/envio.1"
+
+    generate_completions_from_executable(bin/"envio", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
