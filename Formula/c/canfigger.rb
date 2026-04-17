@@ -1,9 +1,9 @@
 class Canfigger < Formula
   desc "Simple configuration file parser library"
   homepage "https://github.com/andy5995/canfigger/"
-  url "https://github.com/andy5995/canfigger/releases/download/v0.3.0/canfigger-0.3.0.tar.xz"
-  sha256 "3d813e69e0cc3a43c09cf565138ac1278f7bcea74053204f54e3872c094cb534"
-  license "GPL-3.0-or-later"
+  url "https://github.com/andy5995/canfigger/releases/download/v0.3.1/canfigger-0.3.1.tar.xz"
+  sha256 "8ecb23692b2fdfd8f2f8f22bacf07ab7976915fd157692920c28400caa6aa1bf"
+  license "MIT"
   head "https://github.com/andy5995/canfigger.git", branch: "trunk"
 
   bottle do
