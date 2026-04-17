@@ -132,12 +132,13 @@ class Powershell < Formula
 
     libexec.install publish_path.glob("*")
 
-    ref_pack_path = (dotnet.opt_libexec/"packs/Microsoft.NETCore.App.Ref").children.select(&:directory?)
-                    .max_by { |path| Version.new(path.basename.to_s) }
-    (libexec/"ref").install_symlink (ref_pack_path/"ref/#{target_framework}/").glob("*")
+    (libexec/"ref").mkpath
+
+    ln_s dotnet.opt_libexec.glob("packs/Microsoft.NETCore.App.Ref/*/ref/#{target_framework}").first.glob("*"),
+         libexec/"ref"
 
     (bin/"pwsh").write_env_script libexec/"pwsh",
-                                  DOTNET_ROOT: "${DOTNET_ROOT:-#{dotnet.opt_libexec}}"
+                                  DOTNET_ROOT: dotnet.opt_libexec
 
     man1.install buildpath/"assets/manpage/pwsh.1"
     deuniversalize_machos libexec/"libpsl-native.dylib" if OS.mac?
@@ -189,7 +190,8 @@ class Powershell < Formula
     module_output = shell_output("#{bin}/pwsh -NoLogo -NoProfile -c '#{module_cmd}' 2>&1")
 
     # If this produces an error try compiling powershell from source and increment revision
-    refute_match(/InternalWebProxy/, module_output)
+    refute_match(/InternalWebProxy/, module_output,
+                                     "Probbably newer .NET runtime version than last build. Try recompiling")
     module_output = module_output.lines.last.chomp
     assert_equal "True", module_output
   end
