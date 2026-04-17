@@ -1,8 +1,8 @@
 class Kbld < Formula
   desc "Tool for building and pushing container images in development workflows"
   homepage "https://carvel.dev/kbld/"
-  url "https://github.com/carvel-dev/kbld/archive/refs/tags/v0.47.2.tar.gz"
-  sha256 "2509ff3a756bed60d0140ab5d39aeae9202a179c4087fb8225ce236f8d870af2"
+  url "https://github.com/carvel-dev/kbld/archive/refs/tags/v0.47.3.tar.gz"
+  sha256 "bd9283b80ff490999476bae87931bb8f2b68b045e2bf951e732c72303df612f8"
   license "Apache-2.0"
   head "https://github.com/carvel-dev/kbld.git", branch: "develop"
 
