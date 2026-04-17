@@ -1,8 +1,8 @@
 class Tea < Formula
   desc "Command-line tool to interact with Gitea servers"
   homepage "https://gitea.com/gitea/tea"
-  url "https://gitea.com/gitea/tea/archive/v0.13.0.tar.gz"
-  sha256 "c08f1ffd1318461a80bdee800a35515b07f0d305333af4e06e66b3a518d54f46"
+  url "https://gitea.com/gitea/tea/archive/v0.14.0.tar.gz"
+  sha256 "f509de217ac0e57491ffdab2750516e8c505780881529ee703b9d0c86cc652a3"
   license "MIT"
   head "https://gitea.com/gitea/tea.git", branch: "main"
 
@@ -18,11 +18,25 @@ class Tea < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.Version=#{version}")
+    # get gittea sdk version
+    sdk = Utils.safe_popen_read("go", "list", "-f", "{{.Version}}", "-m", "code.gitea.io/sdk/gitea").to_s
+
+    ldflags = %W[
+      -s -w
+      -X code.gitea.io/tea/modules/version.Version=#{version}
+      -X code.gitea.io/tea/modules/version.Tags=#{tap.user}
+      -X code.gitea.io/tea/modules/version.SDK=#{sdk}
+    ]
+
+    system "go", "build", *std_go_args(ldflags:)
     generate_completions_from_executable(bin/"tea", "completion")
+
+    man8.mkpath
+    system bin/"tea", "man", "--out", man8/"tea.8"
   end
 
   test do
-    assert_match "no gitea login configured.", shell_output("#{bin}/tea pulls 2>&1", 1)
+    assert_match version.to_s, shell_output("#{bin}/tea --version")
+    assert_match "Error: no available login\n", shell_output("#{bin}/tea pulls 2>&1", 1)
   end
 end
