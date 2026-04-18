@@ -1,9 +1,9 @@
 class Chuck < Formula
   desc "Concurrent, on-the-fly audio programming language"
   homepage "https://chuck.cs.princeton.edu/"
-  url "https://chuck.cs.princeton.edu/release/files/chuck-1.5.5.7.tgz"
-  mirror "https://chuck.stanford.edu/release/files/chuck-1.5.5.7.tgz"
-  sha256 "73c1391b9064fd06a5646b1c18b2b991b6cad6d98c3f893a0d10bae1ece44c8c"
+  url "https://chuck.cs.princeton.edu/release/files/chuck-1.5.5.8.tgz"
+  mirror "https://chuck.stanford.edu/release/files/chuck-1.5.5.8.tgz"
+  sha256 "d230f74cea1b0454ccfae4b2fedfb27ea20e6250c7130f079fa4195fef1f304a"
   license "GPL-2.0-or-later"
   head "https://github.com/ccrma/chuck.git", branch: "main"
 
@@ -38,6 +38,7 @@ class Chuck < Formula
   end
 
   test do
-    assert_match "device", shell_output("#{bin}/chuck --probe 2>&1")
+    (testpath/"test.ck").write("<<< 2 + 3 >>>;\n")
+    assert_match "5 :(int)", shell_output("#{bin}/chuck --silent #{testpath}/test.ck 2>&1")
   end
 end
