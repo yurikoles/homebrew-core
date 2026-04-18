@@ -1,8 +1,8 @@
 class Dynamips < Formula
   desc "Cisco 7200/3600/3725/3745/2600/1700 Router Emulator"
   homepage "https://github.com/GNS3/dynamips"
-  url "https://github.com/GNS3/dynamips/archive/refs/tags/v0.2.23.tar.gz"
-  sha256 "503bbb52c03f91900ea8dbe8bd0b804b76e2e28d0b7242624e0d3c52dda441a1"
+  url "https://github.com/GNS3/dynamips/archive/refs/tags/v0.2.24.tar.gz"
+  sha256 "3956501eb49cb45770226a9a1de3a2f922eec5f47cc1b5fb83097f073456e4a8"
   license "GPL-2.0-only"
 
   livecheck do
@@ -45,10 +45,6 @@ class Dynamips < Formula
     else
       "-DLIBELF_INCLUDE_DIRS=#{Formula["elfutils"].opt_include}"
     end
-
-    # Workaround to build with CMake 4
-    cmake_args << "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-    odie "Remove CMake workaround!" if version > "0.2.23"
 
     system "cmake", "-S", ".", "-B", "build", *cmake_args, *std_cmake_args
     system "cmake", "--build", "build"
