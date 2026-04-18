@@ -30,7 +30,6 @@ class Heimdal < Formula
   keg_only "it conflicts with Kerberos"
 
   depends_on "pkgconf" => :build
-  depends_on "berkeley-db@5" # keep berkeley-db < 6 to avoid AGPL incompatibility
   depends_on "lmdb"
   depends_on "openldap"
   depends_on "openssl@3"
@@ -68,13 +67,13 @@ class Heimdal < Formula
       --disable-afs-support
       --disable-ndbm-db
       --disable-heimdal-documentation
+      --disable-otp
       --disable-silent-rules
       --disable-static
       --with-openldap=#{Formula["openldap"].opt_prefix}
       --with-openssl=#{Formula["openssl@3"].opt_prefix}
       --with-hcrypto-default-backend=ossl
-      --with-berkeley-db
-      --with-berkeley-db-include=#{Formula["berkeley-db@5"].opt_include}
+      --without-berkeley-db
     ]
 
     system "./configure", *args, *std_configure_args
