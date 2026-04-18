@@ -38,7 +38,7 @@ class PythonFreethreading < Formula
   uses_from_macos "unzip"
 
   on_linux do
-    depends_on "berkeley-db@5"
+    depends_on "gdbm"
     depends_on "libnsl"
     depends_on "libtirpc"
     depends_on "zlib-ng-compat"
@@ -155,7 +155,7 @@ class PythonFreethreading < Formula
       args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
     else
       args << "--enable-shared"
-      args << "--with-dbmliborder=bdb"
+      args << "--with-dbmliborder=gdbm" # NOTE: no dependents so can directly use GPLv3+ `gdbm` to avoid BDB
     end
 
     # Allow python modules to use ctypes.find_library to find homebrew's stuff
@@ -434,11 +434,13 @@ class PythonFreethreading < Formula
     assert_match "ModuleNotFoundError: No module named '_tkinter'",
                  shell_output("#{python3} -Sc 'import tkinter' 2>&1", 1)
 
-    # gdbm is provided in a separate formula
-    assert_match "ModuleNotFoundError: No module named '_gdbm'",
-                 shell_output("#{python3} -Sc 'import _gdbm' 2>&1", 1)
-    assert_match "ModuleNotFoundError: No module named '_gdbm'",
-                 shell_output("#{python3} -Sc 'import dbm.gnu' 2>&1", 1)
+    # gdbm is not provided on macOS
+    if OS.mac?
+      assert_match "ModuleNotFoundError: No module named '_gdbm'",
+                   shell_output("#{python3} -Sc 'import _gdbm' 2>&1", 1)
+      assert_match "ModuleNotFoundError: No module named '_gdbm'",
+                   shell_output("#{python3} -Sc 'import dbm.gnu' 2>&1", 1)
+    end
 
     # Verify that the selected DBM interface works
     (testpath/"dbm_test.py").write <<~PYTHON
