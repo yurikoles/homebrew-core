@@ -31,13 +31,9 @@ class Libical < Formula
     depends_on "gettext"
   end
 
-  on_linux do
-    depends_on "berkeley-db@5"
-  end
-
   def install
     args = %W[
-      -DBDB_LIBRARY=BDB_LIBRARY-NOTFOUND
+      -DCMAKE_DISABLE_FIND_PACKAGE_BerkeleyDB=ON
       -DENABLE_GTK_DOC=OFF
       -DSHARED_ONLY=ON
       -DCMAKE_INSTALL_RPATH=#{rpath}
