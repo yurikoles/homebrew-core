@@ -37,12 +37,12 @@ class Exim < Formula
     sha256 x86_64_linux:  "bd001246d091daf1f2016aa7168dda7afb9e626496b8286c6b6cb422d9fb9094"
   end
 
-  depends_on "berkeley-db@5"
   depends_on "openssl@3"
   depends_on "pcre2"
 
   uses_from_macos "libxcrypt"
   uses_from_macos "perl"
+  uses_from_macos "sqlite"
 
   resource "File::Next" do
     url "https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/File-Next-1.18.tar.gz"
@@ -91,17 +91,20 @@ class Exim < Formula
       # For non-/usr/local HOMEBREW_PREFIX
       s << "LOOKUP_INCLUDE=-I#{HOMEBREW_PREFIX}/include\n"
       s << "LOOKUP_LIBS=-L#{HOMEBREW_PREFIX}/lib\n"
-    end
 
-    bdb5 = Formula["berkeley-db@5"]
+      # Use sqlite rather than unmaintained Berkeley DB. This is the same choice
+      # made by Debian while Arch Linux uses `gdbm` and Alpine uses `tdb`.
+      s << "USE_SQLITE=yes\n"
+      s << "DBMLIB=-lsqlite3\n"
+
+      # Can enable sqlite feature as we already pull in sqlite dependency above
+      s << "LOOKUP_SQLITE=yes\n"
+    end
 
     cp "OS/unsupported/Makefile-Darwin", "OS/Makefile-Darwin"
     cp "OS/unsupported/os.h-Darwin", "OS/os.h-Darwin"
     inreplace "OS/Makefile-Darwin" do |s|
       s.remove_make_var! %w[CC CFLAGS]
-      # Add include and lib paths for BDB 5
-      s.gsub! "# Exim: OS-specific make file for Darwin (Mac OS X).", "INCLUDE=-I#{bdb5.include}"
-      s.gsub! "DBMLIB =", "DBMLIB=#{bdb5.lib}/libdb-5.dylib"
     end
 
     # The compile script ignores CPPFLAGS
