@@ -38,10 +38,6 @@ class Jnettop < Formula
     depends_on "gettext"
   end
 
-  on_linux do
-    depends_on "berkeley-db@5"
-  end
-
   def install
     # Fix compile with newer Clang
     ENV.append_to_cflags "-Wno-implicit-function-declaration" if DevelopmentTools.clang_build_version >= 1200
@@ -52,7 +48,7 @@ class Jnettop < Formula
                                "$(jnettop_OBJECTS) $(AM_LDFLAGS) $(LDFLAGS) $(jnettop_LDFLAGS)"
     end
 
-    system "./configure", "--man=#{man}", *std_configure_args
+    system "./configure", "--man=#{man}", "--without-db4", *std_configure_args
     system "make", "install"
   end
 
