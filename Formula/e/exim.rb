@@ -29,12 +29,13 @@ class Exim < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "f30b5fb4ddfe468ff0fce759bf838f4a76aec6fd314e3ca9786888b58f536641"
-    sha256 arm64_sequoia: "4d32185f2ae6fbb94dee3225296bd5299dd104abe2224fa702cfded059625cb6"
-    sha256 arm64_sonoma:  "927bcf3c9e21ab0fcde29d977b9ddec1d705c2baec59b1c8d786f8ec9281ac00"
-    sha256 sonoma:        "65e07005ecf7768db165df514066c69fa528bb1cfdd337b0aa66c5013ee946e1"
-    sha256 arm64_linux:   "153c3b6bd5c6a987b040b2146627c7cbde3ed124d14c9c070ed0e973ec081b6a"
-    sha256 x86_64_linux:  "bd001246d091daf1f2016aa7168dda7afb9e626496b8286c6b6cb422d9fb9094"
+    rebuild 1
+    sha256 arm64_tahoe:   "3111d1c3eebf8b1bc802acbd9f9f5dc8902d1adfb08a311038f1edb946470b2a"
+    sha256 arm64_sequoia: "4fb1a2b2945e9cb93c8cf245f21a76e2bb15ad983913c2a77b5e79d5f76a3f37"
+    sha256 arm64_sonoma:  "b7c314ea685ef7c7d98cf68b5e2d5850be53c76f5b5d3e2ac451e5ee17ec7309"
+    sha256 sonoma:        "a721043b1e853d2678ff9adbcb82b4c0972eb4e494b0d715ea5bc62a4c52329c"
+    sha256 arm64_linux:   "ae5250b2f200a5e3bd37883ac63fd013996853cb1e74f77341171125761937c3"
+    sha256 x86_64_linux:  "5fa59f2ba32e7cf1ecd5e2ffe69d907f63b57a3491d7bc573ff9104448add8ec"
   end
 
   depends_on "openssl@3"
