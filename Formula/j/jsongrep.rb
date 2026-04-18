@@ -1,8 +1,8 @@
 class Jsongrep < Formula
   desc "Query tool for JSON, YAML, TOML, and other structured formats"
   homepage "https://github.com/micahkepe/jsongrep"
-  url "https://github.com/micahkepe/jsongrep/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "f728f3a5ed876053a85ff095f7d03073d5a43ce9ece3134b63539bdaa711aff7"
+  url "https://github.com/micahkepe/jsongrep/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "9ed0a0f7ca44652e7851ba7223bb69af56498311b1d5b2064f7bf532677c8a33"
   license "MIT"
   head "https://github.com/micahkepe/jsongrep.git", branch: "main"
 
