@@ -5,6 +5,15 @@ class CcConnect < Formula
   sha256 "0ae471e625966cc80b17b062c3013927861be4d4527d8d7d90bdbf5892d1bf51"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "35ae172ddc86df539c5de461497d589ff414768422c31c083a3f9d334513b5de"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "35ae172ddc86df539c5de461497d589ff414768422c31c083a3f9d334513b5de"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "35ae172ddc86df539c5de461497d589ff414768422c31c083a3f9d334513b5de"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f9a43ab58390b3363a38e3740ae4d972fb57911c72d8b5fb32a2d9d49f4c5b29"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "b4b05e1487613decdde3547cedee6eeb9f9946c6abb52c28b298694584e8fc9b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8aa953bf23a83cd8b1f936977349eb30461af89efdaaa3830263ca9691a540bb"
+  end
+
   depends_on "go" => :build
 
   def install
