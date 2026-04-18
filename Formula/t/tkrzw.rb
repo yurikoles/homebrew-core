@@ -20,19 +20,30 @@ class Tkrzw < Formula
     sha256 x86_64_linux:  "a0bbd8fd655b6360e7cf7fab8fc05b19f58c9eb4aff8a91ac0d075b1afaeec12"
   end
 
+  depends_on "lz4"
+  depends_on "xz"
+  depends_on "zstd"
+
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
   def install
-    if OS.linux?
-      ENV.append_to_cflags "-I#{Formula["zlib-ng-compat"].opt_include}"
-      ENV.append "LDFLAGS", "-L#{Formula["zlib-ng-compat"].opt_lib}"
-    end
     # Don't add -lstdc++ to tkrzw_build_util and tkrzw.pc
     ENV["ac_cv_lib_stdcpp_main"] = "no" if ENV.compiler == :clang
 
-    system "./configure", "--enable-zlib", *std_configure_args
+    # zstd support is needed by dependents. Other features are for indirect dependencies.
+    # Also force shim path for CC/CXX as configure seems to use a different PATH
+    args = %W[
+      --enable-lz4
+      --enable-lzma
+      --enable-zlib
+      --enable-zstd
+      CC=#{which(ENV.cc)}
+      CXX=#{which(ENV.cxx)}
+    ]
+
+    system "./configure", *args, *std_configure_args
     system "make"
     system "make", "install"
   end
@@ -52,7 +63,7 @@ class Tkrzw < Formula
 
     cflags = shell_output("#{bin}/tkrzw_build_util config -i").chomp.split
     ldflags = shell_output("#{bin}/tkrzw_build_util config -l").chomp.split
-    ldflags.unshift "-L#{Formula["zlib-ng-compat"].opt_lib}" if OS.linux?
+    ldflags.unshift "-L#{HOMEBREW_PREFIX}/lib"
     system ENV.cxx, "-std=c++17", "test.cpp", "-o", "test", *cflags, *ldflags
     assert_equal "world\n", shell_output("./test")
   end
