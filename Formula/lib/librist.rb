@@ -1,10 +1,9 @@
 class Librist < Formula
   desc "Reliable Internet Stream Transport (RIST)"
   homepage "https://code.videolan.org/rist/"
-  url "https://code.videolan.org/rist/librist/-/archive/v0.2.11/librist-v0.2.11.tar.gz"
-  sha256 "84e413fa9a1bc4e2607ecc0e51add363e1bc5ad42f7cc5baec7b253e8f685ad3"
+  url "https://code.videolan.org/rist/librist/-/archive/v0.2.12/librist-v0.2.12.tar.gz"
+  sha256 "8178da5ac70eabfee2825f3a0bd0b14c4522e72b6cb064c384d4ae4c46907598"
   license "BSD-2-Clause"
-  revision 1
   compatibility_version 1
   head "https://code.videolan.org/rist/librist.git", branch: "master"
 
@@ -46,18 +45,20 @@ end
 
 __END__
 diff --git a/meson.build b/meson.build
-index 05d00b3..254d0ab 100755
+index 7143b8a..1047c47 100755
 --- a/meson.build
 +++ b/meson.build
-@@ -39,11 +39,6 @@ deps = []
- platform_files = []
- inc = []
- inc += include_directories('.', 'src', 'include/librist', 'include', 'contrib')
--if (host_machine.system() == 'darwin')
+@@ -44,13 +44,6 @@ inc += include_directories('.', 'src', 'include/librist', 'include', 'contrib')
+ builtin_cjson = get_option('builtin_cjson')
+ builtin_mbedtls = get_option('builtin_mbedtls')
+ 
+-if (host_machine.system() == 'darwin'
+-    and find_program('brew', required : false).found()
+-    and (not builtin_cjson or not builtin_mbedtls))
 -	r = run_command('brew', '--prefix', check: true)
 -	brewoutput = r.stdout().strip()
 -	inc += include_directories(brewoutput + '/include')
 -endif
-
- #builtin_lz4 = get_option('builtin_lz4')
- builtin_cjson = get_option('builtin_cjson')
+ use_mbedtls = get_option('use_mbedtls')
+ use_nettle = get_option('use_nettle')
+ use_gnutls = get_option('use_gnutls')
