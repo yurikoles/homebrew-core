@@ -1,18 +1,18 @@
 class Mdfried < Formula
   desc "Terminal markdown viewer"
   homepage "https://github.com/benjajaja/mdfried"
-  url "https://github.com/benjajaja/mdfried/archive/refs/tags/v0.19.3.tar.gz"
-  sha256 "6eb47dfcea41bbdd1d234e933aff81a84c74a3ddf6be371ce6a6c801e074941a"
+  url "https://github.com/benjajaja/mdfried/archive/refs/tags/v0.19.4.tar.gz"
+  sha256 "615707f302d8ab1fe9edca63117ec3d98ff8b0f2de86aa0341edc50a51e655a6"
   license "GPL-3.0-or-later"
   head "https://github.com/benjajaja/mdfried.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "7ba4c964084b86c528d592db469ecd7336384ee3e70d710ff92d6307e1f79449"
-    sha256 cellar: :any,                 arm64_sequoia: "32e722b3558aea51892cbe6bcfc67ed3b702143939dc0a411171f0c096b4729f"
-    sha256 cellar: :any,                 arm64_sonoma:  "e38bb62047ba1ca19b4ca76ccd92db08e8ccc746727aa3a7c8eeb7450f7edd6e"
-    sha256 cellar: :any,                 sonoma:        "3a390b2b27cd25022dc505da185ec9f2f8ad4d9dad98afc3349c5784b179fcf1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ef6bce83aaa535f24c2d7341bb6688526a244c4220e9fc0ac0a8fe864c4b5a5f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c5e36a07e511e8a9b635a46e9c7aeeacc781d03ac8684523deb4f5ac5cee141d"
+    sha256 cellar: :any,                 arm64_tahoe:   "39529170b6291ea686cea77c9353acdba96f6b0b5c4e2972c7cb0f8c1fb94031"
+    sha256 cellar: :any,                 arm64_sequoia: "f2c46c33b864eb62e2853b79e7333e1972f6ed0c6fe7b63387122fc0b07827c4"
+    sha256 cellar: :any,                 arm64_sonoma:  "24f02bfa5d21f82415f044b913b30769d676b7843e0ec0bedbb77128bfdf1106"
+    sha256 cellar: :any,                 sonoma:        "d82f153a4519e79eeba0ff7b8d86f23c3affcffcb86db31136bb7f844ec6c548"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "da688f13fa977994dfd29482dc736ee1179126dacedbb6de1dc5c779eb5f14b5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cff116e9f3c8ede647699fc698d170077ca26bcba59e709e398affe964b00d00"
   end
 
   depends_on "pkgconf" => :build
