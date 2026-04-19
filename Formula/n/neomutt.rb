@@ -30,7 +30,6 @@ class Neomutt < Formula
   depends_on "openssl@3"
   depends_on "pcre2"
   depends_on "sqlite"
-  depends_on "tokyo-cabinet"
 
   uses_from_macos "libxslt" => :build # for xsltproc
   uses_from_macos "cyrus-sasl"
@@ -62,7 +61,6 @@ class Neomutt < Formula
       --pcre2
       --sasl
       --sqlite
-      --tokyocabinet
       --zlib
       --with-idn2=#{Formula["libidn2"].opt_prefix}
       --with-lua=#{Formula["lua"].opt_prefix}
