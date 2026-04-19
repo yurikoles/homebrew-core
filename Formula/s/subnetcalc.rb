@@ -1,8 +1,8 @@
 class Subnetcalc < Formula
   desc "IPv4/IPv6 subnet calculator"
   homepage "https://www.nntb.no/~dreibh/subnetcalc/index.html"
-  url "https://github.com/dreibh/subnetcalc/archive/refs/tags/subnetcalc-2.6.5.tar.gz"
-  sha256 "d3ca16b75b4eced6e4196b9791f9514941eaa9bcdaa2a899fbcc0b845103f097"
+  url "https://github.com/dreibh/subnetcalc/archive/refs/tags/subnetcalc-2.6.6.tar.gz"
+  sha256 "5f33894fac3420d0d906ba7d4e3f7bcfee831707deec08a43d6f2397e30ac486"
   license "GPL-3.0-or-later"
   head "https://github.com/dreibh/subnetcalc.git", branch: "master"
 
