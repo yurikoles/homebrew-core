@@ -5,6 +5,7 @@ class Ollama < Formula
       tag:      "v0.21.0",
       revision: "57653b8e42d69ec35f68a59857bad4d0f07994a3"
   license "MIT"
+  revision 1
   head "https://github.com/ollama/ollama.git", branch: "main"
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
@@ -69,7 +70,17 @@ class Ollama < Formula
     end
 
     system "go", "generate", *mlx_args, "./x/imagegen/mlx"
-    system "go", "build", *mlx_args, *std_go_args(ldflags:)
+    # Build into libexec so the mlx runner's required `<exe_dir>/lib/ollama/`
+    # sibling can be populated without tripping the non-executables-in-bin audit.
+    system "go", "build", *mlx_args, *std_go_args(ldflags:, output: libexec/"ollama")
+    bin.install_symlink libexec/"ollama"
+
+    # The mlx runner dlopens MLX libraries from `<exe_dir>/lib/ollama/mlx_*/`.
+    # Using `opt` keeps the link stable across mlx-c version bumps.
+    if OS.mac? && Hardware::CPU.arm?
+      (libexec/"lib/ollama/mlx_metal_v3").mkpath
+      ln_sf Formula["mlx-c"].opt_lib/"libmlxc.dylib", libexec/"lib/ollama/mlx_metal_v3/libmlxc.dylib"
+    end
   end
 
   service do
@@ -93,6 +104,13 @@ class Ollama < Formula
     ensure
       Process.kill "TERM", pid
       Process.wait pid
+    end
+
+    # Test MLX (Apple silicon only)
+    if OS.mac? && Hardware::CPU.arm?
+      output = shell_output("DYLD_PRINT_LIBRARIES=1 #{bin}/ollama --help 2>&1")
+      assert_match "libmlxc.dylib", output
+      assert_match "libmlx.dylib", output
     end
   end
 end
