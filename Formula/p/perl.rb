@@ -21,7 +21,6 @@ class Perl < Formula
     sha256 x86_64_linux:  "92d8ab5d61decdb5afde5e0abfeecb31a5adac7d8638e95d56daaf7248f0b6dd"
   end
 
-  depends_on "berkeley-db@5" # keep berkeley-db < 6 to avoid AGPL-3.0 restrictions
   depends_on "gdbm"
 
   uses_from_macos "libxcrypt"
@@ -50,13 +49,18 @@ class Perl < Formula
     ]
     args << "-Dusedevel" if build.head?
 
+    # On macOS, we can use Apple's system library to support DB_File module.
+    # On Linux, we explicitly exclude bundled DB_File to avoid opportunistic
+    # linkage to Berkeley DB. Dependents and users can install it from CPAN.
+    args << "-Ui_db" unless OS.mac?
+
     system "./Configure", *args
     system "make"
     system "make", "install"
   end
 
   def caveats
-    <<~EOS
+    s = <<~EOS
       By default non-brewed cpan modules are installed to the Cellar. If you wish
       for your modules to persist across updates we recommend using `local::lib`.
 
@@ -65,6 +69,13 @@ class Perl < Formula
       And add the following to your shell profile e.g. ~/.profile or ~/.zshrc
         eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
     EOS
+    on_linux do
+      s += <<~EOS
+
+        Bundled DB_File module was not installed. If needed, you can install it from CPAN.
+      EOS
+    end
+    s
   end
 
   test do
