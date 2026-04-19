@@ -5,8 +5,8 @@ class Rggen < Formula
 
   stable do
     url "https://github.com/rggen/rggen.git",
-      tag:      "v0.36.0",
-      revision: "cf27c0abf99ab2fd421c1973885265af3e37046e"
+      tag:      "v0.36.1",
+      revision: "927e6c18ffcf6e624221f97df5680f2e8a2d63bc"
 
     resource "rggen-verilog" do
       url "https://github.com/rggen/rggen-verilog.git",
@@ -16,8 +16,8 @@ class Rggen < Formula
 
     resource "rggen-veryl" do
       url "https://github.com/rggen/rggen-veryl.git",
-        tag:      "v0.6.0",
-        revision: "d29d7ae019b9c6832780d519af38b99222956c8d"
+        tag:      "v0.7.0",
+        revision: "b4e65cbd81d35dda94dc58b4c67262ae9fded49a"
     end
 
     resource "rggen-vhdl" do
