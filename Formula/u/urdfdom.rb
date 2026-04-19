@@ -1,8 +1,8 @@
 class Urdfdom < Formula
   desc "Unified Robot Description Format (URDF) parser"
   homepage "https://wiki.ros.org/urdf/"
-  url "https://github.com/ros/urdfdom/archive/refs/tags/5.1.1.tar.gz"
-  sha256 "e71c0249f61b184b5e157b7b406fbb354371e9bb79cd9c43431bed5ede470b46"
+  url "https://github.com/ros/urdfdom/archive/refs/tags/5.1.2.tar.gz"
+  sha256 "f51e2f92a0830c41f98d5196ba5b01d2c7b900498a8c5ba767b7eb8a76852cdd"
   license "BSD-3-Clause"
   compatibility_version 1
 
