@@ -43,9 +43,9 @@ class Mutt < Formula
   depends_on "gpgme"
   depends_on "libgpg-error"
   depends_on "libidn2"
+  depends_on "lmdb"
   depends_on "ncurses"
   depends_on "openssl@3"
-  depends_on "tokyo-cabinet"
 
   uses_from_macos "bzip2"
   uses_from_macos "cyrus-sasl"
@@ -66,6 +66,10 @@ class Mutt < Formula
     user_in_mail_group = Etc.getgrnam("mail").mem.include?(ENV["USER"])
     effective_group = Etc.getgrgid(Process.egid).name
 
+    # NOTE: For hcache backend choice:
+    # * Kyoto Cabinet, Tokyo Cabinet, QDBM and Berkeley DB may be unmaintained or low maintenance
+    # * Remaining options are GDBM and LMDB. NeoMutt (fork) now recommends LMDB. Gentoo also
+    #   recommends LMDB as fastest for Mutt, https://wiki.gentoo.org/wiki/Mutt#Header_cache_backends
     args = %W[
       --disable-warnings
       --enable-gpgme
@@ -76,9 +80,9 @@ class Mutt < Formula
       --enable-smtp
       --with-gss
       --with-idn2
+      --with-lmdb
       --with-sasl
       --with-ssl=#{Formula["openssl@3"].opt_prefix}
-      --with-tokyocabinet
     ]
 
     configure = build.head? ? "./prepare" : "./configure"
