@@ -1,8 +1,8 @@
 class Vipsdisp < Formula
   desc "Viewer for large images"
   homepage "https://github.com/jcupitt/vipsdisp"
-  url "https://github.com/jcupitt/vipsdisp/releases/download/v4.1.3/vipsdisp-4.1.3.tar.xz"
-  sha256 "4e3dbd72f8f56e0216045ef36b5097d00b3d14f2608cf856f0ecbab3d4c44ba4"
+  url "https://github.com/jcupitt/vipsdisp/releases/download/v4.1.4/vipsdisp-4.1.4.tar.xz"
+  sha256 "c9d29b371782b550512e36abbe9191c105837ea34af5514958e55284a86a09f3"
   license "MIT"
 
   livecheck do
