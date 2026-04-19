@@ -4,7 +4,7 @@ class Bioperl < Formula
   url "https://cpan.metacpan.org/authors/id/C/CJ/CJFIELDS/BioPerl-1.7.8.tar.gz"
   sha256 "c490a3be7715ea6e4305efd9710e5edab82dabc55fd786b6505b550a30d71738"
   license any_of: ["Artistic-1.0-Perl", "GPL-1.0-or-later"]
-  revision 5
+  revision 6
   head "https://github.com/bioperl/bioperl-live.git", branch: "master"
 
   # We specifically match versions with three numeric parts because upstream
@@ -98,6 +98,8 @@ class Bioperl < Formula
     # support for `brew update-perl-resources` or upstream reduces dependencies:
     # Issue ref: https://github.com/bioperl/bioperl-live/issues/314
     depends_on "cpanminus" => :build
+
+    depends_on "berkeley-db@5"
   end
 
   def install
