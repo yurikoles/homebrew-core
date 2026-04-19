@@ -22,21 +22,30 @@ class Spotifyd < Formula
 
   depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "dbus"
-  depends_on "portaudio"
+
+  on_macos do
+    depends_on "portaudio"
+  end
 
   on_linux do
+    depends_on "alsa-lib"
+    depends_on "dbus"
     depends_on "openssl@3"
+    depends_on "pulseaudio"
   end
 
   def install
-    ENV["COREAUDIO_SDK_PATH"] = MacOS.sdk_path_if_needed if OS.mac?
+    if OS.mac?
+      ENV["COREAUDIO_SDK_PATH"] = MacOS.sdk_path_if_needed
+      args = %w[--no-default-features]
+      features = %w[portaudio_backend]
+    end
 
-    system "cargo", "install", "--no-default-features", *std_cargo_args(features: "portaudio_backend")
+    system "cargo", "install", *args, *std_cargo_args(features:)
   end
 
   service do
-    run [opt_bin/"spotifyd", "--no-daemon", "--backend", "portaudio"]
+    run [opt_bin/"spotifyd", "--no-daemon", "--backend", OS.mac? ? "portaudio" : "pulseaudio"]
     keep_alive true
   end
 
