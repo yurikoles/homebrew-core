@@ -1,8 +1,8 @@
 class Mapserver < Formula
   desc "Publish spatial data and interactive mapping apps to the web"
   homepage "https://mapserver.org/"
-  url "https://download.osgeo.org/mapserver/mapserver-8.6.1.tar.gz"
-  sha256 "ff4c33271e91b46ba4d2b24990dc480bc3839e203e534102b2094a6166446c4b"
+  url "https://download.osgeo.org/mapserver/mapserver-8.6.2.tar.gz"
+  sha256 "e10d71c3ced22b8b0858a98434d55a532f4359d193a32e4b353411814976ca22"
   license "MIT"
 
   livecheck do
