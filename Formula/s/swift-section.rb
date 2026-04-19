@@ -1,8 +1,8 @@
 class SwiftSection < Formula
   desc "CLI tool for parsing mach-o files to obtain Swift information"
   homepage "https://github.com/MxIris-Reverse-Engineering/MachOSwiftSection"
-  url "https://github.com/MxIris-Reverse-Engineering/MachOSwiftSection/archive/refs/tags/0.8.2.tar.gz"
-  sha256 "56bcbdff3eae986d5d7596289dc5a5583b35baae878b9fbfe382f922857ecf11"
+  url "https://github.com/MxIris-Reverse-Engineering/MachOSwiftSection/archive/refs/tags/0.9.0.tar.gz"
+  sha256 "ccd9659498d24b50566ab8553b8351050d53452c046cdb8505ad50ad5401e87a"
   license "MIT"
   head "https://github.com/MxIris-Reverse-Engineering/MachOSwiftSection.git", branch: "main"
 
@@ -12,8 +12,8 @@ class SwiftSection < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f1fddd48911ac1e7843eea89f934f4068a8366b183d456cbac62242a9569b796"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9cd607f730ea74acdc0c29435ad7ca3d331bedbbe6f961636c86f35a470c7bee"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "882f29a3016a0e8d7e2eb662b9db05f50b871ec578d4b5b2f9b94d99901d7f92"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f6818b7a2e9567b65c8a1722012b168daf833ee0906b5a256b01c245d58c946e"
   end
 
   # The Package.swift file requires Swift 5.10 or later.
