@@ -1,8 +1,8 @@
 class GuileFibers < Formula
   desc "Concurrent ML-like concurrency for Guile"
   homepage "https://codeberg.org/guile/fibers"
-  url "https://codeberg.org/guile/fibers/archive/v1.4.2.tar.gz"
-  sha256 "bf61f58fdea48b4b28a9683d4493fcbced2ce2d7d98a7c1b1234353161de1ece"
+  url "https://codeberg.org/guile/fibers/archive/v1.4.3.tar.gz"
+  sha256 "abc8b97c9bd595549b908189010e987df9d3685e09208b712f93b8593c97d8a1"
   license "LGPL-3.0-or-later"
 
   bottle do
