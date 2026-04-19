@@ -13,12 +13,12 @@ class Librist < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "a3ec6f80dbc0c4a2f462a6e1485383684404cbc2cf0bef1e8893a847cf40cbc0"
-    sha256 cellar: :any,                 arm64_sequoia: "bad9e900548801c915eb830471b6c77e87a9dc98b813625c81de70fbbed0432f"
-    sha256 cellar: :any,                 arm64_sonoma:  "a7b306a05984387478ebd318c5eadd09303bec36d67cc9830d49d85a1b2e9938"
-    sha256 cellar: :any,                 sonoma:        "de3c3d22ff646e823a60df6e77fee66031de804e73dc7580fc6ba89972acdf27"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "18175c43e2082dfff0edb5f4a0d9c3558d792995bf9985fb0bf4aa059cd0cc9c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f293ec4fefab0d33b17e43019ad4593e764506d5fdb336d1884d829ba9fe531"
+    sha256 cellar: :any,                 arm64_tahoe:   "ee2045ed1285bb38af920175f0ae53765e8fece0b96d3f0f68d8c3bb352dbcbb"
+    sha256 cellar: :any,                 arm64_sequoia: "d743183d025ea6e02517e5cdda8092b04b5f1853c3429fc1ae270c1611be0cd5"
+    sha256 cellar: :any,                 arm64_sonoma:  "983aaf846f3b095f91709c4d5e6d51328b80564a67e04d1a733f61c4644e0105"
+    sha256 cellar: :any,                 sonoma:        "2512e6108f6fb9b0bc48dcd575238e024efa459c531b97a452a8881ef3f5a743"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "61cdf1f1ee7cd9e16cf7e9c70cff98f39a9574042e1e82ff82c673057ee8407c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6aff18d029b1e16fadbcdf93fe4ae523b4b19127c97b04ba279438c141460c82"
   end
 
   depends_on "meson" => :build
