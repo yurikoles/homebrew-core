@@ -15,12 +15,12 @@ class Urdfdom < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "52634920d1ba7da30c76be54b5df0bec3baa8affddbfb3e6911100d2c0637f48"
-    sha256 cellar: :any,                 arm64_sequoia: "6954f78ab041d7b8eaabef93804410aaffc62378746c274431d35c119b5b2b85"
-    sha256 cellar: :any,                 arm64_sonoma:  "5a944169b43e063bee25d0c80f3dd687c39b80a874c3987f6763d2d6635e17f0"
-    sha256 cellar: :any,                 sonoma:        "21f407749aff91dbde5a62202db619f751e71b6aef0637c81f552087f384e10a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ff8e8b2ffe4fd723783535b2cce9c67cbed5433a72012c0ace9783c3df08820c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "83041c578255ccff4c5b211aaabe49a9166265d2c878170665005f3401cfa4d7"
+    sha256 cellar: :any,                 arm64_tahoe:   "ffb54921c4319edb52bad3ba978c39fdabf3816c3fab62d16287961c76149a58"
+    sha256 cellar: :any,                 arm64_sequoia: "97f4e64eeb63e8d011bbe44216ec7b512ea76f74e0fe7ff22e459fc6190b9608"
+    sha256 cellar: :any,                 arm64_sonoma:  "4a8325296f4f8af687f8e2d65012bd562406fc38f173502bdedeb6430677ec22"
+    sha256 cellar: :any,                 sonoma:        "739465401662eeba5117037bc64fccbe89f3c5bc0e49965ada5b6ce03d0e6b3b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d4ae711fbd6d50a21b673d1652b1eac7db5dba75bc004214290e4a63b2d7e635"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3718e704b4e66d2e99d20e961405d4f99d0e6483088df86fd4183fec31208d17"
   end
 
   depends_on "cmake" => :build
