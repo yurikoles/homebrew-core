@@ -1,8 +1,8 @@
 class Cdxgen < Formula
   desc "Creates CycloneDX Software Bill-of-Materials (SBOM) for projects"
   homepage "https://github.com/CycloneDX/cdxgen"
-  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-12.1.5.tgz"
-  sha256 "55b338114d2e844713a5ffb52b0443fcc1a82795faff752e6061f35559c0a576"
+  url "https://registry.npmjs.org/@cyclonedx/cdxgen/-/cdxgen-12.2.0.tgz"
+  sha256 "f282f23f9885076e814a5d7c6ec82661dc06c0757d3583cb02f11a8b5fdcd3ea"
   license "Apache-2.0"
 
   bottle do
@@ -18,7 +18,6 @@ class Cdxgen < Formula
   depends_on "node"
   depends_on "ruby"
   depends_on "sourcekitten"
-  depends_on "sqlite" # needs sqlite3_enable_load_extension
   depends_on "trivy"
 
   resource "dosai" do
@@ -35,17 +34,15 @@ class Cdxgen < Formula
       TRIVY_CMD:        "${TRIVY_CMD:-#{Formula["trivy"].opt_bin}/trivy}",
     }
 
-    system "npm", "install", "--sqlite=#{Formula["sqlite"].opt_prefix}", *std_npm_args
+    system "npm", "install", *std_npm_args
     bin.install Dir[libexec/"bin/*"]
     bin.env_script_all_files libexec/"bin", cdxgen_env
 
     # Remove/replace pre-built binaries
     os = OS.kernel_name.downcase
     arch = Hardware::CPU.intel? ? "amd64" : Hardware::CPU.arch.to_s
-    node_arch = Hardware::CPU.intel? ? "x64" : "arm64"
     node_modules = libexec/"lib/node_modules/@cyclonedx/cdxgen/node_modules"
     cdxgen_plugins = node_modules/"@cdxgen/cdxgen-plugins-bin-#{os}-#{arch}/plugins"
-    sqlite3_prebuilds = node_modules/"@appthreat/sqlite3/prebuilds"
     paths_to_remove = %w[dosai sourcekitten trivy].map { |plugin| cdxgen_plugins/plugin }
     # Remove pre-built osquery plugins for macOS arm builds
     paths_to_remove << (cdxgen_plugins/"osquery") if OS.mac? && Hardware::CPU.arm?
@@ -68,10 +65,6 @@ class Cdxgen < Formula
       system "dotnet", "publish", "Dosai", *args
     end
 
-    sqlite3_prebuilds.each_child do |dir|
-      paths_to_remove << dir if dir.basename.to_s != "#{os}-#{node_arch}"
-    end
-    paths_to_remove << (sqlite3_prebuilds/"#{os}-#{node_arch}/@appthreat+sqlite3.musl.node") if OS.linux?
     rm_r(paths_to_remove)
 
     # Reinstall for native dependencies
