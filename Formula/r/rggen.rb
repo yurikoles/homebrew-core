@@ -28,12 +28,12 @@ class Rggen < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "33ddf9d1d2c3b59608d7a8e54b1ad23f80bc23a79afb65d2852a378d8fabc3f0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "33ddf9d1d2c3b59608d7a8e54b1ad23f80bc23a79afb65d2852a378d8fabc3f0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "33ddf9d1d2c3b59608d7a8e54b1ad23f80bc23a79afb65d2852a378d8fabc3f0"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d399b62b9439b97ee46cb99a82c774597d5adabc055d8e201742dfc3054bf1ae"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "afb995088f33883ce1d0263a1c28f7b7ecc725c017e05e1403b140ae8b5e26c2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ecd45a736c5e4828626655161e7476fa4d807b605bb474d3989a75be34f8c316"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "37f1ceb0085f6a7f03093d7cf54e998f4df5e1b25ec0dae6365c5020bbab57b1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "37f1ceb0085f6a7f03093d7cf54e998f4df5e1b25ec0dae6365c5020bbab57b1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "37f1ceb0085f6a7f03093d7cf54e998f4df5e1b25ec0dae6365c5020bbab57b1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "caa811466dcfc98feb7fdd7fce8b8baa0bf3f12d24bc9f7b4df7e44971ccedfa"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "35fdce56b3c59e689592a0a6b3c8803e211384d3c4b43cbb47a9c4fda4c6f02d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ff477fca88784c844ec9b3c25d36bb19c1044acd06ffb2af1e814e27650ea7fa"
   end
 
   head do
