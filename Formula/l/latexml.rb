@@ -4,7 +4,7 @@ class Latexml < Formula
   url "https://dlmf.nist.gov/LaTeXML/releases/LaTeXML-0.8.8.tar.gz"
   sha256 "7d2bbe2ce252baf86ba3f388cd0dec3aa4838f49d612b9ec7cc4ff88105badcc"
   license :public_domain
-  revision 3
+  revision 4
   head "https://github.com/brucemiller/LaTeXML.git", branch: "master"
 
   livecheck do
@@ -199,6 +199,15 @@ class Latexml < Formula
     resource "Clone" do
       url "https://cpan.metacpan.org/authors/id/G/GA/GARU/Clone-0.46.tar.gz"
       sha256 "aadeed5e4c8bd6bbdf68c0dd0066cb513e16ab9e5b4382dc4a0aafd55890697b"
+    end
+  end
+
+  on_linux do
+    depends_on "berkeley-db@5"
+
+    resource "DB_File" do
+      url "https://cpan.metacpan.org/authors/id/P/PM/PMQS/DB_File-1.860.tar.gz"
+      sha256 "cbe5e90b0e40e0d566f505789b73196e93c56709f660ca316af50662260749a0"
     end
   end
 
