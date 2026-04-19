@@ -1,8 +1,8 @@
 class Posh < Formula
   desc "Policy-compliant ordinary shell"
   homepage "https://salsa.debian.org/clint/posh"
-  url "https://salsa.debian.org/clint/posh/-/archive/debian/0.14.3/posh-debian-0.14.3.tar.bz2"
-  sha256 "6030fa51a03d0625794df0f52c74103d230390dbc0e22cdce946f5f5e6ff33ff"
+  url "https://salsa.debian.org/clint/posh/-/archive/debian/0.14.4/posh-debian-0.14.4.tar.bz2"
+  sha256 "3049d0720976e5920e46e0b0e21c139121d469ed46616caa82dd9e892cb8f195"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -23,6 +23,8 @@ class Posh < Formula
   depends_on "automake" => :build
 
   def install
+    # Upstream still uses K&R function definitions, which do not compile as C23.
+    ENV["ac_cv_prog_cc_c23"] = "no"
     system "autoreconf", "--force", "--install", "--verbose"
     system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
