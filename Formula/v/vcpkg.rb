@@ -1,9 +1,8 @@
 class Vcpkg < Formula
   desc "C++ Library Manager"
   homepage "https://github.com/microsoft/vcpkg"
-  url "https://github.com/microsoft/vcpkg-tool/archive/refs/tags/2025-12-16.tar.gz"
-  version "2025.12.16"
-  sha256 "4f427f25f79d06d01a55498289066ed4fa78410f711a4505801d421171ff123c"
+  url "https://github.com/microsoft/vcpkg-tool/archive/refs/tags/2026-04-08.tar.gz"
+  sha256 "90c592ec10643c54365cc98af2ed6791f66b191e87861fc5b3db993d6faa6ae2"
   license "MIT"
   head "https://github.com/microsoft/vcpkg-tool.git", branch: "main"
 
@@ -16,11 +15,9 @@ class Vcpkg < Formula
       match = json["tag_name"]&.match(regex)
       next if match.blank?
 
-      match[1].tr("-", ".")
+      match[1]
     end
   end
-
-  no_autobump! because: :incompatible_version_format
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "6ba16bb8576fa1b09db8952d3c50203568eb62a851dd363c94ed333923d1ae91"
@@ -36,11 +33,7 @@ class Vcpkg < Formula
   depends_on "fmt"
   depends_on "ninja" # This will install its own copy at runtime if one isn't found.
 
-  # upstream pr ref, https://github.com/microsoft/vcpkg-tool/pull/1826
-  patch do
-    url "https://github.com/microsoft/vcpkg-tool/commit/7e5f9b42018d19172e87236783bb0c713f176b7a.patch?full_index=1"
-    sha256 "2537ff975b66809c14790887090daacadcdd213123d6356a891667048c3b32fe"
-  end
+  uses_from_macos "curl"
 
   def install
     # Improve error message when user fails to set `VCPKG_ROOT`.
@@ -48,13 +41,21 @@ class Vcpkg < Formula
               "If you are trying to use a copy of vcpkg that you've built, y",
               "Y"
 
-    system "cmake", "-S", ".", "-B", "build",
-                    "-DVCPKG_DEVELOPMENT_WARNINGS=OFF",
-                    "-DVCPKG_BASE_VERSION=#{version.to_s.tr(".", "-")}",
-                    "-DVCPKG_VERSION=#{version}",
-                    "-DVCPKG_DEPENDENCY_EXTERNAL_FMT=ON",
-                    "-DVCPKG_DEPENDENCY_CMAKERC=ON",
-                    *std_cmake_args
+    # GCC 12 may vectorize SHA code into unsupported `eor3` instructions on
+    # Linux arm64 builders.
+    ENV.append "CXXFLAGS", "-fno-tree-vectorize" if OS.linux? && Hardware::CPU.arm?
+
+    # VCPKG_VERSION is used by upstream for setting the commit hash
+    args = %W[
+      -DVCPKG_DEVELOPMENT_WARNINGS=OFF
+      -DVCPKG_BASE_VERSION=#{version}
+      -DVCPKG_VERSION=#{tap.user}
+      -DVCPKG_LIBCURL_DLSYM=OFF
+      -DVCPKG_DEPENDENCY_EXTERNAL_FMT=ON
+      -DVCPKG_DEPENDENCY_CMAKERC=ON
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -69,6 +70,7 @@ class Vcpkg < Formula
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/vcpkg --version")
     output = shell_output("#{bin}/vcpkg search sqlite 2>&1", 1)
     # DO NOT CHANGE. If the test breaks then the `inreplace` needs fixing.
     # No, really, stop trying to change this.
