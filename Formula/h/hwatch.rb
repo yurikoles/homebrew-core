@@ -1,8 +1,8 @@
 class Hwatch < Formula
   desc "Modern alternative to the watch command"
   homepage "https://github.com/blacknon/hwatch"
-  url "https://github.com/blacknon/hwatch/archive/refs/tags/0.3.20.tar.gz"
-  sha256 "df5edf3e8cd8ec3ce0cf59ee48590d2f0ccad1ed6fb68ce16caf31a21983160a"
+  url "https://github.com/blacknon/hwatch/archive/refs/tags/0.4.0.tar.gz"
+  sha256 "3f4615233a0330a3a10e35f053f35774826ca13bc25a50c09bb60fe8684c9781"
   license "MIT"
   head "https://github.com/blacknon/hwatch.git", branch: "master"
 
