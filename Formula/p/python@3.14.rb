@@ -37,7 +37,6 @@ class PythonAT314 < Formula
   uses_from_macos "unzip"
 
   on_linux do
-    depends_on "berkeley-db@5"
     depends_on "zlib-ng-compat"
   end
 
@@ -163,7 +162,7 @@ class PythonAT314 < Formula
       args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
     else
       args << "--enable-shared"
-      args << "--with-dbmliborder=bdb"
+      args << "--with-dbmliborder="
     end
 
     # Allow python modules to use ctypes.find_library to find homebrew's stuff
@@ -492,7 +491,8 @@ class PythonAT314 < Formula
     assert_match "ModuleNotFoundError: No module named '_gdbm'",
                  shell_output("#{python3} -Sc 'import dbm.gnu' 2>&1", 1)
 
-    # Verify that the selected DBM interface works
+    # Verify that the selected DBM interface works on macOS.
+    # Linux requires installing python-gdbm formula
     (testpath/"dbm_test.py").write <<~PYTHON
       import dbm
 
@@ -503,7 +503,7 @@ class PythonAT314 < Formula
           assert b"foo \\xbd" in db
           assert db[b"foo \\xbd"] == b"bar \\xbd"
     PYTHON
-    system python3, "dbm_test.py"
+    system python3, "dbm_test.py" if OS.mac?
 
     system bin/"pip#{version.major_minor}", "list", "--format=columns"
 
