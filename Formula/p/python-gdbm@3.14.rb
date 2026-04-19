@@ -4,6 +4,7 @@ class PythonGdbmAT314 < Formula
   url "https://www.python.org/ftp/python/3.14.4/Python-3.14.4.tgz"
   sha256 "b4c059d5895f030e7df9663894ce3732bfa1b32cd3ab2883980266a45ce3cb3b"
   license "Python-2.0"
+  revision 1
 
   livecheck do
     formula "python@3.14"
@@ -51,6 +52,16 @@ class PythonGdbmAT314 < Formula
       library-dirs = ["#{Formula["gdbm"].opt_lib}"]
     TOML
 
+    (buildpath/"Modules/pyproject.toml").append_lines <<~TOML if OS.linux?
+      [[tool.setuptools.ext-modules]]
+      name = "_dbm"
+      sources = ["_dbmmodule.c"]
+      include-dirs = ["#{Formula["gdbm"].opt_include}", "#{python_include}/internal"]
+      libraries = ["gdbm_compat"]
+      library-dirs = ["#{Formula["gdbm"].opt_lib}"]
+      extra-compile-args = ["-DUSE_GDBM_COMPAT", "-DHAVE_GDBM_DASH_NDBM_H"]
+    TOML
+
     system python3, "-m", "pip", "install", *std_pip_args(prefix: false, build_isolation: true),
                                             "--target=#{libexec}", "./Modules"
     rm_r libexec.glob("*.dist-info")
@@ -67,5 +78,19 @@ class PythonGdbmAT314 < Formula
       with dbm.gnu.open("#{testdb}", "r") as db:
         assert db["testkey"] == b"testvalue"
     PYTHON
+
+    return unless OS.linux?
+
+    (testpath/"dbm_test.py").write <<~PYTHON
+      import dbm
+
+      with dbm.ndbm.open("test", "c") as db:
+        db[b"foo \\xbd"] = b"bar \\xbd"
+      with dbm.ndbm.open("test", "r") as db:
+        assert list(db.keys()) == [b"foo \\xbd"]
+        assert b"foo \\xbd" in db
+        assert db[b"foo \\xbd"] == b"bar \\xbd"
+    PYTHON
+    system python3, "dbm_test.py"
   end
 end
