@@ -10,7 +10,7 @@ class CppHttplib < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3" => :build
+  depends_on "openssl@4" => :build
 
   on_linux do
     depends_on "zlib-ng-compat" => :build
