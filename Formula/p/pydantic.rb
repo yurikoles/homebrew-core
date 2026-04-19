@@ -10,12 +10,12 @@ class Pydantic < Formula
   compatibility_version 1
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "4a9c9aebc9e8ebf370f5ef42a7ccb984c27a8b8741ce05c5f03942938f17cda5"
-    sha256 cellar: :any,                 arm64_sequoia: "595a34fc3e89152f3e82a9c355a69600ab54d813474ca2a673ef72caaf4ab63f"
-    sha256 cellar: :any,                 arm64_sonoma:  "547374c5d8cfb8414b7cf4a9e44e862c2e81d1f27eaa80d75da1941e485dfa8d"
-    sha256 cellar: :any,                 sonoma:        "a4860826e70f1cd9b5a2823e0c96f77045de9df1876f66c1c03368d524dcca62"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "75c17f04faf3f8cebd50d23d883c11db397459076a13f0c3db407740d3b2a3d6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b7facbfcd0b6727ddfbed17d998b667783aeeff7204bdd7bcec99f0ec0992751"
+    sha256 cellar: :any,                 arm64_tahoe:   "bfa768c64da122b367739b9a404c2acf1ddcb980277a4a6c7ddfc4e58177df59"
+    sha256 cellar: :any,                 arm64_sequoia: "68e215e5296415c2e924b3049b57d24ad5e0f661a7a95ef40e1053e6741b7111"
+    sha256 cellar: :any,                 arm64_sonoma:  "1885b7f395a73d94045063236a4a5285d5f15db41737b2a619cfce59d5704ea0"
+    sha256 cellar: :any,                 sonoma:        "d96f7771a5b904da38d64e24292cbc6ab59420b062ede2632c4ff5f71767ec63"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3db0112a04599e2081d52248c8cc07a13c5d81ec94ee673a4ac0464db4a0af2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "805fe8e1be985e75ccbb49254b9b9e3b92cf0573fd6633b36801f2fbdb9ca830"
   end
 
   depends_on "maturin" => :build
