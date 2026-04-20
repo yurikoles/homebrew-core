@@ -20,16 +20,18 @@ class FluidSynth < Formula
   depends_on "pkgconf" => [:build, :test]
   depends_on "glib"
   depends_on "libsndfile"
-  depends_on "portaudio"
   depends_on "readline"
 
   on_macos do
     depends_on "gettext"
+    depends_on "portaudio"
   end
 
   on_linux do
     depends_on "alsa-lib"
     depends_on "jack"
+    depends_on "pipewire"
+    depends_on "pulseaudio"
     depends_on "systemd"
   end
 
@@ -58,10 +60,10 @@ class FluidSynth < Formula
       -Denable-oboe=OFF
       -Denable-openmp=OFF
       -Denable-oss=OFF
-      -Denable-pipewire=OFF
-      -Denable-portaudio=ON
+      -Denable-pipewire=#{OS.linux?}
+      -Denable-portaudio=#{OS.mac?}
       -Denable-profiling=OFF
-      -Denable-pulseaudio=OFF
+      -Denable-pulseaudio=#{OS.linux?}
       -Denable-readline=ON
       -Denable-sdl2=OFF
       -Denable-systemd=#{OS.linux?}
