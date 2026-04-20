@@ -21,7 +21,7 @@ class Um < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "c71496a39f88373f2f233b19384bb1ef43e631b280ca0ba51ffcd2838012904f"
   end
 
-  uses_from_macos "ruby"
+  depends_on "ruby"
 
   resource "kramdown" do
     url "https://rubygems.org/gems/kramdown-1.17.0.gem"
@@ -32,7 +32,6 @@ class Um < Formula
     ENV["GEM_HOME"] = libexec
 
     resources.each do |r|
-      r.fetch
       system "gem", "install", r.cached_download, "--ignore-dependencies",
              "--no-document", "--install-dir", libexec
     end
@@ -43,7 +42,7 @@ class Um < Formula
     bin.install libexec/"bin/um"
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
 
-    bash_completion.install "um-completion.sh"
+    bash_completion.install "um-completion.sh" => "um"
     man1.install Dir["doc/man1/*"]
   end
 
