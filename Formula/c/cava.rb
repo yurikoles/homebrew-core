@@ -22,14 +22,18 @@ class Cava < Formula
 
   depends_on "fftw"
   depends_on "iniparser"
-  depends_on "portaudio"
 
   uses_from_macos "vim" => :build # needed for xxd
   uses_from_macos "ncurses"
 
+  on_macos do
+    depends_on "portaudio"
+  end
+
   on_linux do
     depends_on "alsa-lib"
-    depends_on "jack"
+    depends_on "pipewire"
+    depends_on "pulseaudio"
   end
 
   def install
