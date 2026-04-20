@@ -10,7 +10,7 @@ class Testssl < Formula
     sha256 cellar: :any_skip_relocation, all: "6f6a96cacd2d34621cb61a355004e5d9af4686bcb5e693df3b2f2863258a7561"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "bind" => :test # can also use `drill` or `ldns`
