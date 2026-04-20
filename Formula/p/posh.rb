@@ -1,8 +1,8 @@
 class Posh < Formula
   desc "Policy-compliant ordinary shell"
   homepage "https://salsa.debian.org/clint/posh"
-  url "https://salsa.debian.org/clint/posh/-/archive/debian/0.14.4/posh-debian-0.14.4.tar.bz2"
-  sha256 "3049d0720976e5920e46e0b0e21c139121d469ed46616caa82dd9e892cb8f195"
+  url "https://salsa.debian.org/clint/posh/-/archive/debian/0.14.5/posh-debian-0.14.5.tar.bz2"
+  sha256 "dcb22cf8761f1d7c805f9af08dd1e91a91079850fd0b56df88c2240fa3e5f8ac"
   license "GPL-3.0-or-later"
 
   livecheck do
