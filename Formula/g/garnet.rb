@@ -1,8 +1,8 @@
 class Garnet < Formula
   desc "High-performance cache-store"
   homepage "https://microsoft.github.io/garnet/"
-  url "https://github.com/microsoft/garnet/archive/refs/tags/v1.1.2.tar.gz"
-  sha256 "525506d347ef668258c94b5b873ae88f090cb0c70b89e9f77d684fa10af4b194"
+  url "https://github.com/microsoft/garnet/archive/refs/tags/v1.1.3.tar.gz"
+  sha256 "cca16e06df6e018576d75e24c9760a283317d8ac0c60a20928acf8821925b363"
   license "MIT"
 
   bottle do
@@ -39,6 +39,7 @@ class Garnet < Formula
     end
 
     dotnet = Formula["dotnet"]
+    # .NET 10 flags IL3000 here even though Garnet falls back to AppContext.BaseDirectory.
     args = %W[
       --configuration Release
       --framework net#{dotnet.version.major_minor}
@@ -46,6 +47,7 @@ class Garnet < Formula
       --no-self-contained
       --use-current-runtime
       -p:PublishSingleFile=true
+      -p:WarningsNotAsErrors=IL3000
       -p:EnableSourceLink=false
       -p:EnableSourceControlManagerQueries=false
     ]
