@@ -1,8 +1,8 @@
 class Deadfinder < Formula
   desc "Finds broken links"
-  homepage "https://rubygems.org/gems/deadfinder"
-  url "https://github.com/hahwul/deadfinder/archive/refs/tags/1.10.0.tar.gz"
-  sha256 "8309c720ffa76c6588c5bc8f8dc169b6633059a9d8d68cb75cc8488667d81c01"
+  homepage "https://github.com/hahwul/deadfinder"
+  url "https://github.com/hahwul/deadfinder/archive/refs/tags/2.0.2.tar.gz"
+  sha256 "13d3d4b0392d6b1548071d44dc03a14e790ea161781d5a57a196577316a97543"
   license "MIT"
   head "https://github.com/hahwul/deadfinder.git", branch: "main"
 
@@ -16,33 +16,26 @@ class Deadfinder < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "d68f0537ef47c062571f77b1a5b6e7ca55b0d318ca5ad7d3f303c51fc608a5af"
   end
 
+  depends_on "cmake" => :build
+  depends_on "crystal" => :build
   depends_on "pkgconf" => :build
-  depends_on "ruby"
+  depends_on "bdw-gc"
+  depends_on "libevent"
+  depends_on "libyaml"
+  depends_on "openssl@3"
+  depends_on "pcre2"
 
-  uses_from_macos "libffi"
   uses_from_macos "libxml2"
-  uses_from_macos "libxslt"
 
   on_linux do
     depends_on "zlib-ng-compat"
   end
 
   def install
-    ENV["BUNDLE_FORCE_RUBY_PLATFORM"] = "1"
-    ENV["BUNDLE_VERSION"] = "system" # Avoid installing Bundler into the keg
-    ENV["BUNDLE_WITHOUT"] = "development test"
-    ENV["GEM_HOME"] = libexec
-    ENV["NOKOGIRI_USE_SYSTEM_LIBRARIES"] = "1"
+    system "shards", "build", "--production", "--release", "--no-debug"
+    bin.install "bin/deadfinder"
 
-    system "bundle", "install"
-    system "gem", "build", "#{name}.gemspec"
-    system "gem", "install", "#{name}-#{version}.gem"
-
-    bin.install libexec/"bin/#{name}"
-    bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
-
-    # Remove mkmf.log files to avoid shims references
-    rm Dir["#{libexec}/extensions/*/*/*/mkmf.log"]
+    generate_completions_from_executable(bin/"deadfinder", "completion")
   end
 
   test do
