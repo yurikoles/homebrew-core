@@ -6,12 +6,13 @@ class Ncspot < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "776c4c58d07000bb93cdce6aaaf28a6fc630376633f37b74e02d910272cfc066"
-    sha256 cellar: :any,                 arm64_sequoia: "ab7e954ab6379a59d2f5bf78894916181a88e6e212474b2a815401e17b10d2af"
-    sha256 cellar: :any,                 arm64_sonoma:  "2be213e238f4a8bc284ddc4431889b16e1060744945717edf0814f17d84e83f2"
-    sha256 cellar: :any,                 sonoma:        "d95fee3c6dd6a833b19e69f07504b70632c8b67210217a0b09505bd1e92b9508"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b97eb8a7e13415b3933d3309d886fa13db7252822803a9888a64b674abb4c8b0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3b10d3c534c0c533ddbb48ba9a746da1befcc71b4444ea941641b23176d0738e"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_tahoe:   "60e192013ed526934d3fdb58db612bf26308abfb7efc513e44956cb1366c06fa"
+    sha256 cellar: :any,                 arm64_sequoia: "f9b1360981f12b9d988396ad7b128fc9af3057f2d2a4616d056f7bdb45f527d1"
+    sha256 cellar: :any,                 arm64_sonoma:  "13b174aaa1dfdccbe72cbe4b6d98f1add1e5f3b2bd05eac20f9d4c1beb6a6d30"
+    sha256 cellar: :any,                 sonoma:        "6f9e15e46ac12238caf770c49e3eca848f1e278145947fe94e3247f699258859"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "97b1e70af1c56c66c10fea543323655d2b78dc671be4f57e2e5cedc7c486776c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7497316f97f73587bc97bfa6fa519368dd2d7a6df72dd538005696ceb2017637"
   end
 
   depends_on "pkgconf" => :build
