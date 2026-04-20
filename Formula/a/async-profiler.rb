@@ -1,8 +1,8 @@
 class AsyncProfiler < Formula
   desc "Sampling CPU & HEAP profiler for Java using AsyncGetCallTrace + perf_events"
   homepage "https://github.com/async-profiler/async-profiler"
-  url "https://github.com/async-profiler/async-profiler/archive/refs/tags/v4.3.tar.gz"
-  sha256 "50f65033df0b999d0ae80c82d09827b595ad06051406ff7ec322fd1a40c1d328"
+  url "https://github.com/async-profiler/async-profiler/archive/refs/tags/v4.4.tar.gz"
+  sha256 "888483f6fc482b32dfc76dc9ecb254dc954c1e5c893de325a895b41e2f9bbbf6"
   license "Apache-2.0"
   head "https://github.com/async-profiler/async-profiler.git", branch: "master"
 
