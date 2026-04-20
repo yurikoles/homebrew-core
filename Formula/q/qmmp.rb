@@ -22,7 +22,6 @@ class Qmmp < Formula
   depends_on "pkgconf" => :build
   depends_on "qttools" => :build
 
-  # TODO: on linux: pipewire
   depends_on "faad2"
   depends_on "ffmpeg"
   depends_on "flac"
@@ -68,6 +67,7 @@ class Qmmp < Formula
     depends_on "libx11"
     depends_on "libxcb"
     depends_on "mesa"
+    depends_on "pipewire"
   end
 
   resource "qmmp-plugin-pack" do
