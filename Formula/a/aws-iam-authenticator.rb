@@ -1,8 +1,8 @@
 class AwsIamAuthenticator < Formula
   desc "Use AWS IAM credentials to authenticate to Kubernetes"
   homepage "https://github.com/kubernetes-sigs/aws-iam-authenticator"
-  url "https://github.com/kubernetes-sigs/aws-iam-authenticator/archive/refs/tags/v0.7.12.tar.gz"
-  sha256 "a8edf13b033400ae9bf5c0d354b5aa98ac133d3d781dece4568ae9de5e74eda9"
+  url "https://github.com/kubernetes-sigs/aws-iam-authenticator/archive/refs/tags/v0.7.13.tar.gz"
+  sha256 "d0b05287e7cddec75a2951d27bbc40e76e5a6d20755b69842f67c495de024343"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/aws-iam-authenticator.git", branch: "master"
 
