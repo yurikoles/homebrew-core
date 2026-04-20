@@ -11,7 +11,7 @@ class SeleniumServer < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "27eb7539237652de90c854c203ed8bb56a2ea667d7b9a837c527b4b853b357b8"
+    sha256 cellar: :any_skip_relocation, all: "17a3524c5b379372740c5cbef1024d09754d2c3c60eb67eb69d0b1b003dd6cb4"
   end
 
   depends_on "openjdk"
