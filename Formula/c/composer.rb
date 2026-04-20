@@ -21,11 +21,9 @@ class Composer < Formula
 
   depends_on "php"
 
-  # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
+  # Keg-relocation breaks the formula when it replaces the prefix with a non-default value
   on_macos do
-    on_intel do
-      pour_bottle? only_if: :default_prefix
-    end
+    pour_bottle? only_if: :default_prefix
   end
 
   def install
