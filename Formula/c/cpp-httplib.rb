@@ -6,11 +6,12 @@ class CppHttplib < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "9500c95065d0080dcd83f79ca16f0fe820f01ad203399ec7b652970e2fbab660"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "5e0702f105ce2f3800124aec8ec4748bf2d88fd937fb2816217ee4adc846fd82"
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3" => :build
+  depends_on "openssl@4" => :build
 
   on_linux do
     depends_on "zlib-ng-compat" => :build
