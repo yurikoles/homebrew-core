@@ -15,7 +15,7 @@ class Gocryptfs < Formula
   depends_on "pkgconf" => :build
   depends_on "libfuse"
   depends_on :linux # on macOS, requires closed-source macFUSE
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     system "./build.bash"
