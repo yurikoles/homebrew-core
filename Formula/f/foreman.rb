@@ -16,7 +16,7 @@ class Foreman < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "23abef518736e00d017b564a9f78b2063a0fd93825d81bf79885ff6a909cf061"
   end
 
-  uses_from_macos "ruby"
+  depends_on "ruby"
 
   resource "thor" do
     url "https://rubygems.org/gems/thor-1.4.0.gem"
@@ -27,7 +27,6 @@ class Foreman < Formula
     ENV["GEM_HOME"] = libexec
 
     resources.each do |r|
-      r.fetch
       system "gem", "install", r.cached_download, "--ignore-dependencies",
              "--no-document", "--install-dir", libexec
     end
