@@ -1,8 +1,8 @@
 class CcConnect < Formula
   desc "Bridges local AI coding agents to messaging platforms"
   homepage "https://github.com/chenhg5/cc-connect"
-  url "https://github.com/chenhg5/cc-connect/archive/refs/tags/v1.3.0.tar.gz"
-  sha256 "b4823bcdf34273b4699df20903d8d1feda9f7e7397b5ca62b76d1ca0a1996632"
+  url "https://github.com/chenhg5/cc-connect/archive/refs/tags/v1.3.1.tar.gz"
+  sha256 "5c03b6601f360e679b378cfcb68ad5d70aeb14a27b3d9597ee771b0800e1d4e2"
   license "MIT"
 
   bottle do
