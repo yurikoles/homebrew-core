@@ -1,10 +1,9 @@
 class GameMusicEmu < Formula
   desc "Videogame music file emulator collection"
   homepage "https://github.com/libgme/game-music-emu"
-  url "https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.4.tar.gz"
-  sha256 "f2360feb5a32ace226c583df4faf6eff74145c81264aaea11e17a1af2f6f101a"
+  url "https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.5.tar.gz"
+  sha256 "8531678502451c2cf04248cda45c8b4645e19fcfb63e6a7ec2549641c47bb392"
   license one_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
-  revision 1
   compatibility_version 1
   head "https://github.com/libgme/game-music-emu.git", branch: "master"
 
