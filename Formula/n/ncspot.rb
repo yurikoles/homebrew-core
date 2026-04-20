@@ -20,10 +20,6 @@ class Ncspot < Formula
 
   uses_from_macos "python" => :build
 
-  on_macos do
-    depends_on "portaudio"
-  end
-
   on_linux do
     depends_on "openssl@3" # Uses Secure Transport on macOS
     depends_on "pulseaudio"
@@ -33,13 +29,13 @@ class Ncspot < Formula
     if OS.mac?
       ENV["COREAUDIO_SDK_PATH"] = MacOS.sdk_path
       args = %w[--no-default-features]
-      features = %w[portaudio_backend cursive/pancurses-backend share_clipboard]
+      features = %w[rodio_backend cursive/pancurses-backend share_clipboard]
     end
     system "cargo", "install", *args, *std_cargo_args(features:)
   end
 
   test do
-    backend = OS.mac? ? "portaudio" : "pulseaudio"
+    backend = OS.mac? ? "rodio" : "pulseaudio"
     assert_match version.to_s, shell_output("#{bin}/ncspot --version")
     assert_match backend, shell_output("#{bin}/ncspot --help")
 
