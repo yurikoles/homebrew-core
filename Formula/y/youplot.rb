@@ -15,7 +15,7 @@ class Youplot < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7cf27ee6dd3a4fc889a2d085f897132c2586462351eb9e8731e8b8bd6952afb7"
   end
 
-  uses_from_macos "ruby"
+  depends_on "ruby"
 
   resource "enumerable-statistics" do
     url "https://rubygems.org/downloads/enumerable-statistics-2.0.8.gem"
