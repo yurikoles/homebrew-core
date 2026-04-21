@@ -8,12 +8,12 @@ class Pelican < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "3e277d1a8e8d1625d447c9ef37653d430857521bc09b9de7a1807312f4607b68"
-    sha256 cellar: :any,                 arm64_sequoia: "28e907ea9ee64065b5fdb510cbbe17b9c31b3c80208f5106d4acb208d99daeb9"
-    sha256 cellar: :any,                 arm64_sonoma:  "34810c7215386ec3cb9324b0e27048e2e4d730458b67031d117eb5ea108aeb86"
-    sha256 cellar: :any,                 sonoma:        "82afdff03fb2b0e88758d388eee5ff6ea171f5bc127550a9acfb734856fd9129"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ab92e94e5f5c2d8790df1a5cf7d923ef13d763094c731ae34d7e26fcef83f662"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f7771d3e1183bb045c920f33d6531fe2020423a0d3c4e16ecbd0abb19501618"
+    sha256 cellar: :any,                 arm64_tahoe:   "23a21dd4c29026f3395409c414246df6661e1e7e1b11f3b4dc675cbb8f28879b"
+    sha256 cellar: :any,                 arm64_sequoia: "7f29a50d8afa4169eb8070c163d6d2c8c583632f5d572a5567db172bd005ef2e"
+    sha256 cellar: :any,                 arm64_sonoma:  "987414f9a159092c7f8e260c5ea9ea4e85c082ed5b50f1b2725d6417c374caa3"
+    sha256 cellar: :any,                 sonoma:        "98bf6d351b3bd43126f1245fe9bba29fca89bc8d4e4d8c6dad94affa65f50580"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c4d21eb90d05297dbc47ff31780e664c7fd9776e2fe0ada56902e43d301649e7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b7bc58367a9e752569423646777cc844921f237121c390dd4156e9ca4b145dd7"
   end
 
   depends_on "rust" => :build # for `watchfiles`
