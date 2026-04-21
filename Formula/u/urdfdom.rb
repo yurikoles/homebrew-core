@@ -1,10 +1,10 @@
 class Urdfdom < Formula
   desc "Unified Robot Description Format (URDF) parser"
   homepage "https://wiki.ros.org/urdf/"
-  url "https://github.com/ros/urdfdom/archive/refs/tags/5.1.2.tar.gz"
-  sha256 "f51e2f92a0830c41f98d5196ba5b01d2c7b900498a8c5ba767b7eb8a76852cdd"
+  url "https://github.com/ros/urdfdom/archive/refs/tags/6.0.0.tar.gz"
+  sha256 "3305bb725095c78ca3408a510e11f530cd9bb45229779084695b21b2e693bde9"
   license "BSD-3-Clause"
-  compatibility_version 1
+  compatibility_version 2
 
   # Upstream uses Git tags (e.g. `1.0.0`) to indicate a new version. They
   # created a few releases on GitHub in the past but now they simply use tags.
