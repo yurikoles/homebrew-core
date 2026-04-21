@@ -3,17 +3,17 @@ class Dotnet < Formula
   homepage "https://dotnet.microsoft.com/"
   license "MIT"
   version_scheme 1
-  compatibility_version 1
+  compatibility_version 2
   head "https://github.com/dotnet/dotnet.git", branch: "main"
 
   stable do
     # Source-build tag announced at https://github.com/dotnet/source-build/discussions
-    url "https://github.com/dotnet/dotnet/archive/refs/tags/v10.0.106.tar.gz"
-    sha256 "04a29699e8b5ead160a633c376d815280ccd7a78e03c80f257e329c0bfdfe771"
+    url "https://github.com/dotnet/dotnet/archive/refs/tags/v10.0.107.tar.gz"
+    sha256 "ad1174dec435a27c2528889bae80838ced784a2968003608ecafde3e2a1daddd"
 
     resource "release.json" do
-      url "https://github.com/dotnet/dotnet/releases/download/v10.0.106/release.json"
-      sha256 "f89b778619633f8bf075506495854651e52b205454b85cd01f622a50029688f6"
+      url "https://github.com/dotnet/dotnet/releases/download/v10.0.107/release.json"
+      sha256 "6fdd89a8793dabe5edcc273037e38ccc73c273ca4c937bde79f0b6563528eea1"
 
       livecheck do
         formula :parent
