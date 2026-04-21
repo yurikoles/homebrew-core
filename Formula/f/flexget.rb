@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/5e/67/c9b77c0b73e693297646c4416df1083b03b9af6fd8af0a30c7a6571e2b92/flexget-3.19.12.tar.gz"
-  sha256 "5dfdf99a98673c9c62f6b986035de21e129a51cec78ecbb8756661475361d149"
+  url "https://files.pythonhosted.org/packages/ac/e2/7aa4d1b7c48a940c94438f0d59c1c49ecd58b101f869765556ae7ec16f02/flexget-3.19.13.tar.gz"
+  sha256 "d720a69644880994ee022403d3fd2bc18c312d159960868babffe167a217e07e"
   license "MIT"
 
   bottle do
@@ -290,8 +290,8 @@ class Flexget < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/e9/67/cae617f1351490c25a4b8ac3b8b63a4dda609295d8222bad12242dfdc629/rich-14.3.4.tar.gz"
-    sha256 "817e02727f2b25b40ef56f5aa2217f400c8489f79ca8f46ea2b70dd5e14558a9"
+    url "https://files.pythonhosted.org/packages/c0/8f/0722ca900cc807c13a6a0c696dacf35430f72e0ec571c4275d2371fca3e9/rich-15.0.0.tar.gz"
+    sha256 "edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36"
   end
 
   resource "rpyc" do
