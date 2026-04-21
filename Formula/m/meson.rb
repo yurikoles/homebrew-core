@@ -1,8 +1,8 @@
 class Meson < Formula
   desc "Fast and user friendly build system"
   homepage "https://mesonbuild.com/"
-  url "https://github.com/mesonbuild/meson/releases/download/1.11.0/meson-1.11.0.tar.gz"
-  sha256 "dffdd0915ceb028541fe3bed77d63ba35e78514591c043736b450d62634eeb31"
+  url "https://github.com/mesonbuild/meson/releases/download/1.11.1/meson-1.11.1.tar.gz"
+  sha256 "6788ae299979643f8d841bcaf64352558436cae45a0355148a3aeeccf7913866"
   license "Apache-2.0"
   head "https://github.com/mesonbuild/meson.git", branch: "master"
 
