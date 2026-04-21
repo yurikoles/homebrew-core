@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/b3/3a/f0bff753e5d07e115a39a25df0af442a2e07c937dc46a24aefeb791c75d7/mycli-1.68.1.tar.gz"
-  sha256 "32426f3599ef5378586740640e37a5dc293b683f657cf1dbf5b46f4154fe275a"
+  url "https://files.pythonhosted.org/packages/41/6d/5bed5364dbde18ebd33f98e8bf578160f6336521a76cc4586875bc2848c5/mycli-1.69.0.tar.gz"
+  sha256 "60f60e1d4ce5664412acc0d4e7d801021b17ae66f832c470d846548ef6491987"
   license "BSD-3-Clause"
 
   bottle do
