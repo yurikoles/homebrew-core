@@ -1,8 +1,8 @@
 class Mtoc < Formula
   desc "Mach-O to PE/COFF binary converter"
   homepage "https://opensource.apple.com/"
-  url "https://github.com/apple-oss-distributions/cctools/archive/refs/tags/cctools-1030.6.3.tar.gz"
-  sha256 "a43b0f7d5d7d2fb828f96318efb7b335dfbbdd5ee3b96716add1f509755f120a"
+  url "https://github.com/apple-oss-distributions/cctools/archive/refs/tags/cctools-1035.1.102.tar.gz"
+  sha256 "1867fa0204c139f8073689b0d0785454b152b367762ff07ec9f316c97da1969b"
   license "APSL-2.0"
 
   bottle do
@@ -17,11 +17,6 @@ class Mtoc < Formula
   depends_on :macos
 
   conflicts_with "ocmtoc", because: "both install `mtoc` binaries"
-
-  patch do
-    url "https://raw.githubusercontent.com/acidanthera/ocbuild/d3e57820ce85bc2ed4ce20cc25819e763c17c114/patches/mtoc-permissions.patch"
-    sha256 "0d20ee119368e30913936dfee51055a1055b96dde835f277099cb7bcd4a34daf"
-  end
 
   # Rearrange #include's to avoid macros defining function argument names in
   # LLVM's headers.
