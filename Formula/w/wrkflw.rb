@@ -1,8 +1,8 @@
 class Wrkflw < Formula
   desc "Validate and execute GitHub Actions workflows locally"
   homepage "https://github.com/bahdotsh/wrkflw"
-  url "https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.7.3.tar.gz"
-  sha256 "475acd61bff0b6ee4ec58aa566b442355e88d9efe18267c58c1501f3fb93f4bc"
+  url "https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "79d63da0c40cfb884600b671830d63bb6cf143f1d8e65886e067a747491c23b4"
   license "MIT"
   head "https://github.com/bahdotsh/wrkflw.git", branch: "main"
 
@@ -45,6 +45,6 @@ class Wrkflw < Formula
     YAML
 
     output = shell_output("#{bin}/wrkflw validate #{test_action_config}")
-    assert_match "Summary: 1 valid, 0 invalid", output
+    assert_match "Validating GitHub workflow file: #{testpath}/.github/workflows/test.yml... ✔ Valid", output
   end
 end
