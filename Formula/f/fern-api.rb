@@ -1,8 +1,8 @@
 class FernApi < Formula
   desc "Stripe-level SDKs and Docs for your API"
   homepage "https://buildwithfern.com/"
-  url "https://registry.npmjs.org/fern-api/-/fern-api-4.81.0.tgz"
-  sha256 "7d59b22b6254ebfee2d1ecbcde101a01123f2968f9e644b61329032a3f6d47f9"
+  url "https://registry.npmjs.org/fern-api/-/fern-api-4.82.0.tgz"
+  sha256 "d9f2b9c706dc6d7bdc299dda1d7d75633973f5e0b7aa2d40fcecb1f9df58de84"
   license "Apache-2.0"
 
   livecheck do
