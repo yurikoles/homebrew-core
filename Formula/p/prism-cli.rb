@@ -6,8 +6,7 @@ class PrismCli < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "7800a83ca6cb47e11df9264d4ff6e06d6ee0a5d5e6cba2456c98198c4f50046a"
+    sha256 cellar: :any_skip_relocation, all: "074332404299443f6edaeebaeb0451584e2909da9d406c692ca10e4a6d697dbc"
   end
 
   depends_on "node"
