@@ -3,8 +3,8 @@ class ErlangAT27 < Formula
   homepage "https://www.erlang.org/"
   # Download tarball from GitHub; it is served faster than the official tarball.
   # Don't forget to update the documentation resource along with the url!
-  url "https://github.com/erlang/otp/releases/download/OTP-27.3.4.10/otp_src_27.3.4.10.tar.gz"
-  sha256 "c93905c73ddb7afdfc7f0a46c33f95590eeffe9c2a8c75086d24bb9fe8abe029"
+  url "https://github.com/erlang/otp/releases/download/OTP-27.3.4.11/otp_src_27.3.4.11.tar.gz"
+  sha256 "9d63382d3e7707c058dabe338114e09ff8228d54d29df794d907d3c8dddde5f9"
   license "Apache-2.0"
 
   livecheck do
@@ -36,9 +36,9 @@ class ErlangAT27 < Formula
   end
 
   resource "html" do
-    url "https://github.com/erlang/otp/releases/download/OTP-27.3.4.10/otp_doc_html_27.3.4.10.tar.gz"
-    mirror "https://fossies.org/linux/misc/otp_doc_html_27.3.4.10.tar.gz"
-    sha256 "5cff4d5023d3162a09368654f1dd958081b4d27ef682d4f722648c515ae3921e"
+    url "https://github.com/erlang/otp/releases/download/OTP-27.3.4.11/otp_doc_html_27.3.4.11.tar.gz"
+    mirror "https://fossies.org/linux/misc/otp_doc_html_27.3.4.11.tar.gz"
+    sha256 "82edced066d3bf9d681a17f77bb1d4b3bee6f8fa48a06aaf622236cacc7a6880"
 
     livecheck do
       formula :parent
