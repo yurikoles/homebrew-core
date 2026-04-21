@@ -11,8 +11,8 @@ class Valgrind < Formula
   end
 
   bottle do
-    sha256 arm64_linux:  "57fc318a97c43d1bdae43943c9de23c26c5f804983fe29f4d1853802ce4f6646"
-    sha256 x86_64_linux: "df7ce68951218b8d2646a402d30b9733626bb67b80255fd207f4903060528498"
+    sha256 arm64_linux:  "6aa82a2f55ce276aee655ed2ffbab056217df6a2e530b4d70edc07571b329a9f"
+    sha256 x86_64_linux: "9c9c5882d596d87523be1427937a661fcc4a58aaf6085a931ac3d221102edb6b"
   end
 
   head do
