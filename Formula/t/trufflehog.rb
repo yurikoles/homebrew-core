@@ -8,12 +8,12 @@ class Trufflehog < Formula
   head "https://github.com/trufflesecurity/trufflehog.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3ed4ef9874652a26fb70910d3d3c9a461e05fea0090c2e9b8da1d5010383d02e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "10158ad4900d6a9c3168cf705a01da6266d68d8f2e18e18113118c27383d33dd"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c55ddbad56fe2817bfc60cae56ffeb027baecd9a8baca9513dfe03e91437adc4"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6f2a6c56c6ef342d3ed36118083f21bf4c1570ca5eceeb275e90fad0a093c94f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bdcd9a4d767be5a165a3458e79e907094ed7bff04eb15fcbb217bd7e3de036a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "070a0949b0c72b64459fdc606b22fbd43fb3a6f4bfe3553ab1ad16dcd6a0ac96"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e829c1817b1a511ee3c9d6317ad09fbcdd92b85101d9694fdc9c975e85d89c9f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d65ccfc546fa866b1775432b36314d50bb07314bac698728a5e6f53a276abecd"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "daeb8b3d26f871fa9f29f3824959a4f75095cb1a915f7153e776c7a142e8c34b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b36c27f9e8b143e5a1d015daa42278a08bc3d55621ceede7ad675d1d72728f37"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2b743d7893f319d0cf20220ed6931bead7074aa9e624057f1bf2448d3131fdc8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "0db232ff9193c5358fff9af83f68e6cbd1f6b55b14d063e50189c7723c361223"
   end
 
   depends_on "go" => :build
