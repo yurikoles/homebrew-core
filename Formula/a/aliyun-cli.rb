@@ -13,12 +13,12 @@ class AliyunCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "30c9d3b0461650e4d9b77a3be21d15fa288bfec8cf60579c5a1b0d9cac9ba021"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "30c9d3b0461650e4d9b77a3be21d15fa288bfec8cf60579c5a1b0d9cac9ba021"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "30c9d3b0461650e4d9b77a3be21d15fa288bfec8cf60579c5a1b0d9cac9ba021"
-    sha256 cellar: :any_skip_relocation, sonoma:        "dc87faf032c5e934f7c6d4572d2e4d772643148fce1559937f0e28bc9b2a6bed"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4e54db5d63def9d54bb3c4ec84b0f912987269354f3a12304e0a8f1eaa7839b9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9d01ecbca3c25ba1b05e3f4e6aba2716e49bb5793a0df847d27dd7d4a59579d4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4a4d43c8a9a57bd150967b7e0aef74fffb3479cc9be33130a8951be7744357eb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4a4d43c8a9a57bd150967b7e0aef74fffb3479cc9be33130a8951be7744357eb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4a4d43c8a9a57bd150967b7e0aef74fffb3479cc9be33130a8951be7744357eb"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b47c1997a625bb060674c7b675eab027d44a1b68c459338411646b92ef280471"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "50a5daefc585a0105e988286f570899d823083589bcf5bad68c3dabdc21e644e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e95883757396e67917851b1648afe1b76eb2baa11ada2e76a8ca0e1d33259928"
   end
 
   depends_on "go" => :build
