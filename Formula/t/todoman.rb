@@ -9,8 +9,7 @@ class Todoman < Formula
   head "https://github.com/pimutils/todoman.git", branch: "main"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "9e003c9f9026bc99400996a18f27ed32701e4a03d8efa31541adcd4083f1a654"
+    sha256 cellar: :any_skip_relocation, all: "6110800ecba08aee802442fbe824af9b0a18d41ef22cec89ce2f41335852d27b"
   end
 
   depends_on "jq" # Needed for ZSH completions.
