@@ -5,6 +5,15 @@ class OhMyAgent < Formula
   sha256 "1e94ab72fb159549804a6c3f7cd63c823e61db03d27de252f97d57fc0a6b5366"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "cda53c42e689959175419221783c0cabc5d547b46e3f32b2f91603f867489b80"
+    sha256 cellar: :any,                 arm64_sequoia: "9dea667a13d0c7be9e9ae37941230fdab27c924a68dfe49f382ffd292eda6936"
+    sha256 cellar: :any,                 arm64_sonoma:  "9dea667a13d0c7be9e9ae37941230fdab27c924a68dfe49f382ffd292eda6936"
+    sha256 cellar: :any,                 sonoma:        "c5d706fdfe3851c6291c5f5e3b1a01bd67e09a963735ba25cc87d2a13cd3a968"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "57905dc7a635efa60f98d248e5ca4e723cbb1209bb6d9aa6e98cd5fb136c9aa5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b941d31207973eebd038449582b2746ce99a1feed4bc8edf193d02fbb464d754"
+  end
+
   depends_on "node"
 
   def install
