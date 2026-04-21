@@ -1,19 +1,10 @@
 class Dumpling < Formula
   desc "Creating SQL dump from a MySQL-compatible database"
   homepage "https://github.com/pingcap/tidb"
+  url "https://github.com/pingcap/tidb/archive/refs/tags/v26.3.0.tar.gz"
+  sha256 "f8ef3a5f6d98fd04670aac7c9170c8a0bb0f3a773593244da046e221b6290580"
   license "Apache-2.0"
   head "https://github.com/pingcap/tidb.git", branch: "master"
-
-  stable do
-    url "https://github.com/pingcap/tidb/archive/refs/tags/v8.5.6.tar.gz"
-    sha256 "6d06151f0862cc43ae6d591d004924375477dcd89b913233d666b9853c4ac9cd"
-
-    # Support Go 1.26: https://github.com/pingcap/tidb/pull/66254
-    patch do
-      url "https://github.com/pingcap/tidb/commit/f641265e809082c88161f92d5c38cb6caa700ed3.patch?full_index=1"
-      sha256 "3484b5c03bc2169f5408d9f95776b3f57a4c6bb6bc7a01cfa50e2da00494821d"
-    end
-  end
 
   livecheck do
     url :stable
