@@ -71,7 +71,7 @@ class Audacious < Formula
   depends_on "qtimageformats" => :no_linkage # for webp album covers
   depends_on "qtmultimedia"
   depends_on "qtsvg" => :no_linkage # for svg icons
-  depends_on "sdl2"
+  depends_on "sdl3"
   depends_on "wavpack"
 
   uses_from_macos "curl"
@@ -85,6 +85,7 @@ class Audacious < Formula
     depends_on "jack"
     depends_on "libx11"
     depends_on "libxml2"
+    depends_on "pipewire"
     depends_on "pulseaudio"
     depends_on "zlib-ng-compat"
   end
