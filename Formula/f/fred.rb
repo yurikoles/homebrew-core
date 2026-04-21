@@ -8,7 +8,7 @@ class Fred < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "94d1ba3f56eed36eded4bc11d5cec9a76b253e6c0decbea59200e70107009424"
+    sha256 cellar: :any_skip_relocation, all: "56f1e608dda3fa1a8e469ebd76f331f0ebd199bb4e56a58273cd44a1ad9a94e4"
   end
 
   depends_on "certifi"
