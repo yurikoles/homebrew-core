@@ -1,8 +1,8 @@
 class Jbig2enc < Formula
   desc "JBIG2 encoder (for monochrome documents)"
   homepage "https://github.com/agl/jbig2enc"
-  url "https://github.com/agl/jbig2enc/archive/refs/tags/0.30.tar.gz"
-  sha256 "4468442f666edc2cc4d38b11cde2123071a94edc3b403ebe60eb20ea3b2cc67b"
+  url "https://github.com/agl/jbig2enc/archive/refs/tags/0.31.tar.gz"
+  sha256 "35c255e44a9b1c4cbe27d2c84594a43d6666645156a2d186ba60f8832566141d"
   license "Apache-2.0"
   head "https://github.com/agl/jbig2enc.git", branch: "master"
 
@@ -20,6 +20,7 @@ class Jbig2enc < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
+  depends_on "pkgconf" => :build
 
   depends_on "leptonica"
 
