@@ -6,12 +6,12 @@ class Oxfmt < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "bb901f2a2d20429ac48b8c1f248f0558d792e4c431433e217f0db09b53d74e6c"
-    sha256 cellar: :any,                 arm64_sequoia: "e805719bd3d68852a097295bc7fd7ff85333c0752d8e139d07a833cd6d64a2bc"
-    sha256 cellar: :any,                 arm64_sonoma:  "e805719bd3d68852a097295bc7fd7ff85333c0752d8e139d07a833cd6d64a2bc"
-    sha256 cellar: :any,                 sonoma:        "57cb35b69451c1283e03ea292daadc88d9575b0a864c1c86d094efa1d07b97d1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "c0709440a70c3af78cc201b6020978f3bf371d898469e1885476f36b8b069031"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aed98d8947f872faae310c28bf5dd9c080dd62de8106d2cd2927faf79d300c43"
+    sha256 cellar: :any,                 arm64_tahoe:   "042afffde91fdd79b72c6d7a7b3410b83a3fe5845c04a26a56f19f594ffee645"
+    sha256 cellar: :any,                 arm64_sequoia: "ccf9b0f86756e8147752f9cee2c4547eecf68344e6036b83f544d78cbc909e9e"
+    sha256 cellar: :any,                 arm64_sonoma:  "ccf9b0f86756e8147752f9cee2c4547eecf68344e6036b83f544d78cbc909e9e"
+    sha256 cellar: :any,                 sonoma:        "b458d759cf53e1240da7d63c895aa2683783d50f5943353640957f5559bb7db2"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "01e987a749e2865a27d0fb929ff96469b1345bcf83e95cedf6941441be6487ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f8751ecb38911ee2ed42f7e54201cb06763424e4ed6f5a252d3279d9c4a78b95"
   end
 
   depends_on "node"
