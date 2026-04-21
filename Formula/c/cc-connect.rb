@@ -6,12 +6,12 @@ class CcConnect < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "026041e63d1e6739d5f685c2fd71063431cacee54040dd776db948e89a3f1589"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "026041e63d1e6739d5f685c2fd71063431cacee54040dd776db948e89a3f1589"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "026041e63d1e6739d5f685c2fd71063431cacee54040dd776db948e89a3f1589"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5cf84c7c853f73fd5cb4237cd0642a51fc1c6963e7d8e88ca7706069c8df52cb"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "47d6c169e4ecca42574cfb6dd5401195d3f0c698573294a5a480c4b4fb808390"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16f299478e4d66561b11d873ba485dcd0b17f540e74bb6fa3c7b4dda9864e8ee"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fdb63aa32fe0d2f9fe92ca5ab18e295eea93d048bc5195444d149e924f9644a6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b7726254e96a7a3c969b0f5c560bfd676e954cbad5d895949f62dd10670abd2a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "10a90420e60e3bd1c1971bbb49017eb7b5ce804df491eeb45435c94f2f53e2b4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "933a873a618580499db5806ac08d5ece3865f26632e872b91fc60a26cfc99ba0"
   end
 
   depends_on "go" => :build
