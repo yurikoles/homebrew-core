@@ -1,8 +1,8 @@
 class Qemu < Formula
   desc "Generic machine emulator and virtualizer"
   homepage "https://www.qemu.org/"
-  url "https://download.qemu.org/qemu-10.2.2.tar.xz"
-  sha256 "784b296ff29c1417aa72323abcb2d2ea9ab9771724f577dcd785c3b04f21e176"
+  url "https://download.qemu.org/qemu-11.0.0.tar.xz"
+  sha256 "c04ca36012653f32d11c674d370cf52a710e7d3f18c2d8b63e4932052a4854d6"
   license "GPL-2.0-only"
   compatibility_version 1
   head "https://gitlab.com/qemu-project/qemu.git", branch: "master"
@@ -25,6 +25,7 @@ class Qemu < Formula
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
+  depends_on "python-setuptools" => :build
   depends_on "python@3.14" => :build # keep aligned with meson
   depends_on "spice-protocol" => :build
 
@@ -69,8 +70,8 @@ class Qemu < Formula
 
     # Remove wheels unless explicitly permitted. Currently this:
     # * removes `meson` so that brew `meson` is always used
-    # * keeps `pycotap` which is a pure-python "none-any" wheel (allowed in homebrew/core)
-    rm(Dir["python/wheels/*"] - Dir["python/wheels/pycotap-*-none-any.whl"])
+    # * keeps `pycotap` and `qemu_qmp` which are pure-python "none-any" wheels (allowed in homebrew/core)
+    rm(Dir["python/wheels/*"] - Dir["python/wheels/{pycotap,qemu_qmp}-*-none-any.whl"])
 
     args = %W[
       --prefix=#{prefix}
@@ -117,7 +118,7 @@ class Qemu < Formula
     end
 
     archs = %w[
-      aarch64 alpha arm avr hppa i386 loongarch64 m68k microblaze microblazeel mips
+      aarch64 alpha arm avr hppa i386 loongarch64 m68k microblaze mips
       mips64 mips64el mipsel or1k ppc ppc64 riscv32 riscv64 rx
       s390x sh4 sh4eb sparc sparc64 tricore x86_64 xtensa xtensaeb
     ]
