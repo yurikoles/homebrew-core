@@ -1,10 +1,9 @@
 class Fftw < Formula
   desc "C routines to compute the Discrete Fourier Transform"
   homepage "https://fftw.org"
-  url "https://fftw.org/fftw-3.3.10.tar.gz"
-  sha256 "56c932549852cddcfafdab3820b0200c7742675be92179e59e6215b340e26467"
+  url "https://fftw.org/fftw-3.3.11.tar.gz"
+  sha256 "5630c24cdeb33b131612f7eb4b1a9934234754f9f388ff8617458d0be6f239a1"
   license all_of: ["GPL-2.0-or-later", "BSD-2-Clause"]
-  revision 3
   compatibility_version 1
 
   livecheck do
@@ -25,12 +24,6 @@ class Fftw < Formula
 
   on_macos do
     depends_on "libomp"
-  end
-
-  # Fix the cmake config file when configured with autotools, upstream pr ref, https://github.com/FFTW/fftw3/pull/338
-  patch do
-    url "https://github.com/FFTW/fftw3/commit/394fa85ab5f8914b82b3404844444c53f5c7f095.patch?full_index=1"
-    sha256 "2f3c719ad965b3733e5b783a1512af9c2bd9731bb5109879fbce5a76fa62eb14"
   end
 
   def install
