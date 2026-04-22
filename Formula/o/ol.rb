@@ -1,8 +1,8 @@
 class Ol < Formula
   desc "Purely functional dialect of Lisp"
   homepage "https://yuriy-chumak.github.io/ol/"
-  url "https://github.com/yuriy-chumak/ol/archive/refs/tags/2.6.tar.gz"
-  sha256 "c5506de4005a63039dc96962322ae94bf6c33eeaf63dcc03b07b1e8cc3a4d8f3"
+  url "https://github.com/yuriy-chumak/ol/archive/refs/tags/2.7.tar.gz"
+  sha256 "32dec0d527d456cce3273b907ffface6386a61288edf33f8724e2dd1bfb22319"
   license any_of: ["LGPL-3.0-or-later", "MIT"]
   head "https://github.com/yuriy-chumak/ol.git", branch: "master"
 
