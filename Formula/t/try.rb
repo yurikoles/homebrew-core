@@ -7,12 +7,12 @@ class Try < Formula
   head "https://github.com/tobi/try.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "521e3b8a8d73a27a2698b2e302ef48b0d8a9727fb1d48f9770cfec2341062d3e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "521e3b8a8d73a27a2698b2e302ef48b0d8a9727fb1d48f9770cfec2341062d3e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "521e3b8a8d73a27a2698b2e302ef48b0d8a9727fb1d48f9770cfec2341062d3e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "521e3b8a8d73a27a2698b2e302ef48b0d8a9727fb1d48f9770cfec2341062d3e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b8c0a20f7b2d35735bc893e334b765e56e4f24ee5e8a202c8308fe5e0dfd168d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b8c0a20f7b2d35735bc893e334b765e56e4f24ee5e8a202c8308fe5e0dfd168d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9fe1dd1ecae3168b6cad9674fbe8cdf19bc13ac7443f4ca65f73e22755bffe6c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9fe1dd1ecae3168b6cad9674fbe8cdf19bc13ac7443f4ca65f73e22755bffe6c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9fe1dd1ecae3168b6cad9674fbe8cdf19bc13ac7443f4ca65f73e22755bffe6c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9fe1dd1ecae3168b6cad9674fbe8cdf19bc13ac7443f4ca65f73e22755bffe6c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "af18cae45334b193b08f409170eb6bd03a59cf3134da82a9341bc5e1f583a748"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af18cae45334b193b08f409170eb6bd03a59cf3134da82a9341bc5e1f583a748"
   end
 
   depends_on "ruby"
