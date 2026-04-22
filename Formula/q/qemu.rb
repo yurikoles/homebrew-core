@@ -13,12 +13,12 @@ class Qemu < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "f2d32908f6edfa5537ce15e123d4093b71066694a1ce75a5a52435879844f440"
-    sha256 arm64_sequoia: "fea6573542eafdf966ec8c73251ba53dda05d9a5f2bc4abddea74483ee451273"
-    sha256 arm64_sonoma:  "2836694e064b7cc91791fda8d308e0c3ddf4b4b9f3f203ae6c09244e42785dce"
-    sha256 sonoma:        "af1bfa5c635c5b301abc5e20052e011cd6cb5cc314316be825c4332e273d9cd3"
-    sha256 arm64_linux:   "3809de28901911abb6c0aa1acb4b90d29d7a86c70a414ee47d6a682502713d7b"
-    sha256 x86_64_linux:  "04919790dfaae36a079f7efd839ab99fd45fd71479f246756b52dd7b0b656a66"
+    sha256 arm64_tahoe:   "a1a3f3bec0d8bbc6976822f8b38758486430809ceb1b6b8d9d98dacb8b961a3b"
+    sha256 arm64_sequoia: "469b7fe45e19e5c0516c5369bcba23890412f3e2c243f72690ac65fcb382fe67"
+    sha256 arm64_sonoma:  "0d80c35b4760cd5ba1da1c08c6a89511b6c31fba7d9b52f812d255d30ca6bf6e"
+    sha256 sonoma:        "a7bd0dd4d00305921af70c535ebd40f972ce6c9c4670fd3c93532da4de533f34"
+    sha256 arm64_linux:   "0a18129011938f3bde7689f42855f6f7b2ecea4eb278ed30341bbe0fb6042f15"
+    sha256 x86_64_linux:  "e8e6c18ad6782f533e82858b9e832ca2a05e0d641e1e99ae22e31531248dc489"
   end
 
   depends_on "libtool" => :build
