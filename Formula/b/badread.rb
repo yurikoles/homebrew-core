@@ -3,8 +3,8 @@ class Badread < Formula
 
   desc "Long read simulator that can imitate many types of read problems"
   homepage "https://github.com/rrwick/Badread"
-  url "https://github.com/rrwick/Badread/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "236dee5ac99b8d0c1997c482df5b805908b0c34f75277ef706e897af71db1f9a"
+  url "https://github.com/rrwick/Badread/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "488ee2c4b87c064904e2ea1ef24ef833c2f5932aa4c1f03e361e2e4061692baf"
   license "GPL-3.0-or-later"
 
   bottle do
