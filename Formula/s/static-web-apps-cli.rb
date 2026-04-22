@@ -6,7 +6,7 @@ class StaticWebAppsCli < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b84b059b27552e7d5ab0ee1f7019c1eca8aa5331c3ec43f986923e10ccc8fd4b"
+    sha256 cellar: :any_skip_relocation, all: "45b04fa06f9cbc703c9113b972d0f0cf54dfdac914e1f4aafee527da0050cb09"
   end
 
   depends_on "node"
