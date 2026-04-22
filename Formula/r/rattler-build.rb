@@ -15,12 +15,12 @@ class RattlerBuild < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "80b7e6113146eff8d895d65d9bca8083f2506f401f684ad493f321cc16824210"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8b80cd48d6e9b50035a7b96db6f33609837494a0f3b4fea7574d6d9b3898c82b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cf9c91d6b2ff274b8f079c9a5ed082ebe3e9981a3d5ab8d3fce977d107b0fe94"
-    sha256 cellar: :any_skip_relocation, sonoma:        "658b78b6083c50227baf51454d9440bf0a7af0f474edd2bd4c6887b97949b87e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "2fb4df291ed3cb8ad3e397ed35701e424729948ebe8088ae049df0b4fe1e5284"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a967cbeb99eb03b5090aec33c88a464d7080657bfc75af9e8d81081015338c39"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f1d7c94cdc37a5280a48e2eab66c06b5c351639ea6641fad9d078fc56dede743"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8d1afeedb9f799f65051e88d570456ccab102e2b2b47c7681e2f4b1e3c524507"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1a66eef4235bfb2d72da32beabfa82acd186adc01ef65c88c000484f0d03c75d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "5bb67f2c8f93d6ecf84d08a857a0139409a83eeb584970f2550952a0bcb07415"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3a31c6f669f814928e7294de9e29568c0ca29d75443b9b96e4325487273a981f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f820651d3651ac95ed410367352de40027eba15942595104cc9cf4d594478fc8"
   end
 
   depends_on "pkgconf" => :build
