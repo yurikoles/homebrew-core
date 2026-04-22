@@ -11,12 +11,12 @@ class Fdroidserver < Formula
   no_autobump! because: "has non-PyPI resources"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "8cd579138a5d350f8b7fd12c3771fb4f9b2bc8065a05e735a4ef076766bc59ca"
-    sha256 cellar: :any,                 arm64_sequoia: "50cfb1bf19175d0825d25003ac37df0d0cd034406aac6f227e64841b9337b7dc"
-    sha256 cellar: :any,                 arm64_sonoma:  "4f186f4b340e3e60d8114801a58d7436a92c0a15d37aeeed3edae52f04e1e51b"
-    sha256 cellar: :any,                 sonoma:        "d54bfd66d34ebcc8c1ebe303eb2f03dfceb87b5c4090ec634501af784b4ab100"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "67aba7c3aabff0c3748710141ac4de252c6edbc415a10e7c5719dae0df7286e8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "17ce0b6750ca7dbfd2bab3889ce1ed8881498bb26edf756bfc20bfe513ce00ea"
+    sha256 cellar: :any,                 arm64_tahoe:   "18d31a340130e753fdc4e1897e0396fd0684840ba9f1a82cba3088137d9068df"
+    sha256 cellar: :any,                 arm64_sequoia: "2acc1abfb520350ae6df8bf995e0d2ce6c7e87459c727e7be1fa1cb9e4a812b5"
+    sha256 cellar: :any,                 arm64_sonoma:  "66f2ce12c1048b8004cba77d5637289b166bec8be8f2dcf348c214d039dd5969"
+    sha256 cellar: :any,                 sonoma:        "e644a681e9352e21cf1696290240d31cf3a2d93e0aba38ca6ea49ed3d7a23703"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "690cda93f43579ceddb4d369b3737654a81c1bb8c8c013ef338f4701dad0c7dd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6cfbff4d517a15258cfe386ae63ff513bf8cea61331dc6596f57f9b1294abcde"
   end
 
   # `pkgconf` and `rust` are for bcrypt
