@@ -1,18 +1,18 @@
 class Worktrunk < Formula
   desc "CLI for Git worktree management, designed for parallel AI agent workflows"
   homepage "https://worktrunk.dev"
-  url "https://github.com/max-sixty/worktrunk/archive/refs/tags/v0.42.0.tar.gz"
-  sha256 "ac14ad3469ecb3e2b2a7f06c92eb346a043a644eb917a3d8338e2d39522cfc2b"
+  url "https://github.com/max-sixty/worktrunk/archive/refs/tags/v0.43.0.tar.gz"
+  sha256 "e9190598a75f124e0c3fcc3c999aae38195aa2763a562a739e0974ac4071350f"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/max-sixty/worktrunk.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "311d03e570c4be9e5ede5419918a143db541ac785e08ce810ddd9e8e14097c5e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4f5fbbdf82ab6b5390e18f191b9da4dd061b96550af26624b272a700e76a4e1b"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "59a9f8704c9ad9630734d857d74389335fce5600d6881246697985ca7a3b0db7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cb01c4ce6b1da320fa32eda011d41ee71e56febda1ac6fbaf6da982b02ca4cf0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "46865b1b284e239840e775c3268d845be3b83e442cc645470fe36c2c18e11187"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6093b4f668b44c770633713058769c9a55fae9e161778f01bc74e2dce9e1368b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ea365aeb3f11b399939d8d7804cc5c143c40c728ae008eaef8917214e211cb58"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "63161e202d2ade729f988729df170533c5d04148b95395903bbe1418dae6bb2f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0f8ce447235a6d519c3700136698652d4a219de5c24e20367eeb9ad0df90fdfb"
+    sha256 cellar: :any_skip_relocation, sonoma:        "17fb05f96ea744b150a1d8ac4451a8c3dd0ac7e5049bd3aae4cc360156f0ba3b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f093652d47a4d78ee2dbce99a834ed631365df6732a8c43feb1cd10884ac035d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d10dfe2c408aca05396f7b167d03d28f539919b7f9da30b6bda726ccbae7b691"
   end
 
   depends_on "rust" => :build
