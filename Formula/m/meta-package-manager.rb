@@ -7,6 +7,7 @@ class MetaPackageManager < Formula
   url "https://files.pythonhosted.org/packages/19/cc/902b1f4e8861517ebbd3a556642d68a920aa3d548785ec56e185f353b856/meta_package_manager-6.3.0.tar.gz"
   sha256 "04fe3b0ff3d798154ef9dbecc0f8c10e8a44fd2a62ff9e284a44c20b8e981df6"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/kdeldycke/meta-package-manager.git", branch: "main"
 
   bottle do
@@ -71,8 +72,8 @@ class MetaPackageManager < Formula
   end
 
   resource "click-extra" do
-    url "https://files.pythonhosted.org/packages/21/2b/a9863024cc55ce065316efd3acfd4faff133d864e66dd1ed61ad367bc468/click_extra-7.10.1.tar.gz"
-    sha256 "dbee5339f27474a7bd1fc83b80c498e1cf7d1f48128598006aadeec83834c27f"
+    url "https://files.pythonhosted.org/packages/fc/3b/61fab1784a949eec5337cfd45ceb12f87d12757d0cffac850b50cafc269e/click_extra-7.13.0.tar.gz"
+    sha256 "52b27d746e8254c93320cc463750f376aea45aa61bd0de9a45412f471e54f63e"
   end
 
   resource "cloup" do
@@ -96,8 +97,8 @@ class MetaPackageManager < Formula
   end
 
   resource "extra-platforms" do
-    url "https://files.pythonhosted.org/packages/f7/ab/757eb1e8b77757651dd0c69d18d118b22608be551dfc06e3f3962f6bb474/extra_platforms-11.0.5.tar.gz"
-    sha256 "89ae7971ba79193a256af16b44f3b9ab1c16dc4ba671f80e6110fa421679a82e"
+    url "https://files.pythonhosted.org/packages/7c/7b/0049f8a7817ac4eb6ad1af72c7938fff3e2677d55468c87de792208e068c/extra_platforms-11.1.0.tar.gz"
+    sha256 "3045d722cab2b422a8fcbcba7f52026c33523cb147616d99fc50947f8e952375"
   end
 
   resource "fqdn" do
@@ -141,8 +142,8 @@ class MetaPackageManager < Formula
   end
 
   resource "lxml" do
-    url "https://files.pythonhosted.org/packages/43/42/149c7747977db9d68faee960c1a3391eb25e94d4bb677f8e2df8328e4098/lxml-6.0.3.tar.gz"
-    sha256 "a1664c5139755df44cab3834f4400b331b02205d62d3fdcb1554f63439bf3372"
+    url "https://files.pythonhosted.org/packages/28/30/9abc9e34c657c33834eaf6cd02124c61bdf5944d802aa48e69be8da3585d/lxml-6.1.0.tar.gz"
+    sha256 "bfd57d8008c4965709a919c3e9a98f76c2c7cb319086b3d26858250620023b13"
   end
 
   resource "more-itertools" do
