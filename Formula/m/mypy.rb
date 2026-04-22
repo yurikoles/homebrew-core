@@ -3,8 +3,8 @@ class Mypy < Formula
 
   desc "Experimental optional static type checker for Python"
   homepage "https://www.mypy-lang.org/"
-  url "https://files.pythonhosted.org/packages/0b/3d/5b373635b3146264eb7a68d09e5ca11c305bbb058dfffbb47c47daf4f632/mypy-1.20.1.tar.gz"
-  sha256 "6fc3f4ecd52de81648fed1945498bf42fa2993ddfad67c9056df36ae5757f804"
+  url "https://files.pythonhosted.org/packages/04/af/e3d4b3e9ec91a0ff9aabfdb38692952acf49bbb899c2e4c29acb3a6da3ae/mypy-1.20.2.tar.gz"
+  sha256 "e8222c26daaafd9e8626dec58ae36029f82585890589576f769a650dd20fd665"
   license "MIT"
   head "https://github.com/python/mypy.git", branch: "master"
 
