@@ -9,12 +9,12 @@ class LueReader < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0a61c7cc256197f660f36a06fc434f8664bbc7cee69a78c81b80c2c50bae862e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cec70521c14279ef0947540d059f5d7904077e1c96f621a7ab8a96396294fe66"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c758c7db8884d2719e6b13c960b1203045da0606d90ff20112b2120a277dc383"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2046c00b57b30bf1dd5a85dc52bd1240172db321701d689fa44d9f65f2d6dedd"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b617fdb7babe30e07511404694118268274f86ec26c91d43134a54f4cb42b4b4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b06617cc95107f63db01456ddad0a4fc0a58870dcf6df4a7463fd8af03c2f281"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0b2814d918b5560ee8a3d74aeffdabeb41617d37ee00bf1e8b79aa83775e9d82"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a883c2b626124e6c52a0edbdfeffff76a5a8511b6c27c5386bd897c5d5c09318"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "557998ca5e7f0ecb4cfd986d2554aedb0db00c7bd6b50574ef8e0ed7939c7fc8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "41971889171b1201abe69b5a97eb09675ce89b32b6eece3c4afe56b0a07b9301"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0634222b80338a02f2553d4116c6b9a8464decbcf1b17025b9203ebf13d5f0ea"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2a8962c34552f10824a497050d7bd20e8dba2bdce08b03cd242eecc2aab28274"
   end
 
   depends_on "certifi" => :no_linkage
