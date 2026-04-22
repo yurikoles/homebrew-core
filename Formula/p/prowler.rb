@@ -3,8 +3,8 @@ class Prowler < Formula
 
   desc "Tool for cloud security assessments, audits, incident response, and more"
   homepage "https://prowler.com/"
-  url "https://files.pythonhosted.org/packages/d2/af/a8a16fcffa280c9523e55be8dd0183eb717a1032b976ae42343f5c58f94f/prowler-5.24.1.tar.gz"
-  sha256 "07a2688edab64e4a7bb7054e0a2b43e9885dd22c1ed9c18340a99e421e7e8ad3"
+  url "https://files.pythonhosted.org/packages/9b/18/e6edb5ecc0d7a77940b62e5111df7fef8ce74d4ef04c0581ca2989624f77/prowler-5.24.2.tar.gz"
+  sha256 "8985799abf96d5ccccc9222983c25fc110ca52e3c4d193539306314444041717"
   license "Apache-2.0"
   head "https://github.com/prowler-cloud/prowler.git", branch: "master"
 
@@ -599,13 +599,13 @@ class Prowler < Formula
   end
 
   resource "iamdata" do
-    url "https://files.pythonhosted.org/packages/a8/13/dbbb4cc895a25ce0c69e403cfcdb7a5af29889f465ec778fb154e157f9cb/iamdata-0.1.202604201.tar.gz"
-    sha256 "8f25c20bdc2d3fa6ffbf1fdeb80733ee5f5c476b04c0fe4238e519a72a264fb3"
+    url "https://files.pythonhosted.org/packages/e2/d7/27a564a03bcc05848aab5c8ceba00e33cfeced96670bba93e2eb1be39bd2/iamdata-0.1.202604211.tar.gz"
+    sha256 "1193d2c71f8b8eeebaa6132b6ec8e637d60877f7b2a7b15882e983f936891f75"
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
-    sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
+    url "https://files.pythonhosted.org/packages/22/12/2948fbe5513d062169bd91f7d7b1cd97bc8894f32946b71fa39f6e63ca0c/idna-3.12.tar.gz"
+    sha256 "724e9952cc9e2bd7550ea784adb098d837ab5267ef67a1ab9cf7846bdbdd8254"
   end
 
   resource "importlib-metadata" do
