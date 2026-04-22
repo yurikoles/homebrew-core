@@ -11,12 +11,12 @@ class Pmtiles < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9920aca1ebe7f9ac196ce1bc3a4262626881dc0d10e483617cbebefeaf230b73"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9fb0e8aff15f6bc6db4797cd42afd5d031c600ef65d1ca2dd05a2b75e8fbf466"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8aafb63c3aee00c9d4ebcc358e940fc69839c45fcc4882f5e7a8fdd97f7573c6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ab331b8efd354a5148167b23fc8561db4cdb1bf6bf3fda183dc726a8b8328fbf"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "473b9ad9c577cf74267b068360b1f7ead50bfdc8ce542d2b098dac9e66db7af6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a614d0b189f217858a9799eb6407ddf8feb82ca8b8566f9aae02efbea60e1bb8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "350a039911e8fb1516d1af68a5e124176f4c6db75a0fcccc54a3792fec409308"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "812b3609b9a49da95fc13d4db1097bc9b08483d85fd35a56991a5efa910c1696"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "ac143421c13632e067214f86bd057d83139b7c4448209aca0560d63cf1c48829"
+    sha256 cellar: :any_skip_relocation, sonoma:        "95ba84435127974f308aafb87085d46463ebe29a3fd2f25b362fca8f4d63fcc0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fc8b8ae5e57299058b35799b65f362f0353f1acf0bd577a4dcfe697dc6b574d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7c8b7e05b7235b28ae0aa56533b018b3d77e91b97dc38270151ad03e159fe902"
   end
 
   depends_on "go" => :build
