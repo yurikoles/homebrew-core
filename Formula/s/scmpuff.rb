@@ -1,8 +1,8 @@
 class Scmpuff < Formula
   desc "Numeric file selection shortcuts for common git commands"
   homepage "https://github.com/mroth/scmpuff"
-  url "https://github.com/mroth/scmpuff/archive/refs/tags/v0.6.3.tar.gz"
-  sha256 "6a889718563dd3fbcccb49684acb628a9d3edb1f0e00dcb66502e2ee76c69f60"
+  url "https://github.com/mroth/scmpuff/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "dbff8913217f6ec0915671057933eacd692e7810bf64ded25bba63e98240b789"
   license "MIT"
   head "https://github.com/mroth/scmpuff.git", branch: "main"
 
