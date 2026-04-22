@@ -9,12 +9,12 @@ class Enex2notion < Formula
   revision 19
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "443c29d5d110b3a8b2a579833e5b6d9037ad25d7990e8e3824d795768d5dde12"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "fc29902297c00d108638042a6f07815593464d392dfc489766f92023226bac9f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "164ae7172686904d905028499716fb4a40f2dcba5bd2c29f72d0f0e2cdb1d470"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c066b6ac9b4a8ba7f5793783f73811cf7b449ca82af4f0dafa6e139c65754001"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "54eff76e5f08bae3ef399ea2916cee51a194f7dd20c8b28670aad2b47dd71de1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4ce8e67f7e4d11f7b668ccec8f8cb707e139bcda14f047c359dfff3452c4f50d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "06baab3ccfb6d78cd577fd1cb933ede26b98127686409fc23ca5d4cdd7086c74"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "144bc708a77980a2522e449dba61d54a676f72c56681c3be9aa38682f3028b9c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "2a46a44dfd4e757a180d3e3d191caf1fee4414998047fe99936bc18d77ff31a4"
+    sha256 cellar: :any_skip_relocation, sonoma:        "049f9783572b61abf8856030551227bb40bd8a49988aadbc87058e845ddda025"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d2cd92b7e70a13b9c0758d056fb4467d34659efc8d214f243dc4fbf1af32077e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c621745ce38de5f444cf6f1b8856e4ccc5965d1b21b5d1623f68ffffc48bf64f"
   end
 
   depends_on "certifi" => :no_linkage
