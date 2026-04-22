@@ -6,10 +6,10 @@ class Mtoc < Formula
   license "APSL-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "45bb1943f18afdc68144a47a8b41eb49b6c33ee7e1c2abf849c7cf4430956401"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ca67d4a6ce13ea0c4d29cb2f40d225390c1c66c23099cd328a45ff3d1008564f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "652f840b6cacf62d3c242baab4ffa8098657937d0d1aa6a6e53acfb461e3a3ae"
-    sha256 cellar: :any_skip_relocation, sonoma:        "cd38d1b84694e03fe9c4abf20746fb42bcd7a38023a681c3e6a1e98a23c10d44"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e996d7b3f938d78a596addcfb3e80252ecefc185bf9804aaab8487e305768517"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b3771dbe9bdb163d107a1a965fd940432f28fce425b9c6a73b69c98dc35dffea"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "537e62b8d59a45af233d66c2294361e9d89ce31ac57fd2f9b8b4c191a6a80e35"
+    sha256 cellar: :any_skip_relocation, sonoma:        "926cf20954a1b9c7a8bafe7ce597256d2f516cd16e1a4a48db600feec95d91ea"
   end
 
   depends_on "llvm" => :build
