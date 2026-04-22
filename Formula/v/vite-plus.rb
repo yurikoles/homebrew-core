@@ -1,8 +1,8 @@
 class VitePlus < Formula
-  desc "Vite+ is the unified toolchain and entry point for web development"
+  desc "Unified toolchain and entry point for web development"
   homepage "https://viteplus.dev"
-  url "https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v0.1.18.tar.gz"
-  sha256 "6ee77f933315145b50cf21db8505f6175fd744b4fac78c7d275562508097cbc0"
+  url "https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v0.1.19.tar.gz"
+  sha256 "74a8bfb1f58dfac6662cb6c1cf69fa4cd9a3e709cea8500cf642f4d75548991a"
   license "MIT"
   head "https://github.com/voidzero-dev/vite-plus.git", branch: "main"
 
@@ -23,8 +23,8 @@ class VitePlus < Formula
 
   resource "rolldown" do
     url "https://github.com/rolldown/rolldown.git",
-        revision: "27cb729813ae7facfe106a859458c199cc19955e"
-    version "27cb729813ae7facfe106a859458c199cc19955e"
+        revision: "edec4facc1c74a87af7f1ccc980488171ff6a04c"
+    version "edec4facc1c74a87af7f1ccc980488171ff6a04c"
 
     livecheck do
       url "https://raw.githubusercontent.com/voidzero-dev/vite-plus/refs/tags/v#{LATEST_VERSION}/packages/tools/.upstream-versions.json"
@@ -47,57 +47,42 @@ class VitePlus < Formula
     end
   end
 
+  # Fix missing le16toh symbol in `@ast-grep/napi`:
+  # https://github.com/voidzero-dev/vite-plus/pull/1437
+  patch do
+    url "https://github.com/voidzero-dev/vite-plus/commit/6dd682862703100367082594de2b672f84212637.patch?full_index=1"
+    sha256 "00480c9e6c12dddff00dc28cd4bab52a76bd1f504c8d83e79b52380baa6b713d"
+  end
+
   def install
     resource("rolldown").stage buildpath/"rolldown"
     resource("vite").stage buildpath/"vite"
 
     ENV["NPM_CONFIG_MANAGE_PACKAGE_MANAGER_VERSIONS"] = "false"
-    ENV["CARGO_NET_GIT_FETCH_WITH_CLI"] = "true"
-    ENV["VITE_PLUS_VERSION"] = version.to_s
-    ENV["CARGO_PKG_VERSION"] = version.to_s
 
-    # fspy normally embeds this preload library via nightly Cargo's `-Z bindeps`.
+    # fspy requires nightly Cargo's `-Z bindeps`.
     # Use a stable-Rust stub to keep the CLI buildable without nightly.
     ENV["RUSTC_BOOTSTRAP"] = "1"
 
-    (buildpath/"fspy_stub.c").write "void __fspy_stub(void) {}\n"
-    fspy_stub = buildpath/shared_library("libfspy_preload_unix")
-    system ENV.cc, OS.mac? ? "-dynamiclib" : "-shared", "-o", fspy_stub, "fspy_stub.c"
-    ENV["CARGO_CDYLIB_FILE_FSPY_PRELOAD_UNIX"] = fspy_stub
-
-    inreplace "crates/vite_global_cli/Cargo.toml", /version = "0.0.0"/, "version = \"#{version}\""
-
-    if OS.linux? && Hardware::CPU.arm?
-      # @ast-grep/napi 0.40.4 linux-arm64-gnu has undefined symbol: le16toh; 0.40.5 fixes it
-      lockfile = buildpath/"pnpm-lock.yaml"
-      inreplace lockfile,
-        "  '@ast-grep/napi-linux-arm64-gnu@0.40.4':\n    resolution: " \
-        "{integrity: " \
-        "sha512-1CeDsK6WRMz169mTXLfXdn2GkQAsMkYbqGd7mHDa2VqutJwDYrqe6t4QiFAlr+LRT2bQuExpPh3AiC8BNd6UQQ==}",
-        "  '@ast-grep/napi-linux-arm64-gnu@0.40.5':\n    resolution: " \
-        "{integrity: " \
-        "sha512-nBRCbyoS87uqkaw4Oyfe5VO+SRm2B+0g0T8ME69Qry9ShMf41a2bTdpcQx9e8scZPogq+CTwDHo3THyBV71l9w==}"
-      inreplace lockfile,
-        "  '@ast-grep/napi-linux-arm64-gnu@0.40.4':\n    optional: true",
-        "  '@ast-grep/napi-linux-arm64-gnu@0.40.5':\n    optional: true"
-      inreplace lockfile,
-        "      '@ast-grep/napi-linux-arm64-gnu': 0.40.4",
-        "      '@ast-grep/napi-linux-arm64-gnu': 0.40.5"
-    end
+    inreplace "crates/vite_global_cli/Cargo.toml", 'version = "0.0.0"', "version = \"#{version}\""
 
     system "just", "build"
     system "cargo", "install", *std_cargo_args(path: "crates/vite_global_cli")
 
     system "pnpm", "--filter=vite-plus", "deploy", "--prod", "--legacy", "--no-optional",
            prefix/"node_modules/vite-plus"
-    rm_r (prefix/"node_modules/vite-plus/node_modules/.pnpm").glob("*/node_modules/*/prebuilds/{darwin,ios}-x64*")
-    rm_r (prefix/"node_modules/vite-plus/node_modules/.pnpm").glob("fsevents@*/node_modules/fsevents")
+    node_modules = prefix/"node_modules/vite-plus/node_modules"
+    rm_r node_modules.glob(".pnpm/*/node_modules/*/prebuilds/{darwin,ios}-x64*")
+    rm_r node_modules.glob(".pnpm/fsevents@*/node_modules/fsevents")
 
     # Symlink vp to vpr and vpx. These are detected at runtime by argv[0]
     bin.install_symlink bin/"vp" => "vpr"
     bin.install_symlink bin/"vp" => "vpx"
 
-    generate_completions_from_executable(bin/"vp", shell_parameter_format: :clap)
+    # Generate shell completions, vp uses clap but with a custom env var so we can't use our helper
+    (bash_completion/"vp").write Utils.safe_popen_read({ "VP_COMPLETE" => "bash" }, bin/"vp")
+    (fish_completion/"vp.fish").write Utils.safe_popen_read({ "VP_COMPLETE" => "fish" }, bin/"vp")
+    (zsh_completion/"_vp").write Utils.safe_popen_read({ "VP_COMPLETE" => "zsh" }, bin/"vp")
   end
 
   test do
