@@ -9,12 +9,12 @@ class Urlwatch < Formula
   revision 8
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "22ece9a5afa5b7149eb9276bbc04ee54433f4c460c1af226bcbe743345cc9813"
-    sha256 cellar: :any,                 arm64_sequoia: "5bdf5c3dbbd56ce7f929e226be65c9ed48a3b90d3bb84a4a2bbb7b3501857349"
-    sha256 cellar: :any,                 arm64_sonoma:  "0ee3a871a898ffc61896e09340ebf0af95267c92f5f1606f9443be33bcc21934"
-    sha256 cellar: :any,                 sonoma:        "57d8ba8ddcd31290943d9bf7a32edf807afdda3a07217a0740d72f71309d14c0"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ce3d2250e300a01b4b65c3c8b32f089384a269258b9b3c72b51c7f7e8f5325a3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e3ea56504acc6bbb537e7ececf6ed35e311e8a964cd4d066630a8715ae7166b0"
+    sha256 cellar: :any,                 arm64_tahoe:   "a527dfe6bad663f3c32332569bab4e3ba923a7d4f6adb4bd8ed25ad29903ab24"
+    sha256 cellar: :any,                 arm64_sequoia: "c99602006b6dab582e44f8e1925b800cb045f30566867de6060e9d99801e3ece"
+    sha256 cellar: :any,                 arm64_sonoma:  "202feffaed5bf9fe481722d0c1702f2c2e936def7c96db24fccf1c19895a427a"
+    sha256 cellar: :any,                 sonoma:        "e4449beef82b767d5f8c5fd3610eef56621e1251c742d6f9cc872433e42aa7c4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "cabbd7d7786a7d7f0cbd397a46318b9a9ea8afc775d69b4218ed8612b9a5dc5f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d5d4452675f3d6a111ca0e5da6ca8d8600fe93569e9b0b88c569f0688303a2de"
   end
 
   depends_on "certifi"
