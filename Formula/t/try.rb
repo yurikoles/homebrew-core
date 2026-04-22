@@ -1,8 +1,8 @@
 class Try < Formula
   desc "Quickly manage and navigate project directories for experiments"
   homepage "https://github.com/tobi/try"
-  url "https://github.com/tobi/try/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "9f6286851a0bb778e3e067921537dda7e9bd40343acdda48d9ba471e6179dd86"
+  url "https://github.com/tobi/try/archive/refs/tags/v1.9.3.tar.gz"
+  sha256 "ae1917c7349d3ea41be829b21ef5e4a362e629a923a442d4da525b77cb3117c0"
   license "MIT"
   head "https://github.com/tobi/try.git", branch: "main"
 
