@@ -10,12 +10,12 @@ class Fonttools < Formula
   head "https://github.com/fonttools/fonttools.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0001eade086c988cc672a9af2c8d2038f960dab53e142be6cc36c0a27528f503"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4bfca89bd45e458aaeb6f4eb1cc6d51537e3512f50c166f13bc48062c5e21f1f"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9fffee9a93cbd3c1fbaf9da2df0962dde4a0f9c7c219770e519913944473f14f"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d8a3eca0b7071caedcd3df47db52c9f9eb75f557a25f1121120dddb33fd33a01"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b96504a66b7fa25e346f7eb239e035469bacb53517373d52f7395b6326da04d2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9e40c0be7be38a9772da15b050a7ee38a350f055141889a985646b569cff30e0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d5e9d042a2f3b8affe6b26fe47a2c2888c3fe6d0c3f3f7471ff7a2d3f485f6fb"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4c2d2dda00716a09061fc0ae5e4e5a2e1c1bdcdae37c23874aad8cc0f66362c6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "26eb590d85594bc421ec8a4cd95ad119abddb7b4940be509900a08aecb9e8499"
+    sha256 cellar: :any_skip_relocation, sonoma:        "08a78111912250c5bb3e6b652596a9184002c84a45167292d49adb2602c3ed9e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "4c45b1aedd915c79e55c915b62bfb9130e822edfc610ddb7f46757bff32a0949"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ca115bd6504c88fb31868b3b009416f343fe43899e69a25eb1f6458f2d2341cc"
   end
 
   depends_on "python@3.14"
