@@ -3,20 +3,19 @@ class Ansible < Formula
 
   desc "Automate deployment, configuration, and upgrading"
   homepage "https://www.ansible.com/"
-  url "https://files.pythonhosted.org/packages/e0/de/07e07221bb555a1cb3506135377923ce4caefe8306f5ca6431801738b74a/ansible-13.5.0.tar.gz"
-  sha256 "69b175e694d9511fec838b0a82f150bab366dd9cb7a829096c3d3a72f6046719"
+  url "https://files.pythonhosted.org/packages/fe/30/41f9a93c339a52e944f49b59cc9b1663e0403b2feecefcf89834df8dd8b9/ansible-13.6.0.tar.gz"
+  sha256 "5141552c1bd37f56839eb5b11ef0d93e92391295c97947d507b8daf7265b12b8"
   license "GPL-3.0-or-later"
-  revision 2
   compatibility_version 2
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "273ad04441a08a470778e7d9fe063244a2e88d258649bdbf7f4d3e4b5bf68fe7"
-    sha256 cellar: :any,                 arm64_sequoia: "dd497198cc05f09a2b75a059a1292b9e70d14aad0a967015543ec3256b13024f"
-    sha256 cellar: :any,                 arm64_sonoma:  "554a0fb2a601046aa5d4048ebcb0c013e777fdbd012eb6afde820c7cd37d2755"
-    sha256 cellar: :any,                 sonoma:        "d7dcd0b82c8b70ad576406e98aeb7fb96bca4914c8f649b05b2fed829491b8b3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8ee91c6bb7125dfc345d22039a9e84e98cb4f6fefd7e9076043339b02c1e8820"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5c3b3807055bfd2df83aecdd4e6995e62139509a358fd5fdb3901bd23d33c8ec"
+    sha256 cellar: :any,                 arm64_tahoe:   "6e78b7b83b84b63da3df841db34a4eedc3e9bd35795c49f91da35e77c4da5545"
+    sha256 cellar: :any,                 arm64_sequoia: "bb14ba8f2e99f60450314770f18c305c93ee9bcf7f3dff8b7436f7495711f7e5"
+    sha256 cellar: :any,                 arm64_sonoma:  "e72389159c3122d0932b92c0833694eaa1067f0e031f92ff6dcdccf45286bfa0"
+    sha256 cellar: :any,                 sonoma:        "8db912a20e8589a2459ca6da428540412c53647172efb8dbd6fcd26a3c0dd599"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d18e19fb49142217211e87dccc2053a141d68c15bd0e8b000b67e10b6489739a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5e64dc004a4d563bc0f634c8f283e2faf8d2d31808e6c705113c425eb657c5a1"
   end
 
   # `pkgconf` and `rust` are for bcrypt
@@ -136,8 +135,8 @@ class Ansible < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
-    sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
+    url "https://files.pythonhosted.org/packages/22/12/2948fbe5513d062169bd91f7d7b1cd97bc8894f32946b71fa39f6e63ca0c/idna-3.12.tar.gz"
+    sha256 "724e9952cc9e2bd7550ea784adb098d837ab5267ef67a1ab9cf7846bdbdd8254"
   end
 
   resource "invoke" do
