@@ -7,12 +7,12 @@ class Kubefwd < Formula
   head "https://github.com/txn2/kubefwd.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3ef694f943b081886b02079b60581002a185fe67470485616c4001ec68c8922b"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "02a4bf5b4fb5b690fce6925f02a29f29fecf844a7718f98a8aae913df791420a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8c3d2450c227875054d4b41299a767e77483b9044b079ff051b09ba4af970e8d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "5b308ca45d76c2fe6fa2170af36f11d1c9320c5eb24f310af608cbe98544cb21"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "f2954c48d048dfd3de4068b62a8c09ec2a7098957e9cd5488afef97fc70468ab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "074929ab6477ce1a1a10e852b2337a5a27114f203b3d7a9dc8f970ffaad0227e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "01fcec076c3a35ddfae21d85e14e873dfb69a64a5b488e653783ceeacced8a8b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9df44b82c1bcf10af395577140ada5b5e4aa7c15a1021a6ee796a65ff6ce1268"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "a6b53025c97080859c135023c770601a639190551154632b0dbb79d6d8f9045e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "69719ec939e51cd04524efe46e9ab254d5cff89bbe34dacacbfff489d2a2014d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d24469bb2f0a2111f32cb16f5375e66ba3f402d511ecf4f61864fdb11b6aaaab"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9522f0b549854c42c5d7db91ed46cad333fbb576ea521554e2797a8f47a0346"
   end
 
   depends_on "go" => :build
