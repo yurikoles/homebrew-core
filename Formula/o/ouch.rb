@@ -1,8 +1,8 @@
 class Ouch < Formula
   desc "Painless compression and decompression for your terminal"
   homepage "https://github.com/ouch-org/ouch"
-  url "https://github.com/ouch-org/ouch/archive/refs/tags/0.7.0.tar.gz"
-  sha256 "cbcfbc41cabfaa562dd7f8ca556f981d85612d3b1d457c00ea1b1ee59e19fb79"
+  url "https://github.com/ouch-org/ouch/archive/refs/tags/0.7.1.tar.gz"
+  sha256 "9dadaa3340972347c39e0047668af0e2c59c6128470eeb3fdf86629a3b298443"
   license "MIT"
   head "https://github.com/ouch-org/ouch.git", branch: "main"
 
@@ -35,10 +35,6 @@ class Ouch < Formula
   end
 
   def install
-    # Workaround forgotten version update in Cargo.toml
-    # https://github.com/ouch-org/ouch/issues/954
-    inreplace "Cargo.toml", "version = \"0.6.1\"", "version = \"#{version}\""
-
     # for completion and manpage generation
     ENV["OUCH_ARTIFACTS_FOLDER"] = buildpath
 
