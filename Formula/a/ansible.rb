@@ -3,10 +3,9 @@ class Ansible < Formula
 
   desc "Automate deployment, configuration, and upgrading"
   homepage "https://www.ansible.com/"
-  url "https://files.pythonhosted.org/packages/e0/de/07e07221bb555a1cb3506135377923ce4caefe8306f5ca6431801738b74a/ansible-13.5.0.tar.gz"
-  sha256 "69b175e694d9511fec838b0a82f150bab366dd9cb7a829096c3d3a72f6046719"
+  url "https://files.pythonhosted.org/packages/fe/30/41f9a93c339a52e944f49b59cc9b1663e0403b2feecefcf89834df8dd8b9/ansible-13.6.0.tar.gz"
+  sha256 "5141552c1bd37f56839eb5b11ef0d93e92391295c97947d507b8daf7265b12b8"
   license "GPL-3.0-or-later"
-  revision 2
   compatibility_version 2
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
@@ -136,8 +135,8 @@ class Ansible < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
-    sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
+    url "https://files.pythonhosted.org/packages/22/12/2948fbe5513d062169bd91f7d7b1cd97bc8894f32946b71fa39f6e63ca0c/idna-3.12.tar.gz"
+    sha256 "724e9952cc9e2bd7550ea784adb098d837ab5267ef67a1ab9cf7846bdbdd8254"
   end
 
   resource "invoke" do
