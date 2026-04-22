@@ -47,6 +47,7 @@ class Shamrock < Formula
     args = %W[
       -DSHAMROCK_ENABLE_BACKEND=SYCL
       -DPYTHON_EXECUTABLE=#{python}
+      -DCMAKE_INSTALL_PYTHONDIR=#{site_packages(python)}
       -DSYCL_IMPLEMENTATION=ACPPDirect
       -DCMAKE_CXX_COMPILER=acpp
       -DACPP_PATH=#{Formula["adaptivecpp"].opt_prefix}
@@ -58,15 +59,6 @@ class Shamrock < Formula
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
-
-    py_package = site_packages(python).join("shamrock")
-
-    mkdir_p py_package
-    cp_r Dir["build/*.so"], py_package
-
-    (py_package/"__init__.py").write <<~PY
-      from .shamrock import *
-    PY
   end
 
   test do
