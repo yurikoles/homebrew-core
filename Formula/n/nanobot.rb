@@ -7,12 +7,12 @@ class Nanobot < Formula
   head "https://github.com/nanobot-ai/nanobot.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "28f0a1eedc56152f2cf3d7c5d6ca50143470bc52010a399e4af862698e3c9a8c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4a2d68495e8914efe995d09a4f3790a78a240e80bed3b108c3f21ceee99bbce7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "fc597774ebda6c129b4fa8a3631ac881358aa3f99440db8384ab069042bd3237"
-    sha256 cellar: :any_skip_relocation, sonoma:        "457bb683c28d187045903232c131251a34613cc47dc63714c5114dcb51230aa8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "6ef9def686ca4ad4617a386c5a5bd38e1a85bb2db5c425cebf64b60e3fa6a834"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "08b208f790b23a7da6dedb446abb23cbf296a46324971d60df223bb8a8474eb8"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6d9115386fbafd0e3eb80e7f8a2e9f8e9398edf953eb6e862a9c21b0b0b4e04b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c07df2ddb012f333159ecd65a8891be3f470c35a97cd8e977322542051d93b00"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "285a448ee2528051ef043abea8c0c62054dee46cedc434968fee293aafa68459"
+    sha256 cellar: :any_skip_relocation, sonoma:        "05690157e05d06c7942a85d4cfc2208394bd78704ee64485ea02702f14dfe9d9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5d989bc06f6771f3d21d534b356a22c2bbb64b0f7545cfd015abf07af5cc249e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3623396c0363a1c139e96f4ef26b3e31f3b1b50bb8c33653bd7d8a2ee8f25def"
   end
 
   depends_on "go" => :build
