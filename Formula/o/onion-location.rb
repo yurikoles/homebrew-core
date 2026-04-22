@@ -10,12 +10,12 @@ class OnionLocation < Formula
   head "https://codeberg.org/Freso/python-onion-location.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "baa4ff2b02318710c4850c12d8edb6ab4bcc5af830b444c986a80868c5d528bc"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b71f3837e7e808014ee217baf60334de606a89578501704f5ef867f17a005277"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f9b7fdcf9c7d60d720575abaaae39b8957d798eee94dc1211004eb0303bc8da8"
-    sha256 cellar: :any_skip_relocation, sonoma:        "eb545649597b97ecd542a47aefbe7bad5fe08b6a553d80e47c53b1f826cefc3b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ad645508d83434779999108a74dae0912214966df64a4ac6744b53dc5b369bab"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "c2ccd7b906a0e2d403e7c2670d2170e854a93f3935de3629c3ae4a4a7ada7e1b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "c5269569ff0fa6d6df925661c2e84af617e587c8c88a143780ab22a5cdb7b05a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "7bc2d10df3c754847b79e6ccfc7487de05882bf0c06ae202a0ca9ca7345d6201"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "da547be0eefb2d66baaf86ffa2d2104668a2f666e16508617e8db76a1eb88d2a"
+    sha256 cellar: :any_skip_relocation, sonoma:        "526d7270029ec4d12f3cae562cd87899a187cc44d299e050e64654de247ef1f1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7f4fbccbe514d2545b48ba333cc11bd29e6fe6413b8e31e03ea2ce66a2416c08"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aa473935477f402322158be862a9cb575c67ed375e7932ecf9877d094a57ceed"
   end
 
   depends_on "python@3.14"
