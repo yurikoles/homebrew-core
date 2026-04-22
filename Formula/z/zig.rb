@@ -4,6 +4,7 @@ class Zig < Formula
   url "https://ziglang.org/download/0.16.0/zig-0.16.0.tar.xz"
   sha256 "43186959edc87d5c7a1be7b7d2a25efffd22ce5807c7af99067f86f99641bfdf"
   license "MIT"
+  revision 1
   compatibility_version 1
 
   livecheck do
@@ -34,6 +35,13 @@ class Zig < Formula
 
   # https://github.com/Homebrew/homebrew-core/issues/209483
   skip_clean "lib/zig/libc/darwin/libSystem.tbd"
+
+  # Force Zig to use the system libc++ on Darwin. Without this, the vendored
+  # libc++ gives `zig` a private std::error_code category that disagrees with
+  # libLLVM.dylib's, breaking comparisons across the boundary — e.g. `zig ar`
+  # can't create new archives with ZIG_SHARED_LLVM=ON.
+  # https://github.com/Homebrew/homebrew-core/issues/278849
+  patch :DATA
 
   def install
     # Reduce max_rss to build on CI with less than 8GB memory available
@@ -113,5 +121,42 @@ class Zig < Formula
     C
     system bin/"zig", "cc", "hello.c", "-o", "hello-c"
     assert_equal "Hello, world!", shell_output("./hello-c")
+
+    # Regression test for `zig ar` creating a new archive.
+    # https://github.com/Homebrew/homebrew-core/issues/278849
+    system bin/"zig", "cc", "-c", "hello.c", "-o", "hello.o"
+    system bin/"zig", "ar", "rcs", "test.a", "hello.o"
+    assert_path_exists testpath/"test.a"
+
+    return unless OS.mac?
+
+    # Guards against `zig` vendoring its own libc++. Before removing,
+    # confirm the binary has no private libc++ of its own.
+    # https://github.com/Homebrew/homebrew-core/issues/278849
+    require "utils/linkage"
+    library = "/usr/lib/libc++.1.dylib"
+    assert Utils.binary_linked_to_library?(bin/"zig", library), "No linkage with #{library}!"
   end
 end
+
+__END__
+diff --git a/build.zig b/build.zig
+--- a/build.zig
++++ b/build.zig
+@@ -859,7 +859,15 @@
+                 mod.linkSystemLibrary("unwind", .{});
+             },
+             .driverkit, .ios, .maccatalyst, .macos, .tvos, .visionos, .watchos => {
+-                mod.link_libcpp = true;
++                const io = b.graph.io;
++                if (static or !std.zig.system.darwin.isSdkInstalled(b.allocator, io)) {
++                    mod.link_libcpp = true;
++                } else {
++                    const sdk = std.zig.system.darwin.getSdk(b.allocator, io, target) orelse
++                        return error.SdkDetectFailed;
++                    const libcpp_tbd = b.pathJoin(&.{ sdk, "usr/lib/libc++.tbd" });
++                    mod.addObjectFile(.{ .cwd_relative = libcpp_tbd });
++                }
+             },
+             .windows => {
+                 if (target.abi != .msvc) mod.link_libcpp = true;
