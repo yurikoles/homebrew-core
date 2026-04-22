@@ -10,12 +10,12 @@ class Bazarr < Formula
   head "https://github.com/morpheus65535/bazarr.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "32517782716a2fd4aba922414143b82d62b1d42fd858f8df13fbb2ac7ba7e86e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "85e25bf688abf3a6e2288a9222fef4b07fc271fdcc93212fd7bf89ea9b780277"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9221b270a75c7ce7ab3d69e0aaf68b03630d942578467cb09bc96773ac042379"
-    sha256 cellar: :any_skip_relocation, sonoma:        "2d6ab6523eb2ea23d569cadd82f4320d6a2ba242a42db2745d5000b5474bd559"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "108a8887b729fa30be916d4c6d32520b80b31802a2a1e9c0660455947f975885"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b59866e003aadf13af65ea4a6f656ff22e1fb04589e211f26950e9180ffd7331"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a9210764fdf3bbe4f067906d4aec24f542c6d6b523ec257f0c33d0bdb9d2bd1a"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9ed5176ea40fbbcd650625b8f43b9ab8ef15b92c7ac891c33da16e39e87a2a5f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e47bd6bf7faf6165defa0ebc34ee676811e259848c86eada8ce467cd03cf310d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8192a934c8cf1fc7e99f95dcb9d27cf702ea842c389599c6f9a22c956c6a9f52"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e86a376e88002cc77cf303c425e7851e00cbbf445bbd430576a438ecb7665efb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9d40dd3c05c08b3bb9e1c0ff3f9c28a92ece81e568d51423685f32102d1e5dbb"
   end
 
   depends_on "node" => :build
