@@ -1,11 +1,11 @@
 class Libxmlsec1 < Formula
   desc "XML security library"
   homepage "https://www.aleksey.com/xmlsec/"
-  url "https://github.com/lsh123/xmlsec/releases/download/1.3.10/xmlsec1-1.3.10.tar.gz"
-  mirror "https://www.aleksey.com/xmlsec/download/xmlsec1-1.3.10.tar.gz"
-  sha256 "5915590780566dae4b5d13d51a42fc0e34b30b26fda6f2c5f744ec31b363ee1a"
+  url "https://github.com/lsh123/xmlsec/releases/download/1.3.11/xmlsec1-1.3.11.tar.gz"
+  mirror "https://www.aleksey.com/xmlsec/download/xmlsec1-1.3.11.tar.gz"
+  sha256 "53675e98fa83b48201d24f7bfbcaeaa1b51496b8b19ff969785856bdeb196af3"
   license "MIT"
-  compatibility_version 2
+  compatibility_version 3
 
   # Checking the first-party download page persistently fails in the autobump
   # environment, so we check GitHub releases as a workaround.
