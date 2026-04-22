@@ -6,6 +6,7 @@ class PodmanCompose < Formula
   url "https://files.pythonhosted.org/packages/24/91/b168a685ca6813ff9b467d76a7365a099aec16a1032b6edf39b0cd19f6c3/podman_compose-1.5.0.tar.gz"
   sha256 "5cc09362852711ce5d27648e41cb5fd058ea5a75acbcdec2f8d0b0c114a18e8e"
   license "GPL-2.0-only"
+  revision 1
 
   bottle do
     rebuild 1
@@ -22,8 +23,8 @@ class PodmanCompose < Formula
   depends_on "python@3.14"
 
   resource "python-dotenv" do
-    url "https://files.pythonhosted.org/packages/f6/b0/4bc07ccd3572a2f9df7e6782f52b0c6c90dcbb803ac4a167702d7d0dfe1e/python_dotenv-1.1.1.tar.gz"
-    sha256 "a8a6399716257f45be6a007360200409fce5cda2661e3dec71d23dc15f6189ab"
+    url "https://files.pythonhosted.org/packages/82/ed/0301aeeac3e5353ef3d94b6ec08bbcabd04a72018415dcb29e588514bba8/python_dotenv-1.2.2.tar.gz"
+    sha256 "2c371a91fbd7ba082c2c1dc1f8bf89ca22564a087c2c287cd9b662adde799cf3"
   end
 
   resource "pyyaml" do
