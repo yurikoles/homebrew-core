@@ -4,6 +4,7 @@ class MlxC < Formula
   url "https://github.com/ml-explore/mlx-c/archive/refs/tags/v0.6.0.tar.gz"
   sha256 "6ec2eab86ed3ce661c0d9b834027870651546138b7b4470fa8ef5533498c79aa"
   license "MIT"
+  revision 1
   compatibility_version 1
 
   bottle do
@@ -24,6 +25,12 @@ class MlxC < Formula
   fails_with :clang do
     build 1500
     cause "Requires C++20 support"
+  end
+
+  # pr ref: https://github.com/ml-explore/mlx-c/pull/114
+  patch do
+    url "https://github.com/GunniBusch/mlx-c/commit/3fce35b0b1fa1160fdf767229bfb84d695ef1e5d.patch?full_index=1"
+    sha256 "0361169fe85cdaccfb9a25e3f8a9991951b263b33b7683867972c36dca05e97c"
   end
 
   def install
