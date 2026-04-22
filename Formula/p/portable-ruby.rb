@@ -14,10 +14,10 @@ class PortableRuby < PortableFormula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f41c72b891c40623f9d5cd2135f58a1b8a5c014ae04149888289409316276c72"
-    sha256 cellar: :any_skip_relocation, catalina:      "7c7830166a509857669c544dcba7a0d08ca656a3da073c68826ca0a5b1b56b12"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "7694e72a42b55e501c297bd7ba83ef94830de8dd800be292f7b1a64bc113976a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25a7c872b5e518adc2c6877e1474fba4dc7bd27f79729bfbfcc22d44fbca839f"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "8ad98d9cf15477d1a43f4012cfd5eff5c271398bca1e2724b55bd4944a0bb1d4"
+    sha256 cellar: :any_skip_relocation, catalina:      "f2bc4c3b081b09d7dcca97a8b8c5e102116e6ba68a5c118d6d961cf33b3162ec"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "0e69f1308c6b9158abdab1acd96a91fd5dfb6b95fe3af576163991d33ae2f683"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cb96f8003dc6afae036adeaf892578fbc34eb11bbb5660dca7213677fa1047e8"
   end
 
   depends_on "pkgconf" => :build
