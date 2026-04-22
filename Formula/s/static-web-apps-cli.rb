@@ -1,8 +1,8 @@
 class StaticWebAppsCli < Formula
   desc "SWA CLI serves as a local development tool for Azure Static Web Apps"
   homepage "https://azure.github.io/static-web-apps-cli/"
-  url "https://registry.npmjs.org/@azure/static-web-apps-cli/-/static-web-apps-cli-2.0.8.tgz"
-  sha256 "35b16aae6057ab0a15a083285259b439552c7c1565d0879bf915dc3c0b5282e9"
+  url "https://registry.npmjs.org/@azure/static-web-apps-cli/-/static-web-apps-cli-2.0.9.tgz"
+  sha256 "37a84f7df8934a507aa8bdacde6bbe4565d794b2951d5760da99d89cb6348871"
   license "MIT"
 
   bottle do
