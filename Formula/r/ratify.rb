@@ -1,8 +1,8 @@
 class Ratify < Formula
   desc "Artifact Ratification Framework"
   homepage "https://ratify.dev"
-  url "https://github.com/notaryproject/ratify/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "36b18d2070d76a6e85aa86bf94e4e68350c6c277985d6bc8e87a28c78ebb08b8"
+  url "https://github.com/notaryproject/ratify/archive/refs/tags/v1.4.1.tar.gz"
+  sha256 "58db052b8a02a7d5cc78dde837530c5d7fe0f525facd84d8aac4ef7ab93f5ce2"
   license "Apache-2.0"
   head "https://github.com/notaryproject/ratify.git", branch: "main"
 
