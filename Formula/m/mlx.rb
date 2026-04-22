@@ -3,13 +3,13 @@ class Mlx < Formula
 
   desc "Array framework for Apple silicon"
   homepage "https://ml-explore.github.io/mlx/build/html/index.html"
-  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.31.1.tar.gz"
-  sha256 "37e2a585a2bb28bcd3432af1c45d5c1ba8d560704ae285c3f9fd22a041e37004"
+  url "https://github.com/ml-explore/mlx/archive/refs/tags/v0.31.2.tar.gz"
+  sha256 "bdb9b619f80962dd00c0bffb65e59c53f565c2b550f189a1467f8bc6089401ab"
   license all_of: [
     "MIT", # main license
     "Apache-2.0", # metal-cpp resource
   ]
-  compatibility_version 2
+  compatibility_version 3
   head "https://github.com/ml-explore/mlx.git", branch: "main"
 
   bottle do
@@ -59,9 +59,11 @@ class Mlx < Formula
     # which redirects FetchContent_Declare() to find_package() and helps find our `fmt`.
     # To re-block fetches, we use the not-recommended `FETCHCONTENT_FULLY_DISCONNECTED`.
     args = %W[
-      -DCMAKE_MODULE_LINKER_FLAGS=-Wl,-rpath,#{rpath(source: mlx_python_dir)}
+      -DUSE_SYSTEM_FMT=ON
       -DHOMEBREW_ALLOW_FETCHCONTENT=ON
       -DFETCHCONTENT_FULLY_DISCONNECTED=ON
+      -DCMAKE_MODULE_LINKER_FLAGS=-Wl,-rpath,#{rpath(source: mlx_python_dir)},-rpath,#{lib}
+      -DCMAKE_INSTALL_RPATH=#{rpath}
       -DFETCHCONTENT_TRY_FIND_PACKAGE_MODE=ALWAYS
       -DFETCHCONTENT_SOURCE_DIR_GGUFLIB=#{buildpath}/gguflib
     ]
