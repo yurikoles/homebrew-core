@@ -1,18 +1,18 @@
 class Try < Formula
   desc "Quickly manage and navigate project directories for experiments"
   homepage "https://github.com/tobi/try"
-  url "https://github.com/tobi/try/archive/refs/tags/v1.9.0.tar.gz"
-  sha256 "9f6286851a0bb778e3e067921537dda7e9bd40343acdda48d9ba471e6179dd86"
+  url "https://github.com/tobi/try/archive/refs/tags/v1.9.3.tar.gz"
+  sha256 "ae1917c7349d3ea41be829b21ef5e4a362e629a923a442d4da525b77cb3117c0"
   license "MIT"
   head "https://github.com/tobi/try.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "521e3b8a8d73a27a2698b2e302ef48b0d8a9727fb1d48f9770cfec2341062d3e"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "521e3b8a8d73a27a2698b2e302ef48b0d8a9727fb1d48f9770cfec2341062d3e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "521e3b8a8d73a27a2698b2e302ef48b0d8a9727fb1d48f9770cfec2341062d3e"
-    sha256 cellar: :any_skip_relocation, sonoma:        "521e3b8a8d73a27a2698b2e302ef48b0d8a9727fb1d48f9770cfec2341062d3e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b8c0a20f7b2d35735bc893e334b765e56e4f24ee5e8a202c8308fe5e0dfd168d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b8c0a20f7b2d35735bc893e334b765e56e4f24ee5e8a202c8308fe5e0dfd168d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9fe1dd1ecae3168b6cad9674fbe8cdf19bc13ac7443f4ca65f73e22755bffe6c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9fe1dd1ecae3168b6cad9674fbe8cdf19bc13ac7443f4ca65f73e22755bffe6c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "9fe1dd1ecae3168b6cad9674fbe8cdf19bc13ac7443f4ca65f73e22755bffe6c"
+    sha256 cellar: :any_skip_relocation, sonoma:        "9fe1dd1ecae3168b6cad9674fbe8cdf19bc13ac7443f4ca65f73e22755bffe6c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "af18cae45334b193b08f409170eb6bd03a59cf3134da82a9341bc5e1f583a748"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "af18cae45334b193b08f409170eb6bd03a59cf3134da82a9341bc5e1f583a748"
   end
 
   depends_on "ruby"
