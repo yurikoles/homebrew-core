@@ -21,6 +21,7 @@ class Trufflehog < Formula
   def install
     ldflags = "-s -w -X github.com/trufflesecurity/trufflehog/v3/pkg/version.BuildVersion=#{version}"
     system "go", "build", *std_go_args(ldflags:)
+    man1.install "docs/man/trufflehog.1"
   end
 
   test do
