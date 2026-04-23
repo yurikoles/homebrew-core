@@ -1,8 +1,8 @@
 class Telnet < Formula
   desc "User interface to the TELNET protocol"
   homepage "https://opensource.apple.com/"
-  url "https://github.com/apple-oss-distributions/remote_cmds/archive/refs/tags/remote_cmds-306.tar.gz"
-  sha256 "7f014f7eebb115460ea782e6bcade6d16effa56da17ee30f00012af07bc96c36"
+  url "https://github.com/apple-oss-distributions/remote_cmds/archive/refs/tags/remote_cmds-308.tar.gz"
+  sha256 "cd4fb9d239a4db871c1e82416c42f8862fab26b9f32e292bcf61151a67174168"
   license all_of: ["BSD-4-Clause-UC", "APSL-1.0"]
 
   bottle do
@@ -57,7 +57,21 @@ class Telnet < Formula
   end
 
   test do
-    output = shell_output("#{bin}/telnet india.colorado.edu 13", 1)
-    assert_match "Connected to india.colorado.edu.", output
+    require "socket"
+
+    server = TCPServer.new("127.0.0.1", 0)
+    port = server.addr[1]
+
+    server_thread = Thread.new do
+      client = server.accept
+      sleep 1
+      client.close
+      server.close
+    end
+
+    output = shell_output("#{bin}/telnet 127.0.0.1 #{port} </dev/null 2>&1", 1)
+    assert_match(/Connected to (127\.0\.0\.1|localhost)\./, output)
+
+    server_thread.join
   end
 end
