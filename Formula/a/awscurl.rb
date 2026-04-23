@@ -3,8 +3,8 @@ class Awscurl < Formula
 
   desc "Curl like simplicity to access AWS resources"
   homepage "https://github.com/okigan/awscurl"
-  url "https://files.pythonhosted.org/packages/d0/7b/93fb6c0b449b6fb7cff9b3c0b59f63c0244bdf016010432a657ed9946bef/awscurl-0.40.tar.gz"
-  sha256 "300e9988be476312192ed3ad68b906caf201d0b58b14e1a5dc7f91d8f3be218b"
+  url "https://files.pythonhosted.org/packages/54/a3/fcbc64c5e038b87394e72a03131643109e451a697d467a7f90c6b6413ee9/awscurl-0.42.tar.gz"
+  sha256 "c19d05427a104c11f0080d74063e607e438fb3eaf789150c84bf6b28639f6937"
   license "MIT"
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
@@ -44,13 +44,13 @@ class Awscurl < Formula
   end
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/a7/c0/98b8cec7ca22dde776df48c58940ae1abc425593959b7226e270760d726f/boto3-1.42.91.tar.gz"
-    sha256 "03d70532b17f7f84df37ca7e8c21553280454dea53ae12b15d1cfef9b16fcb8a"
+    url "https://files.pythonhosted.org/packages/dd/ac/e6b2b24d53c830500176f710594efcde626186b5b3c9aead6f8837976956/boto3-1.42.93.tar.gz"
+    sha256 "ff81c6bac708cb95c4f8b27e331ac67d95c6908dd86bcb7b15b8941960f2bc4c"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/21/bc/a4b7c46471c2e789ad8c4c7acfd7f302fdb481d93ff870f441249b924ae6/botocore-1.42.91.tar.gz"
-    sha256 "d252e27bc454afdbf5ed3dc617aa423f2c855c081e98b7963093399483ecc698"
+    url "https://files.pythonhosted.org/packages/1b/d4/eb53f7ed81836696abf7103c9c901a0cace9217328094ca93419016a78c9/botocore-1.42.93.tar.gz"
+    sha256 "9ce49863c50b43f7942edd295fb16bfc6d227264ce6fc32c8f2426ef11b9351b"
   end
 
   resource "charset-normalizer" do
@@ -69,8 +69,8 @@ class Awscurl < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
-    sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
+    url "https://files.pythonhosted.org/packages/22/12/2948fbe5513d062169bd91f7d7b1cd97bc8894f32946b71fa39f6e63ca0c/idna-3.12.tar.gz"
+    sha256 "724e9952cc9e2bd7550ea784adb098d837ab5267ef67a1ab9cf7846bdbdd8254"
   end
 
   resource "jmespath" do
