@@ -36,7 +36,7 @@ class Pwsafe < Formula
     depends_on "automake" => :build
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "readline"
 
   # A password database for testing is provided upstream. How nice!
