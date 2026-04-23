@@ -29,7 +29,7 @@ class Md5sha1sum < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0055fc19d2c8072e2e576b7df8de777126f2b5ab2c1269ff224476f8aaf9d65b"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_sequoia :or_newer do
     keg_only :shadowed_by_macos, "macOS provides FreeBSD md5sum and sha1sum"
@@ -44,7 +44,7 @@ class Md5sha1sum < Formula
   end
 
   def install
-    openssl = Formula["openssl@3"]
+    openssl = Formula["openssl@4"]
     ENV["SSLINCPATH"] = openssl.opt_include
     ENV["SSLLIBPATH"] = openssl.opt_lib
 
