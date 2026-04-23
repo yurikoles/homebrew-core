@@ -1,8 +1,8 @@
 class MinizipNg < Formula
   desc "Zip file manipulation library with minizip 1.x compatibility layer"
   homepage "https://github.com/zlib-ng/minizip-ng"
-  url "https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.1.0.tar.gz"
-  sha256 "85417229bb0cd56403e811c316150eea1a3643346d9cec7512ddb7ea291b06f2"
+  url "https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.1.1.tar.gz"
+  sha256 "ecc1a514f9e455cb627a768e1219369c576a761bc04196941590906c8b622d7e"
   license "Zlib"
   head "https://github.com/zlib-ng/minizip-ng.git", branch: "develop"
 
@@ -24,7 +24,7 @@ class MinizipNg < Formula
   uses_from_macos "bzip2"
 
   on_linux do
-    depends_on "openssl@3"
+    depends_on "openssl@4"
     depends_on "zlib-ng-compat"
   end
 
@@ -33,6 +33,7 @@ class MinizipNg < Formula
       -DMZ_FETCH_LIBS=OFF
       -DMZ_LIB_SUFFIX=-ng
       -DMZ_LIBCOMP=OFF
+      -DMZ_PPMD=OFF
       -DMZ_ZLIB=ON
     ]
 
@@ -43,6 +44,7 @@ class MinizipNg < Formula
     system "cmake", "-S", ".", "-B", "build/static", *args, *std_cmake_args
     system "cmake", "--build", "build/static"
     lib.install "build/static/libminizip-ng.a"
+    (include/"minizip-ng").install "mz_config.h"
   end
 
   test do
