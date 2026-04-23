@@ -4,7 +4,7 @@ class Httping < Formula
   url "https://github.com/folkertvanheusden/HTTPing/archive/refs/tags/v4.4.0.tar.gz"
   sha256 "87fa2da5ac83c4a0edf4086161815a632df38e1cc230e1e8a24a8114c09da8fd"
   license "AGPL-3.0-only"
-  revision 1
+  revision 2
   head "https://github.com/folkertvanheusden/HTTPing.git", branch: "master"
 
   # There can be a notable gap between when a version is tagged and a
@@ -28,7 +28,7 @@ class Httping < Formula
   depends_on "gettext" => :build # for msgfmt
   depends_on "pkgconf" => :build
   depends_on "fftw"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "ncurses"
 
