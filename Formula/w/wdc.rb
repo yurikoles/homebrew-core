@@ -4,7 +4,7 @@ class Wdc < Formula
   url "https://github.com/CloudPolis/webdav-client-cpp/archive/refs/tags/v1.1.5.tar.gz"
   sha256 "3c45341521da9c68328c5fa8909d838915e8a768e7652ff1bcc2fbbd46ab9f64"
   license "curl"
-  revision 1
+  revision 2
 
   bottle do
     rebuild 1
@@ -20,7 +20,7 @@ class Wdc < Formula
 
   depends_on "boost" => :build
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "pugixml"
 
   uses_from_macos "curl"
