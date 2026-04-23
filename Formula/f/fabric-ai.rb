@@ -7,12 +7,12 @@ class FabricAi < Formula
   head "https://github.com/danielmiessler/fabric.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "71ef75989bccbed53add3914f89e6e8c90a4a5f6702c3aa719ab020ea2fd825c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "71ef75989bccbed53add3914f89e6e8c90a4a5f6702c3aa719ab020ea2fd825c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "71ef75989bccbed53add3914f89e6e8c90a4a5f6702c3aa719ab020ea2fd825c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "fd613b5f98d5b2cd09d7b7886ba1799dc86f8105adb95afea470a59e63232a85"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d8dc3e69ee4917687a9d8add467e2f2c400e8387602c230186f95822714ebe65"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "123ac27efb5f649a2e1360fbc558699fcbb42f5b2e0306aef05e4ae73cdd206b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "1b7b6b444ca6a7a94a5554468aeb5e413ef5e127e3c220692f5e13ee784647b9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1b7b6b444ca6a7a94a5554468aeb5e413ef5e127e3c220692f5e13ee784647b9"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1b7b6b444ca6a7a94a5554468aeb5e413ef5e127e3c220692f5e13ee784647b9"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d358f6a1ee319c9d4b4e6a46a7c8c3733a74a8f0859cdf6bb0c4117750a4ec7e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f746111e75e39311cea9ebabd0694b41f90736df126e33f2b538149f18659882"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5caf70076e53fef3e8da7bf19a5a748d6a1a8d50be06aac481733be823d8bc70"
   end
 
   depends_on "go" => :build
