@@ -4,6 +4,7 @@ class Nagios < Formula
   url "https://github.com/NagiosEnterprises/nagioscore/releases/download/nagios-4.5.12/nagios-4.5.12.tar.gz"
   sha256 "9a9fd281ea6ab3d55611efda036ffb9fe76c98423083440900e28012248d5961"
   license "GPL-2.0-only"
+  revision 1
   head "https://github.com/NagiosEnterprises/nagioscore.git", branch: "master"
 
   bottle do
@@ -18,7 +19,7 @@ class Nagios < Formula
   depends_on xcode: :build
   depends_on "gd"
   depends_on "libpng"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "unzip"
 
@@ -63,7 +64,7 @@ class Nagios < Formula
       "--with-nagios-group='#{group}'",
       "--with-command-user=#{user}",
       "--with-httpd-conf=#{share}",
-      "--with-ssl=#{Formula["openssl@3"].opt_prefix}",
+      "--with-ssl=#{Formula["openssl@4"].opt_prefix}",
       "--disable-libtool",
     ]
     args << "--with-command-group=_www" if OS.mac?
