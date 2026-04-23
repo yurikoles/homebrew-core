@@ -11,7 +11,7 @@ class Wrk < Formula
   #     distribute, whether in Source or Object form, except as required
   #     in copyright, patent, trademark, and attribution notices.
   license :cannot_represent
-  revision 1
+  revision 2
   head "https://github.com/wg/wrk.git", branch: "master"
 
   bottle do
@@ -31,7 +31,7 @@ class Wrk < Formula
   end
 
   depends_on "luajit"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     ENV.deparallelize
@@ -39,7 +39,7 @@ class Wrk < Formula
     ENV.append_to_cflags "-I#{Formula["luajit"].opt_include}/luajit-2.1"
     args = %W[
       WITH_LUAJIT=#{Formula["luajit"].opt_prefix}
-      WITH_OPENSSL=#{Formula["openssl@3"].opt_prefix}
+      WITH_OPENSSL=#{Formula["openssl@4"].opt_prefix}
     ]
     args << "VER=#{version}" if build.stable?
     system "make", *args
