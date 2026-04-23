@@ -5,6 +5,11 @@ class SignalCli < Formula
   sha256 "feb98997af67eddba4a7284334aabae381ca26aede85d9e5703098b76f8779ef"
   license "GPL-3.0-or-later"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5bcede52702ae1087a7dec4ad017ffc431abe90d2c81b63bc4016e917b256483"
     sha256 cellar: :any_skip_relocation, arm64_sequoia: "46513251087b15c7ea2178c24988a58a5d072eefd8239c2121efcb2410772dc3"
