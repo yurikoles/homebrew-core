@@ -1,8 +1,8 @@
 class NetlifyCli < Formula
   desc "Netlify command-line tool"
   homepage "https://www.netlify.com/docs/cli"
-  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-25.1.1.tgz"
-  sha256 "64e3610029eff838b8d283b674c4cf532331e5175efdfc27c91eb5b883b0de29"
+  url "https://registry.npmjs.org/netlify-cli/-/netlify-cli-25.2.0.tgz"
+  sha256 "336825edc2c9ba5610aaea14b8216d1ba7fef35f565ab5c7ab390dd9cedea740"
   license "MIT"
 
   bottle do
@@ -31,8 +31,8 @@ class NetlifyCli < Formula
   # Resource needed to build sharp from source to avoid bundled vips
   # https://sharp.pixelplumbing.com/install/#building-from-source
   resource "node-gyp" do
-    url "https://registry.npmjs.org/node-gyp/-/node-gyp-12.2.0.tgz"
-    sha256 "8689bbeb45a3219dfeb5b05a08d000d3b2492e12db02d46c81af0bee5c085fec"
+    url "https://registry.npmjs.org/node-gyp/-/node-gyp-12.3.0.tgz"
+    sha256 "d209963f2b21fd5f6fad1f6341897a98fc8fd53025da36b319b92ebd497f6379"
   end
 
   def install
