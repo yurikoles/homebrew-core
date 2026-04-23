@@ -4,6 +4,7 @@ class Snapcast < Formula
   url "https://github.com/snapcast/snapcast/archive/refs/tags/v0.35.0.tar.gz"
   sha256 "cb75a71479bf52910bf5f47ae8120ec41c89459b0d77d7cd560e674e437ef050"
   license "GPL-3.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "d61c8d4bfd965dd2ddcbc77eb73e12a59aef21dd2835bbca7e8b246b110750f4"
@@ -22,7 +23,7 @@ class Snapcast < Formula
   depends_on "libogg"
   depends_on "libsoxr"
   depends_on "libvorbis"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "opus"
 
   uses_from_macos "expat"
