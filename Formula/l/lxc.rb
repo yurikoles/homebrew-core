@@ -1,8 +1,8 @@
 class Lxc < Formula
   desc "CLI client for interacting with LXD"
   homepage "https://ubuntu.com/lxd"
-  url "https://github.com/canonical/lxd/releases/download/lxd-6.7/lxd-6.7.tar.gz"
-  sha256 "30d902408f8616484579be6ac8642e14a9b2c839000fbef7bb35456d79ac30af"
+  url "https://github.com/canonical/lxd/releases/download/lxd-6.8/lxd-6.8.tar.gz"
+  sha256 "4ccfd62b4364bab41f537d5602f2c16f86dbe57f218ac225afaeba86b5decb3b"
   license "AGPL-3.0-only"
   head "https://github.com/canonical/lxd.git", branch: "main"
 
