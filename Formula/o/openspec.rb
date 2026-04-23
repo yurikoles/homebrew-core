@@ -19,6 +19,7 @@ class Openspec < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
+    generate_completions_from_executable(bin/"openspec", "completion", "generate")
   end
 
   test do
