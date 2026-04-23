@@ -5,6 +5,7 @@ class Sipp < Formula
       tag:      "v3.7.7",
       revision: "369b3c187f0ff96f3ec9795650820e80cf17c776"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "c3e1fdb229aa351f03286bb7f0307bfbe3dcfbb3cd50682dc014fb4374ea440c"
@@ -16,7 +17,7 @@ class Sipp < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "libpcap"
   uses_from_macos "ncurses"
