@@ -32,12 +32,12 @@ class Redex < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "4290ded870843ef5a0f59274fe9242982c77542a1cbb367408151473849b21a1"
-    sha256 cellar: :any,                 arm64_sequoia: "c894e5072ff2ebbdd21b9bcecf12d5468f6e2c1e51fe27d2d5a2ee83480b5301"
-    sha256 cellar: :any,                 arm64_sonoma:  "8b739a35ed027e227bcc48ea375d6c0d7a8c7a20888a8319f828993b34a68107"
-    sha256 cellar: :any,                 sonoma:        "c2eca79d391a44a6645c4d0cd17982c07316a49f20a4f3ff0b3bf5190936014b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "576c939a85047bae7e36eb7821407eb2046eb746069b4b8e5a13635837338799"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "40a31fbf584c6f289032c1d257dc26cefb218e744ff934e0d5a99c3c48c229ff"
+    sha256 cellar: :any,                 arm64_tahoe:   "e06fdb01d04d9f3034df3e5d8fe15f018b35846a72e9100ed559019a690bec47"
+    sha256 cellar: :any,                 arm64_sequoia: "f67e926b2befa3165251e26fd74e782b9e4682b83698f743c99499701dde663c"
+    sha256 cellar: :any,                 arm64_sonoma:  "b9c8df2bfdf2a2fde8ad231a6ca457b5b2c9814a7ba69dc0ee60d135d0ba6822"
+    sha256 cellar: :any,                 sonoma:        "9756ac7b8651a4270f4eb7ba663b9b9742f6d93686c2b10ec200977ac054c567"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2bf568921ef0ef17b89405d0893023bdc9ed29c0317f5bd64ba4fc0df9ce4340"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1f0bf2c78fe56fb7df4d9583e57d344905a437cf0453c2e748eb69c8274e17b2"
   end
 
   depends_on "cmake" => :build
