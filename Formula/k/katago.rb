@@ -30,6 +30,10 @@ class Katago < Formula
 
   on_macos do
     depends_on "ninja" => :build
+
+    on_intel do
+      depends_on "eigen" => :build
+    end
   end
 
   on_sequoia do
@@ -74,7 +78,7 @@ class Katago < Formula
 
   def install
     args = ["-DNO_GIT_REVISION=1"]
-    args += if OS.mac?
+    args += if OS.mac? && Hardware::CPU.arm?
       ["-DUSE_BACKEND=METAL", "-GNinja"]
     else
       ["-DUSE_BACKEND=EIGEN", "-DEIGEN3_INCLUDE_DIRS=#{Formula["eigen"].opt_include}/eigen3"]
