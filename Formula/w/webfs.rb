@@ -4,7 +4,7 @@ class Webfs < Formula
   url "https://www.kraxel.org/releases/webfs/webfs-1.21.tar.gz"
   sha256 "98c1cb93473df08e166e848e549f86402e94a2f727366925b1c54ab31064a62a"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url "https://www.kraxel.org/releases/webfs/"
@@ -29,7 +29,7 @@ class Webfs < Formula
   end
 
   depends_on "httpd" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   patch :p0 do
     url "https://raw.githubusercontent.com/Homebrew/homebrew-core/1cf441a0/Patches/webfs/patch-ls.c"
