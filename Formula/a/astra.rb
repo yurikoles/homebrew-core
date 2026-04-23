@@ -6,12 +6,12 @@ class Astra < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "63abb48bd1b0a501230708ff114e7972c10cc0b2dd052473dfae0fbc17ed8ffb"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1b1052e8f2c3fef0ad0a149ccadb7e97dd616902176be155515981af6ebc0f86"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6275bd6d3284f07955a4794e3e49c1df8a0a744d17ea94d9cbbf25057b69d3c6"
-    sha256 cellar: :any_skip_relocation, sonoma:        "6275bd6d3284f07955a4794e3e49c1df8a0a744d17ea94d9cbbf25057b69d3c6"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1320d2fcc71f6789eba8b974127bff7f0d925c9a10f1e466854f5a2e4d88b657"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4a119bcef3ab863320bd967812e1c4c9d88a6c73360143ef65447558ff82ea69"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9a30fd63aeb5014493a8a3c971bd5691bed42dc85107694ed71499c6150b2fb9"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "584e7be68b0d1a96d518857f5f92ea4416648b9df56fee36028ece7536125b5d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cc4496618ad0dff14fa2fb9cddec5fde33d32751c5f19c077ef948aad00a1ec9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c3a209a7392c4e5349fb2cf81dbbeee5970329f95675c1f4737f9cef595629cc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1aee7a9558b268b9f8e716d85581d7ac32f4a546c19a113f619846171deb7d4d"
   end
 
   depends_on "graalvm" => :build
