@@ -7,12 +7,12 @@ class Goshs < Formula
   head "https://github.com/patrickhener/goshs.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d1ba25c7326946d5c14799a3412b4ced2905f634afbacf4e428d5ba2da2f7c33"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d1ba25c7326946d5c14799a3412b4ced2905f634afbacf4e428d5ba2da2f7c33"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d1ba25c7326946d5c14799a3412b4ced2905f634afbacf4e428d5ba2da2f7c33"
-    sha256 cellar: :any_skip_relocation, sonoma:        "c20d92d01db1613c51b98ff2f386b3c8be51c9de942096915a41b26bde3d9671"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ce54458951a4f87bc9bbca25c509671d5492cd795d3cdfd41382d3d747569367"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "90b7157599f8f96c428d809f80fcd62fd280023d839749303d63636dfc5e4017"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "96279e610516d1cbe581e2ea1c148ff03aa7229b884d2ed0b1819cc520d15288"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "96279e610516d1cbe581e2ea1c148ff03aa7229b884d2ed0b1819cc520d15288"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "96279e610516d1cbe581e2ea1c148ff03aa7229b884d2ed0b1819cc520d15288"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4ed3e9911a52a5d6642b22d1d109855b7d86652b78693b55a90395b35243ea3b"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e218539ae93508e80402db6c385fd37ad53df6147f360ef7306d1bf1a31e5147"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a380b38a2cafdf0f03eaa36cce56127ef1f9f4c6407932ff8d5a409115bcebeb"
   end
 
   depends_on "go" => :build
