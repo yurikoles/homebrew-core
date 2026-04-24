@@ -3,8 +3,8 @@ class Esphome < Formula
 
   desc "Make creating custom firmwares for ESP32/ESP8266 super easy"
   homepage "https://github.com/esphome/esphome"
-  url "https://files.pythonhosted.org/packages/98/76/4020544b7cabea46e41f1d8e921b5eb471ae5671617c137837d5c3f982e0/esphome-2026.4.1.tar.gz"
-  sha256 "5fcefb77ad2a978212e6e1a59830df01338d16456f52e70e81ddf26c91330ad4"
+  url "https://files.pythonhosted.org/packages/18/5d/e1f60bb9ebeb134f5d5705c77e5709a287519988bc80a2afc4925f43788f/esphome-2026.4.2.tar.gz"
+  sha256 "7373e8e34686df32fc754c7599e8162f179f15e2ca9fa0cdbfa7c3ee73b17351"
   license "MIT"
   head "https://github.com/esphome/esphome.git", branch: "dev"
 
@@ -161,8 +161,8 @@ class Esphome < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
-    sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
+    url "https://files.pythonhosted.org/packages/ce/cc/762dfb036166873f0059f3b7de4565e1b5bc3d6f28a414c13da27e442f99/idna-3.13.tar.gz"
+    sha256 "585ea8fe5d69b9181ec1afba340451fba6ba764af97026f92a91d4eef164a242"
   end
 
   resource "ifaddr" do
