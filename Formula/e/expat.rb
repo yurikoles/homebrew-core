@@ -1,8 +1,8 @@
 class Expat < Formula
   desc "XML 1.0 parser"
   homepage "https://libexpat.github.io/"
-  url "https://github.com/libexpat/libexpat/releases/download/R_2_7_5/expat-2.7.5.tar.lz"
-  sha256 "975e76ab8a5625190bd04a577fa9efc246798c25b8ec665acb6f7951be8b0646"
+  url "https://github.com/libexpat/libexpat/releases/download/R_2_8_0/expat-2.8.0.tar.lz"
+  sha256 "35b02d84d809117506064bb388b3bbc7f421d629d2ba565f6d1f1c369b85fcd2"
   license "MIT"
   compatibility_version 1
 
