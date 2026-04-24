@@ -7,12 +7,12 @@ class Lychee < Formula
   head "https://github.com/lycheeverse/lychee.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "fc655b833a71ae76f12fb96cdef6edcd6dc99a45c3e8526a11b8ef8f48e1ab43"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "32234fa2157678726d3fc4a9a663e87f193375202daa93ef5facdc85d172e5e6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "144e3ce2caeab54c24f83398759d36d18fcd8cc800ea81d51918d344161da906"
-    sha256 cellar: :any_skip_relocation, sonoma:        "14c482039779ee156e73af0c760e61728bdc9e67bbbe810b6c8ff3ec08bed368"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b674aef5069addbc961c55ddc819eac3cb44a6f6d7bd0f0da286788bddcaaf93"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2ebb7248c273b09a89e60ad8dd44f28b3033fd0ed55205952d0042e21c9303f7"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "77f3e43bd1a7de0fd6aee8f91c204583e16461314b4f2abf200930ddbb32fb2c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dbfcaa9c9fcf5172ec61ee4f30ffe3174a3f8db90e50865ee503cac218290072"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0b6ff3605430d0b0e7181c173d8c3cdce433885a569f1528aebdf0331545302d"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d72be9f1424c42423d0868b3e51c0065b7794def48025921ac34d107d7d6a9a4"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ded585b91b995517332cffde1ba570fd03901c7592bdb6b2db52fda46237fcdb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1d4360e3fa311716e9a3260fd73719969b19178226c53d4bfa0248c620871b3c"
   end
 
   depends_on "pkgconf" => :build
