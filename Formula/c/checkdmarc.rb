@@ -9,7 +9,7 @@ class Checkdmarc < Formula
   head "https://github.com/domainaware/checkdmarc.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ef5a0e7511179cf8891299fc79945489426dc27909d88b47154c74afe20040cf"
+    sha256 cellar: :any_skip_relocation, all: "b1c0dcfce0e76c5ffa64fdd0bf9741931f691d2c5e14c2388b1a839d247cb9e0"
   end
 
   depends_on "certifi" => :no_linkage
