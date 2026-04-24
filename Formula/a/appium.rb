@@ -1,8 +1,8 @@
 class Appium < Formula
   desc "Automation for Apps"
   homepage "https://appium.io/"
-  url "https://registry.npmjs.org/appium/-/appium-3.3.0.tgz"
-  sha256 "d0d9388a9c777b511f3e2f491d72fa87c42d5572b4245ed14e11cd8ba2a3955c"
+  url "https://registry.npmjs.org/appium/-/appium-3.3.1.tgz"
+  sha256 "bbc40faf599751b424316dea59268b302f6c9e14702f4e78679ca4a1ca75ac74"
   license "Apache-2.0"
   head "https://github.com/appium/appium.git", branch: "master"
 
@@ -32,8 +32,8 @@ class Appium < Formula
   end
 
   resource "node-gyp" do
-    url "https://registry.npmjs.org/node-gyp/-/node-gyp-12.2.0.tgz"
-    sha256 "8689bbeb45a3219dfeb5b05a08d000d3b2492e12db02d46c81af0bee5c085fec"
+    url "https://registry.npmjs.org/node-gyp/-/node-gyp-12.3.0.tgz"
+    sha256 "d209963f2b21fd5f6fad1f6341897a98fc8fd53025da36b319b92ebd497f6379"
   end
 
   def install
