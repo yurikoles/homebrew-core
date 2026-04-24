@@ -13,13 +13,12 @@ class Yaf < Formula
   end
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any,                 arm64_tahoe:   "3b7251cb48fe4163d5ceaf8c494d08f515f36969cbd11b663111828f9f9bb726"
-    sha256 cellar: :any,                 arm64_sequoia: "7cad8b87c9095aa1109b7a9d2aef1959d4f8a22212bd06935f81354e0b0e6257"
-    sha256 cellar: :any,                 arm64_sonoma:  "e918c459b53d43fe9c5e81fd34cce202a2837c0b9965dceab37dd80c78dd5ff1"
-    sha256 cellar: :any,                 sonoma:        "42791e849b3a3d5b6fef29e72eb312d002a522795d75ab10f1eb1a343f9cff61"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a94b4b5ad8a62f6cb5303609324034aebc094f1b33c05a10013197a90104cdc9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9df057a2865d4c4752a5f54c7d6b86bc91e92cc0343998821ed7dd6cbd47ba7e"
+    sha256 cellar: :any,                 arm64_tahoe:   "56f4ea440bca04278fdf50b593f09635f3d7891ae9ac15ccda90869ea51656e4"
+    sha256 cellar: :any,                 arm64_sequoia: "f837ebb2dd639231481cbce06f1ec41655be39c2c1f7ac35de0b77810e9a4377"
+    sha256 cellar: :any,                 arm64_sonoma:  "1619cea677b13c42f8f7141a643d4d75ab6a9a08d98477070bbde7b3caa8f9de"
+    sha256 cellar: :any,                 sonoma:        "da8bf37261b856a80f336bac36015205d3d57fcc389ce1485dd657946cac0e98"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d2f39712dc5237abf10883d2c4ebae68793fa8e378e57460f0a936c571959989"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "91cde7336e0c16efa7188fe16570ed567bf0735caa2ad1fbba42f7550e7f4603"
   end
 
   depends_on "pkgconf" => :build
