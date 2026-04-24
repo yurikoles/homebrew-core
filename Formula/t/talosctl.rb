@@ -1,8 +1,8 @@
 class Talosctl < Formula
   desc "CLI for out-of-band management of Kubernetes nodes created by Talos"
   homepage "https://www.talos.dev/"
-  url "https://github.com/siderolabs/talos/archive/refs/tags/v1.12.6.tar.gz"
-  sha256 "bfae01fe1db88cadde1502c552f5bae673524f4dc3512fd99e001c85a86b4515"
+  url "https://github.com/siderolabs/talos/archive/refs/tags/v1.12.7.tar.gz"
+  sha256 "e32baf04be95f2ebf1b8f1a32a1dcf972c106038b9ea94de890627ecf1219d9f"
   license "MPL-2.0"
   head "https://github.com/siderolabs/talos.git", branch: "main"
 
