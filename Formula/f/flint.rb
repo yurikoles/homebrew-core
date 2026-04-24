@@ -1,10 +1,10 @@
 class Flint < Formula
   desc "C library for number theory"
   homepage "https://flintlib.org/"
-  url "https://github.com/flintlib/flint/releases/download/v3.4.0/flint-3.4.0.tar.gz"
-  sha256 "9497679804dead926e3affeb8d4c58739d1c7684d60c2c12827550d28e454a33"
+  url "https://github.com/flintlib/flint/releases/download/v3.5.0/flint-3.5.0.tar.gz"
+  sha256 "3982f385f00610a944e0152eb0a29893b2366fa640e8f5f3076c47564cf7e2a6"
   license "LGPL-3.0-or-later"
-  compatibility_version 1
+  compatibility_version 2
 
   livecheck do
     url :stable
