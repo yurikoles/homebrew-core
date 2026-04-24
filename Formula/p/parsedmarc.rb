@@ -3,18 +3,18 @@ class Parsedmarc < Formula
 
   desc "DMARC report analyzer and visualizer"
   homepage "https://domainaware.github.io/parsedmarc/"
-  url "https://files.pythonhosted.org/packages/e5/05/de402a867a589c37b4f0282805fe491d692fd4a3860723297d95800dde0f/parsedmarc-9.10.0.tar.gz"
-  sha256 "4ccaf4ca975e25b6f549a327861fae560b3cfd5cbb6428e868cb3816359121a6"
+  url "https://files.pythonhosted.org/packages/9c/71/43fb728e23fb7161bf05d6f3e6bc6df1cdbdcd105be2aaf3dd7bf983f0ab/parsedmarc-9.10.1.tar.gz"
+  sha256 "dc0f0809a116a5d7210a09723902d0fc0260702d4f2e9b556d5ed26376d06ab8"
   license "Apache-2.0"
   head "https://github.com/domainaware/parsedmarc.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "870ddd864b437484a14299d879e20994b8f9ed9ad6e67b9b6201a31eb8104dbe"
-    sha256 cellar: :any,                 arm64_sequoia: "d3c2698eb59f52fccb439c19455e25309d5c644acd11ebd0b5278b623bd8a653"
-    sha256 cellar: :any,                 arm64_sonoma:  "2b213265b60ba489d452142866dbba2874259c92853143d225dca75627753f48"
-    sha256 cellar: :any,                 sonoma:        "2bc888fed823af9f3cb05ccfbfae55e95ea995d95c9a29a68d3d25653a675c51"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "700fe9b8dac8a0d63f2270eac1940cad0afbd7a4c85e3b7f3880b5399d8f6d8b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e7a099462cd3fc806f366c7131fadf5885220d87545c789291199f03f1805b78"
+    sha256 cellar: :any,                 arm64_tahoe:   "09735efc2b612f0ce65d6d6cb18c521054bf22a9aee289e36da502ab5ee768d8"
+    sha256 cellar: :any,                 arm64_sequoia: "68a56d7d4e3bd9a7c13dd19be5d0076c2ba5bd303e215cd0a4a3c736a66298f1"
+    sha256 cellar: :any,                 arm64_sonoma:  "b0e5ab94e368faeaf381a269c59e11b84dedc99b16c28bd64eee426eb4db3203"
+    sha256 cellar: :any,                 sonoma:        "c18050ad88c57958d1afbd094ef9c235a8c776a6084c8b486e989eb8361cacf3"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "73a5b63414fe315b9e91692049d27f71ab9645498ab3375281a1eb9178604a6b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d8821621f6c90a8c2538ab8b744c6bba5f327f69b825a93ddab70a5b9b3f8256"
   end
 
   depends_on "rust" => :build
