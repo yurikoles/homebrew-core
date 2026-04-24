@@ -6,12 +6,12 @@ class Yamlresume < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "7fda998acfcec97483c05bdc7b46bcf8fbd82540f4c9bb3c9f66d9bdf086f55c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "83dd4927be0117cea4c6c2bff79a777da9b8d78447c74a3e64043890b77522df"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "83dd4927be0117cea4c6c2bff79a777da9b8d78447c74a3e64043890b77522df"
-    sha256 cellar: :any_skip_relocation, sonoma:        "305df97afefc00d822b98fbc40c18af791b7d900e6a52116306ee4a93d1bd365"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b9b357c8b999ff054652605ce1094626fee1875beb422061752001c54220656e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b9b357c8b999ff054652605ce1094626fee1875beb422061752001c54220656e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "179aa559d9ca0ace8e863b9cecf4bf814b9d74b73258ff5ece8b424091678f20"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "46634dba92489f94d9d9f48c10375915db153d90c2999aeb7d502a514b495406"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "46634dba92489f94d9d9f48c10375915db153d90c2999aeb7d502a514b495406"
+    sha256 cellar: :any_skip_relocation, sonoma:        "764737e0409d3efda699e3c624276bbc036ae84248078a6f6077110dd93c1011"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "32820c313fbaf01bc313a06476dee01e400bf219f46954212c0ace858a9fc112"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "32820c313fbaf01bc313a06476dee01e400bf219f46954212c0ace858a9fc112"
   end
 
   depends_on "node"
