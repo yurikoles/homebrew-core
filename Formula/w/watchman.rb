@@ -23,7 +23,7 @@ class Watchman < Formula
   depends_on "googletest" => :build
   depends_on "libevent" => :build
   depends_on "mvfst" => :build
-  depends_on "openssl@3" => :build
+  depends_on "openssl@4" => :build
   depends_on "pkgconf" => :build
   depends_on "python-setuptools" => :build
   depends_on "rust" => :build
@@ -39,7 +39,7 @@ class Watchman < Formula
   on_linux do
     depends_on "boost"
     depends_on "libunwind"
-    depends_on "openssl@3"
+    depends_on "openssl@4"
   end
 
   def install
