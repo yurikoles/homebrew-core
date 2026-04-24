@@ -1,21 +1,10 @@
 class Gdal < Formula
   desc "Geospatial Data Abstraction Library"
   homepage "https://gdal.org/en/stable/"
+  url "https://github.com/OSGeo/gdal/releases/download/v3.12.4/gdal-3.12.4.tar.gz"
+  sha256 "68844ae29557b7efae4292c3b4cb3a3b8a79d14b765b89c5a7b17cbae7fa715a"
   license "MIT"
-  revision 2
   compatibility_version 1
-
-  stable do
-    url "https://github.com/OSGeo/gdal/releases/download/v3.12.3/gdal-3.12.3.tar.gz"
-    sha256 "1fdfe51181d08b9b83037b611da4de4a7cf1fca69e6564945ac99d3f7d0367dd"
-
-    # Fix compatibility with new poppler version
-    # https://github.com/OSGeo/gdal/pull/14243
-    patch do
-      url "https://github.com/OSGeo/gdal/commit/0ad9529d5fd5e03880147221d56bfee08383d7dc.patch?full_index=1"
-      sha256 "fba9b0f6591f83b7837c3fc9e649e902b7490f877190a6d9535f969ea5fd87ab"
-    end
-  end
 
   livecheck do
     url "https://download.osgeo.org/gdal/CURRENT/"
