@@ -3,8 +3,8 @@ class SnykAgentScan < Formula
 
   desc "Constrain, log and scan your MCP connections for security vulnerabilities"
   homepage "https://github.com/snyk/agent-scan"
-  url "https://files.pythonhosted.org/packages/96/9c/015715ab2a8e2414a4792758730dd39ec224987adf36ac809831625d9fff/snyk_agent_scan-0.4.17.tar.gz"
-  sha256 "aecf6cbc6c53c6ca2f22c024bf73277d36b7ec570dfff11ac8693fbb0997af80"
+  url "https://files.pythonhosted.org/packages/85/73/5578115b41c97ca2ab5472811c85455d82aa1bcf83d5ebc75e9b43e5e9f4/snyk_agent_scan-0.4.18.tar.gz"
+  sha256 "d98acad9889b23bf594f08901a0834807096aedab450daf8d144959b4b8af182"
   license "Apache-2.0"
 
   bottle do
@@ -226,8 +226,8 @@ class SnykAgentScan < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/eb/2e/62b0d9a2cfc8b4de6771322dae30f2db76c66dae9ec32e94e176a44ad563/uvicorn-0.45.0.tar.gz"
-    sha256 "3fe650df136c5bd2b9b06efc5980636344a2fbb840e9ddd86437d53144fa335d"
+    url "https://files.pythonhosted.org/packages/1f/93/041fca8274050e40e6791f267d82e0e2e27dd165627bd640d3e0e378d877/uvicorn-0.46.0.tar.gz"
+    sha256 "fb9da0926999cc6cb22dc7cd71a94a632f078e6ae47ff683c5c420750fb7413d"
   end
 
   resource "yarl" do
