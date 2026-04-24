@@ -21,6 +21,7 @@ class Gtk4 < Formula
     sha256 x86_64_linux:  "f95e4874d4f6968f6d4debbf4a01e0448c1fc6309f67cafc984a43f155791b5a"
   end
 
+  depends_on "dart-sass" => :build
   depends_on "docbook" => :build
   depends_on "docbook-xsl" => :build
   depends_on "docutils" => :build
@@ -66,6 +67,13 @@ class Gtk4 < Formula
   end
 
   def install
+    # Replace deprecated `sassc` with `sass` in the meson build file
+    inreplace "gtk/meson.build" do |s|
+      s.gsub! "'sassc'", "'sass'"
+      s.gsub! "'-a', '-M', '-t', 'compact'", "'--style', 'compressed'"
+    end
+    inreplace "build-aux/meson/dist-data.py", "'-a', '-M', '-t', 'compact'", "'--style', 'compressed'"
+
     args = %w[
       -Dbuild-examples=false
       -Dbuild-tests=false
