@@ -1,8 +1,8 @@
 class Lychee < Formula
   desc "Fast, async, resource-friendly link checker"
   homepage "https://lychee.cli.rs/"
-  url "https://github.com/lycheeverse/lychee/archive/refs/tags/lychee-v0.23.0.tar.gz"
-  sha256 "0c2c7387f5c8916c8c35ffd6102507663de8645da78579231a403020c34db67b"
+  url "https://github.com/lycheeverse/lychee/archive/refs/tags/lychee-v0.24.0.tar.gz"
+  sha256 "e1a92b9660140f53bdeea26815775c465640b0c09649b1b395f7fd471b057856"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/lycheeverse/lychee.git", branch: "master"
 
@@ -26,6 +26,7 @@ class Lychee < Formula
   test do
     (testpath/"test.md").write "[This](https://example.com) is an example.\n"
     output = shell_output("#{bin}/lychee #{testpath}/test.md")
-    assert_match "🔍 1 Total (in 0s) ✅ 0 OK 🚫 0 Errors 👻 1 Excluded", output
+    assert_match "🔍 1 Total", output
+    assert_match "✅ 0 OK 🚫 0 Errors 👻 1 Excluded", output
   end
 end
