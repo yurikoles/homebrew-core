@@ -5,6 +5,10 @@ class McpRemote < Formula
   sha256 "d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "e5c5a4fd4bda7f39e477de7e8c1b3b33f6c659f42a958ff931ce11a8d161d92d"
+  end
+
   depends_on "node"
 
   def install
