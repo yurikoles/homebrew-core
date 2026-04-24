@@ -6,12 +6,10 @@ class Telnet < Formula
   license all_of: ["BSD-4-Clause-UC", "APSL-1.0"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6916778f3b7f0607f648eba463764b8aaf9249daa4d6f12f3f2c2891c925059a"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a5314fd7135b21e32772b3d96751829e521453a429ab6b734fefbc99b4c94446"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4db0190453f42c13370d8412c5d15398c1f85528c2f55e0e7f70d87d6fe1fd19"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "19ac3a5684b7216a9f42b0d38574fe09b675060184a703b9ce902778080b45e2"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7cd17dbe54ca38974677ffaa5716384f0095957f5ad6aa5ee6e6398f58de6cb9"
-    sha256 cellar: :any_skip_relocation, ventura:       "e19e94a0f40871798ad05efa016f6bfd367b6216e3230d87324d41437411562a"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b1a535635168f05dd931c23ac8fd36447f5df05ef54bd5d90213c0c78152d956"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d4d6184f768293938edc0929d220390a2904756f58fb42efe0a530694898689d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f57b68d0525e6a7005b09b5225c86378ef1a694cd38b9a5c139912a296850187"
+    sha256 cellar: :any_skip_relocation, sonoma:        "d37c885591f661684c6ee9cdb35ed504dd61b8ccb09e32af00b3bc3f9943e79c"
   end
 
   depends_on xcode: :build
