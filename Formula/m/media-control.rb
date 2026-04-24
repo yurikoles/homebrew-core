@@ -2,8 +2,8 @@ class MediaControl < Formula
   desc "Control and observe media playback from the command-line"
   homepage "https://github.com/ungive/media-control"
   url "https://github.com/ungive/media-control.git",
-      tag:      "v0.7.2",
-      revision: "7f2b6107eab208ac6f7dd206232c7a8eb5c34aca"
+      tag:      "v0.7.3",
+      revision: "94d3bdbddeac5539ad6bb04a268126d3f58105a5"
   license "BSD-3-Clause"
   head "https://github.com/ungive/media-control.git", branch: "master"
 
