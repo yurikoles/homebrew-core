@@ -9,12 +9,12 @@ class TranslateToolkit < Formula
   head "https://github.com/translate/translate.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "c5a625fad34bb7cb0a41ebdc8ae210d5a74c36a46130cd4e95b8984b7fa769a6"
-    sha256 cellar: :any,                 arm64_sequoia: "e8e32a4a58cbee734f012a97a77e4b3dc68df4f95219c70a16623d1afc5ea172"
-    sha256 cellar: :any,                 arm64_sonoma:  "926e2d8c3243747df4752149febfe46dabbc0bc5d1b2485d6d2e3914aca5e6bb"
-    sha256 cellar: :any,                 sonoma:        "81318c166eae604212050f2c165b6f238ca13782537251230cb5e4eaff9e4794"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a34c4cd600241de4bd466fc9ec56742425b4ce0e1b1a45eadc33f79fa77fd73f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "793b73eb0f66c45525c8f13e26b76dd8412e07f8c53e6f6a3262cf09f7ba464c"
+    sha256 cellar: :any,                 arm64_tahoe:   "e8013ad7e5d514a9e45aa09475627d401135b5b774ffd3a112ab2e7bcce44e29"
+    sha256 cellar: :any,                 arm64_sequoia: "56a55ec30ff894ede6df1ed1bb9e7e76998cd440c14923a7c21f38f77f3b0a56"
+    sha256 cellar: :any,                 arm64_sonoma:  "d6e4b8aa85e8c05fd226a4e5dc9651d198f08bc340c5516ac97f72e3547bd1d0"
+    sha256 cellar: :any,                 sonoma:        "5f5d7c3d349799fed24f872bd283c1c613cf78ae5ef55826b8f78532cc66fa2c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "edb2d89320c8b16eadfdecac1b3b5b5f627817fe91e42899972a5319d23cfb56"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2a1e46fd61550c82f76f4fd02366c066b389c29eaa87145a98f3eff70f4c8047"
   end
 
   depends_on "rust" => :build # for `unicode_segmentation_py`
