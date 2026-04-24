@@ -6,12 +6,12 @@ class Bandicoot < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "5d67e6aed2699f62ee9f37b3bd2228349b82b826c6ccce2cff52ab5be84c3b2b"
-    sha256 cellar: :any,                 arm64_sequoia: "98187deca3fd6cbed9bd4ad68fc48e05198e3c78aa5cd7166e14b0b538aee923"
-    sha256 cellar: :any,                 arm64_sonoma:  "d6f10f687b2d75a0b5a832e2cd8b5b507aa8d5d75c3e2fe5e3d99945b656e86f"
-    sha256 cellar: :any,                 sonoma:        "74c3eb05ae46f65f349e278a1ba74f39a301f66ddcc8d61e94efef7f91e220ff"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "bbbe98b28fa63bc236bd1cf7ccfb644e2f047a9863d41d2cc1070af4b0e152cc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7e30826e78801be597bb8e6c8a7da8c0f468ee427c7942ac373e4596ab0372ff"
+    sha256 cellar: :any,                 arm64_tahoe:   "c135aee940cff60836d85396cb67674f616606e7107d15ad84780d2b2c6dd207"
+    sha256 cellar: :any,                 arm64_sequoia: "432c737123e9453dce95a5304e04a3875f64ae7bfaa9837dc21a01f2afa29b83"
+    sha256 cellar: :any,                 arm64_sonoma:  "40154e36817bcbfdcc7ac5c23825fd2243f1f30d5209c7e389791beb59cdd6a7"
+    sha256 cellar: :any,                 sonoma:        "c65e16e2a18237bb451051249a1bf4e2ecb2da68dd16b89f7697278bee2fe2cb"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ee3cd7e28c7036510fb717974c02209e6b8328f0aa1cf373cfed1cf92e82a354"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1ff7f8a5172dbf09a40fca89f9c822aced487d1abc5c244a52d418ba69554d8e"
   end
 
   depends_on "cmake" => :build
