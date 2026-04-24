@@ -1,8 +1,8 @@
 class Havn < Formula
   desc "Fast configurable port scanner with reasonable defaults"
   homepage "https://github.com/mrjackwills/havn"
-  url "https://github.com/mrjackwills/havn/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "2bc3f97cb5e57760f757865da387bcf03f6e0826ce9e0bdff85b7455d9ec1f6b"
+  url "https://github.com/mrjackwills/havn/archive/refs/tags/v0.3.6.tar.gz"
+  sha256 "c019204795aad1d1fa2fb9b5fc76bb12a7902e73629b242d81993fe37c1833b6"
   license "MIT"
 
   bottle do
