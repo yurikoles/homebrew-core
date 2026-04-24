@@ -4,6 +4,7 @@ class Form < Formula
   url "https://github.com/form-dev/form/releases/download/v5.0.0/form-5.0.0.tar.gz"
   sha256 "10d22acf2f0acf831b494e6a73682828980b9054ea8ec2b5dc46677dca8d6518"
   license "GPL-3.0-or-later"
+  revision 1
 
   livecheck do
     url :stable
