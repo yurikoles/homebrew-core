@@ -3,17 +3,17 @@ class Gamdl < Formula
 
   desc "Python CLI app for downloading Apple Music songs, music videos and post videos"
   homepage "https://github.com/glomatico/gamdl"
-  url "https://files.pythonhosted.org/packages/9a/6f/7858177c2e1f345c174e1656f50da1ec5ad9a3b58960dd77241b2a92daa3/gamdl-3.0.tar.gz"
-  sha256 "ce8269cf6c24eaa3450aaebbe4257c0b688d56d21bf9d57d6cc677a5a5ca2f3f"
+  url "https://files.pythonhosted.org/packages/59/0e/59ad69048c0c2e5a3716905ca3ab7acf62031f8d0d5254714f65931d3874/gamdl-3.1.tar.gz"
+  sha256 "aff940088f0c4caf5d2df3efdcff1219e8db2140b9821b57aa66bbc95ec84dc3"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "d0f0701f8f0fa9c3ad6a7d61cb9db7cd672bd8ceba055ce33c5355036625da85"
-    sha256 cellar: :any,                 arm64_sequoia: "6e4069842b513b23b552e3d1446bb34671f772ad41e85fb0b5e3cee85983a412"
-    sha256 cellar: :any,                 arm64_sonoma:  "152a54c4b984cfaebaa3241c9d7405e427cb84110fcfd00772f0170dd1ae5b1e"
-    sha256 cellar: :any,                 sonoma:        "8a3a664bfc18018ff1af8ee14dbdef4d4bd2c535123b3584b2564868f09e1726"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d7e01adf9bec25c6bc1e20ab85042cf9033218ac3e1456d782d42edf568cc6e7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "16813f95ecd65ad544afb596971c5625a641a28cfdd62ea57647fdc216f35186"
+    sha256 cellar: :any,                 arm64_tahoe:   "55acb2ad376a584750287e53673361ce9e276c8bb835cbed60a6e3e98059b5ce"
+    sha256 cellar: :any,                 arm64_sequoia: "b37eba02e9f041100db09d172182c1289f716cf36f5505d721be22e294a60845"
+    sha256 cellar: :any,                 arm64_sonoma:  "eb59fc053898787d38dc5f21e8778cdbfb2f6cf456c376892b480df0a8a3dca9"
+    sha256 cellar: :any,                 sonoma:        "18c826732605b26de6b1877b6210072a97daeba695fc692a77f070f868fbe1c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e2c3da949ac04e1a163427a36b5f72965f22fda8a4b7377fd5c2e9dd62b2cff2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "27cffaed01bac310008fb9a8d28e00124c7f1048954363247aa04c5b3e3a8c07"
   end
 
   depends_on "certifi" => :no_linkage
@@ -39,8 +39,8 @@ class Gamdl < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/57/75/31212c6bf2503fdf920d87fee5d7a86a2e3bcf444984126f13d8e4016804/click-8.3.2.tar.gz"
-    sha256 "14162b8b3b3550a7d479eafa77dfd3c38d9dc8951f6f69c78913a8f9a7540fd5"
+    url "https://files.pythonhosted.org/packages/bb/63/f9e1ea081ce35720d8b92acde70daaedace594dc93b693c869e0d5910718/click-8.3.3.tar.gz"
+    sha256 "398329ad4837b2ff7cbe1dd166a4c0f8900c3ca3a218de04466f38f6497f18a2"
   end
 
   resource "colorama" do
@@ -79,8 +79,8 @@ class Gamdl < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/22/12/2948fbe5513d062169bd91f7d7b1cd97bc8894f32946b71fa39f6e63ca0c/idna-3.12.tar.gz"
-    sha256 "724e9952cc9e2bd7550ea784adb098d837ab5267ef67a1ab9cf7846bdbdd8254"
+    url "https://files.pythonhosted.org/packages/ce/cc/762dfb036166873f0059f3b7de4565e1b5bc3d6f28a414c13da27e442f99/idna-3.13.tar.gz"
+    sha256 "585ea8fe5d69b9181ec1afba340451fba6ba764af97026f92a91d4eef164a242"
   end
 
   resource "inquirerpy" do
