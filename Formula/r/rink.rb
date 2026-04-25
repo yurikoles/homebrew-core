@@ -1,8 +1,8 @@
 class Rink < Formula
   desc "Unit conversion tool and library written in rust"
   homepage "https://rinkcalc.app/about"
-  url "https://github.com/tiffany352/rink-rs/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "40048e84c2b606e50bf05dec2813acedeb48066cd48537d0dea453a72d000d60"
+  url "https://github.com/tiffany352/rink-rs/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "53f466f4043e0396bedbfdc916aac25cb23c3021137c846d57249678f42fb745"
   license all_of: ["MPL-2.0", "GPL-3.0-or-later"]
 
   bottle do
