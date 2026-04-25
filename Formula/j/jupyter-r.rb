@@ -7,16 +7,12 @@ class JupyterR < Formula
   revision 4
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:    "1a568ad7acaa46dbc11d7166625d30c3f870d945db0459617717b71fd73f193b"
-    sha256 cellar: :any,                 arm64_sequoia:  "9e60d5223a4c0794c025996a7c56b33ffbed5618aa930246c32cf13726b98cb8"
-    sha256 cellar: :any,                 arm64_sonoma:   "f5e53d2e1c07fada5048527bf93c183650f8f4b5ec3bb088d2f27136d06ce3c3"
-    sha256 cellar: :any,                 arm64_ventura:  "6b747fb9bf5f4b4cc3d115143b213ed41cefeb8afb2254f0cb643a621f20f87e"
-    sha256 cellar: :any,                 arm64_monterey: "8aa1108c74e5910e683727b8b4a793fa5c0108361f8dbf8f199f5c105957c531"
-    sha256 cellar: :any,                 sonoma:         "0316f97858c3952691008a53a36107235976bc213a24c894d89de8890c8822eb"
-    sha256 cellar: :any,                 ventura:        "7d99a0c04195211aaad73759ee745a55823854e0d326e34627220103fbf4d545"
-    sha256 cellar: :any,                 monterey:       "a10453cf63c2b498366e1a90dd42d47b828502a870e527684558d1bef37e07ab"
-    sha256 cellar: :any_skip_relocation, arm64_linux:    "20d47dc1d9832690199b9db766244d9a9a2fa8bf54b09441744b5dac333a8209"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c5b13b7b57330d27afc80e134f7d27c2b5207a9abc00a92f081d2fa21f834ede"
+    sha256 cellar: :any,                 arm64_tahoe:   "8b52a2ecd5cae8b0e7f26d340f9070721b0b4b9e7b6160871f3723366c2fdeac"
+    sha256 cellar: :any,                 arm64_sequoia: "7e058343e45031f0b0cc2400d979731b51837b30e9a35a5d26bf02e2af1695ea"
+    sha256 cellar: :any,                 arm64_sonoma:  "cb7e41a453ba60a345463583a87809235e581037fb4ca44f58162a9bde730cbf"
+    sha256 cellar: :any,                 sonoma:        "c2a981972fd3ad4a426099b7fa1aa75a3531e3c8a18eaf78f0bfe45baf19af99"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "abea55961a0952c101763e607ba86afa8c789a75d34769d09f1a274b2de20eb8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "33bcd191c536ee0e3b8bb35b28b98823470e03d0147cfc90386dab6fe1451941"
   end
 
   depends_on "pkgconf" => :build
