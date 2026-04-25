@@ -1,8 +1,8 @@
 class CargoSort < Formula
   desc "Tool to check that your Cargo.toml dependencies are sorted alphabetically"
   homepage "https://github.com/devinr528/cargo-sort"
-  url "https://github.com/DevinR528/cargo-sort/archive/refs/tags/v2.1.3.tar.gz"
-  sha256 "21681504eca0b1e5d53f321d0ca21db1f72ac6ab11a937c1ddc2be20f6e860b8"
+  url "https://github.com/DevinR528/cargo-sort/archive/refs/tags/v2.1.4.tar.gz"
+  sha256 "89c1727bed54379ed112aa6ade693abd86beeeb106c6d043520d6b210b3ff685"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/devinr528/cargo-sort.git", branch: "main"
 
@@ -19,6 +19,9 @@ class CargoSort < Formula
   depends_on "rustup" => :test
 
   def install
+    # Fix version string, should remove in next release
+    inreplace "Cargo.toml", "version = \"2.1.3\"", "version = \"#{version}\""
+
     system "cargo", "install", *std_cargo_args
   end
 
