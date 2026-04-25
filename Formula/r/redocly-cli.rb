@@ -1,8 +1,8 @@
 class RedoclyCli < Formula
   desc "Your all-in-one OpenAPI utility"
   homepage "https://redocly.com/docs/cli"
-  url "https://registry.npmjs.org/@redocly/cli/-/cli-2.29.2.tgz"
-  sha256 "e5f15671bbc266361762fd06a4500b63ee428d463dbe741aa4c6e88ebbee6cf6"
+  url "https://registry.npmjs.org/@redocly/cli/-/cli-2.30.0.tgz"
+  sha256 "7dd3e12daa67c3cc72f5f8be43bc530553e47381ac5487c196ad5e85c35e38ec"
   license "MIT"
 
   bottle do
