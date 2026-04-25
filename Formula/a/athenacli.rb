@@ -8,7 +8,7 @@ class Athenacli < Formula
   license "BSD-3-Clause"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "6cfa134e25552fe60a2974ef48f8b4eb9d18f814664cc617b986b2da8ca8d411"
+    sha256 cellar: :any_skip_relocation, all: "4277b8953a87641029915da2120a8f2db45f4201f0bc9891baa49b8ac728296c"
   end
 
   depends_on "python@3.14"
