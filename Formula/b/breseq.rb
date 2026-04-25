@@ -1,8 +1,8 @@
 class Breseq < Formula
   desc "Computational pipeline for finding mutations in short-read DNA resequencing data"
   homepage "https://barricklab.org/breseq"
-  url "https://github.com/barricklab/breseq/archive/refs/tags/v0.40.0.tar.gz"
-  sha256 "1728515bea394dd0876ca5dedc78c724b836c370bb201bda1d585cb6fa058a52"
+  url "https://github.com/barricklab/breseq/archive/refs/tags/v0.40.1.tar.gz"
+  sha256 "69892a3b49e60ea8c50f70115ee983531744dbfa4434c55ee4df490051846b18"
   license all_of: ["GPL-2.0-or-later", "MIT", "BSD-3-Clause"]
   head "https://github.com/barricklab/breseq.git", branch: "master"
 
@@ -33,9 +33,6 @@ class Breseq < Formula
   end
 
   def install
-    # Remove hardcoded static zlib option
-    inreplace "configure.ac", "with_static_libz=\"$WITH_STATIC_LIBZ\"", ""
-
     system "./bootstrap.sh"
     system "./configure", "--disable-silent-rules", *std_configure_args
     system "make", "install"
