@@ -1,8 +1,8 @@
 class MinizipNg < Formula
   desc "Zip file manipulation library with minizip 1.x compatibility layer"
   homepage "https://github.com/zlib-ng/minizip-ng"
-  url "https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.1.1.tar.gz"
-  sha256 "ecc1a514f9e455cb627a768e1219369c576a761bc04196941590906c8b622d7e"
+  url "https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.1.2.tar.gz"
+  sha256 "3738c742c663fda43f1e510b8eeef312917581a712c89cb253f682aaef8c732f"
   license "Zlib"
   head "https://github.com/zlib-ng/minizip-ng.git", branch: "develop"
 
@@ -43,7 +43,6 @@ class MinizipNg < Formula
     system "cmake", "-S", ".", "-B", "build/static", *args, *std_cmake_args
     system "cmake", "--build", "build/static"
     lib.install "build/static/libminizip-ng.a"
-    (include/"minizip-ng").install "mz_config.h"
   end
 
   test do
