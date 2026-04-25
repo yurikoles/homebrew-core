@@ -5,6 +5,7 @@ class Ollama < Formula
       tag:      "v0.21.2",
       revision: "590109c8352e8d5a6206e8909b518a54a2b0a7b8"
   license "MIT"
+  revision 1
   head "https://github.com/ollama/ollama.git", branch: "main"
 
   # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
@@ -31,9 +32,16 @@ class Ollama < Formula
     on_arm do
       depends_on "mlx-c" => :no_linkage
 
-      # Fixes x/imagegen/mlx wrapper generation with system-installed mlx-c headers.
-      # upstream pr ref, https://github.com/ollama/ollama/pull/14201
       if build.stable?
+
+        # Support for mlx 0.31.2, pr ref https://github.com/ollama/ollama/pull/15793
+        patch do
+          url "https://github.com/ollama/ollama/commit/bdd7fdd171be290099d368aacb747f9a1241299a.patch?full_index=1"
+          sha256 "88de38e8e190f1f465288094778844146d4883aa86adaebf68efc27c46ef0127"
+        end
+
+        # Fixes x/imagegen/mlx wrapper generation with system-installed mlx-c headers.
+        # upstream pr ref, https://github.com/ollama/ollama/pull/14201
         patch do
           url "https://github.com/ollama/ollama/commit/c051122297824c223454b82f4af3afe94379e6dd.patch?full_index=1"
           sha256 "a22665cd1acec84f6bb53c84dd9a40f7001f2b1cbe2253aed3967b4401cde6a0"
