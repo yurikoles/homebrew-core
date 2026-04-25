@@ -9,7 +9,7 @@ class Storm < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c312999d81da9ad6b66f6029ff436af69538c5a8f9887b94face955fb5280fd5"
+    sha256 cellar: :any_skip_relocation, all: "9d6a3b9661a824c7fb732079f54bd31bd7259137f619962381ce5a4fb771d6ad"
   end
 
   depends_on "openjdk"
