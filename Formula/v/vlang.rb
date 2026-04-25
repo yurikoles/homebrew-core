@@ -12,12 +12,12 @@ class Vlang < Formula
   end
 
   bottle do
-    sha256                               arm64_tahoe:   "498e8cb0275d01f1486f98c470be304050789b0cd7432a38a28dd47233e8fe01"
-    sha256                               arm64_sequoia: "f5c47a6fd274882aacb32eaa88a06584d46a6d0ccf926b44622db0612552696a"
-    sha256                               arm64_sonoma:  "ed8c96275ec38c3d56e229f6cdfef3c3a5298577bf3c273022d9e68947667ca8"
-    sha256 cellar: :any,                 sonoma:        "e29f74308e99f9d05917ca7a9ee45699f8bc45d9663215c79b1082080eab35f1"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "624e8bbb90f61307a8590b50453f75954888823bac0991d641057b3c94d9d456"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25580978c612f524dabefcc113b941e89a09ad00cea0b24beb1336b6a5f61b6f"
+    sha256                               arm64_tahoe:   "cc874e4768a2864b7e11fdc979890cf1d43523e5ff6a782b47f201754970bd20"
+    sha256                               arm64_sequoia: "d76b8e73e5b582a058176d6f12191e7abc7f2b4abe1c34bc394aebe3d8a3204a"
+    sha256                               arm64_sonoma:  "5bfe1fc97d00ead3636fb5a1bbe1eb86ea64675ecd4c89855f4591bf9d69cc72"
+    sha256 cellar: :any,                 sonoma:        "2aa49153277c1f7e17cfb19417c7c1c90b2c1f1f01d2509ef4be49215e9df24c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "144b1e72ec64c79b0ceb3d6a1b8288a82b4a7ad883d2d4e52ba46b18c5f3e0d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "29bb6238dafb1c34d7a82966a929671284df9005d894cb13992777b4e131ba0b"
   end
 
   depends_on "bdw-gc"
