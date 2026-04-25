@@ -3,15 +3,10 @@ class Ipython < Formula
 
   desc "Interactive computing in Python"
   homepage "https://ipython.org/"
-  url "https://files.pythonhosted.org/packages/3a/73/7114f80a8f9cabdb13c27732dce24af945b2923dcab80723602f7c8bc2d8/ipython-9.12.0.tar.gz"
-  sha256 "01daa83f504b693ba523b5a407246cabde4eb4513285a3c6acaff11a66735ee4"
+  url "https://files.pythonhosted.org/packages/cd/c4/87cda5842cf5c31837c06ddb588e11c3c35d8ece89b7a0108c06b8c9b00a/ipython-9.13.0.tar.gz"
+  sha256 "7e834b6afc99f020e3f05966ced34792f40267d64cb1ea9043886dab0dde5967"
   license "BSD-3-Clause"
-  revision 1
   head "https://github.com/ipython/ipython.git", branch: "main"
-
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "b715dede0843ec065396cc1de8e25ddf092c9588d508352085e14c3214f703ab"
-  end
 
   depends_on "python@3.14"
 
@@ -58,6 +53,11 @@ class Ipython < Formula
   resource "prompt-toolkit" do
     url "https://files.pythonhosted.org/packages/a1/96/06e01a7b38dce6fe1db213e061a4602dd6032a8a97ef6c1a862537732421/prompt_toolkit-3.0.52.tar.gz"
     sha256 "28cde192929c8e7321de85de1ddbe736f1375148b02f2e17edd840042b1be855"
+  end
+
+  resource "psutil" do
+    url "https://files.pythonhosted.org/packages/aa/c6/d1ddf4abb55e93cebc4f2ed8b5d6dbad109ecb8d63748dd2b20ab5e57ebe/psutil-7.2.2.tar.gz"
+    sha256 "0746f5f8d406af344fd547f1c8daa5f5c33dbc293bb8d6a16d80b4bb88f59372"
   end
 
   resource "ptyprocess" do
