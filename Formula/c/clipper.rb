@@ -7,14 +7,10 @@ class Clipper < Formula
   head "https://github.com/wincent/clipper.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:    "3c0df619d149a439aa768fe0ad2f378c814df645516f1b97e7208af8570e9bc4"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "5ba6f81698c0137f48012644d531c866531753698d1401afbf4812ac6afac002"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b4430a2ed4f0c3c46fbfbbe3b439ec13693f5d9b4d644a93a58abcda5ee22463"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "786decdda1515fb47e7defc2d5b4b8f8663ae3bc5af905a8333394404f5bac4e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "b590d188d9161d5bb518cd7459350e26884a94d0a6b34a28d88ff8a8bd7a6e26"
-    sha256 cellar: :any_skip_relocation, sonoma:         "357b34301d35c90be7799c7cc702370ec0877e975e62c9033f2e2f1b8c5cfdf5"
-    sha256 cellar: :any_skip_relocation, ventura:        "3af42ac07c4fd9f399ad8ddf10762d992610911b6afc59ea0ef02290d8c74b5b"
-    sha256 cellar: :any_skip_relocation, monterey:       "86f8afc1e505c633c5c592cff7710184ce48e195ec038514682f1cdd78d3525c"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "44b24d4c30b5e9f0b830a3c4f9189bac8f62d4e84c1a268493b3a36eff3a1b7b"
+    sha256 cellar: :any_skip_relocation, sonoma:        "f1e008969ac9bb3e7978963fc1c43d22514338f9a255a57e99d45ad4581ae990"
   end
 
   depends_on "go" => :build
