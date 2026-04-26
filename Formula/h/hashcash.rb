@@ -5,7 +5,7 @@ class Hashcash < Formula
   mirror "http://hashcash.org/source/hashcash-1.22.tgz"
   sha256 "0192f12d41ce4848e60384398c5ff83579b55710601c7bffe6c88bc56b547896"
   license any_of: [:public_domain, "BSD-3-Clause", "LGPL-2.1-only", "GPL-2.0-only"]
-  revision 1
+  revision 2
 
   livecheck do
     url "http://hashcash.org/source/"
@@ -25,13 +25,13 @@ class Hashcash < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b099580ee6cd7ac69d1c63064049ce5ebb922272245be3f3aeac34943d59274"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     ENV.append_to_cflags "-Dunix"
     platform = Hardware::CPU.intel? ? "x86" : "generic"
     system "make", "#{platform}-openssl",
-                   "LIBCRYPTO=#{Formula["openssl@3"].opt_lib}/#{shared_library("libcrypto")}"
+                   "LIBCRYPTO=#{Formula["openssl@4"].opt_lib}/#{shared_library("libcrypto")}"
     system "make", "install",
                    "PACKAGER=HOMEBREW",
                    "INSTALL_PATH=#{bin}",
