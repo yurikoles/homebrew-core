@@ -7,12 +7,12 @@ class Expert < Formula
   head "https://github.com/expert-lsp/expert.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "9acd897b4c38ed5de3f84e949a01450c3e9e17b6a86a833189c94aac2701972d"
-    sha256 cellar: :any,                 arm64_sequoia: "042b471de1b653656c801463e45ac18ae2d9afd45082bb872a4d21e88faefd6a"
-    sha256 cellar: :any,                 arm64_sonoma:  "3540b346df247cefe80a24566b65847876ecfc5ae3ae089b2605a0f24316bd62"
-    sha256 cellar: :any,                 sonoma:        "2dc17156ddb089f8a6883c60d2095f6a5cb4b3e8868f0fc57b19e641e93590e8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "4e09a8d592a45a221c73cdde76468a004b73a41c059c8aac55d332e471c5f842"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e87dbae846e59f49387826fc170b1d4ca2ebb0a4b18a9a67eae83a5b3e94096e"
+    sha256 cellar: :any,                 arm64_tahoe:   "07740c303e629b73bd68a8c60132f3e341ee55db516d670f9ecbc4adb04469dc"
+    sha256 cellar: :any,                 arm64_sequoia: "fec3beccbea6b8989ba29827073a978f11ccd10ec05cf6ec0aa92d424cdde355"
+    sha256 cellar: :any,                 arm64_sonoma:  "51e41656c62a306f3a7928586b9660f051d0cb3c783eeaa8b9f6052be6b441e8"
+    sha256 cellar: :any,                 sonoma:        "9afd140f0aab679961561095e0fae90f7e8bdcc688694bd343b356716cad0246"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "287e02538b3e3fb2e45f6328d3ec72bc184e8a85df1accdbeaa39fc7ae461e96"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "692f5ad9a449be28299692c169b104988f567d085620ca9a1aa72eddcff0cbde"
   end
 
   depends_on "elixir" => :build
