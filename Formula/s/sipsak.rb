@@ -4,6 +4,7 @@ class Sipsak < Formula
   url "https://github.com/nils-ohlmeier/sipsak/releases/download/0.9.8.1/sipsak-0.9.8.1.tar.gz"
   sha256 "c6faa022cd8c002165875d4aac83b7a2b59194f0491802924117fc6ac980c778"
   license "GPL-2.0-or-later"
+  revision 1
 
   bottle do
     rebuild 1
@@ -22,7 +23,7 @@ class Sipsak < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "73f5a4948c437e0d89e33ff28f04842ef4c954fcfd9ed432da36620c20b6ca24"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     ENV.append "CFLAGS", "-std=gnu89"
