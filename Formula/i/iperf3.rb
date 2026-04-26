@@ -4,6 +4,7 @@ class Iperf3 < Formula
   url "https://downloads.es.net/pub/iperf/iperf-3.21.tar.gz"
   sha256 "656e4405ebd620121de7ceca3eaf43a88f79ea1b857d041a6a0b1314801acdd8"
   license "BSD-3-Clause"
+  revision 1
 
   livecheck do
     url "https://downloads.es.net/pub/iperf/"
@@ -27,13 +28,13 @@ class Iperf3 < Formula
     depends_on "libtool" => :build
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     system "./bootstrap.sh" if build.head?
     system "./configure", "--disable-silent-rules",
                           "--disable-profiling",
-                          "--with-openssl=#{Formula["openssl@3"].opt_prefix}",
+                          "--with-openssl=#{Formula["openssl@4"].opt_prefix}",
                           *std_configure_args
     system "make", "clean" # there are pre-compiled files in the tarball
     system "make", "install"
