@@ -6,12 +6,12 @@ class OhMyAgent < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "ab81decfc9def2bd0dd2812ae0d304e51202623cd2452651dbf965109e8e9212"
-    sha256 cellar: :any,                 arm64_sequoia: "c2ce6609163253c90fab0bd4338e59d66fdd2e5a907cb37950943109c2148250"
-    sha256 cellar: :any,                 arm64_sonoma:  "c2ce6609163253c90fab0bd4338e59d66fdd2e5a907cb37950943109c2148250"
-    sha256 cellar: :any,                 sonoma:        "a0b5d9b3ef84da296c56e416ba0fd3b621bdad30613314ff89063364bc70be66"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fbdbf3294c13abf977ccb2431b41934527e3b88e3dee2330082e6b3f80b89f19"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fd4f851bd9a35595b75ba28360f2668c121f72ddaf8572bb1ca0790de93d236a"
+    sha256 cellar: :any,                 arm64_tahoe:   "545fbf43ad201f4820720e7e116a31e3c2386d07c122394fa16812ad0cf3547a"
+    sha256 cellar: :any,                 arm64_sequoia: "3aabc085105fff86a5ecfa346653082fe15b6d162a948128df5aa1f2830a93f6"
+    sha256 cellar: :any,                 arm64_sonoma:  "3aabc085105fff86a5ecfa346653082fe15b6d162a948128df5aa1f2830a93f6"
+    sha256 cellar: :any,                 sonoma:        "6a349bfbf584047613ac95b43521df5465e87c1b1c8c611f8a4be225d66b8cd0"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "e509234424d4f36a4e1b4e51d1d96ee6164ec96f9db6a0dc89461668bfcb4641"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5330146871faf00abbc99e088be380b397294a8154728c4cc9286c1340786072"
   end
 
   depends_on "node"
