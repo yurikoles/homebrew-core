@@ -4,6 +4,7 @@ class Sqlcipher < Formula
   url "https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.14.0.tar.gz"
   sha256 "67fb27e967a4a6968c0905691c89c908e7250dddc581b887c19ef981c737e473"
   license all_of: ["BSD-3-Clause", "blessing"]
+  revision 1
   head "https://github.com/sqlcipher/sqlcipher.git", branch: "master"
 
   bottle do
@@ -15,7 +16,7 @@ class Sqlcipher < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "02c58fd88765f08711351013792636ac385c0e6dac7ba229cf6ee0aba6b9b50a"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   # Build scripts require tclsh. `--disable-tcl` only skips building extension
   uses_from_macos "tcl-tk" => :build
