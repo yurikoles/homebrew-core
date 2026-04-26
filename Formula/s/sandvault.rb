@@ -17,8 +17,8 @@ class Sandvault < Formula
   conflicts_with "runit", because: "both install `sv` binaries"
 
   def install
-    prefix.install "guest", "sv"
-    bin.write_exec_script "#{prefix}/sv"
+    prefix.install "guest", "sv", "sv-clone"
+    bin.write_exec_script prefix/"sv", prefix/"sv-clone"
   end
 
   test do
