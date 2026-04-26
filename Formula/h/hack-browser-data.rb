@@ -1,8 +1,8 @@
 class HackBrowserData < Formula
   desc "Command-line tool for decrypting and exporting browser data"
   homepage "https://github.com/moonD4rk/HackBrowserData"
-  url "https://github.com/moonD4rk/HackBrowserData/archive/refs/tags/v0.4.6.tar.gz"
-  sha256 "3e4d70e0b6a1b0bc1e55d6caf1a5b8e84c1115f381aa14b382b358a01eb3b30c"
+  url "https://github.com/moonD4rk/HackBrowserData/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "f856385687f87bd7f099d3d431289a012d64b2ede719b2b72453934f3be11b86"
   license "MIT"
   head "https://github.com/moonD4rk/HackBrowserData.git", branch: "main"
 
@@ -18,13 +18,22 @@ class HackBrowserData < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/hack-browser-data"
+    ldflags = %W[
+      -s -w
+      -X main.version=#{version}
+      -X main.commit=#{tap.user}
+      -X main.buildDate=#{time.iso8601}
+    ]
+
+    system "go", "build", *std_go_args(ldflags:), "./cmd/hack-browser-data"
+
+    generate_completions_from_executable(bin/"hack-browser-data", shell_parameter_format: :cobra)
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/hack-browser-data --version")
+    assert_match version.to_s, shell_output("#{bin}/hack-browser-data version")
 
     output = shell_output("#{bin}/hack-browser-data -b chrome -f json --dir #{testpath}/results 2>&1")
-    assert_match "find browser failed, profile folder does not exist", output
+    assert_match "[WRN] no browsers found\n", output
   end
 end
