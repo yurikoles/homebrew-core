@@ -8,6 +8,15 @@ class Ipython < Formula
   license "BSD-3-Clause"
   head "https://github.com/ipython/ipython.git", branch: "main"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b5e1a11417fd2b5e5eaba258e43083142635e1ce5d9a5c88ab0bd07dd771a6cc"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a60a4510ce5aafdd08d2c572c80b5c4f43fa7bc6ebe9d334eb7fb4e9839972d4"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4bc147746bac291e1fdda7e42513e0e63e50b10390903abc352ffb510f98a41f"
+    sha256 cellar: :any_skip_relocation, sonoma:        "e4d720ae858b4fe6a745060bb0064339cd5bdff079414eb3acbabc14a8088d9e"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "580194a7ad991568364fa4cac8b0c4149f5a093b93eef42802b96dbbe25f2388"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ff3499eb1ed989d66a1a47399a0e5754ace9014f98073043570cb26fb0d053ec"
+  end
+
   depends_on "python@3.14"
 
   resource "asttokens" do
