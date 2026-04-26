@@ -2,7 +2,7 @@ class Httperf < Formula
   desc "Tool for measuring webserver performance"
   homepage "https://github.com/httperf/httperf"
   license "GPL-2.0-or-later"
-  revision 2
+  revision 3
 
   stable do
     url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/httperf/httperf-0.9.0.tar.gz"
@@ -46,7 +46,7 @@ class Httperf < Formula
     depends_on "libtool" => :build
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     system "autoreconf", "--force", "--install", "--verbose" if build.head?
