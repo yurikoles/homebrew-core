@@ -1,8 +1,8 @@
 class DdnsGo < Formula
   desc "Simple and easy-to-use DDNS"
   homepage "https://github.com/jeessy2/ddns-go"
-  url "https://github.com/jeessy2/ddns-go/archive/refs/tags/v6.16.10.tar.gz"
-  sha256 "0af625f11d396d3839486b5d985b58edf7e0712267da0e2a8e1a1f52cc7329ef"
+  url "https://github.com/jeessy2/ddns-go/archive/refs/tags/v6.16.12.tar.gz"
+  sha256 "709f4fde4eebc415c592252232f7f79629a64ce9933a30bc68a6cad3198a0c66"
   license "MIT"
   head "https://github.com/jeessy2/ddns-go.git", branch: "master"
 
