@@ -4,6 +4,7 @@ class Gammaray < Formula
   url "https://github.com/KDAB/GammaRay/releases/download/v3.4.0/gammaray-3.4.0.tar.gz"
   sha256 "bcac8aa24671bcfd563213f5cfd9e61cf555b22ee3896e8111a5c3a588aacadf"
   license "GPL-2.0-or-later"
+  revision 1
   head "https://github.com/KDAB/GammaRay.git", branch: "master"
 
   bottle do
@@ -46,14 +47,25 @@ class Gammaray < Formula
     end
   end
 
+  # Make rootPath follow symlink to support linked keg.
+  # Submitted upstream: https://github.com/KDAB/GammaRay/pull/1126
+  patch do
+    url "https://github.com/KDAB/GammaRay/commit/23e98b93e4e430806a43f6cfa5b1dd0ee1ee1c80.patch?full_index=1"
+    sha256 "aed9d33a97b4c2dbe11eaff0d06554aa4f80fc2ca10e0f34f1a55526da79423a"
+  end
+
   def install
     rpaths = [rpath]
     # Workaround to stop brew from complaining about missing RPATH
-    rpaths << "#{loader_path}/../../../../../../Frameworks" if OS.mac?
+    rpaths << rpath(source: prefix/"plugins/gammaray-target/position")
+
+    inreplace "CMakeLists.txt", 'set(MAN_INSTALL_DIR "man/man1")', "set(MAN_INSTALL_DIR \"#{man1}\")" if OS.mac?
 
     system "cmake", "-S", ".", "-B", "build",
                     "-DCMAKE_DISABLE_FIND_PACKAGE_Graphviz=ON",
                     "-DCMAKE_DISABLE_FIND_PACKAGE_VTK=OFF",
+                    "-DGAMMARAY_INSTALL_QT_LAYOUT=ON",
+                    "-DZSHAUTOCOMPLETE_INSTALL_DIR=#{zsh_completion}",
                     "-DCMAKE_INSTALL_RPATH=#{rpaths.join(";")}",
                     *std_cmake_args
     system "cmake", "--build", "build"
@@ -61,7 +73,9 @@ class Gammaray < Formula
   end
 
   test do
-    gammaray = OS.mac? ? prefix/"GammaRay.app/Contents/MacOS/gammaray" : bin/"gammaray"
-    assert_predicate gammaray, :executable?
+    ENV["QT_QPA_PLATFORM"] = "offscreen" if OS.linux?
+    assert_match version.to_s, shell_output("#{bin}/gammaray --version")
+
+    assert_match "successfully passed its self-test", shell_output("#{bin}/gammaray --self-test")
   end
 end
