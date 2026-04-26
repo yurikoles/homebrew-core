@@ -6,7 +6,7 @@ class Liboauth < Formula
   # if configured with '--enable-gpl' see COPYING.GPL and LICENSE.OpenSSL
   # otherwise read COPYING.MIT
   license "MIT"
-  revision 3
+  revision 4
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:    "a510309b244c20d084bcac6d01a80b888c0bb2e89ee67e8c7be5fdd4cdf28f84"
@@ -23,7 +23,7 @@ class Liboauth < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "0177a7a4378d03aa25b46b4bc37bc12b777438fa177ef15b0dd16406cfad40ef"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   # Patch for compatibility with OpenSSL 1.1
   patch :p0 do
@@ -42,5 +42,24 @@ class Liboauth < Formula
                           "--prefix=#{prefix}",
                           "--disable-curl"
     system "make", "install"
+  end
+
+  test do
+    (testpath/"test.c").write <<~C
+      #include <stddef.h>
+      #include <oauth.h>
+      #include <stdlib.h>
+      #include <string.h>
+
+      int main(void) {
+        char *escaped = oauth_url_escape("hello world!");
+        int failed = !escaped || strcmp(escaped, "hello%20world%21") != 0;
+        free(escaped);
+        return failed;
+      }
+    C
+
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-loauth", "-o", "test"
+    system "./test"
   end
 end
