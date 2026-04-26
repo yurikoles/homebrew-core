@@ -6,7 +6,7 @@ class Httrack < Formula
   url "https://mirror.httrack.com/historical/httrack-3.49.2.tar.gz"
   sha256 "3477a0e5568e241c63c9899accbfcdb6aadef2812fcce0173688567b4c7d4025"
   license "GPL-3.0-or-later" => { with: "openvpn-openssl-exception" }
-  revision 1
+  revision 2
 
   livecheck do
     url "https://mirror.httrack.com/historical/"
@@ -23,7 +23,7 @@ class Httrack < Formula
     sha256 x86_64_linux:  "8d0665d92f867729256ebc7c6877e4fabe66d99aa2dcbff3f6cb4c3160f419d7"
   end
 
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
