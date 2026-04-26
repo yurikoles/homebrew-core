@@ -6,10 +6,11 @@ class Sandvault < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d1c6746bf983db58f21b72c64f8c9888b87691268b44817b29c6a3ecd257dd19"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d1c6746bf983db58f21b72c64f8c9888b87691268b44817b29c6a3ecd257dd19"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d1c6746bf983db58f21b72c64f8c9888b87691268b44817b29c6a3ecd257dd19"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3c2c4fc165a4b74900108c31f607fe935bd98b50d54b1bd5f901c688b71738c8"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "e86e31c6ae03a826867f2745f69182773d6c1ef15cb57d6f28fc7cde3e7b8c97"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e86e31c6ae03a826867f2745f69182773d6c1ef15cb57d6f28fc7cde3e7b8c97"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "e86e31c6ae03a826867f2745f69182773d6c1ef15cb57d6f28fc7cde3e7b8c97"
+    sha256 cellar: :any_skip_relocation, sonoma:        "c3adeb1bfa0c8268b9dbe52cbd4774d7c7730fbd58e61ebe7533f883197316ea"
   end
 
   depends_on :macos
@@ -17,8 +18,8 @@ class Sandvault < Formula
   conflicts_with "runit", because: "both install `sv` binaries"
 
   def install
-    prefix.install "guest", "sv"
-    bin.write_exec_script "#{prefix}/sv"
+    prefix.install "guest", "sv", "sv-clone"
+    bin.write_exec_script prefix/"sv", prefix/"sv-clone"
   end
 
   test do
