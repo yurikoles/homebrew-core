@@ -7,10 +7,11 @@ class Periphery < Formula
   head "https://github.com/peripheryapp/periphery.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "fdc178f4b0f9adad570ec7317df4f6515cff29d435254acebfd25fe6bca416b3"
-    sha256 cellar: :any,                 arm64_sequoia: "6e8d4b959b61c1d93178e2aa83eb843867da68332fb4e735672a90efd585e01f"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ea6afe7271e3bcdd4bd24aa730343d02326f4fa807a1990eac31a2736259cf7c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "cce114f7b84975c098ee150c8c6875c0461d55d23845d277648f5ec5d308cb59"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "3e1c491a5c1dc82e247ca241433a5e06e9102d5b990dd990041bf6a8bb14e0ea"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a795a73bb0537e622e971e79eeeb1e15376961c726ef252a8a2315a51f697aad"
+    sha256                               arm64_linux:   "b987c8031b3d4fdb652cd846eff55a3c4414995b64f4a87afc9651ea44fc9f21"
+    sha256                               x86_64_linux:  "703779b1a182165b076a38704fc21045826d6f091f703c9681c9229275b33e35"
   end
 
   depends_on xcode: ["16.4", :build]
