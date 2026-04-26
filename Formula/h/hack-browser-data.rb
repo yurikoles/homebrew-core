@@ -7,12 +7,12 @@ class HackBrowserData < Formula
   head "https://github.com/moonD4rk/HackBrowserData.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cf5e0e28a426f13b59544ca0843c67c5706df28db0a87aa9a64b2b1f0fa89752"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cf5e0e28a426f13b59544ca0843c67c5706df28db0a87aa9a64b2b1f0fa89752"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cf5e0e28a426f13b59544ca0843c67c5706df28db0a87aa9a64b2b1f0fa89752"
-    sha256 cellar: :any_skip_relocation, sonoma:        "a14333355a3288098948e2f776dd61f0846b95e7d9a77ad3593701625c4f8274"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ab15db72f8c0abd86caa4bec50a2d736ab839583ba99ca69bca6d6b62099624b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4abbd72a5a012a3d006be2fafdb7437e73bac360fa51c200384f2df42f790f7f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "5188d7ce62d6e242674c9beda55f0761119f4e194efcea286b50e04a389e81f8"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "5188d7ce62d6e242674c9beda55f0761119f4e194efcea286b50e04a389e81f8"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "5188d7ce62d6e242674c9beda55f0761119f4e194efcea286b50e04a389e81f8"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1309e377866a7e547fd7ae93e741a4ff35046e718c49f77ccb492044607bd274"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "07c94a19af17db62aae7fc059d15254585dd80f0430b3681f883c4f541c52519"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "2cf67f50372cfd85f81c5807b6da827e78c9e38fbec746b595ac85fa90c505f1"
   end
 
   depends_on "go" => :build
