@@ -1,8 +1,8 @@
 class Headson < Formula
   desc "Head/tail for structured data"
   homepage "https://docs.rs/headson/latest/headson/"
-  url "https://github.com/kantord/headson/archive/refs/tags/headson-v0.16.1.tar.gz"
-  sha256 "485c221b28b361c9de2b8223f7985401d37f2c75a2870be6f59af4d83f499db7"
+  url "https://github.com/kantord/headson/archive/refs/tags/headson-v0.17.0.tar.gz"
+  sha256 "9555186f0f79a8be725aec6a3d857ae6d2b58133e060b0b7eeeeb85715284dbf"
   license "MIT"
   head "https://github.com/kantord/headson.git", branch: "main"
 
