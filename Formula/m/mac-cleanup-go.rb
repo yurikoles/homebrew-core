@@ -7,10 +7,10 @@ class MacCleanupGo < Formula
   head "https://github.com/2ykwang/mac-cleanup-go.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "cb4d3b2c920380391acf597e5877726d0eaf8420f618efeb909ad9bc33f4932d"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "cb4d3b2c920380391acf597e5877726d0eaf8420f618efeb909ad9bc33f4932d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cb4d3b2c920380391acf597e5877726d0eaf8420f618efeb909ad9bc33f4932d"
-    sha256 cellar: :any_skip_relocation, sonoma:        "bf634113a24084e37ce132c936abd4721917fac3f032e501b3778aede4131fc1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "08329a1b1084fcbafea0c459780b75e2024c5385978ddb2eeffe34f48b0dd765"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "08329a1b1084fcbafea0c459780b75e2024c5385978ddb2eeffe34f48b0dd765"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "08329a1b1084fcbafea0c459780b75e2024c5385978ddb2eeffe34f48b0dd765"
+    sha256 cellar: :any_skip_relocation, sonoma:        "392157dbb8138020888d89d8ef0763084e1f1dc33cb089e3e713fc68c2148450"
   end
 
   depends_on "go" => :build
