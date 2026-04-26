@@ -6,7 +6,7 @@ class Bashunit < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "ac4f447f2850e0eed881e66528853f923164233d71b435ae7acf5bdde8f7f54f"
+    sha256 cellar: :any_skip_relocation, all: "29b947f9ba433f3be8399362e7bfc768633ddcaf2135b22dfd673e8ef020b77f"
   end
 
   def install
