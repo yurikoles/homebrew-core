@@ -5,6 +5,7 @@ class Lynx < Formula
   mirror "https://fossies.org/linux/www/lynx2.9.2.tar.bz2"
   sha256 "7374b89936d991669e101f4e97f2c9592036e1e8cdaa7bafc259a77ab6fb07ce"
   license "GPL-2.0-only" # with non-SPDX exception in COPYHEADER to use OpenSSL and other libs
+  revision 1
 
   livecheck do
     url "https://invisible-mirror.net/archives/lynx/tarballs/?C=M&O=D"
@@ -23,7 +24,7 @@ class Lynx < Formula
 
   # Move to brew ncurses to fix screen related bugs
   depends_on "ncurses"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   on_linux do
     depends_on "zlib-ng-compat"
@@ -42,7 +43,7 @@ class Lynx < Formula
                           "--enable-default-colors",
                           "--with-zlib",
                           "--with-bzlib",
-                          "--with-ssl=#{Formula["openssl@3"].opt_prefix}",
+                          "--with-ssl=#{Formula["openssl@4"].opt_prefix}",
                           "--enable-ipv6",
                           "--with-screen=ncurses",
                           "--with-curses-dir=#{Formula["ncurses"].opt_prefix}",
