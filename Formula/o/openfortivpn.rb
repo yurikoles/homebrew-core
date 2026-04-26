@@ -8,12 +8,12 @@ class Openfortivpn < Formula
   head "https://github.com/adrienverge/openfortivpn.git", branch: "master"
 
   bottle do
-    sha256 arm64_tahoe:   "1cb3b9c06cf1b8af8984fe264878a82a0fe7b4f58ae0d0a90640a9ed37965a90"
-    sha256 arm64_sequoia: "dc900e43087d6641174632f37b884dc806b6777546f3b0c9c45fecbdf1573886"
-    sha256 arm64_sonoma:  "bd784e7336c8d86dbd91cbc9877122518fb8641720abbadf9480fd93381354ea"
-    sha256 sonoma:        "445013d98ad9c0d85b93cbc56dba215ee5096660cf7c56b43643779685b2ab55"
-    sha256 arm64_linux:   "b839b8ec4aa6c6c666c68f79571a2ec0ac0b73e1eef6d04c27943012484504e2"
-    sha256 x86_64_linux:  "f977e5a39f774039ea8b06090d1b0e4459d3321233aa171a4b157e4d8419cbe8"
+    sha256 arm64_tahoe:   "65d370bb770879309455473ac8e03569ab5ddd2a84618be63ccdecd8348e259c"
+    sha256 arm64_sequoia: "00c49ac2a42509360a6dcac6ce039702872ad72b6ed0e2257663f7ed588a83d0"
+    sha256 arm64_sonoma:  "2714c163f798702d0cd1f635d2e424f5679890260bc6187893bca3fb4d291872"
+    sha256 sonoma:        "db7037d4ae45940d7c7aeac8987f0c0346d2e31f6dd2acbfc99aca2fad16274b"
+    sha256 arm64_linux:   "9e03b7e692f3c88109b5d3b0e69a156f523829413a1da57fe89efdf8c744d22c"
+    sha256 x86_64_linux:  "71e318785c859da9d6de4d9cc0c4b4f96cd92af2e1cb101d8b6a28488bcd06e9"
   end
 
   depends_on "autoconf" => :build
