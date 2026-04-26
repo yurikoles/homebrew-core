@@ -1,18 +1,18 @@
 class Keploy < Formula
   desc "Testing Toolkit creates test-cases and data mocks from API calls, DB queries"
   homepage "https://keploy.io"
-  url "https://github.com/keploy/keploy/archive/refs/tags/v3.5.4.tar.gz"
-  sha256 "ac085adef7d037477cdc6c542a5b4e936ba30e331b8ddfd9302dc05b8d9ca760"
+  url "https://github.com/keploy/keploy/archive/refs/tags/v3.5.5.tar.gz"
+  sha256 "0fee2b5773b998b503f009c0f9b1385cc3c7096a33be85002897eb78c651f8b5"
   license "Apache-2.0"
   head "https://github.com/keploy/keploy.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "55555e18ca35f6c39fa41d8d3c3426771c4d0a47cf6ceda876a3549adbc2b346"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "55555e18ca35f6c39fa41d8d3c3426771c4d0a47cf6ceda876a3549adbc2b346"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "55555e18ca35f6c39fa41d8d3c3426771c4d0a47cf6ceda876a3549adbc2b346"
-    sha256 cellar: :any_skip_relocation, sonoma:        "97830152ea10b88c423828b207c589154fed366bc9d4618f752343ba4acc2014"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "5998bdb4abbfd3bb2f5baf6ce822fe3a35311c319dbfb7e9a03a2e555206ed18"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dce8f1fc8ff1eccb49dd3388f2cf78c8697e7993d5a6a4670aad62a63fb4ecc0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f4a0b72e6238183b9a9637216db98ef77eae1385094e0a4557cc38147ddf4713"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f4a0b72e6238183b9a9637216db98ef77eae1385094e0a4557cc38147ddf4713"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f4a0b72e6238183b9a9637216db98ef77eae1385094e0a4557cc38147ddf4713"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1981fab47aea27c89e62d956adae832676ff14e4215033cd2cc5f61bc5ff551c"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "d960cdab4f5b106f2f048cc7562cdf83e5ab799409395e33685dcecd0a3e47dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7eb13a63d115e5d98dd30c725cd9ccee180dba2984d6d729057473a8a9e7bcbd"
   end
 
   depends_on "go" => :build
