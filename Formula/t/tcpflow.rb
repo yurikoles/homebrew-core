@@ -4,6 +4,7 @@ class Tcpflow < Formula
   url "https://corp.digitalcorpora.org/downloads/tcpflow/tcpflow-1.6.1.tar.gz"
   sha256 "436f93b1141be0abe593710947307d8f91129a5353c3a8c3c29e2ba0355e171e"
   license "GPL-3.0-only"
+  revision 1
 
   livecheck do
     url "https://digitalcorpora.s3.us-west-2.amazonaws.com/?list-type=2&delimiter=%2F&prefix=downloads%2Ftcpflow%2F"
@@ -26,14 +27,14 @@ class Tcpflow < Formula
   end
 
   head do
-    url "https://github.com/simsong/tcpflow.git", branch: "master"
+    url "https://github.com/simsong/tcpflow.git", branch: "main"
     depends_on "autoconf" => :build
     depends_on "automake" => :build
     depends_on "libtool" => :build
   end
 
   depends_on "boost" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "bzip2"
   uses_from_macos "libpcap"
