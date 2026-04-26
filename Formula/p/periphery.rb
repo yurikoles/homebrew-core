@@ -15,78 +15,21 @@ class Periphery < Formula
 
   depends_on xcode: ["16.4", :build]
 
-  uses_from_macos "swift" => [:build, :test]
   uses_from_macos "curl"
   uses_from_macos "libxml2"
-
-  on_linux do
-    depends_on "patchelf" => :build
-    depends_on "zlib-ng-compat"
-    depends_on "zstd"
-  end
+  uses_from_macos "swift"
 
   def install
     args = if OS.mac?
       ["--disable-sandbox"]
     else
-      ["--static-swift-stdlib", "-Xswiftc", "-use-ld=ld"]
+      swift_cellar_libexec_lib = Formula["swift"].libexec/"lib"
+
+      ["--static-swift-stdlib", "-Xswiftc", "-use-ld=ld", "-Xlinker", "-L#{swift_cellar_libexec_lib}", "-Xlinker",
+       "-rpath", "-Xlinker", swift_cellar_libexec_lib.to_s]
     end
     system "swift", "build", *args, "--configuration", "release", "--product", "periphery"
     bin.install ".build/release/periphery"
-
-    if OS.mac?
-      toolchain_lib = Pathname(
-        Utils.safe_popen_read("/usr/bin/xcode-select", "-p").strip,
-      )/"Toolchains/XcodeDefault.xctoolchain/usr/lib"
-      indexstore = toolchain_lib/"libIndexStore.dylib"
-      odie "Missing libIndexStore in #{toolchain_lib}" unless indexstore.exist?
-      lib.mkpath
-      cp indexstore, lib/"libIndexStore.dylib"
-
-      # The binary inherits an absolute Xcode toolchain rpath from the build environment.
-      # Replace it with a loader-relative path so the bundled lib is used instead.
-      toolchain_rpaths = []
-      inside_rpath_command = false
-      Utils.safe_popen_read("/usr/bin/otool", "-l", bin/"periphery").each_line do |line|
-        if line.include?("cmd LC_RPATH")
-          inside_rpath_command = true
-          next
-        end
-
-        next unless inside_rpath_command
-        next unless line.lstrip.start_with?("path ")
-
-        path = line.split[1]
-        toolchain_rpaths << path if path == toolchain_lib.to_s || path.start_with?("#{toolchain_lib}/")
-        inside_rpath_command = false
-      end
-      system "/usr/bin/install_name_tool", "-add_rpath", "@loader_path/../lib", bin/"periphery"
-      toolchain_rpaths.uniq.each do |path|
-        system "/usr/bin/install_name_tool", "-delete_rpath", path, bin/"periphery"
-      end
-    else
-      swift_libexec_lib = Formula["swift"].opt_libexec/"lib"
-      indexstore = Dir[swift_libexec_lib/"libIndexStore.so*"].map { |path| Pathname(path) }
-      odie "Missing libIndexStore in #{swift_libexec_lib}" if indexstore.empty?
-      indexstore.each do |path|
-        lib.install path
-      end
-
-      # The binary inherits an absolute Swift toolchain rpath from the build environment.
-      # Replace it with a loader-relative path so the bundled lib is used instead.
-      swift_cellar_libexec_lib = Formula["swift"].libexec/"lib"
-      swift_toolchain_rpaths = [swift_libexec_lib, swift_cellar_libexec_lib]
-      swift_toolchain_rpaths << swift_libexec_lib.realpath if swift_libexec_lib.exist?
-      swift_toolchain_rpaths << swift_cellar_libexec_lib.realpath if swift_cellar_libexec_lib.exist?
-      existing_rpath = Utils.safe_popen_read(
-        Formula["patchelf"].opt_bin/"patchelf", "--print-rpath", bin/"periphery"
-      ).strip
-      rpaths = existing_rpath.split(":").reject do |path|
-        path == lib.to_s || swift_toolchain_rpaths.map(&:to_s).include?(path)
-      end
-      rpaths.unshift("$ORIGIN/../lib")
-      system Formula["patchelf"].opt_bin/"patchelf", "--set-rpath", rpaths.uniq.join(":"), bin/"periphery"
-    end
 
     generate_completions_from_executable(bin/"periphery", "--generate-completion-script")
   end
