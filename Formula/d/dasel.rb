@@ -1,8 +1,8 @@
 class Dasel < Formula
   desc "JSON, YAML, TOML, XML, and CSV query and modification tool"
   homepage "https://github.com/TomWright/dasel"
-  url "https://github.com/TomWright/dasel/archive/refs/tags/v3.7.0.tar.gz"
-  sha256 "cfd84042c36cabfc1ffdefac35047934777cbb313a3c4ca5e0b717411f500124"
+  url "https://github.com/TomWright/dasel/archive/refs/tags/v3.8.0.tar.gz"
+  sha256 "4d09e057c379d9d629e076752bf9ab9f7fab7a48712da4b73a655ea5157246b2"
   license "MIT"
   head "https://github.com/TomWright/dasel.git", branch: "master"
 
@@ -20,6 +20,8 @@ class Dasel < Formula
   def install
     ldflags = "-s -w -X github.com/tomwright/dasel/v#{version.major}/internal.Version=#{version}"
     system "go", "build", *std_go_args(ldflags:), "./cmd/dasel"
+
+    generate_completions_from_executable(bin/"dasel", "completion", shells: [:bash, :zsh, :fish, :pwsh])
   end
 
   test do
