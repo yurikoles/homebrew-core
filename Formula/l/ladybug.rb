@@ -1,8 +1,8 @@
 class Ladybug < Formula
   desc "Embedded graph database built for query speed and scalability"
   homepage "https://ladybugdb.com/"
-  url "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.15.4.tar.gz"
-  sha256 "4c2ef23b5e7220033e8560f295435180df926d0ebab46c46d59d4fed74dc69f8"
+  url "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.15.4.2.tar.gz"
+  sha256 "7ca796ff20f88ac374a835a7bc3689ee12faae621fcfee9fa5d5de5a8c1cda81"
   license "MIT"
 
   bottle do
@@ -37,7 +37,8 @@ class Ladybug < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/lbug --version")
+    # Upstream versioning up to patch version, so skip for 4th number in version
+    assert_match version.major_minor_patch.to_s, shell_output("#{bin}/lbug --version")
 
     # Test basic query functionality
     output = pipe_output("#{bin}/lbug -m csv -s", "UNWIND [1, 2, 3, 4, 5] as i return i;")
