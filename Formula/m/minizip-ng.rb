@@ -7,12 +7,12 @@ class MinizipNg < Formula
   head "https://github.com/zlib-ng/minizip-ng.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "652e206cf55d7999bed48042f6231b414b948079c677e9ed302a9c99017acf84"
-    sha256 cellar: :any,                 arm64_sequoia: "0f0cdcf802459491aa6ca0ad02377f00da00bdc7550af0156d0be39ef888a973"
-    sha256 cellar: :any,                 arm64_sonoma:  "bcb6fca4c512e22b198bf85d28b763d87df5613a3dee38f0be45396894417c59"
-    sha256 cellar: :any,                 sonoma:        "a195fcf34eb72f8938469eb9924f7ad8225c13ca25dab03e60a8ef1041dff512"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "9be5906d844d3a8320fa28e79cfbbdcf38edbdf8a476558074a062acec02ca5e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cbbce26ec60e8065365c65523a78e5b4ae8f4ab4962675ec07f09227abcb3d8"
+    sha256 cellar: :any,                 arm64_tahoe:   "c36e9e191cbd3fa3da3fae6381873c2ce1915d2def74b87dc71eec9dfa0d67d5"
+    sha256 cellar: :any,                 arm64_sequoia: "5c427eb3894e74edb1f8bf57726be8dca9a450d67b5bce185bf03baeccc10808"
+    sha256 cellar: :any,                 arm64_sonoma:  "91773c4b688ea7515534cda9fc79d2c2a78ac13515377768d7676ba8f2048213"
+    sha256 cellar: :any,                 sonoma:        "d9a1ebfe59b95a681f7891ec6f627f3863ad48273608c8512a5966525c8988d1"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5d8ad047f24d9bae639f51cc7ca767fdae91522849e5d277bed85d63d7836c7c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d137c36e4d4171004b276dc25bafaa944cfcc0117b093b6a42bcbdd57242ba62"
   end
 
   depends_on "cmake" => :build
