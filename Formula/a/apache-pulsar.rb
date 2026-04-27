@@ -1,9 +1,9 @@
 class ApachePulsar < Formula
   desc "Cloud-native distributed messaging and streaming platform"
   homepage "https://pulsar.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-4.2.0/apache-pulsar-4.2.0-src.tar.gz"
-  mirror "https://archive.apache.org/dist/pulsar/pulsar-4.2.0/apache-pulsar-4.2.0-src.tar.gz"
-  sha256 "012f70996330c8c6b47c082d8c0f4028ca0a61f711f3007576c0ac114067f6bb"
+  url "https://www.apache.org/dyn/closer.lua?path=pulsar/pulsar-4.2.1/apache-pulsar-4.2.1-src.tar.gz"
+  mirror "https://archive.apache.org/dist/pulsar/pulsar-4.2.1/apache-pulsar-4.2.1-src.tar.gz"
+  sha256 "48a700fd8ed2eddfb22d86df47a1c07e9000a0ebd7f6b9f6e1f475c18d9afb11"
   license "Apache-2.0"
   head "https://github.com/apache/pulsar.git", branch: "master"
 
@@ -33,7 +33,9 @@ class ApachePulsar < Formula
 
     java_home_env = Language::Java.java_home_env("21")
     with_env(TMPDIR: buildpath, **java_home_env) do
-      system "mvn", "clean", "package", "-DskipTests", "-Pcore-modules"
+      # Exclude the `docker` module, we don't need the image.
+      system "mvn", "clean", "package", "-DskipTests", "-Pcore-modules",
+                    "-pl", "!:docker-images,!:pulsar-docker-image,!:pulsar-all-docker-image"
     end
 
     tarball = if build.head?
