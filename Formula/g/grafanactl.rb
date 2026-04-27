@@ -1,8 +1,8 @@
 class Grafanactl < Formula
   desc "CLI to interact with Grafana"
   homepage "https://grafana.github.io/grafanactl/"
-  url "https://github.com/grafana/grafanactl/archive/refs/tags/v0.1.9.tar.gz"
-  sha256 "f978c3f36d6b6efb1e145a73c9f3fdeca1720def348a137fec6a289fb7df4541"
+  url "https://github.com/grafana/grafanactl/archive/refs/tags/v0.1.10.tar.gz"
+  sha256 "c3a3fef02f073aa92fb7b62c6f60a26e80fe794cf158f86830fe38ff053035fd"
   license "Apache-2.0"
   head "https://github.com/grafana/grafanactl.git", branch: "main"
 
