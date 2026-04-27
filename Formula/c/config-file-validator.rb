@@ -1,8 +1,8 @@
 class ConfigFileValidator < Formula
   desc "CLI tool to validate different configuration file types"
   homepage "https://boeing.github.io/config-file-validator/"
-  url "https://github.com/Boeing/config-file-validator/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "6bd9f868fea7dfc5e2d311dc0c574a4a3cc23d45f985361205af089720582b45"
+  url "https://github.com/Boeing/config-file-validator/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "b1e2082d97f15446cbbd5de47c4614994aba862061acb89f2d49499d2838bfcb"
   license "Apache-2.0"
   head "https://github.com/Boeing/config-file-validator.git", branch: "main"
 
@@ -18,7 +18,7 @@ class ConfigFileValidator < Formula
   depends_on "go" => :build
 
   def install
-    ldflags = "-s -w -X github.com/Boeing/config-file-validator.version=#{version}"
+    ldflags = "-s -w -X github.com/Boeing/config-file-validator/v2.version=#{version}"
     system "go", "build", *std_go_args(ldflags:, output: bin/"validator"), "./cmd/validator"
   end
 
