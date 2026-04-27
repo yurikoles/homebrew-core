@@ -7,7 +7,7 @@ class Functionalplus < Formula
   head "https://github.com/Dobiasd/FunctionalPlus.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "a7782dbf77af1ba972686d7cac7a543c9c8f4c4bc1944a769d50029051d01271"
+    sha256 cellar: :any_skip_relocation, all: "99a0a032e6e1a98799d695b1ed87a3f3152807c0d33bc345fd19dfab92a8348d"
   end
 
   depends_on "cmake" => :build
