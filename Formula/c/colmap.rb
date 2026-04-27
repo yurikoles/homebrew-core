@@ -1,10 +1,9 @@
 class Colmap < Formula
   desc "Structure-from-Motion and Multi-View Stereo"
   homepage "https://colmap.github.io/"
-  url "https://github.com/colmap/colmap/archive/refs/tags/4.0.3.tar.gz"
-  sha256 "9d0a0916c5419d8e8c59839a729b041856d46f8abc911f32847e3857918969bd"
+  url "https://github.com/colmap/colmap/archive/refs/tags/4.0.4.tar.gz"
+  sha256 "200309abca2a3ee05970b1f8a48d545fc71f435dffe6764a8040f9f6f364da32"
   license "BSD-3-Clause"
-  revision 1
 
   bottle do
     sha256                               arm64_tahoe:   "efe49f613aba9613d3668da831972c6a1182b59e149a61118f4f4e3bc0384a86"
@@ -61,6 +60,9 @@ class Colmap < Formula
     # Fix library install directory and rpath
     inreplace "CMakeLists.txt", "LIBRARY DESTINATION thirdparty/", "LIBRARY DESTINATION lib/"
     args << "-DCMAKE_INSTALL_RPATH=#{loader_path}"
+    # Set openssl@3 to avoid indirect linkage with openssl@4
+    # TODO: switch to openssl@4
+    args << "-DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}"
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
