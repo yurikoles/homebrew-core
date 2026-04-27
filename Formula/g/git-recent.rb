@@ -1,8 +1,8 @@
 class GitRecent < Formula
   desc "Browse your latest git branches, formatted real fancy"
   homepage "https://github.com/paulirish/git-recent"
-  url "https://github.com/paulirish/git-recent/archive/refs/tags/v2.1.0.tar.gz"
-  sha256 "6d7de03c2c18f94285671125f55d174ceea0877bc3c74d064c2759b6a895dacf"
+  url "https://github.com/paulirish/git-recent/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "2930b5e2ccb0e5e058c78b119dad60b9f4576736a9afed7f8c821a9b93324b1d"
   license "MIT"
 
   bottle do
