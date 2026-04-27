@@ -7,12 +7,12 @@ class Cpm < Formula
   head "https://github.com/skaji/cpm.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "39943392bb01834017a1cbf3b14b49753efee9370520b5e8c1b5009827b22c8c"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "39943392bb01834017a1cbf3b14b49753efee9370520b5e8c1b5009827b22c8c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "39943392bb01834017a1cbf3b14b49753efee9370520b5e8c1b5009827b22c8c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "e2943684a18400c6e4e7c55a667d3a7c5a555baa350832ba9c88de079ea935f3"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "02275f43215e7cc133f9d83dc6c4de46cced54494ce068aaf833b84677cf8ee0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9a7df99cd6d078553861bff91a306e163ee0ccd723b261414f80c0764d996d1e"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "0cda3cd02c22ab9504de4074b71c2fed086f6fad1563aa46d599ff0bf5f823a5"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0cda3cd02c22ab9504de4074b71c2fed086f6fad1563aa46d599ff0bf5f823a5"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "0cda3cd02c22ab9504de4074b71c2fed086f6fad1563aa46d599ff0bf5f823a5"
+    sha256 cellar: :any_skip_relocation, sonoma:        "660e6bb70c0ffb631de837d1e568249089d4cb71793e4c53271948d52aac9437"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "08f761100560da0d643c027ac6a8a28f10256b4f503312daae01fd46867afd17"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9789a65971585e13c7cc86749b95f862e5c7428de2a61bd7e0c72e14a5a186cf"
   end
 
   depends_on "perl"
