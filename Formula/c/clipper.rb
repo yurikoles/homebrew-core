@@ -17,7 +17,14 @@ class Clipper < Formula
   depends_on :macos
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "clipper.go"
+    clipper_version = if build.stable?
+      version.to_s
+    else
+      Utils.safe_popen_read("git", "describe", "--tags", "--dirty").chomp
+    end
+
+    ldflags = %W[-s -w -X main.version=#{clipper_version}]
+    system "go", "build", *std_go_args(ldflags:), "clipper.go"
   end
 
   service do
@@ -46,5 +53,8 @@ class Clipper < Formula
         Process.kill "TERM", clipper.pid
       end
     end
+
+    version_output = shell_output("#{bin}/clipper -v 2>&1")
+    assert_match version.to_s, version_output
   end
 end
