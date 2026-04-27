@@ -1,8 +1,8 @@
 class Gurk < Formula
   desc "Signal Messenger client for terminal"
   homepage "https://github.com/boxdot/gurk-rs"
-  url "https://github.com/boxdot/gurk-rs/archive/refs/tags/v0.9.2.tar.gz"
-  sha256 "5416fdf8042105480cf96abb9546d3094ffe2d57cfd2302eb6ba01422b398794"
+  url "https://github.com/boxdot/gurk-rs/archive/refs/tags/v0.9.3.tar.gz"
+  sha256 "1c8ee4466374375a3df2ccd94fcc86d76bfcdd868820f3f9d4a1f2cbed2be22b"
   license "AGPL-3.0-only"
 
   bottle do
