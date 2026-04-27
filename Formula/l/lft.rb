@@ -1,8 +1,8 @@
 class Lft < Formula
   desc "Layer Four Traceroute (LFT), an advanced traceroute tool"
   homepage "https://pwhois.org/lft/"
-  url "https://pwhois.org/dl/index.who?file=lft-3.96.tar.gz"
-  sha256 "abeaf2c8fd607f2c45816a4ddd34f2d0a10d49e1f41f52929b8e67a0cdc24368"
+  url "https://pwhois.org/dl/index.who?file=lft-3.97.tar.gz"
+  sha256 "168532d208599d64179a7b269f151ad0fd1d0d69b2a3318b8a6088b2cfcd6eb6"
   license "VOSTROM"
 
   livecheck do
@@ -19,9 +19,15 @@ class Lft < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "dcca2c8de35adcd54722adbb1f60787a4446dd47c42701b7c051ca6be8ff3226"
   end
 
+  depends_on "c-ares"
+
   uses_from_macos "libpcap"
+  uses_from_macos "ncurses"
 
   def install
+    # `lft_watch.c` uses `struct winsize`/`TIOCGWINSZ` without including `<sys/ioctl.h>`
+    inreplace "lft_watch.c", "#include <sys/time.h>", "#include <sys/ioctl.h>\n\\0"
+
     args = []
     # Help old config scripts identify arm64 linux
     args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
