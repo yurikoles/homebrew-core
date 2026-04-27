@@ -1,8 +1,8 @@
 class Geni < Formula
   desc "Standalone database migration tool"
   homepage "https://github.com/emilpriver/geni"
-  url "https://github.com/emilpriver/geni/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "502092df412629b6a38862dea074edae022f41deab8d7da48445ade3b24430b4"
+  url "https://github.com/emilpriver/geni/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "0e25db1b60d7774f00091029702bb7973c373265b94db0a614e44af41292077e"
   license "MIT"
 
   bottle do
@@ -17,8 +17,6 @@ class Geni < Formula
   depends_on "rust" => :build
 
   def install
-    # Workaround to build `aegis v0.9.3` for arm64 linux without -march `sha3`
-    ENV.append_to_cflags "-march=native" if OS.linux? && Hardware::CPU.arm?
     system "cargo", "install", *std_cargo_args
   end
 
