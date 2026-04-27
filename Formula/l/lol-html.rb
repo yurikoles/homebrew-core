@@ -1,8 +1,8 @@
 class LolHtml < Formula
   desc "Low output latency streaming HTML parser/rewriter with CSS selector-based API"
   homepage "https://github.com/cloudflare/lol-html"
-  url "https://github.com/cloudflare/lol-html/archive/refs/tags/v2.7.2.tar.gz"
-  sha256 "47d806650801365ed872412da3d307ad6df1f40cd2e01a878c80251c6fd4484e"
+  url "https://github.com/cloudflare/lol-html/archive/refs/tags/v2.8.1.tar.gz"
+  sha256 "154cbe8e2a27ae5f1014f712c5f192621ce1f142ba2e1e369c6801a07b9bb19e"
   license "BSD-3-Clause"
   head "https://github.com/cloudflare/lol-html.git", branch: "main"
 
@@ -18,12 +18,6 @@ class LolHtml < Formula
   depends_on "cargo-c" => :build
   depends_on "rust" => :build
   depends_on "pkgconf" => :test
-
-  # Backport c-api lockfile update, upstream pr ref, https://github.com/cloudflare/lol-html/pull/303
-  patch do
-    url "https://github.com/chenrui333/lol-html/commit/feefa33bbbab62af3a2e820fe76cdf3fbb532945.patch?full_index=1"
-    sha256 "e02ec4dadc8a5db59edf430fbddc5973a2108a2a341586155a2c308b3919d5a4"
-  end
 
   def install
     system "cargo", "cinstall", "--jobs", ENV.make_jobs.to_s, "--release", "--locked",
