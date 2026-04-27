@@ -4,8 +4,8 @@
 class Mu < Formula
   desc "Tool for searching e-mail messages stored in the maildir-format"
   homepage "https://www.djcbsoftware.nl/code/mu/"
-  url "https://github.com/djcb/mu/releases/download/v1.14.0/mu-1.14.0.tar.xz"
-  sha256 "c5d338ee81664c29d18de757017942b14d01fe313d6fea82f8b7c66c6fd4354a"
+  url "https://github.com/djcb/mu/releases/download/v1.14.1/mu-1.14.1.tar.xz"
+  sha256 "e41aa8530d01ae4696f6efc88c5e051dd8540f3ff7956918bf0976f1d6b1c2bb"
   license "GPL-3.0-or-later"
   head "https://github.com/djcb/mu.git", branch: "master"
 
@@ -26,6 +26,7 @@ class Mu < Formula
     sha256               x86_64_linux:  "3ffb8f35c036c173b2b28fa1ceb569ac1f3bd552696b6c98a221d67cd91d8f18"
   end
 
+  depends_on "cli11" => :build
   depends_on "emacs" => :build
   depends_on "libgpg-error" => :build
   depends_on "libtool" => :build
@@ -33,9 +34,11 @@ class Mu < Formula
   depends_on "ninja" => :build
   depends_on "pkgconf" => :build
   depends_on "texinfo" => :build
+  depends_on "fmt"
   depends_on "gettext"
   depends_on "glib"
   depends_on "gmime"
+  depends_on "guile"
   depends_on "xapian"
 
   conflicts_with "mu-repo", because: "both install `mu` binaries"
@@ -44,6 +47,8 @@ class Mu < Formula
     system "meson", "setup", "build", "-Dlispdir=#{elisp}", *std_meson_args
     system "meson", "compile", "-C", "build", "--verbose"
     system "meson", "install", "-C", "build"
+
+    zsh_completion.install "contrib/mu-completion.zsh" => "_mu"
   end
 
   # Regression test for:
