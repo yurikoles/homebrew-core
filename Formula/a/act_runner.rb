@@ -1,8 +1,8 @@
 class ActRunner < Formula
   desc "Action runner for Gitea based on Gitea's fork of act"
   homepage "https://docs.gitea.com/usage/actions/act-runner"
-  url "https://gitea.com/gitea/act_runner/archive/v0.4.1.tar.gz"
-  sha256 "b7674aefd6271727d78ec1072634d6b78768f323b74450ab933d525f69a9d2a3"
+  url "https://gitea.com/gitea/act_runner/archive/v0.5.0.tar.gz"
+  sha256 "bd85fe4b0bc93e9f4ade9af4f14c4ae951667deb443da9057ae10664fee01c25"
   license "MIT"
 
   bottle do
