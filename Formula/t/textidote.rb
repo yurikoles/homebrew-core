@@ -1,8 +1,8 @@
 class Textidote < Formula
   desc "Spelling, grammar and style checking on LaTeX documents"
   homepage "https://sylvainhalle.github.io/textidote"
-  url "https://github.com/sylvainhalle/textidote/archive/refs/tags/v0.8.3.tar.gz"
-  sha256 "8c55d6f6f35d51fb5b84e7dcc86a4041e06b3f92d6a919023dc332ba2effd584"
+  url "https://github.com/sylvainhalle/textidote/archive/refs/tags/v0.9.tar.gz"
+  sha256 "df4ec98e355dddb3cebe155868da63ae17f48778151d2d8b227d412aee768c9b"
   license "GPL-3.0-or-later"
   head "https://github.com/sylvainhalle/textidote.git", branch: "master"
 
@@ -27,12 +27,15 @@ class Textidote < Formula
   depends_on "openjdk"
 
   def install
+    # Skip javadoc: JDK 25 doclint rejects textidote's legacy `<tt>` tags
+    inreplace "build.xml", 'depends="compile,javadoc"', 'depends="compile"'
+
     # Build the JAR
     system "ant", "download-deps"
     system "ant", "-Dbuild.targetjdk=#{Formula["openjdk"].version.major}"
 
     # Install the JAR + a wrapper script
-    libexec.install "textidote.jar"
+    libexec.install "textidote-#{version}.jar" => "textidote.jar"
     # Fix run with `openjdk` 24.
     # Reported upstream at https://github.com/sylvainhalle/textidote/issues/265.
     bin.write_jar_script libexec/"textidote.jar", "textidote", "-Djdk.xml.totalEntitySizeLimit=50000000"
