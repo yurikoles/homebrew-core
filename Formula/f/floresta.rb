@@ -1,8 +1,8 @@
 class Floresta < Formula
   desc "Lightweight and embeddable Bitcoin client, built for sovereignty"
   homepage "https://getfloresta.org"
-  url "https://github.com/getfloresta/Floresta/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "1a484842451ea3b35c5f9686cc8955cad23923eddf166f373dd3e994e64a7ee7"
+  url "https://github.com/getfloresta/Floresta/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "47dbff1991bd9ee8f8880a0762e4c7ee8b095b93c755529a6e0805fa9ea1cf9f"
   license any_of: [
     "MIT",
     "Apache-2.0",
