@@ -8,12 +8,12 @@ class ApachePulsar < Formula
   head "https://github.com/apache/pulsar.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "ad65e3611379186ba1959a3f20eca8a80d63eabfd277b67523bdcb5b96db7172"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "a44d2bc9211542db5665769338f8da05c711ef598a47176a8fa2325d07bb359c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "92bd985f330b35194b63ad20eadea45fe17cdc86cf0069cb70f569f11fa59062"
-    sha256 cellar: :any_skip_relocation, sonoma:        "f5568335145842cf866357523e98871c39b15397bd36f3c7e94e26a7abb50843"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "a607599400e03c1700ea8549102c33d6a889a4a6713840d6b8c70cfc4ebd698e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5cc5a288674c7434ff517c2cd16c2c62cccd6863bf532c666f7341fa200e208d"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "51433d892f17d51402d8cf9fb109d46f6a3e9ad50cac3b4c4ad6090e9061f364"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "603c72a3d9ea638d738bd55d6d1c719e367ce2f2547412123a4890b27d1bdee2"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "dc484a8df7ccdf212b86253a5c359ed0c10340d70c217418081ae5a305a02a97"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8771d7946c1f656c20b93759d929e3535a8f53ff1c56fe32cf099505f9f63cdd"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "a0c4d1cc3ceb21971e7c62ab63058c8393dafca0b2e78a24d06d1802a59cb8c9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3256f69a86f74687c12477b183da3d53c37ce371cd96868d0aab631aed22566d"
   end
 
   depends_on "maven" => :build
