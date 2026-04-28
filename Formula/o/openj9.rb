@@ -1,8 +1,8 @@
 class Openj9 < Formula
   desc "High performance, scalable, Java virtual machine"
   homepage "https://www.eclipse.org/openj9/"
-  url "https://github.com/eclipse-openj9/openj9/archive/refs/tags/openj9-0.57.0.tar.gz"
-  sha256 "84650d5f8e623bec413b72e5486a40f0b3dcc71435fa4dfe5b9bba5bea4c398d"
+  url "https://github.com/eclipse-openj9/openj9/archive/refs/tags/openj9-0.59.0.tar.gz"
+  sha256 "35d959da212f2dbc442c059d250f2cbc63c716b31d16e30d4cef3c508731b99f"
   license any_of: [
     "EPL-2.0",
     "Apache-2.0",
@@ -65,11 +65,19 @@ class Openj9 < Formula
   end
 
   resource "omr" do
-    url "https://github.com/eclipse-openj9/openj9-omr/archive/refs/tags/openj9-0.57.0.tar.gz"
-    sha256 "7da11f270722c3d99570ef53af6dd84ae5ca865c7f9bc2982c4c415b7cb585c9"
+    url "https://github.com/eclipse-openj9/openj9-omr/archive/refs/tags/openj9-0.59.0.tar.gz"
+    sha256 "8bcc98595c72373844fcf0e5a58fa4a870c87591adec85c0105a940781e357d3"
 
     livecheck do
       formula :parent
+    end
+
+    # llvm 21+ defines ARM ACLE builtins (e.g. `__yield`, https://github.com/llvm/llvm-project/pull/128222),
+    # so guard against that in OMR which also defines them.
+    # PR ref: https://github.com/eclipse-openj9/openj9-omr/pull/275
+    patch do
+      url "https://github.com/eclipse-openj9/openj9-omr/commit/3150b6f2ce7b28276573d878fcac1350cada4ac3.patch?full_index=1"
+      sha256 "b5dd5ebeaa916444c0c51bf9d24a0613f8e403628f7c88fea1418cee221f830d"
     end
   end
 
@@ -78,8 +86,8 @@ class Openj9 < Formula
   # This matches official documentation and allows us to bootstrap from an OpenJDK formula
   resource "openj9-openjdk-jdk" do
     url "https://github.com/ibmruntimes/openj9-openjdk-jdk25.git",
-        tag:      "openj9-0.57.0",
-        revision: "394c3b425206fdffa3e09e1d874d1905c1957ebb"
+        tag:      "openj9-0.59.0",
+        revision: "e4aaece3226fa3b588146d3ef3f52caa7afc3330"
 
     livecheck do
       formula :parent
