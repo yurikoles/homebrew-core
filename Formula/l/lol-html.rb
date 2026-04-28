@@ -7,12 +7,12 @@ class LolHtml < Formula
   head "https://github.com/cloudflare/lol-html.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "8c8998aa0386eb740c4e78baa5e8f2897137cb03b9c836c8cee04c7092722f77"
-    sha256 cellar: :any,                 arm64_sequoia: "3a4b95dd3b0df25d99d49b0ac3cf5b112800734ae186c3c1d29d30dbad0c942c"
-    sha256 cellar: :any,                 arm64_sonoma:  "6b85bf4c8bdb3d5f59a1c986c2dc259a30cd2944316203b6966ef0a7382a5e72"
-    sha256 cellar: :any,                 sonoma:        "c1a17e26e328ee914e0a1fd1004235e27fd66179aabb37fc28237bb2d00c8307"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "fc19bf38e02aa2228dd361f1f4ac78c42a4e34ef20b3a51667984c85d0ea3e9c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d2bca0871c05e0228422f5f886548faf169674aee4a392444f1dd0ddbe062b2f"
+    sha256 cellar: :any,                 arm64_tahoe:   "7517ed962bb6167a9ea9ddf812b8cbb485d766eb61b09bb90bf38e2ca30cc83c"
+    sha256 cellar: :any,                 arm64_sequoia: "5f807653830c3b7d3fd3a4a78ec4fff4a82791eecff8ad17e44bb208a6b09bb2"
+    sha256 cellar: :any,                 arm64_sonoma:  "cf11e71d2e93bcc118e0c56093c50cb52677b92adfb6bb0af68c81e2c34f9302"
+    sha256 cellar: :any,                 sonoma:        "29cdaf5c902675db95894b3456782b4ec51d4a5abcb51dbc035f57ed24273d62"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "947d9d4859883980005abe4f441992b052672715867f580771f50acf453da62a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "df33145b452fdcfb3b5192fb3dfed0b6fea383558d066228b6bd4a99ee5b7b93"
   end
 
   depends_on "cargo-c" => :build
