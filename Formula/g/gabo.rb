@@ -1,8 +1,8 @@
 class Gabo < Formula
   desc "Generates GitHub Actions boilerplate"
   homepage "https://github.com/ashishb/gabo"
-  url "https://github.com/ashishb/gabo/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "c3a9ad2c0fa716e755796d0139dde669b840833cd08808cea4cd862fa0d0737e"
+  url "https://github.com/ashishb/gabo/archive/refs/tags/v1.9.0.tar.gz"
+  sha256 "5eb99893fd84194a17e824cc4629d42cdf1b618e37a537895eefc5a494a21325"
   license "Apache-2.0"
   head "https://github.com/ashishb/gabo.git", branch: "master"
 
