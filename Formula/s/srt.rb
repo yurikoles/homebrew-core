@@ -1,21 +1,11 @@
 class Srt < Formula
   desc "Secure Reliable Transport"
   homepage "https://www.srtalliance.org/"
+  url "https://github.com/Haivision/srt/archive/refs/tags/v1.5.5.tar.gz"
+  sha256 "c3518bc43a71b5289032395b2db4c3e09e73d78b54247d56c14553a503b491cf"
   license "MPL-2.0"
   compatibility_version 1
   head "https://github.com/Haivision/srt.git", branch: "master"
-
-  stable do
-    url "https://github.com/Haivision/srt/archive/refs/tags/v1.5.4.tar.gz"
-    sha256 "d0a8b600fe1b4eaaf6277530e3cfc8f15b8ce4035f16af4a5eb5d4b123640cdd"
-
-    # Fix to cmake 4 compatibility
-    # PR ref: https://github.com/Haivision/srt/pull/3167
-    patch do
-      url "https://github.com/Haivision/srt/commit/7962936829e016295e5c570539eb2520b326da4c.patch?full_index=1"
-      sha256 "e4489630886bf8b26f63a23c8b1aec549f7280f07713ded07fce281e542725f7"
-    end
-  end
 
   livecheck do
     url :stable
