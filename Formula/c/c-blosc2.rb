@@ -1,9 +1,10 @@
 class CBlosc2 < Formula
   desc "Fast, compressed, persistent binary data store library for C"
   homepage "https://www.blosc.org"
-  url "https://github.com/Blosc/c-blosc2/archive/refs/tags/v2.23.1.tar.gz"
-  sha256 "3a1a55d1e3794fb2b51a12e722d611b3e577443abb7ff9951666511f576ea3da"
+  url "https://github.com/Blosc/c-blosc2/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "32dca13fc25cd0c30a8557c5ee26ddb461d522d4257321d8d18c27e404646c53"
   license "BSD-3-Clause"
+  compatibility_version 1
   head "https://github.com/Blosc/c-blosc2.git", branch: "main"
 
   bottle do
@@ -32,13 +33,12 @@ class CBlosc2 < Formula
   end
 
   def install
-    rm_r("internal-complibs")
-
     args = %w[
       -DBUILD_TESTS=OFF
       -DBUILD_FUZZERS=OFF
       -DBUILD_BENCHMARKS=OFF
       -DBUILD_EXAMPLES=OFF
+      -DBUILD_PLUGINS=OFF
       -DPREFER_EXTERNAL_LZ4=ON
       -DPREFER_EXTERNAL_ZLIB=ON
       -DPREFER_EXTERNAL_ZSTD=ON
