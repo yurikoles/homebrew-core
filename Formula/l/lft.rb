@@ -1,8 +1,8 @@
 class Lft < Formula
   desc "Layer Four Traceroute (LFT), an advanced traceroute tool"
   homepage "https://pwhois.org/lft/"
-  url "https://pwhois.org/dl/index.who?file=lft-3.97.tar.gz"
-  sha256 "168532d208599d64179a7b269f151ad0fd1d0d69b2a3318b8a6088b2cfcd6eb6"
+  url "https://pwhois.org/dl/index.who?file=lft-3.98.tar.gz"
+  sha256 "395ced8d95ee2bcc588a837f187e23bb25ce97999a0bb8481b2b3e0c1c633455"
   license "VOSTROM"
 
   livecheck do
@@ -19,19 +19,13 @@ class Lft < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7bb7d5fddfd3805510612d01eb6549401d87c962e1716575b8935b7f3c89d102"
   end
 
-  depends_on "c-ares"
-
   uses_from_macos "libpcap"
-  uses_from_macos "ncurses"
 
   def install
-    # `lft_watch.c` uses `struct winsize`/`TIOCGWINSZ` without including `<sys/ioctl.h>`
-    inreplace "lft_watch.c", "#include <sys/time.h>", "#include <sys/ioctl.h>\n\\0"
-
-    args = []
-    # Help old config scripts identify arm64 linux
-    args << "--build=aarch64-unknown-linux-gnu" if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-
+    args = %w[
+      --disable-async-dns
+      --disable-ncurses
+    ]
     system "./configure", *args, *std_configure_args
     system "make", "install"
   end
