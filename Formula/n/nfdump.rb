@@ -1,8 +1,8 @@
 class Nfdump < Formula
   desc "Tools to collect and process netflow data on the command-line"
   homepage "https://github.com/phaag/nfdump"
-  url "https://github.com/phaag/nfdump/archive/refs/tags/v1.7.7.tar.gz"
-  sha256 "1b74b58e16dfa7a846bbe3135a7deaf2da54da009aa9d6f63340b3a046add319"
+  url "https://github.com/phaag/nfdump/archive/refs/tags/v1.7.8.tar.gz"
+  sha256 "d9b881f7e3ecde281c1116e8330ae612d0e5adcd0e952f401b2045c6446a1232"
   license "BSD-3-Clause"
   head "https://github.com/phaag/nfdump.git", branch: "master"
 
@@ -24,6 +24,10 @@ class Nfdump < Formula
   uses_from_macos "flex" => :build
   uses_from_macos "bzip2"
   uses_from_macos "libpcap"
+
+  on_linux do
+    depends_on "libbsd"
+  end
 
   def install
     system "./autogen.sh"
