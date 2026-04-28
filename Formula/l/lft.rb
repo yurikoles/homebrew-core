@@ -11,12 +11,12 @@ class Lft < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "b35f50ca0a19210fc03e45d9c3d465489e02bdf83dda02323e19aee9bd5167fa"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b84d5cc93f3b5f458c23e65ff57a4b4b75fa8335427923b0e18ce58c34de789e"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d59ff0139fdad8969a11f5fafccdd87eae427678781dd1e8d11db7a1a2d27476"
-    sha256 cellar: :any_skip_relocation, sonoma:        "b26076567e009b86620f10e8de6a6afc6f85638499beaea05ae8b59cff734b7d"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "095edab26c4dd803848693e755920ec54254de383cd8dfa32db0f79dd4ab8379"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dcca2c8de35adcd54722adbb1f60787a4446dd47c42701b7c051ca6be8ff3226"
+    sha256 cellar: :any,                 arm64_tahoe:   "fa7303ad298beb604bacf5692d806271e38f306aac77861206148de510410e74"
+    sha256 cellar: :any,                 arm64_sequoia: "651db6559becdc21bcf8c7cbcdf4e39f365e77c4ba06f3b11e18fa3d05f4cf5a"
+    sha256 cellar: :any,                 arm64_sonoma:  "7ac770dba9b4b4d68f9bf929c83f28d156f51eedbe79cfd6950cbed619807dbf"
+    sha256 cellar: :any,                 sonoma:        "c0f8235ebeded75454efd24c79a867bcecd588b9dbc2887a22aff72d08927361"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "6ebcb424fa1928e67e1655ab46a73e3cac5a68022fb904f584378487547c1b93"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7bb7d5fddfd3805510612d01eb6549401d87c962e1716575b8935b7f3c89d102"
   end
 
   depends_on "c-ares"
