@@ -7,12 +7,12 @@ class Imgproxy < Formula
   head "https://github.com/imgproxy/imgproxy.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "1fd3784f66902e0c264dd75619c554cc1ab1d9d8fd62fc2583225966a6193773"
-    sha256 cellar: :any,                 arm64_sequoia: "214de1d00edce9105398cae340a3053d0bf702ca17b4c9316f32cc03290cfb18"
-    sha256 cellar: :any,                 arm64_sonoma:  "a3c0e4ffb7a1865e5683dc9dcbbea357e17667c1608aab2ac3a4e5850e245636"
-    sha256 cellar: :any,                 sonoma:        "1f94e56a6ff7b7c2a24cc05a8d683679ac6949d7b6493a0c1f79d71f27ed3a2e"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "857fc010b35f6f6168f035b492dcbbea1d1b06e11d4a57042c7d24e59bb0b0b3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "db33b747ea48b192ac198232387d82ed52cea6150c60cee01c421034d092cd8e"
+    sha256 cellar: :any,                 arm64_tahoe:   "f72239fa74690b1b71ae7bdd39f9985d06e0c7acb520dc8f618320df82188406"
+    sha256 cellar: :any,                 arm64_sequoia: "04623950f6589e69bf52ba26907c5da68a549b93d8442e96517a595d22b01262"
+    sha256 cellar: :any,                 arm64_sonoma:  "b0af62bee29d1e89c763021823928297c91eafde4db82785e893ca02263bc978"
+    sha256 cellar: :any,                 sonoma:        "4a538d37a5920dbb59ea5653e4e4e8dc963ab8a21080c232588a6d2dbb70eba9"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "54fed4133baf59a7dea57e8544830b8989ed0e93a60ad15e7f3d15dfdf8f1868"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9def25a5be8fc77de95ad90a5040c8d8b5eca0e160469faa36c05527de9469bc"
   end
 
   depends_on "go" => :build
