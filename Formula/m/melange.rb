@@ -1,8 +1,8 @@
 class Melange < Formula
   desc "Build APKs from source code"
   homepage "https://github.com/chainguard-dev/melange"
-  url "https://github.com/chainguard-dev/melange/archive/refs/tags/v0.50.3.tar.gz"
-  sha256 "bd5ad8ebd58d29b17eceee66e3bd64bea5c52363ebdb591f1db89cb0ebd48aa4"
+  url "https://github.com/chainguard-dev/melange/archive/refs/tags/v0.50.4.tar.gz"
+  sha256 "8e6abbbde55d52fa80a1422bdb2e20f2c70f4adc69654a476ef4743b192aef9c"
   license "Apache-2.0"
   head "https://github.com/chainguard-dev/melange.git", branch: "main"
 
