@@ -7,8 +7,7 @@ class Pig < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, all: "c64b39772253801fc72a6400bdbed3245bbd4308c78fc08ad329a1ce1781840a"
+    sha256 cellar: :any_skip_relocation, all: "680feb2c17ee7bbabecf33a8c7fb892d4b7b607c5a2c1497ddbfc07108d35453"
   end
 
   depends_on "openjdk@21"
