@@ -3,8 +3,8 @@ class Flexget < Formula
 
   desc "Multipurpose automation tool for content"
   homepage "https://www.flexget.com"
-  url "https://files.pythonhosted.org/packages/71/b6/9e348579a190508f2ede96d8cdc10d567a2fc3bf5cf0775eaa9539bf21ea/flexget-3.19.14.tar.gz"
-  sha256 "73a2a842a3dd15efb82c4b4537a465019406cd0568d5e4c926669313482c68b6"
+  url "https://files.pythonhosted.org/packages/31/c8/be03057b099d12e829e97bc8fdba69e8a3ddfb8b15697cc9265b645d5b5e/flexget-3.19.15.tar.gz"
+  sha256 "19b0673d3d70850d7e112c9ea31ac441bd43ba341d490005beffb4d20464ec62"
   license "MIT"
 
   bottle do
@@ -81,8 +81,8 @@ class Flexget < Formula
   end
 
   resource "click" do
-    url "https://files.pythonhosted.org/packages/57/75/31212c6bf2503fdf920d87fee5d7a86a2e3bcf444984126f13d8e4016804/click-8.3.2.tar.gz"
-    sha256 "14162b8b3b3550a7d479eafa77dfd3c38d9dc8951f6f69c78913a8f9a7540fd5"
+    url "https://files.pythonhosted.org/packages/bb/63/f9e1ea081ce35720d8b92acde70daaedace594dc93b693c869e0d5910718/click-8.3.3.tar.gz"
+    sha256 "398329ad4837b2ff7cbe1dd166a4c0f8900c3ca3a218de04466f38f6497f18a2"
   end
 
   resource "feedparser" do
@@ -116,8 +116,8 @@ class Flexget < Formula
   end
 
   resource "greenlet" do
-    url "https://files.pythonhosted.org/packages/86/94/a5935717b307d7c71fe877b52b884c6af707d2d2090db118a03fbd799369/greenlet-3.4.0.tar.gz"
-    sha256 "f50a96b64dafd6169e595a5c56c9146ef80333e67d4476a65a9c55f400fc22ff"
+    url "https://files.pythonhosted.org/packages/3c/3f/dbf99fb14bfeb88c28f16729215478c0e265cacd6dc22270c8f31bb6892f/greenlet-3.5.0.tar.gz"
+    sha256 "d419647372241bc68e957bf38d5c1f98852155e4146bd1e4121adea81f4f01e4"
   end
 
   resource "guessit" do
@@ -145,8 +145,8 @@ class Flexget < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz"
-    sha256 "795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902"
+    url "https://files.pythonhosted.org/packages/ce/cc/762dfb036166873f0059f3b7de4565e1b5bc3d6f28a414c13da27e442f99/idna-3.13.tar.gz"
+    sha256 "585ea8fe5d69b9181ec1afba340451fba6ba764af97026f92a91d4eef164a242"
   end
 
   resource "importlib-resources" do
@@ -220,8 +220,8 @@ class Flexget < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/df/de/0d2b39fb4af88a0258f3bac87dfcbb48e73fbdea4a2ed0e2213f9a4c2f9a/packaging-26.1.tar.gz"
-    sha256 "f042152b681c4bfac5cae2742a55e103d27ab2ec0f3d88037136b6bfe7c9c5de"
+    url "https://files.pythonhosted.org/packages/d7/f1/e7a6dd94a8d4a5626c03e4e99c87f241ba9e350cd9e6d75123f992427270/packaging-26.2.tar.gz"
+    sha256 "ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661"
   end
 
   resource "pendulum" do
@@ -340,8 +340,8 @@ class Flexget < Formula
   end
 
   resource "typer" do
-    url "https://files.pythonhosted.org/packages/f5/24/cb09efec5cc954f7f9b930bf8279447d24618bb6758d4f6adf2574c41780/typer-0.24.1.tar.gz"
-    sha256 "e39b4732d65fbdcde189ae76cf7cd48aeae72919dea1fdfc16593be016256b45"
+    url "https://files.pythonhosted.org/packages/7b/27/ede8cec7596e0041ba7e7b80b47d132562f56ff454313a16f6084e555c9f/typer-0.25.0.tar.gz"
+    sha256 "123eaf9f19bb40fd268310e12a542c0c6b4fab9c98d9d23342a01ff95e3ce930"
   end
 
   resource "typer-slim" do
@@ -355,8 +355,8 @@ class Flexget < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/19/f5/cd531b2d15a671a40c0f66cf06bc3570a12cd56eef98960068ebbad1bf5a/tzdata-2026.1.tar.gz"
-    sha256 "67658a1903c75917309e753fdc349ac0efd8c27db7a0cb406a25be4840f87f98"
+    url "https://files.pythonhosted.org/packages/ba/19/1b9b0e29f30c6d35cb345486df41110984ea67ae69dddbc0e8a100999493/tzdata-2026.2.tar.gz"
+    sha256 "9173fde7d80d9018e02a662e168e5a2d04f87c41ea174b139fbef642eda62d10"
   end
 
   resource "tzlocal" do
