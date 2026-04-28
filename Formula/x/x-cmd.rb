@@ -1,8 +1,8 @@
 class XCmd < Formula
   desc "Bootstrap 1000+ command-line tools in seconds"
   homepage "https://x-cmd.com"
-  url "https://github.com/x-cmd/x-cmd/archive/refs/tags/v0.8.14.tar.gz"
-  sha256 "19b295a0c3c25fe288d65edbea721480b6ba942988840cc18a49b9ddecfec573"
+  url "https://github.com/x-cmd/x-cmd/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "c2451311696cdbf0697d3db359073ae317a886f62f0b238325e78eaf2cae33ea"
   license all_of: ["Apache-2.0", "MIT", "BSD-3-Clause"]
   head "https://github.com/x-cmd/x-cmd.git", branch: "X"
 
