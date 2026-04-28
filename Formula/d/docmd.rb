@@ -6,7 +6,7 @@ class Docmd < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "daf1669b1347fbab9e3c5c89f9528eda3847884e5d23a9b9ed5a0cdbef2010b4"
+    sha256 cellar: :any_skip_relocation, all: "9317e18b02653368fa7c50710806ad582c6c0b118f0e0b0ac75fb267995cde17"
   end
 
   depends_on "esbuild" # for prebuilt binaries
