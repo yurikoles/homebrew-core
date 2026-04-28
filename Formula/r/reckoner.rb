@@ -7,13 +7,12 @@ class Reckoner < Formula
   head "https://github.com/FairwindsOps/reckoner.git", branch: "master"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "52f96d24f75c2000278fe7ed91fe73d982683297d158e118e345331d24580804"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "52f96d24f75c2000278fe7ed91fe73d982683297d158e118e345331d24580804"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "52f96d24f75c2000278fe7ed91fe73d982683297d158e118e345331d24580804"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d14ba71c34740a9dd2ae9bbf97fd3f118dd1dcfd92bc267ef69d7daca27d8a8a"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "d20750b1c3e9b5c39f9c67970c2dd9295769a9d2fa3a581ce61a9d4a4ae546ec"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "d44c9b58fe4752068e76ff69d1201a31434564482c05a7242220e4bf5fe26d98"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "6636d7200c1016c72dbdd235c03ebf95674ba0df4499ff1307f20157be88bef6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6636d7200c1016c72dbdd235c03ebf95674ba0df4499ff1307f20157be88bef6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "6636d7200c1016c72dbdd235c03ebf95674ba0df4499ff1307f20157be88bef6"
+    sha256 cellar: :any_skip_relocation, sonoma:        "a782d984d5056529e56069aba14138815354696bdfd22f37bcceebfd68f23960"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8ce763a168bb67cdc8d5d6564a7ec163ecce6be3c3715a219678cc980b5ff486"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "06a3b09cf42af4d8da9a1f0cac41947825c37b2c2d14c6ffbda766c9f09732ff"
   end
 
   depends_on "go" => :build
