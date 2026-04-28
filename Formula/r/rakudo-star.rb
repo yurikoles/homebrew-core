@@ -1,8 +1,8 @@
 class RakudoStar < Formula
   desc "Rakudo compiler and commonly used packages"
   homepage "https://rakudo.org/"
-  url "https://github.com/rakudo/star/releases/download/2026.03/rakudo-star-2026.03.tar.gz"
-  sha256 "e68a7c697c27ada1b9f4f2f8038a9d446fb5b1e32ad8aa290c22c6c85b3ec25e"
+  url "https://github.com/rakudo/star/releases/download/2026.04/rakudo-star-2026.04.tar.gz"
+  sha256 "735f5b0ab45b1d6c754cb528e5bf7d58b8962cd130730414adc4d0a8d234e62c"
   license "Artistic-2.0"
 
   livecheck do
@@ -64,11 +64,6 @@ class RakudoStar < Formula
       rm_r(moarvm_3rdparty/"libuv")
     end
     inreplace "lib/actions/install.bash", "@@MOARVM_CONFIGURE_ARGS@@", moarvm_configure_args.join(" ")
-
-    # Workaround for https://github.com/rakudo/star/issues/217
-    inreplace "src/rakudo-star-modules/DBIish/t/01-Basic.rakutest",
-              "::('X::DBIish::DriverNotFound')",
-              "::X::DBIish::DriverNotFound"
 
     # Help Readline module find brew `readline` on Linux
     inreplace "src/rakudo-star-modules/Readline/lib/Readline.pm",
