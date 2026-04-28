@@ -6,13 +6,12 @@ class Pop < Formula
   license "MIT"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f9daaf2bd102ae4cfa8ef52a81f956d5ec03b1554497c3c227605c2c75eb48d7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f9daaf2bd102ae4cfa8ef52a81f956d5ec03b1554497c3c227605c2c75eb48d7"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f9daaf2bd102ae4cfa8ef52a81f956d5ec03b1554497c3c227605c2c75eb48d7"
-    sha256 cellar: :any_skip_relocation, sonoma:        "3751ae162f97749c387f4b0962a231a2f70b616ab21e45396c1cb5a3049256c8"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "b43d251eab1371931673e69267d5e1efec1afec1f892cb88e35136d06d9dcfd1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6bb612af3210b31359c2c083f7e72fd37663ea3c15c9de1f5e4ab06f46854e86"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "15bf4e71c44dc1941a56c5f2ed7f073e7b5cd8c58aa62d053a8d6544f25e68a1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "15bf4e71c44dc1941a56c5f2ed7f073e7b5cd8c58aa62d053a8d6544f25e68a1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "15bf4e71c44dc1941a56c5f2ed7f073e7b5cd8c58aa62d053a8d6544f25e68a1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "341a35f0e46f9e161a3aba9f12072485c498f5e832863345b9be443018d1427d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "8d2dbc83e39eed8dc8d69cf0e513d8e304f0730f34cc21873b05a81e63660da7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3314c12b863cc246833842eda33f371255dae1ddfdcfeff4c0368b1226a82da6"
   end
 
   depends_on "go" => :build
