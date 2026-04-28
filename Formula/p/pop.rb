@@ -1,8 +1,8 @@
 class Pop < Formula
   desc "Send emails from your terminal"
   homepage "https://github.com/charmbracelet/pop"
-  url "https://github.com/charmbracelet/pop/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "360db66ff46cf6331b2851f53477b7bf3a49303b0b46aaacff3d6c1027bf3f40"
+  url "https://github.com/charmbracelet/pop/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "365b989dcd0c45256e304ddd8e7a4be8ac146ed24a5751930259c56c23a16dec"
   license "MIT"
 
   bottle do
@@ -16,12 +16,6 @@ class Pop < Formula
   end
 
   depends_on "go" => :build
-
-  # patch error status code, remove in next release
-  patch do
-    url "https://github.com/charmbracelet/pop/commit/65b34a366addd90a9d4da32ac8e5d22268ec16bd.patch?full_index=1"
-    sha256 "386fda7d26240d5574b7f402595d01497d7c2d3254e6ad9276a8dd02de0513b7"
-  end
 
   def install
     ldflags = "-s -w -X main.Version=#{version}"
