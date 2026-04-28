@@ -1,9 +1,9 @@
 class Spidermonkey < Formula
   desc "JavaScript-C Engine"
   homepage "https://spidermonkey.dev"
-  url "https://archive.mozilla.org/pub/firefox/releases/140.9.1esr/source/firefox-140.9.1esr.source.tar.xz"
-  version "140.9.1"
-  sha256 "45d2e6c2b3aa4f52815d1a8a4a93e013d19e86e1b06480f13db9e6fdd7148dc2"
+  url "https://archive.mozilla.org/pub/firefox/releases/140.10.1esr/source/firefox-140.10.1esr.source.tar.xz"
+  version "140.10.1"
+  sha256 "4e75c0c3e2c5530de9364de388272bf81b2b32209d98fa4a7eb50d268a17a5bb"
   license "MPL-2.0"
   compatibility_version 1
   head "https://hg.mozilla.org/mozilla-central", using: :hg
@@ -72,6 +72,17 @@ class Spidermonkey < Formula
 
   def install
     ENV.runtime_cpu_detection
+
+    # Vendored encoding_rs 0.8.35 fails to build with rust 1.95 (Mask::select moved
+    # to a trait method). Use cargo's `[patch.crates-io]` to redirect to the upstream
+    # commit that fixes it (https://github.com/hsivonen/encoding_rs/pull/130).
+    File.open(".cargo/config.toml.in", "a") do |f|
+      f.puts <<~TOML
+
+        [patch.crates-io]
+        encoding_rs = { git = "https://github.com/hsivonen/encoding_rs", rev = "dc06d71cb14390433bcd5a78975cbe7a29e47333" }
+      TOML
+    end
 
     if OS.mac?
       inreplace "build/moz.configure/toolchain.configure" do |s|
