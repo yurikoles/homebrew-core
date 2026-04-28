@@ -1,10 +1,9 @@
 class Modsecurity < Formula
   desc "Libmodsecurity is one component of the ModSecurity v3 project"
   homepage "https://github.com/owasp-modsecurity/ModSecurity"
-  url "https://github.com/owasp-modsecurity/ModSecurity/releases/download/v3.0.14/modsecurity-v3.0.14.tar.gz"
-  sha256 "f7599057b35e67ab61764265daddf9ab03c35cee1e55527547afb073ce8f04e8"
+  url "https://github.com/owasp-modsecurity/ModSecurity/releases/download/v3.0.15/modsecurity-v3.0.15.tar.gz"
+  sha256 "c276c838df6b61d96aa52075aee17d426af52755e16d09edca9f9d718696fda7"
   license "Apache-2.0"
-  revision 2
 
   bottle do
     sha256 cellar: :any,                 arm64_tahoe:   "903816449f1b48c8e20a657b978b80f93ee3f721ebb78a6c1216260983c60b67"
@@ -26,14 +25,6 @@ class Modsecurity < Formula
 
   uses_from_macos "curl", since: :monterey
   uses_from_macos "libxml2"
-
-  # Use ArchLinux patch to fix build with libxml2 2.12.
-  # TODO: Check if fixed in future libxml2 release.
-  # Issue ref: https://github.com/owasp-modsecurity/ModSecurity/issues/3023
-  patch do
-    url "https://gitlab.archlinux.org/archlinux/packaging/packages/libmodsecurity/-/raw/5c78cfaaeb00c842731c52851341884c74bdc9b2/libxml-includes.patch"
-    sha256 "7ee0adbe5b164ca512c49e51e30ffd41e29244156a695e619dcf1d0387e69aef"
-  end
 
   def install
     system "autoreconf", "--force", "--install", "--verbose"
