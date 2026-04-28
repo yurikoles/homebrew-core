@@ -7,12 +7,12 @@ class Rustledger < Formula
   head "https://github.com/rustledger/rustledger.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f2e08ba8220b2f56523e36d17ab246fd11a7c3042b89f17d7d10eb9d050c2780"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "86b0e8a48baa499d117bbf8b1c71a902513f925364880171473a809121200f38"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "8378dc1a40566e5cbd3e157b10413781148ed131b7513323158af26d9b8bdd5c"
-    sha256 cellar: :any_skip_relocation, sonoma:        "7ec2e5c25ad718ac4d2aa799850a5047cf241db0da7595088cc835c1a08b7f15"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "42056cadbbf72436cd158ab56626a7dc329376bc1e8bd8efdce639c95b4a1474"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3cfe8799d11d84c3fed3f613d114e7925339b573bd390521d9a93479686b9f44"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "bdf02bad3ebb3f43ca5160cc458d8a7e955dd459652daea1d9d5ba2c3caa8084"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4f7eb3d9338dca98907f5a38318dc8386ccb881b38b2d728bc830bd8d6b94849"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "09bb3826871a897f5179c91528838ee5d40880b33a72177595efb8f81be9dce3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "ff4dd67a6951c06e0cf103f04d7e8a3e4592ac2089d7ae42fe68c566599fa106"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "133efd3fa008f3df7afe0320cbfbee433c20235aa68bb5d160c862770cba635f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "ba4e6882c2baf098a0a6429e0edcbe80423400cef174d439caba1d915d4fea68"
   end
 
   depends_on "rust" => :build
