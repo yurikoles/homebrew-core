@@ -1,8 +1,8 @@
 class Dolt < Formula
   desc "Git for Data"
   homepage "https://github.com/dolthub/dolt"
-  url "https://github.com/dolthub/dolt/archive/refs/tags/v1.86.5.tar.gz"
-  sha256 "ff0e7629e4f0a97c6926f54e56dae1b098881e6bdf4ecff1b730c9dd4c63b74d"
+  url "https://github.com/dolthub/dolt/archive/refs/tags/v1.86.6.tar.gz"
+  sha256 "a8b605e5a27f3d9fbbffca4d2175f04f83ddf81635c563edea853890283f70f5"
   license "Apache-2.0"
   version_scheme 1
   head "https://github.com/dolthub/dolt.git", branch: "main"
