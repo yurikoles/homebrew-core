@@ -1,10 +1,10 @@
 class Rsync < Formula
   desc "Utility that provides fast incremental file transfer"
   homepage "https://rsync.samba.org/"
-  url "https://rsync.samba.org/ftp/rsync/rsync-3.4.1.tar.gz"
-  mirror "https://mirrors.kernel.org/gentoo/distfiles/rsync-3.4.1.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-3.4.1.tar.gz"
-  sha256 "2924bcb3a1ed8b551fc101f740b9f0fe0a202b115027647cf69850d65fd88c52"
+  url "https://rsync.samba.org/ftp/rsync/rsync-3.4.2.tar.gz"
+  mirror "https://mirrors.kernel.org/gentoo/distfiles/rsync-3.4.2.tar.gz"
+  mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-3.4.2.tar.gz"
+  sha256 "ff10aa2c151cd4b2dbbe6135126dbc854046113d2dfb49572a348233267eb315"
   license "GPL-3.0-or-later"
 
   livecheck do
@@ -24,7 +24,6 @@ class Rsync < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on "cmark-gfm" => :build
   depends_on "lz4"
   depends_on "openssl@3"
   depends_on "popt"
@@ -35,18 +34,9 @@ class Rsync < Formula
     depends_on "zlib-ng-compat"
   end
 
-  # hfs-compression.diff has been marked by upstream as broken since 3.1.3
-  # and has not been reported fixed as of 3.2.7
-  patch do
-    url "https://download.samba.org/pub/rsync/src/rsync-patches-3.4.1.tar.gz"
-    mirror "https://www.mirrorservice.org/sites/rsync.samba.org/rsync-patches-3.4.1.tar.gz"
-    sha256 "f56566e74cfa0f68337f7957d8681929f9ac4c55d3fb92aec0d743db590c9a88"
-    apply "patches/fileflags.diff"
-  end
-
   def install
-    # build rrsync.1 which is not included in the source tarball
-    (buildpath/"support/rrsync.1").write Utils.safe_popen_read("cmark-gfm", "support/rrsync.1.md", "--to", "man")
+    # Move `rrsync` manual to the correct directory
+    mv buildpath/"rrsync.1", "support/"
 
     args = %W[
       --with-rsyncd-conf=#{etc}/rsyncd.conf
