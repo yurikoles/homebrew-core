@@ -1,8 +1,8 @@
 class Plow < Formula
   desc "High-performance and real-time metrics displaying HTTP benchmarking tool"
   homepage "https://github.com/six-ddc/plow"
-  url "https://github.com/six-ddc/plow/archive/refs/tags/v1.3.2.tar.gz"
-  sha256 "a828641d9cf2876701e09865d259081a3005a29ea69391bda2fb6b1565489edf"
+  url "https://github.com/six-ddc/plow/archive/refs/tags/v1.4.0.tar.gz"
+  sha256 "e1b706c8aa137a09dc4061bd9a01c12ad8bb8e175d28d6180008a2a296349d91"
   license "Apache-2.0"
 
   bottle do
