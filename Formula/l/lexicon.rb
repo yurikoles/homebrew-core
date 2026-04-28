@@ -3,18 +3,18 @@ class Lexicon < Formula
 
   desc "Manipulate DNS records on various DNS providers in a standardized way"
   homepage "https://github.com/dns-lexicon/dns-lexicon"
-  url "https://files.pythonhosted.org/packages/c0/ac/38106e1273aa93c9fb0a2097ed83dd240c88e815e8e25d47a808dc7fc9f2/dns_lexicon-3.24.0.tar.gz"
-  sha256 "966c2b7b7180d68399fce9481f816211499fa19add54ac53701cf2908e24fa3c"
+  url "https://files.pythonhosted.org/packages/c3/73/9e772c81c1f0caa6dbfee06565811dfddc73279ed6d666736d3649f81141/dns_lexicon-3.25.0.tar.gz"
+  sha256 "c0a2b36d72cbedc59ad6fb9145015522696503d72ce6ffd6743b311ee08c2f0e"
   license "MIT"
   head "https://github.com/dns-lexicon/dns-lexicon.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "6f0dbce4a4b2b15d0742f0c296d76f6b04111d16906cf6d2b4c509d4b5dafb12"
-    sha256 cellar: :any,                 arm64_sequoia: "d27ff8f0fa56053a54bf6704e6bbac28368430c728d47df28124fca09d316357"
-    sha256 cellar: :any,                 arm64_sonoma:  "9c00d9978da4f5d293eab7d0a2ee65a08f9b66cffa171e79522bb078707997e4"
-    sha256 cellar: :any,                 sonoma:        "a63813a993d91389b0a5cb317c74b45ca8503319b8a38dd42c6801b0140f6a27"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "8b93da12f4dc08f14ec36d63c3ec6f755c97a4d52d7d34bdce52ed5309544442"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "33a761b736d8270aca2c84be54c9369f765a85c050dc99566bda31527da37b63"
+    sha256 cellar: :any,                 arm64_tahoe:   "65783d714b5aa87000e10f61634ba0bb22654c7f31e24dc2a3075ba779fb37fb"
+    sha256 cellar: :any,                 arm64_sequoia: "33794cb54be1d7c57a9c12583924a6d6a18aa0a099ec449b246604e19f2cd4f6"
+    sha256 cellar: :any,                 arm64_sonoma:  "a892997c687acfb9092e9202a51d471f7680b78da17b726a0d459fb286cf53e7"
+    sha256 cellar: :any,                 sonoma:        "e5d419565ff4e483e03716ed642699ca05a7c86cb774a690896ed9c6b1575245"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "fefdfdda44577555f18c9384060e0a0539957b87fe89ffb86cfdaa20680aee86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "04b8dfa17992190859a39d0137493a6360f69a10d59ba0ec7a9decd7e9dc15b0"
   end
 
   depends_on "certifi" => :no_linkage
