@@ -6,12 +6,12 @@ class Ladybug < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "d29b740559332508ee6574ef8f23a91be1e251e54b1d2580686796b0161869be"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c27099692f7bdfdea1af84d824f8d52d09008094541995bff2e798dc93aeef20"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "89c76718768907a5b145395f1427a1cde9c03432aba71d23678b64226f095cf5"
-    sha256 cellar: :any_skip_relocation, sonoma:        "009335258cd549a6587e9d18935b614e3227cf2e102a693e5387a632279d585c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "50c4387b86c07559288b0537d2d8f703a424372002f655bd51eb48e64024a0eb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "9b34d9f65b785081a480a4c291277d961baa37a7e73e73e83d691e2f97506cc4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "449a8f5cd5d3afb0dc3407b14d3be64c710e048685e9b66a1492d1414f540a87"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0e2f4fcde43748b50dc831d9e1b411f238e6aa9ef31ce9ebf7486b7b2930dc10"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1598b77622c7e2111adb5414fc6249257f264cb005056295f31471fd6337299e"
+    sha256 cellar: :any_skip_relocation, sonoma:        "4995ff8a2853b2fd2fa9203bdb25f5a03b2e9bff390dac1a898f90faf1dafd4a"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "3eca97bbee0d9056e9dae624ac9c7e91a4b3ea5520706a6c3ccfef8504d5bbcd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3dd6120d9267693ae1bf7b6d08578f10bca1dd27ec258c7fcc7b0d2b9a0caa5e"
   end
 
   depends_on "cmake" => :build
