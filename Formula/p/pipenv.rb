@@ -3,13 +3,13 @@ class Pipenv < Formula
 
   desc "Python dependency management tool"
   homepage "https://github.com/pypa/pipenv"
-  url "https://files.pythonhosted.org/packages/64/23/ea62f9e90c15cf4070e6a44aacacb667c2d723e624e830a591d2fbddf36c/pipenv-2026.6.0.tar.gz"
-  sha256 "84262cc298ffed36f7463d8c16255d9edf63e5fda5dbee8ccc4a80f6d774590f"
+  url "https://files.pythonhosted.org/packages/a7/ec/7f4b692962c2ac364b95adda43b3de753f4f4b7984bc21e8ca70c1d591a8/pipenv-2026.6.1.tar.gz"
+  sha256 "2b68298377fd141db42ddd55e38c188c846651aa6e17ac6b75ba9f1fb4c3bc9d"
   license "MIT"
   head "https://github.com/pypa/pipenv.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "c05ab4bad1038616a90a0cbdfd24936a90bec5618f35eea9420e933dc0373385"
+    sha256 cellar: :any_skip_relocation, all: "e196def743743f880ca01b6b2a2e76140a06d11d26810543a76e9988d2b75544"
   end
 
   depends_on "certifi" => :no_linkage
