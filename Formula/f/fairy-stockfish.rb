@@ -1,14 +1,18 @@
 class FairyStockfish < Formula
-  desc "Strong open source chess variant engine"
+  desc "Strong open source chess variant engine (with largeboards support)"
   homepage "https://fairy-stockfish.github.io/"
-  url "https://github.com/fairy-stockfish/Fairy-Stockfish/archive/refs/tags/fairy_sf_14.tar.gz"
-  sha256 "db5e96cf47faf4bfd4a500f58ae86e46fee92c2f5544e78750fc01ad098cbad2"
+  url "https://github.com/fairy-stockfish/Fairy-Stockfish/archive/refs/tags/fairy_sf_14_0_1_xq.tar.gz"
+  version "14.0.1"
+  sha256 "53914fc89d89afca7cfcfd20660ccdda125f1751f59a68b1f3ed1d4eb6cfe805"
   license "GPL-3.0-or-later"
   head "https://github.com/fairy-stockfish/Fairy-Stockfish.git", branch: "master"
 
   livecheck do
     url :stable
-    regex(/^fairy_sf[._-]v?(\d+(?:[._-]\d+)*)$/i)
+    regex(/^fairy_sf[._-]v?(\d+(?:[._-]\d+)*)(?:_xq)?$/i)
+    strategy :git do |tags, regex|
+      tags.filter_map { |tag| tag.match(regex)&.[](1)&.tr("_", ".") }
+    end
   end
 
   bottle do
@@ -45,7 +49,7 @@ class FairyStockfish < Formula
       "x86-64"
     end
 
-    system "make", "-C", "src", "build", "ARCH=#{arch}"
+    system "make", "-C", "src", "build", "ARCH=#{arch}", "largeboards=yes"
     bin.install "src/stockfish" => "fairy-stockfish"
   end
 
