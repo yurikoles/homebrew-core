@@ -2,7 +2,7 @@ class Pcl < Formula
   desc "Library for 2D/3D image and point cloud processing"
   homepage "https://pointclouds.org/"
   license "BSD-3-Clause"
-  revision 4
+  revision 5
   head "https://github.com/PointCloudLibrary/pcl.git", branch: "master"
 
   stable do
@@ -57,6 +57,13 @@ class Pcl < Formula
     depends_on "libx11"
     depends_on "mesa"
     depends_on "mesa-glu"
+  end
+
+  # vtk 9.6+ is optional to x11, it doesn't link transitively and so here we need to add it as a dependency
+  # PR ref: https://github.com/PointCloudLibrary/pcl/pull/6435
+  patch do
+    url "https://github.com/PointCloudLibrary/pcl/commit/490996e66d36829394e01c19089385f23fdf3c9c.patch?full_index=1"
+    sha256 "f71b64ce5e8e606a5f57b3c011d961b625ace6c0c8956a7a25db1d4db8446664"
   end
 
   def install
