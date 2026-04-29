@@ -2,7 +2,7 @@ class Opencv < Formula
   desc "Open source computer vision library"
   homepage "https://opencv.org/"
   license "Apache-2.0"
-  revision 8
+  revision 9
   compatibility_version 1
 
   stable do
@@ -100,6 +100,15 @@ class Opencv < Formula
     inreplace "modules/dnn/src/op_inf_engine.cpp",
               "return Mat(size, type, blob.data());",
               "return Mat(size, type, const_cast<void*>(blob.data()));"
+
+    # VTK 9.6 stopped transitively including <iostream>;
+    # viz uses std::cout/endl directly.
+    # PR refs: https://github.com/opencv/opencv_contrib/pull/4085
+    inreplace "opencv_contrib/modules/viz/src/vtk/vtkVizInteractorStyle.cpp" do |s|
+      s.sub! '#include "../precomp.hpp"', "#include <iostream>\n\\0"
+      s.gsub!(/^(\s*)cout (<<.* )endl;$/, "\\1std::cout \\2std::endl;")
+    end
+    inreplace "opencv_contrib/modules/viz/src/widget.cpp", '#include "precomp.hpp"', "#include <iostream>\n\\0"
 
     args = %W[
       -DCMAKE_CXX_STANDARD=17
