@@ -1,10 +1,9 @@
 class Micromamba < Formula
   desc "Fast Cross-Platform Package Manager"
   homepage "https://github.com/mamba-org/mamba"
-  url "https://github.com/mamba-org/mamba/archive/refs/tags/2.5.0.tar.gz"
-  sha256 "2d8761e423275b2e2b46352c99bdedc062ca22b98871ffa82e044d2be74b350f"
+  url "https://github.com/mamba-org/mamba/archive/refs/tags/2.6.0.tar.gz"
+  sha256 "d3a9eeb7e84c6c107ad40f1e665e38c5af97dac822bd766109988ffbedbcc4a3"
   license "BSD-3-Clause"
-  revision 4
   head "https://github.com/mamba-org/mamba.git", branch: "main"
 
   livecheck do
@@ -34,6 +33,7 @@ class Micromamba < Formula
   depends_on "libarchive"
   depends_on "libsolv"
   depends_on "lz4"
+  depends_on "msgpack"
   depends_on "openssl@3"
   depends_on "reproc"
   depends_on "simdjson"
