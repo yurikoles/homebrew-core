@@ -12,12 +12,12 @@ class BlockGooseCli < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "37222ce0edd31d0ddc18b17d9506f9b19df32efd10bfba247ae17bd5b3b03697"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "feace1fb4248ecda17f04ba8376d867f42aab219a9fff1730039076504cded7d"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "4fbf02a6b86f42de8b31d00bf5ce8cd323fe85fa210241962292179c0bb4b7f9"
-    sha256 cellar: :any_skip_relocation, sonoma:        "061c2a153d42e20ca85859e368acf4c998081fe2bba0bf0c45fa3c0c707f5cd9"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "3d48f9f326581dd58c472a0d5373e525f6b8191c871c651ea45dbe4f4424d5bf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "98769954e24c2fef3f010eb77a4a5895b171c9ceeacbec8cbf7f89e0099e978f"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "96c1d0d2cc907bcdf5b08db8a87029f96892cf255c5e1ba064ccd7abdce7478d"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "c2fef765c9251d41955975587745517c4a50c3a011c5029b732f60b8cf31a814"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1e70f93738d0830815d1ad27910e898e0be1033cdd7b64bec855389c51c53597"
+    sha256 cellar: :any_skip_relocation, sonoma:        "2b69df97fe716f9d3b534cbf9e1739c8093bbec0d3a6d4485bd0875e37c7dae5"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f412b57d107a57ce87fed51d43c8df8aa6ff0e727612bc379aea30d5858a2767"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "01c5c68cfd8c1ec8a92a32f7752a8605cb21becbd275ec04ce778d6c8692d6c5"
   end
 
   depends_on "cmake" => :build
