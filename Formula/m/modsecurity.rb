@@ -6,12 +6,12 @@ class Modsecurity < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "903816449f1b48c8e20a657b978b80f93ee3f721ebb78a6c1216260983c60b67"
-    sha256 cellar: :any,                 arm64_sequoia: "1e5fb4a1da5ca02302211054c1222e58fe142f4e4b9d51a6abcbbd1e6e4f93c8"
-    sha256 cellar: :any,                 arm64_sonoma:  "128cab434340b33ad4ce2d710e02483d56bc7cf6a91e10dfb677f631f0c2b093"
-    sha256 cellar: :any,                 sonoma:        "c6e2865897da1cffe2d77764b905edd4c400af92385ffe32f9348cefea29f023"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "90659a4c8e50293d7415e09a0e79e9f25bdca5af7cb54eb1134714ce40cd564f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "81c9b619a94eff97ee7e49985eaf493b984130de34f608eda9b283a94b64c538"
+    sha256 cellar: :any,                 arm64_tahoe:   "d5a9b95a6b7000c5cc0e4a5e664b598e2ed0090e9bf7714a8ab432398d6f430f"
+    sha256 cellar: :any,                 arm64_sequoia: "a83b3b90f2d31ff249593a2a0b712c5ab41234741fe2981247dfdfe8e3aa51a3"
+    sha256 cellar: :any,                 arm64_sonoma:  "04ef367e843ceb1402b4efe5b5779aac591f79490fcaf3da7ab283abd4c4a669"
+    sha256 cellar: :any,                 sonoma:        "b4328c6cec5f19f7f6197b944bdfbc26eecfab6e4bfa083cb2f02102ec575e4f"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "5a35e3dad3df682212ae6ef0e617e5fb263c5befdd868275f978cbbc7c096076"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "46e066f4000892a21daf9f4451c05e4cee6f173cfb72ed1da2a32dc4cc4da971"
   end
 
   depends_on "autoconf" => :build
