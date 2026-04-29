@@ -16,14 +16,12 @@ class FairyStockfish < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "4ee205839b2f569fc11c0b2d09502a866be0cda2195f04a73cbc9329f2642ac9"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "36c6b1790bc144c874f7a1f737814c391380c47439b304c5c8e0ef368e773bc6"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "cbf99586202d3f28f7bfdf09830f620631030ae85276caf38d2b0d3246b22f9c"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "8d1e77f421472a96ed0281cf542c4c8d6edd58c181ddce745fc1901659e68593"
-    sha256 cellar: :any_skip_relocation, sonoma:        "ba82fe79eb4b379870174e79a83b61136a519b94419a471bcb6b20754d015d86"
-    sha256 cellar: :any_skip_relocation, ventura:       "c5ed0d702fac374bebd45b8a2a9e8074c887bda62e980f2528c5b35f94296650"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "04a1cdcecf55712d376a05918b2ec1423f3ac0f56eae9b6c8fcfe3a8687f3312"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "aba797d91cba8f0b56caf85f3d55e4c2fdf4a83bb1be0c11255fa580c320ed53"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "44c93f2b4f6e3b7ff1daa96bce98e9bc64b34c343921b6e145a23bf153131b2c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "8b70af3b59355821eaf2ee870e0f962159bf599b8964c1ba965cc848c0cd9708"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "3523a6ba3cf152a83e798aeb19298fc8b59df95194441f8dba655d56264867c1"
+    sha256 cellar: :any_skip_relocation, sonoma:        "1943dab5d7ebe253c43cde8c33d5683a08619be682dedc41f6b4c107f0718c71"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f4ffe9bc9209dbe890aac368fe2c74f7d6793ea9ece4ff6f837148dfc3405f8b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8316c36ce185f713c34e19e6da7c5d5033b4d7ffd4d850d6fad6e65b5d187683"
   end
 
   def install
