@@ -1,8 +1,8 @@
 class Mimalloc < Formula
   desc "Compact general purpose allocator"
   homepage "https://github.com/microsoft/mimalloc"
-  url "https://github.com/microsoft/mimalloc/archive/refs/tags/v3.3.1.tar.gz"
-  sha256 "42c16914168ac6741eeb407e83b93a12b2b7ee25a7e14e6b4807fab8b577a540"
+  url "https://github.com/microsoft/mimalloc/archive/refs/tags/v3.3.2.tar.gz"
+  sha256 "ca02384e007f46950598500dfaebde5ff9948c1d231f5a81b058799afa64bbbb"
   license "MIT"
 
   livecheck do
