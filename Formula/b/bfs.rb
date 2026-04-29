@@ -1,8 +1,8 @@
 class Bfs < Formula
   desc "Breadth-first version of find"
   homepage "https://tavianator.com/projects/bfs.html"
-  url "https://github.com/tavianator/bfs/archive/refs/tags/4.1.tar.gz"
-  sha256 "7a2ccafc87803b6c42009019e0786cb1307f492c2d61d2fcb0be5dcfdd0049da"
+  url "https://github.com/tavianator/bfs/archive/refs/tags/4.1.1.tar.gz"
+  sha256 "23f72223733d08393e9a5309c6a38b175e32d9afa65b15517edc316bd02a1f4f"
   license "0BSD"
 
   bottle do
