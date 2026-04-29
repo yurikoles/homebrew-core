@@ -1,8 +1,8 @@
 class Kapp < Formula
   desc "CLI tool for Kubernetes users to group and manage bulk resources"
   homepage "https://carvel.dev/kapp/"
-  url "https://github.com/carvel-dev/kapp/archive/refs/tags/v0.65.1.tar.gz"
-  sha256 "b3052206113574e32a4f2f84985139ca2ece1ce81ab714b5b8f802ae902659d0"
+  url "https://github.com/carvel-dev/kapp/archive/refs/tags/v0.65.2.tar.gz"
+  sha256 "1f14fca0b05366a4474c53f0b0b22e0d36879755ede656fdd96747052f1044a0"
   license "Apache-2.0"
   head "https://github.com/carvel-dev/kapp.git", branch: "develop"
 
