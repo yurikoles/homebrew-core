@@ -1,8 +1,8 @@
 class Minizign < Formula
   desc "Minisign reimplemented in Zig"
   homepage "https://github.com/jedisct1/zig-minisign"
-  url "https://github.com/jedisct1/zig-minisign/archive/refs/tags/0.1.7.tar.gz"
-  sha256 "e0358f68a5fe6573c7e735db45cd1b697abcef6925c922abddc20978cd20a9f1"
+  url "https://github.com/jedisct1/zig-minisign/archive/refs/tags/0.1.12.tar.gz"
+  sha256 "4a567fd462e7dc75e3d6f20a300208ca1629a89896119493d53b6d19bec4bca2"
   license "ISC"
   head "https://github.com/jedisct1/zig-minisign.git", branch: "main"
 
@@ -15,7 +15,7 @@ class Minizign < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "bc703647a481bb360cd6413e1e926898dcc6b7cad9bcf8ae02f139b3afee7f1e"
   end
 
-  depends_on "zig@0.15" => :build
+  depends_on "zig" => :build
 
   def install
     # Fix illegal instruction errors when using bottles on older CPUs.
