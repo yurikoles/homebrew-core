@@ -1,8 +1,8 @@
 class Pay < Formula
   desc "HTTP client that automatically handles 402 Payment Required"
   homepage "https://github.com/solana-foundation/pay"
-  url "https://github.com/solana-foundation/pay/archive/refs/tags/pay-v0.9.0.tar.gz"
-  sha256 "362af2401601387bba9b012797efdec76e92a92b514aa6b55a09a276bb0c9c7d"
+  url "https://github.com/solana-foundation/pay/archive/refs/tags/pay-v0.10.0.tar.gz"
+  sha256 "9bb69c70fdb350f380c05ccf786fa4b7e262bd554dc64a987f7735c3504ef359"
   license "Apache-2.0"
   head "https://github.com/solana-foundation/pay.git", branch: "main"
 
@@ -20,12 +20,16 @@ class Pay < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:  "7213661ba02aa4a5b9359f662b56863cabd51341a12c43679c5ee2fd37348ef2"
   end
 
+  depends_on "just" => :build
+  depends_on "node" => :build
   depends_on "pkgconf" => :build
+  depends_on "pnpm" => :build
   depends_on "rust" => :build
   depends_on "openssl@3"
+  uses_from_macos "python"
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "rust/crates/cli")
+    system "just", "install", "pay", *std_cargo_args(path: "rust/crates/cli")
   end
 
   test do
