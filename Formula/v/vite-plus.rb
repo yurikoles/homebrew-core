@@ -1,8 +1,8 @@
 class VitePlus < Formula
   desc "Unified toolchain and entry point for web development"
   homepage "https://viteplus.dev"
-  url "https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v0.1.19.tar.gz"
-  sha256 "74a8bfb1f58dfac6662cb6c1cf69fa4cd9a3e709cea8500cf642f4d75548991a"
+  url "https://github.com/voidzero-dev/vite-plus/archive/refs/tags/v0.1.20.tar.gz"
+  sha256 "e30f80e02db792efe6dcb01c325c34047cf9de862254322812ddc1c311f3c187"
   license "MIT"
   head "https://github.com/voidzero-dev/vite-plus.git", branch: "main"
 
@@ -23,8 +23,8 @@ class VitePlus < Formula
 
   resource "rolldown" do
     url "https://github.com/rolldown/rolldown.git",
-        revision: "edec4facc1c74a87af7f1ccc980488171ff6a04c"
-    version "edec4facc1c74a87af7f1ccc980488171ff6a04c"
+        revision: "d9d72c37c5b90ae8e8863bb3aadc4c67d13d6e82"
+    version "d9d72c37c5b90ae8e8863bb3aadc4c67d13d6e82"
 
     livecheck do
       url "https://raw.githubusercontent.com/voidzero-dev/vite-plus/refs/tags/v#{LATEST_VERSION}/packages/tools/.upstream-versions.json"
@@ -36,8 +36,8 @@ class VitePlus < Formula
 
   resource "vite" do
     url "https://github.com/vitejs/vite.git",
-        revision: "6e585dcb05a3b159fba7ae57f7faf0b1eca7a390"
-    version "6e585dcb05a3b159fba7ae57f7faf0b1eca7a390"
+        revision: "32c29780404c353f5a7c5ba4d06fc5e676741714"
+    version "32c29780404c353f5a7c5ba4d06fc5e676741714"
 
     livecheck do
       url "https://raw.githubusercontent.com/voidzero-dev/vite-plus/refs/tags/v#{LATEST_VERSION}/packages/tools/.upstream-versions.json"
@@ -45,13 +45,6 @@ class VitePlus < Formula
         json.dig("vite", "hash")
       end
     end
-  end
-
-  # Fix missing le16toh symbol in `@ast-grep/napi`:
-  # https://github.com/voidzero-dev/vite-plus/pull/1437
-  patch do
-    url "https://github.com/voidzero-dev/vite-plus/commit/6dd682862703100367082594de2b672f84212637.patch?full_index=1"
-    sha256 "00480c9e6c12dddff00dc28cd4bab52a76bd1f504c8d83e79b52380baa6b713d"
   end
 
   def install
