@@ -1,8 +1,8 @@
 class Libcotp < Formula
   desc "C library that generates TOTP and HOTP"
   homepage "https://github.com/paolostivanin/libcotp"
-  url "https://github.com/paolostivanin/libcotp/archive/refs/tags/v4.0.1.tar.gz"
-  sha256 "f8c843004d18880eb41417853fcfc3855f6197e7a32dcd87d23a6609cf0a116a"
+  url "https://github.com/paolostivanin/libcotp/archive/refs/tags/v4.1.0.tar.gz"
+  sha256 "e51016eb220647e7f16b67c0baae2a42730b07fec3131aaad0f39a3a2a638b89"
   license "Apache-2.0"
   head "https://github.com/paolostivanin/libcotp.git", branch: "master"
 
@@ -18,13 +18,6 @@ class Libcotp < Formula
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "libgcrypt"
-
-  # Backport macOS-compatible linker hardening.
-  # Upstream PR: https://github.com/paolostivanin/libcotp/pull/76
-  patch do
-    url "https://github.com/paolostivanin/libcotp/commit/83fd77822e774032387b9e38b2d612bb3fab236d.patch?full_index=1"
-    sha256 "6a117238f03a838c3e842f4a7e652e5dd792f3c124ca9f792e56a00d01b004b8"
-  end
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args
