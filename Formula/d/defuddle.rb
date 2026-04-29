@@ -5,6 +5,10 @@ class Defuddle < Formula
   sha256 "29d634b3e633e7ca0bd56fcb6296611b1f85e1823cd9bc1fe3220f1112149aec"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "f5ad5cfe3fae1be629c6a6fdfe83c038e4abad5690e477e0b1727b3db6acdaca"
+  end
+
   depends_on "node"
 
   def install
