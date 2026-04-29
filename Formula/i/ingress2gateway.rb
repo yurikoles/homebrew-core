@@ -1,8 +1,8 @@
 class Ingress2gateway < Formula
   desc "Convert Kubernetes Ingress resources to Kubernetes Gateway API resources"
   homepage "https://github.com/kubernetes-sigs/ingress2gateway"
-  url "https://github.com/kubernetes-sigs/ingress2gateway/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "741f21ed50470f531d474e35253b8ba5aff6fc13e1ad8ca64049ece5cf1faae1"
+  url "https://github.com/kubernetes-sigs/ingress2gateway/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "a3c74ca555df43e40b0acd89743cb0ade9b1ad72bcd61fad0d0bec0b233a9c7c"
   license "Apache-2.0"
   head "https://github.com/kubernetes-sigs/ingress2gateway.git", branch: "main"
 
@@ -86,7 +86,6 @@ class Ingress2gateway < Formula
           - path:
               type: PathPrefix
               value: /
-          name: rule-0
       status:
         parents: []
     YAML
