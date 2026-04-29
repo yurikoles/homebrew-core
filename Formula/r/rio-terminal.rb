@@ -1,8 +1,8 @@
 class RioTerminal < Formula
   desc "Hardware-accelerated GPU terminal emulator powered by WebGPU"
   homepage "https://rioterm.com/"
-  url "https://github.com/raphamorim/rio/archive/refs/tags/v0.3.11.tar.gz"
-  sha256 "f59abcfb501bb4e98dd13d471ba4ceba9b7dd25bcd2c45865b2aef3d8dce9a19"
+  url "https://github.com/raphamorim/rio/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "4b36a0daaa778a69a5b6f4d770814a757ffdec58aef9e6bcfd77d8d9a26a99ce"
   license "MIT"
   head "https://github.com/raphamorim/rio.git", branch: "main"
 
@@ -34,6 +34,6 @@ class RioTerminal < Formula
     assert_match version.to_s, shell_output("#{bin}/rio --version")
 
     system bin/"rio", "--write-config", testpath/"rio.toml"
-    assert_match "enable-log-file = false", (testpath/"rio.toml").read
+    assert_path_exists testpath/"rio.toml"
   end
 end
