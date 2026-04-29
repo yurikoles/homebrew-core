@@ -1,8 +1,8 @@
 class Likec4 < Formula
   desc "Architecture modeling tool with live diagrams from code"
   homepage "https://likec4.dev"
-  url "https://registry.npmjs.org/likec4/-/likec4-1.55.1.tgz"
-  sha256 "58e18ed18f26ff5b769b2117c440b0822409e0f9e6674fd34852f45fb6e2285c"
+  url "https://registry.npmjs.org/likec4/-/likec4-1.56.0.tgz"
+  sha256 "736bdda816cef207536869f98c33e01f4a3f9aa484e7717934234b8c9dbf74ff"
   license "MIT"
 
   bottle do
