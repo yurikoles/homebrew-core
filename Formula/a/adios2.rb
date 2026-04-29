@@ -1,10 +1,9 @@
 class Adios2 < Formula
   desc "Next generation of ADIOS developed in the Exascale Computing Program"
   homepage "https://adios2.readthedocs.io"
-  url "https://github.com/ornladios/ADIOS2/archive/refs/tags/v2.11.0.tar.gz"
-  sha256 "0a2bd745e3f39745f07587e4a5f92d72f12fa0e2be305e7957bdceda03735dbf"
+  url "https://github.com/ornladios/ADIOS2/archive/refs/tags/v2.12.1.tar.gz"
+  sha256 "71edd8f721448311852122fca8d83ae497b43846e5bfcdfd275dc06bb7f3d0c5"
   license "Apache-2.0"
-  revision 4
   head "https://github.com/ornladios/ADIOS2.git", branch: "master"
 
   livecheck do
@@ -30,6 +29,7 @@ class Adios2 < Formula
   depends_on "libpng"
   depends_on "libsodium"
   depends_on "mpi4py"
+  depends_on "nanobind"
   depends_on "numpy"
   depends_on "open-mpi"
   depends_on "openssl@3"
@@ -55,12 +55,6 @@ class Adios2 < Formula
   # clang: error: clang frontend command failed due to signal (use -v to see invocation)
   # Apple clang version 14.0.0 (clang-1400.0.29.202)
   fails_with :clang if DevelopmentTools.clang_build_version == 1400
-
-  # Upstream PR: https://github.com/ornladios/ADIOS2/pull/4791
-  patch do
-    url "https://github.com/ornladios/ADIOS2/commit/1dcffdf15a90282549ce679e96ac59f35e93acde.patch?full_index=1"
-    sha256 "1133316f038abed99824d00584b70454122083cf0e2717a1322511b91a14c4dd"
-  end
 
   def python3
     "python3.14"
@@ -100,11 +94,15 @@ class Adios2 < Formula
       -DADIOS2_BUILD_TESTING=OFF
       -DADIOS2_BUILD_EXAMPLES=OFF
       -DADIOS2_USE_EXTERNAL_DEPENDENCIES=ON
+      -DADIOS2_USE_EXTERNAL_PERFSTUBS=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+
+    # Remove standalone helper script that upstream installs as a non-executable.
+    rm bin/"bpcmp.py"
 
     (pkgshare/"test").install "examples/hello/bpWriter/bpWriter.cpp"
     (pkgshare/"test").install "examples/hello/bpWriter/bpWriter.py"
