@@ -33,6 +33,8 @@ class Ghidra < Formula
     libexec.install (buildpath/"build/dist/ghidra_#{version}_PUBLIC").children
     (bin/"ghidraRun").write_env_script libexec/"ghidraRun",
                                        Language::Java.overridable_java_home_env("21")
+    (bin/"pyghidraRun").write_env_script libexec/"support/pyghidraRun",
+                                         Language::Java.overridable_java_home_env("21")
   end
 
   test do
