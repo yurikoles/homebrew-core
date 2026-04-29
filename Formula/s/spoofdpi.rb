@@ -1,8 +1,8 @@
 class Spoofdpi < Formula
   desc "Simple and fast anti-censorship tool written in Go"
   homepage "https://spoofdpi.xvzc.dev"
-  url "https://github.com/xvzc/SpoofDPI/releases/download/v1.3.1/spoofdpi-1.3.1.tar.gz"
-  sha256 "124f4848c2b095538618071700780b506930d033e8a32ae9ba9b606ad66dd6b5"
+  url "https://github.com/xvzc/SpoofDPI/releases/download/v1.4.0/spoofdpi-1.4.0.tar.gz"
+  sha256 "44f3792a0b37bedb2c95f4e34e67cb561272e1378a616da98175241a683a5e57"
   license "Apache-2.0"
   head "https://github.com/xvzc/SpoofDPI.git", branch: "main"
 
@@ -52,7 +52,13 @@ class Spoofdpi < Formula
     assert_match version.to_s, shell_output("#{bin}/spoofdpi -v")
 
     port = free_port
-    pid = spawn bin/"spoofdpi", "--listen-addr", "127.0.0.1:#{port}"
+    pid = if OS.mac?
+      spawn bin/"spoofdpi", "--listen-addr", "127.0.0.1:#{port}"
+    else
+      require "pty"
+      PTY.spawn(bin/"spoofdpi", "--listen-addr", "127.0.0.1:#{port}").last
+    end
+
     begin
       sleep 3
       # "nothing" is an invalid option, but curl will process it
