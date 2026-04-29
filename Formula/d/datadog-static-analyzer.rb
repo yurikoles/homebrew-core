@@ -1,8 +1,8 @@
 class DatadogStaticAnalyzer < Formula
   desc "Static analysis tool for code quality and security"
   homepage "https://docs.datadoghq.com/security/code_security/static_analysis/"
-  url "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.8.2.tar.gz"
-  sha256 "453520f69b628beb90fdc96c0d73e28e8b12efe2e224658c446c998f7093ca23"
+  url "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.8.3.tar.gz"
+  sha256 "003270772ea540f0f3bddaaddad163aecb48cf81816033487972d17081391184"
   license "Apache-2.0"
   head "https://github.com/DataDog/datadog-static-analyzer.git", branch: "main"
 
