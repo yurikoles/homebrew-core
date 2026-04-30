@@ -17,7 +17,7 @@ class Libdpp < Formula
 
   depends_on "cmake" => :build
   depends_on "nlohmann-json" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "opus"
   depends_on "pkgconf"
 
