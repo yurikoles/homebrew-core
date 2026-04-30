@@ -19,7 +19,7 @@ class Caf < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   def install
     tools = pkgshare/"tools"
