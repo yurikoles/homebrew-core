@@ -7,12 +7,12 @@ class Gdu < Formula
   head "https://github.com/dundee/gdu.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "26503034743d0993d395ee9b9f54104411d204c9f115144e387ec01cbaed9fae"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "26503034743d0993d395ee9b9f54104411d204c9f115144e387ec01cbaed9fae"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "26503034743d0993d395ee9b9f54104411d204c9f115144e387ec01cbaed9fae"
-    sha256 cellar: :any_skip_relocation, sonoma:        "1d1f22c59909ea77beaaba3d586592611e2f390f26ca4141767fb0edc473f51c"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "43cd6e0713740de4191856bf9db52e981fa84e43a3223d9950091b98a704ffc9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "011770697349fe2efc32dcc124c79a52be07d812ae7bd95cacdb9b82639716a6"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "423c661dc89fa77e52901d6684f851ae0935f3a6d98805e52eba47608f758775"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "423c661dc89fa77e52901d6684f851ae0935f3a6d98805e52eba47608f758775"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "423c661dc89fa77e52901d6684f851ae0935f3a6d98805e52eba47608f758775"
+    sha256 cellar: :any_skip_relocation, sonoma:        "b64522ba91afde648b7480c06ab1cb2b21567d71caef8c0dd77a53ca9454aa20"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "35c4528f10ec56d64c6213d9870ad3b786961ef57ff4b87c81b6207b8e134042"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a89b5a53737c2b86fcdda423d4469b73b02f4a034b90bb3661db5dfe49654fbc"
   end
 
   depends_on "go" => :build
