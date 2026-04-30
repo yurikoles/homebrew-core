@@ -1,8 +1,8 @@
 class Emscripten < Formula
   desc "LLVM bytecode to JavaScript compiler"
   homepage "https://emscripten.org/"
-  url "https://github.com/emscripten-core/emscripten/archive/refs/tags/5.0.6.tar.gz"
-  sha256 "f1d3d5038d712b4f5408ddff25ea52cbab7d600b9d3195d970f38c260ee14bbb"
+  url "https://github.com/emscripten-core/emscripten/archive/refs/tags/5.0.7.tar.gz"
+  sha256 "66a6537a8dede6b0e5945839f0d0641e73e64f728729d26900e9d918040f0210"
   license all_of: [
     "Apache-2.0", # binaryen
     "Apache-2.0" => { with: "LLVM-exception" }, # llvm
@@ -50,9 +50,9 @@ class Emscripten < Formula
   # https://chromium.googlesource.com/emscripten-releases/+/<commit>/DEPS
   # Then use the listed binaryen_revision for the revision below.
   resource "binaryen" do
-    url "https://github.com/WebAssembly/binaryen/archive/54f9f7afa703ade4a34aa3291abbe237bb0cd8a4.tar.gz"
-    version "54f9f7afa703ade4a34aa3291abbe237bb0cd8a4"
-    sha256 "60cc537485bbd62c4e288b34e3b9bc17e99d92b39da990b82a1d6b705365b27d"
+    url "https://github.com/WebAssembly/binaryen/archive/c6a5e65b77a4b6e9d72fa7ba674632aba4b99099.tar.gz"
+    version "c6a5e65b77a4b6e9d72fa7ba674632aba4b99099"
+    sha256 "a807c950b910d247a5f68dd059e775f0c7bda9fecff5a1ef11f4180e1a60ccf8"
 
     livecheck do
       url "https://raw.githubusercontent.com/emscripten-core/emsdk/refs/tags/#{LATEST_VERSION}/emscripten-releases-tags.json"
@@ -76,9 +76,9 @@ class Emscripten < Formula
   # See binaryen resource above for instructions on how to update this.
   # Then use the listed llvm_project_revision for the tarball below.
   resource "llvm" do
-    url "https://github.com/llvm/llvm-project/archive/bbeae6932d653b8a71a3a985af0ccf97e13e2e08.tar.gz"
-    version "bbeae6932d653b8a71a3a985af0ccf97e13e2e08"
-    sha256 "268a5e47519a1b430b0be76e58d7678f7585d126a86c936dfe609d11010f2565"
+    url "https://github.com/llvm/llvm-project/archive/7b58716d96c3ae4c0c4e6f72e29b16137bb6224b.tar.gz"
+    version "7b58716d96c3ae4c0c4e6f72e29b16137bb6224b"
+    sha256 "0791c69319e1861e86ccb438d10b1b1816987f2d99b13d7e95ef08f88f0cedf8"
 
     livecheck do
       url "https://raw.githubusercontent.com/emscripten-core/emsdk/refs/tags/#{LATEST_VERSION}/emscripten-releases-tags.json"
