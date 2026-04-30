@@ -16,14 +16,18 @@ class GoCamo < Formula
   end
 
   depends_on "go" => :build
-  depends_on "just" => :build
 
   def install
-    system "just", "build"
-    bin.install Dir["build/bin/*"]
+    ldflags = "-s -w -X main.ServerVersion=#{version}"
+    tags = "netgo,production"
+    system "go", "build", *std_go_args(ldflags:, tags:), "./cmd/go-camo"
+    system "go", "build", *std_go_args(ldflags:, tags:, output: bin/"url-tool"), "./cmd/url-tool"
   end
 
   test do
+    assert_match version.to_s, shell_output("#{bin}/go-camo --version")
+    assert_match version.to_s, shell_output("#{bin}/url-tool --version")
+
     port = free_port
     spawn bin/"go-camo", "--key", "somekey", "--listen", "127.0.0.1:#{port}", "--metrics"
     sleep 1
