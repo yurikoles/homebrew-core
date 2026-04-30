@@ -1,8 +1,8 @@
 class HaproxyAT28 < Formula
   desc "Reliable, high performance TCP/HTTP load balancer"
   homepage "https://www.haproxy.org/"
-  url "https://www.haproxy.org/download/2.8/src/haproxy-2.8.21.tar.gz"
-  sha256 "ff9d6c0623c430b25d8ccafc755dd12d1138c4fa7628aff6532869a01e8675ef"
+  url "https://www.haproxy.org/download/2.8/src/haproxy-2.8.22.tar.gz"
+  sha256 "cec5cf0b8b1006239407eea15080e380f24a953a1394e9b0e0cbbc956ebcbc67"
   license "GPL-2.0-or-later" => { with: "openvpn-openssl-exception" }
 
   livecheck do
