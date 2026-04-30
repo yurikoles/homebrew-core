@@ -3,8 +3,8 @@ class MistralVibe < Formula
 
   desc "Minimal CLI coding agent"
   homepage "https://github.com/mistralai/mistral-vibe"
-  url "https://files.pythonhosted.org/packages/a4/cf/c06588958e5817dfb0f2ab8694f34e7dcc82d5ee9e79837ff792c787493e/mistral_vibe-2.9.0.tar.gz"
-  sha256 "367a30f133a8166fefc527e28bff0768fb57f506b107092a0e7711f58edd65fc"
+  url "https://files.pythonhosted.org/packages/64/c2/aa00e8f4f0e3d05d616d1c4156d5f41156d8e1a076c661f2cd061927a465/mistral_vibe-2.9.2.tar.gz"
+  sha256 "fd0a1196b01fab1b97d41b2203138385d933c1e8714bfdd005e7dac15a562621"
   license "Apache-2.0"
   head "https://github.com/mistralai/mistral-vibe.git", branch: "main"
 
@@ -73,8 +73,8 @@ class MistralVibe < Formula
   end
 
   resource "gitpython" do
-    url "https://files.pythonhosted.org/packages/a6/c3/e4a9656f3cdb280f5dc65a68cc6fc46e79f897d27c1a36bbb4f0f47aaac5/gitpython-3.1.48.tar.gz"
-    sha256 "b7c49ff4a49946fce38ac84116efa311b15e7dad06dc3787fc9e206bf9ef75e1"
+    url "https://files.pythonhosted.org/packages/e1/63/210aaa302d6a0a78daa67c5c15bbac2cad361722841278b0209b6da20855/gitpython-3.1.49.tar.gz"
+    sha256 "42f9399c9eb33fc581014bedd76049dfbaf6375aa2a5754575966387280315e1"
   end
 
   resource "giturlparse" do
