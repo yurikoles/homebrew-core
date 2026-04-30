@@ -1,23 +1,11 @@
 class Wireshark < Formula
   desc "Network analyzer and capture tool - without graphical user interface"
   homepage "https://www.wireshark.org"
+  url "https://www.wireshark.org/download/src/all-versions/wireshark-4.6.5.tar.xz"
+  mirror "https://1.eu.dl.wireshark.org/src/all-versions/wireshark-4.6.5.tar.xz"
+  sha256 "b5322538b20fa3e0bf004be83c534a42937d442be3f960d01b4e1f0db6c50386"
   license "GPL-2.0-or-later"
-  revision 1
   head "https://gitlab.com/wireshark/wireshark.git", branch: "master"
-
-  stable do
-    url "https://www.wireshark.org/download/src/all-versions/wireshark-4.6.4.tar.xz"
-    mirror "https://1.eu.dl.wireshark.org/src/all-versions/wireshark-4.6.4.tar.xz"
-    sha256 "fbeab3d85c6c8a5763c8d9b7fe20b5c69ca9f9e7f2b824bedc73135bdca332e2"
-
-    # Apply Fedora's backport of Lua 5.5 support. Includes following commits:
-    # https://gitlab.com/wireshark/wireshark/-/commit/ec16791d8d68f9045400a0610a5a10b1ea544dfd
-    # https://gitlab.com/wireshark/wireshark/-/commit/1bf12a13e71a6ec1a79cfc73767d35e815b839dd
-    patch do
-      url "https://src.fedoraproject.org/rpms/wireshark/raw/aa822250ea9ebe0b4199522aba92b3c931488a0b/f/wireshark-0010-find-lua-5.5.patch"
-      sha256 "48d682f99981bad6fa26cae9f4b1d96246b51d701136ba9d89d82d5ddd91bbdc"
-    end
-  end
 
   # Upstream indicates stable releases with an even-numbered minor (see:
   # https://wiki.wireshark.org/Development/ReleaseNumbers).
