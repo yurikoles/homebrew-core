@@ -1,8 +1,8 @@
 class Gnumeric < Formula
   desc "GNOME Spreadsheet Application"
   homepage "https://projects.gnome.org/gnumeric/"
-  url "https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.60.tar.xz"
-  sha256 "bb02feb286062805564438534e1fea459f97cebac8a090b1a7e47ca251e07467"
+  url "https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.61.tar.xz"
+  sha256 "2ac135d856572713c1a408b76b50a59f2a9769ed21f1213446b5af255df20a12"
   license any_of: ["GPL-3.0-only", "GPL-2.0-only"]
 
   bottle do
@@ -42,13 +42,6 @@ class Gnumeric < Formula
   on_linux do
     depends_on "perl-xml-parser" => :build
     depends_on "zlib-ng-compat"
-  end
-
-  # Replace `bool` type (which requires stdbool.h) with `gboolean`
-  # https://gitlab.gnome.org/GNOME/gnumeric/-/merge_requests/39/commits
-  patch do
-    url "https://gitlab.gnome.org/GNOME/gnumeric/-/commit/0de4c0a45f078ec211fd372da4103b09cb718b1b.diff"
-    sha256 "ac4f245417fcf2d627503ec86aa78fc73becca43c39c7c6ab7c137db55ff48b1"
   end
 
   def install
