@@ -1,8 +1,8 @@
 class DatadogStaticAnalyzer < Formula
   desc "Static analysis tool for code quality and security"
   homepage "https://docs.datadoghq.com/security/code_security/static_analysis/"
-  url "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.8.3.tar.gz"
-  sha256 "003270772ea540f0f3bddaaddad163aecb48cf81816033487972d17081391184"
+  url "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.8.4.tar.gz"
+  sha256 "b442a0db20dd09d40746fade2fbcb92cf1d4e7a5e775bc6e3a94c1c5864dce60"
   license "Apache-2.0"
   head "https://github.com/DataDog/datadog-static-analyzer.git", branch: "main"
 
@@ -44,7 +44,7 @@ class DatadogStaticAnalyzer < Formula
     YAML
     output = shell_output("#{bin}/datadog-static-analyzer -i #{testpath} -f sarif " \
                           "-o #{testpath}/output.sarif")
-    assert_match "Found", output
+    assert_match "Static Analysis Summary", output
     assert_path_exists testpath/"output.sarif"
   end
 end
