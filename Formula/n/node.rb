@@ -4,7 +4,7 @@ class Node < Formula
   url "https://nodejs.org/dist/v25.9.0/node-v25.9.0.tar.xz"
   sha256 "8f78af3ee55fb278668b5f801db58bd1a38ea161318eb5ce2128ddbc9cd813aa"
   license "MIT"
-  revision 2
+  revision 3
   compatibility_version 1
   head "https://github.com/nodejs/node.git", branch: "main"
 
