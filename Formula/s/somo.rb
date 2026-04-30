@@ -1,8 +1,8 @@
 class Somo < Formula
   desc "Human-friendly alternative to netstat for socket and port monitoring"
   homepage "https://github.com/theopfr/somo"
-  url "https://github.com/theopfr/somo/archive/refs/tags/v1.3.2.tar.gz"
-  sha256 "d9c413f302ee59b7fc831180429aabb8f9f62992b1905af5908a12cd7b808974"
+  url "https://github.com/theopfr/somo/archive/refs/tags/v1.3.3.tar.gz"
+  sha256 "011ff1fe6e4e973c59526fd5c50d2cdd040d1517f26a321e21807b658047377a"
   license "MIT"
 
   bottle do
