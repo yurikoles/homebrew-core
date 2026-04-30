@@ -1,13 +1,13 @@
 class Pnpm < Formula
   desc "Fast, disk space efficient package manager"
   homepage "https://pnpm.io/"
-  url "https://registry.npmjs.org/pnpm/-/pnpm-10.33.2.tgz"
-  sha256 "7a7bcf13d7f6ceb3946c03978373d99be9fde1cafc3000bdfed4c4f791167610"
+  url "https://registry.npmjs.org/pnpm/-/pnpm-11.0.1.tgz"
+  sha256 "09f3b941fa1773927149ade7674f14e85bd5b4f9c71b5ada81bc4d316634883d"
   license "MIT"
   compatibility_version 1
 
   livecheck do
-    url "https://registry.npmjs.org/pnpm/latest-10"
+    url "https://registry.npmjs.org/pnpm/latest-11"
     strategy :json do |json|
       json["version"]
     end
@@ -33,7 +33,7 @@ class Pnpm < Formula
     generate_completions_from_executable(bin/"pnpm", "completion")
 
     # remove non-native architecture pre-built binaries
-    (libexec/"lib/node_modules/pnpm/dist").glob("reflink.*.node").each do |f|
+    (libexec/"lib/node_modules/pnpm/dist").glob("**/reflink.*.node").each do |f|
       next if f.arch == Hardware::CPU.arch
 
       rm f
