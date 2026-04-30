@@ -6,12 +6,12 @@ class Mago < Formula
   license any_of: ["Apache-2.0", "MIT"]
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "9141d8eeadf8143b2988e55f9769d4f158f6a2803968c334ff10ce6a29618e30"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6db0560781d6b15d410822d8c7850e32488877acad8a80b5ae183c7e825c0847"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "d0186a95864602ee7e9bee55ad21163219ae951059bada829f58dadd5cde0912"
-    sha256 cellar: :any_skip_relocation, sonoma:        "8543ffd2bea71316d3de3d41cd3f7268550f6c09c144e67d69d548660eaf5779"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "1189ccaa85c06c9d22ae7750b173cdd9eceda97dab1711c971bad6767414853d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8a69242adeea581d2cae3c92e6a877c16d012d7f1057ea0609b10c4334c6fdef"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "18f0f0bb2e2f656eecd39a61c49e778b28c162c582995418e5afc04e0d4cb299"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "b1b0314150f11f4a97dba908b3339b645b43dd4d99ee7764504caa4cd8fbafa1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "f76898dfb28b16b46415fd20e0114bd300fbc21a0d2471ae273ded0c7b22e169"
+    sha256 cellar: :any_skip_relocation, sonoma:        "0c6266d30780485e44db78cb30b2dca4256f05d80402402efb5932e27d118f57"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f226d052bd78433033a6e13a6a0f77aa5b4a8c2afc88b0b1a7b6b04d22948444"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "31d4ffc666a9af27673244fb08a297249c498ef0c8d3f11ff9b06c1c0532ddaa"
   end
 
   depends_on "pkgconf" => :build
