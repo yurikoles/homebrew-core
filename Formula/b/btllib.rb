@@ -1,8 +1,8 @@
 class Btllib < Formula
   desc "Bioinformatics Technology Lab common code library"
   homepage "https://github.com/bcgsc/btllib"
-  url "https://github.com/bcgsc/btllib/releases/download/v1.7.7/btllib-1.7.7.tar.gz"
-  sha256 "9e81a509f60d5bf7f19d5e5d052248a92425fec5809d0d31368537660336247a"
+  url "https://github.com/bcgsc/btllib/releases/download/v1.7.8/btllib-1.7.8.tar.gz"
+  sha256 "cd213d20a971ae3441551dd61b0e46a08559e3d9da19cb59ee8dc3397807f121"
   license "GPL-3.0-or-later"
 
   bottle do
