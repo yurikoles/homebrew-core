@@ -17,11 +17,8 @@ class Cookcli < Formula
 
   depends_on "node" => :build
   depends_on "rust" => :build
-  depends_on "openssl@3"
 
   def install
-    ENV["OPENSSL_DIR"] = Formula["openssl@3"].opt_prefix
-
     # Install npm dependencies and build assets
     system "npm", "install", *std_npm_args(prefix: false)
     system "npm", "run", "build-css"
