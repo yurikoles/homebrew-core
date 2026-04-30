@@ -1,8 +1,8 @@
 class Streamvbyte < Formula
   desc "Fast integer compression in C"
   homepage "https://github.com/fast-pack/streamvbyte"
-  url "https://github.com/fast-pack/streamvbyte/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "51ca1c3b02648ea4b965d65b0e586891981f2e8184b056520e38ad70bcc43dd8"
+  url "https://github.com/fast-pack/streamvbyte/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "6f1fcd6b3e2e0d301d8c8691be12290f7c10611f43075c8e6c53dc5c2131fe89"
   license "Apache-2.0"
   head "https://github.com/fast-pack/streamvbyte.git", branch: "master"
 
@@ -20,10 +20,10 @@ class Streamvbyte < Formula
   depends_on "cmake" => :build
 
   def install
-    odie "Remove `-DCMAKE_POLICY_VERSION_MINIMUM=3.5`" if build.stable? && version > "2.0.0"
     system "cmake", "-S", ".", "-B", "build", "-DCMAKE_POLICY_VERSION_MINIMUM=3.5", *std_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
+
     pkgshare.install "examples/example.c"
   end
 
