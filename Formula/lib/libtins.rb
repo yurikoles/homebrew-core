@@ -22,7 +22,7 @@ class Libtins < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "openssl@3"
+  depends_on "openssl@4"
 
   uses_from_macos "libpcap"
 
