@@ -5,6 +5,15 @@ class Vcflib < Formula
   sha256 "178e8c27fffc5324ac73f1c4b35f407184271b57f82aedc2efb9703df6ee3d49"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any,                 arm64_tahoe:   "dae474cbc0c7e6df472e8a8b7d903fcc326706e985391a533a92eecdcab56dc5"
+    sha256 cellar: :any,                 arm64_sequoia: "ef9292a2426c8dde700d72dbef0a8c90b64aca16e13408dcebff8153381563f7"
+    sha256 cellar: :any,                 arm64_sonoma:  "f20a7074ff10f55f5f61b7c1c7664c695716ab9e423580b0ec58c9b909c88408"
+    sha256 cellar: :any,                 sonoma:        "3e65b889529b3887e5ee65f67aca8cf7321bd151635af66767f0a1eb2a9ff009"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "593cc2e3478b480c04250f7396747e8d4a3e3dff01ac220a592b6cf3d4aaa03b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "b270eec4b3a5cecdcef38f0f2fd32bf813d46753eeacbbb5471688b3855645e4"
+  end
+
   depends_on "cmake" => :build
   depends_on "pkgconf" => :build
   depends_on "pybind11" => :build
