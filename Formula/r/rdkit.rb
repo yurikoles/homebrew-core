@@ -2,8 +2,8 @@ class Rdkit < Formula
   desc "Open-source chemoinformatics library"
   homepage "https://rdkit.org/"
   # NOTE: Make sure to update RPATHs if any "@rpath-referenced libraries" show up in `brew linkage`
-  url "https://github.com/rdkit/rdkit/archive/refs/tags/Release_2026_03_1.tar.gz"
-  sha256 "715e0d069416fc1643404df0d8ab969636cfd2c85c13e4f7cc55e4118ce10055"
+  url "https://github.com/rdkit/rdkit/archive/refs/tags/Release_2026_03_2.tar.gz"
+  sha256 "9bea418c32b553920dc3491b282bbfc47e10728ad20ea874ca47c38cc1b0818b"
   license "BSD-3-Clause"
   head "https://github.com/rdkit/rdkit.git", branch: "master"
 
