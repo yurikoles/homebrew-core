@@ -22,7 +22,7 @@ class Encfs < Formula
   depends_on "pkgconf" => :build
   depends_on "libfuse@2"
   depends_on :linux # on macOS, requires closed-source macFUSE
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "tinyxml2"
 
   def install
