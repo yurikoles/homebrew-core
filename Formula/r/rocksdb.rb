@@ -8,12 +8,12 @@ class Rocksdb < Formula
   head "https://github.com/facebook/rocksdb.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "27c6911b0c57747c2766d314d766d60235587b051f75b21659eab6d554e0837a"
-    sha256 cellar: :any,                 arm64_sequoia: "d2608e9cae567e84d7368a24a73724ac0fde7258587cad85e86c0eff25004e73"
-    sha256 cellar: :any,                 arm64_sonoma:  "ed4d1e08e10418b45b76dbc455db8b1f422dba42e0f7ac59a018743bd8b284a4"
-    sha256 cellar: :any,                 sonoma:        "9175d6da82a52771d6c1d96b33321ef81f772a4274a676fe16a98f2b6d046224"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "89022b4cacebf33bb83bf5ffb1383eecf9b981102d915e659d8ab86b88cd9935"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "26a074fcd71e498da0669ce78ffa0ebbfaa09fe7433e93ded39223fa825fdce2"
+    sha256 cellar: :any,                 arm64_tahoe:   "2c467e3e32497d7b2d083df17bce39f38e09cdedaee4e16f4bb6a0537dd0c9c2"
+    sha256 cellar: :any,                 arm64_sequoia: "139f202e34c9f459b3100dcdc72941bbbdc4da598e38bc08186027399d48945f"
+    sha256 cellar: :any,                 arm64_sonoma:  "889af840722499d72bb196f6cd9eb0263ecab5616767845488dd179609837ff7"
+    sha256 cellar: :any,                 sonoma:        "8df51978eb1ac052efb44f2fde78a35b38e72b5e2d00a66c443ac25493e931c7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "f9f7f4e2f7382aec8707d84fa049e22355f33631a0fc72b85c218f1e778888c3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25d9cdc531dc4c60490be75c53fd32d1180df3996894698124ef0cb856ddc410"
   end
 
   depends_on "cmake" => :build
