@@ -18,7 +18,7 @@ class ClickhouseCpp < Formula
   depends_on "cmake" => :build
   depends_on "abseil"
   depends_on "lz4"
-  depends_on "openssl@3"
+  depends_on "openssl@4"
   depends_on "zstd"
 
   def install
@@ -28,7 +28,7 @@ class ClickhouseCpp < Formula
     rm_r(Dir["contrib/*"] - ["contrib/cityhash"])
     args = %W[
       -DWITH_OPENSSL=ON
-      -DOPENSSL_ROOT_DIR=#{Formula["openssl@3"].opt_prefix}
+      -DOPENSSL_ROOT_DIR=#{Formula["openssl@4"].opt_prefix}
       -DWITH_SYSTEM_ABSEIL=ON
       -DWITH_SYSTEM_CITYHASH=OFF
       -DWITH_SYSTEM_LZ4=O
@@ -88,7 +88,7 @@ class ClickhouseCpp < Formula
 
     args = %W[
       -std=c++17 -I#{include} -L#{lib} -lclickhouse-cpp-lib
-      -L#{Formula["openssl@3"].opt_lib} -lcrypto -lssl
+      -L#{Formula["openssl@4"].opt_lib} -lcrypto -lssl
       -L#{Formula["lz4"].opt_lib} -llz4
       -L#{Formula["zstd"].opt_lib} -lzstd
     ]
