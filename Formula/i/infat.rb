@@ -7,10 +7,10 @@ class Infat < Formula
   head "https://github.com/philocalyst/infat.git", branch: "canonical"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "a1f2cb6fd37b0c763c9fc03395c13858dab043c4d40d2c22762878adfbc7ae02"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "43dd403f5cd8c8a778e1282825fc745fb616a34dc04362ce357b1d24e83e7a2c"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "c5326c2d384749be109e9c5cf01b378fd0bf7f6eaee02d8751569249cba98b67"
-    sha256 cellar: :any_skip_relocation, sonoma:        "d9e02db5993f76fd6dd7355acba247259de511a6fc70d03cbafe29cde80fc16b"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "50de3391c0125e448685391fdb96fa518f0154837a0307bfade506fa49e59a2e"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dc0e3f568b11130a1381fe9660e5baf4967f6953a63e3193bd74af28df0eda7f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "781cf9523514f411ee6ada165e1ccc0294073e39e1437ecc872bb9fdc290b4f3"
+    sha256 cellar: :any_skip_relocation, sonoma:        "8a129bbde2c2c35d81b6d527deea4baad62e4a55615f542704edab700bf6b22c"
   end
 
   depends_on "rust" => :build
