@@ -5,6 +5,15 @@ class Varlock < Formula
   sha256 "fa4320ae36b1afc750c9ab726263c03c569e6cca99fa59a1224bde6aa4e9241d"
   license "MIT"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:   "f88d9b380f1001441edf2e63ab333b04865591175799fe87e07fbff0a49fc01c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "43d78d627c4e25b93b1f6037a53e31800c147584a10d76fada4aa13f533baddc"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "43d78d627c4e25b93b1f6037a53e31800c147584a10d76fada4aa13f533baddc"
+    sha256 cellar: :any_skip_relocation, sonoma:        "fbd0f9e2fe6124513127f77627934871c02f5d17776eb86216a358190079d157"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "7fe2c4b2cac8f759c259c4bca4e16bcd60dd3bb7474e4c5d66c2db5f96e0fb18"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8e5c606b6ad1ea6dccf6ef8e2c0bca1d58550f0ffbcdc2240727514540120625"
+  end
+
   depends_on "node"
 
   def install
