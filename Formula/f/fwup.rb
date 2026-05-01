@@ -1,8 +1,8 @@
 class Fwup < Formula
   desc "Configurable embedded Linux firmware update creator and runner"
   homepage "https://github.com/fwup-home/fwup"
-  url "https://github.com/fwup-home/fwup/releases/download/v1.15.1/fwup-1.15.1.tar.gz"
-  sha256 "b42a8970e37dc9036cd3ad1e9e702793ab37b469082b4b2c6b8cb73b2ed44c68"
+  url "https://github.com/fwup-home/fwup/releases/download/v1.16.0/fwup-1.16.0.tar.gz"
+  sha256 "a07b79268247ecee134a916ab928914be2a4ecbac0bc5e5f19212ec36ecb5c21"
   license "Apache-2.0"
 
   bottle do
