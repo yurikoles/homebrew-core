@@ -10,12 +10,12 @@ class FernApi < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "fc6ddc319b2728395acaaa4810fb9384c78414873806c7177019a01cf5de0ac6"
-    sha256 cellar: :any,                 arm64_sequoia: "96a9bd8f614db29fdb57f7e78712f44bfc71ed212a9c2eda305fe91b57ba7d32"
-    sha256 cellar: :any,                 arm64_sonoma:  "96a9bd8f614db29fdb57f7e78712f44bfc71ed212a9c2eda305fe91b57ba7d32"
-    sha256 cellar: :any,                 sonoma:        "76296977ae77db711ffc1499e0b6863fbca73bb900aea59b1427c8bfc7ce2881"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "0cb3dd30efafbf1d53e00df20072754947fdb1ee0f275c1be999b0e6ae525517"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f9210ba32604f280d229692474cc5353e45e61b523c10e5c24b2f6542857ac4f"
+    sha256 cellar: :any,                 arm64_tahoe:   "f5af28aebb7a5ebc4008e6cb594e75eceefd1b4ca81bed34e78c705006246362"
+    sha256 cellar: :any,                 arm64_sequoia: "d5288c8c9b3a2778af52591577e7c28b317185375b75973f7f12f9c8b2d62fd4"
+    sha256 cellar: :any,                 arm64_sonoma:  "d5288c8c9b3a2778af52591577e7c28b317185375b75973f7f12f9c8b2d62fd4"
+    sha256 cellar: :any,                 sonoma:        "3c91b95c675bda924a3e55304eb49a68dda67bae5edf7252a39c54059dc238e7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "236849e967b82e2d3cdb5156f3aed2eebd6a27ea5862d68e433bfa0387ee4317"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "15e742b0a7843740d6a08e81fa0be85f86339332954f1b6bb37ee5675480a76d"
   end
 
   depends_on "node"
