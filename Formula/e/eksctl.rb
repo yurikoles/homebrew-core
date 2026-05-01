@@ -2,8 +2,8 @@ class Eksctl < Formula
   desc "Simple command-line tool for creating clusters on Amazon EKS"
   homepage "https://eksctl.io"
   url "https://github.com/eksctl-io/eksctl.git",
-      tag:      "0.225.0",
-      revision: "02674beb75c9346abcef72f9c1e755115f85db29"
+      tag:      "0.226.0",
+      revision: "ecc59c7450956735ebf77ca0f440b53fb2495760"
   license "Apache-2.0"
   head "https://github.com/eksctl-io/eksctl.git", branch: "main"
 
