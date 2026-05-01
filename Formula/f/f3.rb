@@ -1,8 +1,8 @@
 class F3 < Formula
   desc "Test various flash cards"
   homepage "https://fight-flash-fraud.readthedocs.io/en/latest/"
-  url "https://github.com/AltraMayor/f3/archive/refs/tags/v9.0.tar.gz"
-  sha256 "569ec069dc3ec1c74d90d6704aa8b7f45240f5998a9dc6f14f1736c917506ecb"
+  url "https://github.com/AltraMayor/f3/archive/refs/tags/v10.0.tar.gz"
+  sha256 "ce54275b7793f97391583ede33c1d87590901d8da20cce604b1f07a029aefc67"
   license "GPL-3.0-only"
   head "https://github.com/AltraMayor/f3.git", branch: "master"
 
@@ -25,8 +25,8 @@ class F3 < Formula
     args = []
     args << "ARGP=#{Formula["argp-standalone"].opt_prefix}" if OS.mac?
     system "make", "all", *args
-    bin.install %w[f3read f3write]
-    man1.install "f3read.1"
+    bin.install %w[build/f3read build/f3write]
+    man1.install "man/f3read.1"
     man1.install_symlink "f3read.1" => "f3write.1"
   end
 
