@@ -1,8 +1,8 @@
 class Btop < Formula
   desc "Resource monitor. C++ version and continuation of bashtop and bpytop"
   homepage "https://github.com/aristocratos/btop"
-  url "https://github.com/aristocratos/btop/archive/refs/tags/v1.4.6.tar.gz"
-  sha256 "4beb90172c6acaac08c1b4a5112fb616772e214a7ef992bcbd461453295a58be"
+  url "https://github.com/aristocratos/btop/archive/refs/tags/v1.4.7.tar.gz"
+  sha256 "933de2e4d1b2211a638be463eb6e8616891bfba73aef5d38060bd8319baeefc6"
   license "Apache-2.0"
   head "https://github.com/aristocratos/btop.git", branch: "main"
 
@@ -72,7 +72,7 @@ class Btop < Formula
     log = (testpath/".local/state/btop.log").read
     # SMC is not available in VMs.
     log = log.lines.grep_v(/ERROR:.* SMC /).join if Hardware::CPU.virtualized?
-    assert_match "===> btop++ v.#{version}", log
+    assert_match "===> btop++ v#{version}", log
     refute_match(/ERROR:/, log)
   ensure
     Process.kill("TERM", pid)
