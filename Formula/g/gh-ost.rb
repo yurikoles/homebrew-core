@@ -1,8 +1,8 @@
 class GhOst < Formula
   desc "Triggerless online schema migration solution for MySQL"
   homepage "https://github.com/github/gh-ost"
-  url "https://github.com/github/gh-ost/archive/refs/tags/v1.1.8.tar.gz"
-  sha256 "771b1afd831a9e26eee045eb4f759d343db407786569619d2c77f1c186b873b5"
+  url "https://github.com/github/gh-ost/archive/refs/tags/v1.1.9.tar.gz"
+  sha256 "0c5450e61cac940a6daaff22463ee6205b84c256b981ef047e0b4c430a25eb4b"
   license "MIT"
   head "https://github.com/github/gh-ost.git", branch: "master"
 
