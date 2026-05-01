@@ -1,8 +1,8 @@
 class HickoryDns < Formula
   desc "Rust based DNS client, server, and resolver"
   homepage "https://github.com/hickory-dns/hickory-dns"
-  url "https://github.com/hickory-dns/hickory-dns/archive/refs/tags/v0.26.0.tar.gz"
-  sha256 "53a374acd54ae7eed39802b179f4f542afbcefaa29420dbc9bac7d950e8c3622"
+  url "https://github.com/hickory-dns/hickory-dns/archive/refs/tags/v0.26.1.tar.gz"
+  sha256 "ba79d44071511b4989da1f13f4369b0616b90266d4ecb60b657650275edb989c"
   license any_of: ["Apache-2.0", "MIT"]
   head "https://github.com/hickory-dns/hickory-dns.git", branch: "main"
 
