@@ -1,8 +1,8 @@
 class StellarCli < Formula
   desc "Stellar command-line tool for interacting with the Stellar network"
   homepage "https://developers.stellar.org"
-  url "https://github.com/stellar/stellar-cli/archive/refs/tags/v26.0.0.tar.gz"
-  sha256 "63ca6d4de21acca8ac20f09bf257530ab460ebc94eecf57b4712ec755f06cfe6"
+  url "https://static.crates.io/crates/stellar-cli/stellar-cli-26.0.0.crate"
+  sha256 "dbbcb1f8c173996ead172c7268807ea1d909099054307d013b71683a5400a9b5"
   license "Apache-2.0"
   head "https://github.com/stellar/stellar-cli.git", branch: "main"
 
@@ -25,7 +25,7 @@ class StellarCli < Formula
   end
 
   def install
-    system "cargo", "install", "--bin=stellar", *std_cargo_args(path: "cmd/stellar-cli")
+    system "cargo", "install", "--bin=stellar", *std_cargo_args
   end
 
   test do
