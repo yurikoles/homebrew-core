@@ -11,12 +11,12 @@ class CargoC < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_tahoe:   "2cbd2f1bc81889d7af79dddbaabd599e59e7b2427ca00d845ebbf67a0952dde0"
-    sha256 cellar: :any,                 arm64_sequoia: "1776cbc0aac1f01f96591ee1ddd4815c5859d23c661fb645b410d6b24d8babf3"
-    sha256 cellar: :any,                 arm64_sonoma:  "5624a2aeeab4ba3e10a24dc75750ba6b7c92f976e20af7e64f2575dda8cbda76"
-    sha256 cellar: :any,                 sonoma:        "65a758cbb0a0aa5ef10c0fadde9e705dcbad0bb4a11e2ea237a3141da161a71b"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "89c6284905efda53e5f45d1ec89d6f95b671594bac5416c0e46e1722d7818b3b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8d16ec518c8cda3cfcb0d1e2e4289351855758df38c1e0235d57f445a07f0329"
+    sha256 cellar: :any,                 arm64_tahoe:   "43cd29ac3cee0d98bd2289d1c1e9594270aa3026b910faa38bf3817f9256f833"
+    sha256 cellar: :any,                 arm64_sequoia: "e6adb4dc49172dc8d06a336f4befe8113dfaa6bb1645b7cac86a90837f07104b"
+    sha256 cellar: :any,                 arm64_sonoma:  "c0ec8f43d146cd43444593d566608fddd5eb4124c4678cb2ee923f8fac143f05"
+    sha256 cellar: :any,                 sonoma:        "c1c919200669a7814098c7c9d9ff7fa7a3a9d82c49fb1123e0a53bdaf2d5c8ff"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "2c680d77013aaaf0236f971125f32a9fe2d3acbfd4c9ebc46d5ab1bca47c86d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "06884e195b37521169fff8db4154f057454e57b4458fa8c12cbac238f8be4890"
   end
 
   depends_on "pkgconf" => :build
