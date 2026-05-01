@@ -9,7 +9,7 @@ class PythonBuild < Formula
   head "https://github.com/pypa/build.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "232bc427d6a78f643b979efa3a0a5d49727bc7df76fc244dfab7aac51f272954"
+    sha256 cellar: :any_skip_relocation, all: "688253f58de7668d9423fe472d8702854cfe10d1d5a1dac02c8aa95315289df1"
   end
 
   depends_on "python@3.14"
