@@ -15,12 +15,12 @@ class SyslogNg < Formula
   end
 
   bottle do
-    sha256 arm64_tahoe:   "9896fd2cb3f9e02571ecadc9c0724927b568ebec0acf749fa2ef4993a2a16775"
-    sha256 arm64_sequoia: "48e48e5f4f39ded50ac2acce95f3ab6a3e6c59a996828b08e97f4888647985e7"
-    sha256 arm64_sonoma:  "f0aba612889c3307ec2ff1745201eedbe2fab96f9ee98b0ff28be3a8e153661a"
-    sha256 sonoma:        "4a6dd74e9d13d2c90b5465b4babbae6230832bc80f72e7c854a2fa8beb321605"
-    sha256 arm64_linux:   "7d92fcbde12512d85e79258e2753e0643d7470069ca99f8bd9ce9595e1c1f284"
-    sha256 x86_64_linux:  "0d34fd14355c37cc34637d3ac5c5c86d23d40cbe54519a832a0469ecd63a4ac7"
+    sha256 arm64_tahoe:   "466b8e62fdcf5b3458c7d80d114d3dae400805a64cf4472bc4664c088952da42"
+    sha256 arm64_sequoia: "886439e7b5ef7c4f18616353a6f2eb225d62afeee5ed71464957fa2e3c696da7"
+    sha256 arm64_sonoma:  "ce85e1203f8add452022aa9d2a790f9c33bbe3b3e74afeddb7eecc0f424ba10e"
+    sha256 sonoma:        "b631da6374c8e3544c7c19a98abf8f49b1d11b4206bdc9137e3f6adf7ac710b5"
+    sha256 arm64_linux:   "42b8b5068b6121c09c1fbd5f8c72a210c19acad6c7d2a20a7f518e9948d4f6de"
+    sha256 x86_64_linux:  "f92d72f1fbd00ef0592abfe964a0a4de1058295c93aa98b073648e0267d4a6cf"
   end
 
   depends_on "pkgconf" => :build
