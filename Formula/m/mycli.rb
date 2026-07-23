@@ -3,8 +3,8 @@ class Mycli < Formula
 
   desc "CLI for MySQL with auto-completion and syntax highlighting"
   homepage "https://www.mycli.net/"
-  url "https://files.pythonhosted.org/packages/5e/6a/7e6dafabdea25d6e70d8f927bd7f2e8952f5de69805092032214c3ea9485/mycli-2.4.0.tar.gz"
-  sha256 "0008c89c03a67748c6aa72ac1731453fb51e4719c71d7389170cd458fccd7290"
+  url "https://files.pythonhosted.org/packages/07/43/ef1286df07bf27e08f8312744372be5446977be58edfe7604680a7a7e567/mycli-2.5.1.tar.gz"
+  sha256 "9ffeed449a6121e79e0db9578fbbbd6a97f62e462963aff3c7f6a620fa152763"
   license "BSD-3-Clause"
 
   bottle do
@@ -180,8 +180,8 @@ class Mycli < Formula
   end
 
   resource "python-ulid" do
-    url "https://files.pythonhosted.org/packages/c1/7e/b912a91fe0800585ec29ff695a6a5c4098a32c89732cba550c6fc9343380/python_ulid-3.2.0-py3-none-any.whl"
-    sha256 "7adfc206cbee3124e176b02b73e0fd19d1c9759e119fd8af7ba264d7d29c6fc0"
+    url "https://files.pythonhosted.org/packages/d6/41/65079023c81491a21799c0120bce5925366b6913596bf797806f19973290/python_ulid-4.0.1.tar.gz"
+    sha256 "bbeec02556190bb9dc3401faa7268696acbfbe7b6db9908c155dc3548629f20c"
   end
 
   resource "pyyaml" do
